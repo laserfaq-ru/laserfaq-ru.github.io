@@ -1,0 +1,30 @@
+* Main program for SSY1 Nd:YAG laser flashlamp circuit simulation.
+* Copyright (c) 2000 by Shawn West (west007@libcom.com), all rights reserved.
+* lasflsh.sch is the schematic file.
+
+* Schematics Version 7.1 - October 1996
+* Thu Jan 20 14:06:00 2000
+
+.PARAM         Vcap=565 Lind=820u ko=16.6
+.PARAM         cap=1120u 
+
+** Analysis setup **
+
+.tran 2u 5m 0 2u SKIPBP
+.OPTIONS ABSTOL=1000pA
+.OPTIONS CHGTOL=10pC
+.OPTIONS ITL4=80
+.OPTIONS RELTOL=0.001
+.OPTIONS VNTOL=100uV
+
+* From [SCHEMATICS NETLIST] section of msim.ini:
+
+.lib "nom.lib"
+
+.INC "lasflsh.net"
+.INC "lasflsh.als"
+
+.probe
+
+.END
+

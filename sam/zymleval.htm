@@ -1,0 +1,694 @@
+<html>
+<head>
+<title>Considerations in Evaluating Used or Rebuilt Zygo Metrology
+ Lasers</title>
+</head>
+<body>
+<A NAME="top">
+<p>
+<center>
+<h1>Considerations in Evaluating Used or Rebuilt<br>
+ Zygo Metrology Lasers</h1>
+<h2>Version 1.01 (25-Jul-09)</h2>
+<h3>
+<A HREF="http://www.repairfaq.org/sam/lasersam.htm">
+Sam's Laser FAQ</A>, <A HREF="copyright.htm">Copyright &copy<A> 1994-2009
+<br>
+Samuel M. Goldwasser
+<br>
+--- All Rights Reserved ---
+<br>
+<br>
+For contact info, please see the
+<A HREF="emaillnk.htm">Sci.Electronics.Repair FAQ
+Email Links Page</A>.
+</center>
+<p>
+<hr>
+<p>
+<h2>Abstract</h2>
+
+Zygo Corporation <A HREF="#ref">[1]</A> is one of the leading suppliers of
+two-frequency HeNe metrology lasers used in all areas of precision
+manufacturing.  The most well known application is probably for
+sub-micron positioning in semiconductor wafer steppers.  These lasers
+generally have a long life (50,000 hours typical) but when they do fail,
+replacement with a new laser at relatively high cost has
+always been the low risk option for critical applications.  However,
+these lasers are also available surplus (used or "preowned") often at very
+attractive prices but nearly always in unknown operating condition with
+equally unknown life expectancy.  And, a few companies do claim to offer
+rebuild services or rebuilt lasers at greatly reduced cost compared to
+a new one.  This note addresses the issues that might arise with a
+used or rebuilt laser, and their impact on measurement precision
+and service life.
+<p>
+<hr>
+<p>
+<h2>Introduction</h2>
+
+Zygo "ZMI" metrology lasers are Helium-Neon (HeNe) lasers that use
+an Acousto-Optic Modulator (AOM) to split a single longitudinal lasing
+mode into two modes that are orthogonally polarized and offset in optical
+frequency from each-other by 20 MHz. <A HREF="#ref">[2]</A>
+One component called the "measurement
+beam" is sent to a remote "Test Arm" whose position is
+to be measured and returned via a mirror or retro-reflector, while the other
+component called the "reference beam" is returned locally from a fixed
+retroreflector.  These are combined in a high speed photodiode producing a
+beat signal via heterodyning.  When the Test Arm moves, it results in a
+Doppler shift changing this beat frequency.  By comparing the phase of
+the beat signal (called MEAS) with a locally generated un-shifted
+version (called REF), the position of the Test Arm can be
+determined down to a resolution of 10 nanometers (nm) or better.  And,
+through computation and/or special optics, velocity, angle, straightness,
+and other measurements can be made with similar precision.
+<p>
+<center>
+<A HREF="inter2f.gif"><img  WIDTH=791  src="inter2f.gif" border=0></A>
+</center>
+<p>
+The Test Arm may be a tool in a CNC milling machine, a stage in a
+semiconductor wafer stepper, a voice coil positioner in a hard
+drive servo writer, or any number of other precision devices.
+A single laser can be used with many independent measurement axes
+through the use of beamsplitters, separate interferometer optics and
+optical receivers, and associated digital processing channels.
+<p>
+The key attributes that make these lasers ideal for metrology applications are
+that they produce two frequency components 20 MHz apart that are linearly
+polarized, orthogonal, and oriented along the X and Y axes (horizontal and
+vertical) relative to the laser baseplate.  The optical frequencies are highly
+stable and the corresponding wavelength (the actual "yard stick") thus should
+be as well.  And, they remain stable for the life of the laser without
+any maintenance.  (However, environmental factors like temperature, pressure,
+and humidity must to be taken into consideration as
+they have a significant effect on wavelength.)
+<p>
+Two views of a typical Zygo ZMI laser with its cover removed are shown below:
+<p>
+<center>
+<A HREF="zy7702l1.jpg"><img  WIDTH=800  src="zy7702l1.jpg" border=0></A>
+<h3>Left Side View of Interior of Zygo-7702C/E Laser</h3> 
+</center>
+<p>
+<p>
+<center>
+<A HREF="zy7702r1.jpg"><img  WIDTH=800  src="zy7702r1.jpg" border=0></A>
+<h3>Right Side View of Interior of Zygo-7702C/E Laser</h3> 
+</center>
+<p>
+The heart of Zygo two-frequency lasers is a 3 to 4 mW HeNe laser tube
+that is presently made by or for Zygo.  A bifilar-wound or thin-film heater
+is added to the laser tube, which is then mounted inside the gray metal
+enclosure visible below the HeNe laser power supply brick.  The output beam
+exits toward the left, passing through the black beam sampler assembly to the
+AOM, reflects off of two turning mirrors to a spatial filter and then
+out to the right via beam expander telescope (hidden from view).
+Most Zygo lasers including the 7701, 7702, 7712/14, and 7722/24 use
+the same HeNe laser tube, though the optics may differ.
+<p>
+The custom HeNe laser tubes used by Zygo since the early to mid-1990s have
+an expected life of 50,000 hours.  Before then Zygo used standard
+commercially available tubes from Aerotech (a former manufacturer of
+HeNe lasers) and possibly others.  While the present Zygo tube is not
+available at every corner store :-), it is simply a random polarized
+HeNe laser tube that has been designed for long life and mode-flip-free
+behavior.  A typical Zygo tube is shown below:
+<p>
+<center>
+<A HREF="zygtube1.jpg"><img  WIDTH=800  src="zygtube1.jpg" border=0></A>
+<h3>Zygo HeNe Laser Tube Used In 77XX Series ZMI Lasers</h3>
+</center>
+<p>
+Its construction is essentially the same as a vanilla
+flavored HeNe laser tube used in countless other applications.  There
+are no magnets, waveplates, or internal heaters to make it a truly
+special tube.  Unlike HP/Agilent lasers <A HREF="#ref">[3,4]</A>, failures
+other than the tube reaching end-of-life are not that unusual and thus
+Zygo lasers may be pulled from service due to a problem elsewhere, usually on
+the controller PCB.  Repair of the electronics is possible, but detailed
+documentation and schematics may not be available to any non-Zygo service
+organizations, rendering the newer digital control PCBs essetnially
+unrepairable.  There is a simiilar lack of information on the older
+analog control PCBs, but these at least could be reverse engineered
+in a straightforward, but very tedious way.
+<p>
+So, where there is an electronic problem, it may be possilble to repair
+the control PCB, but it may be easier to simply swap in a good control PCB
+from a similar ZMI laser with a bad tube.  This eliminates any issues of
+optical alignment, but means that the settings may need to be adjusted on an
+analog control PCB, or that whatever the settings were on a digital
+control PCB will have to be close enough.
+<p>
+But where the tube is weak or dead, and the HeNe laser power supply and
+optical alignment have been ruled out as possible causes, then either a
+replacement tube needs to be installed, or the (good) electronics can be
+swapped into another chassis with a good tube but bad controller.
+<p>
+Commercially available standard tubes can be used since although the
+Zygo tube is custom, there is nothing really special about it as far
+as lasing is concerned.  The main thing that makes it custom is the
+special thin film cathode deposited on the inside of the glass envelope
+which is the primary means of achieving the 50,000 hour life.  The
+lasing parameters of a commercial HeNe laser tube with similar beam
+diameter, divergence, output power, and similar length will be close
+enough to permit such a tube to be installed in place of the original tube
+without requiring major optical adjustments except alignment.
+<p>
+Used Zygo ZMI metrology lasers are also widely available.  But many of
+these are already unusable due to low output power or bad electronics.
+Thus, finding one with both acceptable performance and
+adequate life expectancy requires a knowledge of what to look for and
+what tests to perform.
+<p>
+These lasers are often run 24/7 from the day they are installed until
+the day they die or fail preventive maintenence checks.  Such lasers
+invariably find their way to eBay and unscrupulous sellers will either
+claim the "came from a working environment" or an inability to test them.
+The working environment claim may not be inaccurate, it's just that
+the laser was pulled because <i>it</i> was dead, not that the line
+was shut down! :)  However, if a seller is reputable, has performed a
+few basic tests, and offers a warranty (even a relatively short one
+giving the buyer an opportunity to more fully test it),
+then a previously owned unit may be perfectly acceptable with low risk.
+Even where it has failed for other reasons like a bad HeNe laser power
+supply, a broken laser with a good tube may be easily repaired.
+<p>
+However, if it were possible to replace a bad
+then this opens up a third possibility with performance potentially
+equal to that of a new laser at a fraction of the cost.
+When done properly, the laser would perform essentially like new and
+have a decent life expectancy (though possibly not as long as that
+of the original long-lived custom Zygo tube).
+<p>
+<A HREF="#top">Back to Top</A>
+<p>
+<hr>
+<p>
+<h2>Used ("Previously Owned") Zygo ZMI Metrology Lasers</h2>
+
+For many applications, a very viable alternative is to purchase a used laser.
+Assuming such a laser hasn't been modified or tampered with (or rebuilt!),
+then most of the issues associated with rebuilt lasers will not exist.
+Only one parameter really changes significantly with use and that is
+the laser output power (which declines, especially towards end-of-life).
+The principle remaining issue would be that the laser tube starts reasonably
+quickly and runs reliably without any dropout, sputtering, or flickering; and
+that it will continue to do so with an acceptable lifespan.
+<p>
+All Zygo lasers have a run-time meter of some kind.  The older ones with
+analog control PCBs have a "mercury" column indicator inside the case
+near the HeNe laser power supply.  The digital control PCB keeps track
+of run time in nonvolatile memory (NVRAM) which can be interrogated via
+the RS232 port.  Assuming that the tube is original, and in the latter
+case that the control PCB hasn't been swapped, checking thes can give
+an idea of the expected remaining life of the tube.
+<p>
+When semiconductor fab lines shut down, the lasers often become
+available at various stages of their life.  They appear on eBay and
+from many surplus dealers at costs ranging from $25 or less to
+several thousand dollars.  However, almost any of these may be
+less than the cost of a rebuilt laser.
+<p>
+If it were possible to have confidence in the operating condition and
+life expectancy of a previously owned laser, it would represent a low
+risk alternative to either a new or rebuilt one.
+<p>
+<A HREF="#top">Back to Top</A>
+<p>
+<hr>
+<p>
+<h2>Rebuild Options</h2>
+
+Note: I am not at liberty to divulge and/or am not even absolutely sure of
+the name or names of the companies whose rebuilt laser(s) I've tested,
+being acquired from a third party, so plesae do not ask.  There aren't
+that many so a Web search should be able to locate them.
+<p>
+There are a few companies who will rebuild Zygo ZMI lasers by
+installing a new (but probably non-Zygo) tube assembly or sell you
+a laser with a rebuilt tube assembly.  Although I have yet to see a typical
+cost, the amount of labor involved (more below) would suggest that it is
+a substantial fraction of the cost of a new laser.
+And there is some risk since depending on the quality and
+type of rebuild, the laser may not perform to spec or have a short life.
+A semiconductor wafer stepper (one of the most common applications of these
+lasers) is a very expensive piece of equipment often run around the clock.
+Downtime is costly, and errors in fabrication only found after wafers
+have been completed are even more costly.  So it's not clear at what point the
+modest savings of a rebuilt laser installed once or twice over the entire
+life of the machine can be justified against the risk.  Nonetheless,
+some large semiconductor companies are known to have seriously considered
+going this route and may be using rebuilt lasers in production.
+<p>
+The Zygo tube assembly consists of the actual glass HeNe laser tube and
+a bifilar-wound heater glued to its exterior.
+<p>
+<center>
+<A HREF="zygtube2.jpg"><img  WIDTH=800  src="zygtube2.jpg" border=0></A>
+<h3>Zygo Tube Assembly with Bifilar-Wound Heater</h3>
+</center>
+<p>
+Note the very precise tube mount/centering technique - blobs of black
+RTV-Silicone! :)
+<p>
+A thin-film heater is also used in some Zygo lasers as shown below:
+<p>
+<center>
+<A HREF="zygtube3.jpg"><img  WIDTH=800  src="zygtube3.jpg" border=0></A>
+<h3>Zygo Tube Assembly with Thin-Film Heater</h3>
+</center>
+<p>
+However, I have not actually seen one in a 7701 or 7702 and don't know if
+these now used film-film heaters.  The labor is certainly lower, though
+the cost of the heater itself is much greater.  The one above is almost
+certainly not from a 77XX laser as the heater wires exit the wrong end.
+<p>
+Rebuilding a Zygo tube assembly can take two forms: regasing the original
+or replacement with a standard HeNe laser tube.  Regasing is generally
+not an option both for technical reasons and due to the high cost
+compared to a replacement tube.  So, we only concentrate on the
+replacement option.
+<p>
+The physical process of tube replacement is straightforward: Find a
+suitable random polarized HeNe laser tube about 9 to 10 inches long like
+the one shown below:
+<p>
+<center>
+<A HREF="sp088-2.jpg"><img  WIDTH=800  src="sp088-2.jpg" border=0></A>
+<h3>Spectra-Physics Random Polarized HeNe Laser Tube</h3>
+</center>
+<p>
+Replacing the tube is not nearly as easy as swapping the entire tube
+assembly in HP/Agilent lasers.  But the glass tube itself can be extracted
+without using extraordinary means to remove any potting compound
+as there is none.  It simply clamps within the gray enclosure using the
+two sets of brackets visible in the photo and those blobs of RTV-Silicone.
+Removal then requires taking off the front panel and beam sampler block,
+disconnecting the heater cable and unsoldering the anode wire.
+<p>
+Prepare the new tube by adding a heater with similar electrical
+characteristis to that of the original, which can be
+wire-wound or a thin-film type.  Or, if the
+original was the latter, it might be possible to simply peel the
+old one off and transfer it to the new tube.  Then install the replacement
+tube assembly in the Zygo chassis in reverse order from removal.
+Next, the output must be precisely
+aligned to pass the un-shifted mode through the output optics and
+the AOM must be adjusted to pass the shifted mode as well.  If the
+tube is carefully centered when installed in its enclosure, this
+process will be simpler.  Finally, the
+control PCB may need to be adjusted to match the amplitude of the
+sampled modes for stabilization, or alternatively, their intensity
+can be adjusted with a filter inside the beam sampler.
+<p>
+However, where a Zygo chassis is available with a good tube but bad
+control PCB, swapping in good electronics is even easier and quicker.
+<p>
+<A HREF="#top">Back to Top</A>
+<p>
+<hr>
+<p>
+<h2>Potential Issues</h2>
+
+The following are the main things to check either by testing (where
+possible) or getting data from the supplier or better yet, from their
+previous customers.  A rigorous acceptance test procedure can identify
+many of the issues that can affect performance.  However, specifications and
+the experience of others must be used to predict long term stability and life.
+Some of these will only apply to lasers with replacement tubes since most of
+the fundamental parameters affecting performance are unlikely to have changed
+on used lasers unless they have been tampered with or modified.
+<p>
+<ul>
+<li><b>Beam profile:</b> The normal Zygo beam profile is probably
+ described best as a Gaussian that is cut off.  The 3 mm and 9 mm beams
+ have the same shape as the 6 mm beam, but 1/2 and 3 times the diameter,
+ respectively.  The easiest thing to do is to compare the beam profile of
+ the candidate laser with a genuine one.  For many applications, the exact
+ beam profile is not that important and was simply selected based on the
+ desired interferometer optics.  But where long measurement distances
+ are involved, for example, getting the maximum benefit from a larger
+ diameter beam may be required.
+<p>
+ The beam profile on a used laser should not have changed unless someone
+ attempted to adjust it or swap optics to convert from one beam diameter
+ to another (e.g., from 6 mm to 3 mm).
+<p>
+ Since the beam originates internally from a pinhole, a rebuilt Zygo
+ should also have a similar beam profile to the original.
+<p>
+<li><b>Mode alignment, balance, and purity:</b>.  Test the alignment by
+ rotating a polarizer in front of the laser and confirming that the
+ beat signal from a high speed photodiode or optical receiver
+ (virtually) totally disappears when aligned with the X or Y axis.
+ Test the mode balance by comparing the optical power through the
+ polarizer when oriented with the X and Y axes.  The two values
+ should be within 20 percent of each other for a 7701 or 5 percent
+ of each other for a 7702.  For a rebuilt laser, errors in mode alignment
+ depend on how accurately the HeNe laser tube is oriented when it is
+ was originally mounted, and this may be related to mode purity.  Mode
+ balance can also change since that is a function of the RF drive to
+ the AOM and its alignment.  Unequal mode balance will reduce the
+ available optical MEAS signal level relative to laser output power
+ but have no other effect.  Errors in mode alignment
+ or purity will result in interference between F1 and itself, and F2 and
+ itself in the interferometer optics.  The result will be low
+ frequency level shifts of the envelope
+ of the detected signal from the photodiode in the optical receiver.
+ This may result in jitter in the MEAS signal.
+<p>
+ For a much more in-depth treatment of issues relating to off-axis modes,
+ see reference  <A HREF="#ref">[5]</A>.
+<p>
+ None of these is likely to change in a significant way over the useful life of
+ the laser except possibly mode balance, which is affected by
+ the RF level to the AOM and thus electronic component drift.
+ However, when the output power declines to well below the
+ Zygo spec'd minimum, amplitude ripple in the output power due
+ to laser current ripple from the HeNe laser power supply can
+ interfere with a clean beat frequency signal.
+<p>
+<li><b>Rogue modes:</b> Unwanted longitudinal modes are extremely unlikely
+ to be present.  They won't develop in a used laser and it simply is not
+ possible for them to be present in a rebulit laser that has locked
+ correctly since there isn't enough space for a long enough tube to
+ support additional longitudinal modes!
+<p>
+<li><b>Mode flipping:</b> In HP/Agilent metrology lasers, only
+ a single Zeeman-split longitudinal mode is lasing.  However, in
+ Zygo lasers, there are a pair of orthogonally polarized longitudinal
+ modes lasing, parked approximately equidistant on either side of the neon
+ gain curve.  However, which one is on the high side and which one is on the
+ low side is not a result of anything fundamental and during warmup they
+ basically march through the gain curve as the tube expands.  Once the
+ feedback is enabled for locking, a specific polarization will be forced
+ to the high side, and the orthogonal polarization will be on the low side.
+ Only one of these modes is used in 7701/2/12/14, and only one at a time
+ in 7722/24 lasers.
+<p>
+ Under some conditions, the two modes can flip polarization instantaneously.
+ They will then be on the wrong side of the neon gain curve.
+ In a well behaved tube, this won't happen spontaneously, but may occur
+ due to back-reflections.  But in some cases, they can flip with
+ no obvious cause and such events may happen hours apart.
+ However, should one occur when the laser is in use, the optical
+ frequency will jump up or down by about 750 MHz (~1.5 ppm) and
+ the feedback will then cause the modes to drift back to their
+ normal position over a few seconds.  This will result in either
+ (hopefully) a loss of signal error or (worse) an error in the measurement
+ data which could go undetected.
+<p>
+ The HeNe laser tube must be thoroughly tested prior to installation
+ to assure that spontaneous mode flipping does not occur, but this
+ affliction can even be found in some Zygo lasers.
+<p>
+<li><b>Stick-slip noise:</b> Zygo takes great pains to make sure that
+ as parts of the HeNe laser tube expand with temperature, the cavity
+ length won't suddenly change as a result of something being restrained
+ by friction, and then suddenly breaking loose changing the distance
+ between the mirrors.  Both parts inside the tube, and its mounting,
+ can contribute to stick-slip noise.  If  a slip were to happen while
+ being used for a measurement, there would be a transient error that
+ might not even be caught by the electronics.  Once fully warmed up,
+ this is not likely to occur, so it may not be an issue unless the
+ laser it put into service soon after it has locked.
+<p>
+ Rebuilt lasers are more likely to suffer from this problem due to both
+ the use of laser tubes that haven't been designed to eliminate it, and
+ due to the possible use of rigid adhesives or other factors in the
+ physical mounting of the tube in the Zygo enclosure.
+<p>
+<li><b>Life expectancy:</b> The original Zygo HeNe laser tubes are
+ specially processed to result in an expected life of 50,000 hours.
+ Where a new conventional HeNe laser tube has been
+ installed, the lifetime will depend on its construction and quality.
+ Typical commercial HeNe laser tubes have an expected life of 10,000
+ to 20,000 hours with some going to 40,000 hours.
+<p>
+<li><b>Beam alignment:</b> Beam alignment in Zygo lasers is determined
+ by the position of the internal pinhole and beam expander telescope,
+ neither of which should change either in a used or rebuilt laser.
+<p>
+<li><b>Time to lock (READY LED on solid):</b>  This is typically 10 to 15
+ minutes for a healthy Zygo laser and should not change significantly.
+<p>
+<li><b>Beat (REF) frequency:</b> Since this is determined by a crystal
+ oscillator, it should be unchanged.
+<p>
+<li><b>Absolute optical frequency/wavelength:</b>  It is not known if
+ Zygo laser tubes use isotopically pure He and Ne, which along with fill
+ pressure are what mostly determine the optical frequency.  However,
+ normal machine calibration procedures should factor in any change.
+<p>
+<li><b>Short term optical frequency/wavelength stability:</b>  With a
+ replacment tube running at the same tube current as the original, the
+ stability should be similar.
+<p>
+ The optical frequency tends to decrease with use.  For a used laser, it's
+ never likely to be so low as to not meet Zygo specs for optical
+ frequency, but this, too, can be used as a guide to the health of the
+ laser.
+<p>
+<li><b>Long term optical frequency/wavelength stability:</b> All HeNe lasers
+ drift in optical frequency as they age, mainly due to the decrease in
+ gas pressure inside the tube.  A rebuilt laser should be similar to
+ an original in this regard as well.
+</ul>
+<p>
+<A HREF="#top">Back to Top</A>
+<p>
+<hr>
+<p>
+<h2>Acceptance Testing Summary</h2>
+
+With an arrangement similar to the one shown in the diagram above,
+"Two-Frequency Interferomter Laser Tester", along with a polarizer,
+laser power meter, and high speed photodiode, most of the following
+tests can be performed in under 20 minutes (10 to 15 of which are
+the time to lock).  However, it will be desirable
+to run the laser for a few hours or more to make sure everything remains
+stable, but this can be essentially unattended if the measurement
+display catches laser loss-of-lock or dropout errors as does the 5508A.
+(The only test that will require a somewhat more complex setup is
+the one for optical frequency, and performing that is probably not
+essential in most cases.)
+<p>
+Confirm that the +/-15 VDC power supplies have the required specifications
+(voltage accuracy and current ratings).  It would also be desirable to
+run everything on a power conditioner and/or constant voltage (e.g., Sola)
+transformer to rule out incorrect or noisy power as a cause of unexpected
+behavior, should any occur.  And, of course, if the cabling isn't idiot-proof,
+double check the connections BEFORE applying power!    
+<p>
+<ol>
+<li><b>Starting:</b> Except for the 5501B, a new or rebuilt laser should
+ produce an output beam almost immediately, though many used lasers will
+ require a few seconds to a minute or more to come on (though they will
+ typically restart instantly if power is interrupted).
+<p>
+ A laser that takes a long time to start but runs reliably may be perfectly
+ acceptable, especially in applications where the laser is then run
+ continuously for days or longer.  However, starting can be hard on the
+ HeNe laser power supply, and the Zygo controller and/or measurement
+ display electronics may give up after a fixed amount of time, and produce a
+ non-recoverable hard error.
+<p>
+<li><b>Running:</b> Once the laser starts, it should remain on until power
+ is removed.  Any dropout, sputtering, or flickering is a cause to reject
+ the laser unless corrective action is taken.  But this is usually beyond
+ the capabilities (or desires!) of the end-user.  It's essential to monitor
+ the laser status until at least when it locks ("Stable" LEd on) since
+ marginal tubes may only start misbehaving after they warm up.
+<p>
+<li><b>Locking:</b> Most of the Zygo lasers typically in 10 to 15
+ minutes (Stable LED on solid).  A bit less or a bit
+ more doesn't matter, but a very long lock time could indicate other
+ underlying problems, and may result in a hard error from some measurement
+ electronics.
+<p>
+ A healthy used or rebuilt laser should lock in about the same time as a
+ new laser.
+<p>
+<li><b>Locked output power:</b> The optical output power from the front of
+ the laser with the normal (large) aperture should exceed the minimum
+ specification for the particular laser.  For most of these, it's 400 &micro;W.
+ For original Zygo laser tubes, the output power may increase or decrease
+ slightly after the laser locks and over the next hour or so, especially
+ for used lasers with higher mileage tubes.  Much of this change is due
+ to a change in mirror alignment due to thermal effects.  Output power
+ from 7701s and 7702s with new tubes will typically be over 600 uW.  For
+ 7712/14s, 2 mW.
+<p>
+ Note that a measurement of output power should only be considered
+ accurate once the laser has locked and READY is on solid.  Before then,
+ it may vary by 25 percent or more due to mode sweep, especially for a high
+ mileage tube whose output power has declined significantly compared to its
+ value when new.
+<p>
+<li><b>Beam profile:</b> The normal beam profile for Zygo lasers
+ is along the lines of the center portion of a Gaussian with the sides
+ cut off, not the typical full Gaussian TEM00 spatial mode of a common
+ HeNe laser.  The beam profile won't change in a used laser, though the
+ variation from center to edge will tend to increase as the power declines.
+ But a rebuilt laser with a conventional tube may not have matched optics,
+ so almost anything is possible, though the most likely result is
+ no visible difference compared to the genuine Zygo laser.
+<p>
+ Two possible effects of a sub-optimal beam profile will be to decrease
+ MEAS signal amplitude and make interferometer alignment more critical.
+ For many applications, the exact beam profile may not matter, but for
+ some equipment, there may be specific installation tests that will
+ fail if the beam profile isn't close to the original from Zygo.
+<p>
+<li><b>Mode alignment:</b> When a polarizer (sheet polarizer or polarizing
+ beam splitter cube such as from an HP interferometer) is rotated in the
+ output beam, the MEAS signal from an optical receiver should be present
+ at all orientations <i>except</i> in an angular range centered around
+ the X and Y axes with respect to the laser baseplate.
+<p>
+<li><b>Mode balance:</b> The output power in the X and Y polarized modes
+ should be within about 20 percent of each-other for a 7701; 5 precent
+ for a 7702 or 7712/14 after the laser has been on for several hours.
+ (They drift somewhat during warmup.)  While a modestly larger
+ difference won't really affect performance beyond slighlty
+ decreasing the useful MEAS signal level, it may be an indication of
+ sloppy adjustments (or lack of knowledge with respect to adjustments!)
+ during a rebuild.  Also use a polarizer to check the appearance of the H
+ and V polarized components of the beam.  Both should be fairly symmetric,
+ though perhaps not quite perfect.
+<p>
+<li><b>Mode purity:</b> If the mode alignment and balance are acceptable,
+ mode purity should be decent.
+<p>
+<li><b>REF signal:</b> An optical receiver should produce a clean stable
+ waveform (squarewave) with crisp sharply delineated tops and bottoms and
+ rising and falling edges.
+<p>
+<li><b>REF frequency:</b> This should be very close to 20 MHz.
+<p>
+<li><b>MEAS signal (stationary):</b> This should be the same as the REF
+ signal, above - clean and stable.
+<p>
+<li><b>MEAS signal (moving):</b> The MEAS waveform from the optical receiver
+ should be clean, just like REF.  Movement of the "Target" will result in
+ the period/frequency of the waveform changing, but at any instant, it should
+ have no fuzz or other indication of instability.  Misaligned, impure, or
+ rogue modes can result in both amplitude and duty cycle changes, with the
+ most obvious result being fuzzy rising and/or falling edges (depending on
+ the scope triggering).
+<p>
+<li><b>Optical frequency:</b> For a rebuilt laser, knowing the optical
+ frequency is probably not very important as long as any machine calibration
+ procedure takes the corresponding variation in wavelength into consideration.
+ The optical frequency for rebuilt lasers may be quite different from the
+ original, especially those using conventional tubes.
+<p>
+ For a used laser, the optical frequency relative to a similar known
+ laser that is new, has seen little use, or has been run for a known
+ amount of time, can provide another indication of how much use it has
+ seen.  The difference in optical frequencies for a healthy laser will
+ typically be only a few MHz, while one near end-of-life may be lower
+ by 15 MHz or more.
+<p>
+ It's not clear that knowing the absolute optical frequency is of much
+ added value for any of these lasers, except possibly to use it as a
+ reference in testing other similar lasers in the future, and to
+ track changes as the tube ages.  So, comparing
+ with a low mileage Zygo laser is as good as comparing with an
+ iodine stabilized HeNe laser.
+<p>
+<li><b>Mode flipping and other transient errors:</b> Unless very severe,
+ this will require running the laser with some means of monitoring its output
+ over many hours.  It may be possible to use the measurement electronics of the
+ equipment to do this, but they may not even catch some glitches.  So,
+ it is probably best to use a stand-alone data acquisition system to
+ monitor the optical power of the H and V components of the laser
+ output at a rate of at least a few samples per second.  If possible, have the
+ software flag any sudden changes that occur.  A similar anomaly in both H and
+ V is due to something happening to the beam the laser tube produces.
+ An anomaly in one polarized component, with a partial opposite effect in the
+ other, is due to a problem in the AOM or its driver.  In addition to mode
+ flipping, stick-slip effects may produce similar errors.  And, of course,
+ electronic problems like bad solder connections or cables can also
+ result in similar symptoms.  In some cases, the laser will turn on
+ the "Service" LED, but probably not for a momentary error that is
+ corrected.
+</ol>
+<p>
+<A HREF="#top">Back to Top</A>
+<p>
+<hr>
+<p>
+<h2>Discussion and Conclusions</h2>
+
+A used or rebuilt Zygo metrology laser may represent a viable alternative
+to a high cost new laser or previously owned laser in uncertain condition.
+For a used laser, it's critical to measure key parameters to determine
+the likely condition of the laser.  The most important would be the laser
+output power.  There rae far fewer potential issues with used and
+especially with rebuilt Zygo lasers compared to those from HP/Agilent.
+<A HREF="#ref">[6]</A>
+However, depending on the technique and quality of the work in rebuilding a
+laser, a new set of isseus can arise, requiring careful acceptance testing
+and periodic checks of performance.  So far, there is very limited data on
+these lasers.  I have checked one 7712 that supposedly had been rebuilt.
+It passed all tests and was indistinguishable from an original 7712.
+<p>
+And of course, with any laser that has been modified without Zygo's
+strict quality control, there would be some risk, so rigorous adherence
+to a weekly or monthly test and calibration regiment would be essential
+in identifying and tracking any changes in performance over time.
+<p>
+<A HREF="#top">Back to Top</A>
+<A NAME="ref">
+<p>
+<hr>
+<p>
+<h2>References and Links</h2>
+
+<ol>
+<li><A HREF="http://www.zygo.com/">Zygo Corporation</A>.  Go to:
+ "Stage Position (OEM)" or search for "ZMI".
+<p>
+<li>General information on Zygo metrology lasers and systems:
+  Sam's Laser FAQ chapter "Commercial HeNe Lasers", sections starting with:
+ <A HREF="http://www.repairfaq.org/sam/laserhcl.htm#hclzyl1">
+ Zygo HeNe Lasers</A>.
+<p>
+<li><A HREF="http://www.home.agilent.com/">Agilent Technologies</A>.  Search
+ for a specific model laser or system, or "metrology lasers".  Their
+ Web site has specifications for all current
+ lasers and systems but little if any on older models like the 5501B
+ that they consider obsolete and no longer support.  There is also
+ extensive technical information on all aspects of Agilent metrology
+ systems and components.
+<p>
+<li>General information on HP/Agilent metrology lasers and systems:
+ Sam's Laser FAQ chapter "Commercial HeNe Lasers", sections starting with:
+ <A HREF="http://www.repairfaq.org/sam/laserhcl.htm#hclish3">
+ Hewlett-Packard/Agilent HeNe Lasers</A>.
+<p>
+<li>In depth treatment of measurement anomolies due to rogue or off-axis
+ modes: "An investigation of two unexplored periodic error sources in
+ differential-path interferometry", Tony Schmitz and John Beckwith,
+ Precision Engineering, volume 27, issue 3, July 2003, pages 311-322.
+<p>
+<li>Companion document: <A HREF="hpmleval.htm">Considerations
+ in Evaluating Used or Rebuilt Hewlett Packard/Agilent Metrology Lasers</A>.
+</ol>
+<p>
+<A HREF="#top">Back to Top</A>
+<p>
+<hr>
+<b><center>
+ <A HREF="http://www.repairfaq.org/sam/lasersam.htm">Sam's Laser FAQ</A>,
+ <A HREF="copyright.htm">Copyright &copy<A> 1994-2009,
+ Samuel M. Goldwasser, All Rights Reserved.<br>
+ I may be contacted via the
+ <A HREF="emaillnk.htm">Sci.Electronics.Repair FAQ
+ Email Links Page</A>.</center></b>
+<hr>
+<p>
+</html>

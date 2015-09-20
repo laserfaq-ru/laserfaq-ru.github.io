@@ -1,0 +1,1001 @@
+<HTML>
+<HEAD>
+<TITLE>Sam's Laser FAQ - Solid State Laser Power Supplies</TITLE>
+</HEAD>
+<BODY>
+<A NAME="spstoc"></A>
+<p>
+<hr>
+<b><center>Sam's Laser FAQ, <A HREF="copyright.htm">Copyright &copy<A> 1994-2009,
+ Samuel M. Goldwasser, All Rights Reserved.<br>
+ I may be contacted via the
+ <A HREF="emaillnk.htm">Sci.Electronics.Repair FAQ
+ Email Links Page</A>.</center></b>
+<hr>
+<p>
+<li>Back to <A HREF="laserfaq.htm#faqtoc">Sam's Laser FAQ Table of
+ Contents</A>.
+<h1>SS Laser Power Supplies</h1>
+<h2>Sub-Table of Contents</h2>
+<ul> 
+<li><A HREF="lasersps.htm#spsibs">Introduction, Basic Characteristics, Safety</A>
+<ul>
+ <li><A HREF="lasersps.htm#spsint">Introduction to SS Laser Power Supplies</A>
+ <li><A HREF="lasersps.htm#spsbsc">Basic Structure and Characteristics of SS Laser Power Supplies</A>
+ <li><A HREF="lasersps.htm#spssss">Solid State Laser Power Supply Safety</A>
+ <li><A HREF="lasersps.htm#spsifc">Interlocks and Firing Controls</A>
+</ul>
+<p>
+<li><A HREF="lasersps.htm#spspps">SS Laser Power Supplies Using Photographic Strobes</A>
+ <ul>
+ <li><A HREF="lasersps.htm#spswts">What Types may be Suitable?</A>
+ <li><A HREF="lasersps.htm#spsdcf">Using One or More Disposable Camera Flash Units to Pump a Small YAG Rod</A>
+ </ul>
+<p>
+<li><A HREF="lasersps.htm#spscch">Capacitor Chargers</A>
+ <ul>
+ <li><A HREF="lasersps.htm#spscch0">Capacitor Charging Circuits</A>
+ <li><A HREF="lasersps.htm#spscch1">Sources for Capacitor Charging Circuit Components</A>
+ <li><A HREF="lasersps.htm#spsdefb">Recycled Defibrillator as Capacitor Charger</A>
+ <li><A HREF="lasersps.htm#spsephr">Electrophoresis Power Supplies as Capacitor Chargers</A>
+ </ul>
+<p>
+<li><A HREF="lasersps.htm#spscap">Energy Storage Capacitors</A>
+ <ul>
+ <li><A HREF="lasersps.htm#spscapc">Calculating the Required Capacitance</A>
+ <li><A HREF="lasersps.htm#spscaps">Sources for Flashlamp Rated Capacitors</A>
+ </ul>
+<p>
+<li><A HREF="lasersps.htm#spsind">Pulse Forming Network Inductors</A>
+ <ul>
+ <li><A HREF="lasersps.htm#spsindc">Calculating the Required Inductance</A>
+ <li><A HREF="lasersps.htm#spsindb">Constructing Pulse Forming Inductors</A>
+ <li><A HREF="lasersps.htm#spsindp">Modifying the PFN Inductor for Series Triggering</A>
+ <li><A HREF="lasersps.htm#spslcrm">Lou's Comments on Replacing the M-60 Inductor/Trigger Transformer</A>
+ </ul>
+<p>
+<li><A HREF="lasersps.htm#spsdesa">Laser Design Aids</A>
+ <ul>
+ <li><A HREF="lasersps.htm#spsdesc">Pulsed Solid State Laser Design Resources</A>
+  <ul>
+  <li><A HREF="lasersps.htm#spsrtw1">Rotorwave Technical Section</A>
+  <li><A HREF="lasersps.htm#spsdls1">Doug Little's PFN Calculations Spreadsheet</A>
+  </ul>
+ <li><A HREF="lasersps.htm#spsprgs">Handy Little Programs</A>
+  <ul>
+  <li><A HREF="lasersps.htm#spsprgse">Energy Stored in a Capacitor (joules.c)</A>
+  <li><A HREF="lasersps.htm#spsprgsc">Capacitor Value for a Desired Energy (flashcap.c)</A>
+  <li><A HREF="lasersps.htm#spsprgsi">Inductance for a Pulse Width and Capacitor Value (inductor.c)</A>
+  <li><A HREF="lasersps.htm#spsprgsd">Pulse Duration of a PFN (pulse.c)</A>
+  <li><A HREF="lasersps.htm#spsprgsm">Capacitance, Voltage, and Inductance of a PFN (pfn.c)</A>
+  <li><A HREF="lasersps.htm#spsprgsl">Inductance of an Air-Core Coil (coil.c)</A>
+   </ul>
+ </ul>
+</ul>
+<p>
+<A NAME="spsibs"></A>
+<hr>
+<br>
+<li>Back to <A HREF="lasersps.htm#spstoc">SS Laser Power Supplies
+ Sub-Table of Contents</A>.
+<h2>Introduction, Basic Structure and Characteristics, Safety</h2>
+<h3><A NAME="spsint">Introduction to Solid State Laser Power Supplies</A></h3>
+
+The major emphasis in this chapter is on power supplies for pulsed solid
+state lasers.  Continuous wave (CW) solid state lasers utilize totally
+different types of power sources - usually either arc lamps or high power
+laser diodes.  Power supplies for arc lamps share much in common with those
+for ion lasers.  In fact, a unit designed for an arc lamp can sometimes be
+used to power an ion laser and vice-versa.  See the section:
+<A HREF="laseraps.htm#apsalps">Arc Lamp Power Supply for Ion Laser?</A>.
+Drivers for high power laser diodes and arrays of laser diodes are fancy,
+expensive, current controlled sources.  There is some information on this
+topic in the chapters starting with <A HREF="laserdio.htm#diotoc">Diode
+Lasers</A>.
+
+<h3><A NAME="spsbsc">Basic Structure and Characteristics of SS Laser Power
+ Supplies</A></h3>
+
+A typical pulsed solid state laser consists of three parts:
+<p>
+<ol>
+<li>Laser head/cavity - This includes the lasing medium (ruby or Nd:YAG rod),
+ flashlamp, reflector, mirrors, Q-switch, etc.
+<p>
+<li>Pulse Forming Network (PFN) - This is really the heart of the SS laser
+ power supply and includes the main energy storage capacitor or capacitor
+ bank, and components to control the discharge duration and peak current
+ through the flashlamp (typically at least one inductor though for very small
+ units such as those driving tiny 1 inch rods from disposable camera flash
+ units, these components may be unnecessary.)
+<p>
+ The design of the PFN can significantly affect the performance of a solid
+ state laser including the lasing threshold, peak power, pulse consistency,
+ and so forth.  There is some general information on PFN design at the
+ <A HREF="http://www.plasticcapacitors.com/typepfn.html">Plastic Capacitors,
+ Inc. Pulse Forming Network Page</A>.  Some of the basics are covered in
+ subsequent sections below.
+<p>
+<li>Capacitor charging unit - A means of charging the main energy storage
+ capacitor(s) in the PFN.  These will have both a maximum voltage rating and
+ a power rating in watts or J/second.  The voltage rating is obviously
+ critical to achieve full power but also to prevent destruction of the
+ energy storage capacitor(s) by exceeding their voltage ratings.  The power
+ rating determines the maximum pulse repetition rate (prr) of the laser
+ (subject to the maximum power ratings of the flashlamp and cavity).
+<p>
+<li>Trigger circuit - A means of initiating the discharge of the xenon
+ flashlamp.  Three types are commonly used: external (or proximity) and series
+ or parallel:
+<p>
+ <ul>
+ <li>External triggering is the same technique used to fire a photographic
+  strobe - a wire or metal structure near or in contact with the flashlamp
+  is driven from a high voltage pulse transformer.  The required
+  specifications for the external trigger circuit will be dependent on the
+  physical arrangement (e.g., how close the trigger electrode is to the lamp
+  and how much stray capacitance is present) and the lamp specifications.
+  The required trigger voltage will be somewhat greater for external triggering
+  but this is usually not a major problem since the required current is
+  neglegible.  The basic circuit typically consists of a small 300 to 600 V
+  capacitor (.01 to 10 uF), an SCR, and the pulse transformer with a 10:1 to
+  100:1 stepup ratio.  Trigger transformers for/from photographic electronic
+  flash units may be adequate for smaller flashlamps.
+<p>
+ <li>Series triggering puts the secondary of the pulse transformer in series
+  with the anode connection of the flashlamp.  The pulse transformer's
+  secondary leakage inductance then becomes part of the PFN in so far as
+  discharge duration calculations are concerned.  The basic circuit is
+  otherwise similar to that for external triggering.  The trigger transformer
+  may be a separate unit or part of the PFN.  (It may also be possible to
+  modify the existing PFN's inductor enabling it to do double duty as the
+  trigger transformer - see the section:
+  <A HREF="lasersps.htm#spsindp">Modifying the PFN Inductor for Series
+  Triggering</A>.  A typical separate pulse transformer would consist of
+  a ferrite core with a 1 or 2 turn primary and a few dozen turn secondary
+  of thick (since it needs to carry the full flashlamp current) well insulated
+  wire.
+<p>
+ <li>Parallel triggering - Blocking diodes isolate the output of the PFN and
+  trigger transformer secondary.  The diode in series with the PFN must be
+  able to handle the maximum voltage of the trigger pulse <b>and</b> the peak
+  current of the PFN discharge pulse through the flashlamp.
+ </ul>
+<p>
+ External triggering has the advantage of decoupling the PFN from the trigger
+ transformer.  The circuit design is simpler since allthough the peak trigger
+ voltage needs to be somewhat greater than with series or parallel triggering
+ schemes, the trigger circuit doesn't need to carry the flashlamp current.
+ However, since the trigger wire/electrode is outside the flashlamp and
+ exposed to the enviroment, triggering may be less reliable and there is
+ some evidence that flashlamp efficiency is slightly lower.  For these reasons,
+ commercial pulsed lasers tend to use series triggering.  There must be a way
+ of locating a well insulated trigger electrode in close proximity to the
+ flashlamp.  Otherwise, series or parallel triggering must be used.  Examples
+ include a situation where the cavity reflector and chassis are electrically
+ connected or where there is simply no space for a trigger electrode or no way
+ of adding one easily (e.g., to an existing liquid cooled cavity).
+</ol>
+<p>
+What we call the solid state laser power supply is thus items (2) to (4).
+Depending on the details, these may be combined into a single unit.  However,
+large pulsed lasers will generally have them separate.  Looking through the
+classifieds sections of the lasers and optics trade rags, you will see many
+advertisements for "capacitor charging units" since this function can easily
+be dealt with independently of the rest of the laser.
+<p>
+There is a great deal of practical information on using flashlamps and
+designing pulse forming networks in
+<A HREF="http://www.misty.com/~don/xeguide.html">Don's General Xenon Flash and
+Strobe Design Guidelines Page</A> which also includes some basic design
+equations.
+
+<h3><A NAME="spssss">Solid State Laser Power Supply Safety</A></h3>
+
+WARNING: Even the smallest solid state laser power supply can and will be
+lethal under the wrong circumstances.  This even applies to the flash circuit
+from a disposable camera that runs off of a 1.5 V AA Alkaline battery!
+<p>
+<ul>
+<li>Main energy storage capacitor - These may store anywhere from 5 J (W-s) to
+ <b>THOUSANDS</b> of J at 200 V to <b>10s of THOUSANDS</b> of V!  For anything
+ but the smallest, a lethal outcome is more the norm than the exception should
+ almost any part of your anatomy provide a nice easy path for the capacitor
+ to discharge, particularly if it is through your chest!  High voltage protocol
+ must be understood and strictly followed.  There are no second chances.  The
+ dangers of other power supplies in both lasers and consumer electronics pale
+ in comparison compared to a modest size pulsed laser power supply capacitor
+ bank.
+<p>
+<li>Capacitor charging unit - Depending on its implementation, portions of
+ this circuitry may be nearly as lethal including line connected (non-isolated)
+ front-ends, 150 to 300 VDC on main filter capacitors, and voltage multipliers.
+<p>
+<li>Trigger circuit - This will include some components that can give you a
+ painful, if not lethal shock either when just sitting there or when activated.
+</ul>
+<p>
+Some links:
+<p>
+<ul>
+<li>Additional important safety information regarding shock, excessively bright
+ light, ultraviolet radiation, heat and fire hazards, and other hazards
+ related to xenon flash systems is available from Don's
+ <a href="http://www.misty.com/~don/xesafe.html">Xenon Strobe and Flash Safety
+ Hints</a> page.
+<p>
+<li>See the document: <A HREF="safety.htm">Safety Guidelines for High Voltage
+ and/or Line Powered Equipment</A>.  Study it forwards and backwards and
+ follow it!  To repeat one statement: NEVER ASSUME ANYTHING!
+<p>
+<li>See the chapter: <A HREF="lasersaf.htm#saftoc">Laser Safety</A> for general
+ information.
+<p>
+<li>See the section: <A HREF="laserssl.htm#sslsaf">Solid State Laser
+ Safety</A> for more details including those dealing with pulsed lasers.
+</ul>
+
+<h3><A NAME="spsifc">Interlocks and Firing Controls</A></h3>
+
+Nearly all SS lasers systems will have a variety of interlocks on the laser
+head and power supply to prevent operation if covers are removed and in some
+cases, if the laser head isn't in the proper orientation (e.g., a tilt sensor
+to detect if the head isn't vertical).  These will (or should) interrupt
+primary power to the high voltage portions of the power supply in a fail-safe
+manner (where a broken wire can't result in the system failing on).  They
+should also rapidly discharge any high voltage capacitors if this doesn't
+happen automatically when power is removed.
+<p>
+Some systems will also have foot or hand operated "fire" controls.  As with
+interlocks, these must also be designed to not fail on due to a broken wire
+or loose connector.  They will generally include both a normally open and
+normally closed input and require a transition on both to activate the laser.
+In other words, just closing or opening a single circuit isn't enough - one
+circuit must be closed and the other opened within a short time (e.g., using
+a SPDT switch).
+<p>
+In all cases, with interlocks and firing controls, simpler is better.  Relay
+and switch contacts are more reliable the low level inputs to a microcontroller
+which can crash. :(
+<p>
+<A NAME="spspps"></A>
+<hr>
+<br>
+<li>Back to <A HREF="lasersps.htm#spstoc">SS Laser Power Supplies
+ Sub-Table of Contents</A>.
+<h2>SS Laser Power Supplies Using Photographic Strobes</h2>
+<h3><A NAME="spswts">What Types may be Suitable?</A></h3>
+
+It may be possible to (relatively) easily adapt photographic electronic flash
+units and 'speed lights' for pumping ruby and YAG rods.  Suitable units range
+from the mini-flashes in pocket 35 or 110 cameras to huge studio systems with
+multiple flash heads.
+<p>
+The nice thing about this approach is that <b>everything</b> needed for the
+SS laser power supply is already contained in a well constructed, compact,
+and low cost (possibly free) package.  Flash units for disposable (single-use)
+cameras are often available for the asking from your local 1 hour developing
+kiosk or similar place (if you can convince them you won't kill yourself) but
+you'll probably have to lug away a carton of used cameras (the AA batteries
+alone are worth the trouble - they usually have a lot of life remaining).
+WARNING: It is likely that the energy storage capacitors will still be at
+least partially charged - ouch!  Broken external and shoe mounted electronic
+flash units may be available for little or no cost as well (Often, there is
+only physical damage to the shoe mount mount and the relevant parts of the
+unit are fine.)  If you know a friendly professional photographer or photo
+nut who has since moved on to videography, they may have an old large unit
+gathering dust which you could 'borrow' permanently. :)
+<p>
+For this approach to be effective, the following 3 conditions must be
+satisfied:
+<ol>
+<li>The flash energy is sufficient (J or W-s).  Figure that the available
+ energy into the flashlamp is about 80 to 90 percent of the calculated value
+ based on energy storage capacitor uF and voltage rating.
+<p>
+<li>The flash (pulse) duration is short enough.  To be effective, this must be
+ less than the fluorescence lifetime (FL) of the lasing medium.  For ruby with
+ its 3 ms FL, this usually isn't a problem.  However, Nd:YAG's FL is only 230
+ microseconds and typical flash units using electrolytic capacitors produce
+ full energy flashes in the millisecond range.
+<p>
+ Photographic flash units rarely have any pulse forming components beyond the
+ energy storage capacitor (at least I haven't seen any inductors except as
+ required by energy conserving flash designs).  Thus, shortening the 
+ output pulse usually isn't an option except by replacing the energy storage
+ capacitor with proper pulse forming network.
+<p>
+<li>The shape of the flashlamp/reflector is such that coupling to the rod
+ is efficient.  The linear flashlamps used in common small to medium size
+ electronic flash units can usually be adapted easily.  However, for larger
+ units using helical or circular flashlamps, it may be necessary to replace
+ the lamp with a linear type and suitable reflector or else most of the light
+ will be wasted.
+</ol>
+
+<h3><A NAME="spsdcf">Using One or More Disposable Camera Flash Units to Pump a Small YAG Rod</A></h3>
+
+With an optimum cavity configuration, even a single flash unit (typically
+160 uF at 320 V for about 8 J) will be more than sufficient to pump a 1 inch
+rod and maybe even a 2 inch rod (the SSY1 laser with a similar size rod had a
+threshold of around 7.5 J).  Ruby, with its higher threshold, may not be
+appropriate for pumping with the low budget approach. :)
+<p>
+However, I would suggest remounting the flashlamps and reworking their
+reflectors into the desired ellipsoidal configuration if possible (relatively
+easy if they are chrome plated sheet metal) so they can be positioned very
+close to the rod rather than attempting to collect the light and refocusing
+it.  I disagree somewhat with Chris's comments about the unsuitability of
+Kodak flash units - there are ways of dealing with controlling multiple flash
+units and I actually consider the flashlamp not being an integral part of the
+reflector to be an advantage so that it can be mounted properly.  (Note that
+the newer Funsavers, if they are still made, are probably similar to MAXes;
+the old ones used a somewhat different design.
+<p>
+See: <A HREF="http://www.repairfaq.org/sam/kflashf.gif">Kodak Funsaver Flash
+Unit Schematic</A>, <A HREF="fflash1.gif">Fuji Flash Unit 1 Schematic</A>,
+and <A HREF="fflash2.gif">Fuji Flash Unit 2 Schematic</A>
+and the descriptions in
+<A HREF="http://www.repairfaq.org/sam/strbfaq.htm">Sam's Strobe FAQ</A> in the
+PART IV in the chapter: "Schematics for Pocket Camera and Externally
+Mounted Compact Flash Units".
+<p>
+See the section: <A HREF="laserssc.htm#sscuyag">Power Supply for Micro YAG
+Laser (uYAG)</A> for details on this approach using a single flash unit from
+a Kodak MAX camera.
+<p>
+(From: Chris Chagaris (pyro@grolen.com).)
+<p>
+This set-up may actually be capable of pumping an Nd:YAG rod of small
+dimensions (2" X 3/16"?).
+There are a number of different cameras that may be utilized for this
+experiment. Some lend themselves to simpler manipulation than others. The
+Kodak 'Funsaver' is the least desirable of the many models you may
+encounter for a number of reasons.  The first being: the flash unit has a
+logic circuit to initiate the inverter. This circuit is very sensitive and
+will be rendered inoperative when the units are connected together and
+triggered, leaving the charging system useless. Secondly; the small xenon
+lamps and the reflectors are separate entities causing much difficulty in
+securing them in the appropriate positions on the laser unit. Better results
+can be obtained with the cameras manufactured by FUJI, which do not have
+these drawbacks.
+<p>
+<A NAME="spscch"></A>
+<hr>
+<br>
+<li>Back to <A HREF="lasersps.htm#spstoc">SS Laser Power Supplies
+ Sub-Table of Contents</A>.
+<h2>Capacitor Chargers</h2>
+<h3><A NAME="spscch0">Capacitor Charging Circuits</A></h3>
+
+Unless firing rate/cycle time is critical, this is one area where there are
+many many solutions using all sorts of circuits which may have been designed 
+for something else.
+<p>
+Basically, anything that can charge a capacitor to a specified voltage
+(without going over it) will work.  At most, a rectifier or bridge will be
+needed to adapt circuits originally designed for AC (e.g., fluorescent lamp
+inverter).  For the following, even if not mentioned, unless otherwise noted,
+a voltage multiplier can be used to boost the output up to several times
+(doubler, tripler, quadrupler, etc.).
+<p>
+Commercial capacitor chargers are usually rated in terms of output voltage and
+charging rate in joules/second (J/s).  For typical home-built systems, a rough
+idea of the requirements/capabilities can be found by determining the maximum
+energy to be placed on the energy storage capacitor and the power/wattage
+capabilities of the circuit or those that are needed based on the desired
+firing rate.  Then derate by a factor of 3 to 5 to account for the exponential
+charging characteristic of your system (since it probably doesn't have fancy
+constant current or constant power regulation!  For example, if your capacitor
+charger is rated at 100 W (100 J/s) and you have a 50 J capacitor bank to
+charge, figure it will take 6 to 10 seconds, not the 2 seconds that would be
+nice. :)  However, home-built capacitor chargers are often way overdesigned
+(or gross overkill if you prefer) considering that the ultimate limitation on
+cycle time is likely to be cooling of the cavity components, particularly the
+flashlamp.
+<p>
+Here are some possibilities for capacitor charging circuit:
+
+<ul>
+<li><b>Battery or low voltage DC powered capacitor chargers.</b>
+ <p>
+ <ul>
+ <li>Up to 350 V, up to a few J/s: Inverters from pocket camera and
+  external flash units.  Some of these will simply not work if modifications
+  are made to the output circuit (like a voltage multiplier).  The only way to
+  know for sure is to try it!  Especially useful are the flash units from
+  single-use (disposable) pocket cameras because they are often free!
+  Of course, the energy storage capacitor and trigger circuits may be useful
+  as well.
+<p>
+ <li>Up to 1 kV or more, up to a few dozen J/s: Fluorescent lamp inverters,
+  flyback based high voltage generators, etc.
+ <p>
+ <li>Up to 1 kV, up to a few hundred J/s: Automotive, RV, and marine power
+  inverters (12 VDC in, 115 VAC out) with voltage multipliers added to their
+  output.  For squarewave types, a voltage tripler will produce about 350 V,
+  a quadrupler about 460 V, and so forth.  For sinewave or modified sinewave
+  types, a doubler will result in about 300 to 350 V, a tripler about 450 V,
+  etc.  For 220 to 240 VAC output, fewer multiplier stages are required
+  (and/or greater output voltage possible.  For 300 to 350 VDC to capacitor,
+  no multiplier is required for sinewave and modified sinewave types).
+ </ul>
+<p>
+<li><b>AC line powered capacitor chargers.</b>  All of these can be fitted
+ with voltage multipliers to boost output beyond what is listed.
+<p>
+ <ul>
+ <li>Up to 1 kV, up to a few hundred J/s: Direct connection to line
+  using voltage multiplier.  WARNING: No line isolation as if this matters
+  where the energy storage capacitor alone can kill you a day later!  AS
+  above, fewer multiplier stages and/or higher output from 220 to 240 VAC
+  line input.
+ <p>
+ <li>Up to 1.5 kV, up to a few hundred J/s: Power transformers from
+  vacuum tube type audio amps and old TVs.
+ <p>
+ <li>Up to 5 kV, up to 1 kJ/s or more: Microwave oven transformers.
+ <p>
+ <li>Up to 22 kV, up to several hundred J/s: Neon sign/luminous tube
+  and oil burner ignition transformers.
+ <p>
+ <li>Up to 500 kV, up to several MJ/s: Pole pigs and substation
+  transformers wired up backwards. :)
+</ul>
+</ul>
+
+Relevant circuits that will work directly or with minor modifications can be
+found in:
+
+<ul>
+<li><A HREF="http://www.repairfaq.org/sam/strbfaq.htm">Sam's Strobe FAQ</A>
+<p>
+<li><A HREF="http://www.repairfaq.org/sam/samschem.htm">Sam's Schematic
+ Collection</A>
+<p>
+<li>The chapters: <A HREF="laserhsc.htm#hsctoc">Complete HeNe Laser Power
+ Supply Schematics</A>, <A HREF="laserclp.htm#clptoc">The Home-Built Laser
+ Assembly and Power Supply</A>, and others in this document.
+</ul>
+
+<h3><A NAME="spscch1">Sources for Capacitor Charging Circuit
+ Components</A></h3>
+
+See the chapter: <A HREF="laserlps.htm#lpstoc">Laser and Parts Sources</A>
+for all sorts of suppliers of everything needed to construct the capacitor
+charger (and trigger circuits).  The other chapters listed above may also list
+sources for specialized items like high voltage diodes, resistors, and
+capacitors.
+
+<h3><A NAME="spsdefb">Recycled Defibrillator as Capacitor Charger</A></h3>
+
+The following may come in handy when building that next high speed high power
+strobe or pulsed laser.
+<p>
+WARNING: Defibrillators are at least as good at stopping beating hearts as
+restarting misbehaving ones.  The charge in their energy storage capacitor
+(typically 300 to 400 joules) is enough to kill a half dozen healthy adults
+instantly.  The operating voltage (up to 5 kV) doesn't respect common wire
+insulation and can jump 1/4" or more in air.  There are no second chances.
+<p>
+(From: Steve Roberts (osteven@akrobiz.com).)  
+<p>
+Older defibrillators are now showing up as inexpensive surplus because their
+ancient edmark waveform is being replaced with newer computer controlled
+biphasic waveforms.  
+<p>
+So what do you get in a typical edmark waveform defibrillator:
+<p>
+<ol>
+<li>Switching HV supply up to 5 kV with programmable shutoff voltage.
+<li>32 uF Maxwell energy storage capacitor rated at 5 to 6 kV.
+<li>47 mH inductor rated for the above cap's current.
+<li>A high pressure gas (SF6?) or BIG vacuum glass relay.
+<li>A second smaller vacuum relay.
+<li>A 50 ohm resistor for bleeding the cap and simulating a patient's chest.
+<li>Usually a vectorscope with an amber phosphor CRT and a GM20 or similar
+ galvanometer if the unit has a chart recorder.
+</ol>
+<p>
+Notes: The relay is usually a 5 kV 50 A DPDT which has a short across one
+set of contacts to protect the patient.  The other set of contacts goes to the
+capacitor common leads and to the patient via the paddles.  So, presto! - apply
+12 volts to the relay and you get up to 360 joules dumped into the victim or
+patient via the inductor to control the waveform.  A patient's chest is
+assumed to be about 50 ohms impedance via the conductive cream to the paddles
+so the test circuit monitors what happens when the second smaller relay dumps
+the cap into the 50 ohm air cooled test resistor.  The cap is also dumped
+during power-down.
+<p>
+I can't overstress the absolute need for safety when handling a 33 uF
+5 kV capacitor.  Newer defibrillators have a MOSFET H-bridge for bipolar
+switching and only go to two kV with smaller caps. 
+
+<h3><A NAME="spsephr">Electrophoresis Power Supplies as Capacitor
+ Chargers</A></h3>
+
+Relatively inexpensive electrophoresis high voltage power supplies
+are popping up on eBay. Search for "electrophoresis".  Depending on model,
+these may be capable of producing up to 2,500 VDC or more with a current
+capability of a few mA to 100s of mA or more.  They are often fully
+adjustable and protected against faults.  However, isolating the
+energy storage capacitor with a current limiting resistor is a
+good idea.
+<p>
+<A NAME="spscap"></A>
+<hr>
+<br>
+<li>Back to <A HREF="lasersps.htm#spstoc">SS Laser Power Supplies
+ Sub-Table of Contents</A>.
+<h2>Energy Storage Capacitors</h2>
+<h3><A NAME="spscapc">Calculating the Required Capacitance</A></h3>
+
+The equation that should be engraved on the inside surface of the front of
+your skull is: E = 1/2 * C * V<sup>2</sup>. :)  Given a desired flashlamp
+voltage, this tells you how much energy (in joules or watt-seconds) is
+available from a certain uF value of capacitance.  For all intents and
+purposes, nearly all the available energy will be deposited in the flashlamp
+even for a less than optimal circuit.
+<p>
+So:
+<pre>
+              2 * E
+         C = -------
+                V<sup>2</sup>
+</pre>
+To obtain this uF value <b>and</b> voltage rating may require a capacitor bank
+consisting of a series/parallel combination of multiple capacitors in an
+array.  This creates problems of its own in guaranteeing that voltage is
+(nearly) equally distributed or balanced among multiple series capacitors.
+See the section: <A HREF="laserhpd.htm#hpdhvc2">Series Banks of
+Capacitors</A>.  Such issues are particularly critical for the rapid discharge
+circuits being discussed here.
+<p>
+Also note that normal vanilla flavored electrolytic capacitors may self
+destruct if called upon for this service.  Or, they may have too much
+inductance (increasing pulse duration) or too much resistance (resulting
+in excessive losses inside the capacitor(s).  Electrolytics are probably
+adequate for ruby pumping with its long fluorescence lifetime (3 ms) but
+would be marginal for Nd:YAG (230 us) with a desired 100 us pulse duration.
+
+<h3><A NAME="spscaps">Sources for Flashlamp Rated Capacitors</A></h3>
+
+WARNING: I can't over-emphasize the risk of instant and total electrocution
+with even small flashlamp capacitors.  Where you have acquired some really
+large ones - say 12" x 18" x 8" weighing 60 pounds each - you may be better
+off selling them - you'll get a lot of nice cash - and building a power supply
+with something just slightly less lethal!  Each one of those caps will kill
+dead-dead a few dozen or more people after sitting with the power off for
+a week!  Seriously, they are deadly and should be treated with the same
+respect as an equivalent size block of sticks of dynamite (or C4 if you
+prefer) wired to detonators sitting out in a thunderstorm. :)
+<p>
+For long duration pulses, ordinary high quality electrolytics capacitors may
+work without self destructing and/or dissipating too much energy inside the
+capacitor.  However, for high-joule flashlamps operating with short pulse
+duration, you won't get away with this for either or both reasons.  No,
+wiring 10,000, .01 uF, 1 kV disk capacitors in parallel probably isn't a
+very viable solution! :)
+<p>
+If you want to get an idea of what the "big boys" use, check out:
+<p>
+<ul>
+<li><A HREF="http://www.hivoltcapacitors.com/page7.html">HiVolt Capacitors,
+ Ltd. Product Selection Guide</A>
+<li><A HREF="http://www.ga.com/energy/comp_syst/products/">General Atomics (was
+ Maxwell) Energy Products</A>
+</ul>
+<p>
+High quality motor run capacitors should be fine for most long to medium
+pulse length applications including flashlamps for ruby and YAG lasers.
+A motor run capacitor rated for 370 VAC is *probably* good for at least
+500 VDC.  (I know Robin says it's much higher but I'm not sure this applies
+to all types.)
+<p>
+(From: Robin Bowden.)
+<p>
+I have found that motor run capacitors are quite suitable.
+They are made from metalized polypropylene and there are models available
+up to at least 440 VAC.
+<p>
+If you look at dual rated AC/DC metallized polypropylene caps - then a cap
+rated at 400 VAC will likely be rated at 900 VDC.  So I guess these 440 VAC
+capacitors are good up to 1 kV.
+<p>
+These are readily available and are relatively inexpensive.
+Here in the UK, a 40 uF (top end of available values) costs around 5.75
+pounds (less than $10US).
+<p>
+I have a bank of three of these in parallel and use them to just over 900 VDC
+(50 joules).
+<p>
+Looking at the manufacturer's datasheet the LCR MRP series 40 uF caps (the
+ones I have), tan delta of less than 0.001 at 50 Hz.
+This tan delta figure is the worst case for all caps in the series.
+For a 40 uF cap this gives ESR of less than 80 milliohms.
+<p>
+A metal cased Arcotronics one stated tan(d) to be less than 0.002
+(160 milliohm) but this incorporates an overpressure disconnect device
+(wire that breaks when the metal can deforms due to over-pressure).
+I guess this is responsible for most of those extra milliohms.
+<p>
+Today I took one of those caps into the lab to measure.
+Real world figures for the 40 uF LCR MRP series:
+<p>
+<ul>
+<li>Capacitance: 38 uF.
+<li>Self resonant frequency: 78 kHz.
+<li>ESR measured at self resonant frequency: 15 milliohm.
+<li>ESL derived from self resonant frequency: 0.11 uH.
+</ul>
+<p>
+The caps are of wound construction with the termination in bulk from each
+side of the roll (not start and end of winding)
+I guess this explains the low ESR and ESL
+I don`t know how this compares to a real laser cap but it looks reasonable
+to me.
+<p>
+The datasheet states a maximum dV/dt of 20 V/us.  I'm not sure how far you
+can push this - I assume it is to prevent overvolting the dielectric due to
+excitation of the self resonance rather than a maximum current issue.
+<p>
+(From: Don Klipstein (don@misty.com).)
+<p>
+<A HREF="http://www.vishay.com/">Sprague (a division of Vishay)</A> 36DX and
+probably the similar <A HREF="http:/www.duracap.com/">Durocap/Mallory</A> CG,
+CGH, etc., work fairly well for discharges that take a few hundred
+microseconds or more, and work well for discharges that take at least a
+millisecond.  With a 1 millisecond discharge, maybe a couple to a few percent
+of the energy is dissipated in the internal resistance of the capacitor.
+(Note: <A HREF="http://www.duracap.com/">Duracap International, Inc.</A>
+is the actual manufacturer of the Mallory product line now.)
+<p>
+For shorter flashes, the Sprague TVA series (axial lead) is a little better
+than electrolytics that have both leads on the same end.  But for flashes
+under about 100 microseconds, I know that the usual electrolytics may not be
+the way to go.
+<p>
+(From: Boris Mohar (borism@interlog.com).)
+<p>
+And then there are also: <A HREF="http://www.eci-capacitors.com/">ECI
+Capacitors, Inc.</A>Unlytic UL30 film capacitors.
+<p>
+They are packaged in the same form factor as electrolytics, computer style 3"
+diameter cans.  Voltage range is from 300 to 1,000 WVDC (!!) with capacities
+from 50 to 1,600 uF.  These are not electrolyics (I guess you figured that
+out, huh?) so they are non-polar.  Impedance dip of 0.01 ohms or so is in the
+30 to 100 kHz range.  They are specified to handle thousands of amps peak
+currents.
+<p>
+I dare not ask the price.
+<p>
+(From: David Linsley (david.linsley@baesystems.com).)
+<p>
+<A HREF="http://www.norfolk-capacitors.com/">Norfolk Capacitors Limited</A>
+is a UK supplier of all types of capacitors including those suitable for
+pulsed lasers.  See <A HREF=
+"http://www.norfolk-capacitors.com/capacitor/products/energy/ec1.htm">Norfolk
+Capacitors Limited Energy Discharge Capacitors</A>.
+<p>
+<A NAME="spsind"></A>
+<hr>
+<br>
+<li>Back to <A HREF="lasersps.htm#spstoc">SS Laser Power Supplies
+ Sub-Table of Contents</A>.
+<h2>Pulse Forming Network Inductors</h2>
+<h3><A NAME="spsindc">Calculating the Required Inductance</A></h3>
+
+As a first approximation, the specific value of inductance in the pulse
+forming network will be determined mostly by the desired pulse duration from
+the flashlamp and the value of the energy storage capacitor(s).  Assuming a
+critically damped system, the pulse duration is approximately: T = 3 *
+sqrt(L * C) which is close to 1/2 period of the resonant frequency of the LC
+combination.  So, given a fixed uF value for the energy storage capacitor and
+desired pulse duration, L = T<sup>2</sup>/(9 * C).  This assumes critical
+damping - part of the advanced course. :)
+<p>
+Whether a system is critically damped, under-damped, or over-damped will
+depend on how the resistance of the discharge path (capacitor, inductor,
+flashlamp, and wiring) compares to the reactance of the LC network.  However,
+it may not be possible to achieve both the desired pulse duration and critical
+damping.
+<p>
+Note that with a critically damped or over-damped system, there will be no
+undershoot which is the desired state of affairs.  Undershoot damages
+flashlamps.  In any case, it is a good idea to add a reverse biased high
+current diode across the output of the PFN. This will conduct if there is any
+undershoot bypassing the current around the flashlamp.
+<p>
+As an example, the energy storage capacitor in PFN1 (see the section:
+spspfn1">Pulse Forming Network 1</A>) is 36 uF and for a Nd:YAG laser,
+a pulse duration less than 230 us (the fluorescence lifetime of Nd:YAG) is
+desired.  The 30 uH inductor then results in:
+T = 3 * sqrt(3*10<sup>-5</sup> * 3.6*10<sup>-5</sup>) or about 100 us.
+
+<h3><A NAME="spsindb">Constructing Pulse Forming Inductors</A></h3>
+
+These typically need to have a value between a couple of microHenries and
+100 uH.  While commercial inductors are available at inflated prices, in most
+cases, it is easy to construct your own from a ferrite core and a few turns of
+wire.  While the peak current through the inductor may be several hundred
+amps, unless you are operating at a high repetition rate, you don't need to
+construct the inductor from #0000 AWG wire - #16 to #20 will do fine as long
+as its total resistance is small compared to that of the flashlamp and ESR of
+the capacitor.
+<p>
+While there are messy equations to calculate inductance based on number of
+turns; core type, style, diameter; number of layers, packing, etc.  The
+easiest may be to construct a, say 10 turn, test coil and perform a 'ring
+test' to find its inductance.  Then, scale as appropriate for your needs.
+Inductance is a squared function of the number of turns where the packing
+doesn't change much.  Err on the high side and then remove turns to tune it
+precisely.
+<p>
+The 'ring test' just uses a pulse generator (almost any type) to excite the
+parallel combination of a high quality capacitor (I use polyester capacitor
+around 1 uF) and your test inductor.  This circuit will resonate at:
+<pre>
+                        1
+         F = ----------------------
+              2 * pi * sqrt(L * C)
+</pre>
+
+So:
+<pre>
+                     1
+         L = -------------------
+              (2 * pi * F)<sup>2</sup> * C
+</pre>
+With a high quality capacitor, each pulse from the pulse generator will
+result in many cycles of a decaying sinusoid - enough to accurately measure
+frequency or period.
+<p>
+(From: Chip Shults (aichip@gdi.net).)
+<p>
+I usually wind inductors out of 18 gauge magnet wire for this, and the
+resulting current doesn't melt them because it's so brief.  I use a ferrite
+about 3/4" in diameter.  60 turns gives you about 35 uH with a single layer
+coil.
+<p>
+(From: A. Nowatzyk (agn@acm.org).)
+<p>
+For the 3" x 1/4" Q-switched ruby tank range finder, I used two 100 uF Maxwell
+caps (low ESR for pulsed application) and a 120 uH pulse forming inductor.
+The measured T1/2 is 200 us, peak power is 1.8 MW, peak current is 2500 A and
+peak discharge voltage is 700 V (caps were charged to 1000 V.  The Q-switch
+lasing threshold is about 690 V.
+<p>
+The inductor was wound from 7 strands of 19 AWG magnet wire that were twisted
+into a round bundle with about 2 twists/inch. A linear air-coil works fine,
+but the stray field during discharge is very annoying to any nearby electronic.
+A toroidal inductor (air-core!) should work better. Forget any core-material
+other than air: At these currents, anything saturates and L will be much less
+that you would expect.
+
+<h3><A NAME="spsindp">Modifying the PFN Inductor for Series Triggering</A></h3>
+
+Where you have an existing PFN but no means of triggering the flashlamp, it
+may be possible to combine these functions with the PFN's inductor iff:
+
+<p>
+<ol>
+ <li>The inductor's insulation is adequate to handle the high voltage trigger
+  pulse and there are no components other than the flashlamp attached to its
+  output.  If there are any (like a reverse polarity prevention diode), their
+  ratings would have to be adequate to handle the trigger pulse.  The typical
+  required trigger pulse voltage will be greater than 10 kV, possibly as much
+  as 30 kV or more.  And, should there be any capacitors on the output, this
+  probably won't work since the pulse would be filtered out!
+<p>
+ <li>The number of turns on the inductor can be determined so you will know
+  how many primary turns to use and what voltage to use on the trigger cap
+  based on the triggering specs for your flashlamp.  The number of turns can
+  be determined by adding a 10 turn test primary to the inductor's core,
+  driving it at several kHz from a low level source (like a signal generator),
+  and measuring the voltage on the original winding.  This will give you the
+  turns ratio.  For triggering, a 1 or 2 turn primary is sufficient if the
+  required trigger cap voltage isn't excessive (e.g., 300 V or less).
+</ol>
+
+The trigger primary winding must be connected to the trigger cap discharge
+circuit such that the resulting pulse <i>increases</i> the voltage on the
+flashlamp.
+
+<h3><A NAME="spslcrm">Lou's Comments on Replacing the M-60 Inductor/Trigger
+ Transformer</A></h3>
+
+The following was prompted by a request for information on what to use in
+place of the original potted combination inductor and pulse transformer used
+in the PFN of the ruby laser in the M-60 tank rangefinder.
+<p>
+(From: Lou Boyd (boyd@fairborn.dakotacom.net).)
+<p>
+I did some tests on one of the M-60 ruby laser flash injection transformers
+and was somewhat surprised by the results.  I hadn't worked with one before.
+Here's what I found:
+<p>
+The main winding, when placed in parallel with an 88 uF 5% capacitor (had one
+handy), resonates at 415 hz at a drive level of about 5 volts.  That indicates
+an inductance for that winding of 1.68 mH when there's no core saturation.  I
+was surprised that it was that large, I was expecting more like 200 to 500 uH.
+The more surprising part is that the resistance of that winding is only 0.052
+ohms (DC).  My ohmmeter just showed a short so I used a bridge.  I couldn't
+access the other winding of mine directly since it's potted, but when driven
+through the .22 uF trigger capacitor at the assembly's resonant frequency of
+545 khz (nothing attached to the secondary except a 10M scope probe) the step
+up was about 16 times.  Dumping 500 V with the SCR should produce at least 7
+kV to initiate the flash.  The cap is rated 600 V.  I have no idea at what
+voltages/rise times the core starts to saturate.
+<p>
+To wind an air core inductor of 1.68 mH inductance and get .05 ohms resistance
+would create a monster.  A quick calculation says it would take about 100
+turns of 12 gauge wire wound on a 6" cylinder using three layers.  The
+permeability of the core on the inductor you have gives a dramatic size
+reduction.  If you can dissect the one you have and rewind it I recommend doing
+so.  My guess is that it's in the order to 50 to 100 turns of something around
+#20 gauge wire. Count them and measure the size of the wire if you take it
+apart.  I don't have any idea what goo is holding it together.  If it's an
+Epoxy it may not be practical to open it.
+<p>
+I presume you're certain the inductor/transformer is bad.  Seeing what looks
+like a dead short with an ohmmeter on the output winding is normal.  If
+there's an open between the heavy orange and heavy clear lead that's bad. If
+those lead have a DC path to ground the .001 uF, 5kV cap or the inductor could
+be bad.  The only practical way to check for a shorted winding is to measure
+it's inductance.  The resistance difference for a 1 turn short would be less
+than a milliohm.
+
+<p>
+<A NAME="spsdesa"></A>
+<hr>
+<br>
+<li>Back to <A HREF="lasersps.htm#spstoc">SS Laser Power Supplies
+ Sub-Table of Contents</A>.
+
+<h3><A NAME="spsdesc">Pulsed Solid State Laser Design Resources</A></h3>
+<h4><A NAME="spsrtw1">Rotorwave Technical Section</A></h4>
+
+The <A HREF="http://www.rotorwave.com/technical.htm">Rotorwave Techical
+Section</A> has many resources related to pulsed solid state lasers including
+case studies/design examples, programs and spreadsheets to assist in laser
+design, specific information for pulsed holography, and more.
+<p>
+One of these is an MS Excel spreadsheet that implements calculations for a
+variety of useful laser design issues including resonator parameters,
+power supplies, and pulse forming networks.  It is on their Web site
+under "Ruby Laser Designs" named "weights.xls".  I have an archived copy at:
+<A HREF="http://www.repairfaq.org/sam/local/LasDesCalc1.xls">Rotorwave Laser
+Design Calculator Spreadsheet</A>.  (If someone complains, I may
+have to remove this file but will happily add any requested authorship or
+copyright information to it, or link to the original Web site.
+The only reason I copied it was that the Rotorwave Web site
+has been somewhat unreliable of late and the spreadsheet seemed to be
+particularly useful.)
+<p>
+The organization is somewhat haphazard but there are a variety of useful
+equations solved for specific parameters.  Cut and paste the relevant
+lines and drop in parameters for your laser and the result may be useful.
+<p>
+CAUTION: I have not verified the accuracy of all of these equations.  So
+use at your own peril.  I will not be responsible if the Universe
+should implode when you fire your laser for the first time! :)
+
+<h4><A NAME="spsdls1">Doug Little's PFN Calculations Spreadsheet</A></h4>
+
+This has the various PFN equations implemented in MS Excel
+providing a convenient way to experiment with variations.
+Get it from <A HREF="http://www.repairfaq.org/sam/laser/pfncalc1.xls">Doug
+Little's PFN Calculations Spreadsheet</A> (Version 1.1).
+<p>
+(From: Doug Little.)
+<p>
+This updated version has been used to build a working ruby laser
+and appears to check out reasonably well in the 'real' world. In fact
+the calculations one way or another brought me to within a few percent of
+actual performance, which I think is not bad given that some of the
+efficiency figures are approximate.
+<p>
+The spreadsheet predicted my laser should threshold around 1,350 V at
+633 uF, and it actually took place at 1,450V at 633 uF. This factors in
+the rod dimensions, reflector, lamp spec, lamp current, etc. So not
+too bad. :)
+
+<h3><A NAME="spsprgs">Handy Little Programs</A></h3>
+
+The following C programs were contributed by: Eddie Kovelan
+(A HREF="mailto:kovelan@austin.ibm.com">kovelan@austin.ibm.com</A>.)  I (Sam)
+did some editing and cleanup. :)  Also see the section:
+<A HREF="laserssl.htm#ssleqs">Useful Equations for Flashlamp Selection and
+PFN Design</A> upon which some of these programs are based.
+<p>
+While tested under unix, (Sun OS and freebsd), they should compile under
+almost any C environment since there is definitely nothing fancy about
+anything and your minimal Turbo C should be fine! Just save the file
+and compile it with the command line shown in the program header.
+
+<h4><A NAME="spsprgse">Energy Stored in a Capacitor (joules.c)</A></h4>
+
+This program returns the total energy stored in a capacitor of specified
+value (uF) and operating voltage (V).  Note that this will be somewhat more
+than actually can be delivered to a flashlamp.
+<p>
+<ul>
+<li><A HREF="joules.c">Download joules.c</A>
+</ul>
+
+<h4><A NAME="spsprgsc">Capacitor Value for a Desired Energy
+ (flashcap.c)</A></h4>
+
+This program returns the required capacitance (uF) of an energy storage
+capacitor given the desired total energy (J) and operating voltage (V).
+<p>
+<ul>
+<li><A HREF="flashcap.c">Download flashcap.c</A>
+</ul>
+
+<h4><A NAME="spsprgsi">Inductance for a Pulse Width and Capacitor
+ Value (inductor.c)</A></h4>
+
+This program returns the required inductor value (uH) for a given pulse
+duration (us) and capacitance (uF).
+
+<p>
+<ul>
+<li><A HREF="inductor.c">Download inductor.c</A>
+</ul>
+
+<h4><A NAME="spsprgsd">Pulse Duration of a PFN (pulse.c)</A></h4>
+
+This program returns the pulse duration of a series LC pulse forming network
+given the inductance (uH) and capacitance (uF) assuming that the system is
+critically damped.
+
+<p>
+<ul>
+<li><A HREF="pulse.c">Download pulse.c</A>
+</ul>
+
+<h4><A NAME="spsprgsm">Capacitance, Voltage, and Inductance of a PFN
+ (pfn.c)</A></h4>
+
+The following program returns a capacitance (uF), voltage (V), and
+inductance (uH) for a series LC pulse forming network given the the
+desired total energy (J or W-s), pulse duration (us), and flashlamp impedance,
+Ko (ohms), assuming the system is critically damped.
+<p>
+<ul>
+<li><A HREF="pfn.c">Download pfn.c</A>
+</ul>
+
+<h4><A NAME="spsprgsl">Inductance of an Air-Core Coil (coil.c)</A></h4>
+
+This program returns the required number of turns for an air-core coil of
+specified inductance (uH), radius (inches), and length (inches).  Note that
+this is an approximation assuming the length is more than 0.8 times the
+radius.
+
+<p>
+<ul>
+<li><A HREF="coil.c">Download coil.c</A>
+</ul>
+
+<p>
+<hr>
+<br>
+<li>Back to <A HREF="laserfaq.htm#faqtoc">Sam's Laser FAQ Table of
+ Contents</A>.
+<li>Back to <A HREF="lasersps.htm#spstoc">SS Laser Power Supplies Sub-Table of
+ Contents</A>.
+<li>Forward to <A HREF="laserssc.htm#ssctoc">Complete SS Laser Power Supply
+ Schematics</A>.
+<p>
+<hr>
+<b><center>Sam's Laser FAQ, <A HREF="copyright.htm">Copyright &copy<A> 1994-2009,
+ Samuel M. Goldwasser, All Rights Reserved.<br>
+ I may be contacted via the
+ <A HREF="emaillnk.htm">Sci.Electronics.Repair FAQ
+ Email Links Page</A>.</center></b>
+<hr>
+<p>
+</BODY>
+</HTML>

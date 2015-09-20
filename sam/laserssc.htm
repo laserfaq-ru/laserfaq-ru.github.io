@@ -1,0 +1,1560 @@
+<HTML>
+<HEAD>
+<TITLE>Sam's Laser FAQ - Complete SS Laser Power Supply Schematics</TITLE>
+</HEAD>
+<BODY>
+<A NAME="ssctoc"></A>
+<p>
+<hr>
+<b><center>Sam's Laser FAQ, <A HREF="copyright.htm">Copyright &copy<A> 1994-2010,
+ Samuel M. Goldwasser, All Rights Reserved.<br>
+ I may be contacted via the
+ <A HREF="emaillnk.htm">Sci.Electronics.Repair FAQ
+ Email Links Page</A>.</center></b>
+<hr>
+<p>
+<li>Back to <A HREF="laserfaq.htm#faqtoc">Sam's Laser FAQ Table of
+ Contents</A>.
+<h1>Complete SS Laser Power Supply Schematics</h1>
+<h2>Sub-Table of Contents</h2>
+<ul> 
+<li><A HREF="laserssc.htm#sscibs">Introduction to Complete SS Laser Power Supply Schematics</A>
+<p>
+<li><A HREF="laserssc.htm#sscpfn1">Pulse Forming Network 1 and SSY1 Trigger PCB</A>
+ <ul>
+ <li><A HREF="laserssc.htm#sscpfn11">Description of PFN1</A>
+ <li><A HREF="laserssc.htm#sscpfn12">PFN1 Schematics</A>
+ <li><A HREF="laserssc.htm#sscssy1t">Trigger Circuit (TRG1)</A>
+ </ul>
+<p>
+<li><A HREF="laserssc.htm#sscsg1">Sam's AC Line Power Supply for SSY1 (SG-SP1)</A>
+ <ul>
+ <li><A HREF="laserssc.htm#sscsg11">Description of SG-SP1</A>
+ <li><A HREF="laserssc.htm#sscsg12">SG-SP1 Schematics</A>
+ <li><A HREF="laserssc.htm#sscsg13">Don's Comments on the SSY1 Flashlamp</A>
+ </ul>
+<p>
+<li><A HREF="laserssc.htm#sscsg6">Sam's Small Adjustable Power Supply for Solid State Pulsed Lasers (SG-SP4)</A>
+/A>
+ <ul>
+ <li><A HREF="laserssc.htm#sscsg61">Description of SG-SP4</A>
+ <li><A HREF="laserssc.htm#sscsg62">SG-SP4 Schematics</A>
+ </ul>
+<p>
+<li><A HREF="laserssc.htm#sscsg2">Sam's Inverter Power Supply for SSY1 (SG-SI1)</A>
+ <ul>
+ <li><A HREF="laserssc.htm#sscsg21">Description of SG-SI1</A>
+ <li><A HREF="laserssc.htm#sscsg22">SG-SI1 Schematics</A>
+ </ul>
+<p>
+<li><A HREF="laserssc.htm#sscsg7">Sam's HeNe Laser PSU Based Power Supply for SSY1 (SG-SH1)</A>
+ <ul>
+ <li><A HREF="laserssc.htm#sscsg71">Description of SG-SH1</A>
+ <li><A HREF="laserssc.htm#sscsg72">SG-SH1 Schematics</A>
+ </ul>
+<p>
+<li><A HREF="laserssc.htm#sscsg3">Sam's High Power Solid State Laser Power Supply (SG-SP2)</A>
+ <ul>
+ <li><A HREF="laserssc.htm#sscsg31">Description and Schematic of SG-SP2</A>
+ <li><A HREF="laserssc.htm#sscsg32">SG-SP2 Operation</A>
+ <li><A HREF="laserssc.htm#sscsg33">SG-SP2 Notes</A>
+ </ul>
+<p>
+<li><A HREF="laserssc.htm#sscsg5">Sam's High Energy AC Line Power Supply for SSY1 (SG-SP3)</A>
+ <ul>
+ <li><A HREF="laserssc.htm#sscsg51">Description of SG-SP3</A>
+ <li><A HREF="laserssc.htm#sscsg52">SG-SP3 Schematics</A>
+ </ul>
+<p>
+<li><A HREF="laserssc.htm#sscscc1">Simple Capacitor Charger for SSY1</A>
+<p>
+<li><A HREF="laserssc.htm#sschss1">Simple Inverter Capacitor Charger Based on HSS1</A>
+ <ul>
+ <li><A HREF="laserssc.htm#sschss10">Basic Description of HSS1</A>
+ <li><A HREF="laserssc.htm#sschss11">HSS1 Schematics</A>
+ <li><A HREF="laserssc.htm#sschss12">The HSS1 Inverter Transformer</A>
+ </ul>
+<p>
+<li><A HREF="laserssc.htm#sscuci">Ultra-Compact 350 V Capacitor Charger</A>
+<p>
+<li><A HREF="laserssc.htm#sscwe1">Wes's Ruby Laser Power Supply (WE-SP1)</A>
+ <ul>
+ <li><A HREF="laserssc.htm#sscwe11">Description of WE-SP1</A>
+ <li><A HREF="laserssc.htm#sscwe12">WE-SP1 Schematics</A>
+ </ul>
+<p>
+<li><A HREF="laserssc.htm#sscsg8">Sam's Proposed Power Supply for M-60 Laser (SG-SP5)</A>
+<p>
+<li><A HREF="laserssc.htm#sscsg4">Sam's Q-Switch Trigger Circuit for Hughes M-60 Ruby Laser (SG-ST1)</A>
+ <ul>
+ <li><A HREF="laserssc.htm#sscsg41">Description and Schematic of SG-ST1</A>
+ </ul>
+<p>
+<li><A HREF="laserssc.htm#sscdl1">Doug's Q-Switch Trigger Circuit for Hughes M-60 Ruby Laser (DL-ST1)</A>
+ <ul>
+ <li><A HREF="laserssc.htm#sscdl11">Description and Schematic of DL-ST1</A>
+ </ul>
+<p>
+<li><A HREF="laserssc.htm#sscak1">Andreiko's Q-Switch Trigger Circuit for Hughes M-60 Ruby Laser (AK-ST1)</A>
+ <ul>
+ <li><A HREF="laserssc.htm#sscak11">Description and Schematic of AK-ST1</A>
+ </ul>
+<p>
+<li><A HREF="laserssc.htm#sscuyag">Power Supply for Micro YAG Laser (uYAG)</A>
+ <ul>
+ <li><A HREF="laserssc.htm#sscuyagd">Description of uYAG PSU</A>
+ <li><A HREF="laserssc.htm#sscuyagl">Links to Additional MAX Flash Information</A>
+ <li><A HREF="laserssc.htm#sscuyagi">MAX Flash Interface and Circuit Modifications</A>
+ </ul>
+<p>
+<li><A HREF="laserssc.htm#sscoth">Other SS Laser Power Supplies on the Web</A>
+</ul>
+<p>
+<A NAME="sscint"></A>
+<hr>
+<br>
+<li>Back to <A HREF="laserssc.htm#ssctoc">Complete SS Laser Power Supply Schematics
+ Sub-Table of Contents</A>.
+<h2>Introduction to Complete SS Laser Power Supply Schematics</h2>
+
+This chapter contains circuit diagrams for several power supplies for pulsed
+solid state lasers.  These include units suitable for driving the popular
+Hughes ruby and YAG rangefinder laser assemblies as well, one using the
+flash from a disposable pocket camera, and a high energy flashlamp power
+supply for that 8 inch long surplus NOVA laser rod you have been saving. :)
+<p>
+The pulse forming network is what determines the performance of a pulsed solid
+state laser.  Thus, there is a great deal of flexibility in the design of
+the capacitor charger and trigger circuits.  Systems designed for other
+applications can often be adapted for solid state laser power supplies.  See
+the chapter: <A HREF="lasersps.htm#spstoc">SS Laser Power Supplies</A> for
+more information.  And the schematics in this chapter can be easily modified
+for larger, smaller, or different types of solid state lasers.
+<p>
+WARNING: All of these systems are potentially lethal - some just more lethal
+than others.  Hey, but when you're dead, it probably doesn't matter how well
+done you are.  Before even thinking about building or going near one of
+these systems, make sure you have thoroughly read, understand, and follow
+the laser and electrical safety guideline provided elsewhere in this document!
+<p>
+<A NAME="sscpfn1"></A>
+<hr>
+<br>
+<li>Back to <A HREF="laserssc.htm#ssctoc">Complete SS Laser Power Supply Schematics
+ Sub-Table of Contents</A>.
+<h2>Pulse Forming Network 1 and SSY1 Trigger PCB</h2>
+<h3><A NAME="sscpfn11">Description of PFN1</A></h3>
+
+PFN1 (manufacturer and model unidentified) is a combination of a 36 uF, 950 V
+energy storage capacitor, 0.03 mH inductor, automatic bleeder circuit, and
+various connectors and other stuff.  The capacitor is marked with its rating
+but the inductor is not and its value was determined by performing a 'ring
+test' using both a separate high-Q 1 uF capacitor and then the one in the PFN.
+<p>
+The original application for PFN1 was most likely to be used with the SSY1
+laser head (see the section: <A HREF="laserscl.htm#sclsy1">A Small
+Nd:YAG Laser - SSY1</A>).  The maximum useful energy into the flashlamp is
+around 14 to 15 J when charged to just over 900 V.
+<A HREF="pfn1.gif">Pulse Forming Network 1</A> shows the assembly with major
+components labeled.  This unit is/was available from
+<A HREF="http://www.mi-lasers.com/">Meredith Instruments</A>.
+<p>
+When used without modification, the combination of the 36 uF capacitor and
+0.03 mH inductor will result in a 50 to 100 us pulse duration (dependent on
+other circuit parameters, probably closer to 100 us in practice).  This is
+quite well matched to a Nd:YAG rod.  With a well designed cavity, 15 J should
+be enough to threshold a 50 mm x 4 mm Nd:YAG rod (which is what it apparently
+was intended to pump) and considerably more than enough for a 25 mm rod.
+<p>
+Note that the capacitor in PFN1 is a very high quality non-electrolytic
+type.  It may be a Polyester film capacitor with an ESR (Equivalent Series
+Resistance) of around 0.02 Ohm (compared to almost 1 Ohm for a combination
+of electrolytic photoflash caps with the same uF and V ratings).  The
+extremely low ESR is essential to achieve the required short pulse duration
+at reasonable efficiency (i.e., maximizing energy transfer to the flashlamp)
+or at all.
+<p>
+Should you desire to disassemble PFN1 to remount the components in your very
+own more aesthetically pleasing housing, here is the procedure:
+<p>
+<ol>
+<li>Remove the other usable components from the PFN1 casting, unsolder the
+ capacitor wire that goes through the base, and free up the other longer
+ capacitor wire by breaking it free of the Epoxy globs fastening it in place
+ and then tuck it out of the way so it won't get damaged (e.g., wrapped
+ in a tight spiral on the end of the capacitor).
+<p>
+<li>Use a hack saw or rotary tool to slice the thin cast metal surrounding
+ the capacitor just deep enough to reach the tough rubbery potting compound
+ and no deeper.  This may have to be done in several places lengthwise,
+ as well as around the base of the capacitor (next to where the other
+ components were mounted).
+<p>
+<li>Then, carefully but persuasively pry the metal pieces from the potting
+ compound leaving the capacitor stuck to the base.  It's better to make
+ some more cuts than to use a lot of force.
+<p>
+<li>Make sure the wire that penetrates the base is free and pry the capacitor
+ from the base.
+<p>
+<li>Slice the potting compound lengthwise using a sharp blade,
+ again taking special care not to penetrate the capacitor skin.
+<p>
+<li>Peel off the potting compound, making more cuts if needed.
+<p>
+<li>It should be possible to peel the potting compound from the bottom of
+ the capacitor but the adhesion there seems to be much stronger than to
+ the yellow Mylar and it doesn't look so bad left in place. :)
+</ol>
+<p>
+(From Chris Chagaris (pyro@grolen.com).)
+<p>
+This power supply does sound right on the money for a small military Nd:YAG
+laser, as used in rangefinding, target designators, or illuminators. Typically
+these lasers are designed to run off of batteries or on-board DC power lines.
+Typical pulse repetition rates for these systems are on the order of 10 pps
+and power to charge the cap is usually provided by a DC-to-AC converter,
+step-up transformer, HV rectifier, PFN, and a parallel trigger circuit.
+Another much used military PSU operates on the principle of a flyback DC-AC
+converter.
+<p>
+Your calculations as to the pulse width of the lamp sound just about
+right. With Nd:YAG's fluorescent lifetime being 230 us, this pulse width
+would make perfect sense for maximum energy transfer.
+
+<h3><A NAME="sscpfn12">PFN1 Schematics</A></h3>
+
+The diagram is available in PDF format:
+<p>
+<ul>
+<li><A HREF="pfn1sch.pdf">PFN1-SCH</A> -
+ Pulse Forming Network 1.  This includes the 36 uF energy storage capacitor,
+ pulse shaping inductor, automatic bleeder circuit, and various (useless)
+ connectors, wires, and a pot. :)
+</ul>
+<p>
+The automatic bleeder circuit is something that really should be kept intact
+even if the useless wiring and that pot are removed.  The normally closed
+contacts of the vacuum relay connect a 10K ohm resistor across the energy
+storage capacitor whenever the relay's coil loses power.  The capacitor will
+be fully discharged in a couple of seconds.  This is an important safety
+feature!
+
+<h3><A NAME="sscssy1t">Trigger Circuit (TRG1)</A></h3>
+
+The original trigger PCB from SSY1 doesn't seem to be as common on the
+surplus market as the SSY1 laser head and PFN1.
+<p>
+(From: Richard.)
+<p>
+A diagram of both PFN1 and TRG1 is available in PDF format:  (Parts
+designations for PFN1 may differ from the schematic, above.)
+<p>
+<ul>
+<li><A HREF="pftr1sch.pdf">PFTR1-SCH</A> - Pulse Forming Network 1 (PFN1) and
+ Trigger (TRG1).  For TRG1, a logic level signal
+ (low) turns on a Q1 which drives the Q2 to dump C2 (charged to around
+ 240 V) through the trigger transformer, T1.
+</ul>
+<p>
+(From: Sam.)
+<p>
+The actual input to the trigger circuit is a bit strange.
+In fact, I went and checked the actual PCB to make sure the diagram
+was accurate.
+<p>
+It would seem that you have to apply a high level to the Logic Trigger
+input to charge C3 (through D3) and then pull it to ground.  C3 then
+powers the circuit long enough to turn the SCR on.  A normal TTL signal may
+be satisfactory.  If you're just going to trigger it manually, then
+start with a 5 or 6 VDC power supply or a battery and see if that works.
+It may take more voltage.
+<p>
+<A NAME="sscsg1"></A>
+<hr>
+<br>
+<li>Back to <A HREF="laserssc.htm#ssctoc">Complete SS Laser Power Supply
+ Schematics Sub-Table of Contents</A>.
+<h2>Sam's AC Line Power Supply for a SSY1 (SG-SP1)</h2>
+<h3><A NAME="sscsg11">Description of SG-SP1</A></h3>
+
+This is a basic, but complete power supply for driving the SSY1 or simlar
+small YAG laser head (see the sections: <A HREF="laserscl.htm#sclsy1">A Small
+Nd:YAG Laser - SSY1</A> and <A HREF="laserssl.htm#sslmyl">Mini YAG Laser using
+SSY1 Optics and SG-SP1</A>.  (For a more polished version of this system,
+see the section: <A HREF="laserssc.htm#sscsg6">Sam's Small Adjustable Power
+Supply for Solid State Pulsed Lasers (SG-SP4)</A>.
+<p>
+I used components from <A HREF="laserssc.htm#sscpfn1">Pulse Forming
+Network 1</A> and added a line powered capacitor charger and push button
+operated trigger circuit.  A better than 1 pps repetition rate is possible
+(and considerably more if R1 were reduced in size).  Current, the components
+are sort of strewn all over my workbench - which I definitely don't recommend
+for safety reasons.  Eventually, it will be built into a proper case.
+<p>
+The capacitor charger consists of a 700 VRMS output power transformer, a relic
+of the vacuum tube age though brand new in its original box. :)  I used the
+low voltage outputs (the 5 V and 6.3 V filament windings, not shown on the
+schematics) anti-phase in series with the line to slightly drop the the output
+to about 650 VRMS resulting in just over 900 VDC maximum after rectification
+and filtering by the main energy storage capacitor (C1).  A 300K ohm bleeder
+resistance discharges C1 in about 30 seconds.  The original PFN1 had a relay
+activated fast discharge circuit using a 10K resistor.  Whenever it was
+de-energized, the resistor was placed directly across C1 discharging it in
+less than a second.  I highly recommend using this if possible.
+<p>
+Unless you have a similar transformer to that Stancor laying around, I'd
+suggest trying to use something more modern.  I doubt you could even buy it
+today and even if you could, the cost would be ridiculous.  One option might
+be a 230 VAC transformer and a tripler made from 3 diodes (1 kV, e.g., 1N4007)
+and 2 electrolytic caps (450 to 500 V, probably around 10 uF).  This would
+produce an output that is around 900 V peak.  Or, a small
+dual primary, dual secondary isolation transformer wired to produce 345 VAC
+(three windings in series) followed by a voltage doubler (2 diodes,
+2 capacitors as above).
+<p>
+The trigger circuit consists of a tap off of the bleeder resistance at the
+1/3rd voltage point (so about 300 V when the power supply is operating at 900 V
+output).  This charges a .05 uF capacitor which is dumped into the trigger
+transformer (type unknown - looks like a large photoflash variety) when the
+push button switch (S2) is depressed.  It's possible that one of the tiny
+units from a disposable pocket camera won't work reliably as drawn.  However,
+you can adjust the size of the trigger cap and/or trigger cap charging voltage
+to optimize performance for the trigger transformer of your choice.  The use
+of a piezo barbeque igniter is also a good solution if you don't need something
+fired electrically. :)
+<p>
+I have installed SG-SP1 in a handy aluminum case with a connector to permit
+any small flashlamp pumped laser head to be easily attached.  It may be used
+as described above or as a general purpose capacitor charger for higher energy
+PFNs.
+<p>
+WARNING: The AC line input and the energy stored in the PFN can be lethal.  An
+interlock should be included (not shown) to remove input power and bleed off
+the charge on the energy storage capacitor should the case be opened.
+<p>
+CAUTION: Although the capacitor in the PFN that comes with SSY1 is rated
+for around 35 uF at 900 VDC, running at this energy may destroy the Q-switch
+dye cell and possibly the AR coating on the YAG rod adjacent to it after
+not too many shots.  Some samples may survive almost indefinitely
+but others could succumb in less than 100 shots.  I would recommend
+limiting the voltage for repetitive use to 700 or at most 750 VDC.
+
+<h3><A NAME="sscsg12">SG-SP1 Schematics</A></h3>
+
+The diagram is available in PDF format:
+<p>
+<ul>
+<li><A HREF="sgsp1sch.pdf">SG-SP1-SCH</A> -
+ AC Line Power Supply.  This includes C1, L1, and D1 (from PFN1),
+ the line powered capacitor charger, and push button activated trigger circuit.
+</ul>
+
+<h3><A NAME="sscsg13">Don's Comments on the SSY1 Flashlamp</A></h3>
+
+The following was prompted by my request for opinions on the possibility of
+increasing the flash energy to the flashlamp in the SSY1 to boost its output
+pulse energy.  Based on Don's comments, I think I won't push my luck!
+<p>
+(Recall that the SSY1 flashlamp is about 5 mm OD, 3 mm ID, with an arc length
+of 35 mm.  Using PFN1 in SG-SP1, the maximum input energy from SG-SP1 is about
+15 J in about 100 us.)
+<p>
+(From: Don Klipstein (Don@Misty.com).)
+<p>
+Explosion energy for 100 us is about 1.1 joules times arc length in mm
+times bore diameter in mm for quartz.  EG&G recommends 30 percent of this
+for good repeated use of quartz (mere thousands of flashes) so I recommend
+15 percent of the explosion energy if it is glass.
+<p>
+For a length of 35 mm and a bore of 3 mm, explosion energy would then be 115.5
+joules.  15 percent of this is not much more than the 15 joules you're using
+now.
+<p>
+The capacitance and inductance and voltage (36 uF, 30 uH, 900 volts) sounds
+about right for this flashtube and flash duration.
+<p>
+If you want to push things, for one thing I would increase the flash
+duration accordingly.  Explosion energy increases with the square root of
+flash duration.  For flashes this short, you get that increase with glass
+as well as quartz.  (This rule holds with quartz to a flash duration up to
+10 milliseconds; glass levels off much sooner!)
+<p>
+If you want to push that flashtube, just increase the capacitance and
+the inductance accordingly.  You can probably get away with doubling the
+capacitance, but that is pushing things.
+<p>
+If you ruin that tube, then I recommend getting a real flashtube from
+EG&G Electro-Optics Division, which will sell to small time consultants
+and probably even obvious hobbyists and the like.  But they cost about
+$300 or something like that.  But they're quartz and xenon pressure is
+known (450 Torr unless otherwise specified) and you can get just about any
+length and diameter almost off-the-shelf.  Their catalog items are
+actually semi-custom parts.
+<p>
+Their catalog has 2/4 and 3/5 mm. (bore/OD) tubes in 1, 2, and 3 inch
+arc lengths.  They also have 4 mm bore 6 mm OD tubes in 2, 3, and 4 inch
+arc lengths.  And all sorts of bigger tubes.  One of these should do a
+good job of increasing the danger of your YAG laser.  You probably want
+the ones designated "low power air cooled".
+<p>
+<A NAME="sscsg6"></A>
+<hr>
+<br>
+<li>Back to <A HREF="laserssc.htm#ssctoc">Complete SS Laser Power Supply
+ Schematics Sub-Table of Contents</A>.
+<h2>Sam's Small Adjustable Power Supply for Solid State Pulsed Lasers (SG-SP4)</h2>
+<h3><A NAME="sscsg61">Description of SG-SP4</A></h3>
+
+After getting tired of SG-SP1 looking somewhat like a random pile of junk, I
+built it into a nice case and gave it a dedicated Variac and voltmeter, and
+added a thyristor triggering circuit with pushbutton as well as external (logic
+level) activation.  Both the spiff and safety factors are thus greatly
+improved. :)
+<p>
+SG-SP4 still includes the basic PFN1 and trigger output and can drive SSY1
+and similar laser heads directly.  However, it can also be used as a general
+purpose capacitor charger for laser heads requiring greater energy input (at
+up to 900 V).
+
+<h3><A NAME="sscsg62">SG-SP4 Schematics</A></h3>
+
+The diagram is available in both PDF and GIF format:
+<p>
+<ul>
+<li><A HREF="sgsp4sch.pdf">SG-SP4-SCH</A> -
+ Adjustable PSU for SS Pulsed Lasers.  This includes C1, L1, and D1 (from
+ PFN1), the Variac controlled line powered capacitor charger, thyristor based
+ trigger circuit, and 1 kV full scale meter.
+</ul>
+<p>
+<A NAME="sscsg2"></A>
+<hr>
+<br>
+<li>Back to <A HREF="laserssc.htm#ssctoc">Complete SS Laser Power Supply
+ Schematics Sub-Table of Contents</A>.
+<h2>Sam's Inverter Power Supply for SSY1 (SG-SI1)</h2>
+<h3><A NAME="sscsg21">Description of SG-SI1</A></h3>
+
+This power supply runs off of 12 VDC and is based on a high frequency inverter
+driven by a 555 timer.  A voltage comparator monitors the voltage on the
+energy storage capacitor and disables the 555 timer by forcing reset, cycling
+on and off to maintain full charge.  The inverter transformer is similar to
+the one used in the helium-neon laser power supply described in the section:
+<A HREF="laserhsc.htm#hscic3">HeNe Laser Power Supply from HeNe Laser Pointer
+(IC-HI3)</A> but with slightly thicker wire and correspondingly larger core
+to handle the potentially higher charging power.
+<p>
+Before you lament the difficulty in winding the inverter transformer, the
+design found in the section: <A HREF="laserssc.htm#sschss1">Simple Inverter
+Capacitor Charger Based on HSS1</A> requires a transformer with a grand total
+of 32 turns of wire!  That circuit can be substituted here for the lazy at
+heart. :)
+<p>
+Like SG-SP1, it uses PFN1 as the pulse forming network.  A bleeder relay (K1)
+has been added since the values of the resistors in the original voltage
+divider circuit (R2 to R4) have been increased with a corresponding increase in
+discharge time to a value too long for safety.  K1 will discharge the main
+energy storage capacitor in about 5 seconds when power is removed.
+<p>
+As shown, SG-SI1 may be powered by a 12 V battery pack and mates directly with
+the SSY1 laser head.  The voltage to which the energy storage capacitor gets
+charged may be adjusted between near 0 and around 900 V.  SSY1 will require
+a minimum of about 650 V to reach threshold.  However, SG-SI1 can easily be
+adapted for a lower or higher input voltage and/or for other small solid state
+pulsed lasers, photoflash units, or xenon strobes.
+<p>
+The turns ratio of T1 has been selected so that the voltage on C1 tops off
+at 900 to 950 V with a 12 VDC input.  This is safe for the PFN1 even if the
+voltage comparator circuit fails to disable the 555 oscillator circuit.  As
+additional protection (especially if your particular PFN has a lower voltage
+rating for C1), one option would be a string of high voltage zeners (total
+value selected for your PFN) and current limiting resistor attached to C1
+feeding a transistor or SCR to kill input power and set a fault indicator
+should the normal voltage limiting fail to function for any reason.
+Increasing the turns ratio of T1 modestly might reduce charge time but then it
+is even more critical to provide some redundant protection so that the voltage
+is prevented from climbing above the max voltage rating of C1.
+<p>
+WARNING: Although SG-SI1 is powered by a low voltage source, the energy stored
+in the PFN can still be lethal.  An interlock should be included (not shown) to
+remove input power and bleed off the charge on the energy storage capacitor
+should the case be opened.
+<p>
+Note: The inverter portion of SG-SI1 has <b>not</b> been tested.
+<p>
+WARNING: Although SG-SI1 is powered by a low voltage source, the energy
+stored in the PFN can still be lethal.  An interlock should be included (not
+shown) to remove input power and bleed off the charge on the energy storage
+capacitor should the case be opened.
+<p>
+I would also recommend adding a fail-safe
+means of limiting the output voltage on the energy storage capacitor should
+the feedback circuitry fail for some reason.  One simple approach is to have
+a string of 11 NE2H neon lamps in series with a current limiting resistor
+across the capacitor.  The lamps will turn on at just under 1 KV and provide
+a load for the inverter reducing the voltage to a safe value until the power
+input can be removed.  (A HeNe laser tube will NOT work in place of the neon
+lamps as it has a very high starting voltage requirement compared to what is
+safe for this circuit.)
+
+<h3><A NAME="sscsg22">SG-SI1 Schematics</A></h3>
+
+The diagram is available in PDF format:
+<p>
+<ul>
+<li><A HREF="sgsi1sch.pdf">SG-SI1-SCH</A> -
+ Inverter Power Supply for SSY1.  This includes C1, L1, and D1, from PFN1,
+ the inverter based capacitor charger, push button activated trigger circuit,
+ and relay bleeder circuit.
+</ul>
+<p>
+<A NAME="sscsg7"></A>
+<hr>
+<br>
+<li>Back to <A HREF="laserssc.htm#ssctoc">Complete SS Laser Power Supply
+ Schematics Sub-Table of Contents</A>.
+<h2>Sam's HeNe Laser PSU Based Power Supply for SSY1 (SG-SH1)</h2>
+<h3><A NAME="sscsg71">Description of SG-SH1</A></h3> 
+
+Rather than building a HV inverter from scratch, the power supply for a small
+helium-neon laser can be pressed into service as a capacitor charging
+supply.  Since HeNe laser power supplies are constant current sources, for
+this application, the unit selected must have some type of logic control to
+turn it on and off as a means of limiting the output voltage to the energy
+storage capacitor.  Most potted "bricks" for barcode scanners and similar
+applications have this feature.  Otherwise, some alternative means of
+limiting the output voltage must be provided.  Small HeNe laser power supplies
+are readily available surplus at attractive prices.
+<p>
+The unit I used was a Laser Drive model 103-23 HeNe laser power supply brick
+from an Orion barcode scanner.  It runs on 21-31 VDC at under 0.5 A and
+outputs a constant 3.5 mA from less than 1 kV to about 2 kV and includes a
+logic input that needs to be grounded to turn the supply on.  A HV zener
+diode and a pair of transistors were added so that the output on the energy
+storage could be limited to a value between about 500 and 900 VDC (using the
+component values shown in the schematic).  This particular power supply has
+enough hysteresis in the logic input so that no additional circuitry is needed
+to provide clean on-off of the power supply's inverter.  The voltage climbs
+linearly to the set value with the power supply turning on every few seconds
+for an instant to keep it there.  With the 3.3 mA output, cycle time for 900 V
+on the 36 uF energy storage capacitor is about 10 seconds.  A HeNe laser power
+supply that can deliver 6.5 mA would cut this in half.
+<p>
+CAUTION: Since this application is running the HeNe laser power supply in a
+non-standard way, there are no guarantees about reliability or life expectancy
+with repeated pulsing via the feedback circuit.  It may also have some problems
+if the series resistors (R1-R3) aren't selected to put the min-max voltage
+it sees on its output safely within its voltage compliance range.  The 103-23
+hesitates a bit when starting from 0 V, possibly sensing (incorrectly) a
+short circuit condition but seems to be happy enough otherwise.  However,
+some HeNe laser power supplies simply won't start into a resistive load at 0 V.
+<p>
+WARNING: Although SG-SH1 is powered by a low voltage source, the energy
+stored in the PFN can still be lethal.  An interlock should be included (not
+shown) to remove input power and bleed off the charge on the energy storage
+capacitor should the case be opened.
+<p>
+I would also recommend adding a fail-safe
+means of limiting the output voltage on the energy storage capacitor should
+the feedback circuitry fail for some reason.  One simple approach is to have
+a string of 11 NE2H neon lamps in series with a 25K 2 W resistor
+across the capacitor.  The lamps will turn on at just under 1 KV and provide
+a load for the inverter reducing the voltage to a safe value until the power
+input can be removed.  (A HeNe laser tube will NOT work in place of the neon
+lamps as it has a very high starting voltage requirement compared to what is
+safe for this circuit.)
+
+<h3><A NAME="sscsg72">SG-SH1 Schematics</A></h3>
+
+The diagram is available in PDF format:
+<p>
+<ul>
+<li><A HREF="sgsh1sch.pdf">SG-SH1-SCH</A> -
+ HeNe Laser PSU Based Power Supply for SSY1.
+  This includes C1, L1, and D1, from PFN1,
+ the inverter based capacitor charger, push button activated trigger circuit,
+ and relay bleeder circuit.
+</ul>
+<p>
+<A NAME="sscsg3"></A>
+<hr>
+<br>
+<li>Back to <A HREF="laserssc.htm#ssctoc">Complete SS Laser Power Supply
+ Schematics Sub-Table of Contents</A>.
+<h2>Sam's High Power Solid State Laser Power Supply (SG-SP2)</h2>
+<h3><A NAME="sscsg30">Description and Schematic of SG-SP2</A></h3>
+
+(Note: This is the same design as the "Super High power (Laser Pump) Strobe
+Circuit" found in <A HREF="http://www.repairfaq.org/sam/strbfaq.htm">Sam's
+Strobe FAQ</A>.)
+<p>
+Here is a schematic for a high power xenon strobe unit suitable for pumping
+a medium to large ruby, Nd:YAG, or Nd:Glass laser rod.  (However, this would
+still be considered small compared to those at the Laser Fusion Facilities of
+the <A HREF="http://www.llnl.gov/">Lawrence Livermore National
+Laboratory</A>.)
+<p>
+WARNING:  This is only an example.  We take no responsibility for either
+the accuracy or functional correctness of the schematic or any consequences
+should you attempt to construct this circuit either in its original form or
+modified in any way.
+<p>
+<PRE>
+                                                        L1
+     Power         D1   R5                            ::::::
+         +-----+--|>|--/\/\--+-----+------------------^^^^^^----------------+
+      ||(      |  5kV   5K   |     |                25 uH (est)             |
+      ||(      | .5A   25W +_|_    /                                        |
+H --+ ||(      |            ___ C1 \ R1  C1-C4: Energy storage              |
+     )||( 600  |           - |     /     capacitor bank,          Flashlamp |
+ 115 )||( VRMS |             |     |     3600uF, 450V (each!)           FL1 |
+ VAC )||( 200  |             +-----+                                       +|
+ 2A  )||( mA   |             |     |     R1-R4: Voltage drop               _|_
+     )||(      |           +_|_    /     equalizing resistors,            | | |
+N --+ ||(      |            ___ C2 \ R2  200K, 1W                Trigger ||   |
+      ||(      |           - |     /                              30kV   ||   |
+      ||(      |             |     |   R7               + C5 -        +--||   |
+         +-------------------+-----+--/\/\--+-------+-----||---+   ::(   ||   |
+      T1       |             |     |  1.8M  |       |   3.9uF  |   ::(   || _ |
+               |           +_|_    /    1W  |       |   450V   |   ::(    |_|_|
+               |            ___ C3 \ R3     |       |          |   ::(      |
+               |           - |     /        \       |          +-+ ::(     -|
+               |             |     |        / R8  __|__ SCR1      )::(      |
+               |             +-----+        \ 1M  _\_/_ C107D     )::(      |
+               |             |     |        /     / |   400V      )::(      |
+               |           +_|_    /        |    |  |   4A        )::(      |
+               |            ___ C4 \ R4     |    |  |          +-+    +-+   |
+               |           - |     /        |    |  |          |   T2   |   |
+               |  D2    R6   |     |        |    |  |          |        |   |
+               +--|&lt;|--/\/\--+-----+--------+-------+-----+----+--------+---+
+                  5kV   5K                  R9   |   R10  |
+                 .5A   25W         Fire o--/\/\--+--/\/\--+
+                                   (+5)     100      100
+
+</PRE>
+<h3><A NAME="sscsg31">SG-SP2 Operation</A></h3>
+
+<ol>
+<li>Power transformer, T1, in conjunction with D1, D2, and C1-C4, provides
+   1.7 kV DC.  The power supply doubler capacitors are also used as the
+   energy storage capacitors.  Resistors, R1-R4, equalize the voltage drops
+   across the series capacitors to compensate for slight differences in
+   leakage resistance.  R5 and R6 limit inrush current and charge rate.
+<p>
+<li>The trigger capacitor, C5, charges through T2 from the voltage divider
+   formed by R7 and R8.
+<p>
+<li>Ready light and capacitor bank voltage monitoring circuits are not shown.
+<p>
+<li>Applying a 5 V signal to the Fire input turns on SCR1 dumping C5 into
+   the primary of the trigger transformer, T2.  This generates a 30 kV pulse
+   which ionizes the xenon gas in the flashlamp, FL1.
+<p>
+<li>The energy storage capacitor bank discharges through L1 and FL1.
+</ol>
+
+<h3><A NAME="sscsg32">SG-SP2 Notes</A></h3>
+
+<ol>
+<li>WARNING: If you thought line operated equipment was dangerous, this is
+ much much worse.  The power transformer output is enough to kill.  Once
+ doubled and stored in the capacitor bank, it is LETHAL.  The total energy
+ storage is about 1300 W-s (this is not a typo!).  Based on one estimate,
+ this is enough energy to KILL 20 adult humans simultaneously with the
+ power supply unplugged from the AC line - and still have some juice left
+ over.  TAKE EXTREME CARE!
+<p>
+<li>Fuse, power switch, power-on light, and all other absolutely essential
+ safety interlocks and indicators are not shown.  R1-R4 do act as bleeder
+ resistors and will discharge the capacitor bank to safe levels in about
+ 10 MINUTES.  However, don't depend on these.  Resistors can fail.  Use
+ the capacitor discharge tool and indicator.
+<p>
+<li>The power transformer from a tube type (old) TV set would probably be
+ suitable for T1.  Microwave oven high voltage rectifiers may be used
+ for D1 and D2.  A high power xenon tube like this requires a 30+ kV
+ trigger pulse.  Those little tiny trigger transformers will NOT work.
+<p>
+<li>The energy storage capacitors, C1 to C4, must be rated for photoflash
+ rapid discharge operation or else they won't survive and/or won't be able
+ to deliver a fast enough output pulse.  In fact, for Nd:YAG (or similar
+ solid state laser mediums with short fluorescence lifetimes, special
+ (non-electrolytic) types will be needed.  But, you may need to take out a
+ second mortgage to finance them. :)  Electrolytic types will work for ruby
+ pumping with it's 3 ms fluorescence lifetime.
+<p>
+<li>High power strobes require special flashlamps - anything from a pocket
+ camera or electronic flash will explode into a mass of molten bits of
+ glass and metal.  This design is suitable for driving 2 of the largest of
+ the EG&G 1300 series flashlamps, the FXQ-1305-6 and -9.  These have arc
+ lengths of 6 and 9 <b>inches</b> respectively!    See the
+ section: <A HREF="laserssl.htm#sslegg">EG&G 1300 Series Linear Flashlamp
+ Specifications and Links</A> for more info.
+<p>
+ Even a properly specified flashlamp may explode and must be operated behind
+ protective shielding or as in the case of a typical laser, fully enclosed
+ in the cavity reflector.  Flashlamp cooling must be adequate for desired
+ cycle time.
+<p>
+<li>L1 helps to shape the discharge current pulse.  For some high power
+ strobe designs, a series inductor is essential to optimize power output
+ and prevent damage to the flashlamp due to excessively high current and
+ negative voltage (undershoot resulting in reverse current).  A damping
+ factor of .8 is generally recommended.  The 25 uH value is just an
+ estimate - L1 must be calculated for each combination of energy storage
+ capacitor value, voltage, and the impedance characteristics of the
+ specific flashlamp to be used.
+<p>
+<li>If you are serious about constructing a high energy strobe system (and
+ your life and accident insurance is fully paid), consider some advanced
+ reading first.  The flashlamp manufacturer's datasheets and application
+ notes will prove essential.  See the section:
+ <A HREF="laserssl.htm#sslosi">Other Sources of Information on Solid State
+ Lasers</A> and the sections starting with <A HREF="laserssl.htm#sslxen">Xenon
+ Flashlamps</A>.
+<p>
+<li>Maximum flash energy is about 1300 W-s.  For a typical flash duration of
+ 250 us, this is an equivalent power input to the flashlamp of 5.2 MW!
+ Adjust component values for the desired application.
+<p>
+<li>DO NOT even think about staring at the flashlamp when fired.  The peak
+ light output is equivalent to at least 500,000, 100 W light bulbs!
+ Even when averaged over the 1/40th of a second typical response of the
+ human eye, this is still more than 5,000, 100 W light bulbs.  (Note:
+ this estimate takes into account the increased luminous efficiency of
+ xenon flashlamps compared to incandescent light bulbs.)
+<p>
+<li>Make sure all optical components - especially the flashlamp - are cleaned
+    with isopropyl alcohol and a lint free cloth to remove all traces of
+    contaminants.
+<p>
+<li>
+<PRE>
+        |                         |           |
+     ---+--- are connected;    ---|--- and ------- are NOT connected.
+        |                         |           |
+</PRE>
+</ol>
+
+<p>
+<A NAME="sscsg5"></A>
+<hr>
+<br>
+<li>Back to <A HREF="laserssc.htm#ssctoc">Complete SS Laser Power Supply
+ Schematics Sub-Table of Contents</A>.
+<h2>Sam's High Energy AC Line Power Supply for SSY1 (SG-SP3)</h2>
+<h3><A NAME="sscsg51">Description of SG-SP3</A></h3>
+
+This power supply is designed to push the pedal to the metal (as they say)
+with respect to SSY1.  It was prompted by the truly spectacular performance
+described in the section: <A HREF="laserscl.htm#sclss1s">Shawn's High Energy
+Experiments with the SSY1 Laser Head</A>.
+<p>
+CAUTION: Although this should be operating the flashlamp within spec when
+run at low duty cycle, it is still what's known as "pushing the envelope".
+Use at your own discretion.  
+<p>
+The capacitor charger consists of a 650 VRMS output power transformer driven
+by a Variac to provide up to about 450 VDC from a full wave rectifier.  The
+transformer I used is extremely overrated current-wise.  A smaller one could
+be used since the cycle time is so long and the average power requirement is
+only about 10 W.
+<p>
+A couple of alternatives are also shown in the schematic:
+
+<ul>
+<li>A small isolation transformer with 4, 115 VAC windings (dual primary and
+ dual secondary) could be used wired with the input connected to one primary
+ and the output connected to the other primary in series with both
+ secondaries.  A bridge rectifier is substituted for the full wave rectifier
+ in this case.  The Variac could even be eliminated where two output energy
+ levels are sufficient by providing a switch to select just the dual
+ secondaries for the lower output energy.  An off position of this switch
+ would allow the caps to be charged to any desired level and (more or less)
+ held there.
+<p>
+<li>A line-connected tripler could substitute for at least the power
+ transformer (T2).  This is much lighter and cheaper but doesn't provide line
+ isolation so that <b>no</b> circuitry may be connected to a metal case
+ or earth ground - even the negative of the capacitor bank and flashlamp.
+ Considering the totally lethal nature of the rest of the unit, this
+ incremental increase in danger potential is relatively small.
+</ul>
+
+An inverter based capacitor charger similar to
+<A HREF="laserssc.htm#sscsg2">Sam's Inverter Power Supply for SSY1
+(SG-SI1)</A> could also be used if modified appropriately for the desired
+cutoff voltage higher power operation.
+<p>
+The capacitor bank is a pair of 1,800 uF, 450 V, electrolytics (never used but
+quite old Mallary "computer grade" units in my implementation).  CAUTION:
+Some means should be provided to prevent the voltage from exceeding the 450 V
+ratings of C1 and C2.  While electrolytic capacitors generally have some
+safety margin, it is best to obey the rules.  Depending on your actual line
+voltage, the charging schemes described above may be operating close to the
+edge when set for maximum energy. :)
+<p>
+The trigger circuit is basically the same one used in SG-SP1 (except for part
+numbers) but since the maximum voltage is lower, it operates from 2/3rds of
+the capacitor voltage instead of 1/3rd.
+<p>
+D3 and D4 are reverse protection diodes for the capacitor bank (C1,C2)
+and flashlamp (FL1), respectively.  They need to have a voltage rating of
+at least 500 V and a peak current rating of several hundred amps.  However,
+the continuous current and power ratings can be small since the duty cycle
+is very low - or zero.  I don't know if either of these diodes would ever
+conduct under normal conditions as the circuit is not likely to be
+underdamped.  I would suggest a 600 to 1,000 V plastic cased diode with a
+200 A or greater I<sub>FSM</sub> rating.  They don't need to be fast recovery
+or other special types.  Or, leave them out and measure the residual voltage
+on C1/C2 and FL1 after a trial shot - if they are both positive, the diodes
+aren't needed.
+<p>
+The panel meter is calibrated to read 500 V full scale.  Of course, it would
+be really cool to have it display energy in joules.  This would make a nice
+little project in itself.  An A/D to monitor the capacitor voltage along with
+a PIC or other single chip microprocessor, or maybe just an EPROM or Flash
+based lookup table could do the conversion.  Or, even simpler, an analog
+multiplier configured to square and scale the voltage. :)
+<p>
+A relay connects a high power bleeder resistor to the capacitor bus when
+power is removed or switched off, the case is opened, or the neighborhood
+experiences a blackout due to the use of this device) and the capacitor bank
+is thus automatically discharged.  However, even with the relatively low ohm
+resistor, reaching a safe level still takes 10 seconds or so.  A 'Live'
+indicator lamp (IL2) shows when the voltage on the caps is above about 100 V.
+<p>
+Cycle time is limited by the average power rating of the flashlamp.
+<p>
+WARNING: The AC line input and the energy stored in the PFN can be lethal -
+especially the energy stored in the capacitor bank!  In fact, conservatively,
+there are enough joules there at maximum voltage (360 J) to kill dead-dead,
+six large adult humans simultaneously with the power off!  Take extreme care
+and don't assume anything!
+
+<h3><A NAME="sscsg52">SG-SP3 Schematics</A></h3>
+
+The diagram is available in PDF format:
+<p>
+<ul>
+<li><A HREF="sgsp3sch.pdf">SG-SP3-SCH</A> -
+  High Energy AC Line Power Supply for SSY1.  This includes the adjustable
+  capacitor charger, trigger circuit, pulse forming network with homemade
+  air-core inductor, and safety bleeder.
+</ul>
+<p>
+<A NAME="sscsccl"></A>
+<hr>
+<br>
+<li>Back to <A HREF="laserssc.htm#ssctoc">Complete SS Laser Power Supply
+ Schematics Sub-Table of Contents</A>.
+<h2>Simple Capacitor Charger for SSY1</h2>
+
+For testing at least, it doesn't take much to run SSY1.  All it takes is
+a source of at least 450 VDC and a basic trigger circuit either from a
+disposable camera or built with a readily available trigger transformer.
+<p>
+<ul>
+<li><b>Power source:</b> 450 to 500 VDC at a few mA.  This can be a AC line
+ operated power transformer, a DC to DC converter brick, a pair of flash
+ circuits from disposable cameras in series, or a small HeNe laser power
+ supply as discussed above.
+<p>
+<li><b>Energy storage capacitor:</b> 150 to 200 uF photoflash rated capacitor
+ with sufficient voltage rating.  These are available from electronics
+ distributors but can be readily obtained from disposable camera flash
+ units.  Four to six in a series-parallel configuration would be required.
+ When using electrolytic capacitors, no additional pulse forming network
+ components are really needed.
+<p>
+<li><b>Trigger circuit:</b> I do not know if the trigger circuit from a
+ disposable camera flash is adequate to reliably fire the SSY1 flashlamp.
+ However, it's very easy to construct a higher energy trigger circuit using
+ a trigger transformer from a place like Digikey.  A BBQ lighter or electric
+ match (minus the fuel!) can also be used.
+</ul>
+<p>
+With the long pulse duration and relatively high ESR of the electrolytic
+capacitors, performance won't be as great as with a high quality capacitor.
+However, it should be quite adequate for basic testing.  In fact, the inset
+photo in <A HREF="ssy1a.jpg">SSY1 Laser Head Assembly</A> (photo courtesy
+of Chad Anderson) was made with just such a setup using a 200 uF, 450 V
+Rubicon capacitor, charged to around 450 V by a DC to DC converter, and
+home-built trigger circuit.
+<p>
+<A NAME="sschss1"></A>
+<hr>
+<br>
+<li>Back to <A HREF="laserssc.htm#ssctoc">Complete SS Laser Power Supply
+ Schematics Sub-Table of Contents</A>.
+<h2>Simple Inverter Capacitor Charger Based on HSS1</h2>
+<h3><A NAME="sschss10">Basic Description of HSS1</A></h3>
+
+HSS1 (High Speed Strobe 1) is a short pulse strobe originally designed by
+Don Klipstein <A HREF="mailto:don@misty.com">don@misty.com</A> and myself
+(Sam) for a special application requiring a very short flash duration (under 50
+microseconds), triggering from a logic level input, and portability.  However,
+for our purposes, the inverter is of most interest because its simplicity,
+robustness, and ease of construction.  It will operate from a 12 to 18 VDC
+power supply with a cycle time of less than 3 seconds for the 36 uF energy
+storage capacitor charged to 900 V (15 J, same as the cap in PFN1/SSY1).  The
+capacitor voltage is actively regulated with the inverter running as required
+to maintain full charge. Current consumption (at 12 VDC input) is around 1 A
+while charging and averages less than 50 mA (in periodic 1 A pulses) while
+idling.  To reduce idle current consumption to near zero, the inverter may
+be controlled and monitored via the system logic.
+
+<h3><A NAME="sschss11">HSS1 Schematics</A></h3>
+
+<ul>
+<li>Get the schematic for HSS1 in PDF format:
+ <A HREF="hss1sch.pdf">HSS1-SCH</a>.
+</ul>
+<p>
+HSS1 consists of the inverter, pulse forming network, and trigger circuit.
+<p>
+One beauty of this inverter design is the super simple transformer requiring
+a grand total of 32 turns of wire.  Yes, you read correctly, not the hundreds
+or thousands of turns you might have expected! :)  I didn't believe it the
+first time I saw the transformer description either.  It takes advantage of
+the flyback pulse generated when the chopper IGBT turns off boosted by the 1:1
+autotransformer.
+<p>
+The inverter consists of a CMOS TLC555 timer and IGBT (Insulated Gate Bipolar
+Transistor).  The IGBT is driven like a MOSFET but has output characteristics
+more like that of a bipolar transistor - the best of both worlds.  The output
+voltage is monitored by one section of an LM339 quad voltage comparator and
+shuts off the oscillator once full charge is reached.  With the components
+values for the voltage divider resistors (R14,R15,R17,R18) shown, this is
+approximately 900 V.  The circuit should work for voltages up to 1 kV or more
+by changing the value of the parallel combination of R17||R18.  As the voltage
+decays due to leakage through the trigger circuit and voltage monitor, the
+oscillator will come on briefly at periodic intervals to top off the charge.
+With some minor changes, the idling current could be substantially reduced.
+<p>
+The other sections of the LM339 are wired as buffers to accept an inverter
+ENABLE signal, provide a (low going) READY output signal, and drive a READY
+LED.  The ENABLE input and READY output allow the control logic to turn on the
+inverter on demand (which is fine for the intended application).  (But the
+internal voltage limiter cannot be overridden.)  This reduces the idle
+current consumption substantially.
+<p>
+The trigger circuit consists of an opto-triac driving a 10 A SCR which dumps
+a 0.082 uF capacitor charged to about 300 V through the trigger transformer.
+For manual triggering, these components could be replaced with a pushbutton
+switch.
+<p>
+The PFN (Pulse Forming Network) as shown was designed to optimally drive a
+8358 flashlamp with a 15 J input at less than 50 us.  The inverter itself
+really doesn't care what is used for the PFN except that as designed it
+charges to 900 V and how long it will take to charge the energy storage
+capacitor.  This one was designed based on a Ko value for the flashlamp of
+around 12.  For the SSY1, use the PFN as specified in the other SSY1 power
+supply schematics or modify appropriately for your specific flashlamp and
+pulse width requirements.
+
+<h3><A NAME="sschss12">The HSS1 Inverter Transformer</A></h3>
+
+The wonderfully simple transformer consists of two E cores of the "older"
+Ferroxcube part number E375-3C81 (or even previous to that E375-3C8) and
+the modern Philips Components part number E34/14/9-3C81.  The half gap (paper
+thickness) is two pieces of regular copy paper which should be about
+0.2 mm.  The bobbin is old Ferroxcube part number E375pcB1-12 and Philips
+Components part number CPH-E34/14/9-1512.  I got them from Eastern
+Components, 1-800-642-0518.
+<p>
+Gapped versions of this core may be available.  If both halves are gapped,
+specify 0.2 mm.  If you get a gapped piece paired with an ungapped piece
+then the gapped one should be 0.4 mm.
+<p>
+The primary and secondary are each 16 turns of insulated #20 AWG hookup wire,
+but wire size is not critical and the secondary could easily be #22.  Magnet
+wire is fine with adequate insulation between layers and between the secondary
+and the core (3C8 and related ferrite materials are slightly conductive!), and
+as thick as #18 should easily fit.
+<p>
+<A NAME="sscuci"></A>
+<hr>
+<br>
+<li>Back to <A HREF="lasersps.htm#spstoc">SS Laser Power Supplies
+ Sub-Table of Contents</A>.
+<h2>Ultra-Compact 350 V Capacitor Charger</A></h2>
+
+This pair of circuits, shown in <A HREF="uc350vc.gif">Ultra-Compact
+350 V Capacitor Charger</A>, is based on the inverter transformer found in
+the flash units from disposable pocket cameras.  They might be useful for
+miniature laser pointer size pulse lasers. :)  Only 4 components in addition
+to the transformer, battery, and energy storage capacitor are required.
+See <A HREF="uc350vcp.jpg">Photo of Ultra-Compact 350 V
+Capacitor Charger</A> for an example of the compact construction (shown sitting
+on a U.S. dime).  While not quite the simplest possible design, the inverter
+transformer only needs to have drive and HV output windings, no feedback
+winding or tap.  Thus, it is likely that the transformer from almost any
+pocket camera flash unit can be used, or one can be relatively easily
+constructed.  See the section: "Ultra-Compact 350 V Capacitor Charger" in the
+document: <A HREF="http://www.repairfaq.org/sam/samschem.htm">Various
+Schematics and Diagrams</A> for more details.
+<p>
+<A NAME="sscwe1"></A>
+<hr>
+<br>
+<li>Back to <A HREF="lasersps.htm#spstoc">SS Laser Power Supplies
+ Sub-Table of Contents</A>.
+<h2>Wes's Ruby Laser Power Supply (WE-SP1)</h2>
+<h3><A NAME="sscwe11">Description of WE-SP1</A></h3>
+
+This is a power supply for driving the Hughes M-60 ruby laser assmebly
+available from various surplus sources and described in the section:
+<A HREF="laserscl.htm#sclhrl">Hughes Rangefinder Ruby Laser Assembly</A>.
+WE-SP1 was designed and built by Wes Ellison
+(<a href="mailto:erl@sunflower.com">erl@sunflower.com</a>).
+<p>
+Photos and descriptions of Wes's ruby laser assembly and WE-SP1 (as well as
+of similar units and other home-built power supplies) may be found in the
+<A HREF="laserpic/laserpic.htm">Laser Equipment Gallery</A> under:
+"Hughes Rangefinder and Home-Built Ruby Lasers".
+<p>
+<ul>
+<li>High voltage power supply - This consists of the capacitor charger and
+ pulse forming network.
+<p>
+ <ul>
+ <li>The pulse forming network is 479 J (max) using a 666 uF, 1,350 V (max)
+  capacitor bank and 10 mH inductor.  A panel meter (M1) reads 1,500 V full
+  scale. Note that the Pulse length is around 6 ms which appears to be several
+  times what would be optimal.  If the flashlamp can handle a 1.5 ms pulse
+  length without exploding, I would suggest reducing the inductor to about
+  600 uH.
+<p>
+ <li>The capacitor charger consists of a 900 VRMS power transformer and half
+  wave rectifier with current limiting resistor (R1).  The charge time
+  constant is about 7 to 10 seconds with voltage topping out after about 30
+  seconds.  The cycle time could be reduced substantially by using a bridge
+  rectifier and lower value for R1.
+ </ul>
+<p>
+<li>Low voltage power supplies - Several voltage sources including +160 VDC
+ for the trigger circuit, +24 VDC for the Q-Switch motor, and +12 VDC for the
+ control circuits and relays.  I (sam) have been told that the motor is only
+ rated for 20 VDC so a series resistor should be used as shown in the
+ circuit in the section: <A HREF="laserssc.htm#sscsg4">Sam's Q-Switch
+ Trigger Circuit for Hughes M-60 Ruby Laser (SG-ST1)</A>.
+<p>
+<li>Trigger - The trigger energy storage capacitor is charged from the
+ +160 VDC source through a 330K ohm resistor (time constant less than .1 s).
+ The SCR discharges that cap through the trigger transformer primary resulting
+ in a high voltage pulse on its secondary which is applied to the anode of the
+ flashlamp via blocking diodes (parallel triggering).  The Fire button enables
+ triggering either immediately (Q-Switch OFF) or when a pulse arrives from the
+ magnetic pickup (Q-Switch ON).
+<p>
+<li>Q-Switch driver - This is now a separate schematic which includes the
+ switching circuit as well as the actual Q-switch driver.  As drawn, it is
+ the one described in the section: <A HREF="laserssc.htm#sscsg4">Sam's
+ Q-Switch Trigger Circuit for Hughes M-60 Ruby Laser (SG-ST1)</A>.  However,
+ since the only connections to it are the trigger input and output (and power),
+ other circuits can be easily substituted if desired.  I removed Wes's
+ original Q-switch trigger circuit (in WE-SP1 V1.1 and below) since he said
+ that the laser never worked in Q-switch mode using it (see below)!
+<p>
+<li>Overtemp lockout - If the temperature of the laser cavity (flashlamp and
+ rod) goes too high, a thermister circuit activates a cooling fan and disables
+ the arming/firing circuits.
+<p>
+<li>Automatic bleeder - When the HV power supply is deactivated, a relay
+ connects a resistor across the energy storage capacitor bank to discharg it
+ rapidly.
+</ul>
+<p>
+Note that Wes was never able to get the laser to lase using his first Q-switch
+driver and original resonant OC.  However, by replacing that OC with one from
+another ruby laser and aligning and locking down the Q-switch prism, the laser
+fired successfully without using the Q-switch.  I suspect that the inability
+to make it work with the Q-switch was at least partially due to the excessively
+long discharge pulse (I estimate at 6 ms) which results in insufficient
+population density in the upper energy state of the ruby for the laser to
+reach threshold when the Q-switch is in position.  Or, perhaps, the alignment
+was never quite perfect.
+<p>
+Information on aligning the ruby laser optics and Q-switch can be found
+in the sections starting with:
+<A HREF="laserstr.htm#strhrl">Aligning the Hughes Ruby Laser</A>.
+
+<h3><A NAME="sscwe12">WE-SP1 Schematics</A></h3>
+
+The schematic is available in PDF format:
+<p>
+<ul>
+<li><A HREF="wesp1sch.pdf">WE-SP1-SCH</A> - Wes's Power Supply for Hughes
+ M-1 Ruby Laser.  This includes the PFN,
+ capacitor charging supply, low voltage power supply, flashlamp trigger
+ circuit, indicators, and overtemp lockout.
+</ul>
+<p>
+Note: I have changed some of the part numbers so that they are unique (and
+hopefully corrected some of the minor errors/duplications in the process).
+The trigger circuit can be found in the next section.  The part numbers for
+D3 and D4 have been swapped compared to the original drawing as
+it has been pointed out that the device number for D3, NTE504, must be
+an error.  The NTE504 has a peak surge current rating of only 1.5 A.  The
+current through the flashlamp will be in the *hundreds* of amps.  So, the
+first shot would blow that diode to bits.  So, I assume the original
+labeling to be a typo since the NTE542 has a peak
+surge current rating of 200 A and the diode for the trigger circuit doesn't
+require a high current rating.  The NTE548 which has a 250 A surge current
+rating might also be adequate but a part with an even higher rating would
+be better.
+<p>
+<A NAME="sscsg8"></A>
+<hr>
+<br>
+<li>Back to <A HREF="lasersps.htm#spstoc">SS Laser Power Supplies
+ Sub-Table of Contents</A>.
+<h2>Sam's Proposed Power Supply for M-60 Laser (SG-SP5)</h2>
+
+I might get around to actually building this thing someday!
+<p>
+The energy storage capacitor value will be 4 x 3,600 uF at 350 V in series
+with charge equalizing resistors for a net value of 875 uF derated to
+1,350 V max.  Why these capacitors? Because I got a good deal on eBay!
+<p>
+SG-SG5 will probably be similar to WE-SP1 with the SG-ST1 Q-switch
+controller.  The flashlamp energy will be adjustable, probably with some
+type of regulation to assure pulse-to-pulse consistency.
+<p>
+Here is a possible set of switches and controls for running the laser:
+<p>
+<ul>
+<li><b>Armed (Interlock):</b> Keylock Switch required for operation.  Disables
+ bleeder and initiates capacitor charging sequence.
+<p>
+<li><b>Energy Adjust:</b> Knob to select from 675 to 1,350 V which
+  corresponds to 200 to 800 J.
+<p>
+<li>Q-Switch:</b> Three position switch selects operating mode.
+ <ul>
+ <li><b>Off:</b> Fire button triggers flashlamp immediately (non-Q-switch
+  mode).
+<p>
+ <li><b>Single Shot (Normal mode):</b> Fire button spins up motor and
+  triggers flashlamp based on position sensor delay.  Motor then turns off.
+<p>
+ <li><b>Continuous:</b> Motor runs continuously.  Fire button triggers
+  flashlamp based on position sensor delay.
+ </ul>
+<p>
+<li><b>Fire button:</b> Initiates firing sequence.
+<p>
+<li><b>Charge Complete Override:</b> Determines whether energy storage
+ capacitors must be fully charged for Fire button to have an effect.
+ <ul>
+ <li><b>Off (Normal):</b> Fire button only triggers flashlamp if capacitor
+  voltage is at least equal to voltage setpoint.
+<p>
+ <li><b>On:</b> Fire button triggers (or attempts to trigger) flashlamp
+  regardless of capacitor voltage.
+ </ul>
+</ul>
+<p>
+<A NAME="sscsg4"></A>
+<hr>
+<br>
+<li>Back to <A HREF="lasersps.htm#spstoc">SS Laser Power Supplies
+ Sub-Table of Contents</A>.
+<h2>Sam's Q-Switch Trigger Circuit for Hughes M-60 Ruby Laser (SG-ST1)</h2>
+<h3><A NAME="sscsg41">Description and Schematic of SG-ST1</A></h3>
+
+Having looked at all the designs for this circuit I finally decided that it
+was time to do it properly. :)  So, I have combined the best features of
+the circuits from Wes and Doug into a version that is free of the logical
+hazards that I believe are present in the others while providing electrical
+adjustment of the timing delay, and avoidance of false triggering when
+switching modes.  The only connections besides power to a system like the
+one described in the section: <A HREF="laserssc.htm#sscwe1">Wes's Ruby Laser
+Power Supply (WE-SP1)</A> are the trigger input and output signals (TRGIN-H
+and TRGOUT-H respectively).  This circuit is installed between the original
+trigger switch or external trigger signal and the input to the firing SCR.
+<p>
+With the long fluorescence lifetime of ruby - about 3 ms - timing of the
+Q-switch is not as critical as it is for Nd:YAG with its much shorter
+fluorescence lifetime (230 us).  The Q-switch motor spins at 30,000
+rpm or 500 rps for a period of 2 ms.  So, if the flash duration is
+resaonably short compared to 2 ms, there will be a high probability of
+a decent output energy even if the flashlamp was triggered at random
+relative to the Q-switch position!  Even if the flash duration is as
+long as 3 ms, half the time, more than 50 percent of the available
+energy will have been transferred to the rod when the Q-switch is
+triggered.  This is probably the main reason that faulty Q-switch
+trigger circuits seemed to produce successful results, though I bet
+the variation in energy due to the timing not always being optimal
+remained a mystery and was probably attributed to other causes.
+However, with a proper design, the pulse energy should be quite
+consistent.
+<p>
+The diagram is available in PDF format:
+<p>
+<ul>
+<li><A HREF="sgst1sch.pdf">SG-ST1-SCH</A> -
+ Sam's Q-Switch Trigger Circuit for Hughes M-60 Ruby Laser.  This
+ includes the buffer for the Q-switch magnetic sensor, 555 timer used as
+ adjustable delay, single pulse generating syncrhonizer, and mode select
+ and Q-switch motor power switch.
+</ul>
+<p>
+SG-ST1 consists of several parts:
+<p>
+<ul>
+<li>Mode select switch (S1) provides two sets of output: Q-switch motor power
+ and Q-switch enable (QSEBL-H) and its complement (QSEBL-L).
+ <p>
+ <ul>
+ <li>In the 'OFF' position, the Q-switch motor is unpowered and the single
+  pulse generating synchronizer flip flops (U2) are forced to be reset.  The
+  trigger input (TRGIN-H) is applied directly to the output buffer and thus
+  directly to the firing SCR.
+<p>
+ <li>In the 'ON' position, the Q-switch motor is powered and the pulse
+  generating synchronizer flip flops (U2) are enabled.
+ </ul>
+<p>
+<li>Q-switch magnetic pickup buffer and activity LED (Q1/IL1).  the
+ input from the magnetic sensor should be via shielded cable to prevent
+ noise pickup, especially from the Q-switch motor.
+<p>
+<li>A 555 timer (U1) set up as a 10 to 100 us adjustable delay.  When the
+ Q-switch motor is running, its output will be a pulse train at about 500 Hz
+ with a pulse width equal to the selected delay.
+<p>
+<li>Q2 is a clock buffer/inverter - I didn't want to have to add another chip!
+ The trailing edge of the 555's output will have the correct timing
+ relationship with the input pulse.
+<p>
+<li>The 74LS74 (U2) is a single pulse generating synchronizer.  The FIRE
+ button (S2) or external trigger input clocks U2A setting its Q output high.
+ This is synchronized to the delayed Q-switch pulse by U2B.  When U2B's Q
+ output goes high, the SCR in the main power supply is triggered firing the
+ flashlamp.  At the same time, U2A is reset and U2B returns to the low state
+ one clock period later.  The actual pulse to the SCR is coupled though a
+ capacitor so it is only a few dozen microseconds long.  U2 guarantees that
+ the pulse to fire the SCR occurs at exactly the right time and is of
+ sufficient length.  This cannot be done with just combinatorial gates as
+ in some of the other circuits!
+<p>
+<li>The 74LS00 (U3) is used to multiplex the direct trigger input (Q-switch
+ OFF) or output of U2B (Q-switch ON), and to force the reset state for U2.
+ Much of this complexity is needed to prevent accidental triggering of the
+ flashlamp when switching modes.  If you don't care about this elegance,
+ just use the part of S1 that generates the QSEBL signals as a select between
+ U2B-Q and TRGIN-H.  U3 then goes away completely.
+</ul>
+
+Note that this circuit will only work where a delay is expected between the
+pulse from the magnetic sensor and the firing of the flashlamp.  As originally
+adjusted, there is expected to be 0 delay with clockwise rotation of the
+Q-switch prism.  For use with this circuit, the best option is to reposition
+the Q-switch assembly by loosening the mounting screws (but this may require
+some optical alignment).  It should be moved about 10 degrees counter-clockwise
+resulting in a 55 us earlier trigger point at 30,000 rpm.  This will be around
+the middle of the 555 delay adjustment range.  See the section:
+<A HREF="laserscl.htm#sclhrlq">Notes on the Q-Switch</A> for more information.
+<p>
+To obtain a continuous stream of properly timed output pulses, <b>WITH THE
+HIGH VOLTAGE OFF!</b>, jumper the output of the 555 (pin 3) to TRGIN-H with
+External Trigger Input selected.  (CAUTION: Selecting Internal Trigger Input
+would short out this signal!)  TRGOUT-H will then be a squarewave at one
+half the Q-switch motor rotation rate where the rising edges coincide with
+the SCR trigger point.
+<p>
+<A NAME="sscdl1"></A>
+<hr>
+<br>
+<li>Back to <A HREF="lasersps.htm#spstoc">SS Laser Power Supplies
+ Sub-Table of Contents</A>.
+<h2>Doug's Q-Switch Trigger Circuit for Hughes M-60 Ruby Laser (DL-ST1)</h2>
+<h3><A NAME="sscdl11">Description and Schematic of DL-ST1</A></h3>
+
+The <A HREF="dlst1sch.gif">Q-Switch Trigger Circuit for Hughes M-60 Ruby
+Laser</A> uses multiple 555 timers to provide an adjustable delay and
+trigger pulse to fire the SCR in the M-60 Ruby Laser PFN assembly.  It should
+also work fine with other trigger circuits requiring a positive pulse for
+activation or, with minor modifications, other configurations.
+<p>
+The advantage of using 555 timers is their low cost and availability even
+from Radio Shack.  TTL or CMOS monostables (one-shots) could be substituted
+with a slight reduction in parts count.
+<p>
+Note that this circuit will only work where a delay is expected between the
+pulse from the magnetic sensor and the firing of the flashlamp.  As originally
+adjusted, there is expected to be 0 delay for clockwise rotation of the
+Q-switch prism.  Ways around this are either to run the motor in reverse
+and delay almost the entire rotation period (but without a PLL or other means
+of speed stabilization, this may result in too much variability in timing
+due to the long delay required) or to reposition the Q-switch assembly by
+loosening the mounting screws (requiring optical alignment.)  See the section:
+<A HREF="laserscl.htm#sclhrlq">Notes on the Q-Switch</A> for details.
+<p>
+<A NAME="sscak1"></A>
+<hr>
+<br>
+<li>Back to <A HREF="lasersps.htm#spstoc">SS Laser Power Supplies
+ Sub-Table of Contents</A>.
+<h2>Andreiko's Q-Switch Trigger Circuit for Hughes M-60 Ruby Laser
+ (AK-ST1)</h2>
+<h3><A NAME="sscak11">Description and Schematic of AK-ST1</A></h3>
+
+(From: Andreiko Kerdemelidis (andreiko@keyghost.com).)
+<p>
+The circuit shown in <A HREF="akst1sch.gif">Q-Switch Synchronizer and Firing
+Circuit for M-60 Rangefinder Ruby Laser</A> and described below is a simple
+and complete solution that can be used to run it with the addition of a
+1,200 V power supply.  The only specialized components are the saturable
+core trigger transformer, which can be easily wound by hand.
+<p>
+When I purchased the laser, it still had its stock flash tube, the FX-103C-3
+but was missing the collimator. I use a bank of 12 low ESR electrolytics
+(Marcon 400 V, 470 uF) to give me a 660 uF, 1200 V capacitor bank. When firing
+the tube, be sure to use at least 1,000 V across the capacitor bank, this
+seems to be the lasing threshold for this arrangement.
+<p>
+The synchronizer uses the common CD4528 CMOS dual monostable chip. One of the
+monostables in the chip is used as the delay element, and the other provides a
+signal to fire the flashlamp, via the opto-isolator. It is a very simple
+circuit, but it is very reliable, and will not fire the lamp unless the fire
+button is pressed. I would also recommend an interlock switch between the
+opto-isolator LED and the 4528, as a further safety precaution. The circuit
+around the CS549 is a rectifier and buffer for the sensor, (and also simple
+inverter) to trigger the delay monostable. Pressing the fire switch activates
+the monostables by pulling the clear pins high and the first pulse received
+from the sensor sets the delay running. This delay is set by R3, the 10 turn
+200 K variable resistor. When the first monostable delay finishes, the
+high-to-low transition is sent to the inverting input of the trigger shot
+monostable, which then pulses the opto-isolator for a short time, and thus
+triggers the SCR. This discharges the 0.1uF cap into the series injection
+transformer, and triggers the flashlamp.
+<p>
+The series injection trigger transformer/PFN is reasonably important, so here
+is a basic description of how the design was coined. I was after about 8-10KV
+for the flashlamp to trigger, and also a fast-rising pulse.  I calculated 24 x
+350 V = 8,400 V should be enough turns. I used litz wire because it was lying
+around, and had a 2 KV insulation but it probably wouldn't do any harm to use
+normal, well insulated, copper wire either. The core used was a Siemens RM-14
+core of N-87 ferrite material.  I first wound 24 turns of the litz wire onto
+the centre of the core, it came to 2 layers, between which I insulated with
+capton tape. A single turn was then wound over the top of this coil, which was
+made of 4 sections of litz wire laid flat and soldered together. This was
+further insulated with capton tape. The core was assembled over the windings
+without any air gap, so as to saturate quickly when the lamp fired. An
+additional inductor may also be used in series with the lamp as part of the
+PFN if you want to try and further tune the pulse shape for the flashlamp (I
+didn't find that an inductor was required, though). If you find that the lamp
+doesn't trigger, swap the wires going into the single turn around.
+<p>
+To tune the synchroniser, put an LED in place of the opto-isolator input, and
+short the 330 ohm series resistor (this will yield a brighter flash from the
+LED). The motor is spun up with 12 to 15 VDC. This gives about 24,000 RPM, or
+420 us/rotation. In a darkened room, bring the LED close to the top of the
+prism (VERY CAREFULLY SO AS NOT TO HIT THE SPINNING PRISM - THIS CAN DAMAGE THE
+OPTICS). The triangular glass surface of the prism perpendicular to the motor
+shaft has been ground, and gives a good surface to shine the LED and look at
+when adjusting the delay. When the firing switch is pressed and held down,
+with the LED close to the prism, the prism appears to freeze and I then turned
+the 200K tuning pot (see schematic) until the prism was frozen about 5 degrees
+before the resonator would align, to allow for the flashlamp trigger delay,
+and also for the offset required for the Q-switch to do its Q-switching. I
+then put the opto back into the circuit and charged the capacitors to
+1,050 V. I spun up the motor with 15V, and hit the fire button. A piece of blue
+paper was the target. It worked first time, discolouring the paper, but it was
+not very powerful. To further tune it, I kept charging the supply and firing
+it, while adjusting the 10 turn delay tuning pot between shots. It took about
+8 shots to tune it as well as I could. I have to admit that it seems to be
+putting out two beams for some reason, when it it was tuned well, but I think
+that this is because I removed the output coupler early on (very dumb thing to
+do) before managing to get the laser working. It still lases well though.
+<p>
+<A NAME="sscuyag"></A>
+<hr>
+<br>
+<li>Back to <A HREF="laserssc.htm#ssctoc">Complete SS Laser Power Supply
+ Schematics Sub-Table of Contents</A>.
+<h2>Power Supply for Micro YAG Laser (uYAG)</h2>
+<h3><A NAME="sscuyagd">Description of uYAG PSU</A></h3>
+
+The system described in the paper 
+<A HREF="http://www.repairfaq.org/sam/lr/">Micro-Laser Range Finder</A> uses
+a small (approximately 25 mm x 3 mm) Nd:YAG rod pumped by the flash unit from
+a Kodak MAX disposable (single-use) 35 mm camera.  This essentially free
+device has some nice features including energy storage capacitor voltage
+regulation, a clean PCB layout, and operation from a single 1.5 V AA size
+Alkaline cell.
+<p>
+Less than a dozen small electronic components need to be added to the original
+circuit (I placed most of them on a 1 square inch mezzanine board) and the
+thin chrome plated aluminum flashlamp reflector can easily be reformed to
+enclose the Nd:YAG rod providing for very efficient energy transfer.  Thus,
+the entire uYAG laser can be constructed in a case less than 1/4 the volume
+of the original MAX camera!
+<p>
+Depending on the design of the cavity optics, less than 5 joules should be
+sufficient to threshold a YAG rod of this size (1/8th the volume of SSY1).
+Therefore, depending on your objectives, it may be possible to substitute a
+smaller energy stroage capacitor resulting in longer battery life and shorter
+cycle time.  Alternatively, for maximum output pulse energy, using a higher
+quality (non-electrolytic) energy storage capacitor and pulse forming
+inductor may be desirable.  However, I'll leave it up to you to determine
+the explosion energy and thus safe range of operating energies and pulse
+durations.  See the other chapters on SS lasers.
+
+<h3><A NAME="sscuyagl">Links to Additional Kodak MAX Flash Unit
+ Information</A></h3>
+
+The following links provide useful info on the original and modified Kodak
+MAX flash unit:
+
+<ul>
+<li><A HREF="http://www.repairfaq.org/sam/strbfaq.htm">Sam's Strobe FAQ</A>
+ includes a complete description of the Kodak MAX flash unit in the
+ section in PART IV: "Photoflash Circuit from Kodak Disposable 35mm Pocket
+ Camera 2" (in the chapter: "Schematics for Pocket Camera and Externally
+ Mounted Compact Flash Units") with the detailed modifications presented in
+ the chapter in PART III: "Digital Control of the Kodak MAX Flash Unit" which
+ also includes a suggested PCB layout.
+<p>
+<li><A HREF="http://www.repairfaq.org/sam/kflashm.gif">Kodak MAX Flash Unit
+ Schematic</A>
+<p>
+<li><A HREF="http://www.repairfaq.org/sam/kflashmp.gif">Photo of Kodak MAX
+ Flash Unit</A>
+<p>
+<li><A HREF="http://www.repairfaq.org/sam/mmaxsch.gif">Modified MAX Flash Unit
+ Schematic</A>
+<p>
+<li>A circuit to substitute for the 1.5 V battery can be found in the
+ document: <A HREF="http://www.repairfaq.org/sam/samschem.htm">Various
+ Schematics and Diagrams</A> under: "1.5 V Alkaline Cell Eliminator".
+</ul>
+
+<h3><A NAME="sscuyagi">MAX Flash Interface and Circuit Modifications</A></h3>
+
+The following is just a summary.  More detailed information can be found in
+the links, above.
+<p>
+Circuitry was added to control the 1.5 V to 300 V inverter, sense when the
+capacitor is fully charged, and fire the flashlamp.  The circuit changes were
+designed to take advantage of the way the MAX operated as part of the camera
+and to minimize rework to its printed circuit board.  Where a new board is to
+be fabbed, the latter is not an issue but it turned out that this approach was
+still more-or-less optimal.
+<p>
+Here are descriptions of the control and status signals:
+<p>
+<ul>
+<li>OPR-H: This logic signal controls the inverter:
+<p>
+ <ul>
+ <li>RUN: (TTL High, 2 to 5 V) -> Inverter starts and runs but may be
+   overridden by the OFF signal or built-in 300 V limiter.
+ <p>
+ <li>CRUISE: (Open, Hi-Z or Tri-Stated) -> No Change.  Inverter will continue
+   running or remain off as determined by previous state.
+ <p>
+ <li>STOP: (TTL Low, 0 to .4 V) -> Inverter stops.
+ </ul>
+<p>
+<li>OFF-H: This logic signal disables the inverter regardless of state of OPR.
+<p>
+<li>FIRE-P: This pulse signal will trigger the flash on either edge with a
+  sufficiently powerful driver (assuming the energy storage capacitor is
+  charged).
+<p>
+<li>READY-L: This output can be used as either a digital indication of full
+  charge or an analog monitor of the energy storage capacitor (C1) voltage
+  in the approximate range of 305 to 310 VDC.
+</ul>
+<p>
+See <A HREF="http://www.repairfaq.org/sam/mmaxsch.gif">Modified MAX Flash Unit
+Schematic</A> when reading the following discussion.
+<p>
+Operation of the OPR signal for RUN and CRUISE is analogous to the original
+charge push-button of the MAX camera: A TTL high is the same as pressing the
+button while OPEN is like releasing the button.  The addition of a diode (D8)
+allows a solid TTL low or ground to such enough current out of the drive
+circuit to kill inverter oscillation.
+<p>
+The OFF signal drives the base of Q5 which similarly shorts out the drive to
+stop oscillation.
+<p>
+The FIRE signal is capacitively coupled to the gate of the triac, Q6, to
+discharge the trigger capacitor, C3.  This is exactly analogous to the
+way the original shutter contacts worked.
+<p>
+An additional circuit, very similar to that of the 300 V limiter, was added
+for the READY status signal.  Its input is derived from the energy storage
+capacitor through the same high voltage neon bulb (IL1) and zener (ZD2) so
+it turns on at around 300 V.  It was found necessary to add a sneak path
+prevention diode, D9, to block voltage making its way in from the TTL supply
+and restarting the inverter even if OPR was open.
+<p>
+<A NAME="sscoth"></A>
+<hr>
+<br>
+<li>Back to <A HREF="laserssc.htm#ssctoc">Complete SS Laser Power Supply
+ Schematics Sub-Table of Contents</A>.
+<h2>Other SS Laser Power Supplies on the Web</h2>
+
+<ul>
+<li><A HREF="http://www.halted.com/">Halted Specialties, Co</A> used to have
+ a power supply for the Hughes M-60 ruby laser on their Web site but it
+ has disappeared.  Fortunately (or unfortunately depending on your point
+ of view!) I have it archived at
+ <A HREF="http://www.repairfaq.org/sam/laser/laserps1.gif">Raymond's Ruby
+ Laser Power Supply</A>.
+ (I would give more contact info for the designer, Raymond, but I couldn't
+ read the hand printing on the schematic.)  It uses a basic half-wave
+ power transformer based capacitor charger with a capacitor bank made from
+ 16 220 uF, 400 V electrolytics in a 4x4 array, a 120 uH PFN inductor, and
+ parallel pulse triggering requiring an 18 kV blocking diode which is made
+ from 108 (!!) 1N4007s in a 6x18 array.
+<p>
+ While for the most part, this power supply will get the job done, it is
+ overly complex.  At the very least, a more rational choice of components
+ would result in a much cleaner more reliable design.  However, there is
+ at least one problem: If the power transformer in the capacitor charger is
+ really rated at 1,200 VRMS, applying full line voltage to it would result
+ in excessive voltage on the capacitor bank.  Thus, a Variac or other means
+ reducing its output voltage or some other modifications would be needed to
+ prevent fireworks.
+<p>
+ A suitable power supply for the Hughes ruby laser (or a similar one) using
+ a proven design can be built that is both simpler and includes a driver for
+ the Hughes ruby laser Q-switch as well as additional safety features.  See
+ the section: <A HREF="laserssc.htm#sscwe1">Wes's Ruby Laser Power Supply
+ (WE-SP1)</A>.
+<p>
+ Of course, if you (or the guy who designed this) had a stock of 220 uF, 400 V
+ caps left over from another project, sure, go for it!  In conjunction with
+ typical electrolytic caps, the 120 uH inductor would result in a pulse
+ duration of about 750 us which should be safe for the FX-103C-3 (or
+ equivalent) flashlamp.
+<p>
+ And, I hope you like to do lots of soldering!
+</ul>
+<p>
+<hr>
+<br>
+<li>Back to <A HREF="laserfaq.htm#faqtoc">Sam's Laser FAQ Table of
+ Contents</A>.
+<li>Back to <A HREF="laserssc.htm#ssctoc">Complete SS Laser Power Supply
+ Schematics Sub-Table of Contents</A>.
+<li>Forward to <A HREF="lasercon.htm#contoc">Amateur Laser Construction</A>.
+<p>
+<hr>
+<b><center>Sam's Laser FAQ, <A HREF="copyright.htm">Copyright &copy<A> 1994-2010,
+ Samuel M. Goldwasser, All Rights Reserved.<br>
+ I may be contacted via the
+ <A HREF="emaillnk.htm">Sci.Electronics.Repair FAQ
+ Email Links Page</A>.</center></b>
+<hr>
+<p>
+</BODY>
+</HTML>

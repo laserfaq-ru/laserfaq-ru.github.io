@@ -1,0 +1,1935 @@
+<HTML>
+<HEAD>
+<TITLE>Sam's Laser FAQ - Home-Built Pulsed Multiple Gas (PMG) Laser</TITLE>
+</HEAD>
+<BODY>
+<A NAME="cmgtoc"></A>
+<p>
+<hr>
+<b><center>Sam's Laser FAQ, <A HREF="copyright.htm">Copyright &copy<A> 1994-2009,
+ Samuel M. Goldwasser, All Rights Reserved.<br>
+ I may be contacted via the
+ <A HREF="emaillnk.htm">Sci.Electronics.Repair FAQ
+ Email Links Page</A>.</center></b>
+<hr>
+<p>
+<li>Back to <A HREF="laserfaq.htm#faqtoc">Sam's Laser FAQ Table of
+ Contents</A>.
+<h1>Home-Built Pulsed Multiple Gas (PMG) Laser</h1>
+<h2>Sub-Table of Contents</h2>
+<ul>
+<li><A HREF="lasercmg.htm#cmghbl">Basic Home-Built Pulsed Multiple Gas (PMG) Laser Information</A>
+ <ul>
+ <li><A HREF="lasercmg.htm#cmgcmg0">Introduction to Home-Built PMG Laser</A>
+ <li><A HREF="lasercmg.htm#cmgsaf">Home-Built PMG Laser Safety</A>
+ <li><A HREF="lasercmg.htm#cmgcmg1">PMG Laser Construction References and Links</A>
+ <li><A HREF="lasercmg.htm#cmgcmg2">Some Photos of Home-Built PMG Lasers</A>
+ <li><A HREF="lasercmg.htm#cmgcmg3">Home-Built PMG Laser Description</A>
+ <li><A HREF="lasercmg.htm#cmgapmg">Assorted PMG Laser Physical and Electrical Data</A>
+ <li><A HREF="lasercmg.htm#cmgguide">Guidelines to Assure a Successful Home-Built PMG Laser</A>
+ <li><A HREF="lasercmg.htm#cmgspps">Sources of Special Parts and Supplies for the Home-Built Pulsed Multiple Gas (PMG) Laser</A>
+ <li><A HREF="lasercmg.htm#cmgcomt">Using Commercial HeNe or Ion Laser Tubes to Construct the PMG Laser</A>
+</ul>
+<p>
+<li><A HREF="lasercmg.htm#cmgoex">Other Examples of Home-Built PMG Lasers</A>
+ <ul>
+ <li><A HREF="lasercmg.htm#cmgdolu">Daniel's Oxygen Laser</A>
+ <li><A HREF="lasercmg.htm#cmgdian">Diane's Transverse Excited PMG Laser</A>
+ <li><A HREF="lasercmg.htm#cmgmcnl">Mark Csele's Neon Laser</A>
+ </ul>
+<p>
+<li><A HREF="lasercmg.htm#cmgpwr">Power Supplies for the PMG Laser</A>
+ <ul>
+ <li><A HREF="lasercmg.htm#cmgsim">Simple Exciter</A>
+ <li><A HREF="lasercmg.htm#cmgcas">Cascade System</A>
+ <li><A HREF="lasercmg.htm#cmgthy">Typical Thyratron Specifications</A>
+ <li><A HREF="lasercmg.htm#cmgalt">Alternatives to the Thyratron</A>
+ <li><A HREF="lasercmg.htm#cmgops">Other Power Supply Options</A>
+ <li><A HREF="lasercmg.htm#cmghvc">High Voltage Connections, Gas Lines, and Water Cooling</A>
+ </ul>
+<p>
+<li><A HREF="lasercmg.htm#cmgrpi">Related PMG Laser Information</A>
+ <ul>
+ <li><A HREF="lasercmg.htm#cmgcpl">Commercial Pulsed Gas Lasers</A>
+ <li><A HREF="lasercmg.htm#cmgcol">Comments on the Oxygen Laser</A>
+ <li><A HREF="lasercmg.htm#cmgscv">Steve's Summary of Various Pulsed Lasers</A>
+ <li><A HREF="lasercmg.htm#cmgbcv">Bruce's Comments on Various Pulsed Lasers</A>
+ <li><A HREF="lasercmg.htm#cmgrfl">Mike's Notes on Refilling a Pulsed Ion Laser</A>
+ </ul>
+</ul>
+<p>
+<A NAME="cmghbl"></A>
+<hr>
+<br>
+<li>Back to <A HREF="lasercmg.htm#cmgtoc">Home-Built Pulsed Multiple Gas (PMG)
+ Laser Sub-Table of Contents</A>.
+<h2>Basic Home-Built PMG Laser Information</h2>
+<h3><A NAME="cmgcmg0">Introduction to Home-Built PMG Laser</A></h3>
+
+The Pulsed Multiple Gas (PMG) laser described in this chapter is very similar
+in many ways to the <A HREF="lasercar.htm#cartoc">Home-Built Pulsed Argon
+and/or Krypton (Ar/Kr) Ion Laser</A> from Scientific American.  However, the
+developers of the PMG laser have also used it with xenon (Xe) oxygen (O2), and
+even suggest that plain old ordinary air might work as well!  Though not
+covered in the original reference, it is also likely that with the appropriate
+mirrors, pure neon as well as other gases will lase with this same basic
+setup.
+<p>
+Most of the major differences are with respect to the power supply.  Rather
+than a simple rectified neon sign transformer and Oudin/Tesla coil trigger, it
+uses a 15 kV thyratron controlled pulsar in the basic power supply and also
+includes a more complex design capable of better control of pulse width and
+energy.  This 'cascade' system includes a high voltage trigger and lower
+voltage pulse forming network - similar in some ways to what is used to drive
+a xenon strobe or solid state laser.
+<p>
+When used with argon or krypton, some of the same wavelengths are produced as
+with normal Ar/Kr ion lasers.  I assume this to be the case with xenon as well
+but I don't have any data for a xenon ion laser.  The Xe lines lase with both
+the simple exciter as well as the cascade system though most of the Ar and Kr
+lines require the cascade system.
+<p>
+I also don't know if the O2 lasing process is similar - it could very well be
+a totally different mechanism being a non-noble gas diatonic molecule.  No data
+is available for O2 with the cascade system.  This indicates that the O2 lines
+may not lase with a wide, lower voltage pulse.  In this case, it could be
+lasing in the afterglow (as has been suggested by some people) which would
+only operate with the short HV pulse provided by the simple exciter's
+thyratron directly.
+<p>
+With pure neon (Ne), the PMG laser should produce coherent light at the orange
+(611.9 nm) and yellow (594.1 nm) wavelengths of the corresponding non-red HeNe
+lasers.  This is discussed in more detail later in this chapter.  And, you are
+of course free to try whatever other gases you desire!
+<p>
+The PMG laser is also very similar in many respects to the Ar/Kr ion laser
+in terms of the difficulty of construction.  A flowing gas system like that
+of an axial flow CO2 laser is suggested - a mechanical pump at one end of the
+laser tube and a controlled gas leak valve at the other end.  A medium vacuum
+system and some glass work will be needed.  However, since easily obtained (or
+generated) O2 can be used, the gas handling can be much simpler than for the
+Ar/Kr ion or HeNe lasers.
+
+<h3><A NAME="cmgsaf">Home-Built PMG Laser Safety</A></h3>
+
+There are three areas of safety considerations for the home-built PMG laser
+(and other similar lasers, for that matter):
+<ul>
+<li><b>Laser output:</b> The home-built PMG laser may be capable of producing
+ a beam with an average power of several 10s of mW at multiple wavelengths.
+ Since there doesn't seem to be any hard information on the actual power
+ obtainable with this or similar home-built laser designs, it is important to
+ take precautions assuming a higher power until determined otherwise.  The
+ authors suggest peak power of around 10 W - I don't know if this is much more
+ than a guess, however.
+<p>
+ Avoid eye contact with the direct or reflected beam.  This includes the 4
+ pairs of beams reflecting off the Brewster windows which may be quite strong.
+<p>
+<li><b>Electrical:</b> The power supplies can be lethal.  Either of the high
+ voltage power supplies easily have enough voltage and current to stop a
+ heart.  A .1 uF capacitor charged to 15 kV stores more than 11 joules.  The
+ pulse forming network in the cascade system stores over 35 J.  Even
+ if you aren't killed, the shock may startle you into doing something you might
+ regret.  Make sure you read and follow the <A HREF="safety.htm">Safety
+ Guidelines for High Voltage and/or Line Powered Equipment</A>.  Insulate all
+ connections and install barriers to prevent contact with the high voltage.
+ Where water cooling is used, these precautions are even more critical as
+ water and high voltage electricity don't make a happy combination.
+<p>
+<li><b>Gases:</b> In particular, if you use oxygen in your laser, there is
+ increased fire risk should there be a serious gas leak or regulator/metering
+ valve failure resulting in atmospheric pressure O2 entering the system.
+ While oxygen doesn't burn, it accelerates combustion in higher than normal
+ concentrations (air has about 18 percent O2).  Materials that would normally
+ be non-flammable, may burn vigorously in an O2-rich environment.  This
+ includes the oil inside your vacuum pump heated and oxygen-rich during its
+ compression stroke!  Take care with your gas fittings and vent any
+ significant O2 directly outside.  And, no smoking in the laser lab! (Aside 
+ from the stupidity of smoking on your long term health and precision optics.)
+<p>
+ WARNING: Do not use a high rpm direct drive type vacuum pump with pure oxygen.
+ It is better and safer to use a slower rpm pump like the older Welch 1402 or
+ 1397 belt driven pumps.  The concern is that due to mixing of O2 with
+ standard vacuum pump oil, the higher rpm pumps could, as they say, EXPLODE!
+ So, a different (and very expensive) type of oil called 'Fomblin' needs to be
+ used.
+</ul> 
+
+Provide proper warning signs for both the laser radiation and high voltage.
+Keep pets and small children out of the area and make sure everyone present is
+instructed as to the dangers.  The use of proper laser safety goggles for the
+specific wavelength(s) of your laser are highly recommended.
+<p>
+For more information, see the chapter: <A HREF="lasersaf.htm#saftoc">Laser
+Safety</A>.  Sample safety labels which can be edited for this laser can be
+found in the section: <A HREF="lasersaf.htm#saflslbl">Laser Safety Labels
+and Signs</A>.
+
+<h3><A NAME="cmgcmg1">PMG Laser Construction References and Links</A></h3>
+
+The definitive report on lasing wavelengths found in PMG lasers may be
+"Visible and uv Laser Oscillation at 118 Wavelengths in Ionized Neon,
+Argon, Krypton, Xenon, Oxygen, and Other Gases", by William B. Bridges
+and Arthur N. Chester, Applied Optics, vol. 4, no. 5, pp. 573-580, May 1965.
+Note the date - 1965 - this isn't exactly an area of current research. :)
+<p>
+The following site may have some useful information, if not
+explicitly for a PMG laser:
+<p>
+<ul>
+<li><A HREF="http://www.pulslaser.de/">Puls Laser (German)</A>
+ has virtually all of the home-built laser types including
+ CO2, N2 (including TEA), ion, ruby, dye, and some that aren't covered here.
+ It includes descriptions, photos, references, and other
+ information.  An English translation would be most welcome as Altavista
+ does less than a stellar job and doesn't follow the frame links.
+</ul>
+<p>
+The following may be useful in conjunction with PMG power supply design:
+<p>
+<ul>
+<li><A HREF="http://www.kentech.co.uk/Tutorials.html">Kentech's Tutorials</A>
+ includes information on transmission lines (including Blumlein types),
+ pulsars, pulse forming modules, etc.)
+</ul>
+<p>
+Much of the information in this chapter comes from the paper: "A Cold Cathode
+Pulsed Gas Laser" by R. K. Lomnes and J. C. W. Taylor in: Review of Scientific
+Instruments, vol 42, no. 6, June, 1971.  Thanks to
+<A HREF="mailto:dlames3@msn.com">Daniel Ames</A> for to extraordinary effort
+in digging out this material.
+<p>
+I have simplified the laser tube somewhat (more along the lines of the SciAm
+designs).  The authors likely had access to a well equipped machine shop
+to fabricate the flanges and what-nots for the their laser head.  So, while it
+has some nice features including ease of disassembly and parts replacement -
+everything is screwed together with O-ring seals and the like - more than
+basic tools and metalworking skills will be needed to duplicate their design.
+However, if you have access to a good machine lathe and know how to use it,
+know a friendly machinist who owes you some favors, or have unlimited funds,
+go for it!
+<p>
+I have also updated the cascade system to use a solid state rectifier
+rather than the mercury vapor tube that was state-of-the-art in 1971 as well
+as suggesting alternatives that do not require a thyratron.
+<p>
+While I cannot put this paper on-line due to copyright restrictions, I will
+be happy to send a most excellent fabulous photocopy of a somewhat mediocre
+photocopy (best I have, sorry) to anyone who provides a stamped self addressed
+business letter size envelope.  Contact me via the
+<A HREF="emaillnk.htm">Sci.Electronics.Repair FAQ
+Email Links Page</A> for instructions.
+<p>
+However, unless you are intent on duplicating their design exactly (or are
+offering to draw the tube assembly in AutoCad to be included here), the amount
+of additional solid information in the paper is quite limited.  In fact, the
+amount of solid information in the paper is quite limited - period!  The
+narrative is in many ways much more like that in the "Amateur Scientist"
+articles of Scientific American than a true research paper.  I hope this was
+due to space limitations in publishing and not to a lack of actual results.
+One possible conclusion is that assuming the authors actually got the
+laser to work as advertized, they knew very little about what they were doing!
+<p>
+In any case, the section: <A HREF=lasercmg.htm#cmgcmg3">Home-Built PMG Laser
+Description</A> includes all the important dimensions, materials, and power
+supply schematics so duplicating the laser in terms of function, if not style,
+should be straightforward.
+<p>
+Another interesting and possibly relevant paper (also unearthed by Daniel) is:
+"Super-Radiant Yellow and Orange Laser Transitions in Pure Neon" by
+H. G. Heard and J. Peterson, Proceedings of the IEEE, Oct. 1964, vol. #52,
+page #1258.  This discusses a PMG-like laser using neon which will lase
+superradiantly in a narrow tube (e.g., 40 cm long x 1 mm ID) in the orange
+(611.9 nm) and yellow (594.1 nm) with orange being the strongest.
+Superradiant means that no mirrors are used although the addition of a
+Fabry-Perot cavity does improve the lateral coherence and output power.  The
+authors used a pulsed high voltage power supply for excitation (they didn't
+attempt to operate the system in CW mode but speculate that it should be
+possible).  So, if you have a source of neon, try that as well and report back
+with your results! :)
+<p>
+A wealth of information can also be found on the oxygen ion laser in
+<b>U.S. Patent #3,928,820 - High Gain Pulsed Ion Laser</b>.  See the section:
+<A HREF="lasercmg.htm#cmgdolu">Daniel's Oxygen Laser</A> (near the end)
+for the abstract and some of the major topics covered in the patent.
+<p>
+Another one worth looking at is
+<b>U.S. Patent #3,646,476: Pulsed Gas Ion Laser</b>.  It has a
+good description of a somewhat practical low rep rate PMG built
+with Pyrex and an indium cathode.
+
+<h3><A NAME="cmgcmg2">Some Photos of Home-Built PMG Lasers</A></h3>
+
+Sorry, none currently available.  The links all died.
+<p>
+The only photo I know of is in the paper listed above.  However, my
+mediocre photocopy doesn't show much (just a decent approximation of a black
+smudge) and it really isn't worth the cost of postage if that's all you what!
+
+<h3><A NAME="cmgcmg3">Home-Built PMG Laser Description</A></h3>
+
+The PMG laser is similar in basic structure to the HeNe and Ar/Kr ion lasers
+but is in some ways easier to construct, align, and operate.
+<p>
+Refer to <A HREF="pmg1asm.gif">Typical Home-Built Pulsed Multiple Gas (PMG)
+Laser Assembly</A> for a simplified (very rough) diagram of the overall
+glasswork and power supply electronics (the complete cascade system).
+<ul>
+<li>Level of difficulty (rated L=low, M=medium, H=high):
+<p>
+<ul>
+  <li>Overall - M.
+  <li>Glass work - M.
+  <li>Fabrication (other than glass work) - M.
+  <li>Vacuum/gas handling - M.
+  <li>Additional apparatus (optical mirror alignment jig) - M.
+  <li>Power supply - M/H.
+  <li>Risks (high voltage, toxic chemicals, etc.) - M/H.
+</ul>
+<p>
+<li>Lasing wavelength(s) - Ranges from 464.9 nm to 627.1 nm depending on gas
+ used, pressure, and mirrors.  (There are probably many more covering an even
+ wider range but these are mostly from the paper.):
+
+<pre>
+                       &lt;------ Wavelengths (nm) ------->
+              Gas      Simple Exciter     Cascade System
+          ------------------------------------------------
+            Oxygen         464.9
+                           559.2(1)
+        
+             Xenon         496.5              496.5
+                           499.1              499.1
+                           515.9              515.9
+                           526.0(1)           526.0(1)
+                           535.3              535.3
+                           541.9(1)           541.9(1)
+                           597.1(1)           597.1(1)
+                           627.1              627.1
+        
+            Krypton                           520.8(1)
+                                              530.9(1)
+                                              568.2(1)
+        
+             Argon         472.7(1)           472.7
+                                              488.0
+                                              496.5
+                                              501.7
+                                              514.5
+
+             Neon(2)                543.5
+                                    594.1
+                                    611.9
+</pre>
+
+Notes:
+<p>
+<ol>
+<li>These are the dominant lines.  I am not sure why the dominant argon and
+  krypton lines don't agree with those in normal ion lasers (514.5 nm and 488
+  nm for argon; 647.1 nm and 413.1 nm for krypton).  It could just be an
+  artifact of the mirrors they had at their disposal. :)
+<p>
+<li>It may also be possible to use pure neon in the PMG laser.  The lasing
+  wavelengths would be 594.1 (yellow) and 611.9 (orange) which are the same
+  as the corresponding HeNe lines.  I don't know which of the exciters
+  would be (more) appropriate for use with neon.   See the section:
+  <A HREF="lasercmg.htm#cmgcmg1">PMG Laser Construction References and
+  Links</A> for additional info.
+<p>
+  According to Steve Roberts (osteven@akrobiz.com) there is also a line at
+  around 545 nm (or should this be the green HeNe line at 543.5 nm?) which
+  will lase brightly in a transverse discharge similar to that of the nitrogen
+  laser and also lase in a long tube but not as strong.
+</ol>
+<p>
+<li>Resonator:
+<p>
+<ul>
+  <li>Type/lasing medium - Low pressure Ar, Kr, Xe, O2, or even air.
+<p>
+  <li>Bore diameter - 5 mm OD, 3 mm ID; bore length - 70 cm.
+<p>
+  <li>Total tube length (includes additional space beyond the actual bore,
+    e.g., to the center of the Brewster windows) - 92 cm.
+<p>
+  <li>Tube material - Borosilicate (Pyrex) glass.  The Brewster windows are
+    made from optical flats (doesn't say what material) cemented to 11 mm OD
+    Pyrex tubes extending from the electrode assemblies.
+<p>
+  <li>Electrodes - Cold cathode type consisting of the aluminum blocks joining
+    the plasma tube and Brewster extensions.  Aluminum was chosen due to its
+    low sputtering characteristics.
+<p>
+  <li>Gas fill - Pure Ar, Kr, Xe, or O2 at .01 to .2 Torr.  Which spectral
+    lines are active are critically dependent on pressure, which must be
+    maintained within +/- 10 percent to sustain output on a particular line.
+    I assume that mixtures of gases could also be used.
+<p>
+  <li>Cooling - Convection air or water jacket depending on pulse rate.  Note:
+    the design shown in the paper has the water jacket running between
+    electrodes.  Unless an expensive closed loop cooling system using deionized
+    water is used, this would appear to be a problem with 15 kV pulses!  Tap
+    water is usually a pretty good electrical conductor.
+<p>
+  <li>Coupling - Brewster windows.  Select the Brewster angle based on average
+    wavelength if fixed.  Mounting these on ball-and-socket joints as with
+    the <A HREF="lasercar.htm#cartoc">Home-Built Pulsed Argon and/or Krypton
+    (Ar/Kr) Ion Laser</A> might result in slightly better performance for any
+    given line but the improvement would probably very slight.
+<p>
+  <li>Mirrors - Dielectric, concave, f = 100 cm; Reflectivity not specified.
+    Large frame argon, krypton, or white light (ion) optics should be
+    suitable depending on gas(es) selected.  Three screw
+    <A HREF="mmount1.gif">Adjustable Mirror Mount</A> at each end can be used.
+    Alignment can be performed via any of the techniques from this document
+    or "Light and its Uses".  The paper suggests the 'card with pinhole and
+    cross method'.
+<p>
+  <li>Total resonator length (mirror face to mirror face) - 100 cm.
+</ul>
+<p>
+<li>Vacuum system:
+<p>
+<ul>
+  <li>Requirements - medium.  A 2 stage mechanical pump in good condition will
+    be acceptable.  It must be able to reach less than .01 Torr.
+<p>
+  <li>Flowing gas operation required since in addition to being able to change
+    gases if desired, pressure is a critical parameter for any given spectral
+    line.  Pump exhausts at one end of tube with controlled gas leak feeding
+    other end.
+</ul>
+<p>
+<li>Special chemicals/supplies required - Pure Ar, Kr, Xe, and/or O2 though
+  regular room air may be used at least for setup on the oxygen line.
+<p>
+<li>Excitation/Pumping:
+<p>
+<ul>
+  <li>Type - electrical discharge.  Two options are described.
+<p>
+<ul>
+  <li>Simple exciter - 10 to 15 kV charges a .1 uF low ESR capacitor
+    with a thyratron trigger.
+<p>
+  <li>Cascade system - a separate pulse forming network is used to
+    shape the discharge current resulting in (according to the paper) nearly
+    a square pulse of optical output.  (This would indicate that where a
+    square output is achieved, lasing does NOT take place in the afterglow as
+    has been suggested elsewhere.)
+    
+</ul>
+<p>
+More information on these power supplies as well as alternatives are
+provided in the sections starting with: <A HREF="lasercmg.htm#cmgpwr">Power
+Supplies for the PMG Laser</A> 
+</ul>
+</ul>
+
+<h3><A NAME="cmgapmg">Assorted PMG Laser Physical and Electrical Data</A></h3>
+
+(From: Daniel Ames (dlames3@msn.com).)
+<p>
+Below are some estimated values for the PMG laser based on the RSI paper and
+a (70 cm) cavity length.  I find it very hard to believe that with O2, the
+electrodes and the Pyrex cavity walls showed no significant signs of
+deterioration after 100 hours of use, but then again, the article does not
+give any specs as to how long each of the four gases including krypton were
+tested proportionally during those 100 hours with the "simple exciter" power
+supply.
+
+<p>
+<b>Pulse repetition rate versus run time at 1 us/pulse:</b>
+<p>
+<ul>
+<li>1 pps: .36 seconds total runing time in 100 hrs
+<li>60 pps: 21.6 seconds total runing time in 100 hrs
+<li>360 pps: 2.16 minutes total runing time in 100 hrs
+</ul>
+<p>
+<b>Bore specifications:</b>
+<p>
+<ul>
+<li>Bore length: 70 cm
+<li>Bore ID: 3 mm
+<li>Bore cross sectional area: 7.068 sq. mm
+<li>Bore volume: 4,947.6 cu. mm
+<li>Capacitor: .1 uF at 15,000 VDC for 11.25 J
+<li>Energy volume density: .00227 J/cu. mm
+<li>Heat dissipation (1 pps): 11.25 watts 
+<li>Heat dissipation (60 pps): 675 watts 
+<li>Heat dissipation (360 pps): 4,050 watts 
+</ul>
+<p>
+<b>Pulse specifications:</b>
+<ul>
+<li>Pulse duration: 1 us
+<li>Pulse power (11.25 joules/pulse): 11,250,000 W
+<li>Pulse current: 750 A
+<li>Pulse current/cu. mm of O2: .1515 A
+<li>Pulse power/cu. mm of O2: 2272.5 W
+</ul>
+<p>
+<b>Electrode specifications:</b>
+<p>
+<ul>
+<li>Estimated length: 2" = 50.8 mm
+<li>Estimated inside diameter: 5 mm
+<li>Estimated inside surface area: 797.96 sq. mm
+<li>Average pulse energy: .01409 J/sq. mm
+<li>Pulse power: 14,098.45 W/sq. mm at 15,000 VDC
+<li>Pulse current density: .9398 A/sq. mm at 15,000 VDC
+</ul>
+
+<h3><A NAME="cmgguide">Guidelines to Assure a Successful Home-Built PMG
+ Laser</A></h3>
+
+These set of guidelines should be followed during construction of your first
+home-built dye laser.  The factors below will greatly influence the
+ultimate output power, beam quality, and whether it produces any coherent
+light at all!  Once you have a working laser, feel free to make
+modifications - one at a time.
+<p>
+Well, for this one, there aren't any real guidelines except for those dealing
+with safety - this is the true experimenters' home-built laser! :)
+
+<ul>
+<li>Make sure you read, understand, and follow <b>ALL</b> the safety
+ guidelines found in the section: <A HREF="lasercmg.htm#cmgsaf">Home-Built
+ PMG Laser Safety</A>.
+</ul>
+
+<h3><A NAME="cmgspps">Sources of Special Parts and Supplies for the Home-Built
+ PMG Laser</A></h3>
+
+Aside from the glass work and vacuum system, you will need the gases.
+<p>
+For argon, krypton, and xenon, there isn't much choice - you have to buy a
+small (lecture bottle?).  There simply aren't any pure sources of these gases
+available in common household appliances.
+<p>
+Oxygen can easily be obtained in the same way or you can generate it using
+a variety of chemical methods.  One simple one I remember fondly was to mix
+hydrogen peroxide (from your drugstore) with manganese dioxide (from dead
+carbon-zinc batteries or a chemical supply house).
+<p>
+Ordinary air can be obtained, well, you know where to get that!  However, keep
+away from your local politicians due to the contamination and excessive
+temperature (which affects lasing). :)
+
+<h3><A NAME="cmgcomt">Using Commercial Laser Tubes to Construct the PMG
+ Laser</A></h3>
+
+It may be possible to use a commercial helium-neon (HeNe) and/or
+argon/krypton (Ar/Kr) ion laser tube as the starting point for the
+Home-Built PMG laser.  Where the lasing wavelength is close to one or more of
+those for the HeNe or Ar/Kr laser tube, this may be as 'simple' as opening its
+exhaust tube and attaching it to your vacuum/gas delivery system and power
+supply.  Several of the Ar, Kr, and Ne wavelengths do coincide with those of
+commercial laser tubes (though for HeNe tubes, these are mostly the less
+common and expensive non-red variety).  And, many of the Xe lines appear to be
+close enough to the wavelengths of available tubes.  The one at 627.1 nm
+should even work with a red HeNe tube.  Where the wavelengths are not
+compatible, replacement mirrors or Brewster windows and external mirrors would
+be needed.  However, with that amount of additional effort, the advantages of
+this approach may mostly disappear.
+<p>
+<A HREF="pmg2asm.gif">Home-Built PMG Laser Using HeNe Laser Tube</A> shows
+one possible configuration driven by the 'Simple Exciter' described below.
+This would make a particularly nice setup especially if the tube's mirrors are
+already known to be properly aligned.
+<p>
+Depending on the gas fill, a diffusion pump or ion pump (in addition to the
+mechanical pump shown) may be desirable but probably not essential,
+especially if the flow-through gas system is used.  However, where the vacuum
+connection is only made at one end of the tube, a better vacuum system would
+make life easier by reducing the number of pump-down, back-fill cycles needed
+to achieve necessary gas fill purity.
+<p>
+<A NAME="cmgoex"></A>
+<hr>
+<br>
+<li>Back to <A HREF="lasercmg.htm#cmgtoc">Home-Built Pulsed Multiple Gas (PMG)
+ Laser Sub-Table of Contents</A>.
+<h2>Other Examples of Home-Built PMG Lasers</h2>
+<h3><A NAME="cmgdolu">Daniel's Oxygen Laser</A></h3>
+
+Daniel Ames is constructing a version of the PMG laser using the carcass of
+an argon ion laser tube as his starting point.
+<p>
+(From: Daniel Ames (dlames3@msn.com).)
+<p>
+Well, as you know, making a laser from scratch or even modified parts is a 
+big undertaking, especially for one that uses more than 15 kVDC and has very
+little  existing info and specs.  A Challenge. :)
+<p>
+Here is the present status:
+
+<ol>
+<li>The head is 95% complete - except for;
+ <p>
+ <ul>
+ <li>Still need to cut the hole in the top for the fan.  
+ <li>Haven't decided on the electrical (HVDC) feed-throughs, (side or rear of
+   head)
+ <li>Still need to add the air cooled heatsinks to the tube.
+ <li>Need to align the optics. 
+ </ul>
+<p>
+<li>I am currently making an (aluminum) optical table that the head is bolted 
+ to.  It contains a 17" 632.8 nm HeNe laser head which is linearly polarized.
+ I have two adjustable mirror to direct the HeNe's beam.  This will greatly
+ help in getting the bore of the tube centered with the optical center of 
+ the its mirrors, plus aiding in being able to check and re-align (if
+ necessary) the mirrors in order to switch OCs and HRs for testing purposes.
+ I must say, it is turning out very very nice. :)  And when I am done with it
+ for the oxygen laser, it will be very useful for re-aligning other lasers.
+<p>
+<li>The power supply:
+<p>
+ <ul>
+ <li>Still awaiting the HV capacitor.  This should arrive very soon. (.05 uF
+ at 30 kVDC) with very low and inductance.
+<p>
+ <li>The triggered and vented spark gap still needs a controllable triggering 
+  source. I will probably use a standard ignition coil from a car. I have
+  already built and tested this circuit and it does seem to work nicely. Then
+  the output will be rectified to charge a small HV cap that will in-turn
+  trigger the main spark gap through a smaller spark gap. I must admit, 
+  this part of the PSU I am not as clear on as I would like to be...
+<p>
+ <li>Main discharge: I plan to run this tube @ voltages between 12.7 kV and
+  21.2 kV at .05 uF  with rectified neon sign transformers.
+</ul>
+</ol>
+
+Stay tuned for further exciting updates. :) Sorry, no pictures yet... (Top
+Secret and all that...).
+<p>
+(About a month passes.....)
+<p>
+Well, I finally got some pics taken of my present oxygen laser (or PMG laser,
+take your pick).  It's not finished as yet.  As with most home-brew laser
+projects, it seem as though the closer I get to completion the, more
+considerations or obstacles I encounter.  :)
+<p>
+<ul>
+<li><A HREF="http://members.aol.com/dlames2/O2_Project/current.html">Daniel
+ Ames Oxygen/PMG Laser Page</A> (currently not available).
+</ul>
+<p>
+A simplified diagram of the electrical configuration is shown in
+<A HREF="dlpmg1.gif">Danial Ames' PMG (N2/O2/Air) Laser 1</A>.
+<p>
+(Several months later, semi-success but partial false alarm.....)
+<p>
+Well, I finally finished up the small version of my O2 PMG Laser.
+I had been trying to get it to lase for three (3) days now and just when I
+was ready to shelve it again and start building a much bigger tube...  Drum
+roll please! I am very pleased to announce that - on April 10th at 3:00 pm
+PSDT, the Oxygen Laser is LASING = YES!!!!!!!
+<p>
+It actually LASED. :) A beautiful violet/blue, probably the 441.4 nm or 441.6
+nm lines - love those wavelengths, or maybe it's the 464.9 nm line, but it 
+appears to be more the color of a 442 nm HeCd laser.
+<p>
+I still have some modifications to work out with the power supply, but hey, it
+lases! YES, i'm ecstatic!!! After a little more than 1 year of research,
+design, and manufacturing, I can hardly believe it.  I will be adding photos
+and more details later. Right now, the output power is quite low and
+unmeasured, but it is very likely that by modifying the 
+power supply and the OC optic that the output power will greatly be 
+increased. Crowd goes WILD!!!
+<p>
+(Two days later.)
+<p>
+As you know I reported that my small O2 laser was in fact lasing in the 
+Violet/Blue reign. Upon further testing and evaluation, I am now somewhat 
+doubtful that it was the oxygen that was lasing. :(
+<p>
+At first, the only way this 7.5" cavity would lase was to close off the O2 
+supply and open both valves from the tube to the vacuum pump. At this time,
+the tube had an air leak of about 20 Torr in 5 minutes. Upon fixing the 
+leak, I could not get any sign of lasing at all with just O2. Then I found 
+that by drawing in plain old air into the tube, it would lase again, still 
+only in a pulsed mode. 
+<p>
+Here are the present operating parameters:
+<p>
+<ul>
+<li>Optics are coated for 442 nm. OC is flat, HR has a Radius of Curvature
+ (RoC) = 44 inches.  The spacing between the mirrors is 20 inches with a
+ cavity active length of 7.5 inches.
+<p>
+<li>Pressure range is 0.5 to 1.5 Torr. Above that the lasing would die out.
+<p>
+<li>Power supply voltage is 5 to 10 kVDC pulsed.  The energy storage capacitor
+ is .03 uF.  A Blumlein configuration was also tried using two .03 uF caps
+ with an open air spark gap, and separately a pressurized N2 triggered spark
+ gap.  Results were very comparable.  With air or N2, the output increased
+ with the higher voltages of 10 kV.
+</ul>
+<p>
+I found that with one of the optics removed, all lasing stopped.  I tried
+substituting a multiline argon HR mirror for the original 442 nm OC - again no
+lasing.  In general, the optical alignment had to be correct or all lasing
+would stop.  I also tried substituting an uncoated blank optic having a 44
+inch RoC for the original HR and had similar lasing to the original 442 nm
+pair.
+<p>
+I also tried N2 and air with very negligible difference using all optic and
+spark gap combinations above. The gas pressures were similar within the lasing
+high and low limits.
+<p>
+My conclusions at this point: I suspect that it was the N2 in air that was
+actually lasing, NOT oxygen as I found that I was fooled by the target, (plain
+old white printer paper). This paper was actually fluorescing the violet/blue
+color that I originally thought were the oxygen lines 441.4 and 441.6 nm. Upon
+further investigation, I substituted a non fluorescing target and found no
+visible output.  Oxygen does have at least 4 UV lasing lines, but since this
+laser's output was very similar using air or N2, I have for now, ruled out
+that it was lasing the O2 UV lines, but instead, it was producing a coherent
+UV beam from the pulsed N2.
+<p>
+I know from testing this laser with varying parameters, that the UV lasing
+requires a very fast pulse,  Sorry but I am not set-up yet to measure the
+pulse width. However, the electrical connectors to the tube are made from 1/2"
+wide brass for a shorter pulse delivery. All the other connectors to the caps
+and spark gap are also 1/2" wide and as short as possible. This setup works
+well, but when I add an inductor into the anode circuit (20 feet of 18 gauge
+copper wire), the lasing ceased.  Since it does lase (pulsed only) with either
+N2 or just plain old vanilla-flavored air, the obvious assumption would be
+that it is the N2 lasing as in an N2 Blumlein type laser, unless I am getting
+different UV lines for air than with just N2. If so, than maybe the N2 in air
+is transferring some energy to the O2 atoms? or helping the O2 atoms to return
+to their ground state?  I have never heard of an N2 Ion laser. :)
+<p>
+For now, my only plans for this very short laser will be to try to increase
+the voltage and try again with O2.
+<p>
+(From Sam.)
+<p>
+One thing is that I wouldn't expect the mirrors to matter that much with N2 as
+I understand it so maybe you have discovered something new. :)  Of course,
+if it is indeed UV, those mirrors really shouldn't do much anyhow - about the
+same as plain glass which I think is what you found out.  But the fact that
+alignment is critical is at the very least, interesting....
+<p>
+Don't rip it apart - there is something strange going on and it deserves a
+proper investigation.
+<p>
+(From: Jon Singer (jon@joss.com).)
+<p>
+There is an N2 ion laser which runs at 428 nm, and could be what Daniel was
+seeing. In fact, Diane Neisius mentions this laser further down on the same
+page, though she refers to it as He-N2+.
+<p>
+I also think Mark Csele also mentions it on one of his pages -- if his students
+don't put quite enough N2 into the excimer laser, they sometimes see the
+visible line.
+<p>
+(From: Steve Roberts (osteven@akrobiz.com).)  
+<p>
+Wow, what a problem! N2 is usually superradiant, if your on the traditional
+N2 line, the only thing I can think of is the mirrors are just kicking it
+past the lasing threshold.   Is the pure N2 power (measured on a scope, not
+eyeball) greater then the air power? Air impedes the pulsed N2 line.  Also
+N2 doesn't like low pressure. 
+<p>
+Most of the pulsed gas lasers reside in the low pressure area which
+explains why you would get lasing when the valves are locked off and the
+pump fluid is outgassing.  Pump fluid causes the pump to hang at 100 microns
+or so for a while, till the air and water vapors are expelled from the pump
+oil by mechanical heating. That 100 microns to 250 microns is a good area
+for pulsed lasing.
+<p>
+Tough question. I don't know what you have. You need to find a old UV-VIS
+spectrophotometer from a hospital or similar place and rip the calibrated
+monochromator out of it.    I think we can rule out the pulsed argon UV
+lines, it's only a very small partial pressure of air.  Unless it's the N2
+molecular line, you have a ion line going there or God knows what else. 
+<p>
+I need to think about this for a while......
+<p>
+(From: Daniel.)
+<p>
+(Several weeks later.)
+<p>
+<ol>
+<li>I still have yet to see any visible lasing.
+<p>
+<li>I still am not convinced that the UV lasing is from the N2 in plain
+ vanilla flavored air since I can <i>increase</i> the UV output of air by
+ bleeding in a small amount of O2 at a ratio of 4:1+ (N2:O2).  Go figure.
+<p>
+ If it is lasing the N2 in the air, then according to Steve Roberts, it 
+ is lasing in the afterglow and not superradiantly. But O2 is said to hinder
+ N2 from lasing.  Go figure again. :)
+<p>
+ I do not get any UV lasing using the same pressure with just O2, so if it is 
+ lasing the O2 in air, then I would propose that the N2 is required for 
+ similar reasons that HeNe lasers need He and/or CO2 lasers need N2 + He.
+ In the case of O2, possibly it provides a molecular vibrational energy
+ transfer from the N2 to the O2, or the N2 helps the O2 return to it's ground
+ state before the next pulse.
+<p>
+<li>With some modifications of the capacitor arrangement and the length of the 
+ inductor, plus different optics, I am now getting a very tight and very 
+ bright beam with very low divergence - approximately that of a long TEM00
+ HeNe laser. The beam spot on a target at 6 feet measures about a 3/32" to
+ 1/8" in diameter.  Note: Using plain ole white printer paper as a UV target,
+ I can still see the beam spot under an 80 W fluorescent light from a distance
+ of 8 to 10 feet. 
+</ol>
+<p>
+
+The strange thing is that it does not lase on every pulse especially at 
+higher rep rates. At 1 to 2 pps, it lases on most pulses, but at, say, 10 pps,
+or higher (up to 60 pps tested) it's a hit and miss situation.
+<p>
+The funny thing is, I was not and am not attempting to achieve a UV output,
+although O2 does have (4) UV lasing lines at 298.43 nm, 374.949 nm, 375.470 nm,
+and 375.985 nm .  (Reference: Journal of Applied Optics, vol. 4, no. 5, May
+1965, pg. 576.)
+<p>
+PS. My next O2 (P.M.G) laser will have a 115 cm length with an ID of 7mm.
+<p>
+(From: Sam.)
+<p>
+Hmmmm.  The only way to really narrow this down would be to determine at
+which wavelength(s) it is actually lasing.  The three near-UV wavelengths
+listed above would certainly pass through a glass or plastic prism or
+diffraction grating; the one around 298 nm might.  They would all work with
+a reflection grating.  So, there may be hope of determining at least which
+grouping the wavelength is in or if it is actually somewhere else.
+<p>
+(From: Daniel.)
+<p>
+Right you are.  I fired it up today  with an Edmund Scientific transmission
+grating.  At a distance of 68-1/8" from the grating for the 0th order spot,
+the 1st order spot is 6" (+/- 1/16") away.  The spot from a HeNe laser using
+the same setup is 11-3/8 (+/- 1/16").
+<p>
+(From: Sam.)
+<p>
+Using the approximation that sin(x)=x for small x, the ratio of distances
+is equal to the ratio of wavelengths.  This results in a wavelength of about
+342 nm.  Hmmmm, pretty close to the 337.1 nm N2 line. :( (Without using the
+approximation, the result is about 345 nm.)  If your measurements are off by
+1/16", it could be exactly the N2 line.
+<p>
+(From: Daniel.)
+<p>
+Not bad at all. I figured it was probably the N2 line in air, but I did find
+some interesting ways of stimulating it, such as lasing it in the afterglow
+and adding O2 at a certain N2 pressure to amplify the output.  So, I guess
+this laser does fit the description of a PMG laser after all.  If only I could
+find that darn air leak, I have isolated it to the laser or it's vacuum line
+connections, I guess I will just have to develop the poor man's helium leak
+detector.
+<p>
+I made a more precise measurement and now come up with a wavelength of
+334.3 nm.  I also drew a cool diagram:
+<A HREF=
+"http://members.aol.com/dlames2/wavelength/diffraction_diag.gif">Determining
+Relative Wavelengths using Diffraction Grating</A> (currently not available).
+<p>
+Did you know that N II lases at around 350 nm? I found a reference to it back
+in 1964.
+<p>
+Interestingly, with this lumped capacitor longitudinal Blumlein type 
+discharge, the length of the inductor (as used with traverse Blumlein N2
+laser circuits), is unusual.  I am using two caps with a common negative and
+the spark gap is across one of the caps.  The 2nd cap is discharged through
+the cavity just like the Blumlein N2 lasers, except the discharge is
+longitudinal and the caps are not the flat plate type, but rather industry
+standard pulse caps.
+<p>
+I found that by using the larger (.05 uF, C2) cap for the spark gap and the
+smaller (.03 uF, C1) cap discharging through the cavity, that the output was
+significantly increased.  The inductor lengths tried across the two + sides
+of the caps at 18 to 22 kVDC with a pulse rate of 1 to 2 pulses per second
+with pressures ranging between .5 to 5 Torr:
+
+<ul>
+<li>16" = no ionization on most pulses = moderate (UV) output.
+<li>50" = 30 - 50% of  the pulses ionization = moderate (UV) output.
+<li>16' = 95% of pulses ionized = strongest (UV) output.
+<li>50' = no output.
+</ul>
+
+These lengths are the total amount of wire wrapped arond a 1" diameter
+plastic tube in each case.
+<p>
+The pulsed fluorescent blue/violet beam spot of this laser - as viewed on 
+plain white printer paper at a distance of 3' and using just plain ole (air) 
+as the lasing medium is now so bright that if it were continuous, you would 
+not want to look at it without laser safety goggles at 400 to 450 nm and UV 
+blocking.  Within a certain pressure range after the air starts lasing,
+adding a small amount of O2 increases output even further.
+<p>
+I was looking through my assorted optics tonight and found some dielectric 
+(UV) flat bar type mirrors.  I tested them with this ?UV beam for reflection
+and transmission.  Reflection was great, transmission was zilch meaning 0 
+detected... hmmmmmm...  I might try one of these for the HR since now I 
+have two very bright UV beams exiting the laser, one at each optic. 
+I would love to try lasing a dye in a quartz cell, without a resonator.  It
+just might work as the comparable output of my home made PMG laser on the same
+white fluorescent target appears much brighter than a commercial TEA N2 laser
+I had which would lase superradiantly a dye without a resonator.
+<p>
+(From: Sam.)
+<p>
+Assuming the inductor is in the same place as for the N2 laser, I bet it
+isn't behaving like a simple inductor when you get to the really long
+configuration - it has capacitance as well and is shorting your cavity.
+<p>
+What happens if you replace the inductor with a string of resistors?
+For the Blumlein, the inductor should really behave as an open circuit
+when the spark gap fires.  A resistor of a few K ohms should do the same.
+<p>
+I'm also not really sure why you need C2 (the capacitor across the spark
+gap) at all for this configuration.
+<p>
+(From: Daniel.)
+<p>
+I haven't tried a resistor as a substitute for the inductor yet, but I do know 
+from my experimentations that a 50' 18awg inductor that is wound (layer upon 
+layer) on a small spool similar to the ones used in pulse forming networks 
+for flashlamps and for pulsed argons but no output.  50' of 18 AWG wire is
+approximately. .31925 ohms, inductance was not measured.  It would seem as
+though that with these larger cap values (larger uFs than most TE N2 lasers)
+that possibly the inductor plays a roll in shutting down the pulse through
+the cavity?  Since O2 is said to lase in the afterglow, a sharp drop off of
+the ionization pulse, on the trailing edge is needed, that is why the
+Canadians used a (donated) thyratron.
+<p>
+As for why I used C2: It's because at these low pressures, below about 1 Torr,
+the gas in the cavity would continuously (barely) ionize even when the spark
+gap was in the (hold/off) cycle. It could be that a different spark gap and
+triggering source might solve the problem.
+<p>
+(From: Sam.)
+<p>
+I still suspect that your larger inductors are acting more like capacitors. :(
+<p>
+You really need to measure the pulse duration of your discharge.  The usual
+way to do this is to put a low value resistor (.1 ohms, .01 ohms, etc.) in the
+discharge return path and measure voltage across it.  But you can't do that
+with your setup because there is not ground point in the discharge path.
+<p>
+I'd suggest constructing pulse transformer - put one of the conductors going
+to the tube through a ferrite core.  Wrap a few turns of insulated wire around
+the core and terminate those with a low value resistor (a few ohms).  Put your
+scope across the resistor.
+<p>
+(From: Daniel.)
+<p>
+I now have different optics in this laser (same one as my
+Pulsed Multiple Gas Laser Project).  The UV output is now stronger than
+ever using just <b>AIR</b>!!!!!!  No exaggerating - the output of my air
+laser is tremendously brighter when viewed on plain white printer paper than
+my commercially built TEA N2 laser (using the same paper) with it's
+very expensive pressurized and triggered spark gap using pure N2.  Note: The
+TEA N2 laser has lased some dyes to superradiance without a resonator.
+<p>
+My air laser's output at a distance of 5" from the cavity no longer has 
+the bright (blue) fluorescent color on white paper.  Now it is so bright 
+that the bright blue is starting to take on a white/blue fluorescent color. 
+The TEA N2 laser using pure N2 never did that.  The real puzzling part is
+this is that the air laser actually seems to like the air combination of
+80% N2 and 20% O2 with an additional 1 to 3 Torr of O2 with an approximate
+ratio of air + O2 up to about 1:0.5.
+<p>
+I now have a fabulous animated version of my PMG laser.  Check out
+<A HREF=
+ "http://members.aol.com/soccrattes/N2_Project/LGB_2_P_Min.gif">Daniel Ames'
+PMG Laser Operation</A> (currently not available).  Since this was designed
+and drawn for pulsed gas lasers that lase in the afterglow (i.e., the trailing
+edge of the ionization pulse) the stimulated emission is shown <i>after</i>
+the first glow of ionization.
+<p>
+<b>FLASH!</b>
+<p>
+I have succeeded in lasing oxygen with a little bit of green 559.1 nm from 
+this little converted argon tube. Verified that it is actually visible output
+and not just week UV fluorescence on white paper appearing to be green. That
+was  easy, just insert a piece of (most any clear plastic/acrylic) into the
+beam's path. If the lasing vanishes, it is a visible wavelength, easy, huh?
+<p>
+Back to the 559.1 nm lasing, the output so far is very very weak, probably no 
+more than  .05 mW and it is very very critical to maintain the exact mirror
+alignment.
+<p>
+(From: Sam.)
+<p>
+Congratulations!  Even .05 mW of visible is fabulous!  But, yes, absolute
+cleanliness is likely to be critical for the lower gain visible wavelengths.
+<p>
+(From: Daniel.)
+<p>
+It is possible that different optics, or spacing out these optics much
+further, or changing the ionization pulse width, or changing the phase of the
+moon :), etc. might also make a positive difference in the output. Their RoC
+is 2 m.  So they are way to long for this short (19") resonator for normal
+alignment. I am using two HR mirrors, so both have the 2 m RoC. The output
+beam waist diameter is very small, perhaps 0.2 to 0.3 mm.  The bore diameter
+is approximately. 1.2 mm.  I did try the HR and OC together, but no lasing
+found yet with this combination.
+<p>
+I suspect that it would lase more strongly if it was not for some 
+brass deposits inside the cathode's Brewster stem and possibly on the inside 
+of the Brewster window as well (although the latter is not noticeable).  So,
+Material Recommendation coming:  Don't use brass for hole plugs, electrodes,
+or anything else that the discharge and it's afterglow overglow can come in 
+contact with. The original brass (non-OEM) gas inlet fitting on the anode did
+not cause this problem, but I used brass 1/8"NPT hole plugs with TorrSeal by
+Varian to plug the two holes in the cathode bell (for the original filament
+and getter from the ion tube).  The cathode does of course get hotter than the
+anode.  Whether it is the additional heat, (I doubt it) or the fact that at
+very low pressures below 1 Torr, the discharge/ionization overshoots the
+cathode and travels down the Brewster stem towards the window...  There's a
+hint in here somewhere. :)
+<p>
+(From: Sam.)
+<p>
+Yep, it's called sputtering and is more of a problem with materials like brass
+especially when running at low pressure which increase the mean-free-path so
+that positive ions strike the cathode with higher velocities knocking off
+metal atoms which go anywhere they want. :)
+<p>
+(From: Daniel.)
+<p>
+Well, enough testing with oxygen with this little tube, so my plans for it 
+are to revert it back to an N2 compatible (O2/N2/Air UV laser) which 
+totally amazed me concerning the strength of the UV output. I am currently
+making  up a small dye resonator to test with this Air laser's output.
+<p>
+(A few weeks pass.)
+<p>
+I have now succeeded in getting Coumarin XX to lase superradiantly (a little)
+but the real problem is that the pump beam waist diameter and divergence from
+the modified argon ion tube PMG laser is so narrow (1.5  to 2 mm diameter),
+that even with a quartz cylindrical lens, most of the pumping energy to the
+dye cell is still centered in the middle of the line.  I used a borrowed dye
+cell, but hopefully I will be able to keep it long enough to add a resonator,
+at least an HR mirror to it plus a vertical (primary) cylindrical quartz lens
+at 90 degrees to the second one to widen the beam before it enters the
+secondary horizontal cylindrical quartz lens and dye cell. Hopefully the
+losses of adding a second lens will not be counter-productive. 
+<p>
+And, now for my future plans:
+<p>
+Today I started (finally) acquiring the parts to built a much longer PMG 
+laser. The head housing is that of a Liconix model 3220 HeCd, (the big one) and
+measures 37" long which features a nonmetallic 4 rod resonator frame that 
+is just begging to be used for a high voltage laser application. After 
+considering countless laser tube an electrode designs for getting the longest 
+possible active cavity length plus the feasibility of actually producing what 
+was on paper or (the monitor), I finally decided to go with plan "L"...... 
+Plan "A" will be the grand daddy of them all with a 56" in active cavity 
+length and water-cooled cavity and electrodes, but that's for a later date. 
+This current design, (plan L) will feature an active cavity length of 31" plus
+a large gas reservoir for temporarily sealed operation plus the means for a 
+flowing gas mode, which also helps during the evacuation and outgassing
+process.  Here is a summary of the features of my universal laser design:
+
+<ol>
+<li>I'm utilizing a tried and true very stable resonator framework and head
+ housing from a Liconix model 3220 HeCd laser head.
+<p>
+<li>My plasma tube can easily be interchanged with different diameter tubes.
+<p>
+<li>The electrodes and windows or optics are easily replaceable.
+<p>
+The resonator optics can be easily converted to or from a Fabry-Perot
+ to a DFB (Distributed FeedBack) design using a diffraction grating HR.
+<p>
+<li>HVDC transmission lines are interchangeable with flat or coaxial cables.
+<p>
+<li>The huge gas reservoir can be capped off for those expensive gases if 
+ desired.
+</ol>
+
+My vacuum system will also be enhanced, with a (4) stage diffusion pump and
+valves + an alcohol/dry ice absorption pump/trap, plus 1 or 2 vacuum
+traps, an N2 hot gas heater, an Ion gauge and two thermocouple gauges.  Of
+course, this will all happen overnight, right!!!.
+<p>
+Stay tuned.
+<p>
+(From: Sam.)
+<p>
+This sounds like a plan.  Of course, you realize that your dram vacuum
+system is probably way overkill for testing of gas lasers.  Perhaps, you are
+going to go into the tube refurb business??? :)
+<p>
+A few weeks later:
+<p>
+(From: Steve.)
+<p>
+It is oxygen lasing, just not on the transitions mentioned in the Review of
+Scientific Instruments article.  See:
+<b>U.S. Patent #3,928,820: High Gain Pulsed Ion Laser</b>.
+<p>
+Here is the abstract of the patent:
+<p>
+<blockquote>
+"A high gain pulsed ion laser is described in which a short discharge pulse of
+ less than about 2.0 microseconds is applied to a discharge tube in which
+ oxygen is present in an amount sufficient to establish an oxygen pressure in
+ the range between about 10 and 100 millitorr. The pulsed output from the ion
+ laser occurs during the "afterglow" of the discharge pulse and is attributed
+ to doubly ionized oxygen. The wavelength of the output may be selected from
+ certain lines in the visible and ultraviolet portions of the electromagnetic
+ spectrum."
+</blockquote>
+<p>
+(From: Daniel.)
+<p>
+Having obtained the patent, here are (some) of the highlights:
+<p>
+<ul>
+<li>Tube sizes successfully used, length and bore diameters, gas pressures,
+ O2/mixtures and partial pressures.
+<li>Electrode designs successfully used.
+<li>Relationship of the electrical pulse to the afterglow lasing pulse.
+<li>Charge voltage versus output power graphs (Input kVDC versus output power).
+<li>Output mirror reflectivities.
+<li>Additional UV lasing lines and relationships of the UV lines to input
+ energy versus output energy.
+<li>Oxygen's relaxation time versus electrical pulse duration and rise times,
+<li>When the "afterglow" stimulated emissions start in relationship to the 
+ electrical pulse.
+<li>What gain value is need to get a short laser cavity of only 16 cm (6.27") 
+ with a 2.4 mm diameter bore to lase with only 50% reflective optics, that's
+ right - 50% R.
+<li>PLUS more journal references.
+</ul>
+
+<p>
+This is a good one for reference!
+<p>
+(Several months later)
+<p>
+(From: Daniel.)
+<p>
+The big oxygen laser is still shaping up nicely, but not completed
+yet. Ran into some design considerations concerning whether to place the
+gas and vacuum valve in the laser head (preferred) or external (not
+attached to the head) and whether to use standard glass stopcocks or
+Ace Glass brand P.T.F.E. vacuum valves that have 3 O-rings for seals. I
+am leaning towards the Ace Glass valves mainly because of the (oxygen
+lasing gas) and the glass stopcocks expose the cavity/brewster windows and
+oxygen gas to the necessary vacuum grease. The main reason for desiring
+the valves to be inside the laser head is so that when it is disconnected
+from the vacuum system, it is all self contained. The main drawback to
+mounting the valves on the resonator's base frame is that opening and
+closing the valves will add strain or twist to it and possibly effect the
+optical alignment.
+
+<h3><A NAME="cmgdian">Diane's Transverse Excited PMG Laser</A></h3>
+
+This home-built laser is rather unique in that while designed roughly along
+the lines of the SciAm nitrogen laser, it is much more sophisticated and has
+also been tested using other gases including neon.  And lasing at some
+unusual visible wavelengths has been achieved.  Thus, I include it here
+rather than in the chapter on the home-built N2 laser.  A general description
+and photos can be found on
+<A HREF="http://www.diane-neisius.de/laser/index_E.html">Diane's
+Laser Page</A> under the "Querfl&ouml;te" laser.
+A detailed diagram can be found at
+<A HREF="http://www.diane-neisius.de/laser/n2diag_E.gif">Querfl&ouml;te
+Laser</A>.
+<p>
+Here is a summary:
+<p>
+The "Querfl&ouml;te" laser I built basically is of the same design as most 
+other N2 lasers except two major details:<br><br>
+<p>
+<ol>
+<li>The discharge tube is segmented and one of the attached transmission lines 
+ is slotted.
+<p>
+<li>Both transmission lines are folded together thus saving 50% room.<br><br>
+</ol>
+<p>
+The second feature is more easily to explain. To get an idea, imagine an 
+ordinary N2 laser like a butterfly - both transmission lines are the wings and 
+the butterfly's body is the laser tube. Now the butterfly folds its wings 
+together (sitting on a flower or so): both wings touch each other, and the 
+body is at the edge of both wings.
+<p>
+Back to the transmission lines, they are folded over in a way the common line 
+touches itself. So both transmission lines are the outer sides of a capacitor 
+stack, with the dielectric and the common line (as a single plate) in between 
+them.
+<p>
+I adopted the segmented bore design from the following
+paper which describes a hydrogen laser:
+<p>
+<ul>
+<li>Kirkland, Dogett, Kim, "Vacuum-UV H2-laser excited by a traveling-wave
+ discharge", Rev. Sci. Inst. 52(1981) p.1338.
+</ul>
+<p>
+Hydrogen lasers have very narrow discharge bores 
+even if they are transverse excited. The trick the authors used was to build 
+no true transverse discharge tube but a long series of short longitudinal 
+discharges with alternating pin electrodes in a long thin bore. I liked that 
+idea, for a small volume means high energy density - and by that a better 
+chance to get lasing out of other stuff as nitrogen or air. (Note: I built a 
+number of different ordinary N2 lasers before starting that Querfl&ouml;te
+project  in 1991. The tip seen occasionally: "Just put neon in your N2
+laser and you'll get green lasing" JUST DIDN'T WORK!
+<p>
+The spark-gap sided electrodes of the bore are connected to a common aluminum 
+plate which serves as transmission line and base plate in one. The other 
+transmission line is slotted, so every of the electrodes connected to it has 
+its own transmission line strip. In a way, it's a long series of short
+Bl&uuml;mleins which have the spark-gap-sided transmission line in common. 
+This design allows a variable length of the laser - just short some strips to 
+ground to change.
+<p>
+A surprising fact was that no charging resistors are needed, as I found out by 
+experiment (The Kirkland et. al. paper have them in their design, as I had
+initially). I have no idea why it works this way - perhaps there is some
+residual ionization from the preceding pulse acting as resistor during the
+next charging phase of a single strip?
+<p>
+The bore itself I modified somewhat - I felt not happy about a pure plastic 
+surface exposed to the violent thunderstorm of a gas discharge. So I decided 
+to make the Plexiglas bore wider, inserting short pieces of Pyrex tubes 
+between the pin electrodes to protect the plastic walls. As few hours of 
+operation showed up, it works: near the electrodes, where the Plexiglas outer 
+tube is uncovered by the Pyrex, white and brown decomposition products became 
+visible.
+<p>
+The spark gap itself is in one corner of the transmission line - however, I 
+observed never asymmetric laser output when running without a rear mirror.
+Design of the gap is the common type with a screw acting as one electrode - 
+pulse repetition rate is adjusted by turning the screw (to do this without 
+getting zapped, I attached a plastic rod to it by the help of a short piece of 
+vacuum hose).
+<p>
+<b>Discharge tube</b>
+<p>
+<ul>
+<li>Discharge bore: 3 mm wide and 98 cm long.
+<li>Electrode separation: 14 mm.
+<li>Transmission lines: 10 cm long.
+<li>Total capacity using 0.3 mm of soft vinyl as dielectric: 10 nF
+ (spark gap sided base plate) and 6 nF (all strip lines added).
+</ul>
+<p>
+<b>Power supply</b>
+<p>
+This is an ordinary surplus 4 kVAC neon sign transformer delivering 35 mA. 
+Nice thing, got it at the back door of a neon sign shop nearly for free. :) It 
+feeds into a voltage doubler/rectifier producing 10 kVDC.
+<p>
+<b>The vacuum and gas supply unit</b>
+<p>
+This is a single stage rotary vacuum pump with exhaust filter (aquarium filter
+charcoal) connected to one side, low pressure gas can (12 bar) with needle
+valve and mercury vacuum gauge (0 to 80 Torr) connected to the other side of
+the tube. The needle valve is used to adjust pressure, the laser is operated
+in flow through mode.
+<p>
+<b>Optics</b>
+<p>
+The tube lases without any mirrors. However, an aluminum mirror very close to 
+the rear tube window increases the brightness of the output beam visibly.
+<p>
+Separation of the mirror to the discharge bore is a simple method of
+measuring pulse length:  Recall that directly after the pulse, nearly
+all of the molecules/atoms are in the lower energy level of the laser
+transition. Thus the just stopped discharge is the perfect absorber
+for the laser light left in the bore.  So, the reflected laser pulse
+from the mirror *must* have traveled down the entire bore *before*
+the discharge stops to have a visible effect in output.  The trick is
+to measure the distance d from the tube where your mirror just no longer 
+has any visible effect:
+light:
+<p>
+<pre>
+  t = ( L + 2 * d )/ c
+</pre>
+<p>
+L is the length of the tube and c is the speed of light.
+Then t is an estimate of the pulse length.
+<p>
+<b>Gases used in the Querfl&ouml;te laser</b>
+<p>
+<ul>
+<li>Nitrogen and air at 35 Torr produce nice 337 nm UV lasing. My silicon PIN 
+ photodiode tells me something about average 10 to 12 mW (16 mW on a good
+ day!) for nitrogen.
+<p>
+<li>Neon at 58 Torr puts out amazing green 540 nm laser from a salmon red 
+ discharge. Mrs. Diode tells me average 1 to 2 mW.  At 7 Torr, neon produces
+ the weaker 614 nm orange line, but this is hard to obtain. Usually it worked
+ only after long periods of green neon, when the bore was sufficient cleaned
+ by the discharge heat. Today (in 2003) the bore is 11 years old and
+ substantially degraded by nearly 50 hours on it. So the orange neon
+ no longer appears.  The yellow neon line at 594 nm I didn't catch even
+ in better days.
+<p>
+<li>Helium-nitrogen shows the ordinary UV line from N2. On one occasion I got 
+ something blue that went straight through an UV block filter from a few Torrs 
+ of N2 with a lot of (near 1 atm) He. Possibly the He-N<sub>2</sub><sup>+</sup>
+ laser at 428 nm? According to some authors, it is operated at 
+ atmospheric pressures in 100:1 mixtures. Due to lack of a pressure gauge for
+ that range, I couldn't reproduce it until now - left for future research. :)
+</ul>
+<p>
+<b>Summary of the Querfl&ouml;te laser</b>
+<p>
+<ul>
+<li>Level of difficulty: (rated L=low, M=medium, H=high)
+<p>
+ <ul>
+ <li>Overall - M.
+ <li>Glass work - none.
+ <li>Fabrication other than glass work - M to H.
+ <li>Vacuum / gas handling - L to M (depending on gas).
+ <li>Power supply - L.
+ <li>Additional apparatus - none.
+ <li>Risks (HV, toxic) - M.
+ </ul>
+<p>
+<li>Lasing wavelengths - 337 nm (nitrogen, air), 540 nm (neon), 614 nm (neon),
+ possibly also 428 nm (nitrogen ion), other gases not tested but seem
+ possible (rare gases, hydrogen - the latter requires fluoride windows).
+<p>
+<li>Resonator:
+<p>
+ <ul>
+ <li>Type/lasing medium - gases and gas mixtures of various pressures.
+ <li>Bore inner diameter - 3 mm.
+ <li>Total tube length - 120 cm, 98 cm of it bore.
+ <li>Tube material - Plexiglas (outer) / Pyrex (inner).
+ <li>Electrodes - 2 mm brass screws, 28 spark gap sided, 29 strip line sided 
+  (57 total).
+ <li>Gas fill - nitrogen 35 Torr; neon 58 Torr, various others possible.
+ <li>Cooling - air flow forced by external fan.
+ <li>Coupling - Fused silica window (pieces of silica microscope slide).
+ <li>Mirrors - none required, use of a piece of polished aluminum as rear 
+  mirror increases output.</li>
+ <li>Total resonator length - NA.
+ </ul>
+<p>
+<li>Vacuum system:
+<p>
+ <ul>
+ <li>Type - single stage rotary vacuum pump.
+ <li>Operation - flow through mode (except for He-N2).
+ </ul>
+<p>
+<li>Supplies needed - gases, purity depends on gas. Air/technical grade
+ nitrogen sufficient for UV laser, rare gases should be of higher purity
+ (lab grade).
+<p>
+<li>Excitation/pumping:
+<p>
+  <ul>
+  <li>Type - multiple Bl&uuml;mleins high voltage high current pulse
+   generators with common spark-gap-sided transmission line.
+  <li>PSU - AC line neon sign transformer with voltage doubler/rectifier, 
+   output 10 kV.
+  </ul>
+</ul>
+
+<h3><A NAME="cmgmcnl">Mark Csele's Neon Laser</A></h3>
+
+See <A HREF="http://www.technology.niagarac.on.ca/people/mcsele/lasers/LasersNeon.html">Mark Csele's Neutral Neon (I) Laser Page</A> for a description of
+experiments using a modified commercial HeNe laser tube refilled with neon
+to produce pulsed output at 614.3 nm.
+<p>
+<A NAME="cmgpwr"></A>
+<hr>
+<br>
+<li>Back to <A HREF="lasercmg.htm#cmgtoc">Home-Built Pulsed Multiple Gas (PMG)
+ Laser Sub-Table of Contents</A>.
+<h2>Power Supplies for the PMG Laser</h2>
+<h3><A NAME="cmgsim">Simple Exciter</A></h3>
+
+This is a basic charging circuit and thyratron trigger:
+<pre>
+
+                                     R1
+     HV (10 to 15kV) o--------------/\/\------------+-----------+------o TH-P
+                                    100K            |P         _|_ C1
+                 C2    R2                          --- o       --- .1uF,20kV
+  Trigger in o---||---/\/\---+------------------- - - - G      _|_
+  (+300 V       .1uF   1M    |                      ^           -
+   Pulse)       500V         /                     | |   TH1 5563
+                          R3 \       +----+--------+ |  Thyratron
+                        500K /       |    |        | |
+                             \    R4 /    |        F F
+                             |    1M \    |     (5VAC,10A)
+                             o  20kV /    |
+                         -300 VDC    \    | Tube+ +-------------+ Tube-
+                                    _|_   +-------|-|         |-|-----+
+                                     -            +-------------+    _|_
+                                                    Laser Tube        -
+</pre>
+A thyratron is the vacuum tube equivalent of an SCR - you can turn it on (with
+a positive pulse to its grid) but plate current must cease for it to switch
+off.
+<p>
+The 10 to 15 kV high voltage supply charges C1.  When a positive pulse is
+applied to the grid of the thyratron, it turns into a short circuit (sort of)
+discharging C1 into the laser tube.  (Note: I am suspect of the grid network
+part values.  As shown, the input pulse will be attenuated to 1/3 of its
+peak value (down to 100 V).  I do not know if this would succeed in triggering
+the thyratron.)
+<p>
+The source of the HV is not specified.  My choice would be a high frequency
+inverter or the HV guts of a deceased TV or monitor.  A suitable design can be
+found in the document:
+<A HREF="http://www.repairfaq.org/sam/samschem.htm">Various Schematics
+and Diagrams</A>.  The voltage for the thyratron filament can be easily
+provided by a modified microwave oven transformer.  See the section:
+<A HREF="laserclp.htm#clprew">Rewinding a Microwave Oven Transformer for use
+as a Low Voltage Filament Supply</A>.  CAUTION: Filament winding must use
+insulation good for more than 15 kV!  The thyratron and laser tube position
+could be swapped to eliminate the need for the HV insulated filament leads,
+but then both ends of the laser tube will be at a high potential.
+<p>
+There is one serious problem with the simple exciter: With no control of
+the shape of the pulse into the laser tube, the current will be more or
+less a decaying exponential.  This means that if the laser's output pulse
+intensity depends on tube current, it will also not be anywhere close to
+constant.  The cascade system remedies this deficiency.  (This appear
+to apply only to Ar, Kr, Xe - O2 could need the short pulse and high peak
+current of the simple exciter and thus may not benefit - or work at all - with
+the cascade system.)
+
+<h3><A NAME="cmgcas">Cascade System</A></h3>
+
+A scheme very similar to the simple exciter described above is only used
+to provide the initial ionization for the tube (e.g., to start it for each
+laser pulse).  A separate Pulse Forming Network (PFN) charged from a 1 to 3 kV
+supply then discharges through the laser tube.  This is similar to the
+approach used for many solid state lasers to trigger their flashlamps.
+<p>
+The cascade system consists of two parts.  The trigger supply is nearly
+identical to the simple exciter except for replacing the .1 uF capacitor
+(C1) with a .001 uF capacitor since very little energy is needed for the
+starting pulse.
+<p>
+The PFN itself consists of four 2 uF, 5 kV capacitors and three homemade
+inductors.  It is isolated from the trigger supply by a 5 kV diode capable of
+high peak currents.  (The paper specifies a mercury vapor rectifier which was
+state-of-the-art in 1971).  A microwave oven rectifier may be suitable today.
+<pre>
+
+                         R5         L1       L2       L3       15KV
+   1 to 3 kV source o---/\/\----+--^^^^--+--^^^^--+--^^^^--+----|>|---o TH-P
+                               _|_ C3   _|_ C4   _|_ C5   _|_ C6 
+                               --- 2uF  --- 2uF  --- 2uF  --- 2uF
+                               _|_      _|_      _|_      _|_
+                                -        -        -        -
+
+</PRE>
+It may be possible to connect the pulse forming network directly to the laser
+tube anode (Tube+) rather than to the plate of the thyratron as shown here and
+in the paper.  I believe this should work just as well without requiring the
+high current pulse to flow through the thyratron (or an alternate trigger
+device - see below).  WARNING: This DOES mean that the laser tube anode will
+have a lethal voltage on it as long as the PFN supply capacitors are charged
+rather than being blocked by the trigger device!
+<p>
+The only information on the inductors is that they are 400, 500, and 600
+turns of #18 AWG wire on a Plexiglas form (for L1, L2, and L3 respectively).
+There is no mention of the diameter, or the winding arrangement or packing. :(
+<p>
+For the 1 to 3 kV charging power supply, a simple Variac and small neon sign
+transformer (or for higher power, a microwave oven transformer - DANGER!).
+
+<pre>
+                                                    D1
+       H o--------+ T1               T2 +--------+--|>|--+---+-----o HV+
+                   )||               ||(         |       |   |
+            Variac )&lt;--------------+ ||(         |  D2   |   |
+            0-110V )||              )||(      +--|--|>|--+   /
+                5A )|| High Voltage )||(      |  |           \ R1
+                   )||  Transformer )|| +--+  |  |           / 5M
+               +--+       3kV,100mA )||(   |  |  |  D3       \ 5W
+               |                    )||(   |  |  +--|&lt;|--+   | 5kV
+       N o-----+-------------------+ ||(   |  |          |   |
+                                     ||(   |  |     D4   |   |
+                                     |  +--|--+-----|&lt;|--+---+-----o HV-
+                                     |     |
+       G o---------------------------+-----+
+                                          _|_
+                                         ////
+
+</PRE>
+</ul>
+
+<h3><A NAME="cmgthy">Typical Thyratron Specifications</A></h3>
+
+Should you be dying of curiosity, here are the specifications for the a
+suitable thyratron (which is also used in the RCA AVQ-10 weather radar):
+<p>
+(Thanks to: Chris Chagaris (pyro@grolen.com) for digging up these specs.)
+<p>
+<b>HY-6301 Ceramic-H2 Thyratron:</b>
+<ul>
+<li>Po (Peak power): 2.8 MW.
+<li>Epy (Peak forward anode voltage): 12 kV.
+<li>Ib (Peak anode current): 350 A.
+<li>Lb (DC average current) (duty cycle x peak anode current): 0.5 ADC.
+<li>Lp (mms value of plate current (squareroot of Lb x Ib): 6.5 AAC.
+<li>Pb (Plate breakdown factor) (Epy * Prr * Ib): 5.
+<li>Ef (Filament voltage): 5.8 to 6.5 VAC.
+<li>If (Filament current): (at Ef of 6.3 VAC): 5.5 to 8.5 AAC.
+<li>E/Ires (Reservoir E/I): Reservoir is internaly connected.
+<li>Tk: (Cathode, reservoir/conditioning time before application of HV):
+ 180 seconds minimum.
+<li>Egy: (Peak forward grid voltage): 150 V.
+<li>Zg: (Impedance of grid circuit): 1,500.
+<p>
+<li>Egy/Zg note: TM-27 trigger module is recommended for all thyratrons except
+ the 8414/HY-5, which requires the TM-29 trigger module.
+</ul>
+There you have it. :)
+
+<h3><A NAME="cmgalt">Alternatives to the Thyratron</A></h3>
+
+Although the thyratron is similar to an SCR, solid state technology hasn't
+yet produces a single SCR that can hold off 15 kV!
+<p>
+Multiple SCRS (like 15 or 20!) could theoretically be used but the SCR is also
+slower than a thyratron and might not be suitable for this reason alone.
+There are several potential alternatives to a thyratron (and I believe that
+this level of performance is not needed in any case - see below):
+<ul>
+<li>Triggered spark gap - This is basically similar to a xenon flashlamp in
+ operation: A trigger pulse on a third electrode in proximity to the device
+ initiates conduction between a pair of main electrodes.  Air can be used and
+ in fact, it may be possible to build a triggered spark gap for 15 kV with a
+ pair of electrodes about 1 inch apart inside a glass tube which has the
+ trigger wire wrapped around it.  The trigger pulse can be generated by a
+ conventional strobe type trigger circuit.
+<p>
+<li>Large (long) xenon tube - This behaves in a similar manner) but finding
+ one for 15 kV may be difficult and expensive.  Several in series could be
+ used but this gets to be excessively complex.
+<p>
+<li>Mechanical pulser - A rotating motor drive distributor similar to what is
+ used for the <A HREF="laserccb.htm#ccbtoc">Home-Built Copper Chloride (CuCl)
+ and Copper Bromide (CuBr) Laser</A>.
+</ul>
+The triggered spark gap using air would be my first choice for use as the
+trigger device for the cascade system.
+<p>
+The important thing is to give all those electrons in the PFN a place to go -
+it doesn't matter how you do it!
+
+<h3><A NAME="cmgops">Other Power Supply Options</A></h3>
+
+Yet another alternative would be use the trigger supply to ionize the gas in
+the laser tube directly by wrapping its output lead around the tube.  The only
+problem with this approach is that it would pretty much preclude the use of
+water cooling since there would be no way to get the triggering wire close
+enough to the bore - you can't put it inside a water filled tube!
+<p>
+However, by using a scheme similar to that of the pulse starters used for
+some helium-neon and most argon/krypton ion lasers, it should be possible to
+do away with the high voltage switch entirely.  See the sections starting
+with: <A HREF="laserhpd.htm#hpdhns4">Starting Circuits Using Pulse or Flyback
+Transformers</A> and <A HREF="laserapd.htm#apdipb">Igniters, Pulse, Bypass,
+High Current High Voltage Diodes</A> for HeNe and Ar/Kr lasers, respectively.
+
+<h3><A NAME="cmghvc">High Voltage Connections, Gas Lines, and Water
+ Cooling</A></h3>
+<p>
+Some areas of concern that remain unresolved include high voltage insulation
+with respect to gas supply lines and water cooling since the electrode
+assemblies as described in the paper also come in contact with either the
+gas or vacuum line, as well as the (optional) water jacket.
+<ul>
+<li>The electrode at one end of the tube is at ground potential and thus not a
+ problem.  However, the electrode at the other end of the tube  must be driven
+ from the 10 to 15 kV pulser (simple exciter or cascade system).  It also must
+ connect to either the gas supply or vacuum line.  Since it is normally
+ desirable to have an unrestricted path to the vacuum pump, this would also
+ provide a nice alternative path to ground for the HV pulses.  Therefore, it
+ would seem that the gas leak should be attached to the HV electrode.  One
+ approach is to use gas control valves made of entirely of plastic.  The HV
+ pulse will be effectively prevented from jumping to ground since the gas
+ supply on the other side of the gas leak valve is at a much higher pressure
+ and thus an effective insulator.  Just making the gas supply lines long
+ enough may be enough if the breakdown voltage is greater than than of the
+ tube's bore!
+<p>
+<li>If water cooling is used, the water jacket runs between the two
+ electrodes.  Tap water is usually a pretty decent conductor of electricity,
+ especially at 15 kV!  Unless a closed loop system using de-ionized water or
+ other coolant is provided, I don't know what effect this would have either
+ on performance or safety.  The other option is to provide an insulating
+ barrier between the water and the electrode - possibly a thin plastic ring
+ sealed with RTV Silicone.
+</ul>
+Just some things to consider!
+
+<p>
+<A NAME="cmgrpi"></A>
+<hr>
+<br>
+<li>Back to <A HREF="lasercmg.htm#cmgtoc">Home-Built Pulsed Multiple Gas (PMG)
+ Laser Sub-Table of Contents</A>.
+<h2>Related PMG Laser Information</h2>
+<h3><A NAME="cmgcpl">Commercial Pulsed Gas Lasers</A></h3>
+
+(From: Daniel Ames (dlames3@msn.com).)
+<p>
+I keep an old (1987) Laser Focus Laser Buyers Guide around.
+<p>
+It shows that the Florod Corporation actually did make Xenon lasers, I don't 
+know about present day manufacturers.  (These are NOT excimer lasers - those
+are in a different listing for Xenon Chloride and Xenon Fluoride lasers.)
+<p>
+The models listed all operated at wavelengths from 488 to 540 nm with a pulse
+length of 4.5 us, beam diameter of 3 mm, and divergence of 3 mR.  Models LMT
+and MFA could do 1 to 2 pulses per second; model MEL-30 up to 30 pps.
+<p>
+Krypton lasers were made by <A HREF="http://www.cohr.com/">Coherent, Inc.</A>
+(at least through 1987).  This one is apparently NOT the same as a conventional
+krypton ion CW laser but lases on one of the major krypton spectral lines:
+Their Model I100K3/468-ASE operated at a wavelength of 647.1 nm at a repetition
+rate of 7.6*10<sup>7</sup> pps, pulse energy of 8*10<sup>-9</sup> J, and
+pulse length of less than 120 picoseconds (!!).  However, note that this is
+NOT a pulsed tube but is mode-locked and cavity dumped resulting in a pulsed
+output.  The beam diameter was 2 mm (TEM00) with a divergence of .5 mR.
+<p>
+P.S. The laser I really like is the nitrous oxide laser which was made by
+<A HREF="http://www.lumonics.com/">Lumonics</A> (now GSI Group), model
+TEA-200-2.  "The laser that makes you HAPPY",  The more you use it (vented
+to the room ambient) the happier you get. :)
+
+<h3><A NAME="cmgcol">Comments on the Oxygen Laser</A></h3>
+
+(From: Daniel Ames (dlames3@msn.com).)
+<p>
+Just want to mention some characteristics of the Oxygen Laser.
+<p>
+Oxygen will only lase in a pulsed mode. Back in 1971, some Canadian researchers
+theorized that you could use ordinary air for the O2, but other researchers
+back then found that other gases, including argon, only degraded the output
+power.  Plus, air has a lot of moisture in it and other contaminates like
+smoke, smog, dust, and whatever else is floating around. You would need one
+heck of a special filter and drying system in order to keep from polluting the
+laser cavity and fogging up the inside of the Brewster windows or optics.
+And to make things worse, oxygen - especially hot ionized O2 - is very
+reactive with metal electrodes and even with quartz glass tubing.  Welders'
+grade oxygen would be the next purity grade up from just using plain vanilla
+favor air.  I am not sure how much moister and other contaminants would be in
+medical-grade O2.  Lab-grade O2 would of course be the ultimate choice but
+it's much more expensive than just air. :)
+<p>
+Also, you would need to be very careful about what type of vacuum pump oil
+you use especially if you are using a high RPM pump since: Oil + O2 + the
+compression stroke in the vacuum pump = possible BOOM. Oxygen itself is not
+explosive, but it sure makes anything that is flammable burn extremely well.
+I am not trying to discourage anyone from attempting to build an oxygen laser,
+just listing some of the basic concerns and cautions. It's definitely ~ a
+challenge. :)
+<p>
+(From: James Sweet (jamessweet@hotmail.com).)
+<p>
+That's definitely a very good point, I've seen heavy machined brass oxy
+welding regulators blown apart from small amounts of oil contamination
+in the high pressure side.
+<p>
+(From: Steve Roberts (osteven@akrobiz.com).)
+<p>
+Well I don't know how it is in your state but around here, Medical Grade O2 is
+four nines, i.e., 99.9999% purity and must be checked for CO2, CO, etc.  The
+goal is to build a low cost unit, and if you have to replace windows or cold
+cathodes made from aluminum stock, that's cheap for the power you can get from
+the unit.
+<p>
+The Canadian design for the oxygen laser is designed to have throw away,
+easily replaceable electrodes and Brewsters, because its a pumped, not a
+sealed laser, you can take some liberties on the tube design such as
+brewsters held on with O-rings.  It's not like a argon ion laser where
+everything has to be ultra-high vacuum and high temperature compatible.
+Electrodes, optics, etc., are demountable, so you can clean or replace them.
+The warning about O2 and pump oil is a good point, but you're bleeding so
+little O2 through a leak valve that I wouldn't be too worried.  You also have
+a leak valve on the pump side, otherwise the O2 regulator will just slam open
+to about 25 psi and bleed all your O2 right into the pump. This is true with
+any flowing gas system, both vacuum and source have to be throttled, otherwise
+you loose all your gas in a few minutes. Usually even a dying pump is good
+enough to suck the tube out fast. 
+<p>
+(From: Daniel.)
+<p>
+You brought up some good points about the method for gas regulation. :) I
+found that a very small diameter capillary tube about 1" long inserted into
+the 02 supply line and a needle valve downstream also works very well to
+prevent the low pressure regulator from slamming open.   I am using a 5 psi
+secondary regulator too. With this set up, I eliminate the possibility of over
+pressuring the laser tube and gas supply lines, oooops. :(  Plus, this
+way I can pull full vacuum during the initial pump down with my Welch 1402
+pump (slow RPM). I admit that there are advantages to both gas flow
+regulating methods. I would go with Steve's suggestion of using a metering valve
+on the roughing line (pump side) if one is using a high RPM oil filled vacuum
+pump or drying pump - (LN2 and molecular sieve).
+<p>
+(From: Sam.)
+<p>
+The concerns about the potentially explosive nature of mixtures containing high
+pressure oxygen are certainly valid.  However, given that these lasers run at
+a Torr or less, as noted, the only danger would be due to carelessness or a
+major leak or regulator/metering valve failure resulting in atmospheric
+pressure O2 entering the vacuum system.
+
+<h3><A NAME="cmgscv">Steve's Summary of Various Pulsed Lasers</A></h3>
+  
+I finally went to the secret hush hush regional depository library today and
+talked my way into getting access to all those 1970s IEEE JQE volumes, along
+with a cruddy photocopier. While my real mission was to gather data on copper
+bromide based CVLs, I picked up a few things on HeCd, He-Iodine, Mercury, etc. 
+<p>
+<ul>
+<li><b>Xenon Ion Laser:</b> Hoffman Toschek, et. al., "The Pulsed Xenon Ion
+ Laser: Covers the UV, visible, and near-IR with optics changes", IEEE
+ Journal of Quantum Electronics.
+<p>
+ 175 cm length, 10 mm discharge tube with a near hemispherical resonator of 
+ 195 cm length. Optics:  HR broad band mirror at 99.9% from 400 to 670 nm,
+ various OCs of 3 to 10% transmission. There are 21 available lines. They
+ documented 6 in detail.  This is with a 5 us, 10 kV pulse and a current 
+ density of 6*10<sup>3</sup> A/cm<sup>2</sup>.   Pulse repetition rate was
+ 10 Hz.  Optimum pressures varied from 5 to 20 mTorr.
+<p>
+ Lases at: 455.8 nm, 515.7 nm, 534.5 nm, 549.9 nm, 559.2 nm, 669.9 nm.  
+<p>
+<pre>
+                  Peak Power
+       Line    (when optimized)
+    ----------------------------
+     526.0 nm          110 W
+     535.2 nm          60  W
+     539.4 nm          120 W
+     595.5 nm          100 W
+</pre>
+ The 455.9 nm line fights with 539.4 nm.
+<p>
+<li><b>Xenon Ion Laser:</b> Fahey and Schearer, "A Xenon Ion Pumped Blue dye
+ laser", IEEE Journal of Quantum Electronics, vol. QE-14, no 4., April 1978.
+<p>
+ Abstract: A pulsed xenon ion laser with a output power of 5 kW at 364.5 nm
+ designed as a pump source for several blue dyes with conversion
+ efficiencies in excess of 20% with dye laser output pulses if 120 ns.
+<p>
+ Lases at 231.5 and 364.5 nm
+<p>
+ Construction: 190 cm discharge volume of 8 mm diameter Pyrex tubing with
+ quartz Brewster windows. Excited by a .3 uF capacitor charged to 12 kV with
+ spark gap triggering.  Pulse repetition rate 10 Hz, rate limited only by
+ power supply.  Used dielectric coated mirrors with a 99.99% HR and a 40%
+ transmissive OC.
+<p>
+ Output power at 364.5 nm was 5 kW with a pulse width of 200 ns FWHM.
+ Xe pressure of several microns.  They also describes a matching dye laser.
+ Refs: Vol QE-11, pp. 935-937 for the green version of the same unit.
+<p>
+<li><b>Oxygen Ion Laser:</b> Oxygen does it again! O II 664.0 nm laser line.
+<p>
+ Test conditions: 122 cm discharge tube with 6 mm inner diameter.  Mirror
+ separation 183 cm.  HR with 10 meter radius and reflectivity of
+ approximately 97.5% at 664.0 and 99% at 559.2 nm.  OC is flat with
+ reflectivity of 98.5% at 664.0 and 97% at 559.2 nm.  65 us pulses at 1
+ pulse per second.  Laser operation was observed over a range of 16 to 35
+ mTorr in oxygen 
+<p> 
+ At 2,300 V across the tube, saturated power of 2.3 W at 30 mTorr on a 350
+ A peak pulse.  Threshold of the O II 664.0 nm line was around 150 amps.
+ Threshold for the O III 559.2 line was 320 A with an output power of
+ 4 Watts. They also had a nitrogen line at 648.2 nm.
+<p>
+<li><b>Iodine Ion Laser:</b> Hattori, Kano, Tokutome and Collins, "CW Iodine
+ Ion Laser in a Positive Column Discharge", IEEE Journal of Quantum
+ Electronics, June 1974.
+<p>
+ It used a 3.5 mm diameter tube, 123 cm in length, with a hot cathode made
+ of tungsten.  It had a anode end side arm filled with molecular sieve material
+ to hold iodine, and a cathode end sieve without iodine.  The tube was in an
+ oven.  Controlling the temperature of the molecular sieves controlled the
+ iodine pressure, optimal sieve temperature at the anode end was 120 to 130'
+ &deg;C.  Cataphoresis causes the iodine to be pumped to the cathode, using
+ a hot cathode prevents the iodine from reacting with the cathode materials.
+<p>
+ The cavity used was a confocal cavity with two high reflectors coated for
+ 100% reflection from 450 to 700 nm. A Brewster plate inserted into the
+ cavity extracted about 10 mW of output.  Optimal conditions for a current
+ level of 400 mA were 4.7 Torr of helium and a sidearm temperature of 130
+ &deg;C for the source sieve.
+<p>
+ The material used for the sieve is not stated, although one can assume most
+ molecular sieves made for sorption pumps will work. 
+<p>
+ Lases at: 540.7 nm, 567.8 nm, 576.1 nm, 612.7 nm (highest gain), and 658.5 nm.
+<p>
+ The authors state that with proper end mirrors, this laser could be scaled
+ to 30 to 40 mW of power.
+</ul>
+
+<h3><A NAME="cmgbcv">Bruce's Comments on Various Pulsed Lasers</A></h3>
+
+(From: Bruce Tiemann (brucet@ctilidar.com).)
+<p>
+Just so you know where I'm coming from, I have built several N2 lasers at
+home for fun, and one of them would lase open air at 1 atm giving at best,
+about half the pulse energy, as perceived by eye, of the output when LN
+boil-off was used.
+<p>
+In the section: <A HREF="lasercmg.htm#cmgcmg3">Home-Built PMG Laser
+Description</A>, Steve Roberts (osteven@akrobiz.com) mentions that:
+<p>
+<blockquote>
+"there is also a line at around 545 nm (or should this be the green HeNe line
+ at 543.5 nm?) which will lase brightly in a transverse discharge similar to
+ that of the nitrogen laser and also lase in a long tube but not as strong."
+</blockquote>
+<p>
+I don't know about that wavelength, but I do understand, and you even admit
+it in the chapter on the nitrogen laser, that neon lases at 540.1 nm in a fast
+transverse discharge.  This might possibly be the line Steve is talking
+about.  According to my refs, this line lases with about 1/10 the power of
+the 337 nm nitrogen line in the same laser.
+<p>
+Additionally, I have built a PMG laser for a research project when in
+college, years ago.  It was supposed to lase the Xe 3+ lines that you talk
+about - but when there was an air leak, which was quite common before the
+plumbing was fixed, you could see the discharge change color, and a strong
+line at 409 nm - beautiful purple, would come up.  It was about as strong
+as the Xe lines.  It was due to nitrogen, atomic neutrals I think.
+<p>
+This laser was Pyrex, had a 3 to 4 mm bore, approximately 60 cm long, was
+pumped to several tens of microns pressure, and the discharge was a several
+100s of pF, charged to several kV, with a repetition rate of between 30
+and 100 Hz.  It had an indium cold cathode and a large foil-ring anode,
+and blue-green mirrors, 99.9% and about 98% R. (Sorry, this laser was
+nearly 20 years in the past.  I don't recall the exact details.)
+<p>
+It would also lase the Ar+ blue-green lines, at lower voltages and higher
+tube pressures.
+<p>
+Back to the 409 nm line, of course if it were an air leak, it was lasing
+79% N2, 20% O2, etc.  The output might have been more with pure nitrogen,
+but I never tried it because I was supposed to be working on the xenon
+laser.  However, there was a bottle of argon and I did try that.  BTW this
+was in Bill Bridges's lab at Caltech, where I went.  (He invented the argon
+ion laser and he probably suggested that I try Ar just for fun.)
+<p>
+This laser had silica Brewster windows and also lased several UV lines 200 to
+400 nm with Xe filling at 50-70 microns pressure.
+<p>
+I have been an electronics and laser hobbyist for years, a ham (N6URH) and so
+forth. I have been planning for years to build a monster TE laser,
+primarily meant for 337 nm nitrogen, and it turns out there there are
+dozens if not hundreds of lines that such a beast can lase.  Not only
+Ne at 540.1 nm, but also hydrogen at 160 nm in the VUV, nitrogen
+molecular ion at 428 nm, some other vis. lines in Ne, and lots and
+lots of others.  Xe is supposed to give a very energetic ~3.3 (3.9?)
+micron output in such a device, and you can lase nitrous oxide at 11
+microns, and so forth.  There are also the excimer combinations, XeCl,
+etc, and some unusual ones (XeO) that will also go.  I saved a bunch of
+papers on all these lines, and a summary of them may be of interest to
+you.  But of all of them, 337 nm nitrogen is nice because the gas is
+benign and the wavelength satisfactorily useful. I have also pumped
+home-brew dye lasers with my home-brew nitrogen lasers, including one
+that had a diffraction grating mounted on a protractor as a cavity
+mirror.  You could literally rotate the grating around, and change the
+color, and then read off the angle of the grating from the protractor,
+and calculate the implied operating wavelength.
+<p>
+Fun fun fun. :)
+
+<h3><A NAME="cmgrfl">Mike's Notes on Refilling a Pulsed Ion Laser</A></h3>
+
+While the following was written in response to a question about a specific
+xenon ion laser, it should apply in general to a variety of other lasers.
+<p>
+(From: Mike Poulton (mpoulton@mtptech.com).)
+<p>
+I have no idea what the proper xenon pressure is, but I can tell you 
+that it probably can't be mixed with any other gases.  Since helium has 
+a much higher ionization energy than xenon, it might be okay, but don't 
+count on it.  It's probably better to go with straight xenon.  A neon 
+sign shop can probably do the filling work for you.  You can buy 1 liter 
+glass vessels of xenon at 1 atm from some neon sign suppliers -- check 
+around on the net.  I think they are about a hundred bucks.
+<p>
+Look for a local sign shop with only one location.  Shops with multiple 
+locations do all their pumping at one, and are generally too busy to be 
+bothered, even for money.  Small shops will often do this sort of thing, 
+although it WILL cost you.  They will have to attach your xenon flask to 
+the vacuum manifold.  If they have an extra spot on the manifold, which 
+many places do, then it's no big deal.  If not, then it requires 
+removing one of the flasks already attached (neon or argon), which 
+wastes the rest of it ($14), and keeps them from using that gas as long 
+as your xenon flask is attached.  Your xenon flask cannot be removed 
+without wasting the rest of it.  They will probably have no use for 
+xenon, and will want it off the manifold as soon as possible.  That
+means you get one try -- you can't go back the next week and do it
+again without buying another liter of xenon.
+<p>
+While the tube is under high vacuum (1 micron or less), it should be 
+heated to 250 C or more to bake out impurities.  The neon guy will want 
+to bombard it -- that would probably destroy the electrodes.  Instead, 
+use a hand torch very carefully and slowly.  The tube probably ought to 
+be partially refilled (to a few mm Hg) with xenon and then re-evacuated 
+while hot to remove all impurities possible.
+<p>
+Now here's the cool part:  Slowly fill the tube with xenon with the 
+power supply attached an operating, and the mirrors fairly well aligned 
+(using a laser).  It sounds like a high-gain medium (pulsed high power 
+emission) so getting some beam shouldn't be too hard.  You will probably 
+want the capacitor to be at 4 kV or more, and have the trigger firing a 
+couple times a second.  Mess with the pressure until you get the best 
+discharge or (if you're real lucky) the best beam.
+<p>
+If you want to get tricky, try refilling the gas ballasts with xenon at a 
+higher pressure than the tube.  Open the ballast valves, fill to fairly 
+high pressure, close the valves, and pump down to optimum pressure.  
+Note that you may have one gas ballast and one vacuum ballast to allow 
+for pressure adjustments either way, in which case the vacuum ballast 
+needs to be filled (emptied?) and sealed before filling the tube.  Play 
+around.  You have no incentive to save xenon gas, since that remaining 
+in the flask will be wasted when it is removed from the manifold.
+<p>
+Have I ever done this before?  Of course not.  I've never even seen a 
+xenon laser.  However, I do know a good bit about gas discharge tubes 
+and processing, and the neon industry.  This is an ad-hoc process 
+omitting many important steps and details necessary for optimum tube 
+life.  It's experimental, untried, and your mileage may vary.  Good luck.
+<p>
+<hr>
+<br>
+<li>Back to <A HREF="laserfaq.htm#faqtoc">Sam's Laser FAQ Table of
+ Contents</A>.
+<li>Back to <A HREF="lasercmg.htm#cmgtoc">Home-Built Pulsed Multiple Gas (PMG)
+ Laser Sub-Table of Contents</A>.
+<li>Forward to <A HREF="lasercps.htm#cpstoc">Home-Built Pulsed Solid State
+ (PSS) Laser</A>.
+<p>
+<hr>
+<b><center>Sam's Laser FAQ, <A HREF="copyright.htm">Copyright &copy<A> 1994-2009,
+ Samuel M. Goldwasser, All Rights Reserved.<br>
+ I may be contacted via the
+ <A HREF="emaillnk.htm">Sci.Electronics.Repair FAQ
+ Email Links Page</A>.</center></b>
+<hr>
+<p>
+</BODY>
+</HTML>

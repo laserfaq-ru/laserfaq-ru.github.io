@@ -1,0 +1,2106 @@
+<HTML>
+<HEAD>
+<TITLE>Sam's Laser FAQ - Home-Built Dye Laser</TITLE>
+</HEAD>
+<BODY>
+<A NAME="cdytoc"></A>
+<p>
+<hr>
+<b><center>Sam's Laser FAQ, <A HREF="copyright.htm">Copyright &copy<A> 1994-2010,
+ Samuel M. Goldwasser, All Rights Reserved.<br>
+ I may be contacted via the
+ <A HREF="emaillnk.htm">Sci.Electronics.Repair FAQ
+ Email Links Page</A>.</center></b>
+<hr>
+<p>
+<li>Back to <A HREF="laserfaq.htm#faqtoc">Sam's Laser FAQ Table of
+ Contents</A>.
+<h1>Home-Built Dye Laser</h1>
+<h2>Sub-Table of Contents</h2>
+<ul>
+<li><A HREF="lasercdy.htm#cdyhbl">Basic Home-Built Dye Laser Information</A>
+ <ul>
+ <li><A HREF="lasercdy.htm#cdycdy0">Introduction to Home-Built Dye Laser</A>
+ <li><A HREF="lasercdy.htm#cdysaf">Home-Built Dye Laser Safety</A>
+ <li><A HREF="lasercdy.htm#cdycdy1">Dye Laser Construction References and Links</A>
+ <li><A HREF="lasercdy.htm#cdycdy2">Some Photos of Home-Built Dye Lasers</A>
+ <li><A HREF="lasercdy.htm#cdycdy3">Home-Built Dye Laser Description</A>
+ <li><A HREF="lasercdy.htm#cdyguide">Guidelines to Assure a Successful Home-Built Dye Laser</A>
+ <li><A HREF="lasercdy.htm#cdycdy4">Where to Obtain Dye Laser Dyes</A>
+ <li><A HREF="lasercdy.htm#cdyscps">Anthony's Comments on the Home-Built Dye Laser and Parts Sources</A>
+ </ul>
+<p>
+<li><A HREF="lasercdy.htm#cdyoex">Other Examples of Home-Built Dye Lasers</A>
+ <ul>
+ <li><A HREF="lasercdy.htm#cdyjdl">Jon's Dye Laser and General Comments</A> 
+ <li><A HREF="lasercdy.htm#cdyjk1">Jarrod Kinsey's Dye Laser</A>
+ </ul>
+<p>
+<li><A HREF="lasercdy.htm#cdyaio">Additional Information on Home-Built Dye Lasers</A>
+ <ul>
+ <li><A HREF="lasercdy.htm#cdycdy5">More on the Air Flashlamp</A>
+ <li><A HREF="lasercdy.htm#cdyuxf">Using a Xenon Flashlamp</A>
+ <li><A HREF="lasercdy.htm#cdycdy6">Discussion on Dye Laser Construction</A>
+ <li><A HREF="lasercdy.htm#cdycdy7">Dave's Comments and Improvements on Dye Laser</A>
+ <li><A HREF="lasercdy.htm#cdycdld">Comments on Dye Laser Dye Concentration</A>
+ <li><A HREF="lasercdy.htm#cdycdy9">Incandescent Lamps or Other Light Sources to Pump Dye Laser?</A>
+ <li><A HREF="lasercdy.htm#cdycdya">Mercury Vapor Lamps to Pump Dye Laser?</A>
+ <li><A HREF="lasercdy.htm#cdycdyb">Diode Laser to Pump Dye Laser</A>
+ <li><A HREF="lasercdy.htm#cdycdyc">Coaxial Dye Laser</A>
+ <li><A HREF="lasercdy.htm#cdycdyd">Operation Manual for a Real Dye Laser</A>
+ <li><A HREF="lasercdy.htm#cdyjcdli">Jon's Comments on Some Dye Laser Issues</A>
+ <li><A HREF="lasercdy.htm#cdywldl">White Light Dye Laser?</A>
+ </ul>
+<p>
+<li><A HREF="lasercdy.htm#cdydlt">Dye Laser Tid-Bits</A>
+ <ul>
+ <li><A HREF="lasercdy.htm#cdycdye">The Jello Laser Legend</A>
+ <li><A HREF="lasercdy.htm#cdygind">Whiskey Dye Laser?</A>
+ <li><A HREF="lasercdy.htm#cdyprpx">Perspex as a Dye Laser Medium?</A>
+ </ul>
+</ul>
+<p>
+<A NAME="cdyhbl"></A>
+<hr>
+<br>
+<li>Back to <A HREF="lasercdy.htm#cdytoc">Home-Built Dye Laser
+ Sub-Table of Contents</A>.
+<h2>Basic Home-Built Dye Laser Information</h2>
+<h3><A NAME="cdycdy0">Introduction to Home-Built Dye Laser</A></h3>
+
+Dye lasers are unique in that they are a class of lasers whose lasing medium
+is a liquid.  Depending on the particular dye used, output can be at a wide
+range of wavelengths spanning the visible spectrum and beyond.
+<p>
+Commercial dye lasers are often pumped by other lasers.  For example,
+Rhodamine-B, a common dye used in dye lasers for the red region, is often
+pumped with an argon ion laser at 514 nm for CW operation or a doubled YAG
+laser at 532 nm when pulsed.  A suitable flashlamp can also be used as a pump
+source (but not just any old electronic flash - it needs to be very intense
+with a fast rise-time).  As it turns out, this can easily be home-made.
+<p>
+In fact, the overall construction of a flashlamp pumped dye laser is quite
+simple and straightforward, at least compared to nearly all of the other lasers
+discussed in this chapter.  At most, a minimal vacuum system is required (for
+the home-made flashlamp) and there is absolutely no special glass work or need
+for exotic gases (though finding the highly pure dyes may require a little
+finger-work).
+<p>
+The hazards are also relatively moderate - some of the organic dye materials
+are toxic and a high voltage power supply (low current but a BIG energy
+storage capacitor) is needed to fire the flashlamp.
+
+<h3><A NAME="cdysaf">Home-Built Dye Laser Safety</A></h3>
+
+There are three areas of safety considerations for the home-built HeHg laser
+(and other similar lasers, for that matter):
+<ul>
+<li><b>Laser output:</b> The home-built Dye laser may be capable of producing
+ a pulses of coherent light with enough energy to be a hazard to vision.
+ Since there doesn't seem to be any hard information on the actual power or
+ energy obtainable with this or similar home-built laser designs, it is
+ important to take precautions assuming a higher power until determined
+ otherwise.
+<p>
+ Avoid eye contact with the direct or reflected beam.
+<p>
+<li><b>Electrical:</b> The power supplies can be lethal.  Neon sign transformer
+ based power supplies have enough voltage and current to stop a heart,  The
+ charged energy storage capacitor for the flashlamp can be truly deadly.  Even
+ if you aren't killed, the shock may startle you into doing something you might
+ regret.  Make sure you read and follow the <A HREF="safety.htm">Safety
+ Guidelines for High Voltage and/or Line Powered Equipment</A>.  Insulate all
+ connections and install barriers to prevent contact with the high voltage.
+<p>
+<li><b>Chemicals:</b> Many laser dyes are toxic.  Their solvents may be both
+ toxic and flammable.  Take appropriate precautions in use and dispose of these
+ hazardous materials in a responsible way.
+</ul> 
+
+Provide proper warning signs for both the laser radiation and high voltage.
+Keep pets and small children out of the area and make sure everyone present is
+instructed as to the dangers.  The use of proper laser safety goggles for the
+specific wavelength(s) of your laser are highly recommended.
+<p>
+For more information, see the chapter: <A HREF="lasersaf.htm#saftoc">Laser
+Safety</A>.  Sample safety labels which can be edited for this laser can be
+found in the section: <A HREF="lasersaf.htm#saflslbl">Laser Safety Labels
+and Signs</A>.
+
+<h3><A NAME="cdycdy1">Dye Laser Construction References and Links</A></h3>
+
+In addition to the article in: "Light and its Uses", there is also a fine
+article on the operation of organic dye lasers in the February 1969 issue of
+Scientific American.  (This also happens to be the same issue that features
+plans for the home-built argon ion laser.).  The following should also be
+of interest:
+<p>
+<ul>
+<li><A
+ HREF="http://www.technology.niagarac.on.ca/people/mcsele/lasers/">Mark
+  Csele's Home-Built Lasers Page</A> includes information on N2, dye, and
+  other lasers he has constructed as well as many references and links. 
+<p>
+<li><A HREF="http://www.pulslaser.de/">Puls Laser (German)</A>
+ has virtually all of the home-built laser types including
+ CO2, N2 (including TEA), ion, ruby, dye, and some that aren't covered here.
+ It includes descriptions, photos, references, and other
+ information.  An English translation would be most welcome as Altavista
+ does less than a stellar job and doesn't follow the frame links.
+<p>
+<li><A HREF="http://www.jossresearch.org/lasers/dye/ebayhead.html">A
+ Joss Research Institute Flashlamp-Pumped Organic Dye Laser</A> has a
+ description and photos of dye laser cobbled together from eBay parts.
+ Maybe not totally home-built but interesting.  Also:
+ <A HREF="http://www.jossresearch.org/tjiirrs/">Jon's Interim Research
+ Reports</A> which include several relevant to nitrogen lasers and pumping
+ dye lasers with nitrogen lasers including his latest:
+ <A HREF="http://www.jossresearch.org/tjiirrs/010b.html">Tuning Fluorescent
+ Marker Dyes Under Nitrogen Laser Pumping</A>.
+<p>
+<li><A HREF="http://www.fineartradiography.com/hobbies/lasers/dye/">Leslie's
+ Wright's Dye Laser Page</A> includes a description and many diagrams and
+ photos of his home-built nitrogen laser pumped dye Laser.
+<p>
+<li><A HREF=
+"http://www.fineartradiography.com/hobbies/lasers/dye/cuvette.html">Leslie
+ Wright's Home-Built Cuvettes for Dye Lasers Page</A> shows some approaches
+ to construction using common materials.  These will come in handy for an
+ N2 laser pumped dye laser.
+<p>
+<li><A HREF="http://www.jarrodkinsey.com/pages/laserpower.html">Jarrod
+ Kinsey's My Power Supplies and Nitrogen Lasers Page</A> has various
+ nitrogen and dye laser projects with descriptions and many photos.
+<p>
+<li><A HREF="http://www.amazing1.com/">Information Unlimited</A> has
+ plans for a tunable dye laser which is nearly identical to the one in
+ Scientific American.  (The major difference I saw is that the air flashlamp
+ is pulse triggered rather than firing when the pressure is reduced by
+ allowing it to pump down).  However, the somewhat more detailed instructions
+ in these plans (compared to the SciAm article), the availability of the
+ electronic parts (from Information Unlimited), and the list of suggested
+ companies to purchase the mechanical parts and laser dyes, may make them
+ beneficial to someone who isn't enthusiastic about scrounging, designing, or
+ improvising, and would rather take more of a cookbook approach to home-built
+ lasers.  <A HREF="http://www.mwklasers.com/">MWK Laser Products</A> has plans
+ for the dye laser as well which I assume are similar but don't know for sure.
+<p>
+<li><A HREF="http://www.exciton.com/">Exciton</A>, a major manufacturer of
+ laser dyes has a very nice four-color laser wavelength chart,
+ an essential reference for your lab or office wall.  They used to offer it
+ for free, though I applied twice and never received anything.  The
+ chart can be displayed but can't be saved as a .gif or .jpg.  I don't know
+ if they will sell it or give it away.
+<p>
+<li>Also see the section: <A HREF="lasercon.htm#concit5">General Resources
+ for Amateur Laser Construction</A>.
+</ul>
+
+<h3><A NAME="cdycdy2">Some Photos of Home-Built Dye Lasers</A></h3>
+
+(From: Chris Chagaris (pyro@grolen.com).)
+<ul>
+<li><A HREF="ccdyels.jpg">Overall View of Dye Laser</A>
+<li><A HREF="ccdyecu.jpg">Closeup of Dye Laser Chamber</A>
+</ul>
+
+<h3><A NAME="cdycdy3">Home-Built Dye Laser Description</A></h3>
+
+The dye laser can be constructed without any requiring any glass working, and
+only a minimal vacuum capability (none if you use a commercial xenon flashlamp
+instead of the home-built variety).  However, the power supply can be lethal
+and of course, liquids and HV do not mix!
+<p>
+Refer to <A HREF="dye1asm.gif">Typical Home-Built Dye Laser Assembly</A> for
+a simplified diagram of the overall glasswork and power supply electronics.
+<ul>
+<li>Level of difficulty (rated L=low, M=medium, H=high):
+<p>
+<ul>
+  <li>Overall - M.
+  <li>Glass work - None required but desirable if facilities are available.
+  <li>Fabrication - L.
+  <li>Vacuum/gas handling - L or none.
+  <li>Power supply - M.
+  <li>Additional apparatus - L.
+  <li>Risks (high voltage, toxic chemicals, etc.) - M.
+</ul>
+<p>
+<li>Lasing wavelength(s) - Depends on laser dye selected.  Many wavelengths are
+  possible spanning the visible spectrum and beyond.
+<p>
+<li>Resonator:
+<p>
+<ul>
+  <li>Type/lasing medium - Solution of Rhodamine-6G (or other organic dye) in
+    alcohol.
+<p>
+  <li>Bore diameter - 5 mm; bore length - 80 mm.
+<p>
+  <li>Total tube length - 82 mm.
+<p>
+  <li>Tube material - Fused quartz.
+<p>
+  <li>Electrodes (for flashlamp) - Stainless steel rods.
+<p>
+  <li>Gas fill (for flashlamp) - Low pressure air.
+<p>
+  <li>Cooling - Flowing dye solution.  Either a siphon or small pump can be
+    used.
+<p>
+  <li>Coupling - Quartz windows perpendicular to tube axis (tube end caps).
+<p>
+  <li>Mirrors - Aluminum coated, planar.  HR: Fully reflective, actually 92%
+    reflected, 8 percent absorbed); OC: 74% reflective, 18% transmitted, 8%
+    absorbed.  Dielectric mirrors would be more efficient but would be narrow
+    band requiring different mirrors for each substantial change in the color
+    of the dye/light.  Three screw <A HREF="mmount1.gif">Adjustable Mirror
+    Mount</A> at each end.  Alignment technique not stated - can use any of the
+    techniques from this document or "Light and its Uses".
+<p>
+  <li>Total resonator length (mirror to mirror) - 120 mm.
+</ul>
+<p>
+<li>Vacuum system (for home-made flashlamp):
+<p>
+<ul>
+  <li>Requirements - Low to medium.  Must be able to pump down to a few Torr.
+    A salvaged refrigeration compressor should be adequate.  See note below for
+    actual calculations of required vacuum.  (None if a commercial xenon flash
+    lamp is substituted for the home-made variety.)
+</ul>
+<p>
+<li>Special chemicals/supplies required - Various organic dyes: Rhodamine-6G
+  (yellowish-green to red), 7-diethylamino-4-methylcoumarin (Courmarin 47?,
+  blue), sodium flourescine (Fluorescein 27?, green).  Methonal and/or ethonal
+  (depends on the dye) for the solvent.  CAUTION: Some laser dyes are
+  poisonous.  See the section: <A HREF="laserioi.htm#ioicav1">Dye Laser Dyes
+  and Peak Emission Wavelengths</A> for a list of commercially available laser
+  dyes.
+<p>
+<li>Excitation/Pumping:
+<p>
+<ul>
+  <li>Type - Optical using home-made flashlamp.
+<p>
+  <li>Power supply (for flashlamp) - Pulsed discharge from 15 uF, 5 kV low
+    inductance low ESR energy storage capacitor mounted in close proximity to
+    the flashlamp.  Circuit shown is a simple
+    charger using a high voltage transformer and HV bridge rectifier.  The
+    flashlamp is fired by pumping the air from it until the capacitor
+    discharges (about 60 Torr according to the article but see note, below).
+</ul>
+<PRE>
+
+                                               D1        R1
+     H o-------+ T1                T2 +-----+--|>|--+---/\/\---+----+--o HV+
+                )||                ||(      |       |  20K,2W  |    |
+         Variac )&lt;---------------+ ||(      |  D2   |          |    |
+         0-115V )||               )||(   +--|--|>|--+          |    |
+             1A )||  Oscilloscope )||(   |  |              C1 _|_   / R2
+                )||   Transformer )||(   |  |            15uF ---   \ 2.5M
+            +--+      2,400V,10mA )||(   |  |  D3         5kV  |    / 5W
+            |                     )||(   |  +--|<|--+          |    \ 5kV
+     N o----+--------------------+ ||(   |          |          |    |
+                                   ||(   |     D4   |          |    |
+                                   |  +--+-----|<|--+--+-------+----+--o HV-
+                                   |                   |
+     G o---------------------------+-------------------+
+                                                      _|_
+                                                     ////
+
+</PRE>
+<p>
+ Basically what is needed is a source of several thousand volts at low current
+ to charge the energy storage capacitor.  There are many ways to get this.
+ An oscilloscope high voltage transformer would probably be quite difficult
+ to locate nowadays.  Alternatives include: neon sign or oil burner ignition
+ transformer, high frequency high voltage inverter, lower voltage transformer
+ or inverter with voltage multiplier, and HeNe laser power supply.
+<p>
+ An optional pulse generator can be used with an external trigger electrode
+ as well with the flashlamp running a a higher pressure.
+</ul>
+<p>
+To totally eliminate ANY need for a vacuum system, a conventional xenon flash
+lamp and power supply can be substituted for the home-made variety.  See the
+document: <A HREF="http://www.repairfaq.org/sam/strbfaq.htm">Notes on
+the Troubleshooting and Repair of Electronic Flash Units and Strobe Lights and
+Design Guidelines, Useful Circuits, and Schematics</A>.  However, simply
+substituting a xenon flashlamp for the air flashlamp without modifying the
+circuit will likely not work (at least, not more than once!) and common
+(relatively) low voltage photographic type strobes may be inadequate in terms
+of peak intensity to efficiently pump the dye lasing medium.
+<p>
+(From: Chris Chagaris (pyro@grolen.com).)
+<p>
+Using a 15 uF, 5 kV capacitor without any inductor would likely cause
+catastrophic failure at the first attempt to fire the xenon flashlamp.  An
+inductor would save the lamp but cause a great lengthening of the pulse
+width which would not produce the needed flux density to excite the dye
+to laser threshold.  There are methods sometimes used to enable one to
+utilize xenon flashlamps but these employ very high overvoltages (typically
+.3 uF at 20 kV for this size lamp) and triggered spark gaps for firing.
+This will usually keep the risetime of the lamp fast enough for success.
+
+
+<h3><A NAME="cdyguide">Guidelines to Assure a Successful Home-Built Dye
+ Laser</A></h3>
+
+These set of guidelines should be followed during construction of your first
+home-built dye laser.  The factors below will greatly influence the
+ultimate output power, beam quality, and whether it produces any coherent
+light at all!  Once you have a working laser, feel free to make
+modifications - one at a time.
+
+<ul>
+<li>Pump the dye laser with either the air flashlamp or your nitrogen laser
+ (you have already built that, correct?).  Disposable camera flash units
+ or even large studio strobes <b>won't</b> work due to their excessively
+ long flash duration.  You can experiment with alternative pump sources once
+ you have a working laser.
+<p>
+<li>Don't omit the dye circulating pump.  Without fresh dye solution, the
+ number of shots before lasing dies out will be quite limited.
+<p>
+<li>Make sure you read, understand, and follow <b>ALL</b> the safety
+ guidelines found in the section: <A HREF="lasercdy.htm#cdysaf">Home-Built
+ Dye Laser Safety</A>.
+</ul>
+
+<h3><A NAME="cdycdy4">Where to Obtain Dye Laser Dyes</A></h3>
+
+Although you are welcome to try virtually any colored compound in your laser
+chamber to see if it will lase, sticking with what is known to work (at least
+in the beginning) is probably the wisest choice.  In that regard, the
+following advice probably applies in general to dyes other than the one
+mentioned:
+<p>
+(From: Chris Chagaris (pyro@grolen.com).)
+<p>
+Fluorescein (Uranin) or more specifically disodium fluorescein can be
+purchased from a number of chemical houses. If you plan to use this compound
+in a dye laser, it must be of a very pure grade. If this is the case, I would
+suggest that you purchase it from one of the companies who specialize in
+laser dyes such as <A HREF="http://www.lambdaphysik.com/">Lambda Physik</A>
+at 1-800-EXCIMER, or <A HREf="http://www.exciton.com/">Exciton</A> at
+1-937-252-2989. This is one of the least expensive laser dyes that can be
+purchased and has good efficiency in the green wavelengths.
+<p>
+Also see the section: <A HREF="laserlps.htm#lpslom">Laser and Optics
+Manufacturers and Suppliers</A>.
+<p>
+(From: Jon Singer, of the Joss Research Institute.)
+<p>
+Conditions being what they are these days, an individual
+can't generally buy things from a chemical company. While
+it is possible to find Fluorescein on eBay (and also some
+scintillators -- my first UV dye laser was PPO that I got
+on eBay, pumped with a nitrogen laser), you can't just go
+there and expect to find a gram of laser-grade R6G.
+<p>
+I've been looking into reasonable things for DIY laser
+folks, and so far I have two cheap and easy candidates,
+which I describe on
+<A HREF="http://www.jossresearch.org/tjiirrs/010.html">Inexpensive Laser
+Dyes for the Do-It-Yourselfer</A>.
+In case you want a quick precis, they are:
+<p>
+<ol>
+<li>"Highlight" fluorescent markers. I've lased 2 or 3 of
+ the available colors. The Sharpie "Accent" yellow-barrel
+ marker (makes a yellow-green highlight) is probably the
+ best I've found so far.
+<p>
+<li>Several of the brighteners used in laundry detergents
+  are good blue or indigo laser dyes. It is possible to use
+  some liquid laundry detergents directly. I lased All
+  &ldquo;Free Clear&rdquo; in 2000, using a low-pressure
+  nitrogen laser; and Jarrod Kinsey has recently been
+  getting very nice results with Arm and Hammer 2x liquid
+  concentrate, pumping it with a TEA nitrogen laser.
+  <p>
+  If you try this, remember to use detergents that are
+  listed as &ldquo;No Dyes, No Perfumes&rdquo;, and are as
+  close to water-clear as possible: murky blue gunk is
+  obviously not going to work. A few of the better organic
+  detergents actually <i>are</i> free of dyes, including
+  optical brighteners, so it&rsquo;s a good idea to test
+  for fluorescence before you buy, or look for the word
+  &ldquo;brightener&rdquo; in the ingredient list. OTOH,
+  most or all of the major brands, at least the ones that
+  are transparent, appear to be good candidates.
+  <p>
+  You can, alternatively, make an alcohol extract of a dry
+  powder detergent (I have gotten my best results with Arm
+  and Hammer). This works extremely well, provided you can
+  filter or centrifuge the extract to remove the remaining
+  dusty bits of detergent. I believe that this method works
+  best with 91% pure (or higher) isopropyl alcohol or 95%
+  ethanol, but it may be possible to do it with 70% isopropyl
+  rubbing alcohol.
+  <p>
+   Far and away, however, the best thing I've found along
+   these lines so far is
+   <A HREF="http://www.dharmatrading.com/html/eng/625095-AA.shtml">&ldquo;Optic
+   Whitener&rdquo;, from Dharma Trading Co.</a>
+   A <i>very</i> small amount of this, diluted with isopropyl
+   alcohol (70% rubbing alcohol from the drugstore seems to be
+   just about ideal) or ethanol, will fill a dye cuvette that
+   is pumped by a nitrogen laser; and the bottle contains 8
+   ounces, so it will last several lifetimes. I have also lased
+   this stuff in the "Minimalist" flashlamp-pumped dye laser
+   that I mention below, which stores only a dozen joules in
+   its capacitor bank.
+</ol>
+<p>
+I mention all of this because Jarrod, in an email message,
+pointed out that these things should be really well known,
+because people need the info, but they aren't &#151; they
+seem to be hiding under everybody's radar. I thought
+it would be a good idea to alert you, because you are a
+major hub of information for DIY people.
+<p>
+I should note, btw, that I have been getting 99+% iso at a
+local electronics supply house. It is somewhat expensive,
+but it works extremely well.
+<p>
+Also see the section:
+<A HREF="lasercdy.htm#cdyjk1">Jarrod Kinsey's Dye Laser</A>.
+
+<h3><A NAME="cdyscps">Anthony's Comments on the Home-Built Dye Laser and Parts
+ Sources</A></h3>
+
+(From: Anthony Paolini (apaolini@cros.net).)
+<p>
+The SciAm/Lankard dye laser design is indeed a worthwhile project for a
+hobbyist. Its specifications, optical requirements, and adjustments are far
+less demanding than most of the other SciAm lasers. Plus, the design lends
+itself to experimentation with a variety of modifications.  The output is
+extremely powerful.  (While adjusting mine for peak power, it generated a beam
+of sufficient intensity to vaporize the aluminum coating on my less than
+perfect cavity mirrors.)  Most of the parts are available from North Country
+Scientific, RFD1, Plymouth, NH 03264.  (I recommend all their parts EXCEPT
+the mirrors.)  The most costly part will be the capacitor.  Condenser Product
+in Florida can make one.  Do not go over 15 to 20 uF or flashlamps will
+shatter.  Also, do not substitute anything else for the quartz parts.  I also
+recommend the electronic trigger circuit.  Use only ultra pure solvents
+(i.e., distilled in glass methanol).  Dyes are available from Exciton Corp in
+Dayton, OH.  Also, read the sections describing the modifications to this
+laser that other people have made.  When I get back to that project I plan
+to add a water jacket which should improve beam quality by reducing thermal
+gradients.
+<p>
+<A NAME="cdyoex"></A>
+<hr>
+<br>
+<li>Back to <A HREF="lasercdy.htm#cdytoc">Home-Built Dye Laser
+ Sub-Table of Contents</A>.
+<h2>Other Examples of Home-Built Dye Lasers</h2>
+<h3><A NAME="cdyjdl">Jon's Dye Laser and General Comments</A></h3>
+
+(From: Jon Singer, of the Joss Research Institute.)
+<p>
+An LC inversion circuit, frequently (and incorrectly) called a
+Blumlein, consists of a pair of capacitors and a fast switch,
+connected essentially as follows:
+
+<PRE>
+
+                  R1                L1
+          - o----/\/\------+------^^^^^^------+--------+
+                           |                  |        |
+                           +------->  <-------+        |
+            HV         C1 _|_   Flashlamp    _|_ C2    v SG1
+                          ---                ---       ^ Spark Gap
+                           |                  |        |
+          + o--------------+------------------+--------+
+
+</PRE>
+(For more on these circuits, see the chapter:
+<A HREF="lasercn2.htm#cn2toc">Home-Built Nitrogen (N2) Laser</A>.)
+<p>
+The following things occurred to me, after I considered that picture for a
+while:
+<p>
+<ol>
+<li>If you switch with a spark gap, you need at least 10 amps going through it
+ for some ns to develop a good conductive channel & make the switch close
+ smoothly & thoroughly.
+<p>
+<li>There is no earthly reason why this device has to be balanced. That is, the
+ cap on the left can have an entirely different value from the cap on the
+ right.
+</ol>
+<p>
+What I did was to use an old Maxwell low-inductance cap with stripline
+termination as the one on the left, and a pair of barium titanate "doorknob"
+caps, each of 3600 pF, in series as the cap on the right. (I had to put them
+in series because their voltage rating was not high enough.)
+<p>
+The Maxwell is rated 0.089 uF at 75 kV; I've never taken it over about 35,
+partly because I do not care to X-ray myself too heavily.  See:
+<A HREF="http://www.jonsinger.org/pictures/lasers/dldriver.c5.jpg  ">Jon's
+Lamp Driver</A>.
+<p>
+How it works: When I trigger the spark gap (an old EG&G device that is
+designed to work when there's anything from 25 to 69 kV across it), the cap on
+the right promptly discharges through it, causing many amps to flow & closing
+the switch rather firmly. I haven't actually been able to measure this, but it
+seems likely that this creates a tank circuit that rings down to perhaps minus
+half of the initial charging voltage, V. (A proper LC inversion circuit, BTW,
+probably rings down to at least -0.8V. I doubt that my thing is anywhere near
+that good.)
+<p>
+One way or the other, this doesn't take very long, because the capacitance &
+inductance are both very low. My first guess is that it's no more than 50
+ns. At the end of this time the switch is shut very firmly, and there's a
+HUGE voltage across the flashlamp. Overvolting the lamp fast & heavily is a
+good way to accomplish two things: (1) it turns the lamp on much better than a
+slow rise in voltage, and (2) as I learned to my regret, it has a much better
+chance of blowing the lamp to hell.
+<p>
+The first two lamps I tried in this thing were beautiful things.  They had 6"
+arc length, and were 5 mm ID, 7 mm OD. They were brand spanking new. I got 'em
+surplus, for $15 apiece, after which the place that was selling them raised
+the price to $50 and I could no longer afford them.  Sigh.
+<p>
+Anyway, at 23 kV (below the actual lowest rated voltage for the switch), it
+took just 3 pulses to blow up each of my nice lamps. I then switched to an old
+capillary-bore lamp with only 4" of arc length and about a 1 mm or maybe 2 mm
+bore. I have several of these and I figured I could blow a few up & still have
+a laser. It turns out that this lamp holds things back enough that it is
+stable even as high as about 35 kV. (At 1/2 * C * V<sup>2</sup>, with C in
+farads and V in volts, that's right around 40 joules at 30 kV or 54.5 joules
+at 35 kV, unless I have my head on backwards tonight.)
+<p>
+With this lamp, and running at 30 kV if I recall correctly, the driver was able
+to threshold a dye cell without any mirrors. It's a well-aligned cell, of
+course -- the end windows are serving as the mirrors -- but that's not a whole
+lot of feedback, and you can demonstrate for yourself that it isn't all that
+easy to threshold a naked cell: just try it. I only did it with fluorescein
+and with Rhodamine-6G, near as I recall, though I bet I could have done it
+with Rhodamine-B in glycerol as well -- Rhodamine-B is a very reasonable dye in
+glycerol or plastic, much better than it is in water or isopropanol. (For
+whatever reason, it has very high fluorescence quantum efficiency in solvents
+with very high viscosity.) Believe I tried with 7-diethylamino- 4-methyl
+Coumarin & failed, no real surprise -- that's a harder dye to work with than
+fluorescein or R6G, by a fair margin.
+<p>
+(I should mention that I just wrap aluminum foil around the lamp & dye cell -
+close-coupling of this sort is a win as far as I'm concerned. MUCH easier than
+trying to make one of those fancy ellipsoidal reflector things and probably at
+least as effective - not so much room for light to fall out the ends!)
+
+<h3><A NAME="cdyjk1">Jarrod Kinsey's Dye Laser</A></h3>
+
+(From: Jarrod Kinsey.)
+<p>
+I finally succeeded in lasing my first dye laser.  See the results here: 
+<p>
+<ul>
+<li><A HREF="http://www.jarrodkinsey.com/pages/firstdyes.html">Organic Dyes
+ Pumped by Nitrogen Lasers</A>
+</ul>
+<p>
+The first top photo shows some R6G, lasing with an orange output. The other
+photo shows some 4MU lasing with an intense blue output. I really like the
+color in the output from the 4MU. 
+<p>
+Many thanks to Jon Singer and Milan Karakas for helping me to do this.
+<p>
+Here are some videos of one of my dye lasers, with the
+output passing through some water vapor. It's noisy, because the
+entire setup is powered with a mechanical generator and a spark gap
+switch.  The dye is R6G, which produces a yellow-orange laser output.
+<p>
+<ul>
+<li><A HREF="http://www.youtube.com/watch?v=jHw7KMvb9vk">Video 1</A>
+<li><A HREF="http://www.youtube.com/watch?v=tqh82rdkIq0">Video 2</A>
+</ul>
+<p>
+Also, here is a comparison between low frequency and high frequency HV
+sparks from my Wimshurst Machine. As with electronic circuitry, the
+capacitors control the frequency. The size of the capacitors also
+determine the current (and thickness) of the HV sparks, as well.
+<p>
+<ul>
+<li><A HREF="http://www.youtube.com/watch?v=ii6BaAAcw7U">Generator running
+ with small capacitors</A>
+<li><A HREF="http://www.youtube.com/watch?v=NFR-xwpVg7g">Generator running
+ with large capacitors</A>
+</ul>
+<p>
+Here are some pics of my more recent work.  These are very 'scratchy' and 'DIY'
+approaches; some using common household supplies for dyes. 
+<p>
+Dye from fluorescent yellow markers:
+<p>
+<ul>
+<li><A HREF="http://farm3.static.flickr.com/2205/2173376813_8b099f44d3_o.jpg">
+ Yellow Marker Lasing 1</A>
+<li><A HREF="http://farm3.static.flickr.com/2251/2173376809_70a4df9b67_o.jpg">
+ Yellow Marker Lasing 2</A>
+</ul>
+<p>
+Coumarin or 4MU (can't remember which):
+<p>
+<ul>
+<li><A HREF="http://farm3.static.flickr.com/2204/2141797458_506d7c572c_o.jpg
+ Coumarin or 4MU Lasing 1</A>
+<li><A HREF="http://farm3.static.flickr.com/2164/2140989953_3422bf5ab3_o.jpg
+ Coumarin or 4MU Lasing 2</A>
+<li><A HREF="http://farm3.static.flickr.com/2407/2140989959_cd92f3b16d_o.jpg
+ Coumarin or 4MU Lasing 3</A>
+</ul>
+<p>
+Arm and Hammer 2X concentrated liquid laundry detergent:
+<p>
+<ul>
+<li><A HREF="http://farm3.static.flickr.com/2239/2074147619_0b3fba2f21_o.jpg">
+ Arm and Hammer Laundry Detergent Lasing 1</A>
+<li><A HREF="http://farm3.static.flickr.com/2177/2074147617_645ff91921_o.jpg">
+ Arm and Hammer Laundry Detergent Lasing 2</A>
+<li><A HREF="http://farm3.static.flickr.com/2106/2074147615_63efd2e3d5_b.jpg">
+ Arm and Hammer Laundry Detergent Lasing 3</A>
+<li><A HREF="http://farm3.static.flickr.com/2415/2074952874_201cbd56e1_b.jpg">
+ Arm and Hammer Laundry Detergent Lasing 4</A>
+</ul>
+<p>
+More laundry detergent:
+<p>
+<ul>
+<li><A HREF="http://farm2.static.flickr.com/1052/1361539425_3e6ca92efe_b.jpg">
+ More Laundry Detergent Lasing 1</A>
+<li><A HREF="http://farm2.static.flickr.com/1021/1352194993_0495017a86_b.jpg">
+ More Laundry Detergent Lasing 2</A>
+<li><A HREF="http://farm2.static.flickr.com/1408/1361539421_5ba75fd86e_b.jpg">
+ More Laundry Detergent Lasing 3</A>
+<li><A HREF="http://farm2.static.flickr.com/1188/1351707209_722cd90107_b.jpg">
+ More Laundry Detergent Lasing 4</A>
+</ul>
+<p>
+R6G:
+<p>
+<ul>
+<li><A HREF="http://farm2.static.flickr.com/1263/1234366820_465c662491_b.jpg">
+ R6G Dye Lasing</A>
+</ul>
+<p>
+Examples of Wimshurst Machine power supply:
+<p>
+<ul>
+<li><A HREF="http://farm3.static.flickr.com/2052/1994562574_9b0e57b056_b.jpg">
+ Wimshurst Machine Pic 1</A>
+<li><A HREF="http://farm3.static.flickr.com/2340/1994562520_d406b8c5b3_o.jpg">
+ Wimshurst Machine Pic 2</A>
+<li><A HREF="http://farm3.static.flickr.com/2102/1811988957_6643d87daf_o.jpg">
+ Wimshurst Machine Pic 3</A>
+<li><A HREF="http://farm2.static.flickr.com/1184/1222732550_de54dd6e81_b.jpg">
+ Wimshurst Machine Pic 4</A>
+</ul>
+<p>
+Dye pumping diagram:
+<p>
+<ul>
+<li><A HREF="http://farm3.static.flickr.com/2102/2108750721_8926edee20_b.jpg">
+ Dye Pumping Drawing</A>
+</ul>
+<p>
+<A NAME="cdyaio"></A>
+<hr>
+<br>
+<li>Back to <A HREF="lasercdy.htm#cdytoc">Home-Built Dye Laser
+ Sub-Table of Contents</A>.
+<h2>Additional Information on Home-Built Dye Lasers</h2>
+<h3><A NAME="cdycdy5">More on the Air Flashlamp</A></h3>
+<p>
+(From: Chris Chagaris (pyro@grolen.com).)  
+<p>
+The article in "Light and its Uses" claims that this flashlamp will fire at
+about 60 Torr using the recommended capacitor of 15 uF at 3 kV.  This is not
+true (not even close). The actual pressure that will cause discharge of this
+capacitor is more like 8 to 9 Torr.
+<p>
+A way to calculate this is found in: X. M. Zaho, J-C-Diels, C.Y. Wang, and
+J.M. Elizondo, IEEE Journal Quantum Electronics, vol. 31, pp. 599-612 (1995):
+<PRE>
+                              V
+                    Pd = -----------   or   Vb = P * (d * Esb)
+                           d * Esb
+</PRE>
+where:
+<p>
+<ul>
+<li>Esb = 4,150 (magic number).
+<li>P is the actual pressure in Torr; Pd is the pressure at which the discharge occurs.
+<li>V is the applied voltage; Vb is the breakdown voltage.
+<li>d is the distance between the electrodes of the flashlamp.
+<p>
+</ul>
+For the flashlamp suggested for the dye laser with approximately 82 mm
+between electrodes, one can calculate a breakdown pressure of 8.8 Torr, NOT
+60 Torr!  Thus, either the vacuum system will need to be somewhat better or
+the flashlamp dimensions adjusted accordingly.
+
+<h3><A NAME="cdyuxf">Using a Xenon Flashlamp</A></h3>
+
+I don't know whether the approach described below can be made to work without
+extraordinary effort (or for other types of laser dyes) but it would certainly
+appear that the electronics at least would be a nice challenge!  His not
+very special energy storage capacitor and not very high voltage must not have
+been that mundane to produce 6 J in a 2 us pulse!
+<p>
+(From: fatusa@netscape.net.)
+<p>
+Lasing of Rhodamine-6G can be done with a regular garbage strobe tube (glass of
+linear dimensions - without crazing in glass) by attention to several points
+including: very tight coupling of strobe/cell, use of confocal cavity with HeNe
+laser mirrors, and a fairly strong molar dye solution.  But the most important
+thing to do is a prepulse technique - to first hit the tube with a pulse of low
+energy (say 10 amps) and then hit it harder 5 to 10 us after the prepulse.
+Do not expect much output.  For mine (done a while ago) with a prepulse of
+0.5 J and main input pulse of 6 J, lasing broad band was achieved reliably and
+repeatably at a low rep rate in a portable system.  The main pulse had a rise
+time of approximately 200 ns and was 2 us wide.  Better results can be achieved
+if a triplet quencher is used as well.  The main cap was not a "special" and
+the voltages were mild (relatively), but the electronics, etc. are not trivial.
+
+<h3><A NAME="cdycdy6">Discussion on Dye Laser Construction</A></h3>
+
+(From: Jacob Conner (jake@westplainsonline.com).)
+<p>
+If I use the OC/HR (Output Coupler/High Reflector mirrors) from a HeNe and a
+dye that peaks around 630 nm would I get any amplification?  I have Kiton-red
+and Rhodamine-B both of which should peak around the HeNe red line.
+<p>
+(From: Jon Singer, of the Joss Research Institute.)
+<p>
+If you pump correctly, either of these should
+lase; but because HeNe has much lower gain than dyes, the HeNe output
+coupler is seriously not the right tool for the job. Dye laser output
+couplers often pass as much as 25 or even 50% of the light that hits
+them. If you intend to lase Rhodamine B, BTW, use a viscous solvent
+if you can; from what I've read it has lousy fluorescence efficiency
+in methanol (0.43), but by the time you get to glycerol it is highly
+efficient (0.96 or so). The problem with glycerol is getting the
+solution out of the dye cell after you pulse it; maybe propylene
+glycol is a reasonable compromise, or a mixture of glycerol and
+water...
+<p>
+(From: Jacob Conner (jake@westplainsonline.com).)
+<p>
+The OC/HR are from a Hughes HeNe.  I believe they are dielectric (look blue
+when you look through them) and the optical resonator will be external to the
+dye cell which is a quartz glass tube with quartz ground glass windows (not
+sure if I should place at the Brewster angle) and there are 2 "T"'s coming
+out of the cell for dye circulation
+<p>
+<PRE>
+
+           ||          ||  
+  |     .--''----------''--.
+  |    /                  /  =====>
+  |   '-----------------'
+        ________________
+       |________________|
+          Halogen Lamp
+
+</PRE>
+<p>
+Excuse the crude drawing. :-)
+<p>
+The quartz tube is cemented to two brass T pipe fittings using Epoxy.  The
+pump lamps are going to be either a pair of 300 W halogens or 2 xenon flash
+lamps.  I hope this will work. if so i will invest in some other optics so I
+can go tuneable since the HeNe mirrors do have a small bandwidth I can
+probably insert a prism in the cavity for "some" tuneability
+<p>
+(From: PandaSnax (pandasnax@aol.com).)
+<p> 
+It sounds like you are going in the right direction so far. I'd lean more
+toward the Xenon flash tubes myself because they tend to put out a lot of UV
+and their use is highly documented. Unfortunately unless you build them
+yourself they tend to be pretty pricey. However two that flash alternately can
+give you a pretty high flash rate and some specialized tubes working together
+can give you continuous operation. The next question to ask is how are you
+going to flow the dye through the dye cell?
+<p>
+(From: Dan Mills (Dmills@abcde.demon.co.uk).)
+<p>
+Forget the TH lamps! You will not get enough light. I would go for the Xe
+flashlamps and would probably use a pair. It is worth getting a copy of the
+EG+G Electro optics catalog as this gives lots of detail on the design of
+flashlamp circuitry.
+<p>
+Note that even if you could get sufficient optical power from the halogen
+lamps your design will probably not lase continuously.  I do not think
+that a liner flow dye cell is capable of
+a high enough flow rate.  I attempted to build a dye laser similar to your
+design using a continuously burning SBA Xenon lamp in a old projector lamp
+house as the pump source.  It was not enough! This was running 900W at 2-3
+times the efficiency of a TH lamp.
+<p>
+I have considered attempting to use a DC arc welder to power a carbon arc lamp
+as a pump. Anyone else attempted this?
+<p>
+(From: Jacob Conner (jake@westplainsonline.com).)
+<p>
+The Scientific American dye laser lamp talked of getting 5 kW output from the
+laser.  Is this possible with a home made flashlamp?  The airport here has
+some hefty xenon strobes :) I want brick busting performance here ;)
+<p>
+(From: Dan Mills (Dmills@abcde.demon.co.uk).)
+<p>
+Yea you can get 5kW output pulses. (Not 5 KJ) The pulse duration is really
+short and the PRF is fairly low. Average *INPUT* power in the scientific
+American design is around 70W, at 1 PPS Average output is probably in the
+order of milliwatts.
+<p>
+It is probably not possible to obtain more then a watt average output from a
+home made dye laser. I would recommend you consider a liquid cooled pulsed
+YAG. This will give your 'brick busting performance' especially if you can get
+the local radar tech to get you some of the caps they use in the pulse forming
+network for the radar! You can make a suitably cooled yag lase
+continuously. Pulsed would probably be better for you.
+<p>
+(From: Dan Mills (Dmills@abcde.demon.co.uk).)
+<p>
+I have considered attempting to use a DC arc welder to power a carbon arc lamp
+as a pump. Anyone else attempted this?
+<p>
+(From: Heath Edwards (heathe@citi.w1.com).)
+<p>
+I use my Lincoln AC arc welder with a twin-carbon arc torch.  The carbons are
+3/8" diameter and copper plated for strength.  I wouldn't recommend this type
+of torch because the carbons burn down fairly rapid.  Just having done some
+light brazing with the torch the rods have shortened several inches.  Which
+means you would need to have an automatic rod adjuster.
+<p>
+Now if you used larger diameter rods, they might run longer.  But they'll
+require more current.
+<p>
+The light intensity is certainly high!  You HAVE to wear welding goggles with
+a dark lens of #8 or better.
+<p>
+(From: Mike Poulton (tjpoulton@aol.com).)
+<p>
+I would like to build a dye laser for use in light shows and classroom
+demonstrations.  I have built several lasers, but never completely from
+scratch.  My question is about an interesting phenomenon which was referred to
+in a small piece of literature about dye lasers.  It seemed to imply that if
+you direct the beam of a nitrogen laser through a chamber containing a dye
+used in dye lasers, it will cause the dye to lase along the path of the
+nitrogen laser beam, and where the beam exits the other side of the chamber,
+it will have been converted to a visible beam from the dye.  No resonant
+optics involved.  If this works and is true, please tell me, because that
+means that I don't have to align any resonant optics!  If this does not work,
+please inform me of that, too.  Any other information on dye lasers would be
+appreciated.
+<p>
+(From: PandaSnax (pandasnax@aol.com).)
+<p>
+I read in one of Jeff Hecht's (sorry if misspelled) books that this is a
+viable technique but that for most applications the dye is contained in an
+optical chamber that is semi-resonant, i.e. one partially reflective
+output mirror.
+<p>
+(From: Charles Nelson (cnelso01@merit.edu).)
+<p>
+The reason is similar to why Nitrogens don't really need mirrors, or if any
+are used that only as a high reflector and not an output coupler.  The gain is
+very high with using a nitrogen as a pump so you get a very large population
+inversion.  Try also using some Day-Glo plastics such as those used in rulers
+and the like.
+<p>
+(From: somebody (p.g@worldnet.att.net).)
+<p>
+I have built a variety of flashlamp pumped dye lasers including the one in
+Scientific American.
+<p>
+The only way I have gotten them to work is to pump a huge amount of energy in
+to a two mm bore dye tube. I had to use two 150 uf, 1000 V capacitors with two
+xenon flashlamps with the proper inductors. I also had to experiment with
+different dye/solvent mix ratios. the easiest dye to get to lase is
+Rhodamine-6G. these type of dye laser are to say the least, a pain in the a**
+and not much worth the effort. the best way I have found to make a dye laser,
+is to pump it with an UV laser.
+<p>
+I made the nitrogen laser in from Scientific American but scaled it up to one
+meter in length. it uses no mirrors and it will operate with ordinary air at
+about one torr. all though using pure nitrogen will give much better
+performance. I simply focused the beam onto the surface of the dye with a
+cylindrical lens and got fantastic results. no mirrors required but using one
+mirror at one end will get you twice the output.
+<p>
+(From: Jon Singer, of the Joss Research Institute.)
+<p>
+The reason lamp-pumped dye lasers generally can't be made to lase
+continuously is strictly a thermal issue, not a matter of self
+terminating population inversion. Dye is NOT self terminating;
+the lower laser levels (of which there are lots, not just one)
+are essentially thermally excited levels of the ground electronic
+state, which depopulate (to a Boltzmann distribution) in about
+10<sup>-12</sup> seconds. In support of this, I offer the fact
+that CW dye lasers not only exist, they have been commercially
+available for more than 3 decades.
+<p>
+The reason why a flashlamp-pumped dye laser has to be allowed to  
+relax between pulses or after a few pulses is that the dye solution  
+gets hot when you lase it, and develops refractive index  
+irregularities (these are called "Schlieren"), just like the wiggles  
+you can see in the shadow of the exhaust from a bus or a truck on a  
+sunny day, or so-called "heat waves" over an asphalt road in the  
+summer. These irregularities prevent the light from passing straight  
+through the dye. You either have to allow the temperature to achieve  
+a smooth profile in the cell, or you have to move fresh dye solution  
+into the cell to replace the hot stuff.
+<p>
+(From: Jon Singer, of the Joss Research Institute.)
+<p>
+I'm afraid this is a sad example of a fundamental fact about capacitors:
+<p>
+<PRE> 
+     Energy = 0.5 C * V<sup>2</sup>
+</PRE>
+<p> 
+A thousand volts just isn't the way you want to run a lamp driver for
+a dye laser.  300 uf at 1,000 V stores 150 joules; at 20 kV it takes
+less than 1 uf! The much smaller cap will discharge <b>much</b> faster,
+especially if it's a design that has low Effective Series Inductance
+(ESL) - 20 nH or less seems to be quite decent.
+<p>
+Notice that you had trouble lasing anything, even with 150 J into
+the flashlamp, whereas a driver that ran at high voltage, used a fast
+0.1 uf cap, and was constructed with reasonably low inductance had
+absolutely no trouble lasing any of several dyes with 25 joules or
+less, in a tube with 4 mm bore. In other words, far from being a pain
+in the butt, this type of dye laser is actually quite easy to build
+and work with, provided that you are willing to run at 20 kV instead
+of 1 kV.
+<p>
+I ended up tight-wrapping the lamp and the dye cell with aluminum  
+foil, the way I always do, because the white reflective material in  
+the head was nonviable. (I don't use ellipsoidal reflectors for lamp- 
+pumped dye lasers -- they are much more trouble than they're worth.  
+Aluminum foil is cheap and easy, and it works just fine. Remember,  
+shiny side in! Remember, also, that both the flashlamp and the dye  
+cell have to be made of fused silica, else you are looking for  
+severely reduced efficiency if you actually get lasing at all.)
+<p>
+For some info about my setups, see
+<A HREF="http://www.jossresearch.org/lasers/dye/ebayhead.html">Jon's
+"eBay Head" Dye Laser Page</A> and
+<A HREF="http://www.jossresearch.org/tjiirrs/015.html">Jon's "Minimalist" Dye
+Laser Pages</A>.
+<p>
+The "eBay Head" laser was quite crude, but it worked very well
+even so. (I took it out of service so I could work on one of
+the nitrogen lasers, which is why I speak of it in the past tense.)
+<p>
+BTW, there is what I hope is an amusing "photographic tuning curve"
+for Rhodamine 6G toward the bottom of that page -- I didn't have
+the  monochromator running at that point, and I figured that if I
+could get the camera to show the colors even moderately well, it
+would make a cute set of pictures.
+<p>
+The newer "Minimalist" laser stores only 12 Joules in its capacitor
+bank, but lases the usual dyes quite handily. So far, it has
+succeeded in thresholding Rhodamine 640, Rhodamine 6G, Fluorescein,
+Fluorol 555, Coumarin 1 (7-Diethylamino-4-Methyl-Coumarin),
+4-Methyl-Umbelliferone, and two handy DIY laser dyes: Dharma
+Trading Company's "Optic Whitener" (which is mentioned elsewhere
+on this page with a link, and is particularly nice for nitrogen
+laser pumping) and an isopropyl alcohol extract from a
+Sharpie<sup>&trade;</sup> "Accent" yellow-green highlighter marker.
+<p>
+In <A HREF="http://www.jossresearch.org/tjiirrs/015c.html">Its current
+incarnation</A> (as of early February, 2010), it uses a single-stage Marx
+generator built from a pair of 30-nf Maxwell capacitors that I got on eBay,
+charged to 20 kV, running a flashlamp that I bought for $16 from
+<A HREF="http://www.goldmine-elec.com">
+the Electronic Goldmine</A>.
+(Search for "Large High Power Xenon Strobe Tube". It isn't actually
+large; the arclength is only about 4".)
+<p>
+This laser is a fine demonstration of what I pointed out above,
+about small capacitors at high voltages. I was actually able to
+threshold R640 with only 6 J in a single 30 nf Maxwell, before I
+shifted to the Marx generator design.
+
+<h3><A NAME="cdycdy7">Dave's Comments and Improvements on Dye Laser</A></h3>
+
+(From: Dave (skeeve@excellentproducts.com).)
+<p>
+On the issue of mirrors, I suggest that for the total reflector, a person use
+a first surface mirror, which can be very easily obtained from an old
+photocopier, laser printer or wholesale place like Edmund Scientific. For the
+output coupler, on low power dye lasers, a piece of Mirro-Pane, which is used
+for two way mirrors will work nicely. Normally, a local glass shop will give
+you a sample for nothing. :-) The transmittance is about 30 percent or so,
+which works well for the small laser.
+<p>
+Next, the question of pumping a dye laser with 300 watt halogens is a waste of
+effort. Organic dye requires a far, far more intense light source than that to
+reach threshold. Even the airport runway lamps are not quite right for a dye
+laser. Xenon flashlamps have to be specially designed to be driven to
+extremely high current levels to pump dye lasers efficiently. Normally, this
+is combined with high current simmer to ensure long lamp life. The ablative
+wall lamp, as described in the article, is really the best source of light for
+the homebuilder! This type of lamp can easily be scale up to any size
+desired. Furthermore, it is very inexpensive and simple to construct. The
+pumping cavity design is important as is a reasonably fast discharge circuit.
+<p>
+The one, single most important thing that was not used in the Scientific
+American laser, is an infrared filter of some sort, between the flashlamp an
+the dye cell! For a flash pumped laser, this will make the difference between
+a working or non working laser. The reason is this: When the flashlamp fires,
+it produces a very intense pulse of light throughout the ultraviolet, visible
+and infrared spectrum. The dye solution, whether alcohol or water based, has
+very strong absorption lines in the mid infrared. If the dye is allowed to
+absorb this radiation, a VERY strong shock wave appears at the edge of the dye
+cell wall and travels in toward the center of the dye solution. This shock
+wave completely destroys the optical homogeneity of the dye solution and
+terminates the laser pulse almost as fast as it can begin!  (less than one
+microsecond) Lankard was not aware of this effect, as it had not been detected
+at the time that the article was written. For the folks out there who have
+gotten this laser to work, I would bet that you got a very divergent laser
+beam. As opposed to the tight beam of say a HeNe, right? This was caused by
+the infrared shock wave! If a filter is used, the laser will produce a much
+nicer beam and will lase for quite a bit longer.  This translates into more
+energy out. For an infrared filter, I suggest that a second tube be placed
+around the flashlamp and water flowed though the annular space between the two
+tubes. That way, the water jacket absorbs this infrared radiation before it
+can get to the dye cell and ruin the performance of your laser. Of course, the
+water jacket must not be extended to the electrodes of the flashlamp or the
+water will short the lamp out.  (unless deionized water is used)
+<p>
+There is a very good paper that was published in Applied Optics Vol 13, No.
+2, 1974, by Fisher and Ganiel in which they describe the shock wave problem
+and even photograph the shock waves.
+<p>
+Finally, the amount of pump energy in the Lankard laser is somewhat low for
+the design. If a person were to scale the laser dye cell to say 6 mm bore with
+a length of 5 or six inches, they would be better off. For the matching lamp
+to go with that, I would suggest a lamp of 6 mm bore and arc length equal to
+the dye cell length pumped by capacitor of maybe 5 microfarads at 10 kv. (Low
+inductance and high current discharge capability should be specified to the cap
+manufacturer) This would give an energy storage capacity of 250 joules which
+should be plenty to reach laser threshold.  Also, dropping the lamp pressure
+to just a couple of torr and firing the lamp by use of a simple spark gap will
+make the rise time of the lamp faster and really help in the efficiency of the
+laser.
+<p>
+This only touches on the improvements that are possible with the dye laser. :-)
+<p>
+Also see the section: <A HREF="laserccb.htm#ccbccb14">Using a Copper Vapor (or
+CuCl/CuBr) Laser to Pump a Dye Laser</A> as an alternative if you happen to
+have a Cu vapor laser laying around or in your future!
+<p>
+As to potential output of the dye laser. For the Scientific American laser, 5
+kW would be "maybe". ;-)  As to the output that can be had from a homemade dye
+laser, the last one that I built produced 5 joules in a 3 microsecond pulse
+with a peak beam intensity of well over a megawatt. The beam diameter was 1 cm
+and divergence was about 1 mr, a nice clean beam. The one that I am building
+now should easily do 9 joules in about 2 to 3 microseconds.
+<p>
+One thing that should be touched on again, is that it only takes less than 25
+MICRO joules of energy at the Rhodamine-6G wavelength of 590 nm. to do
+permanent damage to the eye. These lasers must be used with great care to
+prevent serious injury!
+<p>
+Also, the energy discharge circuit for the flashlamp is potentially LETHAL if
+you are careless! All it take is once!
+
+<h3><A NAME="cdycdld">Comments on Dye Laser Dye Concentration</A></h3>
+
+(From: Chris Chagaris (pyro@grolen.com).)
+<p>
+As you will discover, there is no absolute 'best' dye concentration
+to be used in these types of lasers. There are certain parameters to
+which one may adhere in order to produce desired results regarding the
+peak wavelength emission within the tuning curve of each dye. Different
+dye concentrations as well as the choice of solvent will affect the
+output wavelength to some extent, with higher concentrations shifting
+the output toward the longer wavelengths. In general, laser-pumped
+dye cavities usually contain higher dye concentrations than are commonly
+employed in flashlamp-pumped dye cells.
+<p>
+A concentration like 0.8 g/l Coumarin 460 in pure ethanol is common for N2
+laser-pumped dye lasers and should perform as expected if all other conditions
+are met including sufficient pump power and proper focusing of the pump beam.
+The Coumarin derivatives will likely 'lase' superradiantly (without need for a
+resonant cavity) if the pump flux density is adequate.
+<p>
+Common concentrations of Rhodamine 6G in ethanol for a N2 laser pumped dye
+laser application are usually in the 1 to 2 g/l range.  This appears as a
+yellow/orange fluorescent liquid.
+
+<h3><A NAME="cdycdy9">Incandescent Lamps or Other Light Sources to Pump Dye
+ Laser?</A></h3>
+
+In order for a dye laser to be pumped successfully, the light source must
+produce an extremely high peak intensity in a short period of time.  This
+greatly limits your options.  About the only approach that might have any
+chance of working is something like a mercury discharge lamp or solar furnace.
+See the section: <A HREF="lasercdy.htm#cdycdya">Mercury Vapor Lamps to Pump
+Dye Laser?</A> but your probability of success isn't very high.
+<p>
+And the answer to your next question is: No, you can't pump a conventional dye
+laser with the laserdiode out of your CD player or likely even a high power
+laser diode for that matter. :-)  However, a different sort of design might
+work.  See the section: <A HREF="lasercdy.htm#cdycdyb">Diode Laser to Pump
+Dye Laser</A>.
+<p>
+A typical question goes like:
+<blockquote>
+"Say I took a 100 W light bulb and surrounded it by a sphere that was coated
+inside with a 100% reflective mirror and made a little hole in a place on one
+side of the sphere.  Then, in time all the light would come out of that hole.
+Would the power of the beam be 100 W or would there be no beam because
+it's a multiple wave length light?
+<p>
+Just wondering"</blockquote>
+<p>
+The short answer is: Forget it.  Despite how bright a large incandescent (even
+a halogen) bulb appears, it converts only a few percent of electrical power to
+light output.  And, even less of it is going to be at the absorption band of
+the laser dye.
+<p>
+(From: Terry Greene (xray@cstel.net).)
+<p>
+What you will get is one very hot globe.
+<ol>
+<li>No reflector is 100 % efficient. After dozens of bounces most of
+the optical energy coming from the bulb will become heat.
+<p>
+<li>Power ratings on light bulbs is a measurement of INPUT power. Incandescent
+light bulbs are very inefficient converting only a few percent (can't recall
+average number, anyone?) of input power into optical energy. A 100 watt
+light bulb will only have several watts of optical output.
+</ol>
+<p>
+(From Steve Roberts (osteven@akrobiz.com).)
+<p>
+There has only ever been one non-laser pumped or non-flashlamp pumped dye laser
+experiment that I have seen documented and that used 7 huge custom made CW
+xenon arcs to pump a IR dye. The input power was far greater then required for
+even a small ion laser.  The lamps were driven beyond their specified maximum
+power and lasted about a hour.
+<p>
+The particular dye was chosen because it is one of the few that wouldn't fall
+pray to triplet state quenching.  It did 15 mW in the IR at 1100 nm or so.  No
+currently known dye that can lase in the visible can hold up to continuous
+lasing because it will be overpumped into the next nonlasing level in something
+far less then a microsecond.  This is why CW dye lasers all have flowing jets
+and even rapidly pulsed dye lasers of any significant power have fast flows.
+You have to get the old still somewhat excited dye out of the lasing path as it
+then has a high adsorption and will literally turn itself off. Those well
+funded researchers were looking for a easier way to get laser emission - for
+years - and that was the best they could come up with. 
+<p>
+You're not going to get anywhere near the pump threshold with a sun pumped dye,
+yet a simple home made nitrogen laser will do it, the wonders of quantum
+mechanics. :-)
+<p>
+(From: Jon Singer, of the Joss Research Institute.)
+<p>
+I had no idea that anyone had ever successfully pumped a CW dye laser of any
+sort with lamps, and was astounded to see mention of it. Wow! No surprise
+they had to exceed the ratings on the lamps.
+<p>
+Hmmm &#151; it turns out that there has been at least one other
+instance. It used Rhodamine 6G, and it was published in 1988 (!).  Here
+is the reference:
+<p>
+<blockquote>
+ <b>Continuous-Wave Dye Laser Pumped by a High-Pressure Argon Arc</b><br>
+ E. Thiel, C. Zander, and K. H. Drexhage<br>
+ Optics Letters, Vol. 13 (1988), Issue 11, pp. 973-974.
+<p>
+<b>Abstract:</b> Continuous-wave operation of a Rhodamine 6G dye laser,
+incoherently pumped by a high-pressure argon arc, has been achieved. A
+special electrode design reduces melting of the electrode tips, and thus
+the arc provides the necessary brightness for periods of the order of
+hours.
+</blockquote>
+<p>
+(I believe they had to push 8.8 kW through the arc lamp, so this is not
+exactly a DIY project.)
+<p>
+A Townes-Schawlow calculation will tell you that for a reasonable solution of
+R6G, you need  about 5 kW per cubic cm of dye to bring the thing to threshold
+if your active region is maybe 10 cm long.
+<p>
+If memory serves, the Townes-Schawlow criterion (which gives you the number
+of excited centers per cubic cm that you need in order to reach threshold)
+is pretty simple:
+<p>
+<blockquote>
+N<sub>0</sub> = 8&pi; n<sup>2</sup> (1-R<sub>1</sub>R<sub>2</sub>) &tau; &Delta;&nu; / &lambda;<sup>2</sup> L &phi;
+</blockquote>
+<p>
+Where:
+<p>
+<ul>
+<li>N<sub>0</sub> is the threshold number of excited centers
+per cubic centimeter
+<p>
+<li>8&pi; is a geometrical compensation factor
+<p>
+<li>n is the refractive index of the laser medium
+<p>
+<li>R<sub>1</sub> and R<sub>2</sub> are the reflectivities of the mirrors.
+<p>
+<li>&tau; is the fluorescence lifetime, in seconds
+<p>
+<li>&Delta;&nu; is the emission bandwidth, in Hz (you&rsquo;ll
+have to figure it out in nm and convert; remember, this is
+not the laser bandwidth, but rather the bandwidth of the
+fluorescence peak)
+<p>
+<li>&lambda; is the center wavelength of the emission band, in cm (not nm!)
+<p>
+<li>L is the active length of the cavity, in cm
+<p>
+<li>&phi; is the quantum efficiency of the fluorescence.
+</ul>
+<p>
+Remember, this calculation ignores all loss sources
+other than the output of the laser, so it is wildly
+optimistic. At the very least, you should double or
+quadruple the number it gives you.
+<p>
+Here's a sample calculation, for Rhodamine 590 in ethanol:
+<p>
+<ul>
+<li>8&pi; = 25.133 (We don't need even that many digits, but hey.)
+<p>
+<li>n = 1.3545, an average; n<sup>2</sup> = 1.835
+<p>
+<li>R<sub>1</sub> is 100% (a really good max ref mirror at the back);
+R<sub>2</sub> is 95% (we are going for easy lasing, not huge output);
+therefore, (1-R<sub>1</sub>R<sub>2</sub>) = 0.05
+<p>
+<li>&tau; = 4.8 nsec (this may be a wee bit short, but hey)
+<p>
+<li>&Delta;&nu; is more difficult; I&rsquo;m going to use 2200
+cm<sup>-1</sup>, which is perhaps a bit narrower than the
+actual fluorescence peak, but is wider than the usual
+tuning range. In Hz, this is <i>very</i> close to 6.6x10<sup>13</sup>,
+so that is the value I will use.
+<p>
+<li>&lambda; is 5.9x10<sup>-5</sup> (remember, it&rsquo;s in cm), so
+&lambda;<sup>2</sup> = 3.48x10<sup>-9</sup>
+<P>
+<li>L is 10 cm
+<p>
+<li>&phi; = 0.96 or so -- Rhodamine 590 is a very good dye.
+</ul>
+<p>
+The numerator evaluates to something so close to 7.35
+that I'm just going to stay with that.
+The denominator evaluates to 3.34x10<sup>-8</sup>.
+Putting them together gives us 2.2x10<sup>13</sup>; that&rsquo;s
+2.2x10<sup>16</sup> per liter, which is approximately
+3.6x10<sup>-8</sup> molar,
+actually only about a factor of 5 low. Not bad, all
+things considered. Remember, for any real system, you
+need to use more dye and push harder.
+<p>
+Now: how much power do we need to apply?
+<p>
+Let&rsquo;s assume that the dye cell holds 1 cubic cm of
+solution, just for convenience. That takes 2.2x10<sup>13</sup> photons.
+<p>
+2.2x10<sup>13</sup> photons, however, is only part of the story. We
+can&rsquo;t dump them all in at once, and the dye is
+fluorescing while we try to pump it, so I am arbitrarily
+going to say that we take one fluorescence lifetime,
+give or take a little, and we use twice the calculated
+number of photons to compensate for the fluorescence loss.
+That is, 4.4x10<sup>13</sup> photons over 5 ns.
+<p>
+I'm also going to say that the average energy of a
+pumping photon is 3.5 eV, which (if I am not miscalculating)
+corresponds to a wavelength of just over 350 nm. This is
+probably fairly reasonable.
+<p>
+1 eV = 1.602x10<sup>-19</sup> joule, so 3.5 eV times 4.4x10<sup>13</sup>
+photons is about 25 microjoule. If we apply that in 5 nsec, the
+resulting average power is just under 5 kW. Q. E. D., kids:
+the absolute minimum you could ever hope to run a Rhodamine
+590 dye laser with, in a 10 cm dye cell with a 95% reflective
+output coupler, is 5 kW... but there's something you
+have to remember: that 5 kW is <i>the actual amount of power
+absorbed by the dye.</i> Anything the dye fails to pick up
+doesn't count. In order to put 5 kW into 1 cc of R590
+at usable wavelengths you have to put well over a megawatt
+of electrical power into a flashlamp, and that ignores all
+of the other possible losses that can drive up the threshold.
+<p>
+I hope you now see why only two or three groups have ever produced
+a fully CW lamp-pumped dye laser. Very few CW lamps are capable of
+this level of service; that 5 kW is the actual power absorbed by
+the dye solution, so the input power to the lamp is ridiculous.
+It is also difficult to move the dye fast enough to keep it from
+developing significant optical inhomogeneities, which ruin the
+optical path and cause lasing to cease. (The first laser-pumped
+CW dye laser needed to have its dye solution move through the
+dye cell at 2 meters per second, and that was just to get the dye
+past a "hot spot" a few microns across.)
+<p>
+I do like the idea of doing it with laser diodes; they are getting cheaper and
+cheaper, even with reasonable output power. A DiY diode-laser-pumped CW dye
+laser would be quite something.
+
+<h3><A NAME="cdycdya">Mercury Vapor Lamps to Pump Dye Laser?</A></h3>
+<blockquote>
+
+"Does anyone here know if any of the organic dyes can be optically pumped to
+ lasing with a mercury vapor light of sufficient power? If so, what is the
+ minimum wattage needed?"
+</blockquote>
+(From: Don Klipstein (don@misty.com).)
+<p>
+Organic dye lasers tend to require much higher degree of pumping than a
+mercury arc can provide.  This is due to the short lifetime of the desired
+excited state of organic dye molecules (typically around a nanosecond or a few
+nanoseconds).  You have to have a light intense enough to achieve the
+necessary population inversion in about this amount of time.
+<p>
+(Since these lasers are usually 4-level lasers, you don't actually have to
+excite a majority of all dye molecules within a nanosecond.  However, what you
+have to do is still a tall order.)
+<p>
+In fact, plain ordinary xenon flash tubes often have difficulty achieving the
+necessary light intensity.  You may need extra-intense flash tubes with
+somewhat unusual circuitry, voltages, etc. to get a dye laser working.
+<p>
+For some xenon flash tube stuff including stuff that may help getting a dye
+laser to lase, try these web pages of mine:
+<p>
+<li><A HREF="http://www.misty.com/~don/xeguide.html">Xenon Flash Design Guidelines</A> (including a bit of info for laser pumping)
+<li><A HREF="http://www.misty.com/~don/donflash.html">Don's Xenon Strobe Index</A>
+<li><A HREF="http://www.misty.com/~don/">Don's Home Page</A>
+<p>
+As of several years ago, the dye I have heard of as most suitable for a
+do-it-yourself dye laser is Rhodamine-6G.  The more available Rhodamine-B and
+Uranine (or Fluorescein in alkaline solution) can work, but generally not as
+well.  Adding glycerin or the like to make the solution more viscous is said
+to have a beneficial effect, but probably makes little difference in the
+extreme pumping requirements of aqueous (or alcohol) dye solution lasers.
+<p>
+For a similar type of laser construction that has a much lower pumping
+requirement, use an appropriate compound or chelate of europium.  I have heard
+of this being capable of king a "dye" type laser that can be pumped from the
+intense light of a solar furnace, and this may work from an intense enough
+mercury arc.
+<p>
+(From: Thomas A Suit (tsuit@osf1.gmu.edu).)
+<p>
+Solar furnace??  Yeow!!  The dye laser I saw in operation up at LLE was pumped
+via YAG light frequency doubled to green.  I put my hand in the green beam and
+it felt like a candle flame.  I rapidly pulled my hand out. :-)  The KTP
+frequency doubler was said to be 20% efficient.  No way was my hand going into
+the IR beam.  A solar furnace would be much hotter than a candle flame.
+<p>
+(From: Don Klipstein (don@misty.com).)
+<p>
+The working europium compounds emit a highly visible orange-ish red wavelength
+in the low 600's of nm wavelength.  Any europium based stuff that will work
+will have at least some visible reddish, orange-reddish or pinkish
+fluorescence in ordinary daylight or most high-pressure mercury light.
+<p>
+Please note that most fluorescent inorganic and inorganic-based substances
+fluoresce only or mainly from shorter UV wavelengths that damage many organic
+substances (including chelates?).  It may be a bit tricky getting an europium
+based substance that can be pumped from wavelengths that don't harm it.
+<p>
+What I have seen (several years ago) seems to discourage europium based liquid
+lasing medium lasers as having the disadvantages of both inorganic and dye
+lasers.
+<p>
+(I suspect conspiracy mode)
+<p>
+I wonder if this is to discourage the obvious hazards of telling anyone how to
+make a Class IV laser that hobbyists can make in their basements.  (Minor
+remote accidental fire-starting hazards, moderate skin burn hazards, and
+extreme hazards of accidentally causing permanent eye damage in
+milliseconds.)(<end suspect conspiracy mode>)
+<p>
+Anyone who knows how to get this to work, or names/sources of appropriate dyes
+or euoropium compounds, please post and/or email to don@misty.com.
+<p>
+(From: Joshua B. Halpern (jbh@ILP.Physik.Uni-Essen.DE).)
+<p>
+Lamps are not, in general, intense enough unless you pulse them with a
+powerful fast current (flashlamp pumped dye lasers) Mercury lamps are a bad
+choice because the UV (253.6 nm??) light tears the dye molecules apart.  If
+you are looking for a pump laser that you can build yourself (you assume all
+risk, etc.)  There are several designs for simple nitrogen lasers (337 nm)
+that can be found in the journal: Review of Scientific Instruments (late 1970s
+and early 1980s) and one design was published in the Amateur Scientist section
+of Scientific American.
+<p>
+These can easily pump a small dye laser.
+<p>
+(From: Michael Solonenko (misha@vm.temple.edu).)
+<p>
+You need high pump power densities to get anything out of the dye. At the same
+time, the dye gets easily destroyed if continuously irradiated with powers
+much less than the one necessary for lasing. Hence, the dye flow, cooling and
+filtering should be set up.  In the industrial lasers (Coherent), ~6 W of an
+argon ion laser (~448 and/or 514 nm) is focused, as noted before, in ~30
+micrometer spot on a dye jet to get the job done.  See if the total power of
+your lamp in the absorption region of the dye you are going to use can provide
+comparable power densities (take 6 W/30 um as a total power density for a
+laser).
+<p>
+You just might get lucky if you:
+<p>
+<ul>
+<li>Have enough power density from the pump lamp;
+<li>Cool, filter and have the dye flow fast enough to prevent photochemistry;
+<li>Use confocal resonator with good dielectric mirrors.
+</ul>
+<p>
+But, I'd warn you, the wavelength of such a laser will be extremely unstable,
+shifting randomly in the region of 10 to 20 nm around the dye's emission
+maximum with the increments of intermodal spacing.
+<p>
+(From: Jens Decker (dej05093@rchsg6.chemie.uni-regensburg.de).)
+<p>
+I don't think it is possible to get a CW laser running with any lamp.  Even a
+standing wave laser need's about a Watt focused into a very small (about 30
+microns) spot of a thin dye jet. You can't focus the light of your street lamp
+(a really nice tool for photochemistry!)  to such a small spot. Dielectric
+mirrors are essential too.
+<p>
+Maybe it would be possible to pump a standing wave dye with a telescope using
+a single mode fiber to couple the moving telescope with the laser?
+<p>
+Building a small N2-laser or using flashlamps for pumping a self made pulsed
+dye laser should be possible. In two resent papers in the journal: Review of
+Scientific Instruments, bright blue LEDs have been used as pulsed UV sources
+which might be useful as a pumping source.
+<p>
+(From: Joshua Halpern (jbh@IDT.NET).)
+<p>
+The strongest lines from the mercury vapor lamp are in the UV (the
+intercombination 253 nm line, and if you contact the lamp directly to the dye
+cuvette, the resonance 186 nm line.  By the way it is the latter which
+photodissociates oxygen leading to the formation of ozone that you should be
+smelling if you operate this lamp in the air).  These emissions have a high
+enough energy to break R6G apart.  That is a bad idea if you want to build a
+dye laser.  The peak of the R6G absorption is in the green.  You would be
+better off with a strong green or white light, with a UV filter on it.
+<p>
+You would also have to have a huge CW lamp.  AFAIK, it has not been done, but
+rather one uses Ar-ion lasers, or pulsed lasers or flashlamps to pump dye
+lasers.  There is a report of a sun pumped dye laser (Israeli?) in the last
+few years, but how big the collector is I do not know.
+<p>
+
+(From: Dave (skeeve@excellentproducts.com).)
+<p>
+I believe that you will not be able to reach lasing threshold of R6G with a
+mercury vapor lamp unless you do some fancy trickery.
+<p>
+The output of a 1000 watt mercury vapor lamp is at lease 25 times too low to
+lase organic dye, however, one research team found that if they set up a
+mercury vapor lamp with a special power supply which could run the lamp at
+about half power continuously and then discharge an energy storage capacitor
+through it, they could reach the intensity level that was needed to pump a dye
+laser. The pulsed light of the lamp was about 100 times brighter than the cw
+emission of the lamp. Of course this laser operated in a pulsed manner. What
+was really interesting, though is that the mercury vapor lamp which was
+operated in this way, altered from the normal emission spectrum of the mercury
+vapor lamp so that the emission spectrum matched really well to the absorption
+curve of R6G and other dyes.
+<p>
+Indeed, it was compared to a xenon flashlamp at the same discharge energy and
+the comparison indicated that the pulsed mercury lamp should be a much better
+pump source for visible spectrum organic dyes - especially those in the blue.
+<p>
+The articles quoted are:
+<ul>
+<li>P. Dal Pozzo, R. Polloni, O. Svelto, "Pulsed High-Pressure Mercury
+ Capillary Lamps: A New Way of Pumping Dye Lasers", Applied Physics 6, pg.
+ 381-382, 1975.
+<p>
+ Abstract: A high pressure Hg capillary amp (PEK AH 6-2-B) has been
+ successfully pulsed to produce laser action in a methanol solution of R6G.
+ This lamp may provide a better laser efficiency than that available with a
+ xenon flashtube.
+<p>
+<li>P. Dal Pozzo, R. Polloni, O. Svelto, "Pulsed Mercury Capillary Lamps for
+ Dye Laser Pumping: Spectral Measurements", Applied Physics 6, pg. 341-344,
+ 1975.
+<p>
+ Abstract: Calibrated spectral measurements of the light emitted by a pulsed
+ high-pressure mercury capillary lamp are presented. These pulsed lamps have
+ been used in a previous work to pump a Rhodamine-6G laser. The measurements
+ presented here show a very high efficiency in the blue and near UV part of
+ the spectrum, suggesting that these lamps represent a very attractive pumping
+ source for dye lasers emitting in the blue. In particular, as an example, a
+ computation has been made for a basic solution of 4-MU yielding a spectral
+ efficiency of 24%.
+</ul>
+If you are determined to try a mercury vapor lamp, be sure to check out these
+papers, as they have lots of good info in them!
+
+<h3><A NAME="cdycdyb">Diode Laser to Pump Dye Laser</A></h3>
+
+No, you can't just replace the flashlamp in your home-built dye laser with a
+bunch of salvaged laser diodes out of old CD player or laser pointers!
+
+(From: A.E. Siegman (siegman@ee.stanford.edu).)
+
+Anyone wanting to play with home-made dye lasers might look at an article by
+Richard Scheps, "Low threshold visible dye laser pumped by visible laser
+diodes", IEEE Photonics Technology Letters, vol 5, 1156 (October 1993).
+Experiments were done using two 10 mW visible diode lasers (a.k.a. "super
+laser pointers") as pumps; the threshold was 5.6 mW.  The dye was actually in
+a 100 micron thick jet, which is not all that easy to make; but I'd bet that
+with some care it could be done with a thin dye cell.  Also, laser wavelength
+was 758 nm, which is not really visible. But also, this was 6 years ago - with
+some ingenuity an experimentalist might be able to something similar "at home".
+
+(From: Joshua Halpern (jbh@IDT.NET).)
+
+You can do it using razor blades, or smooth glass plates to form the jet.  It
+takes a bunch of fussing, and can be pretty messy learning how to do it, but
+it works.  OTOH, just use the EtGlycol without the dye until the jet is
+working.  Thin cells will probably have too much reflective loss to work.  You
+might look in RSI between bout 1974 and 1980 for jet designs.
+
+An interesting idea.
+
+<h3><A NAME="cdycdyc">Coaxial Dye Laser</A></h3>
+
+For optimal pumping efficiency, consider placing the flashlamp *inside* a
+coaxial dye chamber (this could also be applied to other types of optically
+pumped lasers).  Surround the entire affair with a cylindrical reflector.
+In this way, one would think that virtually 100 percent of the optical energy
+from the flashlamp will be absorbed by the lasing medium as it bounces around
+inside the cylindrical reflector.  However, at high current densities, the
+plasma in the flashlamp will not be transparent so you might only really get
+two passes - out and back.
+<p>
+The laser output will be ring shaped rather than Gaussian and there could be
+some unusual mode structure depending you your resonator optics, but for
+maximum power and efficiency, this should be unbeatable.
+<p>
+(From: Dave (skeeve@excellentproducts.com).)
+<P>
+Yes, to find a very efficient pumping scheme was the motivation for this
+unique pumping idea. If the lamp were in the center of the lasing medium,
+(organic dye solution in the case of the article that I refer too), and the
+pump light could be completely absorbed in two passes through the dye , from
+the lamp out to the reflector and back, then it should be possible to realize
+extremely high pumping efficiency. Of course, the output of the laser would be
+a ring, and there is the problem of getting the electricity to the lamp, in
+the center of the dye cell, but perhaps these obstacles might be overcome. At
+any rate, I did not see any further work done in this area, and as I recall,
+the author did not build a working model.
+<p>
+I have constructed several standard coaxial flashlamps , but they suffer from
+the problem of having half of the output wasted, because it is emitted to the
+outer wall of the lamp. In pumping a solid state laser, this might not be a
+problem, as the lamp could be driven at a low enough current level that it is
+a grey body and the reflector would send at least some of the light back
+through the plasma to the lasing medium. In pumping a dye laser though, the
+lamp is driven at a high current level which is needed to reach lasing
+threshold, (80,000 to 160,000 amps per sq. cm) and the lamp is a true black
+body radiator. The reflector that you see around a coaxial lamp is just for a
+current return. It does lengthen the pump pulse marginally, but at peak
+output, when the plasma is "black", it contributes nothing to the pump light
+that gets to the dye cell.
+<p>
+In a later test, Baltakov and the gang went one better and achieved 400 joules
+per pulse from a coaxial dye laser. Now that is one mean dye laser! :-)
+
+<h3><A NAME="cdycdyd">Operation Manual for a Real Dye Laser</A></h3>
+
+<A HREF="http://www.pti-nj.com/">Photon Technology International</A> provides
+on-line manuals for some of their  products.  Here is the operation manual for
+their <A HREF="http://www.pti-nj.com/manual_gl-302.html">Model GL-302 Dye
+Laser</A>.  Maybe it will provide some ideas for your dye laser!
+
+<h3><A NAME="cdyjcdli">Jon's Comments on Some Dye Laser Issues</A></h3>
+
+(From: Jon Singer, of the Joss Research Institute.)
+<p>
+<ol>
+<li><b>Length of dye cell versus flashlamp</b>
+<p>
+ <ol type=A>
+ <li>Dyes are 4-level lasers, so having a dye cell that is much longer
+  than the active length of the flashlamp shouldn't be much of an issue.
+  This is true of all regular dyes. (There may be some truly
+  squirrely weird stuff that behaves differently,
+  but there's some question as to whether such a
+  thing could properly be described as a dye laser.)  This is a
+  fundamental property that has to do with the quantum mechanics
+  involved in dye fluorescence.  I can probably find a diagram -
+  there are several on the Web, but one I just ran into is
+  in German and is in a discussion of scintillators,
+  not dye lasers, so it's a bit difficult to follow. ;o)
+<p>
+ <li>That said, however, there is always (at reasonable temperatures,
+  anyway) some thermal population in the lower laser level (which is
+  actually the rovibronic manifold above the ground singlet electronic
+  state, but let's not get too involved), and you can excite molecules
+  out of that population into the first excited singlet, so there
+  actually *is* a bit of absorption.
+<p>
+  This effect is fairly small; but if you take a dye laser running, as
+  an example, Rhodamine B, and put a cuvette of Rhodamine 6G into the
+  cavity, you'll probably find that the R6G flashes yellow when you
+  pulse the laser and orange light from the RB goes through it. (This
+  also happens if you use the same dye that you're lasing, but because
+  the color is about the same as the laser's output, it's harder to see
+  the effect.)
+<p>
+  This shows that unexcited dye almost certainly causes the threshold to
+  be *slightly* higher; but again, the effect is pretty small, and I
+  wouldn't be too worried about it.
+<p>
+  (I showed this effect to a bunch of people in 1971, BTW, using the red
+  light from a HeNe to pump Rhodamine B (which emits in the orange)
+  dissolved in glycerol, and told them it was a quantum-mechanical
+  refrigerator.  Cute joke; I didn't think about doing it with a
+  high-powered pump because there weren't any at the time, and I failed
+  to think about future developments.  Sigh. This refrigerator was
+  patented within the last few years - needless to say, *not* by me.
+  Argh!)
+<p>
+ <li>The absorption spectrum of a dye almost always overlaps the
+  emission spectrum. This is one way you can tune an organic dye laser:
+  if you increase the dye concentration, you push the output toward
+  longer wavelengths. Unexcited dye in the cavity will have the same
+  effect. This effect is generally larger than the "B" effect.
+<p>
+  If you want to see it, take a dye laser with any handy dye, and run
+  the output through a monochromator so you know what the wavelength
+  is. Now put a cuvette of the same dye into the cavity. As you increase
+  the concentration of the dye in the cuvette (or use a longer & longer
+  cuvette), so that there are more dye molecules in the path, the effect
+  on the wavelength should also increase. If you increase the
+  concentration too much, you may find that the extra dye begins to
+  interfere with lasing; but that's probably a different effect.
+ </ol>
+<p>
+<b><li>Capacitor size and speed, and relation to dye lasing threshold</b>
+<p>
+ <ol type=A>
+ <li>Dye laser threshold, for pump pulses that have duration a lot
+  longer than the fluorescence lifetime, is perhaps best addressed as a
+  power issue (rather than an energy issue). Basically, because a lamp
+  pulse is always more than an order of magnitude longer than the
+  fluorescence lifetime of any dye, you can pretend that you're dealing
+  with a CW laser. (The lifetime of R6G is about 4.1 ns, and that's
+  not terribly unusual.)
+<p>
+  Assuming that there are no particular problems with things like
+  Triplet-Triplet Absorption, a given volume of dye solution at a
+  specified active length, with specified mirrors, requires a certain
+  level of absorbed power to reach threshold.
+<p>
+  You can make a rough calculation of this (see the discussion of
+  the Townes-Schawlow criterion in the section:
+  <A HREF="lasercdy.htm#cdycdy9">Incandescent Lamps or Other Light
+  Sources to Pump Dye Laser?</A>.
+  For R6G in a cell that has 10 cm pumped length, with a
+  "perfect" max-ref rear reflector and a highly reflective OC (optimized
+  for low threshold rather than output), you find that the dye has to
+  absorb 10 to 20 kW per cubic centimeter during the pulse, in order to
+  reach threshold.
+<p>
+  Note that I said that R6G takes 10 to 20 kW per cc, which is higher than
+  what I arrived at earlier.  There's a reason for that: When I redid the
+  calculation few months ago, I used the actual bandwidth as shown on an
+  excellent Web site:
+  <A HREF="http://omlc.ogi.edu/spectra/PhotochemCAD/html/">PhotochemCAD
+  Spectra by Category</A>.  So the power I got is higher because I
+  underestimated the bandwidth a few years ago.
+<p>
+  If you translate this back to actual electrical power in the lamp it
+  comes to about 50 MWE, give or take. Depends on how efficient the lamp
+  is, how much of its output is at wavelengths that the dye can absorb,
+  and how well the light is coupled from the lamp into the dye
+  cell. (Also on how much dirt there is in the dye solution and on the
+  windows and mirrors, but let's not even go there.)
+<p>
+  The bottom line can be stated about as follows:
+<p>
+  If you can put greater than 5 J into a good xenon lamp with 5" or 6"
+  arclength in less than 100 nsec, if you can get a good chunk of the resulting
+  light into the dye cell, if the dye solution actually absorbs a goodly
+  amount of that light, and if it's a nice friendly efficient dye (like
+  R6G or Fluorescein), you probably have a chance. ...But if the pulse
+  isn't fast enough, or if *anything* else is less than optimal, your
+  chance fades away like the dew on the grass. Thus the Lankard laser
+  from SciAm, which uses a slow capacitor, an air flashlamp, and a big
+  lossy reflector, usually takes greater than 100 J per pulse.
+<p>
+  (I've said this before, but maybe it's worth repeating: I have a lamp
+  with 38 cm arclength; my capacitor is 0.1 uF and fairly fast; I'm
+  charging it to 18 to 24 kV, and switching it with a reasonably fast
+  triggered spark gap. The pulse is a few hundred ns long. As a result
+  I can threshold R6G with about 20 J into the lamp, possibly even less.)
+<p>
+ <li>It has been pointed out that large capacitors are inherently slow;
+  but small capacitors are not necessarily all that much faster. You
+  have to design and build them correctly, and you need interconnections
+  with very low inductance. (This argues in favor of the
+  TEA-nitrogen-laser style of construction, which *is* fast. OTOH, it's
+  not necessarily easy to make a transversely-pumped flashlamp, and it's
+  not necessarily easy to make a structure of this sort that couples
+  nicely into a regular linear lamp.)
+<p>
+  There may also be some afterglow from the lamp, light that doesn't get
+  released quickly; this effectively spreads out the pulse.  (I recently
+  saw something suggesting that an air-spark quenches faster than a
+  xenon lamp. Speaking of which, see the next item.)
+ </ol>
+<p>
+<b><li>Spark versus lamp pumping of dye laser?</b>
+<p>
+ Then there is the question of pumping with an air-spark, which has
+ been raised by several people.  That can certainly work. The lowest
+ threshold I think I've ever heard of was something on the order of 5
+ mJ into the "lamp", which suggests that if you want to use something
+ like the circuit that drives a TEA nitrogen laser, a structure that
+ stores relatively small amounts of energy, a spark may be a good bet.
+<p>
+ The trick, I guess, is twofold: 1) keeping the spark confined to a
+ straight line, and 2) getting as much of the light as possible from
+ the spark into the dye.
+<p>
+<b><li>Mercury lamp pumping of dye laser?</b>
+<p>
+ I think this has been done. They only got "quasi-CW" operation,
+ IIRC, and they had to pour a lot of juice into the lamps. (See
+ the two dal Pozzo articles that are cited elsewhere on this page.)
+<p>
+ One thing: I'd expect considerable afterglow at some wavelengths, and
+ I'm not 100% sure which ones are most likely to display the
+ effect. Perhaps we get to find out.
+<p>
+<b><li>Efficiency of dye lasers</b>
+<p>
+ Someone said, "I am beginning to understand 'why' dye lasers are less
+ efficient than common solid state lasers like ruby."
+<p>
+ Actually, ruby is awful. Besides, it's a 3-level laser, and it isn't
+ really comparable to dyes.
+<p>
+ Nd+++, in glass, YAG, or YVO4 (or whatever host you happen to like) is
+ a better example of a solid-state laser with reasonable efficiency (if
+ it's done well; anything can be built and/or operated poorly).
+<p>
+ In any case, if you are pumping a dye laser with another laser, and
+ you have things optimized and adjusted carefully, it can be quite
+ efficient -- I think I've seen listed conversion efficiencies on the
+ order of 35 or more percent. (Even a good lamp-pumped dye laser isn't
+ *too* bad, though it clearly isn't likely to reach the 35% level.)
+<p>
+<b><li>Photochemical effects in laser dyes</b>
+<p>
+ Here's an odd sidelight, for whatever it's worth, described in the paper:
+ "Photochemical effects in a high-power flashlamp-pumped laser utilizing
+ solutions of rhodamine 6G in isopropyl alcohol",
+ B. A. Knyazev et. al., 1979, Sov. J. Quantum Electron. 9 1191-1193.
+<p>
+ Abstract:. The energy and shape of the output pulses from flashlamp-pumped
+ solutions of rhodamine 6G in isopropyl alcohol were investigated
+ experimentally as a function of the serial number of a pulse. The
+ output energy obtained on excitation via a glass filter first increased
+ from one pulse to another and then began to fall. When the pump energy
+ was 10 kJ per pulse, the output energy increased by a factor of 1.52 by
+ the eighth pulse, whereas in the case of ethyl alcohol solutions the
+ output energy fell monotonically to zero in four pulses. The stability
+ of rhodamine 6G solutions in isopropyl alcohol exposed to light was an
+ order of magnitude higher than in ethyl alcohol.
+</ol>
+<h3><A NAME="cdywldl">White Light Dye Laser?</A></h3>
+
+(From: Jon Singer of the Joss Research Institute.)
+<p>
+I decided to make RGB "white" light from a single cuvette of dye, pumped
+by a nitrogen laser.  This is kind of pointless, because you can't get much
+power out of it, but I had an interesting time doing it.
+See: <A HREF="http://www.jossresearch.org/tjiirrs/014.html">RGB "White" Dye
+Laser Light from a Single Cuvette</A>.
+<p>
+<A NAME="cdydlt"></A>
+<hr>
+<br>
+<li>Back to <A HREF="lasercdy.htm#cdytoc">Home-Built Dye Laser
+ Sub-Table of Contents</A>.
+<h2>Dye Laser Tid-Bits</h2>
+<h3><A NAME="cdycdye">The Jello Laser Legend</A></h3>
+
+Whether you can take any currently available flavor of off-the-shelf Jello(tm)
+brand dessert mix and build a working laser using it as the lasing medium is
+unknown.  However, clear gelatin can certainly be doped with a variety of dyes
+to create some sort of a dye laser.  But, it might not be tasty to eat. :-)
+<p>
+The seminal paper on this work (I'm serious!) is:
+"Laser Action of Dyes in Gelatin", T. W. Hansch, M. Pernier, A. L. Schawlow,
+IEEE Journal of Quantum Electronics, January 1971, pp. 45-6.  (Thanks to:
+Jon Singer, of the Joss Research Institute, for tracking down the reference.)
+The authors tried various types of materials for the lasing medium using a
+nitrogen laser pump source including:
+<p>
+For a watered down version :) which covers the lasing of Scotch whiskey
+fumes and dyed gelatin, see: Schawlow, A. L., "Lasers: The Practical and the
+Possible", The Stanford Magazine, Stanford Alumni Association, Stanford, CA,
+pp. 24-29, Spring/Summer 1979.
+<p>
+The definitive general article may be at
+<A HREF="
+http://www.menlosystems.com/pdf/ediblelasersandotherdelights.pdf">Edible
+Lasers and Other Delights</A>.
+<p>
+Here are some additional comments:
+<p>
+<ul>
+<li>Knox(tm) gelatin (mixed according to label directions with water) using
+ sodium fluorescein (possibly edible combination) and rhodamine B (not edible)
+ for the dyes.
+<p>
+<li>Same starting mixture using Rhodamine 6G with the addition of 1.7 percent
+ "pink lotion Trend(tm)" (dishwashing detergent?) to prevent dimerization
+ (which would prevent laser action).
+<p>
+<li>Various other dyes soluble in glycerine mixed with the Knox gelatin in
+ place of some of the water.
+<p>
+<li>Two commercial gelatin filters, Wratten types 22 and 29.
+</ul>
+
+A normal dye laser was also used successfully as the pump source with some of
+these concoctions.
+<p>
+One interesting characteristic of the gelatin medium was that if the incident
+pump laser remained stationary, lasing action faded after 100 or so shots.
+Some movement was needed, even if quite small, to maintain the response.
+Jiggling the Jello was sufficient. :)
+<p>
+The paper is a worth-read. :)
+<p>
+(From: Leonard Migliore (lm@laserk.com).)
+<p>
+According to A. E. Siegman in his book, "Lasers", A. L. Schawlow (who got a
+Nobel Prize for his more mainstream laser work) put fluorescein dye in
+Knox gelatin and pumped it with a nitrogen laser. After observing laser
+emission from this medium, he ate it.  It is my understanding that Dr.
+Schawlow is alive today despite this activity.  (That was in 1998; he died of
+unrelated causes in 1999. --- Sam.)
+<p>
+(From: Chris Chagaris (pyro@grolen.com).)
+<p>
+Disodium Fluorescein is one of the few laser dyes that could be ingested
+without any ill effects. This chemical is routinely injected into the
+bloodstream of patients who undergo fluorescein angiography.
+<p>
+(From: Dave (dyelaser@my-dejanews.com).)
+<p>
+Kiton-Red-S a.k.a. Sulforhodamine-B a.k.a. Acid-Red-52 is another dye that
+might be used as well. It is not a legal food coloring in the USA, but it is
+used for coloring food in other parts of the world. It is also one of the more
+efficient laser dyes. Some of the laser dyes are extremely toxic, but many
+others are just slightly toxic or not at all.
+<p>
+(From: Steve Quest (Squest@galileo.cris.com).)
+<p>
+This I did not know.  I think it was Red 12 or similar, I know it
+wasn't Red 52 that was banned in foods and cosmetics.  Is this dye
+transparent, translucent, or opaque?  The banned dye was opaque.
+<p>
+(From: Steve Roberts (osteven@akrobiz.com).)
+<p>
+Yeah, Jello will lase.  I saw the original paper about it at one time.  They
+used a orange Jello - the dye in it was later pulled by the FDA as a toxin.
+<p>
+(From: Steve Quest (Squest@galileo.cris.com).)
+<p>
+Ahh, I don't buy that.  I recall lipstick had a dangerous red dye,
+so did red M&M's, but I don't recall Jello having the same problem.  The
+dye in question was a coal-tar dye, opaque, and not fluorescent. 
+<p>
+(From: Steve Roberts (osteven@akrobiz.com).)
+<p>
+The walls of the glass cell were the cavity and it was superradient
+when pumped by N2.  Otherwise attempts to lase it were with it seeded with
+Rhodamine-6G.
+<p>
+(From: Steve Quest (Squest@galileo.cris.com).)
+<p>
+Any transparent thick substance when doped with neodymium,
+chromium, etc., will lase.  The first Nd lasers (as in Nd:YAG) were
+actually Nd:Glass, plain SiO2 glass doped with neodymium.  Thus you could
+Nd dope clear Jello and I'd bet it would lase when pumped by ruby laser. 
+<p>
+(From: Steve Roberts (osteven@akrobiz.com).)
+<p>
+Certain types of DayGlo(tm) plastics will lase with a nitrogen
+laser pump as well. I personally can attest that Bud Light(tm) nailed hard with
+a excimer lases in the yellow in a dye cavity.
+<p>
+(From: Steve Quest (Squest@galileo.cris.com).)
+<p>
+So will Prestone anti-freeze, when pumped with an excimer. :)
+The stuff in Prestone antifreeze that makes it fluoresce is (TaDa!) 
+Fluorescein. :)  Take the stuff under a blacklight sometime. :) 
+Ethylene Glycol (the active agent) is water clear, the fluorescein is
+added so you can see the stuff (glowing greenish yellow).
+<p>
+Fluorescein isn't toxic, but I bet unflavored Jello doped with fluorescein
+would not taste good!
+<p>
+You could also dope clear Jello with Nd and pump with ruby.  It would lase in
+the IR.  Given the amount of of Nd required, you could probably eat *it* as
+well, without much harm.
+<p>
+(From: Sam.)
+<p>
+So add some suger to the unflavored gelatin.  It might even improve lasing!
+Then add KTP to the Nd doped Jello laser and get some green light. :)
+<p>
+(From: Matt Polak (skandranon@avians.net).)
+<p>
+In my readings, if I remember correctly, the experiments done with Jello
+typically incorporated 'non-toxic' fluorescein dye suspended into the
+gelatin in order to actually make it 'lase' when pumped. 
+<p>
+I have also heard about beer lasing from multiple sources, usually when
+pumped with a nitrogen laser I believe. (vodka also reportedly lases in the
+violet region).  I've been joking at work (SeaWorld of Ohio - we're owned by
+Anheuser Busch beer company) that we should get some money from Corporate
+to develop a beer laser for our shows, and run it off kegs of the
+corporate product. Of course, there'd have to be extremely strict
+quality-control on the lasing medium, which would come in the form of a
+spigot in-line with the keg's output flow-lines to allow constant
+sampling... err.... testing. :)
+<p>
+Hey L. M. Roberts, how about for this year's LaserF/X technical workshops
+we try to get sponsoring for doing demonstrations of which items in the
+patented 'Canadian Optics Cleaning Kit(tm)' (i.e., liquor cabinet) will
+lase, and their multiple uses for entertainment purposes?
+<p>
+(From: Wes Delaney blkstr@zwallet.com).)
+<p>
+My plan would be to try different kinds, of soft drinks, fruit drinks, and so
+on.  Although probably not all will work, some might, and some might work
+better than others.  It is worth pouring a few things from the refrigerator
+through the laser cavity.  My guess is that some of the fluorescent dyed
+Gatorade and Power Ade drinks would probably lase.  When I get a dye laser
+up and running I intend to do this.  You can try anything but, drinks are
+fluid so it is easier to pass them through the cavity, and they widely
+available.
+
+<h3><A NAME="cdygind">Whiskey Dye Laser?</A></h3>
+
+(From: Doug Dulmage.)
+<p>
+This is probably 100% urban legend, but what I heard as the discovery of the
+first dye laser went something like this:
+<p>
+Back in the early 70's or so, remember when everyone had blacklights
+and Hedrix posters all over the place? Well, there were some guys that were
+working for IBM or some big company that was out in the Boston area somewhere,
+and it was late at night and they decided to go out for a drink while they 
+talked over making a liquid laser. They got into some "blacklight bar" back 
+then, probably a bit of stuff wisping about in the air, etc., and a noisy 
+band, etc. But, they being good white shirt and blue tie guys, ordered a round 
+of Martini's. When the martinin's arrived, the first thing they noticed was 
+the they were glowing?! This had them a bit stumped as they had been trying a 
+lot of different dyes and not seeing that much fluorescence with so little 
+pump source energy like all these blacklights. So, they went to the bar and 
+asked the bartender to take all the ingredients of a martini and pour them out
+into separate shot glasses, well, before it even got poured, they could tell 
+exactly what it was, it was the gin! So, they bought a fifth of gin and took 
+it back to their lab and I guess the rest as they say, is history. Or probably
+UL, but still, it would be fun to think that's how it happened. I did hear 
+that from a good source back in the mid 70's while I was still a kid that had 
+gotten my first HeNe courtesy of a very wealthy uncle who lived in Missasauga 
+Ontario from a neighbor who had the first laser company in Canada, a fellow
+named White if I remember. And they gave me this militarized monster that he
+yanked off their line and gave it to me for my 10th birthday. And yes, I still
+have it, the uncle passed away on Salt Spring Island BC a few years back, all
+those stories and use of gin caught up with him, but having a few millions
+tucked away never made his life miserable.. And I even remember when we could
+take pictures of the beam and the photo shop would give us the prints for free
+as  they thought that the red blotch on the print was a mistake they made in
+their lab, now that's old. In fact, they even had a monster CO2 laser at the
+Ontario Science center that they would blow up stuff with twice a day I think,
+I only saw it once, but it was COOOOOOL.
+<p>
+Ah, the fun days of youth.. :)
+
+<h3><A NAME="cdyprpx">Perspex as a Dye Laser Medium?</A></h3>
+
+Well, not quite a liquid but similar idea. :)
+<p>
+<blockquote>
+"I have been experimenting with some green fluorescent Perspex pieces
+ that I obtained a long time ago as samples from a perspex shop. I
+ found that when I placed them alongside a blue fluoro tube, the ends
+ lit up *very* brightly. Adding a reflector improved output even
+ more. Now, I have never been able to coax this stuff into lasing as I
+ cannot organize appropriate mirrors, however, the ease with which this
+ material fluoresces make me wonder whether it could be a possible
+ laser medium. The furthest I got was polishing the ends, wrapping some
+ flashlamps around the pieces and dumping about 10,000 uF at 350 V into
+ them. What excited me was that under these conditions, the light
+ emanating from the ends of these rods is by far the most beautiful and
+ powerful green light I have *ever* seen (and I've seen a fair bit of
+ it!). Your thoughts?"
+</blockquote>
+<p>
+(From: Chris Chagaris (pyro@grolen.com).)
+<p>
+Your idea of building a Perspex laser is not too far-fetched at all. There is
+one company that I know of
+(A HREF="http://www.dnlabs.com/">DN Labs Laser
+Technology</A>) that is manufacturing a high temperature cross-linked,
+polymeric solid-state dye laser material.  More simply stated: Organic dye
+doped plastic laser rods. The Perspex samples that you have may or may not be
+doped with an organic dye that would be capable of characteristics as a liquid
+organic dye contained in a quartz cell. The mirrors required would not be
+terribly specialized and most likely a good quality aluminized high reflector
+and a simple partially transmitting aluminized output mirror with about a 70%
+reflectance would suffice, if properly aligned. The flashlamp pumping of this
+material would be possible if the proper conditions were meant. Organic dyes
+require very short and intense pump light pulses to overcome losses due to
+molecules that are accumulated in the triplet state. Flashlamp rise-times in
+the (hundreds or less) nanoseconds regime are common in practical systems.
+This is usually achieved with commercial xenon flashlamps by using a very
+high voltage (many times higher than the self-firing voltage) low capacitance
+firing circuit with a triggered spark gap in series with the lamp.  Your
+present low-voltage high capacitance circuit would create very long pump-light
+pulses which would not be suitable in such a laser system.
+<p>
+<hr>
+<br>
+<li>Back to <A HREF="laserfaq.htm#faqtoc">Sam's Laser FAQ Table of
+ Contents</A>.
+<li>Back to <A HREF="lasercdy.htm#cdytoc">Home-Built Dye Laser
+ Sub-Table of Contents</A>.
+<li>Forward to <A HREF="lasercmg.htm#cmgtoc">Home-Built Pulsed Multiple Gas
+ (PMG) Laser</A>.
+<p>
+<hr>
+<b><center>Sam's Laser FAQ, <A HREF="copyright.htm">Copyright &copy<A> 1994-2010,
+ Samuel M. Goldwasser, All Rights Reserved.<br>
+ I may be contacted via the
+ <A HREF="emaillnk.htm">Sci.Electronics.Repair FAQ
+ Email Links Page</A>.</center></b>
+<hr>
+<p>
+</BODY>
+</HTML>

@@ -1,0 +1,2227 @@
+<HTML>
+<HEAD>
+<TITLE>Sam's Laser FAQ - Ar/Kr Ion Laser Power Supplies</TITLE>
+</HEAD>
+<BODY>
+<A NAME="apstoc"></A>
+<p>
+<hr>
+<b><center>Sam's Laser FAQ, <A HREF="copyright.htm">Copyright &copy<A> 1994-2009,
+ Samuel M. Goldwasser, All Rights Reserved.<br>
+ I may be contacted via the
+ <A HREF="emaillnk.htm">Sci.Electronics.Repair FAQ
+ Email Links Page</A>.</center></b>
+<hr>
+<p>
+<li>Back to <A HREF="laserfaq.htm#faqtoc">Sam's Laser FAQ Table of Contents</A>.
+<h1>Ar/Kr Ion Laser Power Supplies</h1>
+<h2>Sub-Table of Contents</h2>
+<ul>
+<li><A HREF="laseraps.htm#apsint">Introduction, Related Information, Acknowledgement, Safety</A>
+ <ul>
+ <li><A HREF="laseraps.htm#apsbcs1">Basic Ar/Kr Ion Laser Power Supply Considerations</A>
+ <li><A HREF="laseraps.htm#apsweb">Web Site with Related Information</A>
+ <li><A HREF="laseraps.htm#apsack">Acknowledgement</A>
+ <li><A HREF="laseraps.htm#apssaf">SAFETY When Dealing with Ar/Kr Ion Laser Power Supplies</A>
+ </ul>
+<p>
+<li><A HREF="laseraps.htm#apstah">Types, Alternatives to Home-Built System</A>
+ <ul>
+ <li><A HREF="laseraps.htm#apstah0">Not Quite as Many Choices</A>
+ <li><A HREF="laseraps.htm#apsalps">Arc Lamp Power Supply for Ion Laser?</A>
+ <li><A HREF="laseraps.htm#apssmps">Using Common SMPSs to Construct an Ion Laser Power Supply</A>
+ <li><A HREF="laseraps.htm#apsscsp">Steve's Comments on Switchmode Power Supplies and Phase Converters</A>
+ <li><A HREF="laseraps.htm#apstah1">So You Still Want to Build an Ar/Kr Ion Laser Power Supply?</A>
+ </ul>
+<p>
+<li><A HREF="laseraps.htm#apsols">Organization of Linear, Switchmode, Inverter Types, Foreign Power</A>
+ <ul>
+ <li><A HREF="laseraps.htm#apsols0">Typical Organization of Ar/Kr Power Supply with Series Regulator</A>
+ <li><A HREF="laseraps.htm#apsols1">Typical Organization of Inverter Type Ar/Kr Power Supply</A>
+ <li><A HREF="laseraps.htm#apsols2">Ion Laser Power Supply on Foreign Power</A>
+ </ul>
+<p>
+<li><A HREF="laseraps.htm#apsmmt">Making Measurements and Power Supply Testing</A>
+ <ul>
+ <li><A HREF="laseraps.htm#apsmmt0">Measurements of Current and Voltage in Ar/Kr Ion Laser Power Supplies</A>
+ <li><A HREF="laseraps.htm#apsmmt1">Initial Power Supply Testing</A>
+ <li><A HREF="laseraps.htm#apsmmt2">Testing with a Dummy Load</A>
+ <li><A HREF="laseraps.htm#apsmmt3">Testing with an Inexpensive Laser Head</A>
+ </ul>
+<p>
+<li><A HREF="laseraps.htm#apsrep">Ion Laser Power Supply Repair</A>
+ <ul>
+ <li><A HREF="laseraps.htm#apsrep0">Typical Power Supply Failures and Possible Causes</A>
+ <li><A HREF="laseraps.htm#apsrep1">Troubleshooting Check List</A>
+ <li><A HREF="laseraps.htm#apsrep2">Troubleshooting Where There is No Beam at All</A>
+ <li><A HREF="laseraps.htm#apsrep3">Troubleshooting Where There is No or Low Output</A>
+ <li><A HREF="laseraps.htm#apsrep4">Troubleshooting Linear Pass-Banks</A>
+ <li><A HREF="laseraps.htm#apsmatc">Matching Pass-Bank Devices</A>
+ <li><A HREF="laseraps.htm#apsomni">Omni-150P Ar/Kr Ion Laser Power Supply Repair Saga</A>
+ </ul>
+<p>
+<li><A HREF="laseraps.htm#apspit">Pulsed Operation of Ion Tubes and Test Circuits</A>
+ <ul>
+ <li><A HREF="laseraps.htm#apspit0">Pulsed Operation of an Ar/Kr Ion Tube</A>
+ <li><A HREF="laseraps.htm#apspit0a">Pulsed Testing of an Ion Laser Tube</A>
+  <ul>
+  <li><A HREF="laseraps.htm#apspit1">Ar/Kr Ion Tube Pulse Test Circuit 1</A>
+  <li><A HREF="laseraps.htm#apspit2">Ar/Kr Ion Tube Pulse Test Circuit 2</A>
+  <li><A HREF="laseraps.htm#apspit3">Ar/Kr Ion Tube Pulse Test Circuit 3</A>
+  </ul>
+ </ul>
+<p>
+<li><A HREF="laseraps.htm#apsmisc">Miscellaneous Ion Laser Power Supply Information</A>
+ <ul>
+ <li><A HREF="laseraps.htm#apswrp">About the Wide Range of Power Supply Characteristics</A>
+ </ul>
+</ul>
+<p>
+<A NAME="apsint"></A>
+<hr>
+<br>
+<li>Back to <A HREF="laserfaq.htm#faqtoc">Sam's Laser FAQ Table of Contents</A>.
+<li>Back to <A HREF="laseraps.htm#apstoc">Ar/Kr Ion Laser Power Supplies Sub-Table of Contents</A>.
+<h2>Introduction, Related Information, Acknowledgement, Safety</h2>
+<h3><A NAME="apsbcs1">Basic Ar/Kr Ion Laser Power Supply
+ Considerations</A></h3>
+
+Small air-cooled Ar/Kr ion tubes require an operating voltage of around 100 to
+110 VDC at 3 to 10 AMPs and a starting voltage of about 8 to 10 kV (but almost
+no current).  While these basic requirements are in some ways similar to those
+of a HeNe tube, the shear value of the current - measured in AMPs - means
+that providing a power supply that doesn't self destruct, destroy the laser
+tube, or fry you in the process, is much more of a non-trivial task.
+<p>
+Note: Most parameters here are given for argon ion tubes since these are most
+common.  However, while physically interchangeable krypton and mixed gas ion
+tubes are very similar electrically, they will have slightly lower starting
+and operating voltages.  This isn't a problem for starting, but the difference
+in operating voltage can be significant enough to cause some power supply
+compatibility problems such as excessive power dissipation in the regulator
+circuits.  This should be kept in mind if substituting tube types.  See the
+section: <A HREF="laserarg.htm#argtsa4">Comparison of Argon and Krypton Ion
+Tube Characteristics</A> for a specific example.
+<ul>
+<li>The typical discharge voltage is 100 to 110 VDC into very nearly a short
+  circuit - very low ohms.  Theoretically, it is not a negative resistance as
+  with a HeNe tube, at least.  However, a combination of factors can still
+  result in runaway if the effective series (ballast) resistance of the system
+  is too low.
+<p>
+  The source for the operating voltage is either a direct line-connected
+  rectifier/filter 'front-end' or this followed by a high frequency inverter.
+  (RF excitation is also possible but I don't know of any commercial examples
+  of this approach.)
+<p>
+<li>Operating current must be controlled and variable (to adjust beam power)
+  from around 3 A to 10 A (which is the usual maximum specified current though
+  more may be used in some cases and for larger lasers).  Feedback based on
+  tube current and direct optical monitoring of the beam (light control)
+  is a must for continuous unattended operation.  This provides the lowest
+  noise and maximizes tube life.  Modulation of the beam power can also be
+  provided via an external input.
+<p>
+  A series linear or switchmode (buck) regulator may be used with the line
+  connected supply.  Some power supplies use a combination of a switchmode
+  preregulator to drop the rectified filtered line voltage to a range where
+  a linear regulator can run with reduced power dissipation and use fewer,
+  lower cost pass-bank transistors.  Inverters will use PWM control of their
+  drive.
+<p>
+<li>The Ar/Kr ion tube uses a heated filament-cathode.  This requires a
+  separate 2.5 to 3 V supply at 15 to 25 AMPs.  The cathode must be up to
+  operating temperature (usually about a 30 second to 1 minute delay from
+  power-on in PREHEAT mode) prior to initiating the discharge to prevent
+  damage to the tube.  Commercial power supplies provide this delay
+  automatically.
+<p>
+  A simple low voltage power transformer with a centertapped secondary usually
+  supplies the filament current.  Fine adjustment of filament current can be
+  done using a tapped primary or Variac.  The use of AC is actually beneficial
+  and helps to spread the heat from the discharge over the extent of the
+  cathode (filament) by dithering the arc position.
+<p>
+  Note that although the plasma temperature is extremely high, this is only
+  true in the actual bore - which may start several inches away from the
+  filament.  Thus, you really do want the filament powered prior to initiating
+  the discharge and at all times while it is running.  If the filament loses
+  power for some reason and cools down, the voltage drop between the filament
+  and the discharge will increase leading to much greater power dissipation
+  and hot spots.  Depending on the main DC power supply, the discharge may
+  just go out without any harm but for some, this may not be the case and the
+  regulator may keep trying to maintain the specified current as the tube
+  voltage climbs.  I don't know how many times you can get away with this and
+  how quickly it will damage or kill a tube but would rather not find out!
+<p>
+<li>The starter (generally called an igniter in this case - sounds much more
+  impressive, doesn't it?!), must be designed taking into consideration that
+  the full discharge current must pass through any blocking diodes or series
+  inductor/transformer.  Therefore, those whimpy parasitic multipliers used
+  for HeNe tubes will not work!
+<p>
+  A design discharging a capacitor into a high current high voltage pulse
+  transformer is often used.  However, some types generate a burst of radio
+  frequency (sort of like a mini-Tesla coil) to avoid potential damage to
+  the tube cathode from a high current high voltage pulse.
+<p>
+<li>Finally, while not strictly a power requirement, these Ar/Kr ion tubes
+  requires LOTS of cooling.  The air-cooled type must have a HUGE fan passing
+  air through the elaborate heat sink fins of the tube with all plenums and/or
+  baffles in place.  After all, it will be dissipating 1,000 W OR MORE at full
+  power - about the same as a medium size space heater!
+<p>
+<li>And, most important: Safety, electrical, and thermal protection and
+  interlocks MUST be provided for this sort of high power laser equipment.
+  Circuit failure or carelessness can result in unfortunate consequences.
+  Optical shutters, beam-on indicators, and all other CDRH required laser 
+  safety devices are also essential.
+</ul>
+Note that what we are talking about are Ar/Kr ion tubes putting out up to a
+few hundred mW of beam power.  These are not small by HeNe laser standards.
+The lowest power models are still about 12 inches (30 cm) long with a diameter
+(including all the cooling fins and other attached structure) of about 4
+inches (10 cm).
+<p>
+Large frame Ar/Kr ion tubes can be over a meter in length and nearly everything
+about them is, well, much larger. :-)  There are even 8 FOOT (2.5 m) long
+monster medical lasers that output 35 W or more and require over 600 V at 35 A
+to power the tube.  Figure on a direct feed from a local electric utility
+substation for this kind of power!  Ion lasers like these may also have axial
+permanent or electro-magnets surrounding the tube to concentrate the discharge
+and other 'stuff' that we will kind of ignore. ;-)  They also require several
+gallons per minute from a tap or chilled water source to prevent a melt-down.
+<p>
+For these reasons, while the offer of a cheap or free large frame ion laser
+may sound tempting, consider the power and cooling requirements before dragging
+it home.  It will likely end up as a coffee table support or high-tech
+sculpture if you don't have industrial strength three-phase power at your
+disposal!  Cooling water may also be a problem.  Nonetheless, most of the
+basic information on small air-cooled ion lasers DOES apply to their bigger
+brothers as well if the numbers are adjusted appropriately.  And, the power
+supplies are quite similar.  In fact, the same power supply can often be used
+for a wide variety of ion lasers by selecting the AC input and changing some
+jumpers.
+<p>
+Throughout this chapter, references will be made to several commercial Ar/Kr
+ion lasers systems.  Two of the most common are:
+<p>
+<ul>
+<li>American Laser Corporation (Salt Lake City, Utah), Model 60X second sourced
+  as the Omnichrome (now a division of the
+  <A HREF="http://www.mellesgriot.com/">Melles Griot</A>,
+  Carlsbad, CA) model 532 (designated the ALC-60X/Omni-532).  The
+  general features of this laser are described (with photos) in the chapter:
+  <A HREF="laserarg.htm#argtoc">Argon/Krypton Ion Lasers</A>.  This is
+  a small air-cooled argon ion external mirror tube good for up to several
+  hundred mW on all or selected lines (depending on specific model).  This is
+  the most common laser of this type and relatively widely - and increasingly
+  available on the surplus market.
+<p>
+  A few oddball versions of the 60X (60XB and 60XC) are still manufactured
+  but the 532 is an obsolete model.  American and Omnichrome both make/made a
+  few zillion variations on the same theme.  All of them look similar and have
+  common features.  American still makes replacement tubes for the 60X but
+  they do much higher power with newer generation technology.  Call ALC and
+  request a generic brochure if you are curious (or more than curious).
+<p>
+  <A HREF="laserpic/laserpic.htm">Photos of Various Laser Systems, Power
+  Supplies, and Components</A> has detailed views of various argon/krypton ion
+  lasers including examples of the 60 series from American Laser Corporation.
+  However, note that the ALC power supply shown in the photos will drive the
+  same laser heads, it is NOT the same implementation as the Omni-150R
+  described in detail in the section: <A HREF="laserasc.htm#ascom1">Omnichrome
+  150R Power Supply and 532 Laser Head (Omni-150R/532)</A>.  They differ
+  physically as well: The ALC (there are a variety of versions) is in an
+  elongated goldish-aluminum ("Alodined") box (as in the photos) while the
+  Omni is shorter and painted black.
+<p>
+<li>Lexel Laser, Inc. (now out of business) Model 88
+  (designated the Lexel-88).  They have various argon, krypton, and mixed gas
+  ion lasers with up to several WATTS of beam power using the same linear
+  power supply (though apparently not sold with the relatively small Model 88
+  anymore.  This series is probably the next most commonly
+  available ion laser compared to the ALC-60X/Omni-532.
+</ul>
+<p>
+Complete schematics of the power supplies and typical laser heads for these
+units are provided in the chapter: <A HREF="laserasc.htm#asctoc">Complete
+Ar/Kr Ion Laser Power Supply Schematics</A>.
+
+<h3><A NAME="apsweb">Web Site with Related Information</A></h3>
+
+<A HREF="http://www.evergreenlaser.com/">Evergreen Laser Corporation</A>
+has a Web site which includes a significant amount of information on ion laser
+tube and power supply adjustment, alignment, failure modes, troubleshooting,
+and repair.
+<p>
+Unfortunately, most of this did not work with Netscape V3.04.  Perhaps, it
+will work with your browser and/or the problems have since been corrected.
+
+<h3><A NAME="apsack">Acknowledgement</A></h3>
+
+Thanks to Steve Roberts (email: <a href="mailto:osteven@akrobiz.com">osteven@akrobiz.com</a>) for his extensive
+contributions of ion laser documentation and email discussions which were
+invaluable in the preparation of this chapter.  This in addition to those
+sections specifically attributed to Steve!
+
+<h3><A NAME="apssaf">SAFETY When Dealing with Ar/Kr Ion Laser Power
+ Supplies</A></h3>
+
+Whether you have constructed your own power supply, are testing an old one,
+or just checking out a newly acquired Ar/Kr ion tube, SAFETY must come first:
+<p>
+See the section: <A HREF="lasersaf.htm#saftoc">Laser Safety</A> with respect
+to the optical hazards associated with these higher power lasers.  While
+generally not in the metal cutting class, careless use of Ar/Kr ion lasers can
+certainly result in instant and permanent damage to vision.  There are all
+going to be at least Class IIIb and some are Class IV.
+<p>
+However, when compared even to large HeNe lasers, there are many additional
+very real dangers associated with Ar/Kr ion laser power supplies:
+<ul>
+<li>Line connected - Almost all Ar/Kr ion laser power supplies are directly
+  line connected since the 115 VAC (or 230 VAC or 208 VAC three-phase) are
+  quite convenient for providing (after rectification and filtering) the
+  required value of the raw DC that is needed.  Any power transformer would be
+  large and expensive, and functionally at least, not necessary.
+<p>
+<li>High current - Up to 10 AMPS or more at over 100 V (for small Ar/Kr ion
+  tubes - larger ones may have much more) will be present in various parts of
+  the power supply.  Your body will make just as nice a path for that 10 A as
+  the laser tube - but you will be much less happy or dead!
+<p>
+<li>High power resistors and transistors - These will be HOT enough to burn in
+  some cases AND line connected as well!
+<p>
+<li>High voltage starting pulse - 8 kV or more present at the laser tube anode
+  isn't likely to kill but can cause a reflex reaction which may have
+  unfortunate consequences (as in you rip and burn your flesh, and electrocute
+  yourself simultaneously).  And, that 8 kV is on top of a possible 400 V
+  boost voltage use for powering the starter AND the greater than 100 V main
+  DC high current supply!
+<p>
+<li>For large water-cooled lasers, keep in mind that water and electricity do
+  not make a happy combination.  Tap water connections are basically grounded
+  through the plumbing and the water itself.  And, any water leaks will create
+  all sorts of problems.  Needless to say, should this occur, pull the plug or
+  kill the breaker at the service panel, wait for the capacitors to discharge,
+  check them, and clean up everything before attempting to do anything else!
+</ul>
+Read, understand, AND FOLLOW, the guidelines provided in the document:
+<A HREF="safety.htm">Safety Guidelines for High Voltage and/or Line Powered
+Equipment</A>.
+<p>
+In addition:
+<ul>
+<li>DO take advantage of all safety interlocks unless absolutely required for
+  specific tests or measurements.
+<p>
+<li>DO provide insulating shields or barriers and install all protective covers
+  unless actually requiring access for testing to prevent accidental contact
+  with electrically or thermally hot components.  This is especially important
+  since people working with lasers tend to do so in darkened rooms and may not
+  know exactly where their extremities are at any given time!
+<p>
+<li>DO make sure that your house wiring can handle prolonged operating at 12 A
+  or more and that the PROPER rated fuse or circuit breaker is installed for
+  the wiring size in your walls!
+<p>
+<li>DO provide adequate WARNING and CAUTION labels at all appropriate locations.
+<p>
+<li>DO keep a beam stop in place whenever not actually using the laser's output.
+<p>
+<li>DO keep others - especially kids and pets - at a safe distance!
+</ul>
+<A NAME="apstah"></A>
+<hr>
+<br>
+<li>Back to <A HREF="laseraps.htm#apstoc">Ar/Kr Ion Laser Power Supplies Sub-Table of Contents</A>.
+<h2>Types, Alternatives to Home-Built System</h2>
+<h3><A NAME="apstah0">Not Quite as Many Choices</A></h3>
+
+While there may be some variations on the type of operating and starting
+voltage supplies, there are far fewer options for ion lasers compared to HeNe
+lasers. Partly this is because there are far fewer variations in Ar/Kr ion
+tube characteristics and partly because the magnitude of the discharge current
+eliminates certain approaches from practical consideration.
+<p>
+Some basics:
+<ul>
+<li>Operating voltage/current: For small air-cooled tubes, this is typically
+ 100 to 110 VDC at 3 to 10 A.  (Larger lasers of this type might use 35 A or
+ more!)  Like HeNe laser power supplies, two basic options here are AC line
+ and inverter types:
+<p>
+ <ul>
+ <li>AC line:  This takes the power input and rectifies and filters it to
+  provide relatively low ripple DC voltage to a series linear or switchmode
+  (buck) regulator.  Such supplies are generally NOT isolated.  An isolation
+  transformer could be used but it would be large, heavy, and expensive.
+<p>
+  For small air-cooled tubes, the power supply runs off of single phase
+  115 VAC and deliver around 150 VDC to the regulator.  High power lasers
+  will run off of 230 VAC, 240/208 VAC three-phase, or something even
+  nastier to produce up to 600 VDC at 45 A OR MORE!
+<p>
+  Note: Throughout this document, we use 115 VAC as the nominal line voltage
+  in the U.S.  However, the actual measured voltage may range from about 105
+  to 125 VAC and still be considered to be within acceptable limits by the
+  utility company.   For this single-phase system, using both Hot legs of
+  the line will then result in a nominal 230 VAC which may actually range
+  from about 210 to 250 VAC.
+<p>
+  A buck-boost autotransformer (NOT isolated!) may be included to more
+  closely match the line input to the requirements of the ion tube thus
+  reducing the stress on the regulator (see below).
+<p>
+  This is the simplest (!!) sort of approach to take for these tubes.  For
+  testing, a 5 to 10 ohm ballast (possibly variable) resistor and a Variac
+  can be used (without a regulator) as long as one eyeball is kept on the
+  current monitor.  Of course, the ballast resistor needs to be able to
+  dissipate several HUNDRED watts - the element of a space heater may work
+  well for this.  See the section:
+  <A HREF="laserapd.htm#apdspl0">Constructing Low Ohm High Power
+  Resistors</A>.
+<p>
+ <li>For continuous operation, a regulator is essential to achieve maximum tube
+  life and maintain stable optical output.
+<p>
+  This can use a pass-bank of power transistors operating in linear mode
+  (which makes a nice space heater for colder climates) or as a chopper
+  operating as a switchmode buck converter.  (Note, however, that the latter
+  type is usually still line-connected - there is NO isolation transformer.)
+  The Lexel-88 and ALC-60X/Omni-532 (150R) power supplies are typical of
+  each of these approaches, respectively.
+<p>
+ <li>Inverter: The (non-isolated) AC line is rectified and filtered to provide
+  around 150 VDC or doubled and filtered to provide around 300 VDC (assuming
+  a 115 VAC input).  This is applied to a DC-DC converter which implements
+  regulation through PWM control of the chopper transistor on-time.  The
+  advantages of this approach are that the laser power circuitry can be
+  totally isolated from the line and any required tube voltage can be
+  provided without regard to the AC line voltage (except to the extent that
+  the branch circuit has to provide the needed current!).
+<p>
+  Such high power inverters can be tricky to design.  One approach I have
+  considered is to use the salvaged inverter from the solid state power
+  supply from some model microwave ovens.  (However, these modules are sort
+  of rare since the simple half wave doubler operating from a HV line power
+  transformer/HV cap/HV diode is such a low cost reliable design and not
+  very models used them.)  The power supply for a full size oven is normally
+  designed for at least 1,000 W (which is ideal) but at too high a voltage
+  (3 to 5 kV pulsating DC rather than the 100 to 110 VDC we need).  However,
+  by rewinding the secondary of the ferrite transformer (only a few dozen
+  turns of heavy Litz wire would be required) and adding some primary side
+  filter capacitors, it could be adapted to an Ar/Kr ion laser application.
+  I have not tried this as yet but have one such module sitting around
+  impatiently waiting for its call to duty. :-)
+<p>
+  See the section: <A HREF="laserapd.htm#apditc1">High Frequency Inverter
+  Type Microwave Oven HV Power Supplies</A> for more info on these modules.
+ </ul>
+<p>
+<li>Ignition voltage.  Several kV (large lasers may require up to 30 kV or
+ more) but almost no current is required to ionize the gas in the tube.
+ However, due to the actual processes which take place during the transition
+ from this simple glow discharge to a high current arc, igniter design appears
+ to be somewhat of an art - at least if a variety of Ar/Kr ion tubes are to be
+ handled reliably.  Additional energy may need to be dumped into the tube at
+ the instant ionization occurs for starting to be consistently successful.
+ A burst of radio frequency instead of simply a high voltage pulse may be
+ used since it is considered less stressfull on the tube cathode.
+<p>
+ Therefore, for all of these reasons, the voltage multipliers, flybacks, and
+ HV pulse transformers typically used with HeNe lasers cannot be pressed into
+ service for starting Ar/Kr ion tubes.  In addition, the full 10 AMPS or
+ whatever of operating current would need to pass through them once the tube
+ starts (with the HeNe, it is just a few mA).
+<p>
+ The usual way to generate the starting voltage is with a high current pulse
+ transformer.  One design uses a toroid with 30 turns on the secondary - in
+ series with the anode - and a 1.5 turn primary.  Discharging a 1 uF, 400 V
+ capacitor into the primary results in an 8 kV output pulse.  There may be
+ resonating and snubber components as well.  Care must be taken in design to
+ minimize undershoot on the secondary - which can just as easily blow out the
+ discharge as well as start it if it is large enough!  However, the idea of
+ the resonant circuit may be to actually generate a burst of radio frequency
+ energy like a mini-Tesla coil.  The RF then actually ionizes the gas in
+ the tube rather than depending on high voltage to break it down.  This is
+ considered less stressful on the tube cathode.
+<p>
+ This type of pulse/resonant igniter is almost always required for older and
+ larger ion tubes.  However, for some 'small' short bore designs, other
+ options may exist.  See the section:
+ <A HREF="laserapd.htm#apdipb1">Alternative Starting Circuits for
+ Small Ar/Kr Ion Tubes</A>.
+<p>
+<li>Filament voltage: This usually comes from a dedicated high current
+ step-down power transformer with a centertapped secondary.  A Variac or
+ tapped primary is usually used to adjust filament voltage.  Typical
+ requirements are 2.5 to 3.0 VAC at 15 to 25 A.  The exact requirements will
+ be in the tube specs.
+<p>
+ Salvaged microwave oven transformers with the HV windings removed work well
+ in this application.  In this case, simply 'adjusting' the number of turns
+ or partial turns on the modified secondary may be adequate for setting
+ filament current.  However, it may require an axe, power drill, torch, and
+ several chisels to remove the baked on coil.  I *am* exaggerating but only
+ slightly. :-)
+</ul>
+
+<h3><A NAME="apsalps">Arc Lamp Power Supply for Ion Laser?</A></h3>
+
+Since the electrical characteristics of ion laser tubes and some types of
+high intensity discharge lamps are quite similar in terms of voltage and
+current, it may be possible to use a commercial arc lamp power supply for an
+air-cooled Ar/Kr ion laser.  Some of these units have active constant current
+or constant power regulation (probably a switchmode buck converter) and may be
+available inexpensively from surplus dealers or via auction sites like eBay.
+While the original cost may have been high, most people don't have a clue
+as to alternative uses.  So, unless they have the specific model lamp they
+are designed to operate, a good deal may be possible.
+<p>
+Like ion laser tubes, arc lamps usually require a starting voltage (up to 30
+kV depending on type) so even the igniter may be built in to the unit!  You
+will need a separate filament supply but that is a small price to pay for not
+having to build an entire power supply.
+<p>
+I don't know how the regulation on the typical arc lamp power supply compares
+to a well designed ion laser power supply but it should be much better than
+nothing!  And, these devices will have all sorts of protection and safety
+features required for commercial applications.
+<p>
+However, not being designed with the particular peculiarities of ion laser
+tubes in mind, there could be potential instabilities or other regulation
+problems.  Conceivably, additional (fractional Ohm) series resistance may
+be needed.  Be aware of the possible symptoms to know what may happen.  See
+the section: <A HREF="laserarg.htm#argmlh1">Plasma Oscillations and Other
+Instabilities in Ion Lasers</A>.
+
+h3><A NAME="apssmps">Using Common SMPSs to Construct an Ion Laser Power
+ Supply</A></h3>
+
+The following is one person's experience with adapting a pair of surplus
+multiple output switchmode power supplies (SMPSs) to power a Cyonics/Uniphase
+argon ion laser head.
+<P>
+I wouldn't recommend this approach for someone without a great deal of
+experience in switchmode power supplies as the most likely result would be
+lots of smoke and disappointment.  However, it does represent a possible
+alternative to buying an expensive commercial power supply or building one
+from scratch, particularly for locations where only 230 VAC is available.
+Surplus SMPSs are readily available, often for next to nothing.  With a bit
+of work (OK, maybe a bit more than a bit of work!), they can be converted
+into the main portion of an efficient ion laser power supply.
+<p>
+CAUTION: Not all multiple output switchers can be easily modified in this
+manner.  More extensive changes may be necessary or it may simply be
+impossible to get from point A to point B using the existing design.
+<p>
+(From: Mike Harrison (mike@whitewing.co.uk).)
+<p>
+I've written an article which describes the modification of some cheap surplus
+switchmode power supplies for powering my argon ion laser tube.  Go to:
+<A HREF="http://www.electricstuff.co.uk/">Electricstuff</A> and take the
+link: "Argon laser power supply from surplus switchmode PSUs".
+
+<h3><A NAME="apsscsp">Steve's Comments on Switchmode Power Supplies and
+ Phase Converters</A></h3>
+
+The whole idea of a switchmode power supply is that as long as
+the rectified line voltage is higher then the tube voltage by about
+10 volts or more, you can run the tube. How much current you can get
+is then determined by the impedance of your power line, instead of the
+dissipation limits of the traditional pass-bank. What you trade off for
+this service, is A: A loss of regulation at higher currents, B: As you
+increase current to the tube, you may run into a lack of power for
+your magnet and cathode as the line voltage sags.  C: Often somewhat
+unstable operation of the plasma with some winking or chirping or
+visible flickering at high currents.  For example, my I90MRA running
+full out on a switcher shows some 60 Hz flickering of the low gain violet and
+green lines synchronous to the power line peaks.  This is because you
+can never have enough filter capacitors with a switcher as they
+regulate by pulse width modulating the rectified line voltage  at
+20 to 50 kHz. What's between the modulator and the plasma tube is
+usually a simple filter consisting of a inductor and a small filter cap,
+<p>
+It's been my experience and that of some medical technicians that tubes
+ran for long terms on switchers at high currents die from sagged cathodes.
+<p>
+You can/will experience similar problems with a 3 phase variable
+drive speed drive depending on your line loading.
+<p>
+A medical technician friend of mine travels with a professional Ronk
+rotary converter, its much smaller then the 10/12 hp motor used in the
+home made phase converters and you can lift it with two hands.  We had
+no trouble running a 3 phase Lexel-95 supply (yes the huge heavy
+one) in my garage with the Ronk, its a little noisy, but it seems
+to be the best solution for single phase.
+
+<h3><A NAME="apstah1">So You Still Want to Build an Ar/Kr Ion Laser Power Supply?</A></h3>
+
+With the need to provide all this high power and dangerous circuitry to power
+even a 'small' air-cooled ion tube, it should be clear that if you can beg,
+borrow, buy, or otherwise liberate a commercial Ar/Kr ion laser power supply
+for your needs, by all means do so!  Even if the unit is in absolutely total
+disrepair (including being run over by a fork-lift, dropped from a 10 story
+building, or having suffered a China-Syndrome style melt-down), it will likely
+be far easier to revive and restore something that once worked than to create
+your own.  Any required modifications will almost certainly be far easier than
+starting from scratch.  This isn't like a little HeNe job as any faults can be
+spectacular and depressing.
+<p>
+If you really have no choice, or just like a challenge, by far the most
+straightforward approach is to use a line connected rectifier/filter with a
+linear regulator.  While not quite as efficient as a switchmode or inverter
+type, the hassles are fewer and parts are more readily available.  For initial
+testing, a low value high wattage ballast resistor can substitute for the
+regulator.  Just don't be tempted to leave it this way permanently.  And, in
+any case, don't neglect the essential current monitor!
+<p>
+Note that if all you want to do is test a newly acquired Ar/Kr ion tube, there
+may be a considerably simpler alternative to a continuous high current power
+supply.  See the section: <A HREF="laseraps.htm#apspit0">Pulsed Operation of
+an Ar/Kr Ion Tube</A>.
+<p>
+<A NAME="apsols"></A>
+<hr>
+<br>
+<li>Back to <A HREF="laseraps.htm#apstoc">Ar/Kr Ion Laser Power Supplies Sub-Table of Contents</A>.
+<h2>Organization of Linear, Switchmode, Inverter Types, Foreign Power</h2>
+<h3><A NAME="apsols0">Typical Organization of Ar/Kr Power Supply with Series Regulator</A></h3>
+
+A bridge rectifier and filter network (C-R-C or C-L-C typical) provides about
+150 VDC directly from the 115 VAC line input.
+<p>
+The igniter (starter) circuit may operate off of this DC+ supply or an
+additional low current 'boost' source to use a higher voltage (which reduces
+the turns-ratio of its high current pulse transformer - a hard to wind (or
+high cost) part.
+<p>
+The current regulator uses bipolar or MOSFET transistors in a linear or
+switchmode (buck converter) configuration.  Some power supplies use a
+combination of a switchmode preregulator to drop the rectified filtered line
+voltage to a range where a linear regulator can run with reduced power
+dissipation and use fewer, lower cost pass-bank transistors.
+<p>
+Feedback based on current, light (beam) sensing, or an external modulation
+signal, is used to maintain the proper discharge current through the tube.
+For initial testing, this can be done manually using a high power adjustable
+ballast resistor and possibly a large Variac on the AC line input to the power
+supply.  However, light feedback is required to minimize optical noise in the
+laser beam and to maximize ion tube life.
+<PRE>
+
+              +----------+ DC+                     +-----------------+
+     H o------|          |-------------------------| Igniter Circuit |-----+
+              |   Main   |                         +-----------------+     |
+       AC     |  Bridge  |                                                 |
+      Line    |   and    |     +------------+    Light Feedback (option)   |
+              |  Filter  | DC- | Linear or  |&lt;-------------------------+   |
+     N o------|          |-----| Switchmode |       F1 +-----------+   |   |
+              +----------+     | Regulator  |   +------|-+         | )-+   |
+                  |   |        +------------+   |      |  )      |-|-------+
+                  |   +------+        |         | +----|-+         | Tube+
+                  |           )   +---|---------+ | F2 +-----------+
+                  |  Filament )||(    |           |    Ar/Kr ion tube
+                  |   Supply  )|| +---+ Tube-     | 
+                  |           )||(                | 
+                  |           )   +---------------+
+                  +----------+
+
+</PRE>
+This type of supply with a linear regulator would be the easiest to construct.
+While efficiency is lower (abysmal instead of just terrible - probably about
+40% more heat generated than for a well designed switcher), the difficulties
+of implementing a robust and fool-proof Pulse Width Modulator (PWM) controller
+are eliminated.  Just provide a large enough heat sink and jet turbine driven
+cooling fans!
+<p>
+Since everything except possibly some logic or low level analog circuits are
+directly line connected, great care (even more than just considering the
+1,500 W or so of raw power we are dealing with!) must be taken in the basic
+construction, testing, and adherence to ALL safety precautions, implementation
+of ALL safety, electrical, and thermal interlocks and protective devices.  In
+many cases, even that control circuitry is line-connected as this simplifies
+the implementation since no isolated interfaces are required.
+
+<h3><A NAME="apsols1">Typical Organization of Inverter Type Ar/Kr Power Supply</A></h3>
+
+A bridge rectifier or voltage doubler and filter network (C-R-C or C-L-C
+typical) provides about 150 VDC or 300 VDC respectively from the 115 VAC line.
+This is used by the DC to DC inverter to produce the required 100 to 110 VDC
+to the Ar/Kr ion tube.
+<p>
+The igniter (starter) circuit may operate off of this DC+ supply, a separate
+winding on the inverter transformer, or an additional low current 'boost'
+source to use a higher voltage (which reduces the turns-ratio of its high
+current pulse transformer - a hard to wind (or high cost) part.
+<p>
+Feedback based on current, light sensing, or an external modulation signal,
+throttles the DC to DC inverter by Pulse Width Modulation (PWM) - controlling
+the duty cycle of the drive to its chopper transistor(s) in a manner similar
+to that for controlling a series pass switchmode regulator.  However, there
+are added design considerations in dealing with the characteristics of the
+high frequency ferrite inverter transformer.
+<PRE>
+
+              +----------+ DC+ +------------+      +-----------------+
+     H o------|          |-----|  DC to DC  |------| Igniter Circuit |-----+
+              |   Main   |     |  Inverter  |      +-----------------+     |
+       AC     |  Bridge  |     | --+    +-- |                              |
+      Line    |   and    |     |    )||(    |    Light Feedback (option)   |
+              |  Filter  | DC- |    )||(    |&lt;-------------------------+   |
+     N o------|          |-----| --+    +-- |       F1 +-----------+   |   |
+              +----------+     +------------+   +------|-+         | )-+   |
+                  |   |               |         |      |  )      |-|-------+
+                  |   +------+        |         | +----|-+         | Tube+
+                  |           )   +---|---------+ | F2 +-----------+
+                  |  Filament )||(    |           |    Ar/Kr ion tube
+                  |   Supply  )|| +---+ Tube-     | 
+                  |           )||(                | 
+                  |           )   +---------------+
+                  +----------+
+
+</PRE>
+While still very dangerous to troubleshoot, at least the main tube circuits
+are isolated from the AC line by the inverter transformer.  Aside from the
+slightly reduced risk of frying yourself, I would probably not recommend the
+inverter approach unless you already have its foundation such as the HV power
+module from a solid state microwave oven!
+
+For more information, see the chapter: <A HREF="laserapd.htm#apdtoc">Ar/Kr Ion Laser Power Supply Design</A>.
+
+<A NAME="apsols2">Ion Laser Power Supply on Foreign Power</A></h3>
+
+The most common example of this would be to run a USA model power supply
+(115 VAC/60 Hz) on European power (230 VAC/50 Hz) or vice-versa.  By far the
+most significant difference is the voltage as there is usually very little
+that is affected by line frequency in an ion laser power supply but see the
+comments below.  The best solution will depend on the model and type of the
+power supply (e.g., linear or switchmode) so there is no one-size-fits-all
+answer.  Obviously, it is best to check with the laser or power supply
+manufacturer.  However, here are some general comments on the voltage
+conversion:
+<p>
+<ul>
+<li>For linear power supplies, conversion is virtually impossible unless the
+ unit already includes a buck/boost transformer with suitable taps since the
+ pass-bank would need to drop a grossly different amount of voltage.  Even if
+ the devices could handle the voltage, power dissipation would skyrocket for
+ the conversion to 230 VAC input.  Going the other way, it is unlikely that a
+ high enough voltage could be supplied to the laser head.  Some linear PSUs
+ like the one for the Lexel-88 have the needed tapped transformers and
+ whatever else is needed to select input power.  See the section:
+ <A HREF="laserasc.htm#asclx1">Lexel-88 Power Supply and Laser Head
+ (Lexel-88)</A>.
+<p>
+<li>For switchers, inverters, or hybrids (which also include a linear
+ pass-bank for fine regulation), conversion may be possible but would need to
+ be determined on a case-by-case basis.  The main filter capacitor would have
+ to be rewired and chopper and related components might need to be changed,
+ added, or removed.  For one example, see the section:
+ <A HREF="laserasc.htm#ascomcon">Converting the Omni-150 from 115 VAC to 220
+ VAC Operation?</A>.
+<p>
+<li>Logic and analog power, front panel indicators, and fuses and circuit
+ breakers, etc., would each have to be dealt with to maintain functionality
+ and safety.
+</ul>
+
+The most straightforward approach and the one with the lowest risk is to use
+an external buck/boost autotransformer. Yes, for the required amount of AC
+power, these will be heavy.  However, such a unit should not be that expensive
+(at least compared to the cost of the laser!) and will solve all voltage
+compatibility problems without needing to make any changes to the power supply
+itself.  Select a transformer that can provide the maximum required line
+current with minimal voltage droop (say, less than 5 percent) and that is
+rated for continuous duty.
+<p>
+As for line frequency, going from 60 Hz to 50 Hz may affect the amount of
+filtering required after the rectifiers, and heating of the low voltage power
+transformer(s) and AC relays (if any).  However, this really isn't likely to
+be an issue unless the design was marginal to begin with!  The only other
+issue would be any logic (like the preheat timer of the Omni-150) that uses
+the line frequency as a clock and would then run slow - likely not a problem
+in any case.  Powering a 50 Hz unit on 60 Hz should be fine except for the
+possible timer running fast.  In either case, if there are already taps and/or
+jumpers for selecting dual voltage operation, the frequency difference was
+probably already taken into consideration.  If not, then this will need to
+be evaluated as well but the required changes, if any, should be minor
+compared to those required to convert to a different line voltage.
+<p>
+<A NAME="apsmmt"></A>
+<hr>
+<br>
+<li>Back to <A HREF="laseraps.htm#apstoc">Ar/Kr Ion Laser Power Supplies Sub-Table of Contents</A>.
+<h2>Making Measurements and Power Supply Testing</h2>
+<h3><A NAME="apsmmt0">Measurements of Current and Voltage in Ar/Kr Ion Laser Power Supplies</A></h3>
+
+Monitoring of discharge current is essential to maintain the health of your
+Ar/Kr ion tube (and power supply).  Various voltage measurements may be needed
+as well.  However, because of the high currents involved AND the non-isolated
+nature of the power supply, this isn't as trivial as connecting your Radio
+Shack DMM into the circuit:
+<p>
+Note: Where the use of a panel meter is suggested below, if you salvaged the
+meter movement from some other equipment or your junk, box, double check the
+actual sensitivity.  There should be a rating printed at the bottom of the
+meter face or the back of the unit like "fs=1mA", "fs=10A", or something
+similar.  Even though the scale may be labeled with a particular set of units
+and values, a series or shunt resistor may actually be needed to adapt the
+basic movement to read at that sensitivity.  An AC meter may actually use a
+DC movement with an external rectifier!  It's also a good idea to test the
+meter to confirm that it hasn't been damaged due to an overload or just age.
+<ul>
+<li>Tube discharge current - THIS IS CRITICAL for the longevity of your Ar/Kr
+ ion tube.  Don't ignore it!  Monitoring of 10 A or more may be needed.  A
+ a low value high power shunt resistor is the easiest way to obtain this
+ reading.
+<p>
+ A .1 ohm 50 W power resistor will develop .1 V/A across it resulting in 1 V
+ at the maximum likely tube current of 10 A.  The shunt must be stable with
+ respect to temperature (which is one reason for using a 50 W resistor when
+ the maximum sustained dissipation is only 10 W).  The system should then be
+ calibrated with the actual voltmeter or mA meter to be used.
+<p>
+ While a VOM or DMM can be used, it is really best to have a dedicated meter
+ for continuous discharge current monitoring.  There are two reasons:
+<p>
+ Note: Most cheap VOMs or DMMs won't reliably measure resistances below a
+ couple of ohms. To measure a low value resistor, get a D cell or power
+ supply capable of a couple of amps and wire it to the unknown resistor in
+ series with another power resistor that will drop the current to a value you
+ can measure (or calculate).  Knowing the current, you can measure the voltage
+ across the unknown resistor and calculate its value from R=V/I. WARNING: If
+ you do this on a previously powered laser head, just make sure the caps are
+ discharged!
+<p>
+ <ul>
+ <li>Limiting the discharge current is critical to the life of your Ar/Kr ion
+  tube.  Therefore, the modest cost of these components is well worth it.
+<p>
+ <li>Any sort of probing of a line-connected system is risky.  Since you will
+  want to be doing this often, these risks are multiplied.
+ </ul>
+<p>
+ One way to implement a permanent current monitor is to use a basic panel
+ meter.  This can be a moving coil (D'Arsonval) or digital type.  Add a
+ variable series resistor for calibration using the current shunt.  For
+ example, a meter rated at 1 mA full scale will require a total resistance
+ of 1K ohms (for the meter itself and current limiting resistors) connected
+ across the .1 ohm shunt to read 10 A full scale.
+<PRE>
+
+                                 Rs  .1  50 W
+      Tube- o======+==================/\/\=================+======o DC-
+                   |                                       |
+                   |          +--+             M1          |
+                   |    R1    |  v R2     + +--------+ -   |
+                   +---/\/\---+-/\/\--------| 0-1 mA |-----+
+                       940      100         +--------+
+                             Calibrate   10 A Full Scale
+
+</PRE>
+ Splitting the current limiting resistor into the fixed R1 and Calibrate pot
+ (R2) allows easy fine adjustment without requiring an expensive 10 turn pot.
+<p>
+ Make the main current carrying connections to the power resistor.  Tap off
+ of this go to the meter.  That way, it is less likely that a bad connection
+ can result in the shunt opening - which would fry your meter in an instant!
+<p>
+ Calibrate this setup using a DC power supply and known accurate ammeter.
+<p>
+<li>For testing of a power supply with an active regulator in particular
+ (linear or switchmode type), monitoring of the tube current with an
+ oscilloscope or true AC ammeter with a high enough frequency response (say
+ 1 kHz) is desirable to assure that there aren't hidden oscillations in the
+ feedback loop which can result in beam power variations as well as shortened
+ Ar/Kr ion tube life due to the excessive peak current which wouldn't show up
+ on a slow responding panel meter (a few Hz max) or as visible flickering of
+ the laser beam (50 to 100 Hz max).   Oscillation isn't likely to be a problem
+ with a brute force unregulated power supply (though it is not out of the
+ question due to the possible negative resistance characteristics of the tube
+ itself), but is quite possible if the loop transfer function of an active
+ regulator turns out to be unstable.  Of course, an unregulated supply will
+ likely have oscillation in current of its own - due to imperfect filtering
+ at the line frequency or multiples thereof!
+<p>
+ <ul>Where the power supply is line-connected (not isolated), this measurement
+  would have to be done differentially across the sense resistor, Rs (above) if
+  the scope or meter has its case tied to ground since attaching this to the
+  power supply would result in fireworks.
+<p>
+  With a dual trace scope, for example, set up the vertical channels to be A-B
+  (A, invert B).
+<p>
+ <li>I don't recommend making a direct measurement of this type with a single
+  trace scope since it would require isolating it from earth ground (floating
+  the chassis).  This is a dangerous as now the entire chassis of the scope
+  and all is exposed metal parts are connected to the AC line through the
+  power supply.
+<p>
+ <li>An alternative procedure (with any scope) is to use a current transformer.
+  The main current carrying conductor would pass through a toroid core with a
+  several hundred turn secondary feeding a resistive load.  Details are left
+  as an exercise for the student. :-)
+ </ul>
+<p>
+<li>Pass-bank voltage - For series regulators, the voltage across the bank of
+ power transistors is an indication of how hard they are working and is
+ another useful thing to monitor continuously.  This can be used for both
+ linear and switchmode regulators (between the input and beyond any filter
+ components.
+<p>
+ A dedicated panel meter is best for this as well.  Obtain a panel meter
+ with a full scale sensitivity of 75 to 100 V or add an appropriate series
+ resistor to a current (e.g., 100 uA full scale) meter.  Make sure the
+ resistor(s) can handle the maximum voltage!
+<p>
+<PRE>
+
+                              +--+               M1          
+                       R1     |  v R2     + +----------+ -    
+             + o------/\/\----+-/\/\--------| 0-100 uA |----------o -
+                      940K      100K        +----------+
+                             Calibrate    100 V Full Scale
+
+</PRE>
+<p>
+<li>Ion tube voltage - while this isn't usually something that needs to be
+ monitored unless there is a problem, it can tell you a lot about the health
+ of the tube since gas pressure and discharge voltage at a given current are
+ related.  There are two issues: the line connected power supply as noted
+ above and the ignite pulse.  DO NOT put any sort of meter directly across
+ the anode and cathode of the tube!  You will be needing a new meter if the
+ igniter kicks in. :(  Instead, put an isolated voltmeter on a 200 VDC or
+ higher range (for small air-cooled ion tubes) between the DC+ feed to the
+ laser head and the tube cathode.  If there is a series current sensing
+ resistor or blocking diode in series with the tube anode (in addition to the
+ ignite transformer), estimate the voltage drop across these components and
+ subtract it from the readings made after the tube starts.
+<p>
+<li>Logic, analog, and low voltages - Such measurements are tricky only because
+ of the non-isolated nature of these power supplies.  Several different
+ grounds or commons may be involved (e.g., earth ground, DC-, DC+, Tube-,
+ etc.) and any of these may need to be the reference for your multimeter or
+ oscilloscope.
+<p>
+ An isolation transformer is highly desirable for personal safety and to
+ protect your (grounded) test equipment.
+<p>
+ <ul>
+ <li>For low power measurements where the actual high power circuitry won't be
+  active, a normal 250 VA isolation transformer - which you likely already
+  have or should have - will be adequate.  For details on constructing one,
+  see the document:
+  <A HREF="http://www.repairfaq.org/sam/tshoot.htm">Troubleshooting of
+  Consumer Electronic Equipment</A>.
+<p>
+ <li>Where the high power portions of the supply are active, reasonable size
+  isolation transformers will be useless.  Something at least 2X of the
+  maximum VA requirements of the system will be needed - which few people
+  have!  Even an isolation transformer made from back-to-back or rebuilt
+  microwave oven transformers is probably not large enough for testing a
+  power supply at anywhere near full output but may be adequate at low tube
+  current.  However, a pair of matching pole transformers might work. :-)
+<p>
+  Given that these are not usually handy, make sure you understand the safety
+  guidelines provided in the document: <A HREF="safety.htm">Safety
+  Guidelines for High Voltage and/or Line Powered Equipment</A> - AND FOLLOW
+  THEM!  Minimize the amount of probing done under these conditions and make
+  connections only with the unit unplugged and large capacitors discharged!
+  Isolating the test equipement is better than nothing and will allow
+  measurements to be made, but does not eliminate the danger.
+ </ul>
+</ul>
+
+<h3><A NAME="apsmmt1">Initial Power Supply Testing</A></h3>
+
+It should be safe to perform initial sequencing and voltage tests on a power
+supply without attaching a laser head since the conditions are similar to
+those present when a tube just doesn't want to start.  The interlocks will
+need to be jumpered to fool it into thinking everything is in place to allow
+it to enter the operate state or come on at all (depending on design).  Then,
+measurements of the various voltages (e.g., filament, HV+, Boost) can be made
+using an ISOLATED multimeter.  Of course, there is no load so testing of the
+regulator (if any) won't be possible.  However, if these are present and
+correct, there is an excellent chance the supply is functional.
+<p>
+Once you attach the laser head, ideally, one would possess 5 or 6 functioning
+eyeballs to keep tabs on all aspects of a new Ar/Kr ion tube and power supply
+combination as it is being tested for the first time.
+<p>
+(From: Steve Roberts (osteven@akrobiz.com).)
+<p>
+Where there is no robust current regulator, for initial testing it is wise to
+start at 7 or 8 Ohms and work down, even with the pi section CLC or CRC filter
+as these discharges do possess a negative runaway characteristic despite what
+the literature says.  For some reason it always seems to need a 2 to 4 ohm
+offset above the calculated value or it will run away.
+<p>
+They also need a minimum current of about 3.5 amps to sustain the discharge
+with a new tube and about 4.35 A as the tube grows older, this was just
+measured in my shop with a new tube versus a tube with 2000 hours on it.  The
+new one (an Omnichrome 532 with a buck converter) dropped out on line voltage
+dips when it came from the factory set for a 3.25 A lower limit.  This was on
+118.2 V AC.
+<p>
+Therefore when firing up a 'heater' (space heater ballast) based supply, you
+often have to lower the resistance a little at a time to find the minimum
+stable current point.  It is better to start a high resistance and work down.
+Of course, you will have a permanent current monitor in the system!
+<p>
+Also see the sections: <A HREF="laseraps.htm#apsmmt0">Measurements of Current
+and Voltage in Ar/Kr Ion Laser Power Supplies</A> and
+<A HREF="laseraps.htm#apsmmt2">Testing with a Dummy Load</A>.
+
+<h3><A NAME="apsmmt2">Testing with a Dummy Load</A></h3>
+
+It should be possible to use a Variac and dummy load to determine basic
+functionality of these power supplies.  However, there is no easy way to
+simulate the Ar/Kr tube I/V characteristics.  The best that can reasonably
+be done is to use a HUGE power resistor.  A 1,200 W space heater element
+can be used for the load since this will draw about 10 A at 100 V.  A space
+heater with more than one wattage setting (not only a thermostat!) can be used
+to test at multiple simulated tube currents (but DON'T switch while powered!).
+For example, assuming a nominal tube voltage drop of 100 V, use 600 W for 5 A,
+900 W for 7 A, 1,200 W for 10 A, 1,500 W for 12 A.
+<p>
+It will be necessary to power the logic and control circuits separately for
+this test so that their supply voltage is constant.
+<p>
+WARNING: Some commercial power supplies simple do not like to power anything
+but a real tube with its nice non-linear V-I characteristic.  This is
+particularly true of switchmode designs.  Therefore, I do not recommend
+using a dummy load for these as many expensive parts will likely blow.
+<p>
+Provide wired-in monitoring of BOTH load (tube) current AND regulator voltage
+drop.  (See the section: <A HREF="laseraps.htm#apsmmt0">Measurements of
+Current and Voltage in Ar/Kr Ion Laser Power Supplies</A>.)
+<p>
+Select the load rating, with the Variac at 0, power on the main supply.  Bring
+up the voltage slowly.
+<ul>
+<li>For power supplies without regulators, as you do so, the current should
+  climb slowly, reaching approximately the expected current at nominal line
+  voltage.
+<p>
+<li>For power supplies with regulators, as you do so, the current should climb
+  to the value at which the regulator is set and then remain stable at that
+  point through full line voltage and beyond (i.e., to 125 VAC).
+<p>
+<ul>
+<li>With linear regulators, make sure that the voltage across the regulator
+  NEVER exceeds the safe limits (much less than the breakdown ratings of the
+  transistors) at any time.  There should be a zener clamp or other protection
+  circuit to guarantee this during startup, normal operation, and fault
+  conditions (e.g., shorted tube) as well!
+<p>
+<li>Check that any current limit or shutdown circuits function properly.
+<p>
+<li>For pass-banks using multiple transistors, check for proper current
+  balancing at low, medium, and especially at maximum rated current.  With
+  proper design, a variation of more than, say, 5 percent, could indicate a
+  low Hfe transistor or out-of-tolerance discrete component.
+</ul>
+</ul>
+CAUTION: Do not apply power suddenly - without a Variac - as the momentary
+voltage drop across the regulator will be the full DC+ value which may blow
+the transistor(s).  The voltage will also be excessive if you try to run at
+a lower current than for what you based the load resistor for similar reasons.
+
+<h3><A NAME="apsmmt3">Testing with an Inexpensive Laser Head</A></h3>
+
+Argon ion laser heads often show up on the surplus market or from private
+individuals whose tubes are weak or have other problems like messed up mirror
+alignment.  While these were probably pulled from their original home in some
+high speed printer due to low output and may be not be very desirable for
+optics experiments or light shows, they are the ideal vehicle for ion laser
+power supply testing.  Even if the voltage drop across the tube is slightly
+low (as would be typical of a high mileage tube), that shouldn't matter and if
+anything, is a slightly more strenuous test of the power supply!
+<p>
+The best type for testing probably have internal mirror ion tubes - eliminating
+another set of hassles.  If mirror alignment turns out to be the only problem,
+you can really win big since this is often correctable.  See the sections
+starting with <A HREF="laserhtr.htm#htrmir">Problems with Mirror Alignment</A>
+for internal mirror tubes and <A HREF="laseratr.htm#atrail">External Mirror
+Laser Cleaning and Alignment Techniques</A>.
+<p>
+<A NAME="apsrep"></A>
+<hr>
+<br>
+<li>Back to <A HREF="laseraps.htm#apstoc">Ar/Kr Ion Laser Power Supplies
+ Sub-Table of Contents</A>.
+<h2>Ion Laser Power Supply Repair</h2>
+<h3><A NAME="apsrep0">Typical Power Supply Failures and Possible
+ Causes</A></h3>
+
+Since these are high power devices, it isn't too surprising that failures
+are common either due to problems in the power supply or the laser head.
+While various protection devices are generally present, we all know that
+the most expensive parts often blow to protect the fuses!  Such 'events' can
+be quite spectacular resulting in smoke, flames, aroma of burnt stuff, and
+parts which launch portions of themselves over considerable distances.  With
+these line-connected circuits, a shorted bridge rectifier can turn the analog
+control board to molten slag!
+<p>
+Needless to say, when designing such a power supply and selecting components,
+err on the side of being conservative.  Select parts to run at much less than
+their rated voltage, current, or power (maximum stress of 1/2 the part's
+rating isn't too bad a rule-of-thumb).  This is especially important for
+devices that fail in a sudden catastrophic manner like power semiconductors!
+<p>
+<ul>
+<li>Highly stressed high power parts like transistors and resistors are prone
+  to failure.  The cause may be a defect in the part itself, an overload
+  downstream (e.g., a short in the laser head), or a fault in the control
+  system.
+<p>
+<li>Laser head incompatibility or failure may result in damage to multiple
+  parts of the power supply itself.  For example, the failure or lack of a
+  series blocking diode in an ALC-60X or Omni-532 laser head (or one you are
+  connecting to your power supply) may result in multiple blown parts in the
+  power supply itself.  In the case of the Omni-150R, these may include the
+  expensive MOSFETs (Q8 and Q9) and snubber diode (D21), snubber capacitor
+  (C35), several resistors, and possibly other discrete components and ICs.
+  See the section: <A HREF="laserasc.htm#ascom1">Omnichrome 150R Power Supply
+  and 532 Laser Head (Omni-150R/532)</A> for sample schematics.
+<p>
+  In addition to the connections and wiring being compatible, the tube voltage
+  is important as well.  Attempting to run a tube with a much lower voltage
+  than for which the power supply was designed will result in excessive
+  power dissipation in a linear pass-bank, or excessive strees on chopper
+  transistors.  Attempting to run a higher voltage tube may result in a
+  flashing laser since the power supply will be unable to maintain the
+  arc, but if not allowed to run this way for long, probably no damage.
+  But for gross mismatches, there are also issues like what voltage the
+  starter circuit can handle.
+<p>
+<li>Cascade failures are common.  For example, where multiple power transistors
+  are used in parallel in a regulator, if one goes, the regulator no longer
+  exists for all intents and purposes and full input voltage is applied to the
+  load.  The associated emitter current balancing resistor will likely be
+  obliterated before any protective devices open up.
+<p>
+  Where a high power regulator uses a large series-parallel combination of
+  power transistors, if one shorts, it may overstress others.  If there is
+  inadequate protection, multiple devices will fail in rapid succession until
+  the entire regulator behaves like a blob of solder taking other parts with
+  it.  Even components that still appear to function may have suffered
+  permanent damage during the overload.
+<p>
+<li>Line input components - diodes and capacitors - see the full AC current.
+  The peak currents through the diodes and into and out of the filter
+  capacitors can be many times the average load current.  This is more
+  stressful and shortens the life of these components.  Since such huge
+  amounts of power are potentially available, failures here can be truly
+  spectacular and depressing!
+<p>
+<li>Electrolytic capacitors in particular fail from age and heat - both likely
+  factors in ion laser power supplies.  They can suffer from reduced uF value,
+  increased effective series resistance (ESR), increased leakage - or all of
+  the above.  For example:
+<p>
+<ul>
+  <li>Faulty capacitors in the igniter can cause erratic starting or inability
+    to start at all.
+<p>
+  <li>Faulty capacitors in the main smoothing network can result in loss of
+    regulation, a reduced range over which the regulator functions properly,
+    or an inability to maintain a stable discharge at all.
+</ul>
+<p>
+<li>Heat in general is the enemy of even conservatively rated parts.  Lack of
+  maintenance such as accumulated dirt and dust, or a sluggish fan, can
+  quickly result in problems.
+<p>
+<li>Thermal cycling of any type of equipment can lead to bad connections which
+  can cause all sorts of problems.
+</ul>
+<p>
+Where any type of failure occurs, don't just replace the obviously blown
+parts.  Check everything in the vicinity as well.  Replace anything that is
+questionable even if not an outright failure.  Make sure all your (or
+someone else's) connections are secure using lock washers for screws and
+bolts, a proper tool for crimps, and an adequate iron or gun for soldered
+connections.  When powering up after such an 'event' proceed as you would
+for a brand-new or newly constructed power supply.
+<p>
+There are also some comments on the repair of specific power supply models in
+the chapter: <A HREF="laserasc.htm#asctoc">Complete Ar/Kr Ion Laser Power
+Supply Schematics</A>.
+<p>
+For much more information on the servicing of these types of devices, see the
+following (as appropriate for your power supply):
+<ul>
+<li><A HREF="http://www.repairfaq.org/sam/semitest.htm">Testing of
+ Discrete Semiconductors with a DMM or VOM</A>.
+<p>
+<li><A HREF="http://www.repairfaq.org/sam/captest.htm">Testing of
+ Testing Capacitors with a Multimeter and Safe Discharging</A>.
+<p>
+<li><A HREF="http://www.repairfaq.org/sam/flytest.htm">Testing of Flyback
+ (LOPT) Transformers</A> may also come in handy as it also applies to general
+ transformer and coil testing.
+<p>
+<li><A HREF="http://www.repairfaq.org/sam/smpsfaq.htm">Notes on the
+ Troubleshooting and Repair of Small Switchmode Power Supplies</A> which is
+ directly applicable both switchmode and inverter type ion laser power
+ supplies.
+</ul>
+<h3><A NAME="apsrep1">Troubleshooting Check List</A></h3>
+
+Portions of the following come from the Omnichrome 150R power supply manual
+and slightly modified to be more general:
+<p>
+Before beginning a lengthy troubleshooting session, check the following:
+<p>
+<ol>
+<li>Are all the connectors secure?  Look for burnt/lose/damaged pins.  Reseat
+ all connectors just to be sure.
+<p>
+<li>Is there AC power to the laser system?  Is it the correct voltage?
+ On some power supplies, a small decrease in line voltage can make the
+ difference between stable and erratic or no operation.
+<p>
+<li>Is there power at the laser head (LED on)?
+<p>
+<li>Is there anything blocking cooling air flow to the power supply or laser
+ head (which would activate the thermal protection devices)?
+<p>
+<li>Is the beam block closed or something else blocking the laser beam?
+<p>
+<li>Did you wait long enough from initial turn-on (typically 2-3 minutes for
+ filament preheat and tube start)?
+<p>
+<li>Are all the interlocks closed?
+</ol>
+<p>
+Two types of problems are common:
+<p>
+<ul>
+<li>Complete failure: No output beam, laser will not start, laser shuts off
+  or cycles on and off.
+<p>
+<li>Low laser output.  If the discharge current is correct, this must be a
+  fault with the tube or resonator (mirror) alignment.
+</ul>
+
+<h3><A NAME="apsrep2">Troubleshooting Where There is No Beam at All</A></h3>
+
+<ol>
+<li>Check to make sure that power is on and interlocks are closed.  Go through
+ the normal startup sequence - give it enough time!
+<p>
+<li>Where power and interlocks check out, see if the discharge is present - the
+ tube has started.  This can be done by checking the current monitor or test
+ points, or by placing a white card in front of the output coupler or mirror
+ of the Ar/Kr ion tube.  Even if there is no laser beam, there should be a
+ diffuse purple glow from the discharge itself.
+<p>
+ WARNING: Do not put your eyeball (or any other part of you!) near the tube.
+ Aside from the high voltage, there is considerable UV which isn't any good
+ for organic matter either!
+<p>
+<li>If there is a discharge and it is at a sufficient current for laser action
+ to take place, either the mirror alignment is off or the optical surfaces
+ are dirty, damaged, or contaminated (external mirror lasers only).
+<p>
+ If under light control, the current will likely be pegged at the maximum
+ (e.g., 10 A) attempting to get a proper power beam.
+<p>
+ Check the mirror alignment and/or clean and/or realign the resonator as
+ appropriate.  See the sections: <A HREF="laserhtr.htm#htrmir0">Checking and
+ Correcting Mirror Alignment of Internal Mirror Laser Tubes</A> or
+ <A HREF="laserarg.htm#argail">Argon/Krypton Ion Laser Cleaning and
+ Alignment Techniques</A> (external mirror tubes) depending on the type of
+ laser tube in your system.
+<p>
+<li>If plasma is flashing off and on (at about a 1 second or so rate), line
+ voltage (or your Variac) may be too low or there may be a problem with
+ the regulator or its control circuitry.
+<p>
+<li>If there is no discharge, this can be due to a bad main supply, regulator,
+ starter, or any of the supply voltages used to run these.
+<p>
+ <ul>
+ <li>Check for main DC+ at the output of the line rectifier/filter network.
+ <li>Check for the (boost) supply to the igniter and its oscillator.
+ <li>Check voltages to the logic and analog circuitry.
+ <li>Check the tube filament voltage (and that the filament is glowing).
+ </ul>
+<p>
+ WARNING: Some or all of these power supplies are line connected - take
+ extreme care with measurements!  See the section:
+ <A HREF="laseraps.htm#apssaf">SAFETY when Dealing with Ar/Kr Ion Laser
+ Power Supplies</A>.
+<p>
+<li>If all voltages are present and there are no signs of arcing, listen for
+ the 'tick-tick-tick' of the igniter.  If this is present, the igniter is
+ probably working.
+<p>
+ If there is no evidence of the tick-tick-tick sound, check the (Boost)
+ supply directly at the igniter circuit.
+<p>
+ It is also possible to test the output of the igniter by disconnecting it
+ from the tube (with power off and everything discharged!) and then powering
+ up and checking that it will arc 1/3" to 1/2" to a suitable ground point.
+<p>
+ For more on startup and igniter faults, see the sections:
+ <A HREF="laserasc.htm#ascom18">Omni-150 Power-Up Sequence and
+ Troubleshooting</A> and <A HREF="laseratr.htm#atrcct7">Igniter Problems and
+ Troubleshooting</A>.
+<p>
+<li>If the igniter is working, put a piece of white paper in front of the laser
+ output port.  If there are momentary flashes of diffuse purple or laser
+ light but the discharge does not remain on, turn the light control to its
+ maximum setting.  If the discharge still does not stay on (or there were no
+ flashes of light), the Ar/Kr ion tube may be faulty or the regulator is
+ cutting out.
+<p>
+ Where the power supply and igniter check out, the tube pressure may be too
+ high (from non-use) or the tube may be misbehaving just because it felt like
+ it - but this may be reversible.  It may be possible to the tube to start
+ using an Oudin coil and then run it for several hours to drive down the
+ pressure.  See the section: <A HREF="laseratr.htm#atrctt2">Hard-to-Start
+ Ar/Kr Ion Tubes - Outgassing and Keeping Your Laser Healthy</A>.
+</ol>
+
+<h3><A NAME="apsrep3">Troubleshooting Where There is No or Low Output</A></h3>
+
+Check the mirror alignment and/or clean and/or realign the resonator as
+appropriate.  See the sections: <A HREF="laserhtr.htm#htrmir0">Checking and
+Correcting Mirror Alignment of Internal Mirror Laser Tubes</A> or
+<A HREF="laserarg.htm#argail">Argon/Krypton Ion Laser Cleaning and
+Alignment Techniques</A> (external mirror tubes) depending on the type of
+laser tube in your system.
+
+<h3><A NAME="apsrep4">Troubleshooting Linear Pass-Banks</A></h3>
+
+(From: Steve Roberts (osteven@akrobiz.com).)
+<p>
+I cannot stress enough the need to have a curve tracer around, even a
+home-built one, for checking pass-bank transistors in-circuit.  However, the
+following procedure using only a multimeter will also work for identifying bad
+transistors in the Lexel-88 (or most any other) pass-bank in-circuit (where
+all the collectors are tied together) is:
+<ol>
+<li>Turn the power off AND MAKE SURE THE MAIN FILTER CAPACITORS ARE DISCHARGED!
+<p>
+<li>Set your multimeter on low ohms and measure from each emitter lead to the
+   collector.
+<p>
+<li>Establish an average from unit to unit, as he emitter resistors isolate you
+   from the others and the bad transistor will usually be a short or sometimes
+   an open.  You'll see something like 23-23-44-23-24-23.2-12-23-23.3.  The 12
+   and 44 Ohms are the bad ones provided all the transistors are the same type
+   in the pass-bank.
+<p>
+<li>Replacement transistors should be of the same type and matched for Hfe if
+  possible.  Otherwise, depending on the design of the driver circuits, the
+  collector currents could end up being seriously unequal despite any emitter
+  current balancing resistors.  This may result in significantly unequal stress
+  (current and thus power dissipation) leading to spectacular failures!
+<p>
+<li>After installation, check for proper current balancing under load.
+</ol>
+<p>
+That's also why the Lexel has the 'stress' meter on the pass-bank.  If the
+meter won't get out of the 10 to 30 Volt range, there is a shorted pass-bank
+transistor.  The correct 'green' range is 10 to 70 volts.  For a combination
+of a power supply configuration and Ar/Kr ion tube that should work, selecting
+the proper tap on the line input buck/boost transformer will aid in getting
+the transistors operating in the right range and is the first thing to check
+when firing up the laser.
+
+<h3><A NAME="apsmatc">Matching Pass-Bank Devices</A></h3>
+
+When a catastrophic failure occurs in an ion laser power supply, multiple
+bipolar transistors or power MOSFETs in the pass-bank devices are often
+destroyed.  When replacing them, obtaining matched devices - and matched to
+any that survived - is generally desirable.  How important this may be will
+depend on both the circuit design and the type of device.  Where there are
+current balancing resistors, matching is a lot less critical.  However, when
+the devices are simply connected in parallel (C/E or D/S), matching will
+probably be needed, especially with bipolar transistors.
+<p>
+<ul>
+<li>Bipolar transistors have a negative temperature coefficient.  With
+ directly paralleled devices, matching is critical because since as the
+ temperature increases, any current imbalance that exists will get worse
+ resulting in a thermal runaway situation.  Small resistors in series with
+ the emitters are generally included to counteract this but using matched
+ devices is still a good idea.
+<p>
+<li>MOSFETs have a positive temperature coefficient.  With directly paralleled
+ devices, the MOSFET that carries the most current will tend to heat the most
+ and its current will decrease.  So, there is some degree of automatic
+ current balancing that takes place.  Matching is still desirable but not
+ as critical as with bipolar devices.
+</ul>
+<p>
+In all cases, it's still desirable to obtain matched devices, or at least
+devices from the same batch number.  When purchasing from a large electronics
+distributor, there is a very good chance any specific order will be filled
+with parts from the same batch.  It may also be possible to request them
+and/or order (likely at a higher price) devices matched to some specific
+requirements.  Replacing all of them may also be prudent even if some test
+good since they may have been overstressed and could then be the weak link,
+blowing themselves and everything else shortly after your repair.
+
+<h3><A NAME="apsomni">Omni-150P Ar/Kr Ion Laser Power Supply Repair
+ Saga</A></h3>
+
+I was offered an Omnichrome model 150P-M power supply at a decent price in
+unknown condition (I assumed dead and wasn't disappointed in this regard).
+But at least there were no obvious craters or signs of conflagration on the
+outside :-).
+<p>
+Yes, I can tell what you are thinking: "The designer of the SG-IL1 whimps out
+and buys a commercial power supply." :)
+<p>
+The Omni-150P is virtually identical to the Omni-150R (I have been informed
+that it is basically the same design but with a different PCB layout and use
+of a commercial current sensing transformer/Hall sensor instead of the
+custom one used in the 150P.  There were also a few choice expletives in the
+description but none affecting performance.)  The schematic I have is close
+enough in any case (as such things go) for troubleshooting.
+<p>
+The seller even agreed to include the most likely components to have blown -
+the power MOSFETs in the main chopper.  So, what the heck, it will make a nice
+toy and provide much information for the FAQ!
+<p>
+The replaies are from Steve Roberts.
+<p>
+I received the Omni PS from Dave.  It, to put it mildly, needs some work :-(.
+<p>
+Dave sent along replacement MOSFETs - the originals had been pulled as had
+the snubber diode (D21), and all socketed ICs except the CD4040.   So, I need
+to find replacement for those.  The power supply cooling fan is also missing.
+<p>
+It is also kind of beat up.
+<p>
+While not totally disappointed, this isn't quite what I expected.
+<p>
+When I asked Dave about its condition originally (back when I made the
+decision to buy it), he had indicated that it was given to him along with
+another similar power supply to test a head, and he hadn't tried this supply
+at all since the other one worked.  Now, perhaps, someone had eviscerated it
+before he got a hold of it but at least part of its state would be quite
+obvious from the outside.
+<p>
+(From: Steve.)
+<p>
+This is the normal condition of used laser equipment, and if there are no
+scorches, your lucky. Knowing Dave quite well, if he had the chipsets,
+you'd get them, he's not that kind of guy.  Odds are somebody did a amateur
+hour attempted repair on them with out a schematic or scope, which is
+suicide, then Dave got the job to resurrect one for the club that uses it in
+a projector. So now you get to play detective, finding what was originally
+wrong and finding the new added problems. 
+<p>
+Does it smell like pot smoke or cigarettes? Its usually one or the
+other, if its the later, clean the covers and fins good as they usually
+have high levels of nicotine oil on them, as a club laser is near the
+ceiling and sucks all the smoke through its cooling ducts and the PSU. Its
+highly toxic in such concentrated form  if your sweating. I speak from a
+personally blinding experience. Temporary but scary. :-(
+<p>
+(From: Sam.)
+<p>
+Actually, inside it is quite clean - dusty, but no great gobs of nasty
+coatings.  I don't know if I would recognize pot smoke residue but it just
+smells like old electronics - not burnt, just dusty.  I spray painted the
+outside now so it doesn't look too bad there either :-).
+<p>
+There is even dust on the empty sockets so I assume it has been like this for
+quite a while.
+<p>
+I haven't tested anything on it yet but at least there aren't any obvious
+scorch marks or holes blown through the circuit board!
+<p>
+(From: Steve.)
+<p>
+The PWM chip is $3.40 at Digikey or about $6.50 at any place that sells the
+ECG or NTE line of TV repair parts, and the op-amps are no more then $1.95 at
+Radio Shack.
+<p>
+Speaking from experience, you usually need to replace the op-amps and PWM chip
+anyways for sanity reasons. You have no idea what the last guy did his
+measurements with, possibly something destructive like a MEGGER :-).   This
+is a mission critical unit, and its better to replace than miss something
+stressed and have it pop again. 
+<p>
+First stop: The +15 and -15 V regulators, 95% of the time its one of them
+has let out its precious internal smoke and one of the microfuses (look
+for olive drab,  chartreuse, or cyan unmarked resistors) is popped, these
+are generally 3/4 amp picofuses.  This surge takes out a op-amp or two, but the
+discrete parts are usually fine, save for the MOSFETs and fast diode. The
+MOSFETs are usually $17 to $24 each.
+<p>
+If a picofuse is popped, look at the 110 V and anode leads where they go
+onto the board, odds are these are misconnected, either that or the
+external fan wires were shorted.  There are a couple of possible
+combinations, but only one works and doesn't pop a fuse.
+<p>
+REMEMBER TO ISOLATE YOUR SCOPE AND DMM FROM GROUND USING A PROPER
+ISOLATION TRANSFORMER OR A ISOLATED SCOPE OR BATTERIES.
+<p>
+(From: Sam.)
+<p>
+Yep, God knows I have enough warnings in the FAQ about this!  I was actually
+thinking of hooking up a couple of big transformers I have back-to-back as
+an isolation transformer for the duration.
+<p>
+Actually, for initial testing until I actually fire the tube, my small
+isolation transformer should be fine.
+<p>
+I think I will also rewire the fan for operation off the -15 (4 diodes to drop
+it to 12 V) for a DC fan - I assume the one in there was for 115 VAC - not
+easy to find in my junk box.
+<p>
+Didn't you also mention a cap that blows along with that stuff?
+<p>
+Assuming it matches the <A HREF="150rpsch.gif">Omni-150R - Power
+Subsystem</A>, which cap would it be?  C35? Why would that blow? Or is there
+another one I missed?  Or is it C27 which I couldn't really determine from
+the schematics you sent?
+<p>
+(From: Steve.)
+<p>
+Yep, its the electrolytic snubber in the PWM circuit, 200 to 300 uF if I
+remember right, C35 on your schematic. I can't remember ever seeing two the
+these supplies that are exactly the same, usually the changes are minor.
+Check the components around the PWM chip, see if it matches, other then
+that you should be fine.
+<p>
+(From: Sam.)
+<p>
+The Cyonics tube will be fine for testing and I won't worry too much about
+damaging it.  I never did get it to lase with my pulsed power supply, maybe
+with a real one it will do better but it does have a bad case of cathode
+sag....
+<p>
+Note: This was before I had succeeded in getting the Cyonics tube working with
+SG-IX1.
+<p>
+(From: Steve.)
+<p>
+See if you can get a hene beam down it cleanly.
+<p>
+(From: Sam.)
+<p>
+I did that.  I checked mirror alignment best I could with a long baseline
+HeNe setup.  Yes, I know, not really valid (at least at one end because of
+wedge) but it was TOO perfect by any test I could perform to totally write if
+off.  I did try torquing the mirror mounts at each end in all directions
+while it was pulsing - nadda.  Current was well above threshold (probably
+peaked at 15 A) for a millisecond or more.....
+<p>
+Yes, I know, it should have worked.
+<p>
+(From: Steve.)
+<p>
+Ah, perhaps a millisecond is too short to establish a stable plasma,
+pulsed lasers are usually filled about 1/10 to 1/100th of the fill pressure
+of a cw unit. in a week or two you'll be able to ram 11 amps down that tube
+if you want to.
+<p>
+(From: Sam.)
+<p>
+HeHeHe... More likely with a space heater supply and your ignite board :-).
+Things don't happen THAT quickly around here!  I wish. :-)
+<p>
+Let's see.... I was running a 200 uF cap with a 15 ohm ballast if I recall
+correctly - probably more like 3 ms.
+<p>
+P.S. Will the ignite board alone produce laser pulses on a 60X?  What is the
+pulse length when you get a tube like the NEC that doesn't start but produces
+pulsed laser output (as with Ben's)?
+<p>
+(From: Steve.)
+<p>
+A 60X will generate a faint pulse with just the ignite board and boost,
+that's how I tell if the anode voltage isn't there, it's just a faint click,
+only a faint whiff of lasing on higher power tubes, however if you have anode
+volts it's a banging or popping sound and a long bright flash if it doesn't
+start. If its faint you'll see a flash of purple from the plasma in a dark
+room. 
+<p> 
+Like I have said in the past, it would not surprise me if that pulse is 250 to
+500 mW at its peak.
+<p>
+(From: Sam.)
+<p>
+Well, the ignite board and boost is a pulse of unknown width and RF content
+from the SCR discharge and 5 uF at 500 V or so discharging into a short
+circuit :-) so that should be pretty brief.
+<p>
+If the anode supply is live, I would guess you get some follow through on
+that to lengthen the pulse even if it doesn't catch?
+<p>
+HeHeHe, I found the op-amps and PWM chip at Mouser:
+<p>
+<ul>
+<li>TL074ACN - $1.10
+<li>SG3525AN - $.78
+</ul>
+<p>
+Hope these are real prices!
+<p>
+I can't find that diode (D21 - MUR1560) at MCM, Digikey, or Mouser.
+<p>
+I discovered another pair of smoked resistors - R4 and R5 - pullups to
+the PWM drive. :-(.  It may be the only one actually fried but the other
+was in a somewhat sorry state - both measured correctly however.
+<p>
+Also, D11 and D19 have been replaced with a single diode - there may be other
+changes in that area as well.
+<p>
+My 12 VDC fan is now running happily off of the -15 V supply through 4
+diodes. :-)  It only draws .125 A so the 7915 regulator should handle it
+easily - while the circuitry for the positive and negative supplies are
+similar, there is less of a load on the -15 V (since the relays are powered
+from the positive supply) so there should be ample margin.  I added the
+following circuit off of the 7915:
+<p>
+<pre>
+
+    Analog Gnd o----|>|---|>|---|>|---|>|-----+--------+--------+
+                    D1    D2    D3    D4      |        |        |
+                                         C1 +_|_   C2 _|_  +----+----+
+                  D1-D4: 1N4002        22uF  --- .1uF ---  | 12V FAN |
+                                        25V - |        |   +----+----+
+                                              |        |        |
+           -15 o------------------------------+--------+--------+
+
+</pre>
+<p>
+The purpose of C1 and C2 are to prevent any fan motor switching noise from
+propagating BACK to the analog power supply.
+<p>
+I have disconnected the controller AC from everything else so will be able to
+troubleshoot it without worrying too much about Hot AC and meltdowns!
+<p>
+(From: Steve.)
+<p>
+The last diodes I bought were from Digikey, IXYS makes a equivalent, so does
+IR, it's a 20 to 100 nS diode.  The driver resistors are always smoked but
+functional, in every unit I've ever seen. Usually somebody monkeys with the
+clamp diodes on the hot side of the driver.  Most people assume they are
+shorting out the driver, when in fact they are a pulse forming network, so
+take a look there as well.
+<p>
+(From: Sam.)
+<p>
+OK, I found some IXYS diodes in Digikey: The most likely options are: 14A,
+35 ns, 600 V or 17A, 40 ns, 600 V.  MUR1560 which is what was on the schematic
+is 600 V, 15 A 35/60 ns (whatever that "/" means).
+<p>
+My Mouser order arrived - replaced the 220 uF, 250 V cap and the 10 uF 350 V
+one as well just for good measure.  I have 5 each of the SG3525AN and TL074ACN.
+count 'em!  I am now ready to fire up (hopefully not literally!) the control
+subsystem with the power circuitry disconnected (and the MOSFETs and D21 not
+even installed).
+<p>
+I see that R30 in this unit is 150 ohm, 5 W instead of the 330 ohms listed on
+my Omni-150R schematic.  Hmmmm.
+<p>
+And, someone has jumper/bypassed the filament tap switch - it tests bad (no
+continuity in any position) so I will remove it and replace with a machined
+pin IC socket and insulated 2 pin male jumper.
+<p>
+I have now set the mainboard up so that power is applied only to the low
+voltage power supply transformer via a Variac on an isolation transformer!
+<p>
+Anyhow, after confirming that the pinout made sense, I plugged in an SG3525
+(without any op-amps) to see what would happen. 
+<p>
+Fortunately, I still have some ancient DIP clips that fit 14 and 16 pin ICs!
+<p>
+Poking around its pins shows nothing of interest except on pins 5 and 7 which
+have a ~100 KHz sawtooth and pin 16 which has 5.1 V - this is promising.
+However, there is only a pegged at +15 rail voltage on pin 13, the output.
+OK, so maybe the op-amps are needed to at least provide a valid input signal.
+What the heck - in go the TL074s (after confirming the +/-15 V power to their
+sockets).
+<p>
+Now, I have a reasonable looking signal from pin 13 and a similar drive signal
+on TP2.  Although I don't have the control panel hooked up, I assume this
+corresponds to the Standby preset pulse width setting.
+<p>
+Next, as a change of pace, I want to see if the Preheat Timer - the CD4040 - is
+functional.  An initial test seems to show no activity here but then I realize
+it will only do something with the interlock chain grounded.  Since this is
+normally provided via the control cable, I add a jumper from pin 11 to pin 8
+of the CD4040.  At first I thought it was still dead but then I heard the main
+relay (RLY1) kick in - just about 30 seconds after applying power.  Sure
+enough, completing the interlock after applying power results in a 30 second
+delay and then relay activation.  There is something a bit strange about the
+behavior - the order of things matters - but that may be normal.  It basically
+works.
+<p>
+So I sent some email to Steve:
+<p>
+Greetings:
+<p>
+I installed my PWM and op-amp chips.  Running with the mainboard by itself
+(with only the low voltage power supply transformer powered via a Variac
+through an isolation transformer :-) I have drive pulses on TP2 at about
+100 KHz I think and the preheat timer seems to work enabling RLY1 after 30
+second - though it doesn't always appear to reset properly by just interrupting
+the interlock chain.
+<p>
+Do you have any advice on minimizing the chance of blowing expensive MOSFETs?
+I haven't installed Q8/9 or D21 yet.  I know - don't try to power a resistive
+load, use a real tube.  What about adding a light bulb or space heater in
+series with the power feed to limit current?  What blows these MOSFETs besides
+trying to deliver 10+ amps into a short circuit?
+<p>
+(From: Steve.)
+<p>
+What kills 150s are: Back spikes from heads with no blocking diode, and bad
+MUR1560 diode.  If you inject a signal to the PWM chip does the duty cycle
+change?  Have you set the initial voltages and 40% PWM duty cycle up yet?  
+<p>
+The blocking diode is a 11RA90 or similar in series with the tube.
+They are traditionally big heavy can diodes for two reasons: (1) They
+seem to survive much better then plastic packages, and (2) they can handle
+the CW 10 amps passing through. 
+<p>
+(From: Sam.)
+<p>
+I'm pretty much ready to fire this thing up (hopefully not literally) but still
+need to find some TOP3 size mica insulators for the MOSFETs.  Stay tuned.
+<p>
+[How time flies... 2000,2001,2002,2003,2004]
+<p>
+Well, approximately 5 years (yep, you read that correctly) have passed and
+I've still not gotten around to doing anything more with this power supply.
+So, I whimped out and when I mentioned to Dave (ws407c@aol.com) that I'd
+happily let him have it on permanent loan as a challenge, he jumped at the
+offer.  Yes, I can tell what you are thinking now: "The author of the
+chapter on ion laser power supply repair whimps out and lets someone
+else repair his power supply." :)  Well, so be it. :-)
+<p>
+Here is what he found:
+<p>
+<ul>
+<li>There were many cold solder joints.  I had never really carefully
+ inspected for failures like this but it's a good thing that someone did!
+<p>
+<li>The 1,000 turn winding of the current sense transformer was blown open,
+ apparently from an arc that also charred the PCB beneath it.  We still
+ have no idea under what conditions such an arc could develop.  Fortunately,
+ the open was found just 15 turns in from the end so repair was easy.
+ Q7 in the vicinity was also found to be dead and was replaced.
+<p>
+<li>A matched pair of 47 ohm resistors were installed for the gate drive and
+ positioned well off the PCB since that area was somewhat charred as well.
+<p>
+<li>Dave didn't like my fan kludge so he installed a fan of the same
+ type as the original, noting that it would be louder. :)
+<p>
+<li>Dave also didn't like may substituting socket pins for the filament
+ tap switch but couldn't offer anything better, so he just found a jumper
+ wire that was really snug in there.  How often does one bother changing
+ this anyhow?
+<p>
+<li>And, I sent him some crimp terminals and a 0.025" insulator sheet
+ to replace the missing one underneath the PCB.
+</ul>
+<p>
+Dave double checked compatibility on the power semiconductors and found
+that the HFA15TB60 fast recovery diode which I installed is an excellent
+substitute.  And the IXTH24N50's are perfect as they are stock in newer
+Omni-150.  Dave's old 150 has IXTH15N45As in the schematic of the
+Omni-150R (<A HREF="150rpsch.pdf">Omni-150R - Power Subsystem</A>)
+lists IXTH24N45s so we know of 3 different parts that will work without
+question.  In case anybody trying to find parts has trouble. The IXTH24N50s
+are currently produced but we cannot find specs on the earlier ones on
+the <A HREF="http://www.ixys.com/">IXYS</A> Web site and are probably
+discontinued.  The original MUR1560 is nowhere to be found.
+<p> 
+And that, as they say, is that.  Dave powered it up and tweaked the
+adjustments, setting idle current and current limit to 4.5 and 9 A,
+respectively.  It's apparently been run for more than 8 hours at
+this point without incident.
+<p>
+Despite mildly protesting, Dave sent the power supply back to me so for the
+first time in at least 5 years, my 60X laser head is being powered correctly.
+With multiline optics, it's nothing to write home about - only perhaps 20 mW
+at 9 A with a strange doughnut beam, the power supply works well.  Thank
+you Dave. :)  Now I need to find a decent laser head to go with it!
+<p>
+<A NAME="apspit"></A>
+<hr>
+<br>
+<li>Back to <A HREF="laseraps.htm#apstoc">Ar/Kr Ion Laser Power Supplies Sub-Table of Contents</A>.
+<h2>Pulsed Operation of Ion Tubes and Test Circuits</h2>
+<h3><A NAME="apspit0">Pulsed Operation of an Ar/Kr Ion Tube</A></h3>
+
+Ion laser tubes designed for continuous (CW) operation cannot really be
+run in very high peak power pulsed mode (greatly above their CW ratings),
+at least not for very long.
+<p>
+You'd need a very high voltage source (like 5 to 10 kV or more) to charge
+a fairly large capacitor to get them to lase cold cathode.  Plus, a spark gap
+or thyratron switch to keep the tube from just glowing.  Aside from
+running a high chance of poping the glass to metal seals on every
+pulse, the sputtering and gas cleanup will kill it rather quickly. You're
+also going to see discharge down the gas returns on Spectra-Physics tubes
+(at least).  And once the discharge goes down the returns once, it rarely
+returns to the bore.  That hot cathode makes a world of difference in
+getting a good clean arc.
+<p>
+And, even though the metal end-bell might look tempting to use as a large
+area cathode, this really isn't a viable option.  It isn't heated, so the
+sputtering at high current will be very severe, rapidly coating everything
+with a metallic coating.  Consider that a HeNe laser tube runs at
+only a few mA, not 10s of AMPs.  And, when the cathode coating in HeNe
+laser tubes is depleted, even this low current results in a sputter
+overcoat in a few hours of operation.
+<p>
+Tubes designed for pulsed operation run at 1/10th to 1/100th of the pressure
+in their CW counterparts.  The gas cleanup rate is huge.
+<p>
+If pulsed output is desired, keep the cathode hot and simmer the tube with
+a low current arc, then flare up the current when you need it?  That's the
+way some medical systems work, and it's a lot easier on the tube.
+
+<h3><A NAME="apspit0a">Pulsed Testing of an Ion Laser Tube</A></h3>
+
+For the following, it is assumed that the filament is properly heated and
+that the peak current is well within the acceptable range for the specific
+tube.
+<p>
+For determining if a new or used ion tube is good, there may be no need to
+run it on a full blown power supply.  That way, you can hold off committing
+the time, money, and other resources to obtain or build one until you know
+that you have a working tube.  (Once you read the chapter:
+<A HREF="laserapd.htm#apdtoc">Ar/Kr Ion Laser Power Supply Design</A> you will
+know why this is worth considering - these are not like little HeNe types!)
+A simple pulsed circuit created using the tube as the active device in a
+relaxation oscillator will suffice.  This has a number of other attractive
+benefits as well:
+<p>
+<ul>
+<li>Safety - The personal risks of operating this relatively high voltage but
+ low current power supply are far fewer than with a line-connected godzilla
+ sized monster capable of sustained kW output!
+<p>
+<li>Simplicity - This tester can be constructed using any of the approaches for
+ providing the operating voltage for small HeNe lasers.  The circuit shown
+ below assumes an inverter running on a low voltage DC input but a line
+ powered transformer feeding a rectifier or doubler will work equally well.
+ In may even be possible to use an existing HeNe laser power supply (or tap
+ off from inside of one) for this purpose.  See the chapter:
+ <A HREF="laserhpd.htm#hpdtoc">HeNe Laser Power Supply Design</A>.
+<p>
+<li>Much reduced heat dissipation - Only the filament of the Ar/Kr ion tube
+ will be generating any heat to speak of (typically about 50 W) so minimal
+ cooling will be adequate - a small PC style cooling fan will be more than
+ adequate.  However, see below, for possible problems resulting from the tube
+ running this cool.
+<p>
+<li>Less chance of damaging the Ar/Kr ion tube - This circuit can be left
+ pulsing away for reasonable length of time without harm to the tube of any
+ kind since it is current limited and should have much less of an effect
+ on tube life than the normal igniter.
+</ul>
+<p>
+However, there are several caveats:
+<p>
+<ul>
+<li>Just because you get a pulse doesn't mean its enough to lase.  Both the
+ peak current its duration over the lasing threshold must be adequate.  Without
+ swapping in a tube of exactly the same type that is known to be functional
+ (and seeing it produce a coherent output), there is no real way to be sure
+ that your suspect tube's refusal to perform isn't due to some artifact of
+ the pulsed drive.
+<p>
+<li>If the tube had single line (e.g., 514.5 or 457 nm) optics, or it is an
+ older used tube, this circuit might not hit it hard enough to get enough
+ gain on those lines.
+<p>
+<li>The mirrors have been tuned (at the factory for internal mirror tubes) when
+ the resonator is hot and will be slightly misaligned when running cool.
+ Therefore, higher peak currents than the tube specs would indicate may be
+ needed to produce any output.
+<p>
+<li>I cannot endorse changing the mirror positions on a sealed mirror tube
+ without a normal power supply.  It is just to shaky both because the tube is
+ running cool and because the relatively slow pulse rate makes adjusting for
+ optimal mirror position much more difficult.
+</ul>
+<p>
+WARNING: Despite the low pulse rate and short pulse duration, the optical
+output from the laser running on these circuits could be enough to result in
+eye damage.  For example, a 60X at startup may produce almost a half watt of
+peak laser output power for a brief period as the igniter and multiplier caps
+discharge into the tube - which is a similar situation to what is presented
+here (especially when you decide to increase the value of the storage
+capacitors to boost output!) - and it is banging away at the tube repeatedly!
+Take care and NEVER look down the tube bore while the circuit is active - even
+if it appears to be dead as a brick!
+<p>
+Argon ion lasers have been built to operate in pulsed mode. See, for example
+US Patent 3,555,451, granted January 12, 1971 (this may be too old for some
+of the on-line databases).  Output was 6 W peak/2 mW average pulsed at 60 Hz
+A design that builds on this one can be found in
+in <b>U.S. Patent #3,967,214: Stabilizing Electrode for Cold Cathode Gas Ion
+Laser</b>.
+<p>
+Having gotten that out of the way, here are several circuits that should be
+adequate for a typical small air-cooled Ar/Kr ion tube.
+
+<h4><A NAME="apspit1">Ar/Kr Ion Tube Pulse Test Circuit 1</A></h4>
+
+This circuit forms a relaxation oscillator using the tube as the discharge
+device.
+<PRE>
+
+              +-------------+ +     R1                       R2
+    Vin+ o----|             |------/\/\-----+-----+---------/\/\-------+
+              | HV DC Power |      400K     |     |         140        |
+              |   Supply    |      10W      |     |         10W        |Tube+
+              | 2 kV, 10 mA | -             |     |                  .-|-.
+    Vin- o----|             |---+           |     /                  | | |
+              +-------------+   |       C1 _|_    \ R3               |   |
+                                |    .25uF ---    / 10M              |   | LT1
+                                |   2,500V  |     \                  |   |
+                                |           |     |                  |   |
+                                |           |     |                  ||Z.|
+                                |           |     |   o - Test + o   '+-+'
+                                |           |     |   |    Rs    |  F1| |F2
+                    NC o-+ T2   +-----------+-----+---+---/\/\---+    | |
+                          )||  _|_                         1     |    | |
+           AC o----------+ ||   -                                |    | |
+                          )||                                    |    | |
+                   Variac )&lt;--------------+ T1                   |    | |
+                   0-140V )||              )|| +-----------------|----+ |
+                       1A )||     Filament )||(           Tube-  |      |
+                          )||  Transformer )|| +-----------------+      |
+                      +--+        3VCT,15A )||(                         |
+                      |                    )|| +------------------------+
+           AC o-------+-------------------+
+
+</PRE>
+<p>
+<ul>
+<li>Provide the proper filament voltage and current.  For a small tube like the
+ Cyonics, the voltage should be set to 3 VAC once the filament has warmed up
+ (about 30 to 45 seconds).  A little less is fine as well for this low power
+ pulsed operation.
+<p>
+<li>Determine the breakdown voltage of the tube by monitoring the voltage
+ across it as you gradually increase the input to your HV power supply.
+ This value will typically be between 1.5 and 3 kV a small to medium size
+ tube.  Select R2 (the current limiting resistor) so that the peak current
+ at the time of discharge is less than the maximum rating for your tube.
+ For example, where the tube has a breakdown voltage of 1.5 kV and is rated
+ at 10 A and 100 VDC, R2 = (1,500-100)/10 or about 140 ohms.  A little less
+ resistance (slightly higher current) is fine as well since the duty cycle
+ will be so low.
+<p>
+<li>R1 to R3 should be made of series strings lower value resistors to be happy
+ at voltages up to 3 kV.
+<p>
+<li>Include a 1 ohm sense resistor (Rs) in the return path to monitor the
+ current on an oscilloscope (1 V/A sensitivity).
+</ul>
+<p>
+This will form a relaxation oscillator using the tube with current limiting
+to about 10 A.  Adjust the pulse rate by either varying the input voltage
+or changing R1 (with power off!).
+<p>
+Running this at a few pulses per second for a reasonable length of time (i.e.,
+not for days on end) should result in no significant damage to the tube or
+shorten its life by any detectable amount.  You shouldn't need to run it this
+way for very long in any case - just don't think that this setup can be used
+in place of a REAL power supply!
+<p>
+As long as the peak current exceeds the tube's lasing threshold, there should
+be visible flashes of laser light from its OC (output coupler) end if it is
+working and aligned correctly.
+<p>
+WARNING: This circuit is still dangerous - just less so than a full blown ion
+laser power supply.  The anode of the tube (including the mirror mount at that
+end!) will have a voltage of up to 1.5 kV with respect to ground (for this
+example).  While the amount of energy stored in C1 is fairly small - less than
+0.5 J (W-s), it can still be lethal under the wrong conditions.  The HV power
+supply itself can deliver up to 5 mA through R1.  Either of these are at least
+enough to evoke a reflex response which may ruin your whole day even they do
+not kill you.  Take care.
+<p>
+Note: I show the entire setup earth grounded including the tube cooling fins
+and support structure.  This makes it safe to touch everything BUT the tube
+anode (and of course, the HV power supply).  Floating the entire affair is
+also possible but most of the same problems exist since portions of the tube
+will still be at the negative potential of the power supply and, if you use
+the scope monitor points across Rs, will be grounded through the scope (unless
+you isolate that as well - which is not recommended).
+
+<h4><A NAME="apspit2">Ar/Kr Ion Tube Pulse Test Circuit 2</A></h4>
+
+The following circuit is a somewhat more powerful alternative and there are
+absolutely no safety claims for it!  With the relatively large energy storage
+capacitors for C3 and C4, it must be treated with great respect.
+<p>
+It may also be possible to use this approach for starting small to medium size
+tubes since it provides a 'boost' voltage like that used by the igniter of the
+ALC-60X/Omni-532, SG-IT1, and SG-IL1.  See the section:
+<A HREF="laseraps.htm#apspit0">Pulsed Operation of an Ar/Kr Ion Tube</A>.
+<p>
+What this design provides is two power supplies driven from a single 650 VRMS
+center-tapped transformer (T3).  Many other approaches for the power sources
+are possible.  See the chapter: <A HREF="laserhps.htm#hpstoc">HeNe Laser Power Supplies</A> for ideas.
+<p>
+<ul>
+<li>A high voltage low current source which is used to start the tube and also
+ determines the pulse rate.  This forms a relaxation oscillator using the
+ tube as the discharge device in a similar manner to the circuit described
+ in the section: <A HREF="laseraps.htm#apspit1">Ar/Kr Ion Tube Pulse Test
+ Circuit 1</A>.
+<p>
+<li>A medium voltage source with your favorite size storage capacitors (75uF
+ shown here) to provide a current to the tube once it starts.  D7 blocks the
+ high voltage but allows C3/C4 to discharge through it once the tube starts.
+<p>
+ Note that D7 can be built from 4, 1000 V, 2.5 A diodes in series since the
+ single cycle (pulse) rating for these is much higher than the approximately
+ 10 A (15 A without the regulator) peak that is required.
+<p>
+ The (optional) constant current regulator allows the tube current to be set
+ at a high but safe value.  If a simple resistor is used, either the current
+ would be lower than desired for most of the discharge, or higher than the
+ maximum tube specs for some portion of it.  If you don't use a regulator,
+ change R2 to 33 ohms at 10 W (for 12 A peak).
+</ul>
+<p>
+<PRE>
+                             R4    D3                 
+                        +---/\/\---|>|---+----+----------------+
+                        |   10K   1kV    |    |                |
+                        |   10W      C3 _|_   / R5             |
+                        |          75uF ---   \ 220K           |
+                        |          350V  |    /         +-------------+
+                        |                |    |         |  Constant   |
+                        |                +----+         |  Current    |
+                        |                |    |         |  Regulator  |
+                        |            C4 _|_   /         | (Optional)  |
+                        |          75uF ---   \ R6      +-------------+
+                        |          350V  |    / 220K           |
+                        |                |    |          D5    |
+                        |                +----+      +---|<|---+
+                        |               _|_          |   3kV
+                        |                -           |  2.5A 
+                        |                            |
+           T3     R1    |   C1       D1              |        R2
+              +--/\/\---|---||---+---|>|---+----+----+-------/\/\-----+
+           ||(    2M    | .01uF  |   3kV   |    |             5       |
+           ||(          |  3kV   |         |    |            10W      |Tube+
+   AC o--+ ||( 325V     |        |         |    |                   .-|-.
+          )||(          |        |     C2 _|_   /                   |   |
+          )||(          |        |  .01uF ---   \ R3                |   |
+          )|| +---------+        |    3kV  |    / 20M               |   | LT1
+          )||(                   |         |    \                   |   |
+          )||(                   |   D2    |    |                   |   |
+   AC o--+ ||( 325V              +---|<|---+    |                   ||Z.|
+           ||(                       3kV   |    |    o - Test + o   '+-+'
+           ||(                             |    |    |    Rs    |  F1| |F2
+              +----------------------------+----+----+---/\/\---+    | |
+         650VCT                                           1     |    | |
+          50mA             NC o-+ T2                            |    | |
+                                 )||                            |    | |
+                  AC o----------+ ||                            |    | |
+                                 )||                            |    | |
+                          Variac )&lt;---------------+ T1          |    | |
+                          0-140V )||               )|| +--------|----+ |
+                              1A )||      Filament )||(  Tube-  |      |
+                                 )||   Transformer )|| +--------+      |
+                             +--+         3VCT,15A )||(                |
+                             |                     )|| +---------------+
+                  AC o-------+--------------------+
+</PRE>
+<p>
+Setup and operation is similar to that described in the section: <A HREF="laseraps.htm#apspit1">Ar/Kr Ion
+Tube Pulse Test Circuit 1</A>.  Adjust T2 to obtain the proper filament voltage
+for your tube and modify the value of R1 to vary the pulse rate.
+<p>
+The remaining details are left as an exercise for the student!  A switchmode
+buck converter will be needed for the optional regulator unless you have a
+bank of really high power transistors gathering dust in your junk box. :-)
+The problem with using a linear regulator is the peak power dissipation and
+keeping inside the SOA (Safe Operating Region) for the transistor(s).  A
+common BUT12A would handle the current and voltage individually for this
+example but not the peak 4,000 WATTs - 400 V AND 10 A at the same time!
+<p>
+WARNING: Take care as C3 and C4 can pack quite a wallop - especially once you
+increase their size - as I know you will. ;-)  And, both supplies can deliver
+dangerous levels of current continuously even without the capacitors!
+<p>
+An alternative which may work for some small tubes like the Cyonics (those
+which will start without help from a boost source) is to use a line powered
+(non-isolated or 1:1 isolation transformer) supply for the pulse current
+source followed by an (optional) linear or switchmode regulator.
+<p>
+Without the regulator, it would look like the following:
+<p>
+<PRE>
+                       R1                 D1       R2
+         +2 kVDC o----/\/\-----------+----|>|-----/\/\---+--------+
+                      100K           |    3kV     100    |        |Tube+
+                                 C1 _|_+  1A      10W    |      .-|-.
+                                1uF ---                  |      | | |
+                                3kV  | -                 |      |   |
+                       R3            |    D2       R4    |      |   |
+        +150 VDC o----/\/\-----+-----|----|>|-----/\/\---+      |   | LT1
+                    100,25W    |     |    3kV      4            |   |
+                           C2 _|_ +  |    6A      10W           |   |
+                        500uF ---    |                          |   |
+                         200V  |     |                          ||Z.|
+                               |  -  |                          '+-+'
+          DC RET o-------------+-----+----------------------+  F1| |F2
+                                                            |    | |
+                       NC o-+ T2                            |    | |
+                             )||                            |    | |
+              AC o----------+ ||                            |    | |
+                             )||                            |    | |
+                      Variac )&lt;---------------+ T1          |    | |
+                      0-140V )||               )|| +--------|----+ |
+                          1A )||      Filament )||(  Tube-  |      |
+                             )||   Transformer )|| +--------+      |
+                         +--+         3VCT,15A )||(                |
+                         |                     )|| +---------------+
+              AC o-------+--------------------+
+</PRE>
+<p>
+Details of this, too, are left as a exercise for the student!
+
+<h4><A NAME="apspit3">Ar/Kr Ion Tube Pulse Test Circuit 3</A></h4>
+
+Finally, here is another pulse circuit with an organization very similar to
+that of many HeNe power supplies (see the chapter: <A HREF="laserhsc.htm#hsctoc">Complete HeNe Laser Power
+Supply Schematics</A>).
+<p>
+A 600 VCT power transformer (T2) charges the energy storage capacitor (C1) to
+approximately 425 VDC and also drives the parasitic voltage multiplier to
+generate an additional starting voltage of up to more than 2,500 VDC.  When
+the Ar/Kr ion tube starts, C1 discharges through D9 with a current limited to
+about 10 A by R3.  The uF value of C1 may be changed to provide the desired
+discharge energy.  Adjust the values of R2 and/or C3 to assure that C1 charges
+in a shorter time than it takes for the HV to build up to the point at which
+the tube starts.
+<p>
+My first version of this circuit was built as an all-on to a 30 year old
+home-brew tube-type bench power supply (remember the 5U4GB rectifier tube?).
+I never thought I would ever find a use for that again but it did have all the
+connections required to attach the output and voltage multiplier conveniently
+located on front panel binding posts! 
+<p>
+<PRE>
+              C2              C3              C4
+       +------||-------+------||-------+------||-------+
+       |          D3   |  D4      D5   |  D6      D7   |  D8
+    R3 /       +--|>|--+--|>|--+--|>|--+--|>|--+--|>|--+--|>|--+
+    1M \       |      C5       |      C6       |      C7       |   R4
+       /       +------||-------+------||-------+------||-----+-+--/\/\--+
+       |  D1   |      R1                      D9        R5   |    100K  |
+ T2 +--+--|>|--+-+---/\/\-------+----+--------|>|------/\/\--|----------+
+ ||(             |    1K        |    |        3kV       30   |          |
+ ||(             |   10W   C1 +_|_   / R2    2.5A      10W  _|_ C3      |Tube+
+ ||( 300V        |       10uF  ---   \ 470K                 --- .01uF .-|-.
+ ||(             |       450V - |    / 1W    o - Test + o    |  5kV   | | |
+ ||(             |              |    |       |    Rs    |    |        |   |
+ || +------------|--------------+----+-------+---/\/\---+----+        |   |
+ ||(             |                                1          |        |   | LT1
+ ||(             |         T2: 600VCT, 50mA                  |        |   |
+ ||( 300V        |         D1-D8: 1N4007                     |        |   |
+ ||(             |         C2-C7: .01uF, 1.2kV               |        ||Z.|
+ ||(      D2     |                                           |        '+-+'
+    +-----|>|----+              AC o--------+ T1             |       F1| |F2
+                                             )|| +-----------|---------+ |
+ (Ac input and                      Filament )||(  Tube-     |           |
+  T2 primary                          Supply )|| +-----------+           |
+  not shown)                                 )||(                        |
+                                             )|| +-----------------------+
+                                AC o--------+
+</PRE>
+<p>
+Like the other pulse supplies, this can also be used as a starter for some
+small ion tubes.  All that is needed is a high voltage high current blocking
+diode between the ion tube anode and the DC+ output of a the normal ion laser
+power supply.
+<p>
+<A NAME="apsmisc"></A>
+<hr>
+<br>
+<li>Back to <A HREF="laseraps.htm#apstoc">Ar/Kr Ion Laser Power Supplies
+ Sub-Table of Contents</A>.
+<h2>Miscellaneous Ion Laser Power Supply Information</h2>
+<h3><A NAME="apsawrp">About the Wide Range of Power Supply
+ Characteristics</A></h3>
+
+(From: Steve Roberts (osteven@akrobiz.com).)
+<p>
+All laser PSUs work over a much wider range then the tube needs, to
+accommodate for tube wear. No two tubes ship with exactly the same operating
+characteristics due to minor differences in the cathode, gas pressure,
+bore size, and Brewster window quality.  So the PSU is built wide range to
+accommodate them all. Often the same PSU is designed to work a whole series
+of head models over a wide power range. It's desirable that the PSU cover a
+wide range in case your tube is high pressure and hard starting. It also
+helps in diagnosing problems if you can sweep your tube over a wide range
+of currents.  Short periods of low current wont hurt it, but attempting to
+start at low currents is very hard on the tube and PSU. Running forever at
+below rated idle current will damage a tube as fast as overcurrent. 
+<p>
+So you need to hit the magic number, amps-wise. For example a SP-168 likes to
+run at 30 to 35 amps, but not much below 25 amps, then you're doing damage,
+and 40 amps is way into overcurrent, but the PSU can ram 45 amps into the
+tube if the tube is new and you don't mind buying pass-bank transistors
+often.   
+<p>
+There are also some cases in the lab when you need to dial down a laser,
+either to get it going in "single mode" oscillation or to reduce background
+noise in the beam, at a known sacrifice of tube life. Also some lines are
+sensitive to both magnetic field and current, at a certain product of I x B
+they drop out of lasing.  So you need a wide range.  For example, on the
+krypton yellow, green, and deep violet lines. 
+<p>
+At the other extreme, overcurrent: For example, my Lexel-88 argon ion laser
+with its brand new tube can sustain 3.5 watts (21 amps) for a very short
+period of time, then drop back to idle at 10 A.  But, at about 9.5 A it drops
+below lasing threshold, and at 9 A or so the discharge is highly unstable and
+probably is damaging the tube.   Nominal running range is a watt at 13 to 15
+amps. But it was designed as a pulsed eye surgery laser, and thus needs a wide
+range of available power.  On the back of the PSU is a duty cycle warning
+saying at a 5% duty cycle I can way overcurrent the tube without much damage.
+1000 hours from now based on past experience with other tubes, I'd need 18 to
+19 A or more to sustain a CW power of one watt and could not obtain anywhere
+near the 3.5 watts, as the cathode would be depleted and the pressure would be
+low and internal dust on the Brewsters would be obscuring much of the beam. 
+hence the wide PSU range.
+<p>
+<hr>
+<br>
+<li>Back to <A HREF="laserfaq.htm#faqtoc">Sam's Laser FAQ Table of
+ Contents</A>.
+<li>Back to <A HREF="laseraps.htm#apstoc">Ar/Kr Ion Laser Power Supplies
+ Sub-Table of Contents</A>.
+<li>Forward to <A HREF="laserapd.htm#apdtoc">Ar/Kr Ion Laser Power Supply
+ Design</A>. 
+<p>
+<hr>
+<b><center>Sam's Laser FAQ, <A HREF="copyright.htm">Copyright &copy<A> 1994-2009,
+ Samuel M. Goldwasser, All Rights Reserved.<br>
+ I may be contacted via the
+ <A HREF="emaillnk.htm">Sci.Electronics.Repair FAQ
+ Email Links Page</A>.</center></b>
+<hr>
+<p>
+</BODY>
+</HTML>

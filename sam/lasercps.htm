@@ -1,0 +1,784 @@
+<HTML>
+<HEAD>
+<TITLE>Sam's Laser FAQ - Home-Built Pulsed Solid State (PSS) Laser</TITLE>
+</HEAD>
+<BODY>
+<A NAME="cpstoc"></A>
+<p>
+<hr>
+<b><center>Sam's Laser FAQ, <A HREF="copyright.htm">Copyright &copy<A> 1994-2010,
+ Samuel M. Goldwasser, All Rights Reserved.<br>
+ I may be contacted via the
+ <A HREF="emaillnk.htm">Sci.Electronics.Repair FAQ
+ Email Links Page</A>.</center></b>
+<hr>
+<p>
+<li>Back to <A HREF="laserfaq.htm#faqtoc">Sam's Laser FAQ Table of
+ Contents</A>.
+<h1>Home-Built Pulsed Solid State (PSS) Laser</h1>
+<h2>Sub-Table of Contents</h2>
+<ul>
+<li><A HREF="lasercps.htm#cpshbl">Basic Home-Built PSS Laser Information</A>
+ <ul>
+ <li><A HREF="lasercps.htm#cpscps0">Introduction to Home-Built PSS Laser</A>
+ <li><A HREF="lasercps.htm#cpssiaf">Home-Built PSS Laser Safety</A>
+ <li><A HREF="lasercps.htm#cpscps1">PSS Laser Construction References and Links</A>
+ <li><A HREF="lasercps.htm#cpscps3">Home-Built PSS Laser Description</A>
+ <li><A HREF="lasercps.htm#cpscps4">Sources of Special Parts and Supplies for the Home-Built PSS Laser</A>
+ </ul>
+<p>
+<li><A HREF="lasercps.htm#cpsoex">Other Examples of Home-Built PSS Lasers</A>
+ <ul>
+ <li><A HREF="lasercps.htm#sslmyl">Mini YAG Laser using SSY1 Optics and SG-SP1</A>
+ <li><A HREF="lasercps.htm#cpscc1">Chris's High Energy Dual Flashlamp Pumped Nd:YAG Laser</A>
+ <li><A HREF="lasercps.htm#cpssrl">Sinebar's Ruby Laser</A>
+ <li><A HREF="lasercps.htm#cpsjkl">Jarrod's Ruby Laser</A>
+ </ul>
+<p>
+<li><A HREF="lasercps.htm#cpsaio">Additional Information on Home-Built PSS Lasers</A>
+ <ul>
+ <li><A HREF="lasercps.htm#cpsalgn">Home-Built PSS Laser Alignment and Optimization</A>
+ <li><A HREF="lasercps.htm#cpslpgr">Converting a Lamp Pumped IR YAG Laser to Green?</A>
+ <li><A HREF="lasercps.htm#cpsfpcc">Flashlamp Pumping of Composite Crystals</A>
+ </ul>
+</ul>
+<p>
+<A NAME="cpshbl"></A>
+<hr>
+<br>
+<li>Back to <A HREF="lasercps.htm#cpstoc">Home-Built PSS Laser
+ Sub-Table of Contents</A>.
+<h2>Basic Home-Built PSS Laser Information</h2>
+<h3><A NAME="cpscps0">Introduction to Home-Built PSS Laser</A></h3>
+
+Among high power lasers, the Pulsed Solid State (PSS) laser is probably the
+easiest to construct from components available on the surplus market.
+A Nd:YAG rod in decent condition (flat polished ends without damage) can be
+made to generate destructive amounts of pulsed energy at 1,064 nm (near-IR,
+quite invisible) with relatively little effort as these things go. :)  Pump
+energy, usually from xenon flashlamps, will be needed but it may be possible
+for these to just be flash units from disposable cameras, appropriately
+remounted to efficiently couple their light into the laser rod.  The HR
+mirror doesn't need to be nearly perfect and the OC mirror doesn't need
+to have that high a reflectivity (as with a HeNe laser) but with the amount
+of photon flux circulating inside the cavity of a pulsed laser, any absorption
+of light by the mirrors will result in heating and likely destruction of the
+coatings on the first shot, if not sooner.
+<p>
+Nd:Glass is an alternative to Nd:YAG with similar lasing characteristics.
+Its major benefit is the availability in large sizes at reasonable cost
+(usually surplus from large Government laser projects).  However, the thermal
+conductivity is much lower than YAG so repetition rates need to be much lower.
+(This wasn't a problem with those huge lasers that fired once an hour!)
+<p>
+Ruby can also be used (it was, of course, the lasing material in the first
+laser) and has both advantages and disadvantages.  On the plus side, the output
+is visible (694 nm, deep red) and pumping is a bit easier because the flash
+duration can be much longer.  However, the threshold to get lasing is much
+higher for ruby (all other factors being equal) and its conversion efficiency
+is much lower.  Being a 3 level rather than 4 level system (like YAG), the
+entire rod needs to be pumped or else unpumped regions will absorb any laser
+light which may result in an unusably high threshold and greatly reduced
+output.
+<p>
+A variety of other laser crystals can be used but probably don't offer
+significant advantages unless you are interested in the particular wavelength
+they generate.  Three common types are Erbium:YAG (Er:YAG, lases at 2,940 nm),
+Er:Glass (1,540 nm), and Holmium:YAG (Ho:YAG, 2,100 nm).  They are likely to
+be less common on the surplus market than either Nd:YAG or ruby.  But, due to
+lower popularity, may be available at attractive prices.
+<p>
+The power supply for a pulsed solid state laser consists of a Pulse Forming
+Network (PFN), capacitor charger, and flashlamp trigger circuit.  Detailed
+information can be found in the chapters starting with:
+<A HREF="lasersps.htm#spstoc">SS Laser Power Supplies</A>.
+<p>
+However, note that like the home-built diode pumped solid state laser,
+constructing a PSS laser truly from scratch is way out of the question
+onless you are willing to do the glass work and gas filling of a custom
+flashlamp lamp and work for a laser crystal company to fabricate, grind,
+polish the rod. :)  So, you may feel that a PSS laser doesn't offer enough
+of a challenge or reward without being able to say you did everything from
+the the ground up.  Building one for $10 is also probably not realistic
+although with a bit of ingenuity, the costs can be kept quite low.  I do
+consider a PSS laser to be worthy of home-built laser status as long as we're
+talking about dealing with the individual components (rod, lamp(s), mirrors,
+cavity reflector, power supply, etc.).  You will need to decide whether
+just hooking up an M60 rangefinder ruby laser head or SSY1 Nd:YAG laser head
+to a home-built capacitor charger and PFN qualifes. :)
+<p>
+Much of the information in this chapter also applies to arc lamp and halogen
+lamp pumped SS Nd:YAG (the material that would be most suitable) lasers.  
+However, with the increasing popularity of high power laser diodes as pump
+sources, CW lamp pumped lasers are rapidly losing their appeal due to their
+HUGE power requirements and waste heat, and terrible efficiency.  Therefore,
+there will be little or no specific information on these beasts.
+
+<h3><A NAME="cpssaf">Home-Built PSS Laser Safety</A></h3>
+
+There are three areas of safety considerations for the home-built pulsed
+solid state laser:
+<ul>
+<li><b>Laser output:</b> The home-built PSS laser generates light
+ intense enough to be both a vision and heat/fire hazard from the output beam.
+ The xenon flashlamp may also produce enough UV (aside from the bright light)
+ to be a risk but this is normally contained by the cavity reflector and is
+ therefore not much of an issue even during testing.
+<p>
+ The output beam should be fully enclosed if possible (especially where it is
+ well collimated at the output of the rod) to avoid any possibility  of eye
+ contact with the direct or reflected beam as well as damage to property.
+ Access should be restricted to the focal point of any focusing optics.
+ Even if not focused, a small PSS laser can char darker materials and the
+ focused beam will blow holes in many things.
+<p>
+<li><b>Electrical:</b> The power supply is high voltage with significant
+ energy storage.  It has been estimated that 60 J is required to kill
+ an average adult human with much lower values being lethal under the wrong
+ conditions.  There is no second chance.  Even the 120 uF, 330 V capacitors
+ in disposable camera flash units can be deadly.
+<p>
+ Power supplies should include safety interlocks and automatic bleeders when
+ any cover is removed.  All connections should be more than adequately
+ insulated to prevent accidental contact.
+<p>
+ If you are using water cooling (probably not likely except for a VERY large
+ system) - either tap water or a closed loop system, make sure that water
+ circulation paths are well insulated from the high voltage and that all
+ fittings are securely grounded.  Tap water is a fairly good conductor of
+ electricity - think of it as a very soft wire. :)  Unless you have a totally
+ closed system filled with 100 percent distilled de-ionized water, there can
+ be enough current flow to be lethal.  Water and electricity do not mix!
+</ul>
+
+Provide proper warning signs for both the laser radiation and high voltage.
+Keep pets and small children out of the area and make sure everyone present is
+instructed as to the dangers.  The use of proper laser safety goggles for the
+specific wavelength(s) of your laser are highly recommended.
+<p>
+For more information, see the chapter: <A HREF="lasersaf.htm#saftoc">Laser
+Safety</A>.  Sample safety labels which can be edited for this laser can be
+found in the section: <A HREF="lasersaf.htm#saflslbl">Laser Safety Labels
+and Signs</A>.
+
+<h3><A NAME="cpscps1">PSS Laser Construction References and
+ Links</A></h3>
+
+<ul>
+<li>There are complete plans for pulsed ruby lasers in the Iannini books ([2]
+ and [3] in the section: <A HREF="laserlir.htm#lirbks">Books, Collections,
+ Other publications</A>).  They appear virtually the same as far as lasing
+ energy is concerned but there are some electrical and mechanical differences.
+<p>
+<li>Nuts and Volts magazine has had several articles on the
+ construction of a pulsed ruby laser in 2003.  Their monthly series:
+ "Laser Insight" appears to provide very complete and detailed
+ electronic plans but are somewhat incomplete with respect to the
+ actual laser head - rod, flashlamp, mirrors, etc.  However, this may be due
+ in part to the uncertainty in availability of reasonably priced
+ (e.g., surplus, eBay, etc.) optical components.  So, rather than
+ specifying a set of parts that could only likely be acquired new for
+ $5,000, the author keeps it somewhat general.
+<p>
+<li><A HREF="http://spt06.chez.tiscali.fr/00/lasers.htm">Hubert's Lasers
+ for the Amateur</A> (Links, disposable camera flash pumped laser, N2 laser
+ project).
+<p>
+<li><A HREF="http://digilander.libero.it/westaustralia/rubylaser/">Chris's Ruby
+ Laser Page</A> (Home-built ruby laser including power supply and mechanical
+ design).
+<p>
+<li><A HREF="http://www.rotorwave.com/">Rotorwave, Inc.</A>
+ (MOPA system for high speed holography based on the M-60 Tank ruby laser).
+<p>
+<li><A HREF="http://www.thaltech.com/~laser/index2.html">Jon's
+ Home-Built Lasers Page</A> (N2, CO2, ion, SS, other laser and HV related
+ photos and info, more)
+<p>
+<li><A HREF="http://www.pulslaser.de/">Puls Laser (German)</A>
+ has virtually all of the home-built laser types including
+ CO2, N2 (including TEA), ion, ruby, dye, and some that aren't covered here.
+ It includes descriptions, photos, references, and other
+ information.  An English translation would be most welcome as Altavista
+ does less than a stellar job and doesn't follow the frame links.
+<p>
+<li><A HREF="http://www.electronickits.com/">Carl's Electronics</A> has plans
+ for a ruby laser.  I have no idea of the integrity of this
+ outfit or the quality of what they offer.  They kind of appear to be in the
+ same league as Information Unlimited. (See the section:
+ <A HREF="lasercon.htm#concit5">General Resources for Amateur Laser
+ Construction</A>.)
+<p>
+<li>And, of course, before attempting to build your own PSS or other solid
+ state laser, see the relevant chapters on basic principles and commercial
+ systems starting with: <A HREF="laserssl.htm#ssltoc">Solid State Lasers</A>.
+</ul>
+
+<h3><A NAME="cpscps3">Home-Built PSS Laser Description</A></h3>
+
+The PSS laser described below should be capable of producing output pulses of
+up to 1 joule or more if high quality components are used in its construction.
+Now, 1 J may not sound like much except that it will be generated in about 100
+us representing a peak power of over 10,000 W!  This will easily put holes in
+aluminum soda cans and possibly razor blades (a rating of 1 Gillette) in a
+single shot when its output is focused with a short focal length positive
+lens.  With the addition of a Q-switch (not shown), peak powers of 100s of
+MEGAWATTs may be possible.  In either case, it will also put holes in
+things you value more than soda cans and razor blades - like the back
+of your eyeballs - so take care!  The power supply is also quite lethal.
+<p>
+As noted previously, for a YAG laser, the specific sizes/ratings of the
+components aren't at all critical.  A wide variety of designs will result in a
+working PSS laser, possibly with better performance than the one shown.
+Thus, don't restrict your search for the YAG rod, flashlamp, and optics to
+those shown in the diagram or described below.  Matching the lengths of the
+rod and flashlamp will be best, but for YAG, it isn't critical.  Using a
+2 inch flashlamp with a 3 inch rod should still work.  (With ruby, a 3-level
+laser, unpumped regions of the rod absorb the laser light and if a ruby rod
+isn't fully pumped, result in a much higher threshold or inability to lase
+at all).  Of course with either, using a flashlamp that is too long is just
+wasting photons. :)
+<p>
+Refer to <A HREF="pss1asm.gif">Typical Home-Built PSS Laser Assembly</A>
+for a simplified diagram of a typical laser head.
+<ul>
+<li>Level of difficulty (rated L=low, M=medium, H=high):
+<p>
+<ul>
+  <li>Overall - M.
+  <li>Fabrication - L.
+  <li>Power supply - M.
+  <li>Risks (high voltage, toxic chemicals, etc.) - M.
+</ul>
+<p>
+<li>Lasing wavelength(s) - Depends on solid state lasing medium.  Most common
+ are Nd:YAG at 1,064 nm (near-IR) and ruby at 694.1 nm (deep red).  A KTP
+ frequency doubling crystal may be used with YAG to produce 532 nm (green)
+ output.
+<p>
+<li>Resonator:
+<p>
+<ul>
+  <li>Type/lasing medium - Nd:YAG or ruby rod.
+<p>
+  <li>Rod diameter - 1/4" (6.4 mm); rod length - 3" (76 mm).
+<p>
+  <li>Cooling - Convection air cooling.
+<p>
+  <li>Coupling - Anti-Reflection (AR) coatings on ends of laser rod desirable
+   but not essential.
+<p>
+  <li>Mirrors - Planar dielectric mirrors, 15 mm diameter.  HR totally
+   reflecting at 1,064 nm or 694.1 nm (as appropriate); OC 70% to 90% at the
+   same wavelength.  (A prism-type retro-reflector will also work for the HR.)
+   It may be possible to use a high quality aluminized mirror for the HR but I
+   don't know how long it will survive due to the high intra-cavity photon
+   flux - possibly not beyond the first shot.  Alignment is best done with a
+   low power HeNe laser.  See the section:
+   <A HREF="lasercps.htm#cpsalgn">Home-Built PSS Laser Alignment and
+   Optimization</A>.
+<p>
+  <li>Total resonator length (mirror to mirror) - 7" (178 mm).
+</ul>
+<p>
+<li>Special chemicals/supplies required - none.
+<p>
+<li>Excitation/Pumping:
+<p>
+<ul>
+  <li>Type - Xenon flash lamp.  One possibility is the EG&G/Perkin-Elmer
+   FXQ-1302-3:
+<p>
+ <ul>
+ <li>Bore diameter (ID): 0.157 inches/4 mm.
+ <li>Arc length: 3 inches/76 mm.
+ <li>Total length: 5.56 inches/141.2 mm.
+ <li>Ko impedance parameter: 24.3 ohms-amp<sup>0.5</sup>.
+ <li>Minimum flashing voltage: 600 VDC.
+ <li>Maximum average power 150 W (convection cooled), 300 W (forced air).
+ <li>Minimum trigger voltage: 12 KV (series), 15 KV (external).
+ <li>Explosion energy: 360 J (100 us), 1,170 J (1 ms).
+ </ul>
+<p>
+  <li>Cavity reflector - Polished cylindrical ellipsoidal reflector made from
+   sheet metal (e.g., chrome or gold plated aluminum, brass, or steel) used to
+   focus flashlamp light onto laser rod.  I don't know if metalized Mylar will
+   survive for long but you can try that in a pinch.  Wrapping the lamp and rod
+   in degreased aluminum foil, polished side inward, would also work, though
+   perhaps not quite as well as a properly shaped reflector.  It can also be
+   used as the trigger electrode for the flashlamp - just keep the ends clear
+   of the flashlamp electrodes!
+<p>
+  <li>Power supply - Pulse forming network and capacitor charger.  Input
+   energy to flashlamp of up to 100 J (64 uF, 17 uH, 1,800 V).  External
+   (shown) or series triggering.
+</ul>
+</ul>
+
+<h3><A NAME="cpscps4">Sources of Special Parts and Supplies for the Home-Built
+ PSS Laser</A></h3>
+
+For capacitors and other power supply related items, see the chapter:
+<A HREF="lasersps.htm#spstoc">SS Laser Power Supplies</A>.  The following
+deals with sources for flashlamps, laser rods, and optics - which would
+be the major laser surplus places and eBay.  You won't find this stuff in
+Radio Shack or even Edmund Scientific.  Buying new is probably out of the
+question for most of us - a typical flashlamp will go for several $100 and a
+small YAG rod for several $1,000.
+<p>
+<b>Flashlamps:</b>
+<p>
+The best types of flashlamps are those designed for laser pump applications.
+They are generally of higher quality than the type in that disposable camera
+flash and are constructed with materials to handle higher energy and pass the
+wavelengths needed for pumping laser rods.  You'll also want a flashlamp with
+an arc length approximately equal to the length of your laser rod.  This will
+result in highest efficiency for any laser but is particularly critical for
+ruby.  If the lamp is too short, unpumped regions will absorb any laser light
+which may result in an unusably high threshold and greatly reduced output.
+Note that while a helical flashlamp may look 'cool', it's generally easier
+to deal with linear flashlamps for pumping laser rods - too much light energy
+is lost to reflections from the coils and out the ends of the cavity even if a
+perfect reflector surrounds them.  And, the long discharge path means helical
+flashlamps will tend to have larger Ko values and thus require higher voltage
+to achieve the same pulse width.
+<p>
+The "gold standard" for flashlamps has been EG&G (now Perkin-Elmer) but many
+other companies make similar lamps.  (See the section:
+<A HREF="laserssl.htm#sslegg">EG&G 1300 Series Linear Flashlamp
+Specifications</A>.)  Needless to say, these are very expensive
+if purchased new.
+<p>
+Laser pump flashlamps can often be found at the major laser surplus places as
+well as on eBay.  However, make sure that what is listed is actually a
+flashlamp and not an arc lamp - the latter won't survive for long when driven
+in pulsed mode!  Sellers frequently don't know the difference.  The only sure
+way to know is from the part number though high power arc lamps tend to have
+one pointed electrode and better coupling between the electrodes and exterior
+for improved heat transfer.
+<p>
+For a small PSS laser, common photographic flashlamps available from major
+electronics distributors like <A HREF="http://www.digikey.com/">DigiKey</A>,
+<A HREF="http://www.mouser.com/">Mouser</A> and electronics surplus places
+may in fact be adequate, if not ideal.  These may be suited for ruby with its
+long fluorescence lifetime so the pulse width can be long thus reducing stress
+on the flashlamp and allowing regular electrolytic capacitors to be used in the
+PFN.  However, this is offset somewhat by the much lower threshold inherent
+with YAG where the flash unit from a disposable camera may be adequate to pump
+a 1 to 1.5 inch YAG rod.
+<p>
+<b>Laser rods:</b>
+<p>
+Ideally, what you want are never used rods with ground, polished, and AR
+(Anti-Reflection) or mirror coated ends.  Except for the AR coatings, this is
+essential - you aren't going to do optical quality finishing work
+in your basement!  If the seller doesn't explicitly say this, ask.
+It's possible to use rods without AR coatings.  However,
+efficiency and stability may be slightly lower if they are not cut at the
+Brewster angle.  Getting rods with at least one of the mirrors already on
+the end of the rod will certainly simplify the laser design but these are
+not very common.
+<p>
+In particular, avoid those from eBay seller ID ninteach whose "Military
+Surplus" rods are probably good only to cut up for jewelry or as conversation
+pieces, but not for lasers.  (He may also be selling the same junk under other
+eBay user IDs selling the same junk.)  It's quite amazing what uninformed
+people will pay for these!  $15 for a garbage rod to experiment with or as a
+curiosity might be reasonable.  But I've seen them go for $150 or more!  Some
+of the specific known problems with these include:
+<p>
+<ol>
+<li>Impurities/inclusions in the crystal.  These result in refraction of
+ the light inside the rod.
+<p>
+<li>Rough ground but not polished ends.  Optical grade polishing will be
+ costly.  This isn't something you are likely to be able to do in your
+ basement.
+<p>
+<li>Significant non-uniform diameter.  This will result in non-uniform
+ pump energy in the interior.
+</ol>
+<p>
+Aside from the tint of the material, a high quality rod with polished and
+AR coated ends should just about disappear when viewed lengthwise.  The
+interior should be crystal-clear with absolutely no distortion.
+<p>
+Realistically, most of the rods available at reasonable cost for home-built
+PSS lasers are going to be used and in varying states of health but most
+should be adequate if in good physical condition.  However, that may take
+some careful inpsection to identify.  In particular, damage to the rod
+ends (AR coatings or mirrors) and possibly thermal induced microfractures
+at the ends or internally.  But rods pulled from commercial lasers when their
+output energy/power falls below spec'd values will likely have a lot
+of life left.  And, sometimes, they will be replaced as a "shotgun"
+fix along with the mirrors or other optics - which may have been the
+actual problem.  Thus the rods will often be nearly good as new.
+<p>
+Some people claim the existence of such a thing as a depleted rod, and it
+has nothing to do with nuclear reactors!  The idea is that somehow, the
+Nd in the rod migrates from where it is supposed to be to somewhere else
+after long use.  A senior engineer at Synoptics and a retired engineer
+from Union Carbide both agree that this is an urban myth despite claims
+from some others whose information is normally reliable.  If anyone has
+additional comments or references on this topic, please contact me via
+the <A HREF="emaillnk.htm">Sci.Electronics.Repair FAQ Email Links Page</A>.
+<p>
+Laser surplus places like <A HREF="http://www.mi-lasers.com/">Meredith
+Instruments</A> and others may carry ruby, Nd:YAG, and sometimes, other
+strange laser rods.  Since these are usually not continuously stocked items
+but come and go, checking back from time-to-time will be desirable.  In any
+case, I'd recommend sticking with the common lasing materials even if you
+find something else cheap.  YAG is easiest to make lase but its output is
+invisible.  Ruby produces visible output but has a higher threshold.
+Optics for both of these are likely to be more readily available than for
+others.  A bargain rod isn't a bargain if everything else costs more!
+<p>
+And if you're determined to have the biggest laser on your block, check
+out <A HREF="http://www.laser-rods.com/">Neodymium Glass</A>.  They must
+have gotten surplus optics from the older Livermore lasers.
+<p>
+Laser rods turn up quite frequently on eBay, both pulls from equipment and
+never used (NOS, New Old Stock).  Monitoring auctions with the words "laser",
+and "YAG" or "ruby" (as desired) shouldn't take too much time.
+<p>
+<b>Optics:</b>
+<p>
+The HR can be either a totally reflecting high energy dielectric mirror or a
+roof prism or corner reflector, AR coated for the laser wavelength if
+possible.  A high quality first surface aluminized mirror might survive
+for a few shots or more but with the high intra-cavity power of a PSS
+laser, possibly not for long.  And, probably not at all if Q-switched!
+<p>
+The OC mirror really needs to be one designed for PSS laser.  Without a
+Q-switch, figure something like 70 percent reflectivity at the lasing
+wavelength.  With a Q-switch, it can be as low as 30 percent.  I'd suggest
+avoiding "resonant" type mirrors in favor of high energy dielectric types.
+While resonant optics have no coatings to be damaged, their internal optical
+element spacing and alignment are absolutely critical (if disassembled for any
+reason, will likely be ruined).  And, their condition or even effective
+reflectivity can't easily be determined.  The reflectivity is also likely to
+be too low for useful operation without a Q-switch.  Although the original
+ruby laser, circa 1960, used an aluminum output mirror with a hole in the
+middle, this is probably not a great idea (but it wouldn't hurt to try!).
+<p>
+Laser surplus places and eBay are the likely sources unless you are willing
+to pay big $$$ for them.
+<p>
+(From: Chris Leubner (cdleubner@ameritech.net).)
+<p>
+I have found that some of the IR attenuators out of very old color
+video cameras work as a half way descent OC for those ruby lasers, You need
+the type that are made of clear glass with a reddish mirror coating, the
+blue ones will not work.
+<p>
+<A NAME="cpsoex"></A>
+<hr>
+<br>
+<li>Back to <A HREF="laserssl.htm#ssltoc">Solid State Lasers Sub-Table of
+ Contents</A>.
+<h2>Other Examples of Home-Built PSS Lasers</h2>
+<h3><A NAME="cpsmyl">Mini YAG Laser using SSY1 Optics and SG-SP1</A></h3>
+
+I (Sam) was given a cute little YAG cavity including a 50 mm long 3 mm diameter
+Nd:YAG rod with AR coated ends and a flashlamp similar to that used in SSY1.
+Coupling from the flashlamp to the rod is probably better than in SSY1 -
+there, a noticeable percentage of the flashlamp light escapes out the sides
+of the white powder covered non-reflective transparent cavity.  This one has
+a highly polished elliptical reflector.
+<p>
+So, I built a resonator using some scrap aluminum with a pair of simple
+adjustable mirror mounts with SSY1 mirrors (from a defunct SSY1 - whereabouts
+of rod and flashlamp unknown).  I mounted a 20 mm focal length focusing lens
+in front of the OC mirror.
+<p>
+The original flashlamp was apparently supposed to be triggered using
+a series pulse technique.  I prefer external triggering so I added a fine
+wire running along the side of the flashlamp for the trigger transformer
+I use with PFN1.  Triggering works great. :)
+<p>
+Alignment was the real pain with all the weak reflections (HR, OC, and rod,
+front and rear, and both mirrors were ground with wedge).  But, I was able to
+smoke black electrical tape when focused on the first try using the SSY1 PFN1
+at 800 to 900 V (approximately 10 to 15 J input energy).  I'ms sure alignment
+isn't optimal though.  The output energy seems similar to that of SSY1, maybe
+a bit better on black tape (nice wisps of smoke), not quite as good on
+aluminum foil.  Without a Q-switch, the output pulse is longer and of lower
+peak power which may be the main factor.  (The behavior does appear similar to
+that of SSY1 with its Q-switch removed.)  I will really need to have some
+sort of energy meter though to optimize alignment.  This could possibly be
+done with just a photodiode centered on the optical axis with the beam spread
+out (to reduce peak power to the photodiode) monitoring the current on a
+scope.
+<p>
+Summary of specifications:
+<ul>
+<li>Rod: Nd:YAG 50 mm long, 3 mm in diameter.  AR coated both ends.
+<li>Flashlamp: Similar to the one used in SSY1 but with a slightly longer arc
+ length (approximately 2 inches).
+<li>Power supply: SG-SP1 (15 J max, pushbutton external triggering).
+<li>Firing rate: 1 pulse/second max at 15 J input.
+<li>Cavity reflector: Elliptical polished gold plated metal.
+<li>Mirrors: SSY1 HR and OC in home-built adjustable mounts.
+<li>Distance between mirrors: 6 inches.
+</ul>
+
+<h3><A NAME="cpscc1">Chris's High Energy Dual Flashlamp Pumped Nd:YAG
+ Laser</A></h3>
+
+(From: Chris Chagaris (pyro@grolen.com).)
+<p>
+This is an experimental dual flashlamp-pumped solid-state laser built quite
+inexpensively to be used for educational demonstrations as well as the
+experimental testing of various components to determine their effect on laser
+performance.  See: <A HREF="ccdfyag1.gif">Chris's High Energy Dual Flashlamp
+Pumped Nd:YAG Laser (Diagram)</A> for the basic layout of the system.
+The completed unit (with cavity cover removed) is shown in
+<A HREF="ccdfyag2.jpg">Chris's High Energy Dual Flashlamp Pumped Nd:YAG
+Laser (Photo)</A>  It really does look just like the diagram! :)
+<p>
+I did get my first coherent photons from it just the other evening. I am in
+need of some good YAG resonant optics to maximize this laser's performance, as
+efficiency is not very high right now. The best I've done so far has been a
+0.97 joule output pulse with an input of 200 joules. This was read with my
+questionably calibrated Ophir laser power meter.  I will try to get some
+pictures of this laser soon.
+<p>
+Here are the general specifications:
+<p>
+<ul>
+<li><b>Physical</b>
+ <p>
+ <ul>
+ <li>Overall size: 14.5" x 13.5" x 9.25" high.
+ <li>Laser head: 4.75" x 13.5".
+ <li>Resonator length: 12".
+ <li>Unit weight: 42 lbs.
+ <li>Case: Dark wood finish with removable lid. :)
+ </ul>
+<p>
+<li><b>Electrical</b>
+<p>
+ <ul>
+ <li>Input: 115 VAC at 2.3 A max, 60 Hz.
+ <li>Fuse: 3 A, fast acting
+ <li>Power cord: 40", 18 gauge. 3-wire.
+ <p>
+ <li>Charging supply: Current-limited, rectified, 4,000 V, 60 mA NST.
+ <li>Charge control: Manual, via momentary switch and 0 to 4 kV voltmeter.
+ <li>Main capacitor bank: (2 in parallel) oil-filled, pulse discharge, 50 uF
+  4,000 VDC.
+ <li>Trigger capacitor: Oil-filled, 12 uF, 900 VDC.
+ <li>Trigger coil: Wells C834, 50:1 ratio.
+ </ul>
+<p>
+<li><b>Laser Head:</b>
+ <p>
+ <ul>
+ <li>Lasing medium: Nd:YAG rod, 1/4" x 4", AR coated.
+ <li>Flashlamps: (2 in series) EG&G, FXC-1315-3, xenon-filled, 7.62 cm arc
+  length with 7 mm bore.
+ <li>Flashlamp trigger: External wire.
+ <li>Cavity reflector: Aluminized, diffuse quartz, close-coupled.
+ <li>Resonant mirrors: HR: 5 m radius enhanced silver. OC: BK-7 glass,
+  approximately 50% reflectance.
+ </ul>
+<p>
+<li><b>Pulse Forming Network:</b>
+<p>
+ <ul>
+ <li>Flashlamp Impedance (Ko): 13.9 (x 2 = 27.8) ohms.
+ <li>Total capacitance (C): 100 uF.
+ <li>Inductance (L): 61.8 uH.
+ <li>Voltage (Vo): 1,300 to 4,000 VDC.
+ <li>Pulse width (tp): 236 us.
+ <li>Energy (Eo): 84.5 J to 800 J.
+ <li>Circuit impedance (Zo): 0.786 ohms.
+ <li>Peak current (Ipk, approximate) and damping factor (a):
+   <ul>
+   <li>1,300 V: Ipk = 826 A; a = .82 (optimal).
+   <li>2,000 V: Ipk = 1,276 A; a = .70.
+   <li>3,000 V: Ipk = 1,890 A; a = .57.
+   <li>4,000 V: Ipk = 2,544 A; a = .49.
+   </ul>
+ </ul>
+</ul>
+<p>
+I do plan on the passive Q-switching of this laser in the future. My 'ever
+cheap plan' is to construct a small quartz dye chamber placed near, or as a
+part of, the high reflector and employ an organic dye suitable for YAG
+Q-switching within this cell.
+
+<h3><A NAME="cpsbrl">Sinebar's Ruby Laser</A></h3>
+
+(From: sinebar@bellsouth.net.)
+<p>
+Well after several weeks of construction I finally got my ruby laser
+working.  See <A HREF="sbrl1.jpg">Sinebar's Ruby Laser</A>.
+I don't know how much power it is putting out but I think
+it is probably somewhat modest.  The ruby rod is 3" x 1/4" and the
+ends are dielectric coated.  The HR end is 99.9% reflective and the OC
+end is 55% reflective.  I am using the PFN that was originally used
+for the Hughes range finder.  Cap is 150 uF, 1250 V.  I think that
+is about 117 joules.  The power supply is from a bug
+zapper.  The external trigger consists of a small trigger transformer
+and a simple circuit that charges a capacitor which dumps voltage across the
+primary of the trigger transformer when a button is pushed.  The laser
+cavity I robbed off a Hughes range finder as well as the flashlamp.
+In fact, I used quite a bit of the rangefinder parts.  I put
+everything in a nice wood box that gives it a kind of old timey look.
+
+<h3><A NAME="cpsjkl">Jarrod's Ruby Laser</A></h3>
+
+Hopefully, Jarrod will provide description of the complete laser
+in the future.  For now, be happy with the pics! :)
+<p>
+(From: Jarrod Kinsey.)
+<p>
+I have built a high power pulsed laser, capable of
+vaporizing certain materials with a single shot. The beam will cut a hole
+through a razor blade while producing a shower of sparks. When striking
+the surface of carbon or charcoal, the beam produces a plume of fire.
+<p>
+Go to the slideshow at <A HREF=
+"http://www.flickr.com/photos/12049698@N02/sets/72157622792699231/show/">Jarrod
+Kinsey's Ruby Laser Slideshow</A>.
+<p>
+And <A HREF="http://www.youtube.com/watch?v=682alFw287k">Jarrod Kinsey's
+Home-Built Ruby Laser YouTube Slide Show</A> is similar but with some
+descriptive text added.
+<p>
+<A NAME="cpsaio"></A>
+<hr>
+<br>
+<li>Back to <A HREF="lasercps.htm#cpstoc">Home-Built PSS Laser
+ Sub-Table of Contents</A>.
+<h2>Additional Information on Home-Built PSS Lasers</h2>
+<h3><A NAME="cpsalgn">Home-Built PSS Laser Alignment and Optimization</A></h3>
+
+Initial alignment is best done with a low power HeNe laser reflecting from
+the relevant surfaces of the HR and OC mirrors back to its output aperture.
+Although alignment isn't nearly as difficult or critical for this short wide
+bore laser as for a long narrow bore HeNe laser, the multiple weak reflections
+from all of the nearly transparent (for visible wavelengths) surfaces can be
+confusing (since the actual mirror reflections may not appear significantly
+different at the red HeNe wavelength than uncoated surfaces or AR coated
+surface at IR wavelengths).  The trick is to identify the relevant pair!
+Since all surfaces are planar, sharpness/fuzzyness of the spot can't be used
+as an identifier.  To simplify things, assuming the rod has planar ends that
+are perpendicular to the rod axis, it can be removed for initial alignment
+eliminating two confusing surfaces.  And, putting a drop of water, alcohol, or
+a strategically placed fingerprint :) on the back of the HR will scramble any
+reflection from its rear surface and remove it from consideration.
+<p>
+Detecting the beam and optimizing alignment can be done by checking the beam
+profile with Zapit(tm) paper, thermal fax or printer paper, a photocopy
+of a black original, other black paper, or black electrical tape, and
+maximizing hole-blasting effectiveness. ;-)
+
+<h3><A NAME="cpslpgr">Converting a Lamp Pumped IR YAG Laser to Green?</A></h3>
+
+Multiwatt Halogen, arc lamp, or flashlamp pumped solid state lasers are
+readily available at reasonable prices from laser surplus outfits, eBay, and
+elsewhere.  What about adding a KTP (or other SHG crystal) and getting them
+to output nice 532 nm green?  (Similar comments apply to higher harmonics
+but the difficulty level increases significantly.)  While this would appear
+at first to be an easy project, the realities may be quite different.  There
+are a number of issues all relating to peak power density available and
+shape of the beam inside the crystal.  Maximum harmonic power will be
+generated when a narrow polarized collimated beam is properly phase matched
+to the KTP (Type-II critical phase matching).  If the original laser isn't
+polarized (e.g., Nd:YAG without Brewster angled rod ends), adding a polarizing
+element will significantly increase performance.  Since harmonic generation is
+a non-linear process, it is desirable to maximize power density so long as it
+is safely less than the damage threshold of the KTP.
+<p>
+Lamp pumped SS lasers often use flat-flat resonators to prevent hot spots
+inside the YAG rod.  The intra and output beams both have a large diameter
+(almost equal to the rod diameter) and are massively multi (transverse) mode.
+Just inserting a KTP crystal into the beam (inside or outside the cavity)
+without taking into these factors and peak power density of the beam will
+likely result in either poor performance or damage to the KTP.  With the
+multimode beam, it isn't sufficient to just consider the average power
+density in the beam cross-section - peak power in the hot spots due to the
+sub-beams must be taken into account.
+<p>
+<ul>
+<li><b>CW SS lasers:</b> External doubling will probably be very inefficient
+ even with careful beam shaping due to the limited maximum power density
+ available.  Intracavity doubling may be possible but will probably require
+ additional optics to achieve a narrow beam waist inside the KTP.
+<p>
+<li><b>Non-Q-switched pulsed SS lasers:</b> Intracavity or external doubling
+ may be possible depending on peak power and beam structure.  It may just be
+ a matter of inserting a KTP crystal in the appropriate location.
+<p>
+<li><b>Q-switched pulsed or quasi-CW SS lasers:</b> Due to the extremely high
+ peak power of Q-switched laser pulses, external doubling will probably be
+ quite efficient but selection of the proper beam waist is most critical
+ to avoiding destruction of the KTP.
+</ul>
+
+In short, this may be possible but don't expect miracles, at least not unless
+the conversion is carefully designed and executed.
+
+<h3><A NAME="cpsfpcc">Flashlamp Pumping of Composite Crystals</A></h3>
+
+(From: r_isarin.)
+<p>
+I know that those hybrid vanadate crystals used in green laser pointers
+(Nd:YVO4 and KTP) will lase when you let a camera flash go off within
+a few cm of the pump surface.  I really didn't expect anything to
+happen, thinking that this was about lasers and nothing with lasers is
+ever easy.  I first tried it with the flash of my digital camera, then with the
+flash unit of a disposable camera. Both worked without any attempt at
+focusing the flashlight on the crystal, up to about 3 cm from the
+surface. I didn't dare try playing with any means of focusing, scared
+that I might ruin the laser crystal or the mirrors.
+<p>
+I did a very rough energy calculation, gross assumptions
+made here and there.  Please correct me if I'm off by more than a
+galaxy. ;o)
+<p>
+Based on flash cap capacity and voltage drop before and after the
+flash, there's about 6 Joules going into the flash tube. I have no idea
+about the efficiency of a small (tiny?) xenon tube, but assuming 50%
+(probably way too much), there's 3 J available in light. Of that light, maybe
+2% has the appropriate wavelength for effectively pumping the vanadate.
+Also, with the (lack of) construction in this setup, at least 95% of
+the light misses the vanadate completely, leaving only 3 mJ being used for
+lasing. With an oscilloscope measured flash duration of about 0.4 ms
+(FWHM), this results in 7.5 W average pulse power. I still have to put
+both flash and laser output in the same 'scope shot, to compare input
+and output. These 7.5 W are spread over the entire 5 square mm (the
+edges of the crystal are slightly ragged and the mirror coating is a
+circle just touching the edges) of the vanadate. That's 1.5 W per sq.
+mm not counting whatever light may enter from the sides of the vanadate.
+Using diode pumping, Pd = about 150 mW (estimate), focus spot size
+is about 0.002 square mm. (another estimate), the power density is
+75 W/square mm. Even if my calculations are off by a factor 50, the
+flash pumping is still equal to the usual diode pump. I do suspect
+that I'm on the low side with my numbers for the
+flash pumping, or vanadate thresholds even easier than I thought.
+About the green output, divide your results by 8 or 10 again...
+<p>
+For what it's worth...
+<p>
+<hr>
+<br>
+<li>Back to <A HREF="laserfaq.htm#faqtoc">Sam's Laser FAQ Table of
+ Contents</A>.
+<li>Back to <A HREF="lasercps.htm#cpstoc">Home-Built PSS Laser
+ Sub-Table of Contents</A>.
+<li>Forward to <A HREF="lasercds.htm#cdstoc">Home-Built Diode Pumped Solid
+ State (DPSS) Laser</A>.
+<p>
+<hr>
+<b><center>Sam's Laser FAQ, <A HREF="copyright.htm">Copyright &copy<A> 1994-2010,
+ Samuel M. Goldwasser, All Rights Reserved.<br>
+ I may be contacted via the
+ <A HREF="emaillnk.htm">Sci.Electronics.Repair FAQ
+ Email Links Page</A>.</center></b>
+<hr>
+<p>
+</BODY>
+</HTML>

@@ -1,0 +1,3295 @@
+<HTML>
+<HEAD>
+<TITLE>Sam's Laser FAQ - Diode Laser Power Supplies</TITLE>
+</HEAD>
+<BODY>
+<A NAME="dpstoc"></A>
+<p>
+<hr>
+<b><center>Sam's Laser FAQ, <A HREF="copyright.htm">Copyright &copy<A> 1994-2009,
+ Samuel M. Goldwasser, All Rights Reserved.<br>
+ I may be contacted via the
+ <A HREF="emaillnk.htm">Sci.Electronics.Repair FAQ
+ Email Links Page</A>.</center></b>
+<hr>
+<p>
+<li>Back to <A HREF="laserfaq.htm#faqtoc">Sam's Laser FAQ Table of Contents</A>.
+<h1>Diode Laser Power Supplies</h1>
+<h2>Sub-Table of Contents</h2>
+<ul>
+<li><A HREF="laserdps.htm#dpsldd">Laser Diode Drive Requirements</A>
+<p>
+<li><A HREF="laserdps.htm#dpsadl">Alternatives - Diode Laser Modules, Laser Pointers</A>
+ <ul>
+ <li><A HREF="laserdps.htm#dpsadl0">Laser Pointers and Diode Laser Modules - The Low Stress Approach</A>
+ <li><A HREF="laserdps.htm#dpsadl1">Power Regulators in Laser Pointers</A>
+ <li><A HREF="laserdps.htm#dpslpnr">Laser Pointer with a Resistor for a Regulator</A>
+ <li><A HREF="laserdps.htm#dpsadls">Substituting Batteries in Laser Pointers</A>
+ <li><A HREF="laserdps.htm#dpsadl2">Powering a Laser Pointer From an External Source</A>
+ <li><A HREF="laserdps.htm#dpsadl3">Blinking Laser Pointer or Diode Laser Module?</A>
+ </ul>
+<p>
+<li><A HREF="laserdps.htm#dpsicd">Integrated Circuits for Driving Laser Diodes</A>
+ <ul>
+ <li><A HREF="laserdps.htm#dpsicd0">Laser Diode Drive Chips</A>
+ <li><A HREF="laserdps.htm#dpsicd1">Caution About Cheap Laser Diode Drivers</A>
+ <li><A HREF="laserdps.htm#dpsicd2">Comments on Some Commercial Drivers and Detectors</A>
+ </ul>
+<p>
+<li><A HREF="laserdps.htm#dpsmld">More on Laser Diode Characteristics and Drivers</A>
+ <ul>
+ <li><A HREF="laserdps.htm#dpsmld0">Comments on Driver Education for Laser Diode Driver Designers</A>
+ <li><A HREF="laserdps.htm#dpsmld1">Variations in Laser Diode Monitor Photodiode Current Sensitivity</A>
+ <li><A HREF="laserdps.htm#dpsmld2">Response Time of Laser Diode and Monitor Photodiode</A>
+ <li><A HREF="laserdps.htm#dpsmlpc">Power Changes With Collimating Optics</A>
+ <li><A HREF="laserdps.htm#dpsmld3">Using an External Photodiode for Power Control</A>
+ <li><A HREF="laserdps.htm#dpsdhpl">Driving High Power Laser Diodes</A>
+ </ul>
+<p>
+<li><A HREF="laserdps.htm#dpstol">Testing Laser Diode Driver Circuits</A>
+ <ul>
+ <li><A HREF="laserdps.htm#dpssglt1">Sam's Laser Diode Test Supply 1</A>
+ <li><A HREF="laserdps.htm#dpstlds">Testing with a Laser Diode Simulator</A>
+ <li><A HREF="laserdps.htm#dpsalds">Art's Laser Diode Simulator</A>
+ </ul>
+<p>
+<li><A HREF="laserdps.htm#dpsvbps">Very Basic Laser Diode Power Supplies</A>
+ <ul>
+ <li><A HREF="laserdps.htm#dpssgb">Bare Bones Laser Diode Power Supply</A>
+ <li><A HREF="laserdps.htm#dpsbat">Battery Power for Laser Diodes</A>
+ </ul>
+<p>
+<li><A HREF="laserdps.htm#dpscld">Schematics of Laser Diode Power Supplies</A>
+ <ul>
+ <li><A HREF="laserdps.htm#dpsto1">Toshiba Discrete Laser Diode Power Supply (TO-LD1)</A>
+ <li><A HREF="laserdps.htm#dpsre1">Laser Diode Power Supply 1 (RE-LD1)</A>
+ <li><A HREF="laserdps.htm#dpsre2">Laser Diode Power Supply 2 (RE-LD2)</A>
+ <li><A HREF="laserdps.htm#dpsre3">Laser Diode Power Supply 3 (RE-LD3)</A>
+ <li><A HREF="laserdps.htm#dpsre4">Laser Diode Power Supply 4 (RE-LD4)</A>
+ <li><A HREF="laserdps.htm#dpssg1">Sam's Laser Diode Driver (SG-LD1)</A>
+ <li><A HREF="laserdps.htm#dpssg2">Modification of SG-LD1 for Common Cathode LD/PD (SG-LD2)</A>
+ <li><A HREF="laserdps.htm#dpsk3p">K3PGP's Laser Diode Driver (K3-LD1)</A>
+ <li><A HREF="laserdps.htm#dpsvs1">Viacheslav's Laser Diode Driver (VS-LD1)</A>
+ <li><A HREF="laserdps.htm#dpslp1">Laser Diode Driver from Cheap Red Laser Pointer 1 (LP-LD1)</A>
+ <li><A HREF="laserdps.htm#dpslp2">Laser Diode Driver from Cheap Red Laser Pointer 2 (LP-LD2)</A>
+ <li><A HREF="laserdps.htm#dpslp3">Laser Diode Driver from Cheap Red Laser Pointer 3 (LP-LD3)</A>
+ <li><A HREF="laserdps.htm#dpslp4">Laser Diode Driver from Cheap Red Laser Pointer 4 (LP-LD4)</A>
+ <li><A HREF="laserdps.htm#dpslp5">Laser Diode Driver from Cheap Red Laser Pointer 5 (LP-LD5)</A>
+ <li><A HREF="laserdps.htm#dpsilm1">Laser Diode Driver from IR Laser Module 1 (ILM-LD1)</A>
+ <li><A HREF="laserdps.htm#dpsrlm1">Laser Diode Driver from Red Laser Module 1 (RLM-LD1)</A>
+ <li><A HREF="laserdps.htm#dpsglp1">Laser Diode Driver from Green Laser Pointer 1 (GLP-LD1)</A>
+ <li><A HREF="laserdps.htm#dpsglp2">Laser Diode Driver from Green Laser Pointer 2 (GLP-LD2)</A>
+ <li><A HREF="laserdps.htm#dpsglp3">Laser Diode Driver from Green Laser Pointer 3 (GLP-LD3)</A>
+ <li><A HREF="laserdps.htm#dpsglp4">Laser Diode Driver from Green Laser Pointer 4 (GLP-LD4)</A>
+ <li><A HREF="laserdps.htm#dpssld">Simple Laser Diode Power Supply</A>
+ <li><A HREF="laserdps.htm#dpsclc">EU38 Low Cost Constant Current Laser Diode Driver</A>
+ <li><A HREF="laserdps.htm#dpsldt1">Super Simple Laser Diode and TEC Driver</A>
+ <li><A HREF="laserdps.htm#dpsccs">Constant Current Supply for High Power Laser Diodes</A>
+ <li><A HREF="laserdps.htm#dpssg3">Sam's High Power Laser Diode Driver 1 (SG-DH1)</A>
+ <li><A HREF="laserdps.htm#dpstldr">Tim's High Power Laser Diode Driver (TO-LD1)</A>
+ <li><A HREF="laserdps.htm#dpsjldr">Joshua's High Power Laser Diode Driver (JD-LD1)</A>
+ <li><A HREF="laserdps.htm#dpsdld">Digitally Controlled Laser Diode Driver</A>
+ <li><A HREF="laserdps.htm#dpspld">Pulsed Laser Diode Drivers</A>
+ <li><A HREF="laserdps.htm#dpshp1">Hewlett Packard LaserJet IIP Laser Diode Driver</A>
+ <li><A HREF="laserdps.htm#dpshp2">Hewlett Packard LaserJet IIIP Laser Diode Driver</A>
+ <li><A HREF="laserdps.htm#dpsmdr">More Laser Diode Driver Schematics</A>
+</ul>
+<p>
+<li><A HREF="laserdps.htm#dpscomm">Communications Systems Using Diode Lasers</A>
+ <ul>
+ <li><A HREF="laserdps.htm#dpsdepm">Driver Enhancements to Provide Modulation Capability</A>
+ <li><A HREF="laserdps.htm#dpsdlbl">Diode Laser Based Line-of-Sight Communicators</A>
+ </ul>
+</ul>
+<p>
+<A NAME="dpsldd"></A>
+<hr>
+<br>
+<li>Back to <A HREF="laserfaq.htm#faqtoc">Sam's Laser FAQ Table of Contents</A>.
+<li>Back to <A HREF="laserdps.htm#dpstoc">Laser Diode Power Supplies Sub-Table of Contents</A>.
+<h2>Laser Diode Drive Requirements</h2>
+
+The following must be achieved to properly drive a laser diode and not ruin
+it in short order:
+<ul>
+<li>Absolute current limiting.  This includes immunity to power line transients
+  as well as those that may occur during power-on and power-off cycling.  The
+  parameters of many electronic components like ICs are rarely specified
+  during periods of changing input power.  Special laser diode drive chips
+  are available which meet these requirements but a common op-amp may not be
+  suitable without extreme care in circuit design - if at all.
+<p>
+<li>Current regulation.  Efficiency and optical power output of a laser diode
+  goes up with decreasing temperature.  This means that without optical
+  feedback, a laser diode switched on and adjusted at room temperature will
+  have reduced output once it warms up.  Conversely, if the current is set up
+  after the laser diode has warmed up, it will likely blow out the next time
+  it is switched on at room temperature if there is no optical feedback
+  based regulation.
+</ul>
+Note that the damage from improper drive is not only due to thermal effects
+(though overheating is also possible) but due to exceeding the maximum optical
+power density (E/M field gradients?) at one of the end facets (mirrors) - and
+thus the nearly instantaneous nature of the risk.
+<p>
+The optical output of a laser diode also declines as it heats up.  This is
+reversible as long as no actual thermal damage has taken place.  However,
+facet damage due to exceeding the optical output specifications is permanent.
+The result may be an expensive LED or (possibly greatly) reduced laser
+emission.
+<p>
+I accidentally blew one visible laser diode by neglecting to monitor the
+current but it wasn't the sudden effect some people describe - the current
+really had to be cranked up well beyond the point where the brightness of the
+laser beam stopped increasing.  It did indeed turn into a poor excuse for an
+LED.  One data point and you can conclude the world. :-)
+<p>
+Another one was blown by assuming that a particular driver circuit would work
+over a range of input voltages when in fact it was supposed to be powered from
+a regulated source.  At first the degradation in brightness appeared to be
+reversible.  However, what was probably happening was that damage to the laser
+diode was occurring as soon as the brightness appeared to level off.  The
+natural tendency was then to back off and approach this same point again.  Not
+quite as bright?  Crank up the current.  Finally, once it is much too late,
+the realization sets in that it will *never* be quite as bright as it was
+originally - ever again.  This one still lases but at about 1/10th of its
+former brightness.
+<p>
+If you then try to power this damaged laser diode with a driver circuit using
+optical feedback, further instantaneous damage will occur as the driver
+attempts to maintain the normal optical output - which is now impossible to
+achieve and only succeeds in totally frying the device as it increases the
+current in a futile attempt to compensate.
+<p>
+And a comment about the expensive Nichia violet laser diodes (see the section:
+<A HREF="laserdio.htm#dioabg">Availability of Green, Blue, and Violet Laser
+Diodes</A>).  Physically, they look like ordinary laser diodes and except for
+a higher voltage drop, the driving characteristics are basically similar.
+However, I've heard that they are even more sensitive to EVERYTHING than
+their visible and IR cousins and will degrade or die more easily.  Since
+the wavelength of these diodes (in the 400 to 420 nm range) is basically
+useless for applications requiring visibility, aside from the
+"being the first kid on your block" factor, I'd stay away from them until
+the price comes down dramatically!  I suspect that the newest 430 to 445 nm
+Nichia diodes are equally tempermental.
+<p>
+Also see the section: <A HREF="laserdio.htm#dioldl2">How Sensitive are Laser
+Diodes, Really?</A>.
+<p>
+<A NAME="dpsadl"></A>
+<hr>
+<br>
+<li>Back to <A HREF="laserdps.htm#dpstoc">Diode Laser Power Supplies Sub-Table of Contents</A>.
+<h2>Alternatives - Diode Laser Modules, Laser Pointers</h2>
+<h3><A NAME="dpsadl0">Laser Pointers and Diode Laser Modules - The Low Stress
+ Approach</A></h3>
+
+Where what you really want is a working visible diode laser, a commercial
+laser pointer or diode laser module may be the best option.  Both of these
+include the driver circuit and will run off of unregulated low voltage DC.
+While the cost may be somewhat higher than that of a bare laser diode, the
+much reduced risk of blowout and built-in optics may be well worth the added
+cost.  It doesn't take too many fried laser diodes to make up this cost
+difference!
+<p>
+Believe me, it can get to be really frustrating very quickly blowing expensive
+laser diodes especially if you don't really know why they failed.  This will
+be particularly true where the specifications of the laser diode and/or driver
+circuit are not entirely known - as is often the case.  Helium-neon lasers are
+much more forgiving!
+<p>
+Buy one that accepts an unregulated input voltage.  Otherwise, you can still
+have problems even if you run the device from a regulated power supply.  All
+laser pointers and most (but not all) modules will be of this type.  However,
+if you get a deal that is too good to be true, corners may have been cut.  A
+proper drive circuit will be more than a resistor and a couple of capacitors!
+<p>
+To confirm that the driver is regulating, start with an input near the bottom
+of the claimed voltage range and increase it slowly.  The brightness of your
+laser diode should be rock solid.  If it continues to increase even within the
+supposedly acceptable range of input voltage, something is wrong with either
+the laser diode (it is incompatible with the driver or damaged) or driver (it
+actually requires a regulated input or is incorrectly set up for the laser
+diode you are using).  Stop right here and rectify the situation before you
+blow (yet another) laser diode!
+<p>
+See the chapter: <A HREF="laserlps.htm#lpstoc">Laser and Parts Sources</A> for
+a number of suppliers of both diode laser pointers and diode laser modules.
+<p>
+If you still aren't convinced that someone else should deal with laser diode
+drive design issues, the remainder of this chapter provides suggestions for
+integrated drive chips, sample circuits, and complete power supply schematics.
+But don't complain that you haven't been warned of the sensitive nature of
+laser diodes.
+
+<h3><A NAME="dpsadl1">Power Regulators in Laser Pointers</A></h3>
+
+The following four possibilities exist for the laser diode drivers inside
+laser pointers.  (Unless otherwise noted, this applies to red laser pointers,
+not the DPSS green types with their high power laser diode pump requirements.)
+<p>
+<ol>
+<li><b>Series resistor:</b>  There is no active regulator.  A resistor
+ limits current to a safe value with a fresh set of batteries.  The laser
+ diode is driven like an LED.  As the batteries are drained, current decreases
+ proportional to the difference between the battery voltage and the diode drop
+ (about 2 V) divided by the resistances.  Since output power and thus
+ brightness would also decline dramatically with battery use, this approach
+ is only found in the cheapest of laser pointers.  See the section:
+ <A HREF="laserdps.htm#dpslpnr">Laser Pointer with a Resistor for a
+ Regulator</A>.
+<p>
+<li><b>Constant current:</b> Laser diode current is set to a safe value
+ between threshold and maximum.  This takes care of battery voltage variations
+ but still would have problems with changes in the laser diode output with
+ temperature.  This is rarely, if ever, found on red laser pointers but is
+ used for green laser pointers since the high power pump diodes for the DPSS
+ laser module do not have or need optical feedback for adequate regulation.
+<p>
+<li><b>Optical feedback - unregulated reference:</b> Some laser diode drivers
+ use the monitor photodiode to control laser diode current but do not have
+ constant voltage source like a zener diode circuit to use as a reference.
+ This is fairly safe for the laser diode as long as the correct battery types
+ are used.  For these, output brightness will vary somewhat with battery
+ voltage and will thus decline as the batteries are drained.
+<p>
+<li><b>Optical feedback - regulated reference:</b> The best designs (and all
+ those using IC driver chips) will maintain nearly constant output power until
+ the batteries are nearly exhausted.
+</ol>
+<p>
+I'd expect to only see (3) and (4) in modern red laser pointers with (4)
+predominating in more modern designs.  Expect (2) in green DPSS laser
+pointers (but many or most of these will also be pulsed).
+
+<h3><A NAME="dpslpnr">Laser Pointer with a Resistor for a Regulator</A></h3>
+
+Visible laser diodes generally have very precise drive requirements.  Too
+little current and they don't lase; too much current and they quickly
+turn into poor imitations of LEDs or die entirely.  At least that's true of
+most of them.  In order for a simple resistor to set the current precisely
+enough, it would have to be selected for each laser diode to limit the
+current to a safe value with fresh batteries over the expected temperature
+range.  With only 5 to 10 percent between lasing threshold and maximum
+current for a typical visible laser diode, this could be impossible.  Until
+recently, I had heard that this type of design (or lack thereof) has been
+used but had never seen such a simple circuit in a laser pointer.
+Apparently, visible laser diodes are now mass produced with a much larger
+range of current between threshold and operating limits - possibly engineered
+specifically for the ultra-cheap laser pointer market.
+<p>
+(From gabbardo@cpovo.net.)
+<p>
+Well, I have in my hands a laser pointer that has only a resistor to limit
+the current instead of the transistorized circuits usually found. It have a
+51 ohm SMD type resistor on the PCB in series with the power switch, the
+laser diode, and 3 LR44 batteries (1.5 V each).
+<p>
+In fact, the laser diode has no monitor photodiode at all - it have only
+2 terminals. The metal case is open on the rear, so one can easily see the
+laser diode itself inside it.  Interesting enough is that it is the only
+type of laser pointer that I can actually now find here (Brazil), but some
+years ago I bought some pointers having a complete regulator circuit.
+<p>
+(From: Sam.)
+<p>
+He's has sent me a sample, all the way from Brazil!  Heck, it arrived faster
+than some of the stuff I send next door. :)  As advertised, it certainly
+appears not to have anything inside other than a laser diode chip on a heat
+sink, 51 ohm surface mount resistor, on-off switch, and battery.
+<p>
+I have measured the I-V curve for both the overall circuit and just the
+laser diode.  It is consistent with a 51 ohm series resistor and 20 ohm diode
+resistance with about a 2 V drop at just above 0 mA (the knee of the diode
+I-V curve).  The threshold is around 15 mA and the operating current is 35 mA
+at 4.5 V (the normal battery voltage) - a rather wide range for a visible edge
+emitting diode.  My hypothesis is that these laser diodes are specifically
+designed to have a wide operating range - possibly by reducing the
+reflectance of the output facet and thus the gain, possibly by varying the
+doping, or something else.  So, efficiency is lower but with the benefit of
+increased tolerance to power supply current variation (though 35 mA for
+a few mW of output power is a very respectable value).
+<p>
+Someone else sent me a similar pointer and while I haven't actually measured
+its I-V curve, I expect that it behaves basically the same.  These are both
+bullet-style pointers of obviously really cheap construction that came with
+5 screw-in pattern heads (1 clear and 4 HOEs).  Another better quality
+bullet-style pointer I have uses the normal laser diode in a can package
+with a regulated driver.
+<p>
+I also bought a couple dozen as-is pointers in a single lot on eBay which are
+all of this type.
+
+<h3><A NAME="dpsadls">Substituting Batteries in Laser Pointers</A></h3>
+
+My general recommendation would be to avoid this if possible but I do agree
+that having to spend huge $$$$ for those silly button cells can get to be
+annoying. :)
+<p>
+<blockquote>
+"My laser pointer requires those little button cells which are really
+ expensive and hard to find.  I was wondering if I can instead connect 2 wires
+ and make a battery pack for it using 3 AA batteries.  Do all pointers have
+ power regulators?"
+</blockquote>
+<p>
+They all have some sort of regulation but it may not be adequate to deal with
+much of a change.  You would have to check circuit to be sure or use batteries
+that are exactly the same maximum voltage.  Even that isn't totally guaranteed
+as really dreadful designs could depend on the internal resistance of the
+batteries to limit current.  So, replacing AAA Alkalines with D Alkalines
+could cause problems with some designs.
+<p>
+To be reasonably safe, you would have to measure the current using a fresh set
+of the recommended button cells and then add enough series resistance to make
+sure the current can never exceed this value even with brand new AAs (or
+whatever you are using).
+<p>
+Note that the much more complex and expensive green laser pointers should have
+decent regulation but they may still assume that nicely behaved batteries are
+used.  Therefore, if adding an external power source to one of these, it is
+best to make sure it is well filtered, regulated, and has absolutely <i>no</i>
+overshoot during power cycling.  Also see the next section.
+
+<h3><A NAME="dpsadl2">Powering a Laser Pointer From an External
+ Source</A></h3>
+
+Unlike high quality and expensive diode laser modules, laser pointers may have
+less than stellar internal regulation.  Thus, you could easily destroy them
+instantly by attaching an external power supply, wall adapter, or
+even a higher capacity battery of the same voltage as the one used originally.
+Some pointers may even depend on the internal voltage drop inside the
+recommended (internal) batteries to provide some of the current regulation!
+<p>
+So, if you really want to run a pointer from an external source, the best
+thing to do would be to measure the voltage across a fresh set of batteries
+powering the pointer and build a highly filtered, well regulated power
+supply to match it.  The power supply must have absolutely no overshoot or
+undershoot when power cycling.
+<p>
+Another not quite as robust alternative is to obtain a wall adapter with an
+adequate current rating and slightly higher voltage rating than the pointer's
+battery.  Then, add series resistance until the voltage at the pointer is the
+same as when powered with its internal battery.  This is risky, however, since
+unless the wall adapter is regulated (few are), ripple, line voltage
+fluctuations, and power surges will get through it - and any of these can
+fry a laser diode in next to zero time.
+<p>
+Also note that a fancy regulated power adapter may actually be deadly to
+a laser pointer.  Power supplies that include active components (those using
+switchmode or linear regulators as opposed to simple wall adapters with only
+a transformer, rectifier, and filter capacitor) may produce sub-microsecond
+(or longer) overvoltage spikes when power cycled (at power-on or power-off).
+These will have no effect on most electronic equipment but may be fatal to
+laser diodes.
+<p>
+As far as connecting the power supply: If you don't mind drilling a hole in
+the case or end-cap, construct a dummy battery with contacts at each end
+which you wire to your external power supply.  Drill a hole in the side of
+the case, or better yet in the cap (but off to one side so the cap will still
+make proper contact with the battery if you decide to use the pointer with a
+battery in the future) to allow the pair of wires to pass through after the
+cap is screwed on.  There are all sorts of ways of doing this.  The
+connections have to be made to the center spring contact on the circuit board
+at the bottom of the battery compartment and the case.  Make sure you get the
+polarity correct!
+<p>
+Also see the section: <A HREF="laserdps.htm#dpsadl1">Power Regulators in Laser
+Pointers</A>.
+
+<h3><A NAME="dpsadl3">Blinking Laser Pointer or Diode Laser Module?</A></h3>
+
+With the wide availability of inexpensive laser pointers in particular, it
+would be nice if there were a way to make them do something more exciting than
+just project a steady red dot.
+<p>
+Typical questions go something like:
+<ul>
+ "Hi is there any way I can make my laser pointer blink at an adjustable rate,
+ something that will turn on/of maybe with the control of a adjustable
+ resistor? Are there any schematics or something to help me out?"
+</ul>
+In principle, a simple circuit based on a 555 timer, for example, could be
+used to control power to the pointer or module - perhaps even just control a
+relay to act as the on/off button.
+<p>
+In practice, whether this will work or not depends on the design of your
+laser pointer or diode laser module.  Some have significant filtering and
+delays circuits inside which will make blinking at a useful rate impossible.
+Others will work fine.  Still others will fail due to the repeated stress of
+on/off cycles.
+<p>
+Going any deeper into the circuitry than the batteries/power supply or on/off
+switch is definitely not for the beginner - if possible at all.  Unfortunately,
+however, that may be necessary to achieve a useful result.  For more info, see
+the sections of this chapter on laser diode power requirements, modulation, and
+the sample laser diode driver schematics.
+<p>
+(From: Peter Pan (peterpan@cheerful.com).)
+<p>
+Yes! I've used a simple 555 timer circuit driving an emitter follower
+transistor buffer amp, to drive several laser pointers. I've had little
+trouble recovering a near square wave at the receiving end with a
+phototransistor driven amplifier, up to about 5 kHz. After that, the
+residual energy stored in the laser module's driver circuit starts to
+degrade the square wave, but this can usually be extended, at least
+through the remainder of the audio range, by using a push-pull or
+complementary-symmetry type buffer, instead of a simple emitter follower.
+If you need to go beyond 4 kHz though, it is better to attempt to modulate
+the intensity rather then try to accomplish complete shut down/turn on.
+<p>
+<A NAME="dpsicd"></A>
+<hr>
+<br>
+<li>Back to <A HREF="laserdps.htm#dpstoc">Diode Laser Power Supplies Sub-Table of Contents</A>.
+<h2>Integrated Circuits for Driving Laser Diodes</h2>
+<h3><A NAME="dpsicd0">Laser Diode Drive Chips</A></h3>
+
+Many semiconductor manufacturers offer laser driver chips.  Some of these
+support high bit rate modulation in addition to providing the constant current
+optically stabilized power supply.  Other types of chips including linear
+and switching regulators can be easily adapted to laser diode applications
+in many cases.  However, some of these chips are designed in such a way that
+they will work only at the high bit rates advertised maintaining a continuous
+carrier at all times or with a 50 percent average duty cycle or something
+equally annoying if all you want is a CW laser diode power supply or even one
+for low bit rate communications.  You need to check the specs very carefully
+for non-standard (e.g., not covered in the datasheet or app-note) applications.
+<p>
+Note: Free samples of ICs like laser diode drivers may be available for
+the asking even if you won't be buying a million parts in the future.
+Manufacturers often provide some means of requesting free samples at their
+web sites.  Just be honest about your needs - they consider it good PR and
+you might just tell a friend or colleague who WILL buy a million parts!
+<p>
+<ul>
+<li><A HREF="http://www.analog.com/">Analog Devices</A>
+ (http://www.analog.com/) has several laser diode drivers including the
+ <A HREF=
+ "http://www.analog.com/en/prod/0,2877,AD9660,00.html">AD9660</A>
+ which provides for full current control using the photodiode for
+ feedback and permits high speed modulation between two power levels.
+<p>
+<li><A HREF="http://www.burr-brown.com/">Burr-Brown</A>
+ (http://www.burr-brown.com/).
+<p>
+ (From: Steve White (stevew@hitl.washington.edu).)
+<p>
+ We are using the OPA 2662 (Burr-Brown) for this. It is an OTA with 370MHz BW,
+ 59 mA/ns SR, and can source/sink 75mA of current per channel (two channels per
+ chip which may be paralleled quite easily). The part provides the emitter of
+ the current source to an external pin (programming side of an internal
+ current mirror), so that a single resistor sets the voltage-current transfer
+ characteristic. Watch out for the dependence of the harmonic distortion specs
+ upon the supplied current and frequency though...if this will be a problem
+ for your particular application that is (didn't matter much for mine).
+<p>
+<li><A HREF="http://www.elantec.com/">Elantec</A> (http://www.elantec.com)
+ offerings include the EL6251C and EL6258C which provide laser diode driver
+ and sense circuitry.  They support high speed control of laser diode current
+ with selectable levels for read and write, optical feedback regulation, and
+ protection from low power supply or open input conditions.  These parts are
+ intended for CD, CD-R, CD-RW, and other optical data storage applications.
+<p>
+ Another chip, the EL6270C, features an integrated high frequency modulator
+ (HFM) oscillator to provide output current drive of up to 100 mA, an
+ external resistor that controls the average laser diode output power, and a
+ low power disable mode that powers down to 5 uA.
+<p>
+ Complete datasheets are available at the Elantec Web site.
+<p>
+<li>(From: Alan Wolke (kc2bog@worldnet.att.net).)
+<p>
+ Check out the datasheets for several laser driver circuits available on the
+ market for high speed fiber communications.  See Maxim, HP, Sony, Philips,
+ Fujitsu, Microcosm, etc.  Also, there are many papers in Bell System
+ Technical Journals that deal with other bias control schemes that don't
+ involve optical feedback.
+<p>
+<li><A HREF="http://www.ichauscorp.com/">iC-Haus Corporation</A>
+ (http://www.ichauscorp.com/)
+ offers several CW laser diode driver and controller chips.  The complete
+ datasheets are available on-line and include functional block diagrams and
+ application information.  These devices require only a few common external
+ components and can be used for CW and modulation/pulsed operation up to
+ several hundred kHz (depending on model).
+ iC-Haus parts are available through electronics distributors.
+<p>
+<li><A HREF="http://www.linear.com/">Linear Technology</A>
+ (http://www.linear.com/).
+<p>
+ App Note AN52 (and probably others) includes a sample circuit using their
+ one of their chips (not necessary dedicated laser drivers) for powering
+ laser diodes.  In AN52, the LT1110 Micropower DC-DC converter is used as
+ the current regulator for operating from a 1.5 V battery.  However, it is
+ possible that behavior at low battery voltages might be undefined - and bad
+ for the laser diode!  I wonder if they tested for that? :(
+<p>
+ There is an article in the November CQ magazine by WA2NDM entitled, "A
+ Laser Diode Transmitter" which is based on AN52.  However, his circuit uses
+ an audio transformer to directly modulate the laser diode current and it
+ would seem that without some additional protection, if someone were to
+ accidentally drop or tap on the microphone - or power cycle the preamp -
+ poof goes the laser diode! :(
+<p>
+ <A HREF="laserdps.htm#dpsre3">Laser Diode Power Supply 3 (RE-LD3)</A> uses
+ a similar chip - the LT1054 DC-DC Converter, not for voltage stepup but to
+ very effectively isolate the laser diode from input voltage spikes.
+<p>
+<li><A HREF="http://www.maxim-ic.com/">Maxim</A> (http://www.maxim-ic.com/).
+<p>
+ The MAX3261 (1.2 Gbps), MAX3667 and MAX3766 (622 Mbps), and MAX3263 (155
+ Mbps) are examples of their highly integrated laser driver chips.
+<p>
+ The Maxim Engineering Journal (a monthly or so publication you will receive
+ if you have requested their CDROM and possibly included in trade rags like
+ EDN and Electronic Design) sometimes has laser diode related articles.  For
+ example, the Special Fiber Optic Edition (early 1999) is devoted to
+ applications of Maxim's high speed (622 Mbps and up!) optical interface
+ components including laser diode drivers and sensors. (The Maxim application
+ note <A HREF="http://www.maxim-ic.com/1st_pages/AF09.htm">Driving a Laser
+ diode at 622 Mbps From a Single +3.3V Power Supply</A> may be one of those
+ from this publication.)  The next issue I received, Volume 33, included a
+ circuit similar to the one described in
+ <A HREF="laserdps.htm#dpsdld">Digitally Controlled Laser Diode Driver</A>.
+<p>
+<li>Both <A HREF="http://www.sharpmeg.com/">Sharp</A> and
+ <A HREF"http://www.mitsubishichips.com/">Mitsubishi</A> manufacture IC's for
+ driving laser diodes. Most will maintain constant power. Some require two
+ voltages, others just one.  These circuits will drive the common cathode
+ lasers, or the Sharp "P" or the Mitsubishi "R" configuration which has the
+ laser's cathode connected the the anode of the photo diode. The Sharp IR3C07
+ is a good for CW or analog modulation, and the IR3C08 or IR3C09 will allow
+ digital modulation to 10 MHz. These parts are quite inexpensive.
+<p>
+</ul>
+Some additional manufacturers of laser diode driver chips and modules include
+(this not a complete list!):
+<ul>
+<li><A HREF="http://www.amcc.com/">Applied Micro Circuits Corp.</A>
+<li><A HREF="http://www.francetelecom.com/">France Telecom Research and
+  Development</A>
+<li><A HREF="http://www.fcsi.fujitsu.com/">Fujitsu Compound Semiconductor,
+  Inc.</A>
+<li><A HREF="http://www.intersil.com/">Intersil</A>
+<li><A HREF="http://www.laserdiode.com/">Laser Diode, Inc.</A>
+<li><A HREF="http://www.lucent.com/">Lucent Technologies, Inc.,
+  Microelectronics Division</A>
+<li><A HREF="http://www.mitsubishichips.com/">Mitsubishi Electronics America,
+  Inc.</A>
+<li><A HREF="http://www.nel.co.jp/">NTT Electronics Corp.</A>
+<li><A HREF="http://www.nvginc.com/">NVG, Inc.</A>
+<li><A HREF="http://www.okisemi.com/">OKI Semiconductor, Inc.</A>
+<li><A HREF="http://www.rockwell.com/">Rockwell Microelectronics, Inc.</A>
+<li><A HREF="http://www.vitesse.com/">Vitesse Semiconductor Corp.</A>
+<li><A HREF="http://www.xicor.com/">Xicor, Inc.</A>
+</ul>
+
+<h3><A NAME="dpsicd1">Caution About Cheap Laser Diode Drivers</A></h3>
+
+The bottom line is that these should be fine for CW laser lights and laser
+pointer type applications but NOT for modulation as may be claimed by the
+distributors of these modules.
+<p>
+(From: Art Allen, KY1K (aballen@colby.edu).)
+<p>
+I called a person I know who works for a major surplus house. He asked NOT
+to be identified. He did give me valuable information regarding the NS102
+laser driver modules that are being sold for $3 each (in large quantities) on
+the internet.
+<p>
+Here's what I was told.
+<p>
+The NS102 is mass produced in Asia. The chip that the NS102 PCB is based on
+is unknown, and probably made in Taiwan too. There are no specs for it.
+Only DC parameters are given on the 'rough spec' sheet (advertising quality
+literature) the sellers give you. 
+<p>
+They do work and they work well. 
+<p>
+They use low power and they are stable-if the voltage in changes from 4v to
+8v, the LD output remains fairly constant.
+<p>
+(From: Sam.)
+<p>
+The following is apparently not quite correct.  According to someone who
+works with NVG, they can be modulated at up to 2 MHz.  See the section:
+<A HREF="laserdps.htm#dpsicd2">Comments on Some Commercial Drivers and
+Detectors</A>
+<p>
+(From: Art.)
+<p>
+However, they are NOT suitable for modulation of laser diodes and should
+only be used as a laser pen power supply!
+<p>
+I have an email from a vendor here which sparked all this speculation
+regarding their suitability for our purposes. The email CLAIMS they can be
+driven to 12 Mhz output pulses while maintaining FULL APC (not average
+output monitoring as they do in fiber optic drivers). As far as I can tell,
+this is just plain a lie and no one should purchase these expecting to
+modulate a laser diode for communications purposes. 
+<p>
+They are probably little more than the standard 2 transistor laser driver
+that can be used for a laser pointer because it is heavily bypassed with a
+heavy duty slow start ramp up circuit.
+<p>
+Some vendors are now selling these for $20 in small quantities - don't get
+taken in - it's a laser pointer driver and NOTHING MORE.
+<p>
+If anyone has better info or has tested one of these on the bench, please
+let me know. I'd really like to get info on the chip contained on the PCB too.
+
+<h3><A NAME="dpsicd2">Comments on Some Commercial Drivers and
+ Detectors</A></h3>
+
+(Portions from: Martin Stone (mmstone@mindspring.com).)
+<p>
+The following refers to chips available from
+<A HREF="http://www.nvginc.com/">NVG, Inc.</A> and other resellers of their
+products.  See the section: <A HREF="laserlps.htm#lpsnsw3">Mail Order -
+Lasers, Laser Parts, Optics, Accessories</A> for more info on NVG.
+<p>
+The NVG laser driver circuit was originally designed for CW only.  While I did
+not design  the driver circuit, I was able to find a way to get it to modulate
+successfully up to 2 MHz.  I have successfully built a free-space FM modulated
+data/voice transmission system using the NVG laser modules (diode, driver,
+collimator, enclosure) already set and burned in).
+<p>
+In addition I have helped a number of customers from around the world (Spain,
+Italy, Switzerland and the US) use the NVG modules in a modulated design.
+<p>
+While the NS102 type driver circuit does have a 0.1 uF capacitor to act as a
+'soft on'/filter protection of the laser diode, by providing enough voltage
+to keep the module/laser just below the threshold, you can modulate the NVG
+modules (or any suitable diode attached to the NS102 driver) up to 2 MHz.  At
+that point, it seems that the capacitor effectively filters the modulation and
+the circuit 'saturates' and only produces CW output.
+<p>
+Another strategy is to 'inverse' modulate the module - that is, keep the
+module effectively on with the modulation signal causing a decrease in power
+- rather than have the laser off with modulation causing an increase in
+signal....
+<p>
+See <A HREF="ldfmmod1.gif">A Simple PLL Based FM Diode Laser Module
+Modulator</A> for an example of one approach that works with the NS102.<
+<p>
+(From John Sojak (trax@allways.net).)
+<p>
+As far as modulation is concerned, the Analog Devices driver is hard to beat
+for three bucks. Couple that with a 555 and a battle proven LM317 front end
+and cry 'BINGO'. Maxim used PECL inputs ... arrgh! I don't need to spit photon
+packets at 150 mhz! Linear Tech IR receiver looks good, although the $7.00
+price tag + a handful of linear doesn't really appeal to me. Too bad you can't
+get inside the Epoxy covered die in the Sharp TV/VCR consumer IR receiver
+modules (apx $1.50/100 pcs). Not everyone in the world wants to decode bursts
+of 40 kHz back into data!
+<p>
+Oh, by the way - an Optek BP812 Optologic sensor performs quite well at at 760
+nm. It's an active device available in either totem pole or open collector
+outputs. The applications guy at Optek says the device won't work at 760 but
+looking at the response curve, I disagree. It's response is only down about
+10% in the reds! Most silicon photo stuff is down about 60-75% at 760ish
+nm. From what I have seen, the device is very usable at 760 nm. Useful part
+for red diodes and HeNe stuff.
+<p>
+<A NAME="dpsmld"></A>
+<hr>
+<br>
+<li>Back to <A HREF="laserdps.htm#dpstoc">Diode Laser Power Supplies Sub-Table of Contents</A>.
+<h2>More on Laser Diode Characteristics and Drivers</h2>
+<h3><A NAME="dpsmld0">Comments on Driver Education for Laser Diode Driver
+ Designers</A></h3>
+
+(From: Jonathan Bromley (jsebromley@brookes.ac.uk).)
+<p>
+This is getting a little scary. Laser diodes have been around for a good
+few years now, and I thought it was fairly widely known how you make
+them go and (harder) keep going for a long time; but there have been
+several postings recently from folk who are busy making themselves
+poorer by driving lasers inappropriately. Here are the rules on how you do it
+right:
+<ol>
+<li>Just because it isn't hot doesn't mean you didn't already fry it.
+<p>
+<li>Unlike most other things, running them at the "typical" data sheet values
+   won't work. I'm not talking suboptimal here; I mean that it won't work, not
+   even a little bit.
+<p>
+<li>You must never, never, never exceed the full rated *optical* power output
+   of the laser, not even for a fraction of a microsecond. If you do, your
+   laser will be degraded or dead.  This means LOTS of careful design to avoid
+   nasty switch-on and switch-off transients, for example.
+<p>
+<li>Use the built-in monitor photodiode to regulate the light output. This
+   monitor diode looks at the leaked light from the back facet of the laser (a
+   few percent of the useful front-facet output). The current through it is
+   nicely proportional to light output, if you have a reasonable reverse bias
+   voltage on it.  Anything from 2V to 15V reverse bias is usually OK (on the
+   photodiode; *never* reverse bias a laser diode!)
+</ol>
+The basic problem comes from the characteristics of the laser device. They are
+a bit like LEDs, so you will see a forward voltage of about 2.2V for almost
+any reasonable forward current (just like an LED, but the voltage is somewhat
+higher). Voltage drive is therefore an exceedingly bad idea.  Current drive is
+a bit more predictable. Up to a certain current - the laser threshold current
+- you will get the device acting like a feeble LED.  Above the threshold
+current, laser operation starts properly and the light output rises very
+rapidly as a function of current. Something like this:
+<PRE>
+
+         ^ Light Output
+         |
+         |
+         |- - - - - - - - - - - - - - -* ---- Maximum Rated Light Output
+         |                            *|
+         |                           *
+         |                          *  |
+         |                         *
+         |                        *    |
+         |                       *
+         |                      *      |
+        -|*--*--*--*--*--*--*--*-------+--------------> Forward Current
+         |                     |       |   
+                               |       |&lt;-- Maximum Current
+                               |
+                               |&lt;-- Threshold Current
+
+</PRE>
+The snag is, the difference between threshold and maximum current is usually
+quite small; no more than 10% or 20% of the threshold. The threshold current
+varies greatly from one device to another (even within the same type number)
+and also varies with temperature. Result: setting a fixed current value is
+doomed to failure. For some lasers, and on some days, it will be under the
+threshold and no laser action will occur; on other days, it will be over the
+maximum current and your precious laser will turn into a useless LED (like the
+original posting in this thread). The only safe way is to use the monitor
+diode current to servo the light output. Even this isn't ideal because the
+monitor current is different for different lasers, but:
+<ul>
+<li>It doesn't vary significantly with temperature;
+<p>
+<li>Many laser manufacturers give you a test sheet with each device stating the
+  actual monitor current for full output;
+<p>
+<li>You can provide an adjustment anyway.
+</ul>
+But BE CAREFUL. Transient overdriving, even for very short times, can
+seriously damage the lasers. Transients commonly occur:
+<ul>
+<li>because your feedback circuit rings (or worse. oscillates) so that the
+ drive current occasionally exceeds the maximum.
+<p>
+<li>because of PSU on/off transients.
+<p>
+<li>because you have used a socket for the laser, and the photodiode connection
+  is flaky: if it comes disconnected, your feedback circuit will think there
+  isn't enough drive to the laser and will crank up the current to destruction
+  level.
+<p>
+<li>because you are trying to modulate the laser brightness with some AC signal
+  and either you overdo it, or the feedback circuit overshoots.
+<p>
+<li>because you have a pot. somewhere in the circuit to adjust for full output,
+  and its wiper is noisy.
+</ul>
+Above all, remember that it is excessive light output that destroys lasers.
+The heating effect of the drive current is not a big problem except that it
+has the effect of pushing the threshold current down. Excessive light levels,
+on the other hand, can damage the tiny end mirrors of the lasing crystal.
+<p>
+Sharp (one of the big suppliers of laser diodes) also make some nifty 8-pin
+drive chips that are pretty good if you don't need to modulate the laser
+rapidly. For modulation, consider setting the light output close to 50% of
+full output using a really slooooowww-responding feedback circuit, and then
+impressing a fixed-amplitude modulating current on the laser. This is OK
+because the gradient of the light/current graph is reasonably predictable for
+any given laser type, so it's possible to calculate a suitable safe modulating
+current from the data sheet.
+<p>
+Good luck to all - and don't forget the eye safety regulations.
+<p>
+(From: Paul Mathews (optoeng@whidbey.com).)
+<p>
+Laser diode structures are usually so small that damage thresholds are very
+low on every dimension.  The general approach to protecting them is to series
+AND shunt filter (and/or clamp) supply voltages to limit the voltage
+compliance of current source driving circuits.  Also, consider having some of
+the current limiting be by means of an actual resistor rather than just active
+circuitry.  The parasitic capacitances in active driving circuitry can
+interact with dv/dt on supply lines to turn on the drive circuit (e.g., drain
+to gate capacitance with MOSFET drive), so the resistor limits current even
+when this happens.  Using bypass capacitance local to the pulse current loop
+has the dual benefit of absorbing residual transients and avoiding any effects
+of upstream series filter components on speed.
+<p>
+(From: Mark W. Lund (lundm@physc2.edu).
+<p>
+You can blow out the laser in nanoseconds if there is enough voltage and/or
+power in the pulse.  Two methods: electrostatic discharge type damage which
+punches holes in the cavity; brief high power which damages the front facet.
+<p>
+Make sure that the power supply to the modulation circuit is filtered to
+prevent surges, isolate the signal circuit to prevent surges on the input line
+from getting to the laser.
+<p>
+There are an infinite number of ways to get a damaging pulse.  Most common is
+the power supply.  It helps to have a scope capable of capturing transients
+for this.  The other ones that I will admit to: using a circuit that wasn't
+grounded to the metal optical table--brushing the table with one line of the
+circuit and oops; a commercial laser diode power supply that was clean until
+we used it in computer control mode when it sent out very fast (anhard to see)
+spikes; hooking the laser up backwards; using a power supply that had a big
+capacitor across the output which had enough charge in it to do damage; and
+forgetting to put a peltier cooled laser on a heat sink (the more current I
+gave the cooler the hotter the laser got....oops.)
+<p>
+Well, that was embarrassing, but I hope it encourages others to save a few
+(laser diode) lives.
+<p>
+(From: K. Meehan (meehan@srvr.third-wave.com).)
+<p>
+Semiconductor lasers are very sensitive to power spikes.  The level of current
+that is a problem depends on the laser structure and how much of the current
+is converted into optical power vs. heat.  In general, reverse current spikes
+are very damaging, no matter what level.  Make sure that you are modulating
+the diode so that you go below laser threshold but not below 0V.  In the
+forward direction, very short overshoots (<1microseconds) in current can be
+handled until you blow the facet off of the device (catastrophic optical damage
+- COD).  Longer pulse overshoots aren't any better.  The current level that
+damage occurs varies from device to device.  I tend to recommend less than 10%
+overshoot in all cases.  COD is very easy to note, just look at the laser
+(while it is not operating) under a microscope.  The facet coating is damaged
+near the emission region, if there is a coating.  Otherwise, you will see an
+enhanced region (darker area) when looking under Nomarski - maybe not so easy
+to see.
+<p>
+Another problem that you might be having is spiking during start-up or
+shut-down of the device.  Current supplies that look lovely during operation
+sometimes have spikes in the output when you turn them on or off.  You might
+want to short the device, making sure that there is no bounce during the
+shorting, before turning your supply on or off.  There are several laser diode
+driver companies out there that make current generators with slow starts and
+minimal overshoots.  Avtech, Melles Griot, ILX Lightwave, WAvelength
+Electronics, etc.
+
+<h3><A NAME="dpsmld1">Variations in Laser Diode Monitor Photodiode Current
+ Sensitivity</A></h3>
+
+It would be nice if the monitor photodiodes associated with all laser diodes
+had the same sensitivity - or even were consistent for a given model.  But,
+unfortunately, this is not the case.
+<blockquote>
+"I am designing a driver circuit for a laser diode (NEC NDL3220S). The problem
+ is that the spec sheet says the output of the monitor photodiode at rated
+ power is max: 0.5 ma, typical: 0.3 ma, min 0.1 ma, at 5 V.  This is a huge
+ range! If I set for 0.3 ma and the actual output is 0.1 mA I will burn out
+ the laser.  I do not have equipment for calibrating the laser output
+ directly."
+</blockquote>
+(From: Alan Wolke (74150.451@CompuServe.COM).)
+<p>
+Welcome to the wonderful world of laser diodes!  You'll find that a 5:1 range
+in monitor current is typical, with even a full order of magnitude being
+common!  This is one reason why most laser diode based applications have a
+provision for trimming/tuning the driver circuit to the particular laser.
+<p>
+Your safest bet is to design the feedback loop to operate with less than the
+minimum monitor current, and provide the ability to actively tune it to the
+appropriate operating point.  Thankfully, the relationship between output
+power and monitor current will remain reasonably constant over the lifetime of
+each particular device. So, once it is properly set, you're done.
+
+<h3><A NAME="dpsmld2">Response Time of Laser Diode and Monitor
+ Photodiode</A></h3>
+
+(From: Derek Weston (derekw@alphalink.com.au).)
+<p>
+For those of us who have performed the infamous LD to LED (LD->DELD) conversion
+more often than we'd like, there's an interesting item mentioned near the end
+of the article:
+<A HREF=
+"http://www.elecdesign.com/Articles/Index.cfm?AD=1&ArticleID=6316">
+Visible-Laser Driver Has Digitally Controlled Power And Modulation</A>
+regarding LD drivers.  It points out two important characteristics of LDs:
+<ul>
+<li>The monitor photodiode is often slower than the LD, and
+<p>
+<li>The laser diode start time is greatly increased if the LD starts from zero
+  rather than an LED-level current flow.  Wish I'd seen this two years ago!
+</ul>
+<p>
+(From: John, K3PGP (k3pgp@qsl.net).)
+<p>
+For high speed data and very high frequency RF subcarrier/video work I've
+always biased my laser diodes to 1/2 laser power then modulated them near
+100%, much the same as a standard AM radio transmitter.  This does result in
+a faster response time rather than cutting the LD completely off.  It's also
+probably a bit easier on the laser diode especially if it's a high power
+unit.  (Mine draws 1 amp when putting out 500 mw.)
+<p>
+I never tried biasing it down to BELOW laser threshold at the 'LED' level.
+Although this would be an improvement over cutting it off completely, I
+would think this would be slower than biasing to 1/2 laser power.
+<p>
+(From: Sam.)
+<p>
+Also see the section:
+<A HREF="laserdps.htm#dpsldm1">Digitally Controlled Laser Diode Driver</A>
+which has a bit more on the circuit mentioned above.
+
+<h3><A NAME="dpsmlpc">Power Changes With Collimating Optics</A></h3>
+
+When adding (or removing) external optics, reflections back into the laser
+diode itself must be taken into consideration.  These can have two effects:
+<ul>
+<li>Altering the amount of light hitting the monitor photodiode inside the
+ laser diode package.  This will change the power level setting if the APC
+ (Automatic Power Control) circuit is being used (as it should be in most
+ cases).
+<p>
+<li>Destabilizing the lasing process due to reflected light entering the laser
+ cavity.  This effect actually may be more common with low power laser diodes
+ than one would think.  See the section: <A HREF="laserdio.htm#dioclpo">Causes
+ of Laser Pointer Output Power Changing When Directed at a Mirror</A>.
+ However, where the behavior is repeatable and stable, I'd be more inclined
+ to believe it is the simpler explanation, above.
+</ul>
+
+Note that the losses in the optics are usually only a minor factor where the
+power decreases.  Even uncoated surfaces reflect only about 4 percent so if
+you are getting a 30 percent decrease in power, this probably isn't the cause!
+<p>
+CAUTION: If you remove the optics from a diode laser module, the power may
+increase resulting in laser diode destruction, especially if the unit is being
+run near its maximum ratings.
+<p>
+(From: Frank DeFreitas (director@holoworld.com).)
+<p>
+The information sheet for a Power Techologies 35 mW module states in bold
+capital letters not to even ADJUST the collimation while the diode is running
+at full power!
+<p>
+I've got a little 10 mW, 635 nm diode that I tested with and without optics.
+Here are the initial readings:
+<ul>
+<li>Without Collimating Optics: 10.8 mW.
+<li>With Collimating Optics: 10.5 mW.
+</ul>
+(I actually expected more of a drop here.)
+<p>
+It is interesting to note that the second reading WITHOUT optics was
+3.8 mW and the third reading 2.6 mW. The barrel was becoming very hot. I
+killed the power before I killed the diode (I'm learning!).  So this
+particular diode (from NVG, Inc.) obviously was set up with the collimating
+optics in place NEEDS the feedback (reflection) for the photodiode to control
+the current.
+
+<h3><A NAME="dpsmld3">Using an External Photodiode for Power Control</A></h3>
+
+There is no law that says the internal monitor photodiode must be used in the
+driver optical feedback circuit.  For some applications, it is desirable to
+substitute an external one or use both together.  This could be used to control
+beam power based on some mechanical condition like position or angle or to
+compensate for variations in the behavior of the external optics.
+<p>
+You can't modify a sealed diode laser module in this manner unless it already
+has a modulation input but if you are building something from components, it
+should be possible.  Loop stability must take into account optical path delays
+if the distance between the laser diode and photodiode is significant but this
+shouldn't be a problem unless you are also trying to modulate the thing at a
+very high rate.  Obviously, any such scheme must assure that the external
+photodiode always intercepts enough of the beam and/or that a hard limit is
+imposed by feedback from the *internal* monitor photodiode to assure that the
+laser diode specifications are not exceeded under any conditions.  Otherwise,
+even an errant dust particle or house fly wondering into the portion of the
+beam path used for feedback could ruin your laser diode!
+
+<h3><A NAME="dpsdhpl">Driving High Power Laser Diodes</A></h3>
+
+Laser diodes in the several hundred mW to multi-watt range which do not have
+internal monitor photodiodes have a different set of issues with respect to
+safe (for the laser diode, that is) drive circuits.
+<p>
+The dire warnings about instant destruction from overcurrent still apply but
+but the extreme non-linearity typical of low power laser diodes isn't usually
+present with higher power devices.  There is still a lasing threshold but
+above this, the output power increases linearly with current and there is
+likely to be decent consistency from unit to unit.  However, proper current
+control and temperature compensation (or adequate derating) is still essential.
+<p>
+(From: Art Allen, KY1K (aballen@colby.edu).)
+<p>
+When you get into the 1 amp diodes (or anything over 200 or 300 mw), the
+driver becomes less dependent on the laser power feedback PD and many of
+these higher powered diodes just don't have the power sensing PD on-board
+for this reason.
+<p>
+While the threshold current is still very dependent on the temperature of
+the diode, the <b>DIFFERENCE</b> between the max current and the smoke release
+current widens a lot - meaning that the larger diodes can be operated fairly
+safely without sampling the output and applying variable current based on
+the power sensing PD.
+<p>
+The 1 watt diodes that I was trying to buy several years ago had 2 sets of
+specs-one at ambient room temperature and the other set for diodes at
+actual operating temperatures-the inference being that the preferred driver
+needed <b>TEMPERATURE</b> feedback in order to ramp the diode up to operating
+temperature.
+<p>
+Note that these diodes were used to drive fiber optic cables where they
+operate as an FM transmitter (constant carrier/fixed duty cycle transmit),
+so they probably used a time delay circuit to ramp them up to temperature
+rather than an actual temperature sensor. 
+<p>
+Where the diode (probably) isn't on constantly, it might be necessary to
+derate the diodes and operate them just above threshold in order to be safe.
+<p>
+For your high power diodes, you can use a simple constant current driver
+(assuming the diode doesn't require PD based power sensing feedback.
+<p>
+The <A HREF="http://www.siliconix.com/">Vishay Siliconix</A> catalog has an
+<b>ABSOLUTELY</b> O-U-T-S-T-A-N-D-I-N-G technical description of MOSFET based
+constant current source design. You can request the hard copy of the catalog
+from their website, make sure you get the full catalog with the ap notes.
+<p>
+(From: John, K3PGP (k3pgp@qsl.net).)
+<p>
+I'm presently using the power supply under
+<A HREF="http://www.k3pgp.org/laserbias.htm">Biasing & Modulating Laser
+Diodes - Safely !</A> on my Web site with
+a Russian-made 1 watt 810 nm laser diode.  The diode looks like one of those
+old time big metal (TO-3 ?) transistors but with a hole in the top of it.  The
+series resistor in this case was made up out of a bunch of parallel
+connected 1 watt 33 ohm resistors.  I think I ended up with around 10 to 12
+in parallel.  This allows me to adjust the laser current in small increments
+by adding or subtracting from the number of 33 ohm resistors.  It also
+solved the problem of trying to find the exact value I needed in a high
+wattage resistor.  (Wattage rating goes up as you parallel resistors,
+resistance goes down.)
+<p>
+I ended up feeding half of the 33 ohm resistors from one 7805 voltage
+regulator and the other half from a second 7805.  Even though one 7805 can
+handle one amp of current it began to show signs of thermal drift when
+running at this level.  By splitting the resistor bank in half each
+regulator only needs to supply 1/2 amp.
+<p>
+A 808 nm 500 mW laser diodes are visible but barely.  Do NOT be
+fooled into thinking it's not really putting out much power.  Human eyes
+aren't that sensitive to 800 nm radiation BUT you can easily burn a hole
+clean through your retina with this much power.  If you doubt this, try
+focusing your 808 nm 500 mw laser on the black plastic part of a VHS video
+cassette and see what it does.  When I do this with mine I get instant smoke
+and liquid plastic.  So, <b>BE CAREFUL</b> especially when focusing this diode
+down to a small spot.
+<p>
+When playing around with stuff like this you will notice that color has a
+LOT to do with how much energy is absorbed.  Aiming the same laser at the
+while label on the same cassette resulted in nothing happening.  There is a
+very important principal to be learned by this experiment.  If the white
+label isn't absorbing much power from the laser beam then it has to be going
+some place else.  The answer of course is it's being reflected (scattered)
+back from the white surface.  Keep this in mind when playing around with
+this diode.  If you hit something that's even remotely reflective you could
+end up with the beam coming right back at you and you might not even be
+aware of it since the human eye is not very sensitive to radiation in the
+800 nm region.
+<p>
+For communications use you might want to consider expanding the beam.  This
+will lower the power density and make it a LOT safer if you accidentally get
+in the beam.  The beam exiting mine is approx. 4 inches in diameter.  500 mw
+spread across a 4 inch diameter circle is a LOT less dangerous than 500 mw
+focused down to 1 mm in diameter!!!
+<p>
+And remember that a 500 mW 808 nm laser diode needs a <b>GOOD</b> heatsink.
+If you notice the power dropping off shortly after you turn the laser on your
+heatsink is too small!  If you are having problems with this and you don't
+have room for a bigger heatsink use a small 12 VDC fan.  Try to direct the
+air across the heatsink and NOT across the optics!
+<p>
+You can monitor power output with a regular silicon solar cell hooked directly
+to a milliamp meter (not a voltmeter!!!).  Do <b>NOT</b> use any series
+resistor between the solar cell and meter.  Expect to see over 100 ma of
+current at this power level.  I also suggest you expand the beam to make use
+of most of the surface of the solar cell.  If you focus it down to a small
+diameter the power density goes up and you just might burn a hole in the
+solar cell!  Plus a very narrow diameter beam could easily bounce off the
+shiny surface of the solar cell and hit you in the eyes with enough power
+density to do some real damage!  Watch the angle between the solar cell and
+the laser and anticipate where the reflection might fall.  You will get the
+same power reading no matter what the beam diameter is as long as all the
+energy hits the solar cell.  You can substitute a white piece of paper to
+get some idea of beam diameter but be CAREFUL when doing this!
+<p>
+Treat this laser with respect.  Anticipate reflections.  Keep people, animals
+and airplanes out of it's path and above all <b>THINK</b> before you turn it
+on!
+<p>
+<A NAME="dpstol"></A>
+<hr>
+<br>
+<li>Back to <A HREF="laserdps.htm#dpstoc">Diode Laser Power Supplies Sub-Table of Contents</A>.
+<h2>Testing Laser Diode Driver Circuits</h2>
+<h3><A NAME="dpssglt1">Sam's Laser Diode Test Supply 1</A></h3>
+
+This is a basic power supply using a pair IC regulators to provide a variable
+voltage with adjustable current limit.  Rather than combining these functions
+a brute force regulator pair is used - one for the voltage and the other for
+the current limit.
+<p>
+The idea is to be able to safely test laser diodes or complete drivers with
+the ability to limit current initially to a guaranteed safe value until
+circuit operation and/or laser diode behavior can be determined.  This should
+substitute for an expensive lab supply for testing of lower power devices.
+<p>
+The circuit is shown in <A HREF="sgldtst1.gif">Sam's Laser Diode Test
+Supply 1 (SG-LT1)</A>.  As drawn, it is suitable for laser diodes requiring
+between about 25 and 250 mA.  With obvious changes to certain part values, the
+same circuit should be usable at up to an amp or more - but I won't be
+responsible for any destruction of expensive laser diodes that might result!
+<p>
+More modern lower dropout regulators like the LT1084 can be substituted for
+the LM317.  For load currents above about 100 mA continuous, heat sinks will
+be required on the IC regulators.
+<p>
+The addition of a voltmeter might be desirable though the knob position of
+the voltage adjust pot corrected for the voltage drop of the current limit
+regulator will probably be good enough
+<p>
+<A NAME="dpstol"></A>
+<hr>
+<br>
+<li>Back to <A HREF="laserdps.htm#dpstoc">Diode Laser Power Supplies Sub-Table
+ of Contents</A>.
+<h2>Very Basic Laser Diode Power Supplies</h2>
+<h3><A NAME="dpssgb">Bare Bones Laser Diode Power Supply</A></h3>
+
+With care, a very basic power supply can be used to safely drive low and
+medium power laser diodes.
+<p>
+The supply I have used to test diodes up to about 2 A is very basic
+consisting of a Variac, transformer, bridge rectifier, and filter
+capacitor with a current limiting resistor.  For low power diodes, this
+is typically 50 to 250 ohms; for high power diodes, it is 8 ohms, 50
+watt.  A bleeder resistor assures that the filter capacitors discharge
+quickly once power is removed.  A built in voltmeter shows the voltage
+into the current limiting resistor at all times.  Using the equation:
+I=(V-2)/R (2 is the estimated voltage drop of the diode, R is the current
+limiting resistor) is often close enough.
+Adding a shorting relay which required a press of a button to re-enable
+when power is applied would further reduce the risk of accidentally
+overdriving the diode.
+<p>
+Since there is no active regulation, the output current has some 120 Hz
+ripple so the peak current may be slightly higher than the measured
+current.  Installing a current meter (A or mA as appropriate) would be
+more precise but unless running near the maximum specifications of the
+diode, isn't really essential.
+
+<h3><A NAME="dpsbat">Battery Power for Laser Diodes</A></h3>
+
+Batteries are in fact a relatively safe alternative to sophisticated
+power supplies if their characteristics are well understood.  Since a
+properly connected battery can never put out more than its rated voltage
+when new or fully charged, and can't produce reverse polarity, all that is
+needed is current limiting via a high power resistor.  I would still
+recommend a 0.1 uF capacitor, 1N4148 reverse protection diode, and 100 ohm
+resistor directly across the diode though.
+<p>
+Here are some guidelines:
+<p>
+<ul>
+<li>A new or fully charged battery can have
+ substantially more voltage than the nominal rating.  For example, a new
+ Alkaline is around 1.57 V, not 1.5 V.  A NiCd may start out at 1.3 V
+ or more when fully charged.
+<p>
+<li>Don't get too greedy and use a battery voltage close to the diode voltage,
+ include a reasonable size current limiting resistor and use a higher
+ battery voltage.  The internal resistance of NiCd and NiMH batteries is quite
+ low and should never be depended upon for a significant part of the
+ current limiting.
+<p>
+ CAUTION: There must NOT be any filter capacitance in the power supply after
+ the current limiting resistor.  This is to minimize the chance that a
+ bad connection to the diode will result in excessive current should such
+ a capacitor charge to a much higher voltage and then discharge through
+ the diode without current limiting.
+<p>
+<li>It's fine to trickle charge a battery while it's being used since
+ regardless of line voltage fluctuations and spikes, not much will happen
+ to the battery voltage.  However, due to the internal resistance of the
+ battery, fast charging may not isolate the output enough.  Better to
+ implement a double buffering scheme where one battery is being charged
+ while the other is in use, switching using a relay with an electrolytic
+ capacitor to hold the voltage for the millisecond or so when the output
+ is disconnected from either battery.
+<p>
+<li>The voltage of Alkaline batteries drops steadily as they are used
+ while that of NiCd and NiMH batteries is nearly constant until they
+ are fully discharged.  Without an active regulator, this must be taken
+ into account.
+<p>
+<li>To vary the current with no active components, a high power rheostat
+ or selector switch must be used.  Make sure it's wired so that intermittent
+ contact can't result in current spikes.
+</ul>
+<p>
+For example, to drive a typical IR laser diode, a pair of D-size
+Alkaline cells can be used in series with a power resistor.  For a
+1 W (rated) laser diode which has a threshold of 350 mA, voltage
+drop of 1.8 V, and slope efficiency of 0.8, an output power from
+near 0 mW to 1 W can be selected as follows:
+<p>
+<PRE>
+   Resistor    Current     Pout
+ --------------------------------
+     3  (1W)    400 mA     40 mW
+     2  (1W)    600 mA    200 mW
+   1.5  (2W)    800 mA    360 mW
+     1  (2W)   1200 mA    680 mW
+   0.75 (2W)   1600 mA   1000 mW
+</PRE>
+<p>
+Output power shown is approximate and depends on specific diode's threshold
+current and slope efficiency.
+<p>
+Double check polarity and take appropriate safety precautions!
+
+<h3><A NAME="dpstlds">Testing with a Laser Diode Simulator</A></h3>
+
+If you do build these or any other circuits for driving a laser diode, test
+them first with a combination of visible (or IR) LEDs and one or more silicon
+diodes (to simulate the approximate expected voltage drop) and a discrete
+photodiode to verify current limited operation.  To accommodate the higher
+current of laser diodes compared to LEDs, use several identical LEDs in
+parallel with small balancing resistors to assure equal current sharing:
+<PRE>
+
+    COM o--------------+-------+-------+-------+---------+
+                     __|__   __|__   __|__   __|__      _|_
+               LEDs  _\_/_   _\_/_   _\_/_   _\_/_ ---> /_\ Photodiode
+                       |       |       |       |         |
+                       /       /       /       /         +----o PD
+                     5 \     5 \     5 \     5 \ 
+                       /       /       /       /
+                       \       \       \       \
+            1N4002     |       |       |       |
+     LD o-----|&lt;|------+-------+-------+-------+
+
+</PRE>
+Note that the sensitivity of this photodiode to the LED emission will vary
+considerably depending on its position and orientation.  Tape the photodiode
+and one of the LEDs together (sort of like a homemade opto-isolator) to
+stabilize and maximize the response.
+<p>
+Where the laser diode current is below 20 or 30 mA, a suitable opto-coupler
+could also be used (see below).
+<p>
+Using this 'laser diode simulator', it will really only be possible to confirm
+that the laser driver current regulator is functional, not to actually set it
+up for your laser diode.
+<p>
+Once the circuit has been debugged, power down, and carefully install the
+laser diode.  Double check all connections!
+<p>
+Use the guidelines below in both cases (written assuming an actual laser diode
+is being used):
+<p>
+<ul>
+<li>Set the power adjustment of the laser driver to minimum (usually maximum
+ resistance).
+<p>
+<li>If available, use a power supply with both voltage and current limit
+ adjustments.  Then, you can start with the voltage set to 0 and the current
+ limit set just above the expected laser threshold current (plus the current
+ drawn by the rest of the circuit - test with no laser diode in place).  This
+ can always be increased later.
+<p>
+<li>Attach a voltmeter between the photodiode (PD) terminal and ground.  This
+ will effectively monitor relative optical power output.
+<p>
+ If you have a (separate) current meter, put it in series with the power
+ supply as well (or provide another means of measuring current).
+<p>
+ CAUTION: Use clip leads.  Leave the meters in place - do not attempt to
+ change connections while the circuit is powered as this could result in a
+ momentary current spike which may damage the laser diode.
+<p>
+<li>Increase input voltage gradually.  Once the laser diode starts lasing, the
+ PD voltage should climb.  The circuit should regulate when the PD voltage
+ approaches the reference: 2.5 minus .7 V in circuits (1)-(3) or .5 Vcc for
+ circuit (4).  Then, the PD voltage and supply current should level off.  If
+ something doesn't behave as expected, shut down and determine why.
+<p>
+<li>Once you are confident that the circuit is operating properly with the
+ laser diode installed, the output power can be increased modestly.  But,
+ without a laser power meter, DO THIS AT YOUR OWN RISK!
+<p>
+<ul>
+ <li>For visible laser diodes, if you have a laser pointer or other visible
+  diode laser module OF THE SAME WAVELENGTH, A-B brightness comparisons can
+  be made if the beams are the same diameter.  Otherwise, don't push your
+  luck unless you have a bucketload of laser diodes you can afford to blow!
+<p>
+ <li>For IR laser diodes, visible light eyeballs won't work.  The tiny red dot
+  that may be visible from an IR laser diode cannot be used as an accurate
+  indication of power output.
+ </ul>
+</ul>
+<p>
+Laser diodes are generally NOT very forgiving.  However, if you take your time
+and make sure you understand exactly what is happening at every step along the
+way, you and your laser diode will survive to light another day!
+
+<h3><A NAME="dpsalds">Art's Laser Diode Simulator</A></h3>
+
+(From: Art Allen, KY1K (aballen@colby.edu).)
+<p>
+The Hewlett Packard HCPL4562 optocoupler appears excellent for incorporation
+into your laser diode simulator.
+<p>
+It is an LED optoisolator with a PD output stage. The PD is available by
+itself (without current amp transistor) or a moderate gain transistor is
+available (base/PD, emitter and collector)-so it's very flexible. The
+oveerall combination of LED, PD and output transistor has a 17 Mhz
+bandwidth rating.
+<p>
+My feeling was that the PD (standalone) should be used as we are trying to
+simulate a PD device itself that is normally inside the LD assy. 
+<p>
+The goal is to be able to make the simulator have the same PD sensitivity
+as the actual LD/PD combination to be used. I think this is doable without
+adding a lot of complexity.
+<p>
+It should make a fairly nice little test jig! It could be made with a
+series pot to control LED current (until the proper drive level is
+available at the PD output). Several LED's could be switched in/out with a
+simple DIP switch, I'm thinking about a self powered flashing LED which
+could simulate a variable load for testing dynamic response at slow
+speeds-which could speak volumes about some driver circuits::>
+<p>
+A quick and dirty audio monitor on the LD current would be neat too-you
+wouldn't have to depend on your eyes to tell you if the drive becomes
+unstable or drifts up/down.
+<p>
+<A NAME="dpscld"></A>
+<hr>
+<br>
+<li>Back to <A HREF="laserdps.htm#dpstoc">Diode Laser Power Supplies Sub-Table of Contents</A>.
+<h2>Schematics of Laser Diode Power Supplies</h2>
+
+The first five circuits are from published circuit diagrams or application
+notes, or were reverse engineered from actual devices.  All use visible laser
+diodes though IR types would work with at most minor modifications to biasing
+points.
+<p>
+Laser drivers (1) to (3) were from CW laser lights used for positioning in
+medical applications.  Laser driver (4) was from a UPC bar code scanner.
+<p>
+Errors may have been made in the transcription.  The type and specifications
+for the laser diode assembly (LD and PD) are unknown.
+<p>
+The available output power of these devices was probably limited to about 1 mW
+but the circuits should be suitable for the typical 3 to 5 mW maximum power
+visible laser diode (assuming the same polarity of LD and PD or with suitable
+modifications for different polarity units).
+<p>
+Of the 5 designs presented below, I would probably recommend "Laser diode
+power supply 2" as a simple but solid circuit for general use.  It doesn't
+require any special chips or other hard to obtain parts.  However, I would
+add a reverse polarity protection diode (e.g., 1N4002) in series with the
+positive input of the power supply.
+<p>
+In fact, funny that you should ask. :-)
+<p>
+An enhanced version of this design including a printed circuit board (PCB)
+layout is presented in the section: <A HREF="laserdps.htm#dpssg1">Sam's Laser
+Diode Driver (SG-LD1)</A>.
+<p>
+A very basic and a high power laser diode drive circuit are also included
+(both open loop - no optical feedback) as well as one that can be programmed
+for 1024 levels of output intensity.
+<p>
+<A NAME="dpsto1"></A>
+<hr>
+<br>
+<li>Back to <A HREF="laserdps.htm#dpstoc">Diode Laser Power Supplies Sub-Table of Contents</A>.
+<h3>Toshiba Laser Diode Power Supply (TO-LD1)</h3>
+
+The actual laser driver portion of circuits (1) to (3) as well as the one
+presented in the section: <A HREF="laserdps.htm#dpssg1">Sam's Laser Diode
+Driver (SG-LD1)</A> is very similar to the basic design provided in a Toshiba
+application note named something like: "Example Driving Circuit for TOLD92xx
+Series Visible Laser Diodes".
+<A HREF="ftp://ftp.ee.ualberta.ca/pub/cookbook/optic/laser.gif">The Toshiba
+Laser Diode Driver Schematic</A> was scanned from the application note by
+Kent C. Brodie (brodie@fps.mcw.edu) who also provides a
+<A HREF"=ftp://ftp.ee.ualberta.ca/pub/cookbook/optic/laser.txt">Circuit
+Description</A>.  The schematic is reproduced in ASCII, below:
+<p>
+<PRE>
+            
+  Vcc o-----------+------------+-----------------------+--------+------+
+                  |            |                       |        |      |
+                  |            |    Power Adjust      _|_     __|__    |
+                  |            |       R2 10K      PD /_\  LD _\_/_    |
+                  |            \     +----+            |        |      |
+                  |         R1 /     |    |            |        |     _|_ C2
+                  |        610 \     +---/\/\--+-------+        /     --- 1uF
+                  |            /     |         |                \ R3   |
+                  |            |     |         |                / 15   |
+                +_|_           |     |       __|__              \      |
+             C1  ---           |     |     E /   \ C            |      |
+           22uF - |            +-----|------' Q1  '-------+     +------+
+                  |            |     |      2SA1015       |    C|
+                  |            |     |       (PNP)        |   |/ Q2
+                  |           _|_.   |                    +---|  2SC1959
+                  |      VR1 '/_\    |                    |   |\ (NPN)
+                  |     2.2V   |     |               C3 +_|_   E|
+                  |            |     |             10uF  ---    |
+                  |            |     |                  - |     |
+                  |            |     |                    |     |
+  Gnd o-----------+------------+-----+--------------------+-----+
+
+</PRE>
+<p>
+This circuit lacks some of the protective features of the circuits, below, but
+is clearly the same core design.
+<p>
+<A NAME="dpsre1"></A>
+<hr>
+<br>
+<li>Back to <A HREF="laserdps.htm#dpstoc">Diode Laser Power Supplies Sub-Table
+ of Contents</A>.
+<h3>Laser Diode Power Supply 1 (RE-LD1)</h3>
+
+This is the circuit from a Scanditronix "Diolase 1" laser line generator,
+a unit designed for patient positioning in medical diagnostic and treatment
+applications like radiation therapy.  No, it doesn't actually engrave the
+patient but just projects a red line to aid in placing the patient on the
+couch and adjusting couch position in relation to semi-indelible ink marks
+drawn on the skin surface.
+<p>
+It will run from a (wall adapter) power supply of about 6 to 9 VDC.
+
+<PRE>
+
+            D1
+  Vcc o-----|>|-------+-----------+-------------------+--------+-----+
+           1N4001     |           |                   |        |     |
+          Rev. Prot.  |           |    Pwr Adj       _|_     __|__  _|_ C4
+                      |           /   R3 10K (2)  PD /_\  LD _\_/_  --- .01uF
+                      |       R2  \     +----+        |        |     |
+                      |      560  /     |    |        |        |     |
+                      |           \     +---/\/\--+---+        +-----+
+                      |           |     |         |                  |
+                      |           |     |         +-------||---+     /
+                    +_|_          |     |       __|__   C2 (1) |     \ R4
+                 C1  ---          |     |     E /   \ C 100pF  |     / 3.9
+               10uF - |           +-----|------' Q1  '---------+     |
+                      |           |R    |    BC328-25 (5)      |    C|
+                      |       +---+     |       (PNP)          |   |/ Q2 (5)
+                      |       |  _|_.   |                      +---|  BD139
+                      |   VR1 +-'/_\    |                      |   |\ (NPN)
+                      |   LM431   |     |                 C3 +_|_   E|
+                      |   2.5V    |     |               10uF  ---    |
+                      |   (3)     |     |X                   - |     |
+            R1 3.9    |           |     |Y                     |     |
+  Gnd o------/\/\-----+-----------+-----+----------------------+-----+
+
+</PRE>
+Note the heavy capacitive filtering in this circuit. Changes would be needed
+to enable this circuit to be modulated at any reasonable rate.
+<p>
+Notes:
+<ul>
+<ol>
+  <li>Capacitor C4 value estimated.
+  <li>Potentiometer R3 measured at 6K.
+  <li>LM431 shunt regulator set up as 2.5 V reference.  A 2.5 V zener or even a
+     visible LED could also be used.
+  <li>Supply current measured at 150 mA (includes power on LED not shown).
+  <li>Transistor types do not appear to be critical.
+</ul>
+</ol>
+
+<p>
+<A NAME="dpsre2"></A>
+<hr>
+<br>
+<li>Back to <A HREF="laserdps.htm#dpstoc">Diode Laser Power Supplies Sub-Table
+ of Contents</A>.
+<h3>Laser Diode Power Supply 2 (RE-LD2)</h3>
+
+This is the circuit from a Scanditronix "Diolase 2" laser line generator,
+similar to the Diolase 1 described in the section:
+<A HREF="laserdps.htm#dpsre1">Laser Diode Power Supply 1 (RE-LD1)</A> but
+containing a pair of diode laser modules, normally adjusted to produce a
+horizontal and vertical line.  It appears to be an improved design including
+a soft-start (ramp-up) circuit and an inductor in series with the laser diode.
+Otherwise, it is virtually identical and will run from a 6 to 9 VDC source.
+<p>
+Since both units were from the same company, I assume that these refinements
+were added as a result of reliability problems with the previous design - in
+fact, I have recently discovered that the unit from which I traced that
+schematic is not as bright as it should be!
+<p>
+Interestingly, there does not appear to be any reverse polarity protection on
+the input - I don't know why that would have been removed!  C1 and Q1, at
+least, would likely let their smoke out if the power supply was connected
+backwards.  But Jon Singer added it in his redrawn version,
+<A HREF="reld2.gif">Laser Diode Power Supply Schematic 2 (RE-LD2)</A>, (if you
+don't like the ASCII schematic below!)
+<p>
+<PRE>
+
+           2SC517 (NPN) (6)
+ Vcc o----+--.  Q1 .---+---------+---------------+--------+----+-----+
+          |  _\___/_E  |         |               |        |    |     |
+          |     |      |         |              _|_     __|__  \ R5 _|_ C4
+       R1 \     |      |         |           PD /_\  LD _\_/_  / 1K --- .01uF
+     3.3K /     |      |         /               |        |    \     |  (2)
+          \     |      |     R2  \               |        |    |     |
+          |     |      |    390  /         R3    |        +----+-----+
+          |     |      |         \    +---/\/\---+--+                |
+          +-----+      |         |    |   2.2K      |                +
+                |      |         |    |             +----||----+      )
+                |    +_|_ C2     |    |           __|__ C3 (1) |      ) L1
+                |     --- 33uF   |    |   R4    E /   \  47pF  |      ) (3)
+                |    - |         +----|--/\/\----' Q2  '-------+     +
+                |      |         |R   |  220   BC328-25 (6)    |     |
+           C1 +_|_     |     +---+    \           (PNP)        |   |/ Q3 (6)
+          1uF  ---     |     |  _|_.  /&lt;-+ R6                  +---|  BD139
+              - |      | VR1 +-'/_\   \  | 10K                 |   |\ (NPN)
+                |      | LM431   |    |  | Power Adjust   C5 +_|_   E|
+                |      | 2.5 V   |    +--+ (4)          10uF  ---    |
+                |      | (5)     |    |X                     - |     |
+                |      |         |    |Y                       |     |
+ Gnd o----------+------+---------+----+------------------------+-----+
+
+</PRE>
+<p>
+Q1 is for soft start.  It's output should ramp up based on the time
+constant R1*C1,
+<p>
+Q2 is the feedback transistor and compares the reference voltage on VR1
+with the voltage developed across R3+R6 by the monitor photodiode current.
+<p>
+Q3 is the LD driver.
+<p>
+Note the heavy capacitive filtering in this circuit. Changes would be needed
+to enable this circuit to be modulated at any reasonable rate.
+<p>
+Notes:
+<ul>
+<ol>
+  <li>Capacitor C3 was marked n47 and very small, probably .47nF (470pF).
+  <li>Capacitor C4 was marked 10n and very small, probably 10nF (.01uF).
+  <li>Inductor marked Red-Black-Black-Silver, probably 20uH.
+  <li>Potentiometer R6 setting not measured.
+  <li>LM431 shunt regulator set up as 2.5V reference.  A 2.5V zener or even a
+     visible LED could also be used.
+  <li>Transistor types do not appear to be critical.
+</ol>
+</ul>
+This design is virtually identical to the circuitry found in typical laser
+pointers like the <A HREF="lpointr.gif">Laser Diode Driver from Radio
+Shack 63-1040 Laser Pointer</A> reverse engineered by Walter Gray.
+<p>
+<A NAME="dpsre3"></A>
+<hr>
+<br>
+<li>Back to <A HREF="laserdps.htm#dpstoc">Diode Laser Power Supplies Sub-Table of Contents</A>.
+<h3>Laser Diode Power Supply 3 (RE-LD3)</h3>
+
+This one runs off of a (wall adapter) power supply providing about 8 to 15 V.
+<p>
+It was apparently designed by someone who was totally obsessed with protecting
+the laser diode from all outside influences - as one should be but there are
+limits. :-)  This one goes to extremes as there are 5 levels of protection:
+<ol>
+<ul>
+  <li>Input C-L-C filter.
+  <li>Soft start circuit (slow voltage ramp up).
+  <li>7805 fixed voltage regulator.
+  <li>LT1054 DC-DC voltage converter.
+  <li>Optical power based current source.
+</ul>
+</ol>
+The first part of the circuit consists of the input filter, soft start circuit,
+voltage regulator, and DC-DC voltage converter.  Its output should be s super
+clean, filtered, despiked, regulated, smoothed, massaged, source of -5 V ;-).
+<PRE>
+
+            L1               MPSA13
+           ::::     D1     C       E   I   +------+ O                   -5V out
+ +12 o--+--^^^^--+--|>|--+--. Q1  .---+----| 7805 |---+------+               o
+        |        |1N4002 |  _\___/_   |    +-------   |      |            C5 |
+        |        |    R4 /     |      |      C|       |      |        +------+
+        |        |   10K \     |      |       |       |     8| 7  6  5|  180 |
+        |        |       /     |      |       |       |    +-+--+--+--+-+ uF |
+      +_|_ C10 +_|_ C11  |     |    +_|_ C8   |   C7 _|_   |            |16V |
+       --- 2.2  --- 2.2  +-----+     --- .22  |   .1 ---   |   LT1054   |  +_|_
+      - |  uF  - |  uF   |     |    - |  uF   |   uF  |    |            |   ---
+        |        |     +_|_   _|_     |       |       |    +-+--+--+--+-+  - |
+        |        |   C9 ---   --- C6  |       |       |     1  2| 3| 4|  C3  |
+        |   L2   | 4.7 - |     | .047 |       +-------+------------+--|--||--+
+        |  ::::  |  uF   |     |  uF  |       |              C4 |+  - |.01uF |
+ Gnd o--+--^^^^--+-------------+------+-------+       180uF,16V +-|(--+------+
+
+</PRE>
+It was not possible to determine the values of L1 and L2 other than to measure
+their DC resistance - 4.3 ohms.  The LT1054
+(<A HREF="http://www.linear.com/">Linear Technology</A>) is a 'Switched
+Capacitor Voltage Converter with Regulator' running at a 25 kHz switching
+frequency.  A full datasheet is available at the Web site, above.
+<p>
+The output of Q1 ramps up with a time constant of about 50 ms (R4 charging C9).
+This is then regulated by the 7805.
+<p>
+The LT1054 takes the regulated 5 V input and creates a regulated -5 V output.
+There is no obvious reason for using this part except the desire to isolate
+the laser diode as completely as possible from outside influences.  Like the
+use of an Uninterruptible Power Source (UPS) to protect computer equipment from
+power surges, a DC-DC converter will similarly isolate the laser diode circuit
+from any noise or spikes on its input.
+<p>
+The second part of the circuit is virtually identical to that described in
+the section: <A HREF="laserdps.htm#dpsre1">Laser Diode Power Supply 1
+(RE-LD1)</A>:
+<PRE>
+
+  Gnd o----------------+------------+------------------+-------+-----+
+                       |            |                  |       |     |
+                       |            |     Pwr Adj     _|_    __|__  _|_
+                       |            /      R2 20K  PD /_\ LD _\_/_  --- C2 
+                       |         R1 \     +----+       |       |     |
+                       |        470 /     |    |       |       |     |
+                       |            \     +---/\/\--+--+       +-----+
+                       |            |     |         |                |
+                     +_|_           |     |       __|__              /
+                  C1  ---           |     |     E /   \ C            \ Rx
+                10uF - |            +-----|------' Q1  '-------+     /
+                       |            |R    |       PN2907       |    C|
+                       |            |     \       (PNP)        |   |/ Q2
+                       |           _|_.   / R3                 +---|  PN2222
+                       |      VR1 '/_\    \ 1K                 |   |\ (NPN)
+                       |      LM385 |     /               C1 +_|_   E|
+                       |      Z2.5  |     |             10uF  ---    |
+                       |            |     |X             16V - |     |
+                       |            |     |Y                   |     |
+  -5 V o---------------+------------+-----+--------------------+-----+
+
+</PRE>
+Note the heavy capacitive filtering in this circuit. Changes would be needed
+to enable this circuit to be modulated at any reasonable rate.
+<p>
+I suspect that there are additional components inside the laser diode assembly
+itself (like the hypothetical Rx, probably a few ohms) but could not identify
+anything since it is totally potted.
+<p>
+<A NAME="dpsre4"></A>
+<hr>
+<br>
+<li>Back to <A HREF="laserdps.htm#dpstoc">Diode Laser Power Supplies Sub-Table of Contents</A>.
+<h3>Laser Diode Power Supply 4 (RE-LD4)</h3>
+
+This more sophisticated (or at least more complicated) driver board uses a dual
+op-amp (LM358) chip instead of discrete parts to control a transistor current
+source.  Due to the relative complexity of this design, and the fact that it
+is entirely constructed of itty-bitty surface mount parts, errors or omissions
+with respect to both transcription and interpretation are quite possible!
+<p>
+<ul>
+<li>Get the schematic for LDDRIVE in PDF format:
+ <a href="lddrive.pdf">LDDRIVE-SCH</a>.
+</ul>
+<p>
+The feedback loop consists of the photodiode (PD, part of D1), a non-inverting
+buffer (U2A), the inverting amp/low pass filter (U2B, R9, R11, C2, bandwidth
+of about 1 kHz), and emitter following current source (Q1, R13, R14, with a
+sensitivity of 36 mA/V) driving the laser diode (LD, part of D1).
+<p>
+Separate DC inputs are shown for the laser diode/photodiode itself (Vcc1) and
+the other circuitry (Vcc2).  Vcc1 must be a regulated supply as there is no
+on-board voltage reference.  It appears as though Vcc1 and Vcc2 should be set
+equal to one-another though there may have been (external) power sequencing in
+the original application.  If Vcc1 is less than Vcc2 by more than a volt or
+so, the laser diode will be turned off.  The input voltage range can be from 5
+to 12 VDC though I would recommend running on 5 VDC if possible since this
+will minimize power consumption and heat dissipation in the current driver
+transistor and other circuitry.  This is adequate for laser diodes with an
+operating current of up to about 80 mA.  For laser diodes with an operating
+current greater than this, a slightly higher voltage will be required.
+<p>
+The set-point is at about 1/2 Vcc1 so that the laser diode optical output will
+be controlled to maintain photodiode current at: I(PD) = .5 Vcc1 / (R6||R7).
+Use this to determine the setting for R7 (SBT, Select By Test, Power Adjust)
+for the photodiode in your particular laser diode.  Or replace R7 by a low
+noise variable resistor and use a laser power meter to set the operating
+current.  (Hint: Start with the minimum current - maximum resistance).
+<p>
+Optical output will be linear with respect to Vcc1 and inversely proportional
+to R6||R7 as long as the laser diode is capable of producing the output power
+(and thus photodiode current) determined by the equation, above.  Beyond the
+upper limit, the laser diode will likely be damaged instantly!  Don't push
+your luck too far. :-)
+<p>
+For example, with Vcc1 = Vcc2 = 5 VDC, maximum laser diode current will be
+limited to about 90 mA.  With R7 (SBT) equal to 5.9K, photodiode current will
+be .5 mA.  For some laser diodes, this is approximately the value for 1 mW of
+optical beam power BUT YOURS MAY BE TOTALLY DIFFERENT!
+<p>
+If you then increase Vcc1 = Vcc2 to 10 V or halve the parallel combination of
+R6||R7, the output power will double or the laser diode will die in a futile
+attempt to achieve the impossible.
+<p>
+A cutoff circuit is provided to disable current to the laser diode as long
+as Vcc2 is more than about 1 V greater than Vcc1 or from an external input
+logic signal (ground J1-2 to disable).  This consists of Q2, Q3, and their
+associated resistors.  When Q2 is biased on, it turns on Q3 which shorts out
+the input to the main current driver, Q1.
+<p>
+The comparator (U1, LM311) would appear to output a signal based on photodiode
+current being above a threshold but its true purpose and function is not at
+all clear (or there is a mistake in the schematic).
+<p>
+As noted above, there is NO on-board voltage or current reference.  Thus, Vcc1
+must be a well regulated DC supply with low ripple and noise and NO power-on
+overshoot (especially if the laser diode is being run close to its optical
+power limit).  However, this isn't quite as critical as driving the laser
+diode directly since optical output power (photodiode current) and not laser
+diode current is the controlled parameter.  A power supply using an LM317 or
+7805 type IC regulator with a large high quality filter capacitor on its
+output (e.g., 100uF, 16V, tantalum, in parallel with a .01uF ceramic)
+should be adequate.
+<p>
+Although the original version of this board uses surface mount devices, common
+through-hole equivalents are available for all parts and these are labeled on
+the schematic.  Note: A heat sink is essential for (Q1) where Vcc1 is greater
+than 5 VDC - this part gets warm.
+<p>
+<A NAME="dpssg1"></A>
+<hr>
+<br>
+<li>Back to <A HREF="laserdps.htm#dpstoc">Diode Laser Power Supplies Sub-Table
+ of Contents</A>.
+<h3>Sam's Laser Diode Driver (SG-LD1)</h3>
+
+SG-LD1 is an enhanced version of the design described in the section: <A HREF="laserdps.htm#dpsre2">Laser
+Diode Power Supply 2 (RE-LD2)</A> with the addition of bilevel (digital)
+modulation as described in the section: "Laser diode modulation".  It should
+be capable of driving most typical small laser diodes including those found in
+CD players and CDROM and other optical drives, and visible laser diodes
+similar to those found in laser pointers, bar code scanners, medical
+positioning laser lights, and other similar devices.
+<p>
+This design assumes a laser diode assembly where the laser diode anode and
+photodiode cathode are common (this seems to be the arrangement used most).
+If the opposite is true with your device (laser diode cathode and photodiode
+anode are common), reversing the direction of polarized components and power
+supply input, and changing NPN transistors to PNPs and vice-versa will permit
+the same PCB layout to be used.  However, if your laser diode assembly has
+both anodes or cathodes in common, this circuit is not suitable unless an
+external photodiode is used for the optical feedback.
+<p>
+Disclaimer: The cicuit is currently under development so there may still be
+errors in the schematic and/or PCB artwork.  I will not be responsible for
+any damage to your pocketbook or ego if for some reason your laser diodes
+do not survive.  (This disclaimer may never go away!)
+<p>
+<ul>
+<li>Get the schematic for SG-LD1 in PDF format:
+ <a href="sgld1sch.pdf">SG-LD1-SCH</a>.
+</ul>
+<p>
+In some cases, the part values listed should be considered as suggestions as
+many modifications are possible depending on your particular laser diode
+specifications and application needs.  Transistors with heat sinks for Q2 and
+Q4 are advised if operating continuously near the upper end of the input
+voltage range (say above 10 V) and/or at laser diode currents of 100 mA or
+higher.
+<p>
+Input power (Vcc) can be anything in the range of about 10 to 15 VDC.  It's
+not critical and will have no effect on the output power.  A regulated
+supply isn't required.
+<p>
+Ebl should normally be left open.  A switch closure (or open collector
+NPN transistor or open drain MOSFET) to Gnd shuts off the
+driver.  Do NOT apply any active high signal to this input.
+<p>
+The monitor photodiode current at rated power will be in the specifications
+for the laser diode, usually with a rather wide range of sensitivity (10:1
+or more).  To start out, assume it's the minimum value and then if that
+doesn't result in enough output power (or any lasing at all with proper
+circuit operation confirmed), reduce the resistor values to obtain the desired
+output power.  The reference point is a voltage of about 3.2 V on the base
+of Q1.  For example, if the monitor photodiode current at full power is
+0.5 mA, the total resistance would need to be about 6.4K ohms minimum.
+However, since the monitor photodiode sensitivity can vary widely, start
+with a high enough total resistance so that even worst case, the laser
+diode will be safe.  Then, reduce the resistance once the behavior has
+been determined.
+<p>
+A positive voltage (3 to 15 V) applied to Mod turns on Q3 which shorts out
+R7 and <i>increases</i> the output power by an amount determined by the
+values of R4, R7, and the setting of R5.  The specific resistance values
+must be selected based on the desired output power, modulation index, and
+monitor photodiode sensitivity.
+<p>
+CAUTION: As with all low power laser diodes, it is essential to use a
+laser power meter to determine the setting for maximum power.
+<p>
+A printed circuit board layout is also available.  The entire single sided
+circuit board is 1.7" x 1.15" and includes modulation and enable inputs.  It
+will run on an unregulated power supply of around 6 to 12 VDC.
+<p>
+The layout may be viewed as a GIF file (draft quality) as:
+<a href="sgld1pcb.gif">sgld1pcb.gif</a>.
+<p>
+A complete PCB artwork package for SG-LD1 may be downloaded in standard (full
+resolution 1:1) Gerber PCB format (zipped) as:
+<a href="sgld1grb.zip">sgld1grb.zip</a>.
+<p>
+The Gerber files include the solder side copper, soldermask, top silkscreen,
+optional component side pads, and drill control artwork.  The original printed
+circuit board CAD files and netlist (in Tango PCB format) are provided so that
+the circuit layout can be modified or imported to another system if desired.
+The text file 'sgld1.doc' (in sgld1grb.zip) describes the file contents in
+more detail.
+<p>
+I have a few bare (unpopulated) PCBs fabbed from this artwork available,
+as yet untested.
+<p>
+<A NAME="dpssg2"></A>
+<hr>
+<br>
+<li>Back to <A HREF="laserdps.htm#dpstoc">Diode Laser Power Supplies Sub-Table
+ of Contents</A>.
+<h3>Modification of SG-LD1 for Common Cathode LD/PD (SG-LD2)</h3>
+
+While most laser diode packages have the configuration assumed by all the
+previous driver circuits, there are some that don't fit the mold.  This
+section deals with one variation in particular - those with a common cathode
+connection.
+<p>
+A simple modification to the basic SG-LD1 circuit (or any of the others that
+are similar) should permit these types of laser diodes to be safety driven.
+<p>
+<A HREF="sgld2sch.gif">Sam's Laser Diode Driver 2</A> shows the new circuit.
+The only changes are to the wiring of the laser diode package and the
+substitution of a zener diode (CR3) for R8.  CR3 guarantees that the laser
+diode will not be driven should the voltage on the photodiode be insufficient
+for the feedback control to be active.  At normal supply voltages, leaving
+R8 in as in SG-LD1 should work.  The concern is that during power cycling or
+if run from a power supply voltage that is too low, the circuit could attempt
+to overdrive the laser diode thinking there is inadequate output power due to
+lack of bias on the photodiode and/or not enough voltage on the feedback
+components.
+<p>
+Sorry, no PCB layout available for this one. Modifications to the SG-LD1 PCB
+layout are left as an exercise for the student. :)
+<p>
+<A NAME="dpsk3p"></A>
+<hr>
+<br>
+<li>Back to <A HREF="laserdps.htm#dpstoc">Diode Laser Power Supplies Sub-Table
+ of Contents</A>.
+<h3>K3PGP's Laser Diode Driver (K3-LD1)</h3>
+
+This one runs open loop (no optical feedback) but has been designed to permit
+safe modulation.  It should be fine as long as you don't try to run too close
+to the laser diode's maximum current/power rating.
+<p>
+The circuit and an extensive description can be found at
+<A HREF="http://www.k3pgp.org/">K3PGP's Experimenter's Corner</A> under:
+<A HREF="http://www.k3pgp.org/laserbias.htm">Biasing and
+Modulating Laser Diodes - Safely!</A>.
+<p>
+<A NAME="dpsvs1"></A>
+<hr>
+<br>
+<li>Back to <A HREF="laserdps.htm#dpstoc">Diode Laser Power Supplies Sub-Table
+ of Contents</A>.
+<h3>Viacheslav's Laser Diode Driver (VS-LD1)</h3>
+
+The circuit in <A HREF="vsld1sch.jpg">Viacheslav's Laser Diode Driver
+(VS-LD1)</A> is quite straightforward.  I guess my main nit to pick would be
+that it uses more power than needed due to the constant current driver as
+opposed to a constant voltage source and a means of controlling the current
+via a pass transistor.  But for a low power laser diode, this really isn't a
+major concern.  There is enough filtering on the input that any transient
+conditions should not cause problems.
+<p>
+(From: Viacheslav Slavinsky (svo-@-rbcmail.ru).)
+<p>
+I started with a constant current source using a LM317L (DA1) and R1. 
+The current then branches to laser diode (through R5 for fine adjustment 
+of division ratio and R6 for monitoring) to KT3 (LD anode). Another 
+branch on VT1 is made to sink the extra current, the more the feedback, 
+the more current sinks through the transistor. R2 regulates the reverse 
+bias of the photodiode (it actually doesn't need to be 20K, but I picked 
+from what I had in local store).
+<p>
+KT3 is the LD anode, KT4 is the PD cathode.
+<p>
+This circuit looks pretty stable (I can only judge by eye and voltage 
+meter). For tests I used 2 metal-cased LED's and some unknown 
+photodiode. Green LEDs could not impress the photodiode so I just used a 
+laser pointer to check that feedback works. After I was sure that 
+everything was all right, I set current to about 50 ma and plugged in the
+laser diode (Mitsubishi ML1016R, I = 80 mA). Then it was easy to set the
+nominal current and test the feedback a little against circumstances
+(unattaching it from heatsink for a few seconds, for example).
+<p>
+Actually before this circuit I assembled one similar to SG-LD1,
+just altered it to adopt Mitsubishi's pinout. But while testing it I
+felt like I'm not 100% sure how it works and I was very paranoid about
+LD sensitivity to everything and knew very little practical stuff, so I
+decided to make my own circuit. Yes, it indeed draws 120 mA where only
+90 mA are used for good, there's room for improvements.
+
+<p>
+<A NAME="dpsrlm1"></A>
+<hr>
+<br>
+<li>Back to <A HREF="laserdps.htm#dpstoc">Diode Laser Power Supplies Sub-Table
+ of Contents</A>.
+<h3>Laser Diode Driver from Red Laser Module 1 (RLM-LD1)</h3>
+
+This circuit was found in a 25 mW red laser diode module, model and
+manufacturerer unknown.  It is almost an exact mirror image (with respect
+to polarities) of <A HREF="laserdps.htm#dpsto1">Toshiba Discrete Laser
+Diode Power Supply (TO-LD1)</A>.  Note that the input voltage is negative.
+
+<PRE>
+            
+  -Vcc o----------+------------+-----------------------+--------+------+
+                  |            |                       |        |      |
+                  |            |    Power Adjust     __|__     _|_     |
+                  |            |       R2 10K      PD_\_/_  LD /_\     |
+                  |            \     +----+            |        |      |
+                  |         R1 /     |    |            |        |     _|_ C2
+                  |        620 \     +---/\/\--+-------+        |     ---
+                  |            /     |         |                |      |
+                -_|_           |     |       __|__              |      |
+             C1  ---           |     |     E /   \ C            |      |
+           47uF + |            +-----|------' Q1  '-------+     +------+
+           6.3V   |            |     |        2FX         |    C|
+           Tant.  |            |     |       (NPN)        |   |/ Q2
+                  |           _|_    |                    +---|  1AM
+                  |       VR1 /_\    |                    |   |\ (PNP)
+                  |    2V LED  |     |                  -_|_   E|
+                  |            |     |              10uF ---    |
+                  |            |     |                  + |     |
+                  |            |     |                    |     |
+  Gnd o-----------+------------+-----+--------------------+-----+
+
+</PRE>
+<p>
+Note the LED used in place of a zener.  I confirmed that it actually
+does light up orange.
+<p>
+<A NAME="dpslp1"></A>
+<hr>
+<br>
+<li>Back to <A HREF="laserdps.htm#dpstoc">Diode Laser Power Supplies Sub-Table
+ of Contents</A>.
+<h3>Laser Diode Driver from Cheap Red Laser Pointer 1 (LP-LD1)</h3>
+
+(This circuit was reverse engineered by Jim Moss (Jim.Moss@nsc.com) who also
+provided the circuit analysis.)
+<p>
+It is from a cheap laser pointer.  Like the other discrete laser diode
+drivers, a single PNP transistor is used in the feedback loop to regulate
+laser diode current.  However, although optical feedback of sorts is used,
+there appears to be no real reference.  Thus, output power will depend on
+battery voltage, nominally 4.5 VDC (3 button cells, I assume) and the gain
+of Q2.
+<p>
+At first I thought some parts had been left out: At the very least, a zener or
+similar reference across C-E of Q2, and possibly some filter caps to keep the
+thing from oscillating.  While was willing to believe that the design had
+the optical output depending on battery voltage, it seemed inconceivable
+for it to be directly affected by the gain of the driver transistor.  However,
+I now believe that it is probably drawn correctly but the actual operating
+point is where the Q1 is almost in cutoff and its gain wouldn't be critical.
+
+<PRE>
+
+             Battery(+) o----------+----------+----------+ |Ild
+                                   |          |          | v
+                                  _|_         / R2     __|__
+                                  /_\ PD      \ 510    _\_/_ LD
+                                   |          /          |
+                                   | |Ipd     \ |I2      /
+                                   | v        | v        \ R3
+                                   |        |/ E         / 1.0
+                                   +--------| Q1 PNP     \
+                                   |        |\ C         |
+                                   / R1       |        |/ C
+                                   \ 120K     +--------| Q2 NPN
+                            S1     /         _|_       |\ E
+                           Power   \ |I1     /_\ D1      |
+                            _|_    | v        |          |
+            Battery(-) o----o o----+----------+----------+
+
+</PRE>
+For amusement, here is the analysis:
+<ul>
+ Ipd = Output Power(mW) * X (where X is the sensitivity of the monitor
+  photodiode in uA/mW).<br>
+ I1 is very nearly equal to lpd (minus Q1's base current).<br>
+ V(R1) = I1 * R1.<br>
+ V(R2) = V(Battery) - V(R1) - 0.7.<br>
+ I2 = V(R2)/R2.<br>
+</ul>
+<p>
+The operating point will depend slightly on the gain of both Q1 and Q2 but 
+if the product ot their Hfes is high, for a given battery voltage, laser
+output power will be fairly constant.
+<p>
+You can crank the math for your favorite laser diode and transistor specs!
+<p>
+<A NAME="dpslp2"></A>
+<hr>
+<br>
+<li>Back to <A HREF="laserdps.htm#dpstoc">Diode Laser Power Supplies Sub-Table
+ of Contents</A>.
+<h3>Laser Diode Driver from Cheap Red Laser Pointer 2 (LP-LD2)</h3>
+
+This is the circuit from another inexpensive laser pointer.
+Although very similar, it includes some capacitive filtering (and more
+optional filtering in C2, not installed), as well as a power adjust pot (VR1).
+However, like the previous circuit, this does not have any absolute reference
+so power output will be dependent on the battery voltage to some extent.
+People have successfully modulated this module at a reasonable frequency
+(upper limit not determined) by removing or greatly reducing the value of the
+filter capacitor, C1.  However, do this at your own risk!
+<p>
+This unit was available from <A HREF="http://www.oatleyelectronics.com/">Oatley
+Electronics (AU)</A> as the module LM-2 (January, 2000).  Of course, they may
+have already switched to a different supplier or the manufacturer may have
+changed the design!
+
+<PRE>
+
+      Battery(+) o---------------+---------+------------+-------+
+                                 |         |            |       |
+                                _|_        / R2       __|__    _|_ C2
+                                /_\ PD     \ 510      _\_/_ LD --- (Opt)
+                                 |         /            |       |
+                                 | |Ipd    \ |I2   Ild| |       |
+                                 | v       | v        v +-------+
+                                 |         |            |
+                                 /       |/ E           |
+                             VR1 \&lt;------| Q2 PNP       |
+                              5K /       |\ C           |
+                                 \         |          |/ C
+                                 |         +-----+----| Q1 NPN
+                                 |         |     |    |\ E
+                                 /         |     / R1   |
+                                 \ R3     _|_ C1 \ 10K  |
+                     S1          / 1K     ---    /      |
+                    Power        \         |     \ |I1  |
+                     _|_         |         |     | v    |
+     Battery(-) o----o o---------+---------+-----+------+
+
+</PRE>
+
+<p>
+<A NAME="dpslp3"></A>
+<hr>
+<br>
+<li>Back to <A HREF="laserdps.htm#dpstoc">Diode Laser Power Supplies Sub-Table
+ of Contents</A>.
+<h3>Laser Diode Driver from Cheap Red Laser Pointer 3 (LP-LD3)</h3>
+
+This one is even simpler than the two preceeding:
+
+<PRE>
+
+              Battery(+) o----------------------+--------+
+                                                |        |
+                                               _|_     __|__
+                                            PD /_\     _\_/_ LD
+                                                |        |
+                                           Ipd| |   Ild| | 
+                                              v |      v |
+                                                |        |
+                                           R1   |      |/ E
+                                       +--/\/\--+------| Q1 PNP
+                                       |   1K          |\ C
+                                       /                 |
+                                   VR1 \&lt;-+              |
+                             S1    10K /  |              |
+                            Power      \  |              |
+                             _|_       |  |              |
+             Battery(-) o----o o-------+--+--------------+
+
+</PRE>
+
+In this case, the power output is determined by the equation:
+
+<PRE>
+             Vbatt - (Ipd  * (R1 + VR1)) = Vld + Vbe1
+</PRE>
+Or:
+<PRE>
+                           Vbatt - Vld - Vbe1
+                    Ipd = --------------------
+                                R1 + VR1
+</PRE>
+Where:
+<p>
+<ul>
+<li>Vbatt = battery voltage under load.
+<li>Ipd = total photodiode current.
+<li>Vld = voltage across the laser diode.
+<li>Vbe1 = Base-emitter drop (.7 V) of Q1.
+</ul>
+<p>
+Since Ipd is proportional to optical power output, like LP-LD1 and LP-LD2
+(above), brightness is dependent on battery voltage.  In this case, it is a
+much more non-linear relationship as Vld and Vbe1 set a threshold of about 2
+to 2.5 V below which there will be nothing and then output will increase based
+on Vbatt/(R1 + VR1).  The circuit operates on 3 V but 4.5 V seems like the
+minimum to get any decent output.
+<p>
+<A NAME="dpslp4"></A>
+<hr>
+<br>
+<li>Back to <A HREF="laserdps.htm#dpstoc">Diode Laser Power Supplies Sub-Table
+ of Contents</A>.
+<h3>Laser Diode Driver from Cheap Red Laser Pointer 4 (LP-LD4)</h3>
+
+This one is very similar to LP-LD2, above.  You can determine the math. :)
+<p>
+<PRE>
+
+      Battery(+) o----------+--------+---------+----------+
+                            |        |         |          |
+                            |       _|_        /        __|__
+                            |       /_\ PD     \ R1     _\_/_
+                            |        |         / 1.2K     |
+                            |        +---+     \          |
+                            |        |   |     |          |
+                            |        \   |   |/ E         |
+                          +_|_    R2 /   +---| Q1 PNP     |
+                        C1 ---  1.2K \       |\ C         |
+                          - |        /         |        |/ C
+                            |        |         +--------| Q2 NPN
+                            |        /                  |\ E
+                            |     R3 \&lt;--+                |
+                     S1     |     5K /   |                |
+                    Power   |        \   |                |
+                     _|_    |        |   |                |
+     Battery(-) o----o o----+--------+---+----------------+
+
+</PRE>
+<p>
+<A NAME="dpslp5"></A>
+<hr>
+<br>
+<li>Back to <A HREF="laserdps.htm#dpstoc">Diode Laser Power Supplies Sub-Table
+ of Contents</A>.
+<h3>Laser Diode Driver from Cheap Red Laser Pointer 5 (LP-LD5)</h3>
+
+This is the circuit from another inexpensive laser pointer.  Well,
+actually it's from a diode laser module, but this was obviously just a
+pointer driver without the pushbutton (which I have added in the
+schematic).  Battery voltage is 2.6 to 3.0 V.  It's very similar
+to LP-LP1 and LP-LD2, above.
+<p>
+<PRE>
+
+      Battery(+) o---------------+---------+------------+
+                                 |         |            |
+                                 |         / R2       __|__
+                                _|_        \ 2.7K     _\_/_ LD
+                                /_\ PD     /            |
+                                 |         \            |
+                                 |         |            |
+                                 |       |/ E           |
+                                 +-------| Q2 PNP       |
+                                 |       |\ C           |
+                                 |         |          |/ C
+                                 |         +------+---| Q1 NPN
+                                 /         |      |   |\ E
+                                 \ R3      |      /     |
+                                 / 3.6K   _|_     \ R1  |
+                     S1          \        --- C1  / 10K |
+                    Power        |         |      \     |
+                     _|_         |         |      |     |
+     Battery(-) o----o o---------+---------+------+-----+
+
+</PRE>
+<p>
+<A NAME="dpsilm1"></A>
+<hr>
+<br>
+<li>Back to <A HREF="laserdps.htm#dpstoc">Diode Laser Power Supplies Sub-Table
+ of Contents</A>.
+<h3>Laser Diode Driver from IR Laser Module 1 (ILM-LD1)</h3>
+
+This is a very simple circuit from a 780 nm laser diode module
+sent to me by <A HREF="http://www.shawohwa.com/">Shawo Hwa Industrial
+Co., Ltd.</A>, a Taiwanese manufacturer of laser pointers, laser modules,
+and other related laser devices.  This unit is similar to the guts from
+a typical visible laser pointer.  Connections are via wires though there
+is a battery contact spring hidden under heatshrink, but no switch or power
+adjust pot.  The laser diode is in a 5.6 mm metal can though the window
+appears to be molded in place rather than glued from the inside.
+<p>
+<PRE>
+
+              Battery(+) o----+--------+--------+--------+
+                              |        |        |        |
+                              |       _|_       /      __|__
+                              |    PD /_\    R2 \      _\_/_ LD
+                              |        |    10K /        |
+                              |        |        \        |
+                              |        |        |      |/ C
+                              |        |        +------| Q2 NPN
+                          C1 _|_       |        |      |\ E
+                       7.5uF ---       |      |/ C       |
+                              |        +------| Q1 NPN   |
+                              |        |      |\ E       /
+                              |        /        |     R3 \
+                              |     R1 \        |     10 /
+                              |   3.9K /        |        \
+                              |        \        |        |
+                              |        |        |        |
+             Battery(-) o-----+--------+--------+--------+
+
+</PRE>
+<p>
+The battery voltage is spec'd at 3 V.  The only reference device is the
+B-E junction of Q1 so power output will vary with temperature and not very
+much with battery voltage.  Both SMT transistors were labeled "RIP".  R1
+could be changed to a pot to provide a variable power adjustment.  I assume
+that for this module, its value is selected for each laser diode.  I'm not
+sure what the rated output power is for this module other than "&lt;5mW"
+but it actually measured 2.3 mW.
+<p>
+<A NAME="dpsglp1"></A>
+<hr>
+<br>
+<li>Back to <A HREF="laserdps.htm#dpstoc">Diode Laser Power Supplies Sub-Table
+ of Contents</A>.
+<h3>Laser Diode Driver from Green Laser Pointer 1 (GLP-LD1)</h3>
+
+Here is the schematic for the driver from a CW green DPSS laser pointer
+generously contributed to the cause by
+<A HREF="http://www.laserpointers.co.uk/">Laserpointers.co.uk</A>.  There
+is no model number on the case but it is manufactured by Lightvision
+Technologies Corp., Taiwan.  The pointer was given to me because (1) it was
+broken and (2) Laserpointers.co.uk apparently doesn't deal with this supplier
+anymore so they couldn't send it back for repair.
+<p>
+The pointer is in a nice dark blue case with gold and chrome trim.  It was
+quite dead.  However, fiddling with the batteries while completing the contact
+from the positive terminal to the case resulted in some flashes of green
+light and with just the right pressure, a continuous beam.  So, there had
+to be a bad connection inside.  Clamping the chrome cap on the output-end
+in a vice with some protective padding and wiggling resulted in it coming
+loose relatively easily.  The result is shown in
+<A HREF="grnptr1.jpg">Components of Typical Green DPSS Laser Pointer</A>.
+It turns out that the laser module
+consists of several parts.  Sorry, no complete dissection. :)  These are
+screwed together with dabs of glue to keep them from shifting position.
+However, the positive return for the battery also goes though these joints
+(from rear cap though case to front cap, IR filter holder, collimating lens
+holder, DPSS module, laser diode case and finally back to the driver board).
+And one of the joints wasn't exactly tight.  Perhaps, the path is really
+supposed to be via contact between the case and the DPSS module directly
+but the lumps of glue prevented this.  So, I wrapped some bare wire around
+all the parts and then covered this with aluminum foil and tape. ;-)
+<p>
+The circuit in <A HREF="glpdrv1.gif">Green Laser Pointer Diode Driver 1</A>
+is a basic dual op-amp constant current driver.  All part values
+were either labeled or measured except for C4 since I didn't risk putting
+a capacitance meter across the laser diode.  But C4 looks identical to the
+others so there is high degree of confidence in the uF value.  D1 and C1
+provide soft-start and the pointer doesn't seem to mind reverse polarity
+(either by design or because Murphy took a day off).  All in all, not a bad
+little circuit.  No, I don't intend to turn the pot. ;-)
+<p>
+<A NAME="dpsglp2"></A>
+<hr>
+<br>
+<li>Back to <A HREF="laserdps.htm#dpstoc">Diode Laser Power Supplies Sub-Table
+ of Contents</A>.
+<h3>Laser Diode Driver from Green Laser Pointer 2 (GLP-LD2)</h3>
+
+Here is the schematic for the driver from the
+green DPSS laser pointer described in the section:
+<A HREF="laserssl.htm#ssleslp">The Edmund Scientific Model L54-101 Green Laser
+Pointer</A>.  Photos of the pointer are shown in
+<A HREF="grnptr2.jpg">Components of Edmund Scientific L54-101 Green DPSS
+Laser Pointer</A>.  This is a pulsed model operating at about 4.5 kHz with
+a 50% duty cycle.  The driver board was designed by
+<A HREF="//www.bwtek.com/">B&W Tek</A> who are also the supplier of the
+pointer to Edmund Scientific.
+<p>
+The circuit in <A HREF="glpdrv2.gif">Green Laser Pointer Diode Driver 2</A>
+uses what appears to be a low voltage 33202 dual op-amp.  Do a Google search
+for "MC33202".)  It's configured as a squarewave oscillator feeding a constant
+current driver.  Part values for the capacitors were all guessed because they
+wouldn't produce meaningful readings on either of my DMMs.  This is still a
+mystery.
+<p>
+<A NAME="dpsglp3"></A>
+<hr>
+<br>
+<li>Back to <A HREF="laserdps.htm#dpstoc">Diode Laser Power Supplies Sub-Table
+ of Contents</A>.
+<h3>Laser Diode Driver from Green Laser Pointer 3 (GLP-LD3)</h3>
+
+This driver is from a pointer that is externally identical to the one described
+in the section: <A HREF="laserdps.htm#dpsglp1">Laser Diode Driver from Green
+Laser Pointer 1 (GLP-LD1)</A> but the actual DPSS module and driver differ.
+<p>
+The circuit in <A HREF="glpdrv3.gif">Green Laser Pointer Diode Driver 3</A>
+is a basic current regulated driver using a single op-amp with a range of
+approximately 0.167 to .333 A.  It was set to about 0.300 A.
+
+<p>
+<A NAME="dpsglp4"></A>
+<hr>
+<br>
+<li>Back to <A HREF="laserdps.htm#dpstoc">Diode Laser Power Supplies Sub-Table
+ of Contents</A>.
+<h3>Laser Diode Driver from Green Laser Pointer 4 (GLP-LD4)</h3>
+
+Here is the schematic for the driver from a
+<A HREF="http://www.z-bolt.com/">Z-Bolt</A> BTMK-10
+green DPSS laser pointer.  This one is rated at 5 mW, though I
+assume the same design is used for some higher power versions.
+The ZBolt BTMK-10 is actually not a pointer in the
+usual sense since it doesn't have a momentary switch on the side
+and is aimed at (no pun...) targeting applications.  But I'll call
+it a pointer here. :)  The switch is on the rear end and is latching.
+This one differs from the 3 previous
+drivers in that it uses Automatic Power Control (APC) rather than Automatic
+Current Control (ACC, constant current).  So, the feedback loop is
+closed by a photodiode that samples a portion of the output beam.
+<p>
+The circuit in <A HREF="glpdrv4.gif">Green Laser Pointer Diode Driver 4</A>
+uses what appears to be a low voltage ELM8548M1 dual op-amp.  However,
+as can be seen in the schematic, there is no feedback resistor for the
+second op-amp so perhaps that has one built-in.  The parts were all
+labeled, though I'm not positive about which labels went with which
+parts in a couple cases.  There is also space for a tiny surface mount
+LED and its current limiting resistor.
+<p>
+While the APC circuit operation is quite straightforward, there would
+seem to be a potential issue should the circuit be incapable of obtaining
+the expected output power.  Since there is no absolute current limit,
+it could drive the laser diode to destruction should someone power it
+in a cold environment where the diode wavelength doesn't match up
+with the vanadate absorption and it can't produce 5 mW at rated diode
+current.  The current would then be limited only by circuit
+and battery resistance.  However, if the designers were really clever,
+they might have set up the beam sampler to just enough pump light leaks
+through to the photodiode and limit the current even with insufficient
+green output.  However, I rather doubt this to be the case since there
+is no way to adjust any current limit.
+<p>
+<A NAME="dpssld"></A>
+<hr>
+<br>
+<li>Back to <A HREF="laserdps.htm#dpstoc">Diode Laser Power Supplies Sub-Table
+ of Contents</A>.
+<h3>Simple Laser Diode Power Supply</h3>
+
+The first one is for low power laser diodes:
+<p>
+(From: Brian Mork (mork@usa.net).)
+<p>
+Best circuit I've found:
+<p>
+<PRE>
+
+             In +-------+ Out     R1
+  (+) o-----+---| LM317 |--------/\/\-----+-----+------o LD anode
+            |   +-------+      18 ohms*   |     |
+        C1 _|_ +    | Adjust              |    _|_ C2    __|__
+      22uF ---      +---------------------+    --- 1uF   _\_/_
+            |  =                                |          |
+            |                                   |
+  (-) o-----+-----------------------------------+------o LD cathode
+
+</PRE>
+<p>
+<ul>
+<li>Note: Resistor value depends on your specific laser diode current
+ requirements.  Discussion below assumes a laser diode with a 72 to
+ 100 mA drive range.
+</ul>
+<p>
+Power is 5.5 to 9 VDC. I use a 9 volt battery.
+<p>
+Watch the pin arrangement on the LM317. On the LM317L (the TO-92 plastic
+transistor type case) and the LM317T (TO-220 7805-type case), the pins are,
+left to right, Adjust-Output-Input.
+<p>
+For the resistor, I use a small carbon 10 ohm in series with a precision
+10-turn 20 ohm adjustable. The combo was empirically set to about 17 ohms.
+<p>
+On initial power on, use three garden variety diodes stacked in series
+instead of the laser diode. Put a current meter in series with the diode
+stack and adjust the precision resistor for 50-60 mA. Disconnect power and
+replace the diode stack with the laser diode. Connect up power again, still
+watching on the current meter. The diode will probably initially glow
+dimly. I use a diode that lases at about 72 mA, and has a max rating of 100
+mA. I use about 85 mA for normal ops.
+<p>
+Turn up the current, never exceeding your diode's max limit. The dim glow
+will increase in intensity, but at some point, a distinctive step in
+intensity will occur. Your diode is lasing. Remove the current meter as
+desired. Enjoy!
+<p>
+Here's a similar circuit that will drive pump diodes for solid state lasers
+with up to about 0.8 A if a most excellent heatsink is used:
+<p>
+(From: Steve Roberts (osteven@akrobiz.com).)
+<p>
+<PRE>
+
+             In +-------+ Out   R1 1 ohm,2 W
+  (+) o-----+---| LM317 |--------/\/\-----+-----+------o LD anode
+            |   +-------+                 |     |
+        C1  |       | Adjust    R2 1K     |     |
+      22uF _|_+     +------------/\/\-----+   +_|_ C2    __|__
+     Tant- ---      |    R3     R4 500         --- 1uF   _\_/_
+       alum | -     +---/\/\----/\/\----+     - |          |
+            |           560      ^      |       |
+            |                    |      |       |           
+  (-) o-----+--------------------+------+-------+------o LD cathode
+
+</PRE>
+<p>
+<ul>
+<li>Note: It is important to use a tantalum capacitor for C1.
+</ul>
+<p>
+Input power should be <i>regulated</i> 5 to 6 VDC.  Since there is some
+interaction between diode voltage and current with this design, make sure
+to set up the current adjustment with a dummy (e.g., dead) laser diode,
+or make sure it is set low before applying power and increase it slowly to
+the operating point.  Then, fine tweak the current once the temperature of
+the diode has stabilized.
+<p>
+<A NAME="dpsclc"></A>
+<hr>
+<br>
+<li>Back to <A HREF="laserdps.htm#dpstoc">Diode Laser Power Supplies Sub-Table
+ of Contents</A>.
+<h3>EU38 Low Cost Constant Current Laser Diode Driver</A></h3>
+
+This is a small printed circuit board (about 14x35 mm) which will drive laser
+diodes in constant current mode up to 800 mA without a heat sink and about
+1.2 A with a heatsink (not included).  It is suitable for driving laser diodes
+<b>not</b> requiring optical feedback such as DPSS laser pump diodes of up to
+about 0.5 W output.
+<p>
+The EU38 is available from
+<A HREF="http://www.roithner-laser.com/">Roithner Lasertechnik</A> and
+formerly from <A HREF="http://www.bwtek.com/index1.html">B&W Tek</A>.
+Thus, it is likely manufactured by someone else.
+Description and specs can be found on
+<A HREF="http://www.roithner-laser.com/Drivers.htm">Roithner's Laser Diode
+Drivers Page</A>.
+<p>
+The schematic I reverse engineered from the Roithner version can be found
+in <A HREF="eu38ldd.gif">EU38 Constant Current Laser Diode Driver</A>.
+The circuit consists of an NPN power transistor controlled by a single op-amp.
+Feedback is taken from a 0.6 ohm series current sense resistor.  
+One issue that I've found is that the reference is a zener
+diode (type unidentified) which probably doesn't have enough current going
+through it so while the feedback loop has enough gain and current regulation
+is quite good with respect to laser diode characteristics, the reference
+voltage changes slightly with input voltage.  Thus, I recommend powering
+the unit from a regulated supply rather than a cheap wall adapter or
+batteries.
+<p>
+Not all components were labeled so it's quite possible there are errors.  The
+zener voltage was determined by measurement with an input voltage to the board
+of about 4 VDC.  I'm kind of guessing about the resistance of the Iadj
+pot (R4).  It's more than 20K and less than 100K, so 50K is a nice standard
+intermediate value.  The bias current or offset voltage or something :) of
+the mediocre op-amp (an LM358 clone) adds about 0.05 A to the output current.
+<p>
+I did find and fix two errors that were in my original schematic: (1) the
+value of R6 had been shown as 4.7K rather than 47K and
+(2) when I measured the voltage across the zener (ZD1), it was 1.05 V rather
+than the 1.5 V I had before.  Although I was rather suspicious of that
+1.05 V, a similar voltage has been confirmed by someone else.
+Perhaps the 1.5 V was wishful thinking when I originally traced the schematic.
+<p>
+The Roithner specs for the EU38 say that it can go to 1.2 A with a heatsink.
+As drawn, the maximum current is just about 1 A so there may still be
+errors in the schematic.  If the resistance of the pot were much higher,
+the maximum current might almost get to 1.2 A.  Or a user modification may be
+needed to go any higher.  There are 6 through-pads on the PCB that
+I thought might have been intended for this purpose, but 4 are
+connected to ground, 1 is connected to power, and 1 is a no-connect.
+<p>
+I have used the EU38 to power the green demo laser described
+in the section: <A HREF="lasercds.htm#cdsesgd">Even Simpler Instant Green
+DPSS Laser</A>.  The complete power supply is shown in
+<A HREF="gdlpsu1.gif">Green Demo Laser Power Supply Using EU38</A>.
+One complaint about the EU38 is that a jeweler's screwdriver must be
+used to adjust the current and the slot is in the metal wiper of the pot
+so it picks up 60 (or 50) Hz noise and modulates the diode current while
+touching it if the screwdriver handle isn't insulated!
+<p>
+<A NAME="dpsldt1"></A>
+<hr>
+<br>
+<li>Back to <A HREF="laserdps.htm#dpstoc">Diode Laser Power Supplies Sub-Table
+ of Contents</A>.
+<h3>Super Simple Laser Diode and TEC Driver</h3>
+
+<A HREF="ssldtd1.gif">Super Simple Laser Diode and TEC Driver</A>
+uses a hand-full of Radio Shack parts to provide variable
+current to a low power laser diode along with a TEC for cooling.
+OK, they will have to be Digikey parts since RS doesn't really sell
+parts anymore. :)
+<p>
+The laser diode driver is an adjustable voltage regulator with a
+current limiting resistor.  Added filtering and reverse polarity
+protection guarantee no overshoot or transients when power cycling.
+The cooling-only TEC driver is a MOSFET with a pot
+for the set-point.  With only a MOSFET as the active component, this
+won't be very precise for temperature tuning but is adequate to keep
+the diode cool.  I built it to power a Crystallaser 35 mW red diode laser.
+The numbers by LD1, TH1, and TEC1 refer to the 10 pin ribbon cable connector
+on the laser head.  LED2 provides a rough indication of the voltage across
+the TEC, and thus the current through it.
+<p>
+Note that the voltage for the TEC is the same as the voltage for
+the laser diode based on the argument that there will be correlation
+between the LD power and the required TEC power.  It could also come from
+the fixed 12 VDC input.
+<p>
+For this low power Crystallaser laser, the TEC is almost unnecessary as the
+maximum current to the laser diode is under 100 mA.  But it was an excuse to
+implement this trivial scheme.  In fact, acceptable cooling could be
+achieved even without using any active components by simply putting
+the laser diode in series with the TEC.  But with the MOSFET, it
+was somewhat better.
+<p>
+A regualted 12 VDC power supply is recommended.  Using a 7812 to provide this
+from a 15 to 20 VDC source would be ideal.
+<p>
+There's nothing critical in the circuit.  Any sort of common adjustable
+regulator can be used.  The LT1084 was simply available, but an LM317
+would be fine as well.  Same for the MOSFET.  The BUZ71A just happened
+to cry out to be used. :)
+<p>
+CAUTION: This is a more or less constant current driver without optical
+feedback.  Therefore, it may not be suitable for laser diodes where the
+operating range of current is small.
+<p>
+<A NAME="dpsccs"></A>
+<hr>
+<br>
+<li>Back to <A HREF="laserdps.htm#dpstoc">Diode Laser Power Supplies Sub-Table
+ of Contents</A>.
+<h3>Constant Current Supply for High Power Laser Diodes</h3>
+
+(From: Winfield Hill (hill@rowland.org).)
+<p>
+The schematic in the section: <A HREF="laserdps.htm#dpssld0">Simple Laser Diode Power Supply</A> is the
+standard circuit for making a constant current source from an LM317 or LM338
+(e.g. see The Art of Electronics, fig 6.38).  The problem with this circuit is
+that for large currents (the only currents for which it has good accuracy, and
+is a serious part saver) it's hard to make the current variable.
+<p>
+For example, for a 3.5 A current source, the resistor value is 0.357 ohms, 
+and if you then want a 3.1 A current you've got to unsolder it and replace 
+it with a 0.403 ohm resistor.  Bummer.
+<p>
+One option would be to put a low value pot across the sense resistor and
+connect its tap to the voltage regulator common/adjust terminal.  This will
+work reasonably well for a modest current range - perhaps up to 2:1 as shown
+below - but runs into difficulties where a wide range of control is desired.
+<p>
+<PRE>
+
+        In +-------+ Out        R1 1.01 ohm
+  Vin o----| LM317 |---+-----------/\/\----+----o 1.25 to 2.5 A current source
+           +-------+   |                   |
+               | Adj.  +---/\/\-----/\/\---+
+               |            R2        ^ R3
+               |         100 ohms     | 100 ohms
+               +----------------------+
+
+</PRE>
+<p>
+The reason is that this arrangement can only *increase* the current from the
+nominal I = 1.25V/R.  So, for example, to get a 10:1 range, the voltage across
+the sense resistor would be 12.5 V for the 10x current!  In general this is not
+attractive for the high current condition because not only have you required
+a higher supply voltage, at the maximum current, but the power dissipation in
+the sense resistor is also quite high (more like HUGE --- sam).
+<p>
+Let me offer the following simple circuit, which I just created and haven't
+tried but 'oughta work' as a solution to this problem.
+<p>
+By contrast, this circuit can only *decrease* the current from the 1.25V/R
+value, but it easily handles a 10:1 range (or even much more) and the voltage
+across the sense resistor is never more than 1.25V, allowing low supply voltage
+(e.g. 5 V) and keeping the dissipation low.
+<p>
+<PRE>
+
+        In +-------+ Out  R1 .25 ohms
+  Vin o----| LM338 |-------/\/\/----+-----o 0 to 5 A current source
+           +-------+                |
+               | Adj.          +----+
+               |            cw |    |
+               |          1K ^ /   _|_,
+               +-------------->\  '/_\  LM385-1.2
+                               /    |
+                               |    |
+                               +----+
+                                    |
+                        +------------------------+
+                        | I = 0.5 to 1.5 mA sink |
+                        +------------------------+
+                                   _|_
+                                    -
+
+</PRE>
+<p>
+The 1K pot selects a portion of the floating 1.23 V reference voltage, and 
+tricks the LM317 or LM338 into correspondingly reducing the voltage across 
+the 0.25 ohm current-sense resistor.  The pot is conventional and may be 
+panel mounted.  It should be possible to nearly shut off the LM338 (a 
+minimum quiescent current will still flow).  The current sink, I, which 
+powers the floating 1.23 V reference, is not critical and may be a simple 
+current mirror (sorry to see the TL011 gone!), or even a resistor to 
+ground or any available negative voltage, depending upon the desired 
+current-source voltage-compliance range.  That's it!
+<p>
+<A NAME="dpssg3"></A>
+<hr>
+<br>
+<li>Back to <A HREF="laserdps.htm#dpstoc">Diode Laser Power Supplies Sub-Table
+ of Contents</A>.
+<h2>Sam's High Power Laser Diode Driver 1 (SG-DH1)</h2>
+
+This isn't exactly an entire design but one that uses a common logic power
+supply in an unconventional way.
+<p>
+It may be possible to use a high current switchmode power supply
+as a variable current laser diode driver as long as it has remote
+sensing capability.  The remote sensing feedback loop maintains a constant
+voltage (the spec'd supply voltage) between RS+ and RS-.  Normally, this
+is used to compensate for the voltage drop in the wiring harness.
+By applying a variable control voltage between RS+ and
+V+, the power supply can be fooled into producing any output voltage from
+near 0 to its maximum rating as long as its minimum load requirement is
+satisfied.  With a small resistor in series with the
+laser diode (or for those willing to take risks, the resistance of the
+laser diode), this results in a variable current to the laser diode.
+The only limit on output current is the maximum rating of the power supply.
+These types of power supplies, capable of 50 A, 100 A, or even
+higher current, are readily available on the surplus market.  However, this
+scheme may only work with certain models, those which power their control
+circuitry separately from the main output and don't go into some sort of
+undervoltage shutdown if the output voltage goes too low.  I don't know
+how to determine which models satisfy this requirement.
+<p>
+<A HREF="http://www.vicorpower.com/">Vicor</A> used to have application notes
+on doing this (among other things) with some of their Flatpac (among
+other) models.  Search for "Programmable Current Source".  The
+power supplies shown have an additional input called "Trim" which makes
+the modification particularly easy.  But if there is nothing useful
+there anymore, I have an archived copy at
+<A HREF="http://www.repairfaq.org/sam/laser/09appcircuits.pdf">Vicor
+ - Flatpac Applications Circuits</A>.
+<p>
+I have not yet attempted to close the loop and provide actual current
+control but have opted for voltage control for now at least.
+The unit I've been using for these tests is a Shindengen PS5V100A, a
+fully enclosed fan cooled switchmode power supply that's about 15 years
+old.  This unit is also nice in that it regulates well with no load.
+All that was needed was to remove the shorting link between V+ and RS+ and
+install a 20 ohm, 2 W resistor in its place.  Then applying 0 to +15 VDC
+current limited by a 47 ohm, 5 W resistor across RS+ (+) and V+ (-),
+the output voltage would vary from near 0 to 5 VDC.
+<p>
+<PRE>
+
+       RS- <------ Remote Sense -------> RS+
+        o                                 o
+        |     V-  Vout   V+               |
+        |     o          o                |
+        |     |    R0    |          R1    |    R2
+        |     |   250    |        20 2W   |  47 5W         Vcontrol
+        +-----+---/\/\---+-----+---/\/\---+---/\/\---o + 0 to 15 VDC - o---+
+        |                      |                                           |
+        +---|<|---+---/\/\---+-+-------------------------------------------+
+            LD1   |    R3    |
+           Laser  | .05 500W |    Adjusting Vcontrol from 0 to 15 V varies
+           Diode  o          o      Vout from 5 V to 0 V.
+                 VS- Vsense VS+
+
+</PRE>
+<p>
+(R0 is internal to this particular power supply.)
+<p>
+R3 can be constructed from a length of building wire.  For example, 20 feet
+of #14 copper wire has a resistance of 0.05 ohms but water cooling would be
+needed if run near full current.  I'm actually only using a head lamp
+load for testing and it works fine.
+<p>
+The same scheme using RS- did not have enough range, probably due to the
+internal circuit design.  This is too bad because the op-amp circuitry to
+drive it might have been simpler, or at least more intuitive to design.
+<p>
+(I did try a test of the same approach with a Pioneer Magnetics dual output
+power supply (5 VDC at 59 A, 12 VDC at 67 A).  While control was possible,
+it didn't behave nearly as perfectly as the Shindengen supply.  More than
+1/2 A of control current was required to change the 5 V output to 4 V.  And
+while the 12 VDC output could be reduced to near 0 V, the cooling fans
+cut out at about 8 VDC so they would need to be powered separately for
+continuous operation at high current.  But this might be nice for driving
+series connected laser diode bars.)
+<p>
+The challenge is to convert this to a user friendly form that is safe for
+the laser diode.  I am designing a control panel which incorporates
+what I hope will be fail-safe circuits to minimize the chance of excessive
+current either from power cycling or by user error.  It will use closed
+loop feedback so the actual current can be set (rather than voltage) and
+includes a multifunction panel meter (set current, actual current, diode
+voltage).  It will enable diode current only if all power supplies are
+stable and correct, the 10 turn current adjust pot is at 0, and with the
+press of a green button.
+<p>
+However, initially, I'm using a 10 turn pot to control the
+current with a digital panel meter monitoring current via a 0.025 ohm
+sense resistor.  Current is limited to between 50 A by a
+0.06 ohm power resistor.  Believe it or not, even 50 A is way below the
+limit for the diodes I need to test!  See the section:
+<A HREF="laserdio.htm#diorhpd">Characteristics of Some Really High Power
+IR Diode Lasers</A>.
+<p>
+The schematic in <A HREF="sgdh1sch.pdf">Sam's High Power Laser Diode
+Driver 1</A> includes the control panel, connections to the 100 A power
+supply, and laser diode wiring.
+<p>
+The basic control panel includes an Enable switch (eventually to be
+replaced with a keylock switch), Diode On and Off buttons, the 10 turn
+pot and DPM which reads 0 to 100 A.  A differential amplifier converts
+the voltage across the current sense resistor into a DC voltage for the
+DPM.  Without the differential amplifier, the control current was seriously
+affecting the readings as 1 A is only 2.5 mV.  It's not possible (or
+at least not convenient) to separate the power and signal wiring to
+provide a proper single point ground.
+<p>
+Both the sense and current limiting resistors are simply lengths of
+#14 copper wire with forced air cooling.  This works very well with
+the diode's output digging pits in my brick beam stop. :)  However,
+for continuous operation, it may be necessary to replace the #14 with #8
+because even the modest heating of the copper changes its resistance
+enough to noticeably affect current.
+<p>
+With minor changes in part values for the current limiting resistors,
+and the set-point for the power supply output voltage, it should be possible
+to drive a pair of laser diodes in series as long as they can be isolated
+from the common point.  (The positive connection to a high power laser diode
+is usually the mounting block of the diode but it may not be connected to
+the external case itself.)  However, one risk with this setup is that if
+one of the laser diodes fails shorted, it will likely take the other one
+as well since the current will spike to a very high level.
+<p>
+The setup is shown in <A HREF="sgdh1p1.jpg">Photo of Sam's High Power Laser
+Diode Driver In Action</A>.  The water-cooled laser diode in the aluminum box
+is capable of 35 W output at around 55 to 60 A.
+The power supply is at the upper left with
+the control panel in front of it showing 40 A.  Behind the power supply
+is the coil of white wire acting as a current limiting resistor next to
+its cooling fan.  The current sense resistor is the 12 inches of so
+of red wire running from the power supply to the terminal strip.  The
+blue-white glow is my digital camera's response to intense IR.
+The camera is really confused. :)  When viewed through IR blocking
+laser goggles, a line on the brick starts glowing at a current of
+around 35 A and is white-hot at 45 A, where the current limit of the power
+supply is presently set (via the current limiting resistor and wiring
+resistance with the power supply adjusted for a maximum output of 5 VDC).
+The old darkroom enlarger timer in the upper right is used to turn the
+driver on for exactly the 20 seconds needed for my "meat thermometer"
+type power meter to take its reading, which would show about 23 W at 40 A
+for the diode in the photo.  The reading at 45 A is about 27 W.
+<p>
+<A NAME="dpstldr"></A>
+<hr>
+<br>
+<li>Back to <A HREF="laserdps.htm#dpstoc">Diode Laser Power Supplies Sub-Table
+ of Contents</A>.
+<h3>Tim's High Power Laser Diode Driver (TO-LD1)</h3>
+
+(The schematic and portions of the description below are from:
+ Tim O'Brien (ob1@xtra.co.nz).)
+<p>
+The circuit in <A HREF="told1sch.gif">Tim's High Power Laser Diode Driver</A>
+is designed for high power laser diodes which include a monitor photodiode
+for optical feedback.  Note that most common high power diodes are driven
+with a constant current but optical feedback enables more precise control of
+output power.  Diodes like this are available from
+<A HREF="http://www.roithner-laser.com/">Roithner Lasertechnik</A> at very
+reasonable prices.
+<p>
+The front-end is a current differential amplifier (very similar to the
+approach used in the LM2900 Norton op amp).  I hand-picked
+the two transistors for the current mirror for close matching.  They are
+mounted in a common heat sink to keep them at the same temperature.
+<p>
+The constant current sources are LM334s.  These are cheap and work well.
+The one used on the non-inverting input of the current mirror is adjustable
+to about 2 mA.  The one used as the common emitter amplifier load was set to
+about 1 mA.
+<p>
+There is a 100 uF, 16 V capacitor on board too as well as a reverse
+biased diode in parallel with an RC snubber directly across the laser leads
+(not shown).
+<p>
+<A NAME="dpsjldr"></A>
+<hr>
+<br>
+<li>Back to <A HREF="laserdps.htm#dpstoc">Diode Laser Power Supplies Sub-Table
+ of Contents</A>.
+<h3>Joshua's High Power Laser Diode Driver (JD-LD1)</h3>
+
+This is a simple design good to at least 3 A that can easily be extended to
+even higher current.  See <A HREF="http://www.weirdscience.us/">Josh's
+Web Site</A>.  Go to "Physics", "Lasers", "Regulated Current Source for High
+Power Laser Diode".
+<p>
+What's still needed is protection to guarantee that the circuit is well
+behaved when power cycling.  This circuit will probably evolve over time.
+<p>
+<A NAME="dpsdld"></A>
+<hr>
+<br>
+<li>Back to <A HREF="laserdps.htm#dpstoc">Diode Laser Power Supplies Sub-Table
+ of Contents</A>.
+<h3>Digitally Controlled Laser Diode Driver</h3>
+
+The article <A HREF=
+"http://www.elecdesign.com/Articles/ArticleID/6316/6316.html">
+Visible-Laser Driver Has Digitally Controlled Power And Modulation</A> was
+published in the "Ideas For Design" section of "Electronic Design", March 23,
+1998, by Roger Kenyon of <A HREF="http://www.maxim-ic.com/">Maxim</A>.  (You'll
+have to register to view the article but it's pretty painless.)
+<p>
+The circuit provides 1024 discrete output levels from a laser diode (with
+optical feedback) using a D/A converter with a 3 wire serial input.  In
+essence, it is a basic laser diode driver with a programmable reference.
+<p>
+Also see the section: <A HREF="laserdps.htm#dpsicd0">Laser Diode Drive
+Chips</A>.
+<p>
+<A NAME="dpspld"></A>
+<hr>
+<br>
+<li>Back to <A HREF="laserdps.htm#dpstoc">Diode Laser Power Supplies Sub-Table
+ of Contents</A>.
+<h3>Pulsed Laser Diode Drivers</h3>
+
+The following circuits would be suitable for driving the type of pulsed laser
+diodes found in the Chieftain tank rangefinder and currently available from
+<A HREF="http://www.osram-os.com/">OSRAM  Opto Semiconductors</A> and possibly
+other sources.  These are very different than the sort of laser diodes with
+which we are generally familiar.  A typical specification might be 8 W peak
+power at 850 or 900 nm (depending on model) with power requirements of 10 A
+at 0.1% maximum duty cycle.  Thus, the <i>average</i> output power is actually
+in the mW range even though these laser diodes may be listed in some surplus
+suppliers' catalogs (like those of Bull Electronics) as multi-watt devices
+with the duty cycle restriction listed in fine print, if at all!  Since the
+average power dissipation is also very low, they may come in plastic packages
+like LEDs with flat polished faces (and no possibility of adding a heatsink,
+which is one of the major limitations on average output power)!  Other than
+time-of-flight laser rangefinders and related applications, I'm not sure what
+use these would be to a hobbyist.  And, their output is totally invisible
+but very definitely <b>not</b> eye-safe.
+<p>
+Here are a couple of options for drivers:
+<p>
+<ul>
+<li>A simple approach that should work is to use an SCR as the switch
+ triggered by your favorite pulse generator, 555 timer based astable, or
+ other oscillator circuit followed by a trigger device like a neon bulb, diac,
+ or small SCR to guarantee fast turn-on of SCR1.  The circuit below is similar
+ to the one from Scientific American (see below) which describes the use of
+ pulsed laser diodes back in March 1973 when no other types had been invented
+ yet (or at least none were readily available).  With the component values
+ shown, the laser diode should have a peak current of about 10 A with a
+ 100 ns time constant.  Thus, it isn't a nice rectangular pulse but that's
+ for the advanced course. :)  R1 limits charging current, R2 limits discharge
+ current, and D1 provides reverse polarity protection for the laser diode.
+<p>
+<pre>
+
+                                    R1
+                    +200 VDC o-----/\/\------+-----+
+                                   50K       |     |
+                                             /    _|_ C1
+                                          R2 \    --- 5nF,250V
+                                          20 /    _|_
+                                             \     -
+                                           __|__ SCR1
+        (1 KHz max)                        _\_/_ TIC106D
+       +------------+     +---------+      / |   400V,4A
+       | Oscillator |-----| Trigger |-----'  |
+       +------------+     +---------+        +--------+
+                                           __|__     _|_
+                                 Pulsed LD _\_/_     /_\ D1
+                                             |        |  1N4007
+                                             +--------+
+                                            _|_
+                                             -
+
+</pre>
+<p>
+<li>Scientific American had an article on driving a pulsed laser diode in
+ "Infrared Diode Laser", March, 1973, pg. 114.  This is also a part of the
+ collection: "Light and its Uses".
+<p>
+<li>There is a pulse drive circuit in Skip Campisi's "Laser Clinic" article
+ in Poptronics, June 2001.  It's based on an NPN transistor operating in
+ avalanche mode to generate the required short high current pulses.
+<p>
+<li>There used to be a driver circuit on the <u>SVBx High Tech Labs</u> Web
+ site without attribution.  (However, this Web site is now defunct.  If
+ anyone has saved this circuit, please send me mail via the
+ <A HREF="emaillnk.htm">Sci.Electronics.Repair FAQ
+ Email Links Page</A>.)
+<p>
+ The RCA SG2002 laser diode is probably long obsolete but the ones found in
+ Chieftain tank rangefinder should be similar (though the specific
+ ratings may differ somewhat).  <A HREF="http://www.osram-os.com/">OSRAM
+ Opto Semiconductors</A> currently manufactures similar devices.
+<p>
+ I couldn't find a substitute for the VM64GA but I expect that a readily
+ available N-channel enhancement mode MOSFET like the IRF530 would work in
+ its place.  Replacements for the any of the other parts shouldn't be critical.
+ Make sure you have the complete datasheet for your laser diode so you
+ can modify component values intelligently! :)
+<p>
+ The discrete totem pole buffer circuit designed to provide very fast turn-on 
+ and turn-off may be overkill depending on your requirements and it may be
+ sufficient to just drive the power MOSFET directly from a pulse generator
+ or other signal source.
+<p>
+<li>Check out <A HREF="http://www.directedenergy.com/">Directed Energy,
+ Inc.</A> for schematics, white papers, and specs using ultra fast power
+ MOSFETS.  You can also buy complete drivers for pulsed laser diodes
+ with pulse widths down to at least 4 ns at 40 AMPs.
+</ul>
+<p>
+And just to repeat, in case you have forgotten: Most common low power laser
+diodes can't be pulsed in this manner to achieve high power status - they
+instantly turn into Dark Emitting Laser Diodes (DELDs) or expensive LEDs. :)
+<p>
+<A NAME="dpshp1"></A>
+<hr>
+<br>
+<li>Back to <A HREF="laserdps.htm#dpstoc">Diode Laser Power Supplies Sub-Table
+ of Contents</A>.
+<h2>Hewlett Packard LaserJet IIP Laser Diode Driver</h2>
+
+(From: Rob Kirke (r.kirke@sepsretravision.com.au).)
+<p>
+I just recently reverse engineered the IR laser driver
+out of an HP LaserJet IIP (Part number RG1-1594). I've drawn up
+the full schematic for the board and have got it working outside the
+printer with with a simple power supply using a 7808, 7805, and a couple of
+capacitors.  See <A HREF="rg1-1594.jpg">Hewlett Packard LaserJet IIP Laser
+Diode Driver (RG1-1594)</A>.
+<p>
+The board obviously supports very fast beam modulation, and has a complete
+collimating assembly.  The diode itself is a standard case, and easy to get
+to (4 screws, no glue or springs) so it could be swapped for a visible
+diode or replaced easily.  Two feedback adjust trimmers are located on the
+board (one fine adjust, one coarse)
+<p>
+Also, I've seen these boards advertised as replacement parts on the net for
+$20, so they would make quite a nice unit for someone who doesn't have the
+time to build a driver board up.
+<p>
+Here is the pinout:
+<p>
+<ol>
+<li>+5 VDC
+<li>GND
+<li>Photodiode output
+<li>Laser drive level input
+<li>Modulation (Active low)
+<li>GND
+<li>+8 VDC
+</ol>
+<p>
+The feedback loop seems to be 1:1 so pins 3 and 4 can be shorted together
+(Mine runs at about 43 mA under these conditions). Pin 5 was originally
+driven by a single gate from a 74LS08.
+<p>
+Here is the parts list if you want to build your own:
+<p>
+<PRE>
+R401    42.2
+R402    10K
+R403    10K
+R404    47
+R405    1.5K
+R406    1.5K
+R407    510
+R408    3.9K
+R409    10K
+R410    1.5K
+R411    10
+R412    510
+R413    8.66K
+R414    1.2K
+R415    47
+R416    27K
+R417    10
+R418    10
+R419    10
+
+VR401   500
+VR402   10K
+
+C401    33 uF   25 V     Electrolytic
+C402    33 uF   25 V     Electrolytic
+C403    0.1 uF  25 V     Ceramic
+C404    
+C405    680 pF           Ceramic
+C406    0.01 uF          Ceramic
+C407    270 pF           Ceramic
+
+Q401    2SA950           PNP
+Q402    2SC1815          NPN
+Q403    2SC4455          NPN
+Q404    2SC4455          NPN
+
+IC401   HA17324          Hitachi Quad Op-Amp
+</PRE>
+<p>
+Please contact me via the email address, above, if anyone finds out
+what wavelength the laser is, or how many milliwatts.  I'm presuming
+about 800 nm at about 5 mW.
+<p>
+(From: Sam.)
+<p>
+Someone suggested it was 50 mW at 930 nm but the power seems high for
+a printer of this era.  Though, perhaps the same driver has been used
+in newer higher performance ones.
+<p>
+<A NAME="dpshp2"></A>
+<hr>
+<br>
+<li>Back to <A HREF="laserdps.htm#dpstoc">Diode Laser Power Supplies Sub-Table
+ of Contents</A>.
+<h2>Hewlett Packard LaserJet IIIP Laser Diode Driver</h2>
+
+(From: Filip Ozimek.)
+<p>
+The pinout of the LaserJet IIIP driver is the same as for the LaserJet IIP,
+above.  I found that light emitted from the laser diode is
+786.5 nm (measured with spectrometer) and average power is about 4.5 to 5 mW
+(measured with a laser power meter).  The laser diode is enclosed in a TO-18
+(5.6 mm) package with ground connected to the case.
+<p>
+<A NAME="dpsmdr"></A>
+<hr>
+<br>
+<li>Back to <A HREF="laserdps.htm#dpstoc">Diode Laser Power Supplies Sub-Table
+ of Contents</A>.
+<h2>More Laser Diode Driver Schematics</h2>
+
+Here are a few more.  Some have errors!!!  See notes below.  And the circuits
+found in the manufacturer's application notes are often not tested. :)
+<p>
+<ul>
+<li>Skip Campisi has a nice article entitled "Laser Clinic" Poptronics, June
+ 2001.  There are schematics with complete parts lists with component values
+ selected for the Sharp LT022MC 780 nm LD, Mitsubishi ML720 1,300 nm LD, and
+ the Hitachi HL6712G 670 nm LD (all 5 mW max) and a pulsed driver for the high
+ power LASD59 (similar to the RCA 40861 and LDs from OSRAM and others).
+<p>
+ CAUTION: While the author does provide some basic laser safety information,
+ it would have been nice to have more on the the critical drive requirements
+ of laser diodes.  I'm afraid there may be some disappointment when more than
+ a few laser diodes turn into DELDs.  He notes the effects of ESD and reverse
+ polarity but doesn't appear to deal with the very important maximum current
+ ratings.  The only way to set up these laser diodes for maximum safe (for the
+ LD, that is) output is with a laser power meter since their characteristics
+ vary from device to device.
+<p>
+<li><A HREF="http://www.circuitcellar.com/">Circuit Cellar Magazine</A> has a
+ design using a PLD that will drive a typical low power laser diode using
+ optical feedback and includes modulation.  See:
+ <A HREF="http://www.circuitcellar.com/PSOC2002/winners/247.pdf">Project 247:
+ Laser Diode Controller</A>.  It can probably do a lot more than they have
+ implemented without requiring additional parts.  However, circuit to simply
+ provide the features shown would only cost about $2 for discrete parts
+ or a laser diode driver chip, no downloading of firmware needed!  I'm
+ also not convinced it handles power cycling or fault conditions reliably.
+<p>
+<li><A HREF="http://www.discovercircuits.com/L/laser.htm">Laser Circuits at
+ the Discovery Circuits Web Site</A> has links to a few, mostly laser diode
+ related, schematics.
+<p>
+<li><A HREF="http://satsleuth.com/laser.htm">SatSleuth
+ Laser Schematic Collection</A> has a variety of links - many back to
+ Sam's Laser FAQ - but a few might be useful.
+</ul>
+<p>
+<A NAME="dpscomm"></A>
+<hr>
+<br>
+<li>Back to <A HREF="laserdps.htm#dpstoc">Diode Laser Power Supplies Sub-Table of Contents</A>.
+<h2>Communications Systems Using Diode Lasers</h2>
+<h3><A NAME="dpsdepm">Driver Enhancements to Provide Modulation
+ Capability</A></h3>
+
+Raw laser diodes typically have an electrical->optical frequency response that
+extends to hundreds of MHz or beyond.  However, most simple drivers designed
+for continuous wave (CW) operation (including all of the discrete circuits
+described elsewhere in this chapter) have such heavy filtering and isolation
+from power supply transients and noise that control beyond a few Hz is usually
+not possible.
+<p>
+In principle, modifications to improve the frequency response by reducing the
+filtering, and to provide a modulation input, should be straightforward.
+However, in practice there are all sorts of ways to screw up resulting in
+either unacceptable behavior or a dead laser diode or both and it is usually
+much better and easier to drive the laser diode in such a way that it never
+goes into complete cutoff:
+<p>
+(From: Jonathan Bromley (jonathan@oxfordbromley.u-net.com).)
+<blockquote>
+"I'll second that.  Modulating a laser to complete cutoff is a very, very bad
+ game for all sorts of reasons:
+<ul>
+<li>The light versus current behavior is hideously non-linear below about 10%
+ of full output, so you really need dynamic feedback control - but the
+ photodiodes tend to be slow, so that's not on.
+<p>
+<li>Spectral quality, and beam shape, go to blazes at low power levels
+<p>
+<li>lasers don't turn on from fully-off anywhere near as fast as they can vary
+ intensity around the 50% level.
+<p>
+<li>It's pig-difficult to design the modulation circuit so it is guaranteed
+ never to overshoot the current that gives 100% full light output (which is
+ essential, because even very brief over-power transients dramatically shorten
+ the laser's life).
+</ul>
+But if the information from Honeywell and others is to be believed, the new
+vertical-cavity surface-emitting lasers (VCSELs) are much better behaved and
+can be modulated to extinction at quite high rates.  They're also extremely
+cute bits of device technology.
+</blockquote>
+
+A couple of simple such modulation circuits are shown below.
+<p>
+CAUTION:  Since both the following affect the optical feedback, attempt at your
+own risk!
+<p>
+The following applies to laser diode power supplies TO-LD1 and RE-LD1 through
+RE-LD3.  Similar modifications could be made to RE-LD4 but this is left as an
+exercise for the student! :-)
+<p>
+A bi-level modulation scheme could be easily implemented by connecting a
+general purpose NPN transistor across an additional resistor (at point XY).
+Then, full power will be achieved with the transistor turned on and reduced
+power with it turned off.  Select a value for R2 that will still maintain
+the current above the lasing threshold - 1K is just a start.
+<PRE>
+
+                           X
+                           o
+                           |
+                           +-----+
+                           |C    |     Typical transistors: 2N2222, 2N3904.
+                   R1    |/      /
+    TTL Input o---/\/\---|  Q1   \ R2
+                   1K    |\      / 1K
+                           |E    |
+            Y o------------+-----+
+
+</PRE>
+Here is another circuit which should achieve somewhat linear control of laser
+power since optical power output should be proportional to photodiode current.
+Resistor values shown are just a start - you will need to determine these for
+your specific laser diode and operating point.
+<PRE>
+
+                                    R
+                                    o
+                                    |
+                                    \ R1       X
+                                    / 10K      o
+                                    \          |
+                           C1 10uF  |        |/ C
+                       o------)|----+--------|    Q1
+                             -  +   |        |\ E
+                  Line level        |  2N3904  | 
+                    audio           /          / 
+                                 R2 \       R3 \ 
+                       o        10K /       1K / 
+                       |            |          | 
+         Y o-----------+------------+----------+
+
+</PRE>
+Also see the section:
+<A HREF="laserdps.htm#dpsicd">Integrated Circuits for Driving Laser Diodes</A>
+since most of these ICs are designed with speed modulation capability built in.
+
+<h3><A NAME="dpsdlbl">Diode Laser Based Line-of-Sight Communicators</A></h3>
+
+Here are a couple of sites with complete plans for systems using readily
+available parts:
+
+<ul>
+<li>Derek Weston (Email:
+ <A HREF=mailto:derekw@alphalink.com.au>derekw@alphalink.com.au</A>) has
+ constructed an IrDA tranceiver based loosely on the driver in RE-LD1 and a
+ <A HREF="http://www.crystal.com/">Crystal Semiconductor Corporation</A>CS8130
+ IR transceiver IC.  A complete description of this project may be found at
+ his: <A HREF="http://www.alphalink.com.au/~derekw/upntcvr.htm">UPN Laser
+ Transceiver Web Site</A> on the
+<A HREF="http://www.alphalink.com.au/~derekw/realtime.htm">Realtime
+ Control</a> Web site.
+<p>
+<li><A HREF="http://captain.haddock.8m.com/laser/laser1.html">Peter Philips'
+ Laser Link Communicator</A> was originally published in "Electronics
+ Australia", July 1997.  This allows for the transmission of high quality
+ audio up to distances of several hundred meters.  Either a visible or IR
+ laser diode may be used (the latter providing for greater security but
+ increases the difficulty of initial alignment).
+</ul>
+<p>
+<hr>
+<br>
+<li>Back to <A HREF="laserfaq.htm#faqtoc">Sam's Laser FAQ Table of Contents</A>.
+<li>Back to <A HREF="laserdps.htm#dpstoc">Diode Laser Power Supplies Sub-Table of Contents</A>.
+<li>Forward to <A HREF="laserhen.htm#hentoc">Helium-Neon Lasers</A>.
+<p>
+<hr>
+<b><center>Sam's Laser FAQ, <A HREF="copyright.htm">Copyright &copy<A> 1994-2009,
+ Samuel M. Goldwasser, All Rights Reserved.<br>
+ I may be contacted via the
+ <A HREF="emaillnk.htm">Sci.Electronics.Repair FAQ
+ Email Links Page</A>.</center></b>
+<hr>
+<p>
+</BODY>
+</HTML>

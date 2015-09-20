@@ -1,0 +1,2503 @@
+<HTML>
+<HEAD>
+<TITLE>Sam's Laser FAQ - Ar/Kr Ion Laser Power Supply Design</TITLE>
+</HEAD>
+<BODY>
+<A NAME="apdtoc"></A>
+<p>
+<hr>
+<b><center>Sam's Laser FAQ, <A HREF="copyright.htm">Copyright &copy<A> 1994-2009,
+ Samuel M. Goldwasser, All Rights Reserved.<br>
+ I may be contacted via the
+ <A HREF="emaillnk.htm">Sci.Electronics.Repair FAQ
+ Email Links Page</A>.</center></b>
+<hr>
+<p>
+<li>Back to <A HREF="laserfaq.htm#faqtoc">Sam's Laser FAQ Table of Contents</A>.
+<h1>Ar/Kr Ion Laser Power Supply Design</h1>
+<h2>Sub-Table of Contents</h2>
+<ul>
+<li><A HREF="laserapd.htm#apdpsc">Power Supply Circuits Intro, AC Line Front-Ends</A>
+ <ul>
+ <li><A HREF="laserapd.htm#apdpsc0">Ar/Kr Ion Laser Power Supply Circuits</A>
+ <li><A HREF="laserapd.htm#apdnota">Notation used in Ar/Kr Ion Laser Power Supply Diagrams and Schematics</A>
+ <li><A HREF="laserapd.htm#apdpsc1">Single-Phase 115 VAC Front-End</A>
+ <li><A HREF="laserapd.htm#apdpsc2">Single-Phase 230 VAC Front-End</A>
+ <li><A HREF="laserapd.htm#apdpsc3">Three-Phase 240/208 VAC Front-End</A>
+ </ul>
+<p>
+<li><A HREF="laserapd.htm#apdreg">Regulators - Linear, Switchmode, Control</A>
+ <ul>
+ <li><A HREF="laserapd.htm#apdreg0">Ar/Kr Ion Laser Power Supply Regulators</A>
+ <li><A HREF="laserapd.htm#apdreg1">Series Pass Linear Regulators</A>
+ <li><A HREF="laserapd.htm#apdreg2">Typical Linear Regulator Circuit</A>
+ <li><A HREF="laserapd.htm#apdreg2a">Linear Regulator Using Only Discrete Components</A>
+ <li><A HREF="laserapd.htm#apdreg2b">Linear Regulator Using IC</A>
+ <li><A HREF="laserapd.htm#apdint">Interfacing to the Line-Connected Circuitry</A>
+ <li><A HREF="laserapd.htm#apdreg3">Series Pass Switchmode Regulators</A>
+ <li><A HREF="laserapd.htm#apdreg4">Typical Switchmode Regulator Circuit</A>
+ <li><A HREF="laserapd.htm#apdreg5">Switchmode Regulator Controller</A>
+ <li><A HREF="laserapd.htm#apdreg6">Hall-Effect Current Sensor (CS)</A>
+ <li><A HREF="laserapd.htm#apdreg7">Protecting Pass-Banks from Catastrophic Failures</A>
+ </ul>
+<p>
+<li><A HREF="laserapd.htm#apditc">Inverter Type Circuit, Example From Microwave Oven</A>
+ <ul>
+ <li><A HREF="laserapd.htm#apditc0">Basic Inverter Type Power Supply</A>
+ <li><A HREF="laserapd.htm#apditc1">High Frequency Inverter Type Microwave Oven HV Power Supplies</A>
+ </ul>
+<p>
+<li><A HREF="laserapd.htm#apdmlc">Multiple Loop Controller, Light Feedback, Overcurrent Trip</A>
+ <ul>
+ <li><A HREF="laserapd.htm#apdmlc0">Multiple Loop Controller Organization</A>
+ <li><A HREF="laserapd.htm#apdmlc1">Light Control Circuitry</A>
+ <li><A HREF="laserapd.htm#apdmlc2">Overcurrent Shutdown Circuit</A>
+ </ul>
+<p>
+<li><A HREF="laserapd.htm#apdipb">Igniters, Pulse, Resonant, Bypass, High Current High Voltage Diodes</A>
+ <ul>
+ <li><A HREF="laserapd.htm#apdipb0">Ar/Kr Ion Tube Pulse Type Igniter</A>
+ <li><A HREF="laserapd.htm#apdipbr">Ar/Kr Ion Tube Resonant Igniter</A>
+ <li><A HREF="laserapd.htm#apduali">An Unusual Arc Lamp or Ion Laser Igniter</A>
+ <li><A HREF="laserapd.htm#apdipb1">Alternative Starting Circuits for Small Ar/Kr Ion Tubes</A>
+ </ul>
+<p>
+<li><A HREF="laserapd.htm#apdflv">Filament and Low Voltage Supplies, Line Frequency Clock</A>
+ <ul>
+ <li><A HREF="laserapd.htm#apdflv0">Ar/Kr Ion Tube Filament Power Supply</A>
+ <li><A HREF="laserapd.htm#apdflv1">Low Voltage Power Supplies</A>
+ </ul>
+<p>
+<li><A HREF="laserapd.htm#apdpsr">Requirements, Safety, Protection, Switches, Indicators</A>
+ <ul>
+ <li><A HREF="laserapd.htm#apdpsr0">Basic Requirements for a Hobbyist Power Supply</A>
+ <li><A HREF="laserapd.htm#apdpsr1">Required Safety/Protection Features</A>
+ <li><A HREF="laserapd.htm#apdpsr2">Typical Interlock Chain Wiring</A>
+ <li><A HREF="laserapd.htm#apdpsr3">Control Logic and Power Switching</A>
+ <li><A HREF="laserapd.htm#apdpsr4">User Switches and Indicators</A>
+ <li><A HREF="laserapd.htm#apdpsr5">Interlock and Thermostat Switches and Indicators</A>
+ </ul>
+<p>
+<li><A HREF="laserapd.htm#apdcsc">Component Selection and Construction Considerations</A>
+ <ul>
+ <li><A HREF="laserapd.htm#apdcsc0">Ar/Kr Ion Laser Power Supply Component Selection</A>
+ <li><A HREF="laserapd.htm#apdcsc1">Ar/Kr Ion Laser Power Supply Construction Considerations</A>
+ </ul>
+<p>
+<li><A HREF="laserapd.htm#apdspl">Special Parts 1 - Low Ohm Resistors, HV High Current Diodes</A>
+ <ul>
+ <li><A HREF="laserapd.htm#apdspl0">Constructing Low Ohm High Power Resistors</A>
+ <li><A HREF="laserapd.htm#apdspl1">Construction of HV High Current Blocking Diodes</A>
+ </ul>
+<p>
+<li><A HREF="laserapd.htm#apdspr">Special Parts 2 - Relay Drivers, Indicators</A>
+ <ul>
+ <li><A HREF="laserapd.htm#apdspr0">Relay Drivers</A>
+ <li><A HREF="laserapd.htm#apdspr1">Driving Relays with AC Coils</A>
+ <li><A HREF="laserapd.htm#apdspr2">Driving Relays with DC Coils</A>
+ <li><A HREF="laserapd.htm#apdspr3">115 VAC Indicators</A>
+ <li><A HREF="laserapd.htm#apdspr4">Interlock and Protector Indicator</A>
+ <li><A HREF="laserapd.htm#apdspr5">Visual Capacitor Bleeder Circuit</A>
+ </ul>
+</ul>
+<A NAME="apdpsc"></A>
+<hr>
+<br>
+<li>Back to <A HREF="laserapd.htm#apdtoc">Ar/Kr Ion Laser Power Supply Design Sub-Table of Contents</A>.
+<h2>Power Supply Circuits Intro, AC Line Front-Ends</h2>
+<h3><A NAME="apdpsc0">Ar/Kr Ion Laser Power Supply Circuits</A></h3>
+
+The following sections describe each of the major subsystems of typical
+power supplies in more detail but without specific reference to any particular
+commercial design (that is left for the Chapter: <A HREF="laserasc.htm#asctoc">Complete Ar/Kr Ion Laser
+Power Supply Schematics</A>.
+<p>
+Nearly all of these designs can be used as the basic blocks for a power supply
+you can build.  Few special parts are required and for the most part, nothing
+is terribly critical.
+
+<h3><A NAME="apdnota">Notation used in Ar/Kr Ion Laser Power Supply Diagrams
+ and Schematics</h3></A>
+
+Throughout this chapter and the next, a quasi-standard method (mine!) is used
+to identify and label some of the connections between and among parts of the
+power supply, Ar/Kr ion tube, and the external world.  Here is a summary
+of the meanings of the notations used in the sample circuit diagrams and
+complete schematics:
+<ul>
+<li>G = AC line safety (Earth) Ground.
+<li>H = AC line Hot.
+<li>N = AC line Neutral.
+<p>
+<li>DC+ = the positive output of the power supply generally prior to any
+ regulator or ballast resistor.
+<li>HV- = the negative return (direct, or via a sense resistor or linear
+ regulator).
+<p>
+<li>Boost = a DC voltage several times that of DC+ required by the igniter
+ (starting) circuits of some laser heads.
+<p>
+<li>Tube+ = the actual connection to the anode terminal of the Ar/Kr ion tube.
+<li>Tube- = the actual connection to the cathode/filament terminals of the
+ Ar/Kr ion tube.
+</ul>
+
+Note that in this document and the associated laser power supply schematics,
+voltages between 110 and 120 VAC Hot to Neutral (220 to 240 VAC between
+Hots on opposite sides of the line) may be shown for power in the USA and
+other parts of North America.  Likewise, 220 to 240 VAC may be shown for power
+in Europe and elsewhere.  Where some other voltage is used (such as 100 VAC in
+parts of Japan), it will be ideentified explicitly.
+
+<h3><A NAME="apdpsc1">Single-Phase 115 VAC Front-End</A></h3>
+
+Note: This and all other circuit diagrams in this chapter have their parts
+either numbered independently to simplify discussion or, where their function
+is obvious, not labeled at all.  Those in the chapter:
+<A HREF="laserasc.htm#asctoc">Complete Ar/Kr Ion Laser Power Supply
+Schematics</A> have consistent designations for components in the entire
+system (both commercial and "Sam's" designs).
+<p>
+The design described below can serve as the basic front-end to a linear or
+switchmode regulator, inverter, or to a brute force power supply using only an
+additional ballast resistor (for testing only, right?).  It is a simple AC
+line-connected AC to DC power supply.
+<p>
+Note: Essential safety and protection components not shown.  See the section:
+<A HREF="laserapd.htm#apdpsr1">Requred Safety/Protection Features</A>.
+<PRE>
+
+                     PH-H To Filament Transformer
+                         o
+                 Preheat |
+                 S2      |    D5         R5
+               +---o/ o--+----|>|-------/\/\---+
+               |                               |
+               |     OP-H To PS Fan/Igniter    |
+       Main    |         o                     |
+       Power   | Operate |                     |
+       S1      | S3      |    D1          R1   |        R2 (or L)
+   H o---o/ o--+---o/ o--+-+--|>|-----+--/\/\--+-+-----+--/\/\--+-----+--o DC+
+           :              ~|  D2      |+         |     |        |     |
+           :               +--|&lt;|--+  |        +_|_    /      +_|_    /
+           :                  D3   |  |      C1 --- R3 \    C2 --- R4 \
+           :               +--|>|--|--+        - |     /      - |     /
+           :              ~|  D4   |-            |     |        |     |
+   N o---o/ o--------------+--|&lt;|--+-------------+-----+--------+-----+--o DC-
+
+</PRE>
+Note: S1, S2, and S3 can be switches or relays.  Logic controlled relays are
+highly desirable to enforce the sequencing requirements on the Ar/Kr ion tube
+power.  For initial testing, manually operated switches may be used.
+<ul>
+<li>S1 is MAIN POWER and switches both sides of the (115 VAC single-phase)
+  line.  A magnetic circuit breaker can be used here but it must have both
+  poles coupled so both sides trip from an overload on either side (or use a
+  single pole breaker only in the Hot line).  S1 also powers the PS and head
+  fans.
+<p>
+<li>S2 is the Preheat switch.  It is activated first to bring the Ar/Kr ion
+  tube filament up to the proper temperature.  It also slowly charges the main
+  filter capacitors, C1 and C2, through D5 and R5 (these part types are
+  non-critical - 1N4007 and 330 ohms, 10 W typical, respectively).  This
+  eliminates serious inrush current when power is applied to the main bridge.
+<p>
+<li>S3 is the Operate switch.  It is activated after the required filament
+  preheat delay of 30 to 60 seconds.  Opening S1 should also open S2 to
+  prevent the discharge from continuing with a cooling/cold filament.
+<p>
+  S3 also enables the power supply fan and the igniter circuitry.  (The fan
+  in the laser head should be powered whenever the laser is running and until
+  the tube has cooled down.)
+<p>
+<li>The bridge rectifier, D1 to D4, can be a module or be constructed from
+  individual diodes.  It must be rated for at least 20 A at 400 V and should
+  be mounted on a heat sink.
+<p>
+<li>R1 is an optional inrush limiter, typically a .1 ohm, 25 W power resistor.
+  Where the power is sequenced using PREHEAT and then OPERATE, R1 is not
+  needed.
+<p>
+<li>The main filter capacitors, C1 and C2, should be high quality types suitable
+  for high current high ripple applications.  The AC (ripple) current through
+  these is order of the supply current - 5 to 10 A in this case.  An Effective
+  Series Resistance (ESR) of less than .02 ohms is required to minimize power
+  dissipation.  Multiple lower uF capacitors in parallel may be needed to
+  satisfy this requirement.
+<p>
+  Note: Additional small ceramic capacitors should be placed in parallel with
+  C1 and C2 to bypass high frequency noise (not shown).
+<p>
+<li>The dropping/filter resistor, R2 (optional, see below), needs to handle
+  several HUNDRED WATTS at full power.  These are available.  However, an
+  alternative is to use part of the salvaged NiChrome element from a common
+  space heater either on its original mounting or wound on a ceramic, mica, or
+  other suitable high temperature, non-flammable structure AND provided with
+  adequate forced air cooling (such as the fan from the blow-drier that was
+  its former home).  Since you may need to optimize its value, an adjustable
+  resistor is desirable (in the case of the heater element, cut or tap to
+  fit!).  See the section: <A HREF="laserapd.htm#apdspl0">Constructing Low Ohm
+  High Power Resistors</A>.
+<p>
+  An alternative approach is to use a high current inductor as a smoothing
+  choke.  The advantage of this approach is that little power is dissipated
+  in the inductor.  The problem is in obtaining a suitable part.  An
+  inductance of 2.7 mH is required per ohm of impedance at 60 Hz.  A 6 mH
+  inductor requires roughly 50 layers of #14 wire on an EI type laminated
+  steel core (I won't even mention toroids!).  The core from a salvaged
+  microwave oven transformer should be suitable.  High current inductors are
+  also available commercially.  For example, the Stancor C2688 is rated at
+  10 mH, 12.5 A (and around $45, WOW!).
+<p>
+  Using a LARGE Variac (it has to handle the entire tube current and then
+  some!) to power the system is an alternative since it can be set to provide a
+  filtered DC voltage that is equivalent to the use of the resistor.  However,
+  without R2, the ripple will be slightly higher so there won't be quite the
+  full benefit of lowered DC to the regulator.
+<p>
+<li>R3 and R4 are safety bleeder resistors to discharge C1 and C2 in a relatively
+  short time once power is removed.  Using values of 10 K ohm, 5 W for R3 and
+  R4 will result in a time constant of about 25 seconds for C1 and C2 of
+  2,500 uF.  In a minute, the voltage will be low enough to be safe - though
+  a few minutes should be allowed before making any changes to the circuit
+  since there will be some zap left in the caps!
+<p>
+  A single bleeder of 1/2 the resistance and twice the power rating could be
+  used.  However, mounting R3 and R4 on the filter capacitors themselves
+  assures that they will still be safely discharged even if another part
+  fails or a connection opens up!
+<p>
+  A capacitor charge indicator LED can be easily included for additional
+  protection.  See the section: <A HREF="laserapd.htm#apdspr5">Visual
+  Capacitor Bleeder Circuit</A>.  An NC relay activated low resistance (say
+  1K, 20 W) bleeder could also be added to discharge the capacitors more
+  quickly whenever power is removed.
+</ul>
+WARNING: For these line connected designs with a bridge rectifier, NO part of
+the circuit can be tied to earth ground (as is possible with a HeNe supply)
+for safety.  Therefore, troubleshooting must be done with extreme care
+especially if no isolation transformer is used.  Connecting the ground lead of
+a properly grounded scope to any part of the circuit will result in smoke or
+worse!  This applies not only to obvious component terminals but probably to
+the HOT (thermally and electrically) regulator heat sink as well!  See the
+section: <A HREF="laseraps.htm#apssaf">SAFETY When Dealing with Ar/Kr Ion
+Laser Power Supplies</A>.
+<p>
+To calculate the required values for R2, and C1 and C2, we can make the
+following assumptions:
+<ol>
+<li>Maximum required Ar/Kr ion tube current is 10 A at 110 VDC.  This should
+   handle any typical air-cooled tube you are likely to encounter.  However,
+   figure 12 A maximum to allow some safety margin for the power supply.
+<p>
+<li>Output of rectifier is 146 V peak minimum assuming a (low) 105 VAC input.
+   This comes from (105 x 1.414) - 2 V (for the bridge rectifier diode drops).
+   Thus, the power supply should continue to function at low line voltage (or
+   with your less than stellar house wiring)!  Adjust appropriately if your
+   line voltage is fairly constant and known.  High line voltage conditions
+   will result in more losses and will be harder on the regulator.
+<p>
+<li>Ripple will be about 1 V per A per 10,000 uF of total capacitance.  This
+   rule of thumb is based on a direct line-connected 60 Hz full wave/bridge
+   rectified resulting in ripple at 120 Hz.  This is worst case and the 'pi'
+   configuration of the filter will reduce it still further - but we want to
+   be conservative.  (Of course, if you have access to three-phase, this
+   capacitance can be reduced almost to zero - but that is another story!)
+<p>
+   Note: Where an isolation transformer of marginal capacity is used for
+   testing, the peak capacitor recharge current will be limited and ripple
+   will increase.  Therefore, don't be surprised if the discharge winks out
+   under these conditions.  For this reason, an isolation transformer rated
+   for at least 2X of the laser power supply's maximum power consumption
+   should be used.  Of course, such a transformer is HUGE!
+<p>
+<li>Depending on the type of regulator, optimization considerations differ.
+   However, one common requirement is that the regulator still have enough
+   headroom even at maximum current (worst ripple factor).
+<p>
+<ul>
+   <li>For a linear regulator, we would like to minimize the drop across its
+     series pass-back to reduce the power dissipation in the transistors.  The
+     total power dissipation will be the same but let the cheap, robust power
+     resistor (R2) do its fair share!
+<p>
+     Based on this, one approach is to try to equalize the worst case ripple
+     and the drop across R2.  This will result in reasonable values for C1 and
+     C2 while still pushing much of the power dissipation to R2.  With 35 V
+     between peak and tube voltage (145 - 110) and subtracting out 5 V for
+     headroom, this leaves 30 V to play with.  Dividing this in half results
+     in about 15 V of ripple, or from (3), above, about 4,000 uF each for
+     C1 and C2.  R2 is then 1.25 ohm, 200 W (!!!).  Trading off the values of
+     R2 and C1/C2 may be desirable depending on the specific needs.
+<p>
+   <li>Using an inductor instead of or in addition to R2 would require the use
+     of a part capable of passing the entire tube current - greater than 12 A.
+     However, it would run much cooler and reduce ripple more effectively.
+     Such an inductor can be constructed on the core of a salvaged microwave
+     oven transformer using several hundred turns of #14 wire.  An inductance
+     of 6 mH provides an impedance of about 2.5 ohms at 60 Hz.  However, it
+     is acting only on the AC component of the voltage on C1 so its effect
+     will be to reduce ripple to a greater extent but not reduce the DC level
+     as much as an equivalent pure resistance.  This many turns of #14 wire
+     will also have a enough resistance that it cannot be totally ignored,
+     both in terms of its effect on the DC level and heat dissipation!
+<p>
+     However, using just an inductor without some other means of regulation
+     may result in plasma instability or oscillation which may not be obvious
+     without looking at the current waveform on an oscilloscope.  This will
+     damage the tube after a few hours of operation.
+<p>
+   <li>For a switchmode regulator, increasing R2 will reduce the voltage/power
+     requirements of the chopper transistors at full load.  However, this will
+     negate some of the benefits of using a switchmode regulator since more
+     power will be dissipated in R2.  The maximum on-time/duty cycle of the
+     PWM drive will need to be greater where the headroom is lower.  And, the
+     dynamic response of the regulator will be affected and additional factors
+     may need to be considered to maintain control loop stability.
+<p>
+     With R2 = 0, somewhat smaller capacitors can be used as long as adequate
+     current is available for the lowest points on the valleys of the input
+     waveform.  Assuming 10 V of headroom is enough, this allows 25 V of
+     ripple resulting in C1 and C2 of 2,400 uF each.
+</ul>
+</ol>
+WARNING: These HUGE filter capacitors can be lethal!  8,000 uF at 150 V is
+about 90 W-s (90 J).  Take extreme care when in operation and until you have
+confirmed that the caps are fully discharged!
+
+<h3><A NAME="apdpsc2">Single-Phase 230 VAC Front-End</A></h3>
+
+Where the Ar/Kr ion tube requires about 200 VDC, it makes sense to use s
+either single-phase 230 VAC front-end similar to the type described above
+or a three-phase front-end depending on power levels and availability.
+<p>
+Although the component values will change, the single-phase design is similar
+to that described above for 115 VAC and the same design approach applies.
+<p>
+However, a simple buck autotransformer may be desirable to reduce the input
+voltage somewhat to ease the dropping requirements of any series resistor
+'heaters' and/or the current regulator pass-bank.  A microwave oven high
+voltage transformer can be modified for this purpose by removing the HV winding
+and substituting a high current secondary putting out around 50 to 60 VRMS
+(assuming a 230 VAC input and a 200 VDC tube drop) which is placed in series
+anti-phase with the power supply input.
+<p>
+Note: 230 VAC is available from most residential wiring by using opposite
+sides of the incoming power feeds.  These come from a centertapped (utility
+pole) transformer.  Electric dryers, hot water heaters, stoves, central
+airconditioning systems, and other high power appliances will already be wired
+in this manner.  Of course, safety warnings increase exponentially at these
+higher voltages.  There just isn't any room for error!
+
+<h3><A NAME="apdpsc3">Three-Phase 240/208 VAC Front-End</A></h3>
+
+For your really high power laser needs, here is a typical rectifier/filter for
+a 3 wire 240/208 VAC three-phase system.
+<PRE>
+
+                  D1             R1            L1 ::::
+      H1  o---+---|>|---+-------/\/\----+-----+---^^^^----+-----+---o DC+
+              |   D2    |+              |     |           |     |
+              +---|&lt;|---|--+            |     |           |     |
+                  D3    |  |            |     /           |     /
+      H2  o---+---|>|---+  |       C1 +_|_ R2 \      C2 +_|_ R3 \
+              |   D4    |  |           ---    /          ---    /
+              +---|&lt;|---|--+          - |     \         - |     \
+                  D5    |  |            |     |           |     |
+      H3  o---+---|>|---+  |            |     |           |     |
+              |   D6       |-           |     |           |     |
+              +---|&lt;|------+------------+-----+-----------+-----+---o DC-
+
+</PRE>
+Going to three-phase makes sense for high power ion lasers requiring around
+200 V across the tube if such power is available since for a given current and
+ripple requirement, filter capacitor size (uF rating) is greatly reduced and
+loading on the building's power distribution system is more balanced.  This
+approach makes sense where the Ar/Kr ion tube requires around 200 VDC at 20 A
+or more - typical of lasers putting out many W of beam power.
+<p>
+The use of three-phase power greatly reduces the size of the necessary filter
+components since the rectified pulses from the diodes are at a 60 degree phase
+angle with respect to each other - 6 per cycle overlapping by 120 degrees.
+So, raw ripple is down by around 85 percent even without any filter components
+and the required capacitance on an uF/A basis is greatly reduced.  In fact,
+no capacitors at all may be acceptable assuming the power supply includes a
+decent regulator.  However, due to the generally larger current requirement,
+an inductor makes more sense than a house heater size resistor in the 'pi'
+network even though it needs to be a boat-anchor weight chunk of iron wound
+with #10 AWG wire!
+<p>
+Note that regulator implementation may not change that much compared to those
+used for single-phase 115 VAC systems with 100 VDC tubes.  This is because the
+voltage drop across a series pass linear or switchmode regulator can be set up
+to be similar (at most requiring a modest size buck/boost transformer) in both
+cases.  Of course, current levels may be higher and protection devices need to
+be sized accordingly for the higher total voltages and power levels involved.
+<p>
+If you really need these sorts of power levels, I am confident you will be
+able to come up with the obvious extensions to these schemes as well as all of
+the remaining nitty-gritty details. :-)  However, here are some comments and
+cautions on large-frame three-phase power:
+<p>
+(From: Dean Glassburn (Dean@niteliteproducts.com).)
+<p>
+If you do not have sufficient current and balanced voltage, specifically on a
+large frame laser from (<A HREF="http://www.cohr.com/">Coherent, Inc.</A>) with
+indium seals on the window stubs, the tube will see an undue amount of ripple
+which in turn will heat up the anode to the point of melting the indium seals.
+This is a common fault on large lasers of this type when one phase drops out.
+Then you have a 500 pound boat anchor, no matter what you paid.
+<p>
+Most, if not all of the power supplies on three-phase units do not use the
+Neutral as a load bearing wire.  In fact, most Neutral wires are the same as
+the grounding conductor (Safety/Earth Ground) at the service panel except the
+latter is usually of a smaller gauge.  The low voltages required for logic and
+control in these supplies are usually derived off a common winding of the
+three phases or off a separate transformer isolating the low voltage AC from
+the mains.
+<p>
+<A NAME="apdreg"></A>
+<hr>
+<br>
+<li>Back to <A HREF="laserapd.htm#apdtoc">Ar/Kr Ion Laser Power Supply Design Sub-Table of Contents</A>.
+<h2>Regulators - Linear, Switchmode, Control</h2>
+<h3><A NAME="apdreg0">Ar/Kr Ion Laser Power Supply Regulators</A></h3>
+
+For all but the most basic of 'testing' power supplies, some type of regulator
+will be required to control current to the Ar/Kr ion tube.  While there are
+significant differences in implementation, many features are common to all
+types of regulators:
+<ul>
+<li>Current rather than voltage regulation must be implemented.  This is because
+  while the incremental resistance of the discharge is not quite negative
+  (which would be even more trouble), it is very low - a few ohms - so that
+  regulating the voltage would result in very poor control of current.  A 5
+  percent change in voltage can easily result in a 50 percent change in
+  discharge current.  Going from 5 to 7.5 A with a 5 V change would represent
+  an equivalent on-resistance of 2 ohms (but across a 100 V drop).  Under some
+  conditions, current can still 'run away' if a fixed voltage input is
+  provided with no current regulator.
+<p>
+<li>Several types of criteria may be used to regulate beam power:
+<p>
+<ul>
+  <li>Current feedback may be used to maintain a stable tube current which is
+    fixed in Standby mode or adjustable when operating in Current Control
+    mode.  
+<p>
+    Except for testing (where just a low value high power ballast resistor
+    and large Variac will suffice as long as current is monitored closely,
+    this current control is essential and sets the operating point providing
+    immunity from line voltage fluctuations and slight changes in tube
+    operating voltage (e.g., due to tube warmup).
+<p>
+    Small series resistors or hall-effect devices are typically used for the
+    current sensors.
+<p>
+  <li>Light feedback derived from a photosensor monitoring the output beam is
+    used to maintain constant optical output (beam) power by controlling tube
+    current.
+<p>
+    The DC coupled 'light control mode' is desirable to stabilize beam power
+    and maximize Ar/Kr ion tube life and adjusts the current around the
+    operating point.
+<p>
+    An AC coupled 'noise signal' is also usually provided to reduce random high
+    frequency variations in beam power.  These may be the result of plasma
+    oscillations or other instabilities possible with some laser head and/or
+    ion tubes.
+<p>
+  <li>An external modulation signal can also be used to vary beam power.
+</ul>
+<p>
+  In all cases, the implementation usually uses some common op-amps and will
+  have loop compensation in the form of integral/proportional/differential
+  terms in the feedback network equations.  Stability must be guaranteed for
+  under all conditions.
+<p>
+<li>The regulator can be in the low-side or high-side of the power feed to the
+  tube.  However, for a line connected system using a bridge rectifier,
+  NEITHER can be at earth ground so there are no particular safety benefits
+  to favor one over the other.  Thus, all feedback and control circuitry must
+  be floating or coupled to the power circuitry via some sort of isolation
+  interface (opto-isolator or transformer).  However, low-side regulation may
+  be preferred since it doesn't need to deal with the starting pulse (though
+  this is generally minimal).
+</ul>
+<h3><A NAME="apdreg1">Series Pass Linear Regulators</A></h3>
+
+(Note: For a detailed schematic and circuit description of a commercial unit
+using this type of design, see the section:
+<A HREF="laserasc.htm#asclx1">Lexel-88 Power Supply and Laser Head</A>.  The
+design described in the section: <A HREF="laserasc.htm#ascsg3">Sam's Linear
+Ar/Kr Laser Power Supply (SG-IL1)</A> is derived from the Lexel-88 and
+simplified for hobbyist use with small air-cooled Ar/Kr ion tubes requiring
+at most 12 A sustained discharge current.)
+<p>
+A linear regulator controls the current going to the Ar/Kr ion tube in many
+ways analogous to that of a common IC like an LM317.  However, there are some
+notable differences:
+
+<ul>
+<li>Due to the large currents involved, multiple large high power transistors
+  must be used.  A typical pass-bank will require between 5 and 10 transistors
+  for a 12 A maximum tube.  The transistors must be mounted in close thermal
+  contact to a large forced-air (or tap water) cooled heat sink since up to
+  several HUNDRED WATTS will be dissipated by the transistors at full power.
+  Since the collectors (cases) of the transistors are generally all tied
+  together, NO mica insulators are needed but a thin layer of silicone heat
+  sink compound SHOULD be used to minimize thermal resistance.
+<p>
+  To reduce the thermal stress on the transistor pass-bank, its input voltage
+  can be reduced in a number of ways.  There include the use of a high power
+  resistor (e.g, a heating element), a buck transformer (which could be a fat
+  winding added to the filament transformer), or a switchmode pre-regulator
+  (especially when driving an 80 to 110 V ion tube from a 230 VAC line).
+  However, in all cases, ripple on the main filter capacitor(s) and line
+  voltage fluctuations must be taken into account to assure enough headroom
+  under worst case conditions.  With care, this would permit fewer and/or
+  lower cost transistors to be used.  The latter two approaches would also
+  reduce total power dissipation.
+<p>
+  WARNING: The entire heat sink will be line connected!  DO NOT even think
+  about touching it (or anything else) until the unit is unplugged AND the
+  main filter capacitors have discharged!
+<p>
+  Note: For testing and troubleshooting, mounting the transistors on the heat
+  sink with mica insulators (and silicone heat sink compound) may be desirable
+  to permit faulty or suspect devices to be easily isolated if necessary.
+  However, the mica will increase the thermal resistance a bit - the power
+  transistors will run hotter and/or more of them will be needed.  On the plus
+  side, the heat sink can be electrically isolated as well - just don't touch
+  those TO-3 cans!
+<p>
+  A plenum must be provided to guide the gale-forced-air from the power supply
+  cooling fan over the heat sink fins.  This can be made of an insulator like
+  Plexiglas to also serve as protection from accidental contact with the
+  electrically and thermally hot heat sink and/or transistors.
+<p>
+<li>Some commercial ion laser power supplies may specify very high performance
+  transistors.  For example, the Lexel-88 uses 12 of the 2N6259 (apparently no
+  longer available) which is rated: 150 V, 15 A, 250 W!  Motorola recommends
+  the 2N5631 as a replacement and their Master Selection Guide lists a couple
+  that are even a bit better: MJE15024 and MJE21194, but I have no idea of
+  price or availability.
+<p>
+  NEC uses a pair of MJ11032s (ECG2349) - one as a preregulator chopper to
+  drop the voltage from the rectified AC line and the second as a linear
+  regulator for up to 9 A of tube current.  The MJ11032 is rated at 120 V, 50
+  A (!!), 300 W (!!), and it's a Darlington so the minimum Hfe is 1,000 (!!).
+  This could be the ideal pass-transistor since so few may be required - if
+  you can afford it without taking out a second mortgage!  I heard a price
+  quote of $17 in singles. :)
+<p>
+  However, with care, it may be possible to use relatively inexpensive power
+  transistors like the MJE15015 (120 V, 15 A, 180 W) or possibly even the
+  ubiquitous 2N3055 (60 V, 15 A, 110 W) for the pass-bank.  There are also
+  many types with specifications that are just slightly lower than the 2N6259
+  (mostly with respect to maximum power dissipation) so these may be worth
+  checking out (starting with a semiconductor cross-reference followed by a
+  search of your junk drawer).
+<p>
+  Whatever route you choose, it is very important that the transistors in the
+  pass-bank be well matched in terms of Hfe.  In addition, minimum Hfe at the
+  highest possible collector current be much more than adequate (say double)
+  to guarantee sufficient base drive.  Otherwise, depending on the design of
+  the driver circuits, the collector currents could end up being seriously
+  unequal despite any emitter current balancing resistors.  This may result in
+  significantly unequal stress (current and thus power dissipation) leading to
+  spectacular failures!
+<p>
+<li>Protection for the pass-bank transistors must be provided in the event of
+  a short circuit fault or other transient event (possibly including the
+  initial spike when the tube starts).  This may take the form of a circuit
+  to monitor the voltage drop across the transistors, preventing this from
+  exceeding safe limits.  A prolonged overcurrent should shut down the
+  system.  These are in addition to the required AC line fuses or circuit
+  breakers.  A voltmeter may be permanently wired across the pass-bank as well
+  to provide continuous indication of transistor 'stress'.
+</ul>
+
+<h3><A NAME="apdreg2">Typical Linear Regulator Circuit</A></h3>
+
+The general circuit organization is shown below.  In this example, the
+regulator is in the cathode return between the centertap of the filament
+transformer and the negative of the main rectifier/filter (DC-).  Depending
+on maximum required tube current, between 5 and 12 (or more) power transistors
+may be needed.
+<p>
+A sophisticated transfer function for the feedback network, F(s), may be used
+comprising separate loops for Current Control, Light Control (DC and AC - not
+shown), Standby mode, and an external Modulation Input.  See the section:
+<A HREF="laserapd.htm#apdmlc0">Multiple Loop Controller Organization</A> for further details.
+<p>
+This regulator connects between the negative output of the main AC line
+rectifier/filter (DC-, which is also the analog common) and the centertap of
+the filament transformer (Tube-).
+<PRE>
+
+                  Control Amplifier
+                       +------+             &lt;---------- Pass-Bank --------->
+                    +--| F(s) |--+     Tube- o---+------------+-------------+
+                    |  +------+  |               |            |             |
+                    |   |\       |   |\      Qx1 |        Qx2 |  ...... Qxn |
+   Vcl o---/\/\---+-|---|+ \     |   |  \      |/ C         |/ C          |/ C
+  (Current Level) | |   |    >---+---|Buf >----|------------|-------------|   
+  +---/\/\---+----|-+---|- /         |  /      |\ E         |\ E          |\ E
+  |    | Rcl |    |     |/  Op-Amp   |/          |            |             | 
+  +----+     /    /                        +-----+      +-----+       +-----+ 
+  | Current  \    \                        |     |      |     |       |     | 
+  | Limit    /    /                        /     /      /     /       /     / 
+  |          \    \                    Rs1 \ Re1 \  Rs2 \ Re2 \   Rsn \ Rsn \ 
+  |          |    |                        /     /      /     / ..... /     / 
+  |  DC- o---+----+-------------+          \     \      \     \       \     \ 
+  |               V             |          |     |      |     |       |     | 
+  |                             +----------|-----+------|-----+-------|-----+
+  | Vcs = V(Current Sense)                 |            |             |
+  +----------------------------------------+------------+-------------+ 
+
+</PRE>
+
+<h3><A NAME="apdreg2a">Linear Regulator Using Only Discrete Components</A></h3>
+
+A minor variation on the basic approach using only discrete components is shown
+in <A HREF="argreg1.gif">Simple Linear Regulator</A>.  This consists of a
+two transistor differential amplifier, buffer, and pass-bank.  This still
+requires a floating +/-15 VDC power supply (not shown).  Depending on the
+size of the laser, anywhere from 5 to 16 pass transistors can be used.  For
+a small air-cooled type requiring about 100 to 110 V from a 115 VAC line,
+2N3055s can be substituted for the high voltage expensive 2N6259s.  While no
+light feedback is shown, that capability can easily be added.  Note that his
+circuit has NOT been tested and a compensation capacitor may need to be added
+at a strategic location to prevent it from oscillating (by reducing the
+bandwidth of the pass-bank drive).
+<p>
+This regulator also has an input for a light control feedback signal but
+additional circuitry would be needed to interface it to the typical laser head
+light preamp output.  (If a sensed light intensity signal is used directly,
+it will only provide proportional control which is better than nothing but not
+the integral/differential loop response required for best performance and to
+suppress plasma oscillations.  For that, the head preamp can be modified or an
+op-amp circuit similar to the one shown on the <A HREF="sgilcsch.gif">SG-IL1 -
+Control and Interlocks</A> subsystem can be added in the signal path.)
+<p>
+It should be possible to simplify the regulator portion of the design even
+further for use as an ion tube testing power supply by just implementing the
+pass-bank and a massiveemitter follower.  While this won't have the same 
+tiffness as a differential amplifier based control circuit, it should be quite
+adequate for many purposes.  This approach is shown in the schematic for the
+<A HREF="sgiypsch.gif">SG-IY1 - Power Unit</A>.  This requires no floating
+power supplies as the needed power is derived from DC+ and the voltage across
+the pass-bank itself.
+
+<h3><A NAME="apdreg2b">Linear Regulator Using IC</A></h3> 
+
+It is also possible to use a common 3 terminal regulator IC like an LM317 or
+LT1084 in constant current mode.  The advantage of this approach aside from
+cost (these things are dirt cheap) is that the internal high gain circuitry
+should result in extremely good regulation without many external components.
+The <A HREF="argreg2.gif">IC Based Linear Regulator</A> is adjustable from
+about 2 to 10 A as drawn but may easily be modified for higher or lower current
+capacity.  A normal (35 V maximum) IC regulator can be used since the voltage
+divider formed by R5 and R6 assures that the maximum voltage across the device
+is never more than about 20 V (assuming a 50 V total between Tube- and DC-).
+There resistors also provide the 'keep-alive' current (roughly 1.5 A) which
+doesn't go through the pass-bank and is available immediately after the tube
+starts even before the IC regulator kicks in.  (This sets the minimum tube
+current as well.)
+<p>
+If you have a bucket load of high voltage regulator ICs (e.g., LM317H), it
+should be possible (if not entirely practical) to use several (like 10 or 20!)
+in parallel on a BIG heat sink with current balancing resistors but no
+additional pass-bank transistors. Details on this as well as adding light
+feedback capability are left as an exercise for the student! :)  (Hint:
+replace R4 with some form of the light feedback signal.)
+
+<h3><A NAME="apdint">Interfacing to the Line-Connected Circuitry</A></h3>
+
+The line-connected (non-isolated) nature of most ion laser power supplies
+introduces an additional complication where control of a linear regulator must
+be accomplished via a PC, microcontroller, or other analog or logic circuitry.
+This isn't an issue if the signal can be arranged to originate from a power
+supply that is referenced to the regulator and there is no chance of human
+contact with any portion of it including input signals.  For example,
+light feedback where the entire solar cell or photodiode and light sense
+preamp can be floated may be powered in this manner.  However, for something
+like intensity control or DC coupled modulation, the simple solution is
+probably not a safe option.  In fact, with a bridge rectifier in the power
+supply front-end, there is no way - safe or not - to interface the regulator
+to a grounded controller without isolation.
+<p>
+One thought would be to use an opto-coupler.  However, common opto-couplers
+are not linear devices so using one will result in a non-linear transfer
+function from the D/A or whatever and the output current.  This probably
+doesn't matter - a lookup table can take care of it if there is minimal drift,
+but that isn't something that one can take for granted.  One way to deal with
+drift is to use two identical opto-couplers, one in a feedback loop to
+linearize the overall transfer response.
+<p>
+Another way to provide isolation is to use a Pulse Width Modulated (PWM,
+digital) signal via an opto-coupler or transformer.  A simple low pass filter
+and buffer amp will then produce an output which is proportional to pulse
+width.  Generating a PWM signal is a simple matter of comparing a linear ramp
+with the input voltage - any of the PWM SMPS controller chips will do this
+easily.  For example, (though it would appear to be unnecessary), the Lexel-88
+ion laser power supply couples the light feedback signal to its linear
+pass-bank in this manner.  See the chapter:
+<A HREF="laserasc.htm#asctoc">Complete Ar/Kr Ion Laser Power Supply
+Schematics</A> for the circuit details.
+
+<h3><A NAME="apdreg3">Series Pass Switchmode Regulators</A></h3>
+
+(Note: For a detailed schematic and circuit description of a commercial unit
+using this type of design, see the section: <A HREF="laserasc.htm#ascom1">Omnichrome 150R Power Supply and
+532 Laser Head</A>.)
+<p>
+Rather than using the pass-bank essentially as a controlled variable resistor,
+it is switched on and off at at high frequency - up to several hundred kHz.
+<p>
+A multiple L-C smoothing filter following this chopper removes ripple from the
+resulting voltage to the tube.  This is called a 'buck converter' because it
+can only reduce the available voltage.
+<ul>
+<li>Since the switching device (theoretically) is always totally on or totally
+  off, it dissipates minimal power.  In practice, the transitions take finite
+  time so this is not quite perfect.  However, power loss in the transistors
+  IS much lower and overall efficiency is improved significantly compared to a
+  linear regulator.  Higher switching frequencies permit smaller smoothing
+  components to be used.  However, switching losses increase so there is (as
+  always) a tradeoff involved.
+<p>
+<li>Due to the large currents involved, multiple large high power transistors
+  may be needed.  However, since power is lost mostly during switching, fewer
+  devices can be used for a given power level.  For a 'small' argon laser,
+  1 or 2 transistors will suffice and MOSFETs work well in this application.
+<p>
+  You might ask: "Can large SCRs be used instead of transistors for the
+  chopper since they may be cheaper?"  Good question.  However, the answer is:
+  Not easily.  The problem with SCRs is that you can't turn them off once they
+  are triggered whereas transistors go on and off at will.  Without being able
+  to turn them off, you can't control the duty cycle and thus the power output.
+  There are some power supplies that do use SCRs in the front end but they
+  operate on the rectified AC - somewhat like a phase controlled light dimmer.
+  The switch-on point on the AC cycle can be controlled in that case.
+<p>
+  Forced-air cooling is still probably required but at least the jet-engine
+  power fans are unnecessary (for the power supply - the laser head still
+  requires a hurricane to survive)!
+<p>
+<li>Protection for the pass-bank transistors must be provided in the event of
+  a short circuit or excess current fault.  A prolonged overcurrent should
+  shut down the system.  These are in addition to the required AC line fuses
+  or circuit breakers.
+</ul>
+<h3><A NAME="apdreg4">Typical Switchmode Regulator Circuit</A></h3>
+
+The following is a highly simplified schematic of a typical high current
+buck converter type regulator.  Most of the MOSFET and overcurrent protection
+components are NOT shown.
+<p>
+The block labeled 'CS' is the current sensor used to provide regulator
+feedback and is described in the section:
+<A HREF="laserapd.htm#apdreg65">Hall-effect current sensor (CS)</A>.
+<p>
+The chopper uses one or more power MOSFETs.  Since high current devices of
+this type are readily available, a single part may be adequate for a 10 to 12
+A regulator.  However, they may easily be connected in parallel if needed.
+These devices have internal reverse protection (Dx) and input clamp diodes but
+additional protection is critical to prevent them from turning into short
+circuits at inconvenient times (including switching spikes, power on/off
+transients in addition to overload/fault conditions).
+<p>
+R1 limits peak current through the Qx bank into C2.  Filtering is provided by
+C2 through C4 and the associated L1 and L2.  Since a high switching frequency
+is used (e.g., 200 kHz), all of these components are quite small and compact
+(at least relative to those required for 60 Hz filtering!).  However, the
+inductors need to pass the entire 10 A or more of tube current and the
+capacitors need to be able to handle the high frequency high ripple current.
+D1 is a 1000 V (typical) high current diode to isolate the igniter boost
+voltage from this circuitry.
+<PRE>
+
+                                           Y1 +----+ Y2  ::::       D1
+  DC+ o---+--------+---------------------+----| CS |-----^^^^---+---|>|---o To
+          |        |    R1               |    +=---+      L2    |        Anode
+          |        +---/\/\---+          |                      |
+          |                   |          |                      |
+         _|_ C1           C2 _|_        _|_ C3                 _|_ C4
+         ---                 ---        ---                    ---
+          |                   |          |                      |
+          |    +---|>|---+    |          |                      |   
+          |    |         |    |   ::::   |                      |
+  DC- o---+-+--+-+--+  +-+--+-+---^^^^---+----------------------+
+            |    |  |  |    |      L1                           |
+            | S _|_ v _|_ D |                                   |
+            |   ---------   |             PH-H o---------+ T1   |
+            |   Qx1 |       |                             )|| +-|--o F1
+            |       +-------|-----+              Filament )||(  |
+            |               |     |                Supply )|| +-+ Tube-
+            |  +---|>|---+  |     |                       )||(
+            |  |         |  |     |                       )|| +----o F2
+            +--+-+--+  +-+--+     |          N o---------+
+            |    |  |  |          |
+            | S _|_ v _|_ D       |
+            |   ---------         |
+            |   Qxn |             |           o       o
+            |       +-------------+----||------+ T2  +--------o MD1
+            |  D1   |                  C5       )::(
+            +--|>|--+                           )::(       PWM Drive
+            |                                   )::(
+            +----------------------------------+     +--------o MD2
+                                         Isolation Transformer
+
+</PRE>
+Coupling of the pulse width drive signal to the Qx bank is done via the
+transformer, T2 (most MOSFET gate protection and balancing components NOT
+shown).
+
+<h3><A NAME="apdreg5">Switchmode Regulator Controller</A></h3>
+
+Most modern designs use an SMPS PWM IC like the SG3524 or UC3842.  The major
+internal functional blocks of these IC are the Sawtooth Oscillator (ramp
+generator) and Voltage Comparator.  Timing components (Rt, Ct) set the
+(constant) oscillator frequency.  The Voltage Comparator, subtracts the error
+signal (Ve) from the instantaneous value of the sawtooth waveform.  Its output
+is high only if Verr is greater than Vosc.  The pulse width is therefore a
+linear function of error voltage over a fairly wide range.
+<p>
+The Buffer converts the output signals to drive the isolation transformer, T2.
+Since the circuit is AC coupled, a stuck-at failure will result in the chopper
+being disabled rather than full-on.
+<PRE>
+
+                  Rt       Ct              Voltage  
+              +--/\/\--+---||---+        Comparator    Buffer
+              |        |        |   Vosc            
+            +---------------------+ |/|/|/ |\          |\       | |
+            | Sawtooth Oscillator |--------|- \  _|_|_ |  \    _|_|_
+            +---------------------+   Verr |    >------| A  >--------o MD1
+                                       +---|+ /        |  /
+                             +------+  |   |/          |/     Chopper Drive
+                         +---| F(s) |--+
+                         |   +------+  |                      +------o MD2
+                         |    |\       |                     _|_
+    Vcs (+) o-----/\/\---+----|- \     |                      -
+                         |    |    >---+ 
+    Vcl (-) o---+-/\/\---+ +--|+ /            Typical PWM Drive (Expanded) 
+                |   | Rcl _|_ |/                   _             _ 
+                +---+      -       Verr Low   ____| |___________| |______
+                Current                            ______        ______
+                 Limit             Verr Med.  ____|      |______|      |_
+                                                   ___________   ________
+                                   Verr High  ____|           |_|        
+
+</PRE>
+Note that while the simplified diagram, above, shows a single op-amp (and
+single control loop for current feedback only), actual implementation may have
+several.  Since current is the actual controlled variable, this will be the
+'inner' or 'primary' loop which is active as long as the tube is on in Standby
+mode.  The 'outer' or 'secondary' loops are responsible for user adjustable
+Current Control, Light Control, and external modulation inputs.  The Vcs
+(Current Sense) signal is proportional to the Ar/Kr ion tube current.  Vcl
+(Current Level) is a voltage (negative in this case) from the front panel tube
+current pot.  See the section: <A HREF="laserapd.htm#apdmlc0">Multiple Loop
+Controller Organization</A> for further details.
+<p>
+Typical oscillator frequency is 200 kHz.  To analyze this circuit precisely
+would require digital signal processing (DSP) techniques.  However, where the
+loop response is limited (by the Control Amplifier feedback) to much less than
+the switching frequency, analog techniques can be used.
+
+<h3><A NAME="apdreg6">Hall-Effect Current Sensor (CS)</A></h3>
+
+This approach is one way of providing an isolated means of monitoring Ar/Kr
+ion tube current and is an alternative to the series sense resistor method
+(which isn't isolated).  The circuit consists of a sensor assembly which
+includes a Hall-effect device located in the gap in a magnetic core with sense
+and feedback coils.
+<p>
+The core has a 1 turn winding for the full tube current and a 1000 turn
+winding (typical) for the feedback.  The Hall Device (HD) is placed in a gap
+in the core so that it intercepts the magnetic flux.  The idea is to null out
+the sum of the magnetic flux provided by the two windings to maintain tube
+current at the selected level.
+<PRE>
+
+                                       +---/\/\-------------+
+                                       |                    |
+            Gapped Core                |              +-----|--+---/\/\---o +V
+          _____  _  _____   Op-Amp     |          HD1 |     |  |
+         |   __||H||__   |        /|   |        + +------+  |  /
+         |  |    ^    |  |o     / +|---+---/\/\---| Hall |  +->\ Offset
+         |  |    |   ---------&lt;    |              | Chip |     /
+        o|  |   HD1  -----      \ -|-------/\/\---| |H|  |     \
+  Y1 o--------       -----        \|            - +------+     |
+  Y2 o---|  | 1T  NT -----                            |        |
+         |  |        -----      Rcs                   +--------+---/\/\---o -V
+         |  |________|  |---+---/\/\---+
+         |______________|   |         _|_
+                            |          -
+                            +---o Vcs to control amplifier
+
+</PRE>
+(+V and -V are the power supply voltages for the analog circuitry - see the
+section: <A HREF="laserapd.htm#apdflv1">Low Voltage Power Supplies</A>.)
+<p>
+The voltage, Vcs (Current Sense), is proportional to the current required
+to zero the magnetic flux and is thus proportional to the tube current which
+equals (N * V)/R7 (where N is the number of turns in the feedback winding).
+For example, with N = 1000 and Rcs = 100 ohms, the sensitivity is .1 V/A.
+
+<h3><A NAME="apdreg7">Protecting Pass-Banks from Catastrophic Failures</A></h3>
+
+Without serious effort, some or all of the power transistors or MOSFETs in
+both linear and switchmode ion laser power supplies will not survive an
+output short circuit or even extended operation at excessive current.  While,
+it is possible in principle to design these in such a way that the pass-bank
+components themselves are robust enough to ride out such faults, in practice
+they would have to be extremely expensive - and it may not be something that
+is desirable in any case as then the laser head itself might blow up rather
+than power supply!
+<p>
+There are a variety of approaches one can take to handle these situations
+without a lot of smoke and flames.  However, they all consist basically of
+three parts:
+<ol>
+<li>Control conditions to the pass-bank or chopper.  Assure that ratings are
+ not exceeded during the early stages of a fault condition (before any action
+ can be taken).
+<p>
+ The smoothing inductor in the chopper will limit the rate of rise of
+ current/voltage in a switchmode design.    However, the transistors in a
+ linear pass-bank are often not able to hold off the full rectified line
+ voltage even for an instant.  Thus, some means of limiting voltage across the
+ pass-bank long enough for shutdown to take place is essential.  Of course,
+ this may mean that output current DOES climb above continuous safe limits for
+ a short time.
+<p>
+<li>Sensing of a fault condition.  Generally, either the voltage across the
+ pass-bank or the output current is monitored.  Response time must be fast
+ enough that damage does not occur but be immune to the momentary transient of
+ tube starting.
+<p>
+<li>Power supply shutdown.  Once a fault is detected, the power supply must
+ shut down or enter an idle/fault state with the least trauma to itself and
+ the laser head.  A series fast acting fuse or simply disabling the main relay
+ may not be fast enough.  We all know that expensive devices blow to protect
+ 25 cent fuses!   A series power transistor or MOSFET switch is one
+ possibility.
+<p>
+ Disabling drive to a switchmode chopper may be all that is needed if it is
+ fast enough.  However, for linear pass-bank, input voltage will have to be
+ removed.
+</ol>
+
+Pass-bank voltage or current (across a sense resistor) can be monitored with a
+zener diode feeding an SCR circuit.  When the SCR triggers, it can kill drive
+to a series power transistor or MOSFET.  Since this is hopefully a one-shot
+(or at least only occasional) event, dissipation in the switching device isn't
+an issue - only its ability to interrupt 10+ A.  The essentially non-inductive
+nature of the overall system makes this a somewhat less demanding task than it
+might appear at first.  There are a number of reasonably priced transistors
+and MOSFETS rated at 20 A and 300 V that would be suitable.
+<p>
+For example, the Omni-150R, a switcher, includes an overcurrent shutdown
+circuit which will shut off drive to its chopper MOSFETs,  However, this may
+not be soon enough to prevent their failure and that of several other
+nearby components.  The linear pass-bank in SG-IL1 is protected by limiting
+its maximum voltage to about 60 V.  A separate overcurrent shutdown circuit
+should shut off main power - hopefully in time!  But during a fault, lots
+of unexpected things can happen and as they say: "This best laid plans of mice
+and men....". :)  In other words, the best advice even with fancy protection
+is to make every effort to avoid major faults!  See the chapter:
+<A HREF="laserasc.htm#asctoc">Complete Ar/Kr Ion Laser Power Supply
+Schematics</A> for circuit details.
+<p>
+<A NAME="apditc"></A>
+<hr>
+<br>
+<li>Back to <A HREF="laserapd.htm#apdtoc">Ar/Kr Ion Laser Power Supply Design Sub-Table of Contents</A>.
+<h2>Inverter Type Circuit, Example From Microwave Oven</h2>
+<h3><A NAME="apditc0">Basic Inverter Type Power Supply</A></h3>
+
+This circuit is similar to the one for driving a microwave oven magnetron
+outlined in the section: <A HREF="laserapd.htm#apditc1">High Frequency Inverter Type Microwave Oven HV Power
+Supplies</A>.
+<PRE>
+
+                                      Inverter
+        Line Rectifier/Filter        Transformer  Tube Rectifier/Filter
+            D1        DC+             o        D5      ::::       D6  Anode
+  H o----+--|>|-----+-----+------+-----+ T1 +--|>|--+--^^^^--+----|>|----o
+        ~|  D2      |     |      |      )::(        |   L1   |
+         +--|&lt;|--+  |   +_|_    _|_ 25T )::( 22T   _|_+     _|_+
+ 115 VAC    D3   |  | C1 --- C2 --- #12 )::( #12   --- C3   --- C4
+         +--|>|--|--+   - |      |      )::(        | -      | -
+        ~|  D4   |    DC- |      |      )::( o      |        |   R1   Tube-
+  N o----+--|&lt;|--+--------+      +-----+    +-------+--------+--/\/\--+--o
+                          |      |                                    |
+        Drive Transformer |      |                                Vcs o
+                o  T2  o  |    |/ C  
+        X1 o-----+    +---|----|   Q1  Both primary and secondary are wound
+                  )::(    |    |\ E     with Litz wire to minimize losses.
+      PWM Drive   )::(    |      |
+                  )::(    |      |
+        X2 o-----+    +---+------+     Drawn assuming a flyback converter.
+
+</PRE>
+The AC line front-end is similar to that described in the section: <A HREF="laserapd.htm#apdpsc1">Single-Phase 115 VAC Line
+Front-End</A>.  The filter capacitor, C1, should be selected to provide
+acceptable ripple at full load but this is less stringent than for a linear
+power supply or one without a regulator at all!
+<p>
+The chopper transistor, Q1, is a high power high voltage NPN power transistor.
+Snubber/protection components are not shown.  The drive signal must be passed
+via an isolated interface since the emitter of the transistor is the line
+connected DC-.
+<p>
+The rectifier on the secondary side, D5, must be a fast recovery type suitable
+for the switching frequency used.  The filter components can be relatively
+small.
+<p>
+D6 must pass the full tube current and is used to allow the Boost voltage to
+build up on the igniter circuit.
+<p>
+The PWM controller can use the same basic organization as that described in
+the section: <A HREF="laserapd.htm#apdreg5">Switchmode Regulator
+Controller</A>.  However, details will differ including the transfer
+function(s) of the feedback network(s).  These details are, as usual, left as
+an exciting exercise for the student. :-)
+
+<h3><A NAME="apditc1">High Frequency Inverter Type Microwave Oven HV Power Supplies</A></h3>
+
+While the vast majority of microwave ovens - perhaps every single one you will
+ever see - use minor variations on the tried and trusted half wave doubler
+circuit, a few models have been designed using solid state high frequency
+inverters - in many ways similar to the deflection/HV flyback power supply of
+a TV or monitor.
+<p>
+A typical circuit (from a Sharp microwave oven) uses full wave rectified
+but mostly unfiltered pulsating DC as the power to a large ferrite inverter
+transformer which sort of looks like a flyback on steroids.  This means that
+the microwave output is pulsing at both 60 Hz and the frequency of the
+inverter!
+<PRE>
+
+        Bridge Rectifier         Inverter Transformer            Magnetron
+                                       o
+  H o----+---|>|------+--------+-------+    +--------------------------+
+        ~|            |+      _|_ Drive )::( Filament 1T #18           |
+         +---|&lt;|---+  |       ---   25T ):: +--------------+------+    |
+ 115 VAC           |  |        |    #12 )::   HV Cap       |    +-|----|-+
+         +---|>|---|--+        +-------+ :: +-------||-----+    | |_  _| |
+         |         |           |         ::(     .018uF    |    |   \/   |
+  N o----+---|&lt;|---+   Drive |/ C        ::(     2,400V  __|__  |   ___  |
+        ~          |-    o---|   Chopper ::( HV          _\_/_  +----|:--+
+ (Interlocks and   |         |\ E        ::( 250T          | HV      |'-->
+  fuses/protectors |           |         ::( #26   Sense   | diode   | uWaves
+  not shown)       +-----------+            +--+---/\/\----+---------+
+                                             o  |    1.2   _|_
+ (Except for filament, # turns estimated)       o H1        -  Chassis Ground
+
+</PRE>
+The chopper transistor is marked: Mitsubishi, QM50HJ-H, 01AA2.  It is a LARGE
+NPN type on a LARGE heatsink. :-)
+<p>
+Note the similarity between the normal half wave doubler circuit and this
+output configuration!  Base drive to the chopper transistor is provided
+by some relatively complex control circuitry using two additional sets of
+windings on the inverter transformer (not shown) for feedback and other
+functions in addition to current monitoring via the 'Sense' resistor in the
+transformer return.
+<p>
+It is not known whether power levels in this over were set by the normal
+long cycle pulse width modulation or by control over a much shorter time
+scale.  However, since the filament of the magnetron is powered from the same
+transformer as the HV - just as in a 'normal' microwave oven, this may not be
+very effective.
+<p>
+Compared to the simplicity of the common half wave doubler, it isn't at all
+surprising why these never caught on (what is diagramed above includes perhaps
+1/10th the actual number of components in a typical inverter module).  Except
+for obvious problems like a tired fuse, component level troubleshooting and
+repair would be too time consuming.  Furthermore, as with a switchmode power
+supply (which is what these really are) there could be multiple faults which
+would result in immediate failure or long term reliability problems if all
+bad parts were not located.  Schematics are not likely available either.  And,
+a replacement module would likely cost as much as a new oven!
+<p>
+This is simply a situation where a high tech solution was doomed from the
+start.  The high frequency inverter approach would not seem to provide any
+important benefits in terms of functionality or efficiency yet created many
+more possibly opportunities for failure.  The one major advantage - reduced
+weight - is irrelevant in a microwave oven.  Perhaps, this was yet another
+situation where the Marketing department needed something new and improved!
+<p>
+<A NAME="apdmlc"></A>
+<hr>
+<br>
+<li>Back to <A HREF="laserapd.htm#apdtoc">Ar/Kr Ion Laser Power Supply Design Sub-Table of Contents</A>.
+<h2>Multiple Loop Controller, Light Feedback, Overcurrent Trip</h2>
+<h3><A NAME="apdmlc0">Multiple Loop Controller Organization</A></h3>
+
+The general circuit shown below can be used (with just a bit of refinement!)
+for any of the regulators (linear, switchmode, inverter).  A number of signals
+affect the output of the controller which is sent to the regulator itself:
+<ul>
+<li>Vcl -  V(Current Level) - A level proportional to the desired tube current.
+  This is from a front panel control.
+<p>
+<li>Vcs -  V(Current Sense) - A signal proportional to the anode current.
+  This is typically derived from a series resistor or Hall-effect sensor.
+<p>
+<li>Vll -  V(Light Level) - A level proportional to the desired optical output
+  power.  This is from a front panel control.
+<p>
+<li>Vls -  V(Light Sense) - A signal based on optical sensing of beam
+  intensity using a photodiode or solar (photovoltaic) cell.  DC and AC
+  components provide power level control and optical noise reduction,
+  respectively.
+<p>
+<li>Vmi -  V(Modulation Input) - An external signal that can be used to vary the
+  tube current about its set value when operating in Current Control mode.
+<p>
+<li>Vsb -  V(StandBy) - A signal which goes high during standby to cut tube
+  current.  This may also do other things like reduces the loop gain (not
+  shown).
+</ul>
+In the diagram, below, all inputs are positive going signals or levels.
+<PRE>
+
+                         +---/\/\---+                         +---o/ o---o -V
+            S3           |  |\      |                         | S4 Standby
+    Vmi o--o/ o---/\/\---+--|- \    |                         /
+         Modulation         | -1 >--+--------/\/\---+--/\/\-->\ Rsb
+           Enable        +--|+ /                    |         / Standby
+                         |  |/ IC1A                 |         \ Adjust
+                         V                          |         |
+        Vcs o--+-----------------------------/\/\---+         V
+               |          S1 CC Disable             |             Rdc
+               |        +-----o/ o---+              |     +----/\/\----+
+               |        |  +------+  |              |     |  +------+  |
+               |        +--| C(s) |--+              +---+-+--| P(s) |--+
+               |        |  +------+  |              |   |    +------+  |
+  Vls          |        |   |\ IC1B  |              /   |     |\  IC1C |
+   o    Vcl o--|--/\/\--+---|- \     |  D1    Verr  \   +-----|- \     |
+   |           |            |    >---+--|&lt;|--+--+   /   |     |    >---+
+   /           +------------|+ /             |  |   \   |  +--|+ /     |
+   \                        |/               |  /   |   |  |  |/       o
+   /                      S2 LC Disable      |  \&lt;--+   /  V        Verr (to
+   \    Vll o----/\/\---+------o/ o--+--|&lt;|--+  / Rcl   \          regulator)
+   |                    |  +------+  |  D2      \  Cur. /            
+   +---/\/\---+         +--| L(s) |--+          |  Lim. \ Rng
+   |  |\ IC1D |         |  +------+  |          V       | Noise Gain
+   +--|- \    |         |   |\ IC2A  |      +---------/\/\----+    
+      | -1 >--+--/\/\---+---|- \     |  C1  |     D3          | 
+   +--|+ /                  |    >---+--||--+--+--|>|--+      V
+   |  |/                 +--|+ /               |  D4   |
+   V                     |  |/                 +--|&lt;|--+
+                         V                             | 
+                                                       V
+
+</PRE>
+The Primary (inner) loop feedback network (IC1C) consists of Rdc to provides a
+DC set-point (proportional) for the tube current based on the Vcs (current
+Sense) feedback signal and P(s) which is in the form of one or more series R-C
+networks in parallel with Rdc to control loop frequency response.  This
+results in a proportional-integral loop response.
+<p>
+The Secondary (outer) loop feedback networks, C(s) (Current, IC1B) and L(s)
+(Light, IC2A), typically consist of one or more series R-C networks in
+parallel to produce an integral response characteristic.  Stability must be
+assured for any combination of Current and Light front panel control settings.
+(With some designs, it is possible to destabilize the loop by turning up the
+Noise Gain pot (Rng) too high.)  In the circuit, above, D3 and D4 are included
+to clip the AC component of the light signal to prevent this from happening.
+<p>
+Possible modes are as follows:
+<ul>
+<li>Current Control only - S2 closed (disables Light Control).  Tube current is
+  determined by current sensing (Vcs) alone based on the front panel Current
+  Level pot (Vcl).  Maximum current is determined by the Current Limit pot
+  (Rcl).  (This is in effect for all modes except Standby which has its own
+  lower setting.)
+<p>
+<li>Light Control - S1 closed (disables Current Control).  Tube current is set
+  based on light sensing (Vls) to provide the desired optical output based on
+  the front panel Light Level pot (Vll).
+<p>
+  The Noise Gain pot (Rng) adjusts the extent to which this AC signal is used
+  in reducing optical noise while D3 and D4 clip the noise signal to prevent
+  loop instability.
+</ul>
+Note: S1 and S2 are actually optional as the same effect can be achieved by
+turning the associated front panel controls to their lowest (counterclockwise)
+settings effectively disabling Current Control or Light Control respectively.
+is too high and vice-versa.  Normally, one or the other of these pots would
+be left in the fully counterclockwise position to disable that control loop.
+Whichever loop has a higher error voltage (at point Verr) will be in control.
+<ul>
+<li>Modulation - Vmi may be enabled by closing S3 when operating in Current
+  Control or Light Control mode.
+<p>
+<li>Standby - The purpose of this mode is to operate the tube at a keep-alive
+  current which avoids any startup delay but provides maximum tube life.  S1,
+  S2, and S4 all closed (and S3 open) enable Standby mode.  The Standby Adjust
+  pot sets the current in this closed loop implementation.
+</ul>
+<h3><A NAME="apdmlc1">Light Control Circuitry</A></h3>
+
+Here is a typical laser head mounted light control front-end.  The optical
+pickup point must be in a location which related to output power but which
+doesn't interfere with the main beam.
+<PRE>
+
+                               +--+ Sensitivity Adjust
+                               |  | Rsa
+               +-------------/\/\-+------------+
+               |                               |
+               |     C1                   +V   |
+               +-----||-----+              o   |
+               |            |              |   |
+               |   |\       |              |   |
+        +------+---|- \     |         Q1 |/ C  |
+        |          |    >---+----/\/\----| NPN |
+       _|_     +---|+ /                  |\ E  |
+   --> /_\     |   |/  Op-Amp              |   |
+    SC1 |      |                           +---+-+---o Vls (Light Sense)
+        |      |                           |     |     to control amplifier
+        +------+                           |     /     light control input
+   Solar Cell  |                           /     \
+               |                           \     /
+               |                           /     \
+               |                           \     |
+               |                           |     +---o +
+               |                           |           Laser Power Test Point
+               +---------------------------+---------o -
+               V
+
+</PRE>
+The Solar Cell, SC1, generates a current which is proportional to incident
+light from a portion of the laser beam.  The Op-Amp, IC1, converts this to
+a voltage which is buffered by Q1.  C1 limits the frequency response to
+assure loop stability.  The Op-Amp's output is applied to the control
+amplifier to maintain beam power stable based on its actual intensity.
+<p>
+A PIN photodiode could be used instead, appropriately biased to inject current
+into the amplifier input.
+<p>
+A high frequency signal (AC coupled) may also be derived from the light sensor
+to be used for noise reduction (see the section: <A HREF="laserapd.htm#apdmlc0">Multiple Loop Controller
+Organization</A>).
+
+<h3><A NAME="apdmlc2">Overcurrent Shutdown Circuit</A></h3>
+
+Both the tube and power supply must be protected against excessive current.
+In some cases, this will be on a time delay.  The overcurrent trip circuit
+below will respond in a time determined by the values of the components in the
+input filter network and severity of the overload.
+<PRE>
+
+                       Trip Set
+                          Rts
+                    +----/\/\----/\/\---o +Vcc
+                    |      |                       |\  Comparator
+                    V      +-----------------------|- \
+                                                   |    >---+------o OVERCUR
+   Vcs o----/\/\---+------+---|>|---+------+---+---|+ /     |
+                   |      |   D1    |      |   |   |/       |
+                   /      |         |      /   |            |
+                   \     _|_       _|_     \   +----/\/\----+
+                   /     ---       ---     /   |
+                   \      |         |      \    |- Reset
+                   |      |         |      |   |
+   Com o-----------+------+----+----+------+---+
+                               |
+                               V
+
+</PRE>
+<A NAME="apdipb"></A>
+<hr>
+<br>
+<li>Back to <A HREF="laserapd.htm#apdtoc">Ar/Kr Ion Laser Power Supply Design Sub-Table of Contents</A>.
+<h2>Igniters, Pulse, Resonant, Bypass, High Current High Voltage Diodes</h2>
+<h3><A NAME="apdipb0">Ar/Kr Ion Tube Pulse Type Igniter</A></h3>
+
+This is a high voltage pulse generating circuit with high current pass-through
+capability and has some features in common with the pulse starting circuits
+for HeNe lasers.
+<p>
+It is similar to the igniter used in the Omnichrome 150R power supply
+and 532 laser head (see the chapter: <A HREF="laserasc.htm#asctoc">Complete
+Ar/Kr Ion Laser Power Supply Schematics</A> for details) and is intended to be
+placed in the high-side (anode circuit).  However, some designs may put the
+igniter in the low-side (cathode circuit) instead.
+<p>
+The first part of the circuit is used to generate an approximately 400 VDC
+'boost' source from the AC line.  This is a classic voltage multiplier.  The
+Boost output is used to charge the energy storage capacitor (C6) for the pulse
+circuit and power the relaxation oscillator that triggers it repeatedly until
+the Ar/Kr ion tube starts.  The supply voltage to the relaxation oscillator
+(across D6) is then automatically removed and triggering ceases.
+<p>
+See the chapter: <A HREF="laserhpd.htm#hpdtoc">HeNe Laser Power Supply
+Design</A> for descriptions of HeNe pulse starters and operation of a voltage
+multiplier.
+<p>
+The primary reason to use the boost voltage rather than the 150 VDC available
+from the line rectifier/filter at DC+ is to dump some additional energy into
+the tube at the instant of startup (from C8) to aid in transition from a glow
+discharge to the high current arc required during normal operation.
+<p>
+Another reason for using the higher boost voltage is to reduce the number of
+fat wire turns on the pulse transformer toroid.  Increasing the voltage on the
+energy storage capacitor from 150 to 400 V reduces the turns ratio by better
+than 2.5:1 requiring only 30 instead of 80 turns on the secondary.  Once you
+have wound one such transformer, you will appreciate this savings!
+<p>
+I've used the ferrite core of a deceased flyback transformer for T1 with a 2
+turn primary and 30 turn secondary.  This worked fine for my home-built
+Cyonics tube based laser head.  The large ferrite cores from PC (or other)
+switchmode power supplies should be fine as well.  Make sure the secondary
+can handle the full ion tube current and is adequately insulated for the
+several kV or more that is produced.
+<p>
+The bypass capacitors, C9 and C10, complete the return circuit from the bottom
+of the secondary of the igniter transformer to F1 (of the ion tube
+filament/cathode).  Without these, in addition to interfering with starting,
+this pulse could find its way back into the power supply itself resulting in
+cascade failures of regulator or other components.
+<p>
+<PRE>
+                   - C1 +         - C2 +
+  H o----------------)|----+--------)|---------+      C1-C4: 10uF, 350V
+ (OP)                D1    |   D2        D3    |  D4
+                 +---|>|---+---|>|---+---|>|---+---|>|---+
+          R1     |      - C3 +       |      - C4 +       |
+  N o----/\/\----+---+----)|----+----+---+----)|----+----+---+---o Boost
+                     |    R2    |        |    R3    |        |    (>400 V)
+                     +---/\/\---+        +---/\/\---+        |
+                                                             |
+        +--------------------------+-------------------------+
+        |                          |
+        /                          /              Igniter pulse transformer
+     R4 \                       R8 \              Typical stepup ratio 20:1
+   100K /                     100K /                            o
+        \                          \                        T1 +-----+--o HV+
+        |                          |                        ::(      |
+        +--------------------------|---------------+        ::(      |
+        |                          | C6 1uF        |        ::( 30T _|_ C7
+     R5 /                          +---||----+------------+ ::( #14 --- 500pF
+     8M \            DL1    SCR1 __|__       |     |  1.5T )::(      |
+        /            NE2H   600V _\_/_       /     |   #14 )::(      |
+        |            +--+    25A / |      R9 \     |   +--+    +-----+
+        +--------+---|oo|---+---'  |      .1 /     |   | o           |
+        |        |   +--+   |      |         \     |   |             |
+        /        |          /      |         |     +---|-------------+
+     R6 \    C5 _|_      R7 \      |    D5 __|__   |   |             |
+     3M /  .1uF ---     180 /      | MR826 _\_/_  _|_+ |         D6 _|_
+        \  250V  |          \      |         |    ---  |   1N1190AR /_\
+        |        |          |      |         |     |   |   600V,40A  |
+        +--------+--------+-+------+-+-------+-----+---+-------------+
+                          |          |          C8 10uF              |
+                      C9 _|_+   C10 _|_          600V                |
+                    10uF ---   .1uF ---                 R10 .1 50W   |
+                    450V  |    500V  |         DC+ o---+---/\/\---+--+
+            F1 o----------+----------+                 |          |
+                                                       o + Test - o
+                                                          .1 V/A
+</PRE>
+
+<h3><A NAME="apdipbr">Ar/Kr Ion Tube Resonant Igniter</A></h3>
+
+One concern with a pulse igniter is damage that may occur to the tube cathode
+each time the igniter fires.  This is generally not a serious issue if
+properly designed with minimal energy in the pulse but over the long term,
+may have some effect on the life of the tube.  And, it could be particularly
+hard on tubes that take many tries to start.  It is possible to
+design an igniter that is more gentle.  Some ion lasers use a resonant
+igniter which is in essence a circuit like mini-Tesla coil that generates
+a burst of radio frequency (RF) rather than simply a voltage pulse.  The
+amplitude of the RF pulse can be much more modest than of the HV pulse
+and since using a Tesla (or Oudin) coil is one way to start an uncooperative
+tube, such as approach does make sense.
+<p>
+While the typical circuit does generate a high voltage pulse, it doesn't
+actually appear on the tube anode but is used to jump the spark gap of a
+resonant (LC) circuit, sort of like an early spark trasmitter. :)  The
+spark gap discharge completes the series LC circuit which then produces
+a damped RF oscillation and that ionizes the gas in the tube, allowing
+the main DC current to flow.
+<p>
+See the schematic of the
+<A HREF="nec3hsch.pdf">NEC GLG3030 - Laser Head</A>.  As can be seen, the
+igniter transformer, T1, has a pulse generating autotransformer winding on
+the left, and the resonant winding on the right.  The SCR, (SCR301) discharges
+C301 into the primary which generates a high voltage pulse in its
+autotransformer secondary.  This causes the spark gap (UDB-3) to break
+down allowing C303 to resonate with the series winding of T1, through
+which the main tube current also passes.
+<p>
+While superficially, this looks similar to the typical pulse igniter, the
+resonating winding of T1 is designed along with C303 to produce the burst
+RF at a relatively low voltage, which is easier on the tube cathode.
+<p>
+Note that even the pulse starter in the previous sections has a small
+capacitor on the igniter transformer secondary, so it too may have some
+RF component in the output, just before the boost capacitors discharge
+through the tube and whack the cathode! :)
+
+<h3><A NAME="apduali">An Unusual Arc Lamp or Ion Laser Igniter</A></h3>
+
+Now here's a strange igniter.  This unit was found in a Hughes JVC model
+100 video projector and is used to start the arc lamp (rather than an
+ion laser) but that's just a  detail. :)  Its high voltage
+source is a standard Melles Griot helium-neon laser power supply brick, an
+05-LPM-949, typically used for a 5 mW (rated) HeNe laser.  This feeds a
+potted unit which contains a 60 AMP transformer, with an external high
+voltage capacitor (0.01 uF, 10 kV) and spark gap (5.5 kV).  The input
+to the HeNe laser power supply is the raw DC for the arc lamp, even
+though this brick normally runs on 115/230 VAC.
+<p>
+Apparently the way it works is as follows: Before the arc lamp strikes, the
+voltage across it is about 150 VDC.  This would seem to be lower than the
+normal internal DC voltage of the HeNe laser power supply (after the 115
+VAC or 230 VAC line voltage is doubled or rectified and filtered) but
+regardless, is enough for it to try to start the non-existent tube by
+generating the 10 kV start voltage, charging the HV capacitor until the
+spark gap breaks down at 5.5 kV.  That results in some combination of a
+high voltage pulse and high frequency oscillation just as in the resonant
+igniters described in the previous section, with up to 32 kV
+available to start the lamp.  Once the arc lamp
+is lit, its sustaining voltage is only around 19 V (at 39 AMPs!),
+insufficient for the HeNe laser power supply to do anything, so it twiddles
+its thumbs during the movie. :-)  Interestingly, the 05-LPM-949 has *two*
+adjustment pots, with the second one being to set the startup delay.  The
+extra trimpot may be the only difference between the 05-LPM-949 and the
+otherwise similar 05-LPM-948.
+<p>
+I can't imagine this to be a less expensive solution than one using a
+miniature high voltage power supply module designed to be a high voltage
+power supply module, rather than a HeNe laser power supply.
+So, it's either an elegant ion laser igniter on steroids - or a kludge -
+depending on your point of view. ;-)
+
+<h3><A NAME="apdipb1">Alternative Starting Circuits for Small Ar/Kr Ion Tubes</A></h3>
+
+(Portions from Steve Roberts (osteven@akrobiz.com).)
+<p>
+An ALC-60X/Omni-532 or other large tube (e.g., a Lexel-88) needs considerable
+energy to form the cathode spot.  And, over time as the pressure goes down it
+WILL need the high power resonant ignition approach described in the section:
+<A HREF="laserapd.htm#apdipb0">Ar/Kr ion tube pulse type igniter</A>.
+<p>
+However, a small, modern, tube like the Cyonics starts rather easily with its
+short bore and oversized cathode.  Therefore, it may be possible to use a
+simpler approach for its igniter using a low current high voltage (say 2 kV)
+supply feeding onto the anode side of a HV bypass diode as shown below:
+<PRE>
+
+                       R1                R2
+         +2 kVDC o----/\/\------+--------/\/\-------+----------+
+                      100K      |        100        |          |Tube+
+                            C1 _|_+      10W        |        .-|-.
+                           1uF ---                  |        | | |
+                           3kV  | -                 |        |   |
+                                |        D1         |        |   | LT1
+             DC+ o--------------|--------|>|--------+        |   |
+                                |        3kV                 |   |
+                                |        20A                 ||Z.|
+                                |                            '+-+'
+          DC RET o--------------+------------------------+  F1| |F2
+                                                         |    | |
+                               AC o--------+ T1          |    | |
+                                            )|| +--------|----+ |
+                                   Filament )||(  Tube-  |      |
+                                     Supply )|| +--------+      |
+                                            )||(                |
+                                            )|| +---------------+
+                               AC o--------+
+
+</PRE>
+R1 limits current from the HV supply while R2 limits current from C1 at the
+instant the tube starts.  D1 allows the HV to build up across the tube.  Of
+course, high current diodes with 3 kV ratings aren't cheap either!  But, see
+the section: <A HREF="laserapd.htm#apdspl1">Construction of HV High Current
+Blocking Diodes</A>.
+<p>
+I have not tested this circuit but promise to do so in the future.  While this
+general approach works well for starting HeNe tubes, they are not quite the
+same animal!
+<p>
+The ALC-60X/Omni-532 design does use a diode switch like this for the boost
+voltage but I have only seen xenon arcs using it for starting HV.  I suspect
+there is a impedance problem - i.e., you get a glow that doesn't progress to a
+arc and the cathode spot doesn't form.  Arc lamp supplies that use this method
+often overcharge the caps in the power supply to insure they start as well as
+use a trickle supply of about 1 kV at several mA while running to keep things
+ignited.
+<p>
+However, for an older or larger tube, you really have to hit it with the pulse
+igniter. 
+<p>
+Also see the section: <A HREF="laseraps.htm#apspit0">Pulsed Operation of an
+Ar/Kr Ion Tube</A> since the approaches described there may be useful for
+igniters as well.
+<p>
+<A NAME="apdflv"></A>
+<hr>
+<br>
+<li>Back to <A HREF="laserapd.htm#apdtoc">Ar/Kr Ion Laser Power Supply Design Sub-Table of Contents</A>.
+<h2>Filament and Low Voltage Supplies, Line Frequency Clock</h2>
+<h3><A NAME="apdflv0">Ar/Kr Ion Tube Filament Power Supply</A></h3>
+
+This is implemented as a simple low voltage high current power transformer
+with a centertapped secondary winding.  Typical voltage is 2.5 to 3.0 VRMS
+at 15 to 25 AMPS.  Make sure your connections are secure!
+<p>
+To balance the current feed through the Ar/Kr ion tube cathode, the negative
+from the power supply is applied to the center tap of this winding.  Since the
+low voltage secondary has only a few turns of fat wire and is an outer winding
+if not on its own bobbin, it is a simple matter to add a centertap if you are
+modifying an existing transformer and one doesn't already exist.
+<p>
+Since this voltage must be relatively accurate, a Variac or some other means
+of adjusting it needs to be provided.  Commercial designs typically provide
+multiple taps on the transformer primary to set up the proper current.  With
+a semi-homemade secondary, partially unwinding one turn may be all you need to
+tweak the current.
+<p>
+<ul>
+<li>Salvaged microwave oven transformers with the HV windings removed work well
+  in this application.  Remove the high voltage secondary winding (hack it off
+  if necessary) so that you don't have this additional danger!  The filament
+  winding may need to be adjusted in size (number of turns) and a centertap
+  will need to be added.  See the section:
+  <A HREF="laserclp.htm#clprew">Rewinding a Microwave Oven Transformer for use
+  as a Low Voltage Filament Supply</A>.
+<p>
+<li>A standard high current power transformer can also be used.  For example,
+  the Stancor P6433 (actually called a 'filament transformer'!) is rated at
+  5 VRMS CT, 15 A.  While these specifications are not exactly ideal, it
+  should work well when powered from a Variac.  (However, this specific
+  dinosaur may no longer be available.)
+</ul>
+<p>
+Note that while some commercial ion laser power supplies claim to use
+DC for the filament to reduce ripple and noise in the laser output
+(Melles Griot 176B, for example), this is not recommended even if you
+have a suitable low voltage high current DC power supply available:
+<p>
+(From Steve Roberts (osteven@akrobiz.com).)
+<p>
+DC requires some changes to the cathode-to-bore spacing (longer), or a
+slowly wandering DC offset from inside the switching PSU, or you end
+up with a hot spot. The only DC cathode tubes I know of go into very
+precise semiconductor wafer measurement stuff.  I got a call from one
+of the major tube makers about two years ago asking for advice, it
+seems their main plasma guy had left and they wanted to find another
+way after X heads on DC test killed their cathodes, periodic polarity
+flipping becomes a option too.  For long Life, AC rules.
+
+<h3><A NAME="apdflv1">Low Voltage Power Supplies</A></h3>
+
+These can be of conventional design using a low voltage centertapped power
+transformer, bridge rectifier, filter capacitors, and a pair of IC regulators.
+For typical +/-15 VDC analog power, suitable regulators can be the common
+7815/7915 types.  Logic power (+5 VDC) can be obtained from the input to the
+V+ using a 7805 IC regulator and dropping resistor to reduce its power
+dissipation.
+<p>
+The only major consideration is that one or more supplies of this type may be
+needed that are electrically floating to power the regulator controller and/or
+light feedback circuitry if they are direct coupled to the regulator (which is
+on the line connected DC+ or DC- feed).  However, this is easily solved since
+any decent power transformer will be rated for at least 2,500 V isolation.
+<PRE>
+
+       28VCT,1A
+   H o--+ T1
+         )||       D1       V+              In +------+ Out
+         )|| +--+--|>|-----+--------------+----| 7815 |---------+----o +15 VDC
+         )||(  ~|  D2      |         C1 +_|_   +------+    C3 +_|_
+         )||(   +--|&lt;|--+  |   10,000uF  ---   Com |     10uF  ---
+         )||(  L1       |  |        25V - |        |      25V - |
+ 115 VAC )|| +----------------------------+--------+------------+--+-o Analog
+         )||(  L2  D3   |  |         C2 +_|_       |       C4 +_|_ V   Common
+         )||(   +--|>|--|--+    5,000uF  ---   Com |     10uF  ---
+         )||(  ~|  D4   |   V-      25V - |    +------+   25V - |
+         )|| +--+--|&lt;|--+-----------------+----| 7915 |---------+---o -15 VDC
+         )||                                In +------+ Out
+   N o--+    D1-D4: 1N4007 or 2 A bridge
+
+</PRE>
+Note: Pinouts for 78 and 79 series parts are NOT the same!
+<p>
+And, for the logic supply (if needed) AND with its common at the same
+potential (floating or grounded):
+<PRE>
+
+                  R1          In +------+ Out
+        V+ o-----/\/\-------+----| 7805 |---------+-----o +5 VDC (Vcc)
+                       C5 +_|_   +------+    C6 +_|_
+                  1,000uF  ---   Com |     10uF  ---
+                      25V - |        |      16V - |  X
+                            +--------+------------+--+--o Digital Common
+                                                    _|_ 
+                                                     -
+
+</PRE>
+Single point connection between analog and digital commons is made at point X.
+<p>
+In addition, place .1 uF ceramic capacitors across each of the electrolytics
+to bypass high frequency noise.
+<p>
+WARNING: If these are floating - not at earth ground - there will be blown
+parts and vaporized wiring if connected there!
+<p>
+Depending on the current requirements, the regulator ICs will likely need to
+be mounted on heat sinks (isolated from each other using mica spacers and
+silicone heat sink compound if on the same one).
+<p>
+The circuit as shown above is rated at about .5 A for each of the 15 V outputs
+and an additional .5 A for the +5 V output (using a nice heat sink for the
+IC regulators!).  R1 should be selected to leave about 2 or 3 V of headroom
+at maximum logic current to reduce power dissipation in the 7805 chip.
+<p>
+An isolated 60 Hz clock can be easily extracted from the secondary winding of
+any of these low voltage power transformers:
+<PRE>
+
+            R2                               R3
+   L1 o----/\/\-----+-------+       +----+--/\/\-----o +5 (Vcc)
+            1K      |       |       |    |   1K
+                D6 _|_    __|__   |/ C   +-----------o CK60-P
+            1N4002 /_\    _\_/_-->|
+                    |       |     |\ E
+                    |       |       |
+                    +-------+  OC1  +----------------o Common
+                    |         4N35
+                    V
+
+</PRE>
+The opto-isolator, OC1, can be either a photodiode or phototransistor (shown)
+type although the value of R1 may need to be adjusted based on this and the
+transformer's output voltage.  Using a bridge or full wave rectifier in series
+with OC1 instead of D1 across it will result in a 120 Hz clock.  However, the
+lower frequency clock is probably better for the most likely use - a timer for
+the filament preheat delay.
+<p>
+A simpler circuit can be used where isolation isn't needed:
+<PRE>
+
+                                               R5
+                                         +----/\/\-----o Vcc
+                                         |     1K
+                                         +-------------o CK60-P
+                                         |
+                R4     D7       D8     |/ 
+       L1 o----/\/\----|>|------|>|----| Q1 2N3904
+               10K   1N4148   1N4148   |\
+                                        _|_
+                                         -
+
+</PRE>
+<A NAME="apdpsr"></A>
+<hr>
+<br>
+<li>Back to <A HREF="laserapd.htm#apdtoc">Ar/Kr Ion Laser Power Supply Design Sub-Table of Contents</A>.
+<h2>Requirements, Safety, Protection, Switches, Indicators</h2>
+<h3><A NAME="apdpsr0">Basic Requirements for a Hobbyist Power Supply</A></h3>
+
+(From: Steve Roberts (osteven@akrobiz.com).)
+<p>
+The schematic in <b>U.S. Patent #4,504,951: High Speed SMPS for a Light
+Controlled Laser System (ALC)</b>, is a reasonably simple design.  Actual
+production units have about twice the parts so as to get a reprographic or
+instrument grade beam.  See the chapter:
+<A HREF="laserasc.htm#asctoc">Complete Ar/Kr Ion Laser Power Supply
+Schematics</A>.
+<p>
+For a light show, an ion laser power supply just has to do the following
+(assuming an ALC-60X/Omni-532 class tube - others will use different values):
+<ol>
+<li>Warm up the cathode and charge the caps slowly before starting.  Most
+   supplies use a CD4040 chip to count 5,000 or so pulses of the 60 Hz line
+   for a 35 second delay while others use a 555 timer as a monostable.
+<p>
+<li>Provide 4.5 to 10 A constant current (adjustable) into a tube that drops
+   100 to 110 VDC but acts (incrementally) just about like a dead short.
+   Adjusting the current from 4.5 A to 10 amps varies the beam power from 20
+   to 110 mW (for the ALC-60X/Omni-532).
+<p>
+<li>Power up the fan(s).
+<p>
+<li>Provide current regulation to compensate for line voltage load impedance
+   variations (as the tube heats up).
+<p>
+<li>Monitor the over-temperature and case safety interlocks, and check for the
+   presense of the fan(s) via a wire loop on the fan connector.  Refuse to
+   power up/shut down should any of these be open.
+<p>
+<li>Shut down if tube current exceeds 9.50 amps for more then a minute.
+<p>
+<li>Provide light control circuitry for beam stabilization and diagnostics.
+</ol>
+While regulation (4) and overcurrent sensing (6) are not strictly required,
+bad things can happen if tube current is not monitored continuously.  Light
+control (7) is also optional but Ar/Kr ion tube life will be shorted slightly
+without it.  However, for external mirror lasers, the light sensor provides a
+great way to peak the mirrors as the light sensor signal shows up on banana
+jacks on the side of the head, along with a pair of jacks for the tube
+current, so diagnostics are built in to the head at the factory (or should be
+by you if you are rolling your own).
+
+<h3><A NAME="apdpsr1">Required Safety/Protection Features</A></h3>
+
+The following are essential for both personal safety as well as protection of
+the equipment in the case of an electrical or cooling failure:
+<ul>
+<li>Equipment MUST be supplied with a #14 AWG or larger gauge 3 wire grounded
+  cordset and plugged into a properly grounded 20 A (minimum) circuit.  While
+  a dedicated circuit is not required, don't figure on powering anything else
+  at the same time you are using your laser.  When cranked up to maximum
+  power, AC line current will be close to 15 A.  Of course, if you aren't
+  going to run at full power....., OK, that was a really silly statement. :-)
+<p>
+<li>Fuses or circuit breakers for the following power feeds should be provided:
+<p>
+<ul>
+  <li>Main power (line input): 20 A.
+  <li>Preheat power: 3 to 5 A.
+  <li>Power supply fan: 1 to 2 A.
+  <li>Head fan: 3 to 5 A.
+  <li>Logic/analog power: 1 to 2 A.
+  <li>Light control (optional) power to head: 1 A.
+</ul>
+<p>
+<li>Thermal protectors should kill main power (but not fan power) where
+  temperature limits are exceeded on the.
+<p>
+<ul
+  <li>Ar/Kr ion tube assembly.
+  <li>Power supply regulator heat sink.
+</ul>
+<p>
+  The fan power should be maintained until the relevant assembly's temperature
+  drops to guaranteed safe value.
+<p>
+<li>Interlocks should prevent operation or kill main power if:
+<p>
+<ul>
+  <li>The laser head case is opened.
+  <li>The power supply case is opened.
+  <li>The laser head fan is unplugged.
+</ul>
+<p>
+  Cheaters can be provided for testing - but only for testing!
+<p>
+<li>Logic using relays, TTL, CMOS, or vacuum tubes :-) must be provided to:
+<p>
+<ul>
+  <li>assure proper sequencing of tube Preheat, Standby, and Normal modes.
+  <li>kill system power should filament power be lost.
+  <li>kill system power if prolonged tube overcurrent is detected.
+</ul>
+<p>
+<li>Indicators must be provided for:
+<p>
+<ul>
+  <li>Main Power.
+  <li>Preheat Power.
+  <li>Operate Power.
+  <li>Beam-On (both on power supply and laser head).
+  <li>Various faults (e.g., thermal shutdown, case open, over current).
+</ul>
+</ul>
+For more detailed information with circuits, see the chapter: <A HREF="laserasc.htm#asctoc">Complete Ar/Kr
+Ion Laser Power Supply Schematics</A>.  Also, see the section: <A HREF="laserapd.htm#apdpsr2">Typical Interlock
+Chain Wiring</A>.
+
+<h3><A NAME="apdpsr2">Typical Interlock Chain Wiring</A></h3>
+
+This is just a series connection of all the required interlock switches,
+plugs, and thermal protectors - some portions of which have indicators on
+them.  A single lamp would suffice across the entire string (just an NE2H in
+series with a 47K resistor for a 115 VAC interlock circuit!) but this tells
+you exactly where the problem is located.  However, a special sensitive
+indicator would be needed to work properly where multiple interlock are open
+simultaneously (and more than one indicator would end up in series - dimming
+or not lighting up at all).  See the section:
+<A HREF="laserapd.htm#apdspr4">Interlock and Protector Indicator</A>.
+<PRE>
+
+                      Head Fan or Cover     Head Limit
+                             +-+                +-+
+                   +---------|I|---------+  +---|I|---+
+                   |         +-+         |  |   +-+   |
+                   |   P1         S1     |  |   TP1   |
+     Interlock o---+-&lt;&lt;--->>------_|_----+--+---_|_---+---+
+     (to relay     Part of LH                             |
+     or logic)      fan plug   PS Cover      PS Limit     |
+                                  +-+           +-+       |
+                              +---|O|----+  +---|I|---+   |
+                  Keyswitch   |   +-+    |  |   +-+   |   |
+                      S2      |   S3     |  |   TP2   |   |
+        Return o-----o/ o-----+---_|_----+--+---_|_---+---+
+
+</PRE>
+If ANY switch or interlock opens during operation or is open before powering
+up, power to the Ar/Kr ion tube should be shut off or be prevented from
+coming on.   Control power should remain active and the relevant interlock
+status indicators (if present) should light up.
+
+<h3><A NAME="apdpsr3">Control Logic and Power Switching</A></h3>
+
+In order to assure personal safety and protection for the components in the
+power supply and laser head (particularly, the Ar/Kr ion tube), interlocks
+and sequencing are required.  This can be done partially manually (for
+testing) but automatic (digital) control will be needed for any sort of
+permanent setup.  There are a couple of approaches one can take:
+<ul>
+<li>Basic logic using a combination of TTL or CMOS devices, timers (e.g., 555 or
+  CD4040 counter), and mechanical or solid state relays.  This is what we will
+  describe.
+<p>
+<li>Microcontroller or PIC based system running a program in EPROM.  If you
+  want to use this 'high-tech' approach, I am confident you will figure it
+  out! :-)
+</ul>
+Note that in both cases, certain key functions should be hard wired such as
+safety interlocks and thermal protection for the tube.  Do NOT depend on
+electronic control for these!  Furthermore, there must always be the
+equivalent of a FAT RED stop or off button - and it must have a direct effect
+even if some stupid TTL device or firmware program is locked up!
+<p>
+While everything below isn't essential for a bare-bones hobbyist supply, these
+features will add a professional touch to your system!  The functions that
+need to be provided are as follows (these are all outputs or states):
+<PRE>
+  Function  Description    Type             Conditions/equations
+----------------------------------------------------------------------------
+  MAIN     Main Power    Breaker     Manual, trip on system overload.
+
+  IDLE     System idle      FF       State entered when system powered up or
+                                       RESET PB pressed.
+
+  PREHEAT  Filament Pwr. SW or FF    Manual, reset by abort.
+            Precharge                 Initiates 30 to 60 second delay before
+                                      enabling SB or OP modes.
+
+  FILHOT   Filament Hot     FF       Goes active after Preheat delay as long
+                                       Preheat still enabled and Safe.
+
+  SBREQ    Standby Req.  SW or FF    User activated to request Standby mode.
+
+  SBMODE   Standby Mode     FF        Enabled after Preheat delay if SBREQ is
+                                      set and all interlocks and protectors
+                                      are 'go' (closed).
+
+                                     SBMODE = SBREQ * FILHOT * SAFE * ~ABORT
+
+  OPREQ    Operate Req.  SW or FF    User activated to enter Operate mode.
+
+  OPMODE   Operate Mode     FF       Enabled after Preheat delay if OPREQ is
+                                      set and all interlocks and protectors
+                                      are 'go' (closed).
+
+                                     OPMODE = OPREQ * FILHOT * SAFE * ~ABORT
+
+  DCPWR    Tube on         Relay     SBMODE + OPMODE  
+
+  LH Fan   Tube cooling  Inter/Pro   SBMODE + OPMODE + LHWARM
+
+  PS Fan   PS cooling    Inter/Pro   SBMODE + OPMODE + PSWARM
+
+  SAFE     System safe   SWs, Prots  ~(LHHLIM + PSHLIM + PSOPEN + LHOPEN)
+
+  FAULT    OVERCUR       Inter/Pro   Disables everything except main power
+                                       if: OVERCUR.
+
+  OVERCUR  Over current  I-Sense     Pulse to kill power on extended excess
+                                       tube current.
+</PRE>
+<h3><A NAME="apdpsr4">User Switches and Indicators</A></h3>
+
+These are the suggested set of front panel switches, and status and warning
+indicators for a logic or microprocessor controlled power supply:
+<PRE>
+      Switch                      Indicator
+ -----------------------------------------------------------------------------
+   Main Breaker        Line live/control power on (neon)
+   Key Switch
+                       System idle - powerup or reset (green)
+   Preheat PB SW       Blink while heating, solid when hot (green)
+   Standby PB SW       Blink until tube starts, solid when running (green)
+   Operate PB SW       Blink until tube starts, solid when running (green)
+   Fault Reset PB SW   Fault on until reset (red)
+   Meter select I/V
+</PRE>
+All except the main breaker may be pushbuttons to set appropriate flip flops
+or toggle switches if less sophistication is good enough!
+<p>
+For a fabulous ASCII rendition of a possible front panel layout, check out the
+one I intend to use for "Sam's linear Ar/Kr laser power supply (SG-IL1).  See
+the section: <A HREF="laserasc.htm#ascsg31">SG-IL1 front panel layout</A>.
+
+<h3><A NAME="apdpsr5">Interlock and Thermostat Switches and Indicators</A></h3>
+
+These switches are required for anything but the most basic test supply.  The
+indicators are optional:
+<PRE>
+     Switch              Description                   Indicator
+ ------------------------------------------------------------------------
+  PS Interlock        Cover missing                  PS Unsafe (red)
+  PS High Temp        Heat sink > 180 degrees F      PS High Temp (red)
+  Head Interlock      Fan or cover missing           LH Unsafe (red)
+  Head High Temp      Tube > 180 degrees F           LH High Temp (red)
+
+  PS Warm             Interior > 120 degrees F       PS Warm (yellow)
+  Head Warm           Interior > 120 degrees F       LH Warm (yellow)
+</PRE>
+  Note: some tubes may be happier if their cooling fan is shut off at the same
+  time as power or shortly thereafter rather than waiting for full cool-down.
+  Thus the 'Head Warm' switch (thermostat) may not be needed (or can provide
+  reduced airflow after the tube has been shut off).
+<p>
+(From: Steve Roberts (osteven@akrobiz.com).)
+<p>
+The 60X generally will withstand a sudden shutdown, in fact rapid cool-down
+with the fan on is more of a lifetime shortener.  This is not true of all
+air-cooled lasers, some of which store too much heat and need the fan.  I
+generally just shut everything down at once with no problems in years of
+operation.  More modern supplies run the fan about 1 minute after shutdown. 
+<p>
+<A NAME="apdcsc"></A>
+<hr>
+<br>
+<li>Back to <A HREF="laserapd.htm#apdtoc">Ar/Kr Ion Laser Power Supply Design Sub-Table of Contents</A>.
+<h2>Component Selection and Construction Considerations</h2>
+<h3><A NAME="apdcsc0">Ar/Kr Ion Laser Power Supply Component Selection</A></h3>
+
+I would recommend a very conservative approach to parts specification.
+Clearly, this is critical in the power systems where a failed component can
+result in smoke, fire, and explosions which can easily ruin your whole day.
+However, a fault in the logic or analog control circuitry can result in
+equally disastrous consequences since the regulator is driven from there.
+<p>
+For the power handling components, derate resistors, capacitors, and
+semiconductors by 30 to 50 percent.  For example, where the main bridge needs
+to be rated for 10 A, use a 20 to 25 A device - the increase in cost will be
+minimal and well worth it.  Electrolytic capacitors should be 200 V minimum,
+250 desirable for the line filter.  Be particularly conservative with the
+regulator power transistor ratings.  Figure on at least 5, 150 W power
+transistors in parallel for a linear pass-bank handling 10 A even though the
+individual devices may be rated for 15 A.
+<p>
+For the logic and analog circuits, use high quality name brand components (no
+unmarked op-amps you happened to have in the junk bin!).  Make sure you follow
+the recommended practices of providing bypass capacitors where needed (and on
+all logic devices), tie unused inputs to a legal state, etc.  Separate digital
+and analog grounds except at a single point.  Route digital and analog wiring
+separately.
+
+<h3><A NAME="apdcsc1">Ar/Kr Ion Laser Power Supply Construction Considerations</A></h3>
+
+Here are some guidelines (well, some are more than guidelines for your own
+safety at least) for the power supply, laser head, and general construction
+practices.
+<p>
+For the power supply itself:
+<ul>
+<li>Build the entire power supply into an enclosure such as a large metal box
+  intended for electronic equipment or rack.  Portions (like the top or sides)
+  can be made from clear plastic if you want to show off your creation.
+  All user accessible metal parts must be connected to the grounding conductor
+  of a #14 AWG or larger (lower AWG number) 3 wire heavy duty cordset and it
+  must be used ONLY with a properly grounded 20 A outlet.
+<p>
+<li>Securely mount all heavy components like transformers/chokes, large power
+  resistors, and computer grade electrolytic capacitors, with properly sized
+  nuts, bolts, and lockwashers or clamps as appropriate.
+<p>
+<li>Mount the regulator power transistors on a proper finned heat sink with the
+  fins oriented parallel to the air flow for optimum cooling.
+<p>
+<li>Provide adequate flow-through forced air cooling for power semiconductors
+  (especially the regulator transistors) and high power resistors.  A plenum
+  may need to be fabricated to guide the air flow over the regulator heat sink
+  and other critical components.
+</ul>
+Specifically for the laser head:
+<ul>
+<li>The laser head can be constructed in a case made of entirely of metal or
+  with portions made of plastic (for visibility, etc.).  There MUST be a solid
+  safety ground connection (#14 AWG or larger) between any user accessible
+  metal parts of the case and the main power supply safety ground.
+<p>
+<li>Make sure all components - especially the Ar/Kr ion tube (and any associated
+  optics), filament transformer, and other heavy or precision components are
+  securely mounted with access for replacement and/or adjustment where needed.
+<p>
+<li>Keep wiring between the igniter, filament supply (transformer), and tube as
+  short as possible.  Provide 1 inch or greater separation between tube anode
+  wiring and anything else and/or use wire with 25 kV insulation or better.
+<p>
+<li>A HUGE cooling fan (typical minimum requirements: 225 cfm) must be provided
+  to draw air through the cooling fins of the tube.  A plenum may need to be
+  fabricated to couple the fan to the tube.  Make sure that NOTHING obstructs
+  the cooling air.  Route wiring to keep insulation away from the hot tube and
+  its fin structure.  Keep in mind that you must be removing about the BTU
+  equivalent of a modest size space heater from your laser head!
+<p>
+<li>Don't forget the laser and electrical safety warning labels!
+</ul>
+General:
+<ul>
+<li>Small parts can be wired point-to-point between larger ones (e.g., the screw
+  terminals of computer grade capacitors, bridge rectifiers, chassis mounted
+  power resistors, power transistors) or heavy duty terminal strips.
+<p>
+<li>For connections to high power dissipating components like large power
+  resistors, use nuts and bolts WITH lockwashers or lugs rated for high
+  temperature use and crimped using the proper tool.  Use wire with insulation
+  rated for high temperature (heating appliance) use on connections to these
+  components as there is considerable conducted heat transfer.
+<p>
+<li>Construct all the low power circuitry (digital and analog) on perforated
+  style prototyping boards or printed circuit boards (PCBs).  Use only new
+  high quality double-wipe or machine pin sockets for ICs - solder everything
+  else directly to the board.
+<p>
+  CAUTION: Keep in mind that portions of this circuitry will very likely need
+  to be floated electrically since it will be line connected (via DC+ or DC-).
+  Therefore, make sure any copper cladding is peeled away from screw locations
+  and/or non-conductive standoffs are used for mounting.
+<p>
+<li>Provide fool-proof interlocks (it is amazing how many fools are out there!)
+  to kill power in the event that ANY covers or access plates are removed or
+  opened.  You can always construct cheaters for testing but only for testing.
+</ul>
+<p>
+<A NAME="apdspl"></A>
+<hr>
+<br>
+<li>Back to <A HREF="laserapd.htm#apdtoc">Ar/Kr Ion Laser Power Supply Design Sub-Table of Contents</A>.
+<h2>Special Parts 1 - Low Ohm Resistors, HV High Current Diodes</h2>
+<h3><A NAME="apdspl0">Constructing Low Ohm High Power Resistors</A></h3>
+
+Many of the resistors listed in the Ar/Kr ion laser power supply circuit
+diagrams and complete schematics call for ratings of a small number of ohms
+or a fraction of an ohm - but at 10s of watts, 100s of watts - or greater!
+While it may be possible with great effort to locate these from electronic
+distributors around the globe or beyond (and searching that far may be
+needed!), they can often be constructed for next to nothing in total parts
+cost.  And, there may be much more flexibility when what you really want is
+not a standard value!
+<p>
+Incandescent light bulbs are the usual low cost solution for troubleshooting
+of electronic equipment to provide current limiting.  However, the resistance
+of their filament can vary by a factor of 10 from cold to hot - not good for
+our purposes.  However, there is a nearly as readily available alternative:
+<p>
+The elements from space heaters, electric dryers, and other heating appliances
+with exposed coils are ideal for the fabrication of home-brew but perfectly
+usable power resistors.  These are made of NiChrome, an alloy of nickel and
+chromium which is resistant to oxidation even when yellow/orange-hot and its
+resistance is relatively stable with respect to temperature (which cannot be
+said for tungsten light bulbs).
+<ul>
+<li>Space heater elements are usually rated at between 600 and 1,500 W at 110
+  VAC for an equivalent resistance of 20.2 and 8.1 ohms respectively for the
+  entire element.  Oil filled 'radiator type' heaters are nice because they
+  usually provide multiple power (resistance) settings AND run cooler which
+  means their resistance characteristics should be more stable.
+<p>
+<li>Electric dryer elements may be 2 to 3 times the wattage running on 230 VAC
+  (resistance may be lower or higher depending on type).
+</ul>
+Even burnt out elements - readily available from your junk pile (or that of
+the local appliance repair shop) will be 99 percent undamaged.  They are
+usually broken or melted through in one spot and what remains is ideal for
+creating custom and/or adjustable high power ballast, dropping, or sense
+resistors.  Deterioration of the overall wire is generally minimal.
+<p>
+The original mounting can be used or portions of the element(s) can be
+transferred to a suitable non-conductive and NON-FLAMMABLE support.  Allowing
+the wire to come in contact with this material at as few locations as possible
+will minimize heat transfer and make the most effective use of air cooling.
+<p>
+Taps can be provided for easy adjustment.  Initially, these can make use of
+heavy duty crocodile clips later made permanent with nuts and bolts or crimp
+connections (soldering won't be reliable, surprise, surprise!).
+<p>
+For current capability approaching the original application, paralleling
+multiple heating element wires will permit them to run cooler.
+<p>
+Sealed heating elements of the types used in electric stove tops, ovens,
+broilers, electric hot water heaters, etc., may also be used but there is no
+way to adjust their value except by switching in various series and parallel
+combinations.  However, this is convenient with dual-element stove top
+'burners' with pushbutton selector switches (not thermostats or 'infinite'
+controls - your 1950s vintage GE range probably has what is needed!).
+<p>
+CAUTION: Any element designed for direct immersion in water or another liquid
+may burn out even at far less than its rated current if run in air despite a
+cyclone of cooling!)
+
+<h3><A NAME="apdspl1">Construction of HV High Current Blocking
+ Diodes</A></h3>
+
+I don't know if you can find something like a 3 kV, 12 A diode at major
+electronic distributors.  However, they can be constructed from multiple
+series strings of smaller diodes in parallel along with resistors to balance
+the current.
+<p>
+For example, for a 10 A power supply, use 2 series strings of four 1000 V, 6 A
+diodes with a .05 ohm, 5 W resistor in each string as shown below:
+<PRE>
+
+         Anode  o----+----|>|--|>|--|>|--|>|---/\/\----+
+                     |                                 |
+                     +----|>|--|>|--|>|--|>|---/\/\----+----o Cathode
+
+</PRE>
+The resistors can even be made from suitable lengths of wire.  For example, #24
+copper wire has a resistance of about .025 ohms per foot.
+
+<A NAME="apdspr"></A>
+<hr>
+<br>
+<li>Back to <A HREF="laserapd.htm#apdtoc">Ar/Kr Ion Laser Power Supply Design
+ Sub-Table of Contents</A>.
+<h2>Special Parts 2 - Relay Drivers, Indicators</h2>
+<h3><A NAME="apdspr0">Relay Drivers</A></h3>
+
+There are several types of relays that can be used:
+<ul>
+<li>Relays with AC coils are convenient for direct control from the power line
+  or a power transformer secondary.  The most common coil ratings are 24 and
+  115 VAC, 50/60 Hz.
+<p>
+<li>Relays with DC coils are convenient for control from low voltage logic
+  circuits.  The most common coil ratings are 5, 6, 12, 24, and 120 VDC.
+<p>
+<li>Solid state relays are a combination of an opto-isolator and triac or other
+  semiconductor switching device - no moving parts!  These are driven directly
+  from a low current (TTL) logic signal but are usually more expensive than
+  their mechanical counterparts.  Also, being solid state, they may be less
+  robust under certain (stressful) conditions!
+<p>
+  You can also make your own solid state relay.  See the section:
+  <A HREF="laserapd.htm#apdspr1">Driving Relays with AC Coils</A>.
+<p>
+  Since solid state relays are so easy to use, no further discussion of this
+  type is needed!
+</ul>
+<h3><A NAME="apdspr1">Driving Relays with AC Coils</A></h3>
+
+There are several options depending on how these are to be controlled:
+<ul>
+<li>When front panel switches or other relay contacts are used to activate a
+  relay, the simplest approach is to use the 115 VAC (or 24 VAC if you have
+  that from the low voltage power supply transformer) directly.
+<p>
+<li>For logic control, a small DC relay can be used to provide switching for the
+  AC coil of a larger relay.  This is the simplest and easiest approach.  See
+  the section:
+  <A HREF="laserapd.htm#apdspr2">Driving Relays with DC Coils</A> for circuit
+  options.
+<p>
+<li>Alternatively, a circuit equivalent to a small solid state relay can be
+  built using an opto-isolated triac in series with the relay coil and the AC
+  line.  By using a device with zero-crossing switching, no additional parts
+  are required:
+<PRE>
+
+                                                  o--o NC
+                                           C o--o/        (typical)
+                                                  o--o NO
+                        AC line Hot o------------+
+                                                  )||
+                                       Relay with )||
+                                     115 VAC coil )||
+                     500                          )||
+             Vcc o---/\/\-----+       +----------+
+                              |       |  
+                            __|__   __|__ 
+                            _\_/_-->_\/\_
+               1/6 7404       |       |
+                  |\          |       |
+         ON-H o---|  >o-------+       +--------------o AC line Neutral
+                  |/           MOC3033
+                         Optoisolated Triac
+                           (Zero-crossing)
+
+</PRE>
+  CAUTION: Snubber components (a series RC network, not shown) may be required
+  across the triac to limit voltage spike amplitude when the device switches
+  off if a non-zero-crossing type device like the MOC3012 is used.
+</ul>
+<h3><A NAME="apdspr2">Driving Relays with DC Coils</A></h3>
+
+Small relays are designed to be connected directly to a TTL output.  These
+will have 5 VDC coils rated at a current as low as 10 mA or less.  Larger
+relays with 5 VDC coils may require as much as 100 mA or more so a beefier
+driver (beyond a TTL logic gate) may be needed for some of these.  Relays with
+higher voltage DC coils can also be used.  For a given type, coil current is
+inversely proportional to coil voltage.  Therefore, using a relay with a
+higher voltage coil may be easier if a suitable power source is available.
+<p>
+As always, when driving an DC inductive load, a back biased 'free wheeling'
+diode is placed across the coil to provide a path for the coil current to
+continue flowing (and ramp down to zero relatively slowly) when the driver
+switches off.  This prevents any inductive voltage spike which would result
+in stress on the driver and/or logic circuits and may generate excessive
+electrical noise.
+<p>
+The following are several alternatives for driving these relays (12 VDC, 10 mA
+coil assumed; typical contact configuration shown):
+<PRE>
+
+                        o--o NC                  o--o NC               o--o NC
+                 C o--o/                  C o--o/               C o--o/
+                        o--o NO                  o--o NO               o--o NO
+           V+ o---+---+             V+ o---+---+          V+ o---+---+
+                 _|_   )||                _|_   )||             _|_   )||
+          1N4002 /_\   )||         1N4002 /_\   )||      1N4002 /_\   )||
+                  |    )||                 |    )||              |    )||
+       1/6 7406   +---+                    +---+                 +---+
+          |\      |                        |                  D  |
+ ON-H o---|  >o---+                R1    |/ C               .|---+
+          |/             ON-H o---/\/\---| 2N2222          G||&lt;--. 2N7000
+                                   1K    |\ E     ON-H o----'|---+
+ TTL Open Collector Driver                _|_                 S _|_
+ (HV output if V+ > +5 VDC)                -                     -
+                                 Bipolar Transistor            MOSFET
+
+</PRE>
+Depending on specific coil voltage and current, devices other than those shown
+may have to be used as the drivers.
+<p>
+Or, to control a low current DC relay on a separate power supply:
+<PRE>
+
+                                                      o--o NC
+                                               C o--o/
+                                                      o--o NO
+                                         V+ o----+---+
+                                                _|_   )||
+                                         1N4002 /_\   )|| Relay coil
+                      500                        |    )||
+             Vcc o----/\/\----+        +-----+---+---+
+                             1|        |     |5
+                            __|__    |/ C    |
+                            _\_/_ -> |       |
+                              |      |\ E    |
+                     |\      2|        |   |/ C
+            ON-H o---|  >o----+        +---|
+                     |/                    |\ E
+                                4N33         |4
+                          Opto-Darlington    +----o V-
+
+</PRE>
+For the 4N33, the current transfer ratio is 500 percent so to drive a relay
+with a 20 mA coil requires a minimum of 4 mA through the LED.  Add another
+buffer transistor to drive a higher current relay coil.
+
+<h3><A NAME="apdspr3">115 VAC Indicators</A></h3>
+
+There are several places in an Ar/Kr ion laser power supply where status or
+warning lights are required and there are no convenient sources of low voltage
+for LEDs.
+<p>
+In the good old days, everyone used neon indicators.  The problem with neon
+indicators aside from the fact that they invariable start to flicker after
+a few years of constant operation (which really shouldn't be a problem here)
+is that you have any choice of color as long as it is orange. :-)  However,
+these really are the cheapest and easiest solution for putting an indicator
+on a power line:
+<PRE>
+
+                                        IL1
+                                R1      +--+
+           115 VAC or DC o-----/\/\-----|oo|-----o Return
+                               47K      +--+
+                                        NE2H
+
+</PRE>
+Neons come bare (you add resistor), as part of fancy (and expensive) indicator
+assemblies - and everything in between.
+<p>
+To use an LED on a 115 VAC circuit, it is better to use a capacitor to limit
+the current than a resistor as power dissipation is greatly reduced.  The
+following circuit will work with minor modifications in component values for
+most LEDs (4 or 5 mA assumed as drawn):
+<PRE>
+
+                         C1       R1          IL1
+          115 VAC o------||------/\/\-----+---|>|---+------o AC Return
+                        .2uF      3K      |   LED   |
+                        250V              |   D1    |
+                                          +---|&lt;|---+
+                                            1N4002   
+
+</PRE>
+D1 bypasses reverse current and R1 is for surge limiting to prevent any
+possible harm to the poor little low voltage LED if you apply power when the
+AC input is near its peak.
+<p>
+Using a small bridge rectifier (almost any voltage rating) would double the
+brightness for the same value of C1 (assuming the LED can handle the current)
+but this hardly seems worth the effort for a simple indicator!
+<PRE>
+
+                                           D1
+                    C1          R1     +--------+       IL1
+    115 VAC o-------||---------/\/\----|~      +|-------|>|----+
+                .1uF, 250 V     3K     | Little |       LED    |
+                                       | Bridge |              |
+  AC Return o--------------------------|~      -|--------------+
+                                       +--------+
+
+</PRE>
+Note: For both these circuits, a high value resistor - say 1 to 10 M ohm - is
+recommended across C1 or the input (not shown).  This will quickly discharge C1
+when power is removed.  The energy C1 can hold isn't going to kill you, but
+all those little shocks can add up to a lot of @#$% words!
+
+<h3><A NAME="apdspr4">Interlock and Protector Indicator</A></h3>
+
+Where a single indicator is adequate on circuit containing one or more series
+connected normally closed interlocks or protection devices, a simple lamp
+across the entire chain will suffice.  However, were separate indication is
+desired, this will either not work at all or result in varying brightness
+levels depending on how many of the links in the chain are open.  So, after
+your power supply is basically operational, consider spicing it up a bit with
+individual lamps for each possible fault condition - just like NASA!
+<p>
+Even with several (e.g., up to 4) of these devices in series), enough current
+should flow with any combination of them open to light their respective LEDs
+at nearly the same brightness.  However, maximum bypass current will well
+below the minimum needed to activate the controlled relay.
+<PRE>
+                                                                        +-+
+On the interlock wiring diagrams, this type of indicator is shown as: --|I|--
+                                                                        +-+
+</PRE>
+<ul>
+<li>The circuit below can be used to provide a solid visible indicator for each
+  normally closed (NC) interlock or protector in a series 115 VAC relay coil
+  circuit.
+<p>
+<ul>
+  <li>As drawn, maximum AC current to this circuit is about 3.5 mA.  Check your
+    relay coil specifications to determine if this will result in possibly
+    activating or not releasing the relay,  If so, you will have to reduce
+    the value of C1 and adjust other components accordingly (an opto-isolator
+    suing a photo-darlington may be needed).  Or, provide a load resistor from
+    AC Hot to the top of the interlock chain to increase the available current
+    (bypassing the relay coil).
+<p>
+  <li>For use on lower voltage AC, adjust the values of C1 and R1.
+<p>
+  <li>For use on a low voltage DC circuit, remove C1 and D1 and select R1 to
+    provide appropriate current limiting to OC1.
+<p>
+  <li>For a value of Vcc other than +5 V or for a different LED, change R2 to
+    select the proper LED current.
+</ul>
+<PRE>
+
+                 C1.1 uF
+        |         250 V 
+        +----&lt;&lt;----||-----+-------+       +-------+-----------------o +5 (Vcc)
+        |                 |       |       |       |
+        |             D1 _|_    __|__   |/ C      |
+    PR1  \        1N4002 /_\    _\_/_-->|         |              Isolated
+        |                 |       |     |\ E      |             Low Voltage
+        |          R1     |       |       |     |/ C               Power
+        +----&lt;&lt;---/\/\----+-------+  OC1  +-----| Q1 2N3904
+        |          5K               4N35        |\ E
+                                                  |    R2     IL1
+    PR1: NC Interlock          Phototransistor    +---/\/\----|>|----o Common
+         or Protector           Opto-isolator          100   Red LED
+
+</PRE>
+<li>A non-isolated alternative for a low voltage DC circuit (e.g., +15) is shown
+  below.  This implements a constant current LED driver.  It requires as
+  little as 3 V across each driver and supplies a constant 5 mA to the LED.
+  Modify for your own needs.
+<p>
+  Note: Check the specs for the coil of the relay you intend to use.  If its
+  holding or activation current is close to 5 mA or less, this circuit will
+  need to be modified.  Or, provide a load resistor from V+ (relay power) to
+  the top of the interlock chain to increase the available current (bypassing
+  the relay coil).
+<PRE>
+
+                                      IL1
+                              +-------|>|--------+
+                              |     Red LED      |
+          (+) |               |     R1         |/ C
+              +----&lt;&lt;---------+----/\/\----+---| Q1 2N3904
+              |                    10K     |   |\ E
+              |                            |     |
+              |              D1      D2    |     /
+          PR1  \         +---|&lt;|-----|&lt;|---+     \ R2
+              |          | 1N4148  1N4148        / 140
+              |          |                       \
+              |          |                       |
+              +----&lt;&lt;----+-----------------------+
+          (-) |          
+
+          PR1: NC Interlock or Protector
+
+</PRE>
+  Special LEDs with constant current drive circuitry built-in may also be
+  available and may be used instead if their maximum voltage ratings are
+  greater than your worst-case relay power supply voltage.
+</ul>
+<h3><A NAME="apdspr5">Visual Capacitor Bleeder Circuit</A></h3>
+
+Here is a suggested circuit which will discharge the high value main filter
+capacitors quickly and safely can be permanently substituted for the normal
+bleeder resistors.  A visual indication of charge is provided from maximum
+input to a few volts.  The dual polarity version of this circuit is described
+in the document:
+<A HREF="http://www.repairfaq.org/sam/captest.htm">Capacitor Testing,
+Safe Discharging and Other Related Information</A> and can be built into a
+handy capacitor discharge tool.
+<PRE>
+
+               5K, 10 W      D1     D2     D3     D4
+      + o-------/\/\----+----|>|----|>|----|>|----|>|----+------o -
+                        |                                |
+                        |        100          LED        |
+                        +--------/\/\---------|>|--------+
+
+</PRE>
+D1 to D4 can be any general purpose diodes (e.g., 1N4002s).
+<p>
+For permanent installation, a yellow LED is probably best meaning: CAUTION.
+<p>
+An alternative to this circuit which would have a quainter look is to use a
+4 W night light bulb in series with a 1K, 2 W resistor (since the bulbs are
+designed for 115 VAC - not 150 VDC!
+<p>
+<hr>
+<br>
+<li>Back to <A HREF="laserfaq.htm#faqtoc">Sam's Laser FAQ Table of Contents</A>.
+<li>Back to <A HREF="laserapd.htm#apdtoc">Ar/Kr Ion Laser Power Supply Design Sub-Table of Contents</A>.
+<li>Forward to <A HREF="laserasc.htm#asctoc">Complete Ar/Kr Ion Laser Power Supply Schematics</A>. 
+<p>
+<hr>
+<b><center>Sam's Laser FAQ, <A HREF="copyright.htm">Copyright &copy<A> 1994-2009,
+ Samuel M. Goldwasser, All Rights Reserved.<br>
+ I may be contacted via the
+ <A HREF="emaillnk.htm">Sci.Electronics.Repair FAQ
+ Email Links Page</A>.</center></b>
+<hr>
+<p>
+</BODY>
+</HTML>

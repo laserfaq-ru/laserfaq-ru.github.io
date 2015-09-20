@@ -1,0 +1,1488 @@
+<HTML>
+<HEAD>
+<TITLE>Sam's Laser FAQ - Home-Built Helium-Mercury (HeHg) and Other He-Metal-Vapor Lasers</TITLE>
+</HEAD>
+<BODY>
+<A NAME="chgtoc"></A>
+<p>
+<hr>
+<b><center>Sam's Laser FAQ, <A HREF="copyright.htm">Copyright &copy<A> 1994-2009,
+ Samuel M. Goldwasser, All Rights Reserved.<br>
+ I may be contacted via the
+ <A HREF="emaillnk.htm">Sci.Electronics.Repair FAQ
+ Email Links Page</A>.</center></b>
+<hr>
+<p>
+<li>Back to <A HREF="laserfaq.htm#faqtoc">Sam's Laser FAQ Table of
+ Contents</A>.
+<h1>Home-Built Helium-Mercury (HeHg) and Other He-Metal-Vapor Lasers</h1>
+<h2>Sub-Table of Contents</h2>
+<ul>
+<li><A HREF="laserchg.htm#chghbl">Basic Home-Built HeHg Laser Information</A>
+ <ul>
+ <li><A HREF="laserchg.htm#chgchg0">Introduction to Home-Built HeHg Laser</A>
+ <li><A HREF="laserchg.htm#chgsaf">Home-Built HeHg Laser Safety</A>
+ <li><A HREF="laserchg.htm#chgchg1">HeHg Laser Construction References and Links</A>
+ <li><A HREF="laserchg.htm#chgchg2">Photo of Home-Built HeHg Laser</A>
+ <li><A HREF="laserchg.htm#chgchg3">Home-Built HeHg Laser Description</A>
+ <li><A HREF="laserchg.htm#chgguide">Guidelines to Assure a Successful Home-Built HeHg Laser</A>
+ <li><A HREF="laserchg.htm#chgspps">Sources of Special Parts and Supplies for the Home-Built HeHg Laser</A>
+ </ul>
+<p>
+<li><A HREF="laserchg.htm#chgoex">Other Examples of Home-Built HeHg Lasers</A>
+ <ul>
+ <li><A HREF="laserchg.htm#chgghgd">David's HeHg Laser Design</A>
+ <li><A HREF="laserchg.htm#chgchgs">Status of Chris's HeHg Laser</A>
+ <li><A HREF="laserchg.htm#chgmse1">Mark's Helium-Selenium (HeSe) Laser</A>
+ </ul>
+<p>
+<li><A HREF="laserchg.htm#chgaio">Additional Information on Home-Built HeHg and Other He-Metal-Vapor Lasers</A>
+ <ul>
+ <li><A HREF="laserchg.htm#chgchg5">Estimating HeHg Laser Power</A>
+ <li><A HREF="laserchg.htm#chgchg6">HeHg Laser Sealed Tube Operation?</A>
+ <li><A HREF="laserchg.htm#chghene">Using a HeNe Laser Tube in a Home-Built HeHg Laser?</A>
+ <li><A HREF="laserchg.htm#chgchg7">Discussion of Potential Problems in Constructing HeHg Laser</A>
+ <li><A HREF="laserchg.htm#chgchg8">Comments on HeHg Lasers</A>
+ <li><A HREF="laserchg.htm#chgchg9">Discussion of Other Helium-Metal-Vapor Lasers</A>
+ <li><A HREF="laserchg.htm#chgscho">Steve's Comments on HeHg Optics</A>
+ <li><A HREF="laserchg.htm#chghgn2">Hg:N2 (No Helium) Laser</A>
+ </ul>
+</ul>
+<p>
+<A NAME="chghbl"></A>
+<hr>
+<br>
+<li>Back to <A HREF="laserchg.htm#chgtoc">Home-Built Helium-Mercury (HeHg)
+ and Other He-Metal-Vapor Lasers Sub-Table of Contents</A>.
+<h2>Basic Home-Built HeHg Laser Information</h2>
+<h3><A NAME="chgchg0">Introduction to Home-Built HeHg Laser</A></h3>
+
+The Helium-Mercury (HeHg) laser is similar in many respects to the HeNe and
+Ar/Kr ion lasers in terms of operation.  Another name for this laser is the
+"Mercury Vapor Ion Laser" since it operates on ion transitions of mercury
+(and this is what it is called in the Scientific American article).  It can
+generate intense pulses of light in the green (567 nm) and less intense pulses
+in the red-orange (615 nm) portion of the visible spectrum.  Output power
+for a 100 cm tube (similar to what's described below) may exceed 20 mW.
+<p>
+It may be somewhat easier (everything is relative!) to construct than those
+other lasers in terms of the required chemical/gas supplies (only a drop of
+mercury and helium) and ease of mirror alignment (since it uses a wide-bore
+tube).  However, a medium vacuum system and some glass work will still be
+needed.
+<p>
+Another Helium-Metal-Vapor laser is the Helium-Cadmium (HeCd)
+laser which is available commercially and operates in the blue (442 nm) and
+near-UV (325 nm) wavelengths.  See the chapter:
+<A HREF="laserhec.htm#hectoc">Helium-Cadmium Lasers</A> for more info.
+<p>
+And yet another, the Helium-Selenium (HeSe) laser, can generate wavelengths
+all the way from red to UV depending on the mirrors used.  While I don't know
+of commercial versions of this laser, it appears to be an interesting
+candidate for a home-built laser once you master the HeHg laser.  See the
+sections: <A HREF="laserchg.htm#chgcse1">Mark's Helium-Selenium (HeSe)
+Laser</A> and <A HREF="laserchg.htm#chgchg9">Discussion of Other
+Helium-Metal-Vapor Lasers</A>.
+<p>
+WARNING: Mercury, selenium, and cadmium are ALL classified as toxic heavy
+metals though I don't know which kills you the fastest.  Once a laser tube is
+sealed off, there is no danger unless it breaks.  However, safe handling
+procedures must be followed for toxic heavy metals when dealing with the
+initial filling of the laser tube and disposal of any excess material.
+Where the laser tube is not sealed gaseous and liquid mercury, or gaseous
+cadmium or selenium (depending on what you are using) may be sucked up by the
+vacuum system so a trap must be provided on its inlet port.
+
+<h3><A NAME="chgsaf">Home-Built HeHg Laser Safety</A></h3>
+
+There are three areas of safety considerations for the home-built HeHg laser
+(and other similar lasers, for that matter):
+<p>
+<ul>
+<li><b>Laser output:</b> The home-built HeHg laser may be capable of producing
+ a beam with an average power of several 10s of mW at multiple wavelengths.
+ Since there doesn't seem to be any hard information on the actual power
+ obtainable with this or similar home-built laser designs, it is important to
+ take precautions assuming a higher power until determined otherwise.
+<p>
+ Avoid eye contact with the direct or reflected beam.  This includes the 4
+ pairs of beams reflecting off the Brewster windows which may be quite strong.
+<p>
+<li><b>Electrical:</b> The power supplies can be lethal.  Neon sign transformer
+ based power supplies have enough voltage and current to stop a heart,  Even
+ if you aren't killed, the shock may startle you into doing something you might
+ regret.  Make sure you read and follow the <A HREF="safety.htm">Safety
+ Guidelines for High Voltage and/or Line Powered Equipment</A>.  Insulate all
+ connections and install barriers to prevent contact with the high voltage.
+<p>
+<li><b>Chemicals:</b> Mercury (Hg) is a toxic heavy metal.  While not much is
+ really used in a laser, metallic Hg and its compounds will get on all the
+ interior surfaces of your laser tube, gas manifold, and up to or past the
+ filter in your vacuum system.  Hg combines (forms an amalgom) with many common
+ metals like copper, gold, and silver just as in dental fillings (Hg + powdered
+ silver).  Thus, any of these materials in your system will be contaminated
+ after awhile as well.  Make sure you have adequate ventilation to prevent a
+ build-up of mercury vapor either from metallic Hg or through the vacuum system
+ exhaust.  Take appropriate precautions in use and dispose of these hazardous
+ materials in a responsible way.
+<p>
+ More information on the hazards of mercury and other heavy metals can be
+ found from the Material Safety Data Sheets (MSDS).  One source
+ is the <A HREF=http://msds.ehs.cornell.edu/msdssrch.asp">Cornell
+ Material Safety Data Sheets Page</A>.
+</ul> 
+<p>
+Provide proper warning signs for both the laser radiation and high voltage.
+Keep pets and small children out of the area and make sure everyone present is
+instructed as to the dangers.  The use of proper laser safety goggles for the
+specific wavelength(s) of your laser are highly recommended.
+<p>
+For more information, see the chapter: <A HREF="lasersaf.htm#saftoc">Laser
+Safety</A>.  Sample safety labels which can be edited for this laser can be
+found in the section: <A HREF="lasersaf.htm#saflslbl">Laser Safety Labels
+and Signs</A>.
+
+<h3><A NAME="chgchg1">HeHg Laser Construction References and Links</A></h3>
+
+I am not aware of any on-line information relating to any of the other types of
+home-built Helium-Metal-Vapor lasers.
+<p>
+See the Amateur Scientist article in Scientific American (October, 1980).
+Also:
+
+<ul>
+<li>Gas Laser Technology, Sinclair and Bell, ISBN 03-075385-6, has plans for a
+  two meter long Scientific American style design and a hollow cathode design
+  excited by a thyratron based pulser, it does 10 W pulsed on the red line.
+</ul>
+
+<h3><A NAME="chgchg2">Photo of Home-Built HeHg Laser</A></h3>
+
+Well, the tube sustaining a discharge at least (the mirrors have not been
+added yet):
+
+(From: Chris Chagaris (pyro@grolen.com).) 
+<ul>
+<li><A HREF="cchgls1.jpg">Overall View of Helium-Mercury Laser Tube</A>
+</ul>
+
+(Chris's home-built CO2 laser can be seen in the background.)
+
+<h3><A NAME="chgchg3">Home-Built HeHg Laser Description</A></h3>
+
+The HeHg laser is similar in basic structure to the HeNe and Ar/Kr ion lasers
+but is in some ways easier to construct, align, and operate.
+<p>
+Refer to <A HREF="hehg1asm.gif">Typical Home-Built Helium-Mercury Laser
+Assembly</A> for a simplified diagram of the overall glasswork and power supply
+electronics.
+<ul>
+<li>Level of difficulty (rated L=low, M=medium, H=high):
+<p>
+<ul>
+  <li>Overall - M.
+  <li>Glass work - M.
+  <li>Fabrication (other than glass work) - M.
+  <li>Vacuum/gas handling - M.
+  <li>Additional apparatus (optical mirror alignment jig) - M.
+  <li>Power supply - M.
+  <li>Risks (high voltage, toxic chemicals, etc.) - M.
+</ul>
+<p>
+<li>Lasing wavelength(s) - 567 nm (green) and 615 nm (red-orange).
+<p>
+<li>Resonator:
+<p>
+<ul>
+  <li>Type/lasing medium - Low pressure He and Hg vapor.
+<p>
+  <li>Bore diameter - 13 mm; bore length - 107 cm.
+<p>
+  <li>Total tube length (includes additional space beyond the actual bore,
+    e.g., to the center of the Brewster windows) - 122 cm.
+<p>
+  <li>Tube material - Borosilicate (Pyrex) glass except for the Brewster windows
+    which are fused quartz.  Soda-lime glass parts could also be used for the
+    tube (since it doesn't run particularly hot) to ease the glass working
+    requirements (no oxygen fed torch required) but take care if you are
+    interested in boosting power by playing with the power supply ratings!
+<p>
+  <li>Electrodes - Cold cathode type using coated neon sign electrodes.  These
+    are mounted in side-side-arms.
+<p>
+  <li>Gas fill - helium and mercury vapor (from a drop of mercury contained in
+    a central side/bottom tube) at a .5 to 1 Torr.  Your hand or small heater
+    used to control vapor pressure of mercury.
+<p>
+  <li>Cooling - Convection air.
+<p>
+  <li>Coupling - Quartz windows, Brewster angle = 34.43 degrees from axis for
+    567.7 nm.  Since this is a multi-wavelength laser like the Ar/Kr ion type,
+    mounting these on ball-and-socket joints might result in slightly better
+    performance for any given line but the improvement would probably very
+    slight.
+<p>
+  <li>Mirrors - Dielectric, concave, RoC = 147 cm; Reflectivity of 99.5 percent
+    at 567.7 nm.  (It appears from the SciAm article whether both mirrors
+    (normally called the HR and OC) had the same reflectivity, in which case,
+    equal intensity beams would be emitted from each end of the laser.)
+    Three screw <A HREF="mmount1.gif">Adjustable Mirror Mount</A>
+    at each end.  Alignment can use any of the techniques from this document
+    or "Light and its Uses".
+<p>
+  <li>Total resonator length (mirror face to mirror face) - 140 cm.
+</ul>
+<p>
+<li>Vacuum system:
+<p>
+<ul>
+  <li>Requirements - medium.  Article calls shows diffusion pump but suggests
+    that this isn't really needed.  However, the tube must be pumped down to
+    well under 0.1 Torr and then backfilled to operate at about 0.5 Torr.
+<p>
+  <li>Sealed tube operation but temperature of mercury reservoir must be
+    adjusted to control vapor pressure and connection to vacuum system is
+    needed.  See the section <A HREF="laserchg.htm#chgchg6">HeHg Laser Sealed
+    Tube Operation?</A>.
+</ul>
+<p>
+<li>Special chemicals/supplies required - small quantity of liquid mercury.
+  CAUTION: Fumes and compounds of mercury are poisonous.
+<p>
+<li>Excitation/Pumping:
+<p>
+<ul>
+  <li>Type - electrical discharge.
+<p>
+  <li>Power supply - 9,000 VRMS, 20 mA neon sign transformer and Variac with
+    bridge rectifier and 10 nF (.01 uF), 15 kV capacitor.
+</ul>
+<PRE>
+
+                                                    D1
+    H o--------+ T1                T2   +--------+--|>|--+--+-------+---o HV+
+                )||               ||=||(         |       |  |       |
+         Variac )&lt;--------------+ || ||(         |  D2   |  |       |
+         0-115V )||              )|| ||(      +--|--|>|--+  |       /
+             3A )||    Neon Sign )|| ||(      |  |         _|_ C1   \ R1
+                )||  Transformer )|| || +--+  |  |         --- 10nF / 100M
+            +--+        9kV,20mA )|| ||(   |  |  |  D3      |  15kV \ 5W
+            |                    )|| ||(   |  |  +--|&lt;|--+  |       | 20kV
+    N o-----+-------------------+ || ||(   |  |          |  |       |
+                                  ||=||(   |  |     D4   |  |       |
+                                  |   | +--|--+-----|&lt;|--+--+-------+--o HV-
+                                  |   |    |
+    G o---------------------------+---+----+
+                                          _|_
+                                         ////
+
+</PRE>
+</ul>
+
+<h3><A NAME="chgguide">Guidelines to Assure a Successful Home-Built HeHg
+ Laser</A></h3>
+
+These set of guidelines should be followed during construction of your first
+home-built HeHg laser.  The factors below will greatly influence the ultimate
+output power, beam quality, and whether it produces any coherent light at all!
+Once you have a working laser, feel free to make modifications - one at a time.
+Thanks to George Werner (glwerner@sprynet.com) for his comments.
+
+<ul>
+<li>Obtain good quality fused quartz optical flats for the Brewster windows.
+ They should be at least 1 mm thick to minimize distortion from the vacuum
+ These don't have to be expensive - plenty of low cost surplus optics is
+ available.  While some glass microscope slides <i>might</i> work, there is no
+ real way to be sure before your entire laser is assembled and then it is too
+ late to change.  Any candidate Brewster window should pass the following
+ tests:
+<p>
+ <ol>
+ <li>When viewed edgewise, it must <b>NOT</b> have a greenish (or other
+  color) tint.
+ <p>
+ <li>When you hold it at arm's length and view something across the room
+  through it, there should be no detectable magnification or minification.
+ <p>
+ <li>When viewed against a black background in a concentrated light beam (such
+  as sunlight passing through an f/4 concentrating lens) it should show very
+  little scattering of light (from incomplete cleaning or incomplete
+  polishing).
+ </ol>
+<p>
+ No other aspect of the laser tube assembly itself is as important as the
+ quality of the Brewster windows to the ultimate outcome of this project!
+ While, certain types of distortion won't prevent lasing (some may even make
+ it more exciting with complex mode structures), this is a complicating
+ factor your first laser can do without.
+<p>
+<li>Cut the ends of the laser tube to accept the Brewster windows only
+ <i>>after</i> all glass working (including annealing) has been performed as
+ these steps may affect the angles enough to increase losses.  Take care that
+ the angle is close to the correct value for your window material (34.4
+ degrees from the beam axis for fused quartz) with their perpendiculars as
+ close to parallel as possible.  (An error of up to 1/2 degree is acceptable
+ in both cases.  The ball-and-socket approach of the SciAm pulsed Ar/Kr ion
+ laser can be used instead to provide some adjustment range but this really
+ isn't needed.)  Use the /===\ arrangement, <b>not</b> /===/ (which will
+ shift the optical axis).   Make sure the inside surfaces of the windows are
+ immaculately clean before installation!  They can't really be cleaned
+ properly once attached to the tube.
+<p>
+<li>Mount the electrodes in side-arms well away from and with no line-of-sight
+ to the Brewster windows.  This will minimize the deposit of a metallic film
+ on the Brewster windows due to sputtering (particularly at the negative
+ electrode).
+<p>
+<li>Don't skip the essential cleaning step before final assembly of the
+ Brewster windows to the laser tube.  This will greatly reduce the amount of
+ bake-out required once you are under vacuum.  It will still be necessary to
+ pass a high current through the tube in both directions for some time as
+ well as running a low temperature torch over areas that aren't heated enough
+ by the discharge.  However, the amount of outgassing and required time will
+ be greatly reduced.
+<p>
+ CAUTION: Apparently, it is possible for an electron beam to be produced from
+ the positive electrode during the high current bake-out step which can quickly
+ melt a hole through the tube wall opposite the side-arm if left running for
+ more than a few seconds.  The visual effect will first be a spot of bright
+ yellow sodium light from the point of impact.  Use lower current and/or make
+ that area of the tube (the outside of the turn) much thicker.
+<p>
+<li>Obtain proper laser resonator mirrors.  Sorry, you can't make these in
+ your basement.  Don't even bother to try silvered or aluminized mirrors
+ (e.g., from barcode scanners), at least not until you have the laser working
+ with real mirrors.
+<p>
+ <ul>
+ <li>The HR should have as high a reflectivity as possible and the OC should
+  have about 99 percent reflectivity (assuming the 107 cm active bore length),
+  both at the green 567.7 nm line, and similar reflectivities at the
+  red-orange 615 nm line (if desired).  If your laser is longer, the OC
+  reflectivity can be reduced slightly but starting with 99 percent will work
+  well, if not being quite optimal.  Or, if you would like to have beams from
+  both ends or identical mirrors are much cheaper, they can both be 99.5
+  percent.  For initial testing, the use of a pair of HR mirrors will result
+  in the lowest threshold and the highest likelihood of lasing if something
+  else is marginal.  Once you see the (coherent) light, a proper OC can be
+  installed.
+<p>
+ <li>Their Radius of Curvature (RoC) should be between L and 2*L, where L is
+  the distance between mirrors.  An RoC of L will result in a confocal cavity
+  which has a number of attributes including being relatively easy to align.
+  An alternative which may be desirable is to implement a folded confocal
+  cavity with an RoC of 2*L for the HR and infinity (planar) for the OC.
+  See the sections: <A HREF="laserioi.htm#ioimir">Mirrors used for Lasers
+  and Laser Applications</A> and <A HREF="laserclp.htm#clpcao3">Mirrors for
+  Home-Built Lasers</A> for more info.
+<p>
+ <li>Mirrors salvaged from commercial HeNe laser tubes or other lasers may be
+  satisfactory if their RoC and reflectivities are as described above.
+  However, since the wavelengths of the HeHg laser do not coincide with those
+  of other common lasers, the reflectivities any candidate mirrors would have
+  to be tested.
+ </ul>
+<p>
+<li>Mount everything on a stable base and make sure your mirror mounts have
+ adequate precision!  No amount of fiddling will compensate for mirrors that
+ change position on their own.  Yes, it may be possible to assemble a working
+ laser mounted on wobbly stands but this isn't recommended!
+<p>
+<li>Use a HeNe or collimated diode laser to perform the mirror alignment.
+ Mount the alignment laser to the baseplate so that it will be there whenever
+ you need it.  Do the initial alignment once everything is assembled but
+ <i>before</i> actually evacuating the system and filling it with the helium
+ and mercury vapor.  Then, you'll be ready to lase, or at least very close.
+ Other alignment methods can also be used with this wide bore laser.
+<p>
+<li>Use spectroscopic grade helium for the buffer gas.  Party balloon helium
+ may work but there is no way to know the type and percentage of impurities
+ it may have.
+<p>
+<li>Make sure you read, understand, and follow <b>ALL</b> the safety
+ guidelines found in the section: <A HREF="laserchg.htm#chgsaf">Home-Built
+ HeHg Laser Safety</A>.
+</ul>
+
+<h3><A NAME="chgspps">Sources of Special Parts and Supplies for the Home-Built
+ HeHg Laser</A></h3>
+
+Beyond the normal glass work, vacuum system, and helium, a small amount of
+metallic mercury will be required.
+<p>
+WARNING: Mercury is considered a toxic heavy metal so appropriate precautions
+should be taken in its handling and disposal.  Vapors are poisonous and can
+build up in a confined space.  Mercury combines readily with many substances
+resulting in hazardous compounds.  See the section:
+<A HREF="laserchg.htm#chgsaf">Home-Built HeHg Laser Safety</A>.
+<p>
+You could try a chemical supply house but there are lower cost alternatives
+to buying a kilogram of mercury (assuming they will even sell it to you) when
+all that is needed are a couple of grams at most.
+<p>
+Your local friendly dentist has plenty - that's what he mixes with silver to
+make those wonderful amalgam fillings you love to have installed.  What a
+great excuse for a checkup!  If you can convince him/her that you know what
+you are doing and provide a suitable container, it should be a simple matter
+to donate a couple drops to a good cause.
+<p>
+Don't want to go near dentists?  I don't blame you!
+<p>
+OK, you probably have one or more silent switches in your house or apartment.
+These are the kind with absolutely no detents or snap action whatsoever.  They
+are most likely mercury switches.  Find an excuse to change one. "Ma, there
+are sparks, smoke, and 10 foot flames coming out of the wall..... I think
+this switch is bad". ;-)  Inside a mercury switch will be one or more
+metal/ceramic capsules - they sort of look like tall flying saucers and can be
+cracked open in a vice (make sure you do it in something to catch the
+mercury!).  There is ample mercury in a single one of these for any reasonable
+HeHg or similar laser or mercury vapor discharge experiments.
+<p>
+Of course, tilt switches out of thermostats, water level sensors in sump
+pumps, and similar devices may have even more mercury.  Since they are
+usually made of glass, getting at it will be somewhat easier.  But don't take
+them from where they will be missed: "Tommy, it's roasting in here and why
+is the basement flooded?". :)
+<p>
+Note: Fluorescent and high intensity discharge lamps also contain a drop of
+metallic mercury but it isn't worth the trouble to get at it.  And, smashing
+these light bulbs may release other toxic substances!  With the pressure to
+prevent environmental contamination, only very small quantities of mercury
+are used in modern lamps (maybe a few milligrams for a 4 foot tube).  Thus,
+not recommended.
+
+<p>
+<A NAME="chgoex"></A>
+<hr>
+<br>
+<li>Back to <A HREF="laserchg.htm#chgtoc">Home-Built Helium-Mercury (HeHg)
+ and Other He-Metal-Vapor Lasers Sub-Table of Contents</A>.
+<h2>Other Examples of Home-Built HeHg Lasers</h2>
+<h3><A NAME="chgghgd">David's HeHg Laser Design</A></h3>
+
+This is very similar to the HeHg laser described above.  However, it is about
+twice as large and therefore capable of higher power operation.  (This design
+appears to be similar to a HeHg laser described in: "Gas Laser Technology",
+Sinclair and Bell, ISBN 03-075385-6).  It may be able to generate up to
+several watts on the red-orange line (615 nm) and green line (567 nm).  Also
+see the section: <A HREF="laserchg.htm#chgchg5">Estimating HeHg Laser
+Power</A>.  However, note that it has NOT been built.
+<p>
+Refer to <A HREF="hehg1asm.gif">Typical Home-Built Helium-Mercury Laser
+Assembly</A> for a simplified diagram of the overall glasswork and power supply
+electronics which should be similar except for the dimensions.
+<p>
+(Specifications from: David Hansen (gldhansen@rcn.com).)
+<ul>
+<li>Level of difficulty (rated L=low, M=medium, H=high):
+<p>
+<ul>
+  <li>Overall - M.
+  <li>Glass work - M.
+  <li>Fabrication (other than glass work) - M.
+  <li>Vacuum/gas handling - M.
+  <li>Power supply - M.
+  <li>Additional apparatus (optical mirror alignment jig) - M.
+  <li>Risks (high voltage, toxic chemicals, etc.) - M.
+</ul>
+<p>
+<li>Lasing wavelength(s) - 567 nm (green) and 615 nm (red-orange).
+<p>
+<li>Resonator:
+<p>
+<ul>
+  <li>Type/lasing medium - Low pressure He and Hg vapor.
+<p>
+  <li>Bore diameter - 18 mm; bore length - 180 cm.
+<p>
+  <li>Total tube length (includes additional space beyond the actual bore,
+    e.g., to the center of the Brewster windows) - 190 cm.
+<p>
+  <li>Tube material - Borosilicate (Pyrex) glass (20 mm OD, 18 mm ID) except
+    for the Brewster windows which are fused quartz.
+<p>
+  <li>Electrodes - Cold cathode type using coated neon sign electrodes.  These
+    are mounted in Pyrex side-arms.
+<p>
+  <li>Gas fill - Helium and mercury vapor (from a drop of mercury contained in
+    a central side/bottom tube.  Gas pressure should not be above 1.5 Torr.
+    Helium can be admitted to the tube to change the wavelength of the laser
+    beam.
+<p>
+  <li>Cooling - Convection air.
+<p>
+  <li>Coupling - Quartz windows, Brewster angle = 34.43 degrees from axis for
+    567.7 nm.
+<p>
+  <li>Mirrors - Dielectric, concave, RoC = 230 cm; Reflectivity of 99.5 percent
+    at 567.7 nm.  Three screw <A HREF="mmount1.gif">Adjustable Mirror Mount</A>
+    at each end.
+<p>
+  <li>Total resonator length (mirror face to mirror face) - 200 cm.
+</ul>
+<p>
+<li>Vacuum system:
+<p>
+<ul>
+  <li>Requirements - Medium.  Two stage mechanical pump capable of .1 Torr
+    or better.
+<p>
+  <li>Sealed tube operation but temperature of mercury reservoir must be
+    adjusted to control vapor pressure and connection to vacuum system is
+    needed.  See the section <A HREF="laserchg.htm#chgchg6">HeHg Laser Sealed
+    Tube Operation?</A>.
+</ul>
+<p>
+<li>Special chemicals/supplies required - Small quantity of liquid mercury.
+  CAUTION: Fumes and compounds of mercury are poisonous.
+<p>
+<li>Excitation/Pumping:
+<p>
+<ul>
+  <li>Type - Electrical discharge.
+<p>
+  <li>Power supply: 15 kV 60 mA neon transformer and variac, bridge rectifier
+   made from HVC1200 silicon diodes charging a 20 nF, 35 kV capacitor, and a
+   spark gap switch with electrodes spaced at .4 inches.
+</ul>
+<PRE>
+
+                                                 D1              Spark Gap
+ H o--------+ T1                T2   +--------+--|>|--+--+-------+--> &lt;---o HV+
+             )||               ||=||(         |       |  |       |
+      Variac )&lt;--------------+ || ||(         |  D2   |  |       |
+      0-115V )||              )|| ||(      +--|--|>|--+  |       /
+         15A )||    Neon Sign )|| ||(      |  |         _|_ C1   \ R1
+             )||  Transformer )|| || +--+  |  |         --- 20nF / 100M
+         +--+       15kV,60mA )|| ||(   |  |  |  D3      |  35kV \ 25W
+         |                    )|| ||(   |  |  +--|&lt;|--+  |       | 35kV
+ N o-----+-------------------+ || ||(   |  |          |  |       |
+                               ||=||(   |  |     D4   |  |       |
+                               |   | +--|--+-----|&lt;|--+--+-------+--------o HV-
+                               |   |    |  D1-D4: HVC1200
+ G o---------------------------+---+----+
+                                       _|_
+                                      ////
+
+</PRE>
+</ul>
+
+<h3><A NAME="chgchgs">Status of Chris's HeHg Laser</A></h3>
+
+(From: Chris Chagaris (pyro@grolen.com).)
+<p>
+I am just about to finally complete a mercury vapor laser as per the SciAm
+plans. All that I have left to do is polish flat the brewster angle cuts at
+either end of the plasma tube so my quartz windows will fit snugly. I am
+looking forward to many hours of exciting experimentation with this rare type
+of laser. I will get some pictures of the completed system to you as soon as I
+can.
+
+<h3><A NAME="chgmse1">Mark's Helium-Selenium (HeSe) Laser</A></h3>
+
+The HeSe laser is similar in basic structure to the HeHg laser in that it
+consists of a gas discharge tube along with a means of heating selenium pellets
+to control their vapor pressure.  Unlike the HeHg laser, the HeSe laser (at
+least this example) uses a narrow bore tube more like that of the HeNe or
+Ar/Kr ion laser.  In many ways, it is similar to these to construct, align,
+and operate.  More information (including more on this particular design) is
+available in the section: <A HREF="laserchg.htm#chgchg9">Discussion of Other
+Helium-Metal-Vapor Lasers</A>.
+<p>
+A Helium-Cadmium (HeCd) laser could probably be built using the same basic
+design as the Hese laser given below.
+<p>
+This HeSe laser was built by Mark Dinsmore (dinsmore@ma.ultranet.com).)
+<p>
+Refer to <A HREF="hese1asm.gif">Mark's Home-Built Helium-Selenium Laser
+Tube</A> for a simplified diagram of the overall glasswork and electrode
+structure.
+<ul>
+<li>Level of difficulty (rated L=low, M=medium, H=high):
+<p>
+<ul>
+  <li>Overall - H.
+  <li>Glass work - H. (A little more difficult than a HeNe laser from scratch.)
+  <li>Fabrication (other than glass work) - M.
+  <li>Vacuum/gas handling - M.
+  <li>Power supply - M.
+  <li>Additional apparatus (optics, alignment jig, etc.) - M.
+  <li>Risks (high voltage, toxic chemicals, etc.) - M.
+</ul>
+<p>
+<li>Lasing wavelength(s) - Depending on optics, up to 24 wavelengths between
+ red and UV!  With blue-green (not single line) argon optics, several
+ wavelengths from 540 nm to 460 nm.  <A HREF="hese1wl.jpg">Helium-Selenium
+ Laser Wavelengths Using Argon Ion Optics</A> shows at least 8 lines and
+ enough power for the beams to be visible.
+<p>
+<li>Resonator:
+<p>
+<ul>
+  <li>Type/lasing medium: Low pressure He and Se vapor. He at around 10 Torr,
+    Se heated until the discharge turns white.
+<p>
+  <li>Bore diameter - 1 mm; bore length - 80 cm.
+<p>
+  <li>Total tube length - 100 cm
+<p>
+  <li>Tube material - Borosilicate (Pyrex) glass.
+<p>
+  <li>Electrodes - Cold cathode type using 200 mA coated neon sign electrodes
+    in Pyrex side-arms.
+<p>
+  <li>Gas fill - Helium with selenium vapor from pellets heated by heat tape
+      wrapped around side-arm. Temperature is controlled by a simple analog
+      temperature controller.  Selenium at 270 &deg;C - OK for borosilicate
+      glass.
+<p>
+  <li>Cooling - Air cooled.  The discharge current has to be high enough
+      that the bore temperature is greater than 270 &deg;C or the Se will
+      condense in the bore.  This works out to a minimum current of about
+      100 mA.
+<p>
+  <li>Coupling - Brewster windows.
+<p>
+ <li>Mirrors - Hemispherical configuration.  The source was a large frame ion
+      laser. 5% transmission for the OC.
+ <p>
+  <li>Total resonator length - 120 cm.
+<p>
+<li>Vacuum system:
+<p>
+  <li>Requirements - Medium using two stage mechanical pump and diffusion
+    pump.  I don't know if the diffusion pump was really necessary.  Probably
+    repeated evacuation and backfill with He using just the mechanical pump
+    (good for 10<sup>-5</sup> Torr) would have sufficed.
+<p>
+    In addition to a vacuum gauge, there should be at least one trap between
+    the pump(s) and the laser tube to prevent any mercury from contaminating
+    the vacuum system and/or escaping to the atmosphere.  The exhaust from the
+    mechanical pump should be passed through another trap if possible before
+    being vented <b>outside</b> and away from open windows.
+<p>
+  <li>Sealed tube operation.  I has been sealed now for over 8 years and still
+    works!  I put in a Barium ring getter to keep it clean.
+</ul>
+<p>
+<li>Special chemicals/supplies required (other than gases) - Selenium pellets.
+<p>
+<li>Excitation:
+<p>
+<ul>
+  <li>Type - Electrical discharge.
+<p>
+  <li>Power supply - Approximately 4 kV at more than 150 mA from rectified
+   "Copier" transformer on Variac.  I used a 4 kV, 250 mA transformer surplus
+   from <A HREF="http://www.herbach.com/">Herbach and Rademan</A>.  I even
+   think that they still have a supply of them after all these years!  The
+   catalog says it came out of a copier of some sort.  Verrrrry Dangerous!!!!
+   Perfect voltage and current to kill you.  That's the only part of this
+   system that scares me.  I run it with one hand in my pocket!
+<PRE>
+
+                                                 D1       R1
+    H o--------+ T1               T2 +--------+--|>|--+--/\/\---o HV+ (Main)
+                )||               ||(         |       |
+         Variac )<--------------+ ||(         |  D2   |   R2
+         0-115V )||              )||(      +--|--|>|--+--/\/\---o HV+ (Cat)
+            10A )||       Copier )||(      |  |
+                )||  Transformer )||(      |  |
+            +--+       4kV,250mA )||(      |  |  D3
+            |                    )||(      |  +--|<|--+
+    N o-----+-------------------+ ||(      |          |
+                                  ||(      |     D4   |
+                                  |  +-----+-----|<|--+-------o HV-
+                                  |      
+    G o---------------------------+
+                                 _|_
+                                ////
+
+</PRE>
+<p>
+   An Oudin coil (tesla coil type vacuum tester) is used to start the
+   discharge eliminating the need for a much higher voltage transformer or
+   separate starting circuit.  A pair of power ballast resistors distributes
+   the current in approximately the ratio 10:1 between the main anode and the
+   anti-cataphoresis electrode.
+</ul>
+</ul>
+<p>
+<A NAME="chgaio"></A>
+<hr>
+<br>
+<li>Back to <A HREF="laserchg.htm#chgtoc">Home-Built Helium-Mercury (HeHg)
+ and Other He-Metal-Vapor Lasers Sub-Table of Contents</A>.
+<h2>Additional Information on Home-Built HeHg and Other He-Metal Vapor
+ Lasers</h2>
+<h3><A NAME="chgchg5">Estimating HeHg Laser Power</A></h3>
+
+I have a hard enough time estimating power output from a conventional
+optimized HeNe laser let alone something like this with so many variables
+including: discharge length, bore diameter, Brewster window losses, mirror
+reflectivity, gas fill, current peak magnitude and wave shape, etc.  All other
+factors being equal without (and without limiting effects), a rough estimate
+might suggest that output power is proportional to the volume of the lasing
+discharge and peak current - but I don't even know how valid that is!  I think
+the gain of the HeHg laser is high enough that a wide variety of tube lengths
+and diameters will work with the recommended mirrors (99.5% reflectivity at
+567 nm, confocal or concave/planar) but I cannot begin to estimate power.
+<p>
+I gather from the "Light and its Uses" HeHg laser description that while
+the laser produced 'intense pulses of green and red light', the average output
+power  wasn't more than a mW or so.  Even a 1 mW of 567 nm green would appear
+quite intense - 4 or 5 times brighter than 1 mW of 632.8 red.
+<p>
+Also see the section: <A HREF="laserchg.htm#chgchg8">Comments on HeHg
+Lasers</A>.
+
+<h3><A NAME="chgchg6">HeHg Laser Sealed Tube Operation?</A></h3>
+
+Although in principle, the HeHg laser can be operated in 'sealed tube' fashion,
+as a practical matter, maintaining a connection to the vacuum system will be
+essential.  The main reason is that once mercury vapor condenses on parts of
+the tube away from the side/bottom tube with the mercury drop, you have lost
+control of the vapor pressure (since the whole tube cannot be cooled/warmed
+as required).  Thus, the need to be able to pump it down if the pressure rises
+too high and then supply fresh helium.  So, it may be possible to run the HeHg
+laser with the valve to the vacuum system closed, the valve will still have to
+be present!
+<p>
+However, a tube full of mercury vapor at a couple of Torr is not much material
+so a drop of mercury should go a long way.  In addition to losses out the
+vacuum system and by condensation on the tube walls, some may form an amalgom
+with the metal of the electrodes or their lead-in wires (depending on the
+metals involved), be adsorbed by the tube walls or Epoxy seals (if used), or
+be buried under sputtered electrode material.
+<p>
+Also see the section: <A HREF="laserchg.htm#chgchg8">Comments on HeHg
+Lasers</A>.
+
+<h3><A NAME="chghene">Using a HeNe Laser Tube in a Home-Built HeHg
+ Laser?</A></h3>
+
+The following was prompted by the suggestion on the
+<A HREF="http://www.plans-kits.com/">Plans and Kits Unlimited Web Site</A>
+that it is possible to use a helium-neon (HeNe) laser tube as the basis for a
+home-built HeHg laser.  (PKU is not out of business and by the time you read
+this, their Web site may be gone as well.)  (They, of course, would have sold
+you the plans and also had some HeNe laser heads that would contain suitable
+tubes.  Please see the comments on this company and a link to some of their
+laser offerings in the section: <A HREF="laserlps.htm#lpsnsw6">Electronic,
+Optics, and Laser Project Plans, Parts, Kits, Specialized Components</A>.)  At
+first, the idea of this conversion may seem preposterous but upon reflection
+(no pun), perhaps it isn't quite <i>that</i> way out.  However, I am not
+claiming that it what is proposed below will actually work.  (Note that I have
+NOT seen their plans or even a 4th hand description of them.  Similarities, if
+any in the following are entirely coincidental.)
+<p>
+Refer to <A HREF="hehg2asm.gif">Home-Built Pulsed HeHg Laser Using HeNe Laser
+Tube</A> for a simplified diagram of a possible system.
+<p>
+The idea would be to take a long certifiably dead but undamaged HeNe tube,
+break the seal, add a drop of mercury, and attach it to your vacuum/gas supply
+system.  I would recommend a tube of at 18" to 24" in length to provide enough
+gain to have a chance of lasing.  The mirrors on a red (632.8 nm) HeNe tube
+should work for to the 615 nm HeHg wavelength; the mirrors on a green
+(543.5 nm) HeNe tube could work for the 567 nm HeHg wavelength.  In both cases,
+the mirror reflectivity will be quite close to the value at their design
+wavelengths.  I don't know how the narrow bore of the HeNe tube will affect
+gain - usually a narrow bore has higher gain than a wide bore.  The optimal
+gas pressure and fill ratio (He to vapor pressure of Hg) will also likely be
+considerable different for this shorter and narrow bore tube.
+<p>
+Actually, adding a gas inlet port at the opposite end from the exhaust tube
+(probably the anode-end and the exhaust is usually done at the cathode-end),
+would be better than just injecting a glob of mercury.  To do this would
+require drilling a tiny hole in the side of the mirror mount and installing
+a thin piece of tubing to connect to your helium supply and mercury reservoir.
+The advantage would be in being able to better control the temperature of the
+mercury and thus it vapor pressure.  Vacuum requirements are also less
+stringent with a flowing gas system.  However, since the high voltage will
+then connect to the same place as the gas/mercury feed, some means will have
+to be provided to prevent the discharge from taking place via the this route
+(e.g., a long thin plastic capillary).  And, of course, everything there will
+be floating at a high voltage!  CAUTION: If you are using what was once a
+polarized HeNe tube, there will be a Brewster plate inside at (usually) the
+HR-end which might be damaged.  Also, drilling may leave metal particles
+and/or a raised ridge that could be difficult to remove.
+<p>
+In addition to a vacuum gauge, there should be at least one trap between
+the pump and the HeNe tube to prevent mercury from contaminating the
+vacuum system and/or escaping to the atmosphere.  The exhaust from the
+pump should be passed through another trap if possible before being vented
+<b>outside</b> and away from open windows.
+<p>
+One of the concerns with respect to tube life would be possible condensation
+of metallic mercury on the mirrors.  However, some (low temperature) heating
+tape wrapped around each one would probably provide adequate protection given
+the low vaporization temperature of mercury.
+<p>
+Another problem with using an existing HeNe (or any other type) laser tube is
+that the metallurgy will not have been selected with mercury in mind.  Mercury
+will combine (amalgamate) with many metals including of course silver
+(remember all those wonderful fillings?!) and copper.  What implications this
+has for the life of a home-built HeHg laser, I do not know.  Since only small
+quantities of Hg will be will be introduced to the tube in the form of a low
+pressure vapor, this may not be a serious short term problem at least.  I did
+some simple tests with a drop of mercury and the metal of a HeNe tube without
+any obvious effects but didn't let it soak for very long!
+<p>
+A power supply similar to the basic neon sign transformer/rectifier/HV
+capacitor specified for the SciAm home-built HeHg laser should work here as
+well, though some 'adjustments' may be needed for the narrow bore tube since
+the breakdown voltage is likely to be much higher than even for the much
+longer, but wide bore SciAm design.
+<p>
+Whether this will even work - or for how long - I cannot say at present.
+However, it's something to try without risking a lot of time or money.  The
+cost of intact, but very likely unusable tubes (as HeNe lasers) should be
+modest or free: <A HREF="laserlps.htm#lpstoc">Laser and Parts Sources</A>.
+The optics are internal and probably aligned correctly (though this should be
+confirmed) so much of the difficult work and cost is gone.  If anyone attempts
+or succeeds at an endeavor such as this, please send me mail via the
+<A HREF="emaillnk.htm">Sci.Electronics.Repair FAQ
+Email Links Page</A> and I will add your experiences to the collective
+knowledge base on the home-built HeHg laser!
+<p>
+CAUTION: If you have any fantasies or desire to resurrect the original HeNe
+tube as a HeNe tube, DO NOT attempt this lunacy as there will be no practical
+way of purging it of mercury contamination after you are done playing.
+
+<h3><A NAME="chgchg7">Discussion of Potential Problems in Constructing HeHg
+ Laser</A></h3>
+
+(From: Richard Alexander (RAlexan290@gnn.com).)
+<p>
+Just off the top of my head, I'd say the problem with it is the 
+mercury. That is toxic stuff, and it goes right through your skin. 
+Make it a vapor and you would breath it. The less you fool with it, 
+the better off you are. 
+<p>
+Another problem might be that mercury is expensive. A pint jar of 
+mercury would be worth hundreds or thousands of dollars (well, a 
+lot, anyway). The same amount of copper would be worth only a few dollars. 
+<p>
+(From: David Demmer (ddemmer@physics.utoronto.ca).)
+<p>
+Nah, in an earlier life I was a chemist, and demonstrated a physical 
+chemistry lab that used a Toppler pump. For the uninitiated, this 
+consists of some ingenious glassware and about 500 mL of mercury.
+The stuff is really pretty cheap when bought in quantity: actually
+about $100/kg for reagent grade from Aldrich. Of course a kg is a
+smallish volume because it's surprisingly dense stuff.
+<p>
+As for a laser like a helium-mercury vapour laser, the amount of mercury 
+necessary is actually pretty small. And besides, expense doesn't
+stop anybody using a gold vapour laser. The cost of the fill is trivial
+compared with capital and other operating costs.
+<p>
+Toxicity, too, never stopped anybody from using HF, F2, etc. in their
+excimer lasers.
+<p>
+So, while not knowing the answer to the fellow's question, I guess
+I'm saying that I don't agree with yours.
+<p>
+(From: Richard Alexander (RAlexan290@gnn.com).)
+<p>
+Well, it looks like you pretty well stopped my argument for the 
+expense, but I think toxicity is still in play. In defense of that 
+argument, I present my belief that excimer lasers are used mostly 
+in industrial settings, away from most people (ok, I know there are 
+medical excimers that offer some interesting promise). 
+<p>
+Maybe it's not too late for me to agree with the other poster that 
+the wavelength put out by a mercury vapor laser is better produced 
+by another type of laser. (I've had this discussion before, several 
+years ago. It's just taking time for me to remember what I was 
+told.) It seems like it isn't worth the bother of making the laser 
+when HeNe and Argon Ion cover whatever the Hg vapor laser will do 
+(ok, I admit I don't remember what lasers cover the Hg vapor laser 
+wavelengths. You get the gist of my hazy memories.)
+<p>
+(From: Herman de Jong (h.m.m.dejong@phys.tue.nl).)
+<p>
+Mercury is used in home used thermometers, in thermostat switches for
+heating the home,  in tilting switches, in high power reed switches,
+in TL end related light tubes etc.
+<p>
+The  mercury laser uses maybe a few milligrams/year and it could be
+trapped in an amalgam with silver, copper, zinc, not iron, about the
+only exception. this effectively blocks mercury from reaching the
+pump. 
+<p>
+A thermometer contains maybe a few hundred milligrams this is no
+problem.
+<p>
+(From: Herman de Jong (h.m.m.dejong@phys.tue.nl).)
+<p>
+I agree with you David.
+<p>
+If I remember right the CW laser wasn't peculiarly intense but it had low
+(single ended) optical feedback and the length of the vapour was a few
+feet. and it was a DC discharge at a few kV with a neon transformer. It needs
+a Helium flushing bottle and a vacuum pump. At that wavelength it probably
+can't compete with the more powerful Ar+ lasers (514 nm, some are sealed) and
+the much simpler green HeNe(sealed). The Neon transformer (6 kV, 100 mA?)
+suggests also very poor efficiency. But for your home built laser it is a nice
+project and even the vacuum pump can be very cheap by using the compressor
+from a discarded air conditioner, refrigerator, or freezer.
+<p>
+The expensive setup would only be acceptable it the power could be high. I
+suspect the population of the concerning state densities to be low although
+they have very high absorption/stimulated emission probabilities. This means
+the Sc.Am. is probably operating near saturation and it is hard to increase
+output energy. More length will have a linear effect, higher vapour pressure
+(T) is complicated. Maybe a different kind of discharge favors the population
+of concerning states but it could be a lot more complicated then this.
+
+<h3><A NAME="chgchg8">Comments on HeHg Lasers</A></h3>
+
+(From Steve Roberts (osteven@akrobiz.com).)
+<p>
+I did a bit of a literature search on the helium-mercury and other mercuary
+based lasers.
+<p>
+The Scientific American design is gain limited, but the power scales with tube
+diameter up to say 2 inches, and gain scales pretty much proportionally to
+length as well. The laser not only emits in the green and red, but has many
+lines in the IR around 1.2 to 1.8 microns. It has lased continuously on the
+visible lines in a hollow cathode type tube. It is also super-radient. It
+lases after the excitation pulse has almost died out (lases in afterglow).
+For all intents and purposes it seems like a ideal low cost laser and would
+probably be useful to someone.
+<p>
+However I've noted two things, No one ever seems to have measured the output
+power, save for one citation listed below and two, papers stopped appearing on
+it after 1970 or so.  One wonders if it does not have some major fault, as it
+was discovered by one of Spectra-Physics chief scientists, and yet nobody
+makes it commercially?
+<p>
+<li>Gas Laser Technology, Sinclair and Bell, ISBN 03-075385-6
+<p>
+The above book has plans for a two meter long Scientific American style
+design and a hollow cathode design excited by a thyratron based pulser, it
+does 10 W pulsed on the red line.
+<p>
+This still leaves the question, Why is it not in Use?
+<p>
+Here are some papers to check out:
+<p>
+<ul>
+<li>"Quasi-CW laser action from Mercury III lines", Burkhard, Luethi, Seelig,
+ Optical Communication, 18(4), pp. 485-487, 1976.
+<p>
+ Summary states: "Quasi CW operation of 3 laser lines, 650.1 nm, 521.0 nm
+ 479.7 nm, was obtained in a pure Hg, very low pressure discharge.
+ These lines are the Hg-III 5d86s2-5d96p transitions. A per pulse output
+ power of 40 W at 650.1, 25 w at 479.7 and 5w at 521.0 was observed."
+<p>
+<li>"Fabrication of Wide Bore Hollow Cathode Mercury(I) Ion Lasers",
+ Wieder, Myers, Fisher, et. al., Review of Scientific Instruments, 38(10),
+ pp. 1538-1540, 1967.
+<p>
+ Summary reads: Using the 202 isotope of Hg (<sup>202</sup>Hg), gain as high
+ as 120 mW/cm was obtained in a 2 to 5 cm diameter tube.  However, gain varies
+ over an order of magnitude as it is very sensitive to the temperature profile
+ along the tube.  Used 30 mg of Hg.  Entire tube must be strongly heated. Used
+ cathode of 20 cm long and 2.5 cm in diameter with ring anodes one cm away.
+ Notes problems with fringe fields from any sharp edge of glass within 2.5 cm
+ of cathode. Cathode must be closely fitted (1 mm gap) to outer glass wall to
+ transfer heat.
+</ul>
+<p>
+Now we know a few reasons why mercury based lasers aren't commercial:
+The temperature variation, plus <sup>202</sup>Hg isn't cheap. Along with a
+thyratron, it shoots itself in the foot.  Xenon is looking a lot better
+then Hg, except that a turbo or diffusion pump is needed to get there. Most
+stuff I'm reading now says 10 to 20 microns for xenon III-IV ions, to get
+the really screaming lines.
+<p>
+(From: David Demmer (ddemmer@physics.utoronto.ca).)
+<p>
+Well done!
+<p>
+The large bore size and scaling sound a lot like a copper or gold vapour laser,
+i.e. unstable or planar multimode resonator. This would make it lose out to,
+say a Kr ion laser for beam quality, and a copper/gold vapour for raw power in
+the green or red.
+<p>
+On a different note, I don't know that the phrases "ideal low cost" and
+"thyratron based" should appear in the same discussion ;->.
+<p>
+(From: Sam.)
+<p>
+Aside from the cost issue of a thyratron pulsar, the need to keep fiddling with
+the gas pressure/fill to maintain laser action in an efficient and stable
+manner could be a factor in the lack of commercial viability.  Unlike a
+fluorescent or high pressure discharge lamp using mercury vapor, the HeHg
+laser would appear to operate at a very low pressure (1 or 2 Torr) where a
+stable gas fill could not easily be achieved.  Therefore, some possibly
+complex and costly feedback mechanism would be needed to produce a viable
+product (possibly along the lines of a low flow CO2 laser).  This may push
+it over the cliff so to speak when compared to alternatives like those
+mentioned above.  However, it should be noted, that the helium-cadmium laser
+has similar requirements but DOES fill a niche in wavelength where suitable
+alternatives have not been readily available.
+<p>
+Then again, perhaps it was a simple business decision to go with Ar/Kr ion
+rather than HeHg and now that any patents have run out, they are just keeping
+its potential benefits and ease of construction quiet. :-)
+<p>
+(From: David Hansen: (gldhansen@rcn.com).)
+<p>
+If anyone does build or has built a HeHg laser, many experiments can be done
+with the gas fill and cavity optics.  Chris Chagaris (pyro@grolen.com) told me
+of a Hg vapor laser that used a small (1.5 mm) bore and used argon instead of
+helium.  It put out many wavelengths in the blue and into the UV.  Anyone up
+to trying all the noble gases in a Hg vapor laser tube?  How about radon? :)
+If someone did do this, it would be easier to use white light optics, rather
+than constantly interchanging your mirrors and having to re-align them.
+Ball-and-socket joints might be nice for the Brewster windows as well since
+this would permit their angles to be optimized for each wavelength.
+
+<h3><A NAME="chgchg9">Discussion of Other Helium-Metal-Vapor Lasers</A></h3>
+
+The following is edited from a set of posts on the USENET newsgroup
+<A HREF="news:sci.optics">sci.optics</A>dealing with Helium-Cadmium (HeCd) and
+other Helium-Metal-Vapor laser characteristics, design, and fabrication
+including a home-built HeSe laser that should be relatively easy to construct.
+Eventually, I hope to have a complete description, specifications, and a
+diagram of the HeSe laser.  The entire thread was somehow triggered by a
+request for information on home-built CO2 lasers but evolved into something
+almost entirely unrelated after that discussion ran its course.
+<p>
+The HeCd laser is the only one of this class I know of to be readily available
+commercially operating at blue (442 nm) and near-UV (325 nm) wavelengths.  The
+basic design is similar to other gas lasers with the addition of some means of
+heating Cd pellets contained in a reservoir inside the sealed tube.  Typical
+power requirements are 800 to 2,000 VDC at 10 to 25 mA or more.  The vapor
+pressure of the Cd, total tube pressure, tube current/voltage and temperature
+all affect output power and several control loops may be present to maintain
+one or more of these constant.
+<p>
+A description in standard format of the Helium-Selenium laser discussed below
+can be found in the section: <A HREF="laserchg.htm#chgcse1">Mark's Home-Built
+HeSe Laser</A>.
+<p>
+The major contributors are:
+<ul>
+<li>Chris: Christopher R. Carlen (crobc@epix.net)
+<li>Mark: Mark Dinsmore (dinsmore@ma.ultranet.com)
+<li>Steve: Steve Roberts (osteven@akrobiz.com)
+<li>Brian: Brian Vanderkolk (skywise711@earthlink.net)
+</ul>
+This is the lead-in:
+<p>
+(From: Chris.)
+<p>
+I agree that the typical "how do I build a powerful laser" posters are crude
+hobbyists who really have no idea what is involved in building a working laser.
+They are therefore likely to not know much about laser or high voltage/power
+safety precautions either.
+<p>
+For myself, I have built a CO2 laser to serve in a (heavily supervised)
+instructional laboratory session for undergraduate physics majors.  Think about
+it: Is a physics major who really doesn't know how to build (or at least align
+the cavity) of a laser really deserving of a B.S. degree when he graduates?
+<p>
+My next project: A HeCd laser.
+<p>
+(From: Thomas C. Sefranek (tcs@cmcorp.com).)
+<p>
+Wow!  Your getting a VERY blue output.  (If my memory serves me.)  Do you plan
+a vapor trap?
+<p>
+(From: John Woodgate (jmw@jmwa.demon.co.uk).)
+<p>
+Even the light will be toxic! :)
+<p>
+(From: Chris.)
+<p>
+A sealed HeCd tube poses no Cd hazard, unless you break it.  There is typically
+some facility to trap Cd vapor within the tube to keep it from depositing on
+the optical windows.  That is about the only bad thing that can happen, aside
+from significant difficulties getting the vapor pressure of Cd correct while
+at the same time getting the He partial pressure correct at operating temp.
+<p>
+Since it is difficult to properly evacuate and seal a sealed tube
+without sophisticated vacuum equipment and knowledge of glass to metal
+seals, annealing, bake-out, etc., it may be easier to build a flowing
+gas tube.  I would do this with a helium flow manifold, preheater, a
+heated (tube heating is of course microprocessor controlled for accurate
+control of pressures) Cd pool, and a cold trap for Cd vapor at the
+tube's exhaust port before the optical window and before the vacuum
+pump.
+<p>
+I don't know if a flowing gas HeCd is more difficult than a sealed
+tube.  It may be worth learning the glass to metal seal techniques (or
+contracting a glassblower that knows it), and investing in the UHV
+equipment.  
+<p>
+Certainly a flowing gas CO2 is much easier than a sealed tube, the
+sealed variety requiring water cooling and a catalytic cathode that can
+regenerate CO2 from dissociation fragments.  But HeCd may be the other
+way around.
+<p>
+Anyone got any experience with HeCd engineering they'd like to share?
+<p>
+(From: Steve.)
+<p>
+You might want to start with pulsed oxygen or xenon first to learn the
+glassblowing mechanics, as those are more tolerant of dirt in the tube and
+outgassing.   Xenon, oxygen and even neon, all lase in pulsed systems at
+visible wavelengths.  Xenon and neon are green, and used to be used in pulsed
+resistor trimmers.  Oxygen lases in the blue and yellow.  Just about any gas
+element has laser transitions.  You never know what may work till you try.
+See the section: <A HREF="lasercmg.htm#cmgtoc">Home-Built Pulsed Multiple Gas
+(PMG) Laser</A> which presents a design similar to the one described in the
+paper: "A Cold Cathode Pulsed Gas Laser" by R. K. Lomnes and J. C. Taylor, The
+Review of Scientific Instruments (RSI), Vol. 42, No. 6, June, 1971, pp. 766.
+This generic gas laser may be used with several different gases such as Ar,
+Kr, and Xe, but also with oxygen (O2).
+<p>
+The O2 laser lases in the afterglow, in a medium bore diameter tube, mainly in
+the yellow (559.2 nm), with much higher gain then mercury. It likes a long
+tube and needs pulsed excitation.  The researchers who built this laser
+claimed much higher power then pulsed argon using the same tube, even with
+sub-optimal argon optics.  It is a simple design using glass tubing, aluminum
+electrodes, and a Plexiglas box for cooling.  Like small CO2 lasers, it was
+pumped in real time with a slow gas flow.  The authors opted for a thyratron
+pulser to gain a lot more peak power but the basic neon sign power supply
+charging a HV capacitor should work as well.
+<p>
+After you have mastered the pulsed gas lasers, maybe then move on to HeSn or
+HeIn or HePb.
+<p>
+My only problem with the RSI lasers and the Hg design is nobody ever specs the
+required transmission for the output couplers, which really is what determines
+the power emitted by the laser. Too much transmission and it won't lase; too
+little and you don't get any power out and the tube saturates, making it look
+like it's not lasing well.  The problem is we usually only have the money for
+one set of optics to try.
+<p>
+I used to own a long positive column self heated HeCd, a Liconix 401.  It only
+lased in a range 5 mA wide at a tube current of about 250 mA tube current and
+had the tube lagged with asbestos for a certain thermal time constant.  You cut
+holes in a piece of fireproof paper to adjust the air flow over one end of the
+tube to adjust the pumping of the cadmium from one end to the other via
+cataphoresis as the tube aged.  It took 25 to 30 minutes to start lasing and
+was very tricky to adjust at first. 
+<p>
+Modern tubes have a multisegmeted bore with multiple Cd sources, a glass frit
+helium pump and a bunch of other things to condition things right.  So if you
+do it, having an oven on the tube helps as well as active pressure control.
+Helium pressure is probably going to be in the 7 torr range.
+<p>
+The toughest thing you will face is cutting the Brewster stems, the old thing
+about using abrasives and a brass blade in a hacksaw doesn't work well.  You'll
+need stress free windows and stems.  Lasing power more then anything else is
+dependent on the window quality and axial angle tolerances.  A quartz window
+not properly cut will have birefringence properties that may prevent lasing
+entirely so you have to get good windows.  Fused silica will work for a lab
+toy, but you'll have long term lifetime problems with them from solarization
+and the output power will be lower.  You might wish to consider buying a few
+glass to vacuum flange transitions to make your life easier.  And use a hot
+cathode - older tubes used off the shelf fluorescent lamp cathodes.
+<p>
+If your willing to use Pyrex, the seals are inexpensive and off the shelf.  The
+actual glassblowing for a straight tube is easy enought for a beginner to do.
+There are a few good books on amateur glassblowing and a few days practice
+should get you all the skills you need. Look for a glassblowing book by
+C. L. Stong.
+<p>
+(From: Mark.)
+<p>
+There are lots of people who will tell you not to try a project like a HeCd or
+other Helium-Metal-Vapor laser, or that it cannot be done.  Don't listen!!.  I
+very successfully built a Helium-Selenium (HeSe) laser 5 or 6 years ago.  It
+still runs great - I fire it up in my basement every once in a while.  I used
+a 1 meter confocal cavity with argon ion laser mirrors and got 100 mW CW of
+multimode, multiwavelength light with lines from 540 nm to around 460 nm.  If
+I had had a broadband cavity, I could have gotten 24 wavelengths from red to
+UV! It was a difficult project with a very satisfactory conclusion.  Just use
+caution around the chemicals, HV, and laser light. (BTW, selenium is actually
+good for you in small quantities. :) Good luck!
+<p>
+(From: Steve.)
+<p>
+Mark, care to share your bore diameter and length?  Partial pressures?  Tube
+currents?
+<p>
+(From: Brian.)
+<p>
+Yes, please tell us more.  This sounds like a very fascinating laser. I'd like
+to know more about what wavelengths are possible and at what relative powers,
+plus anything else you care to share as well.
+<p>
+(From: Chris.)
+<p>
+Very interesting.  I don't know about HeSe.  Only one question at this point:
+<p>
+I have figured that to control the metal vapor partial pressure you need only
+know a little about its thermodynamics, then by controlling the tube
+temperature, you control the metal vapor pressure.  Of course, avoiding
+temperature gradients is important.  Is this on the right track?
+<p>
+Is yours a sealed tube or flowing?
+<p>
+(From: Mark.)
+<p>
+The laser I built is based on cataphoresis for controlling the vapor pressure
+of the selenium.  Selenium vapor is introduce at the anode end, is swept along
+the plasma tube by cataphoresis, and deposited on the walls of the tube at the
+cathode end.  The cataphoresis/deposition keeps the partial pressure of Se
+constant in the gain region, allowing the laser gain to be achieved.  The
+temperature of the Se source is quite critical, approximately 270 &deg;C
+plus or minus a few degrees, but it is very easy to tune.  The temperature in
+the bore needs to be hotter than that, but the plasma current self-heats this
+section and is not critical at all as long as it is hotter than 270 &deg;C.
+<p>
+(From: Chris.)
+<p>
+Ok, I understand that cataphoresis will maintain a constant pressure over the
+tube length, but isn't the Se pressure still controlled by the temperature?
+<p>
+(From: Mark.)
+<p>
+Absolutely.  The selenium is located in a sidearm of the tube, isolated from
+the discharge.  An external, temperature controlled heater generates the proper
+vapor pressure, the vapor expands up into the discharge, and gets swept down
+the bore by cataphoresis.
+<p>
+(From: Chris.)
+<p>
+Did you do any cataphoresis rate and thermodynamics calculations, or did you
+just approximate someone else's construction?  It is funny how much you don't
+need to know to make a laser.  Mechanical innovation is the primary
+prerequisite, it seems, plus some EE wits.
+<p>
+(From: Mark.)
+<p>
+Absolutely, again!
+<p>
+I did them a long time ago for a class in electrooptics in college, but the
+reality of this kind of laser is that you just adjust the parameters to
+maximize the gain.  A reasonably good way of measuring the potential gain
+without having the laser actually oscillating is to measure the sidelight at
+the max gain wavelength (520 nm) with a filter and a photodiode.  That way,
+you can adjust the helium pressure, the selenium temperature, and the discharge
+current and monitor the effects.
+<p>
+(From: Chris.)
+<p>
+Since a plasma tube cathode is typically pretty hot, I would expect that end of
+the tube to be hotter than the rest, and so unlikely to condense the Se.  Does
+your Se condense *after* the cathode?  Or perhaps you cool the tube walls
+around the cathode?  I guess you don't have to worry about deposition on the
+cathode, huh.  But perhaps it wouldn't even matter if it happened.
+<p>
+(From: Mark.)
+<p>
+After the capillary bore, I allow the diameter of the discharge tube to expand.
+This allows a cooler region where the selenium can deposit before getting into
+the cathode area.  As you say, the cathode runs quite hot, so I don't think
+much Se lands there.  one of my prototype tubes did exactly what you say - the
+Se was deposited behind the cathode in a cool area near the getter.  
+<p>
+The big problem is keeping the Se off the Brewster window on the cathode end of
+the tube.  I elaborated on someone else's idea and run a reverse current of
+about 10% discharge current to keep the Se off the window.  All will be clear
+when I get my report done.
+<p>
+If the source temperature is too low, the plasma is the pink color of He.  If
+it is too high, it turns a vivid dark blue.  If it is just right, it is bright
+white!  The helium pressure is about 10 Torr, not very critical.
+<p>
+I have about 100 hours on the tube, and have seen almost no depletion of the Se
+in my reservoir.  The construction is a sealed pyrex glass envelope with a 1 mm
+bore plasma tube approx 0.8 meter long.  It has been sealed off for >6 years
+with epoxy sealed brewster windows, and it still works!
+<p>
+(From: Chris.)
+<p>
+Now that is impressive.  I have done a few glass/epoxy/metal vacuum seals, and
+have found them remarkably good for the ease of performing them.  From what I
+have read so far, glass/metal seals are not trivial.  Good to hear about a
+sealed tube holding up with epoxy seals.  I wonder, just hardware store epoxy,
+or something special?
+<p>
+(From: Mark.)
+<p>
+Special.  I was using Epotek 305, and it worked quite well.  I have recently
+discovered another substance, Vac-Seal, which has an incredibly low vapor
+pressure and is silicone based, and they promote it for general purpose vacuum
+sealing and sealing laser windows.  Works great on some x-ray tubes I build at
+work - several years of pinch-off with no degradation yet.
+<p>
+The laser tube is about 50% more complicated than a HeNe system, but gives much
+more output.  The gain of the brightest lines is about 5%/meter, so surplus
+argon laser mirrors work very well.  As far as I can tell, the only reason the
+Se laser never became commercially viable is that the lines are so close
+together that it is difficult to select just one with a prism selector.  It has
+a really nice green line.
+<p>
+(From: Steve.)
+<p>
+I've got something to cure the separation problem, a PCAOM.  That stands for
+Polychromatic Acousto-Optic Modulator, it's really a sort of AOTF that can
+amplitude modulate up to 8 lines from a given laser.  We use them for color
+control on laser shows.  With a little work, it could be reprogrammed for the
+HeSe lines.  BTW, it keeps all the lines colinear so you don't need huge arrays
+of mirror mounts and dichroic optics to do color separation and recombination.
+You shoot a white beam in and get controlled colors out and a waste beam.  It
+can control lines as close together as 3 nm.  Cost is about $1,800 for the 4
+channel and $3,500 for the 8 channel units.
+<p>
+(From: Mark.)
+<p>
+I have been planning to write up the project but have been very busy lately.
+There has been enough interest that I will try to get a complete description
+and photos on Sam Goldwasser's laser FAQ site as soon as I can.  I will alert
+this newsgroup when I have it completed.  Wish I could get alt.laser - my ISP
+doesn't provide it.
+<p>
+(From: Chris.)
+<p>
+Now your making me feel guilty.  I've got some CO2 photos, but I don't know
+when I can get them scanned.  So damn busy.  This HeSe is very interesting.
+You are making me think about doing that instead of HeCd.
+<p>
+What kind of total output power are you getting?  I envision 10 to 50 mW,
+right?
+<p>
+(From: Mark.)
+<p>
+I got a little over 100 mW, multi-line, multi-mode.  It was enough that
+focussed with a lens, I could melt holes in my black Swiss Army knife.
+A new standard for laser output?? :)
+<p>
+There is a good survey article on metal vapor ion lasers in Scientific American
+back in the early 70's.  They talk quite a bit about the HeSe laser, and give
+journal references for some of the important work.
+<p>
+(From: Chris.)
+<p>
+Thanks, I'll be checking that out some time.
+<p>
+(From: Keith (Thallium204@aol.com).)
+<p>
+I'm sure you know that thallium is named after its strong green spectral
+line.  It just happens that it has a very low melting/vapor point, and like
+mercury needs no buffer gas to lase, it just needs a vacuum. It is not very
+critical of vapor pressure as in the HeCd and HeSe.  The use of argon or neon
+as a buffer does make it more efficient but is not absolutely needed.  The
+mirrors from a dead green HeNe laser tube work fine (as long as their radius
+of curvature is consistent with stability for the resonator).
+
+<h3><A NAME="chgscho">Steve's Comments on HeHg Optics</A></h3>
+
+(From Steve Roberts (osteven@akrobiz.com).)
+<p>
+Without knowing the required reflectance and radius of curvature (RoC), the
+following comments can only be very general.
+<p>
+Nothing off-the-shelf is close in the required diameter, RoC,
+transmission, and wavelength except maybe some doubled YAG optics for
+the green line and a few argon ion high reflectors.  Dye laser OCs cut for
+the 620 nm region might be a option but they usually have a very short
+radius and a 5% transmission which may be too much. You might try two
+Newport or Thorlabs flats with BB or BD coatings (both broad-band high
+reflectors) to get going as a test and take your beam off the Brewster
+reflection. That would set you back $80 to $150 for two flats at 1"
+diameter. Flat to Flat is very hard to align.  At least one mirror
+should have say a 2 to 4 meter RoC. Even a BD1 coating is
+going to leak some small amount of beam out if your lasing and the
+back of the optic is not frosted. But it would let you see how much
+gain you have.  The Chinese and the Bulgarians will run custom coating
+lots at around $1000 to $2000 a lot if you supply the blanks and your
+specs are not too tight. US coating runs are something like 2 to 5
+times that when I've looked into it.
+
+<h3><A NAME="chghgn2">Hg:N2 (No Helium) Laser</A></h3>
+
+Another type of mercury laser doesn't use any helium at all and has very
+simple construction.  It is optically pumped with UV discharge lamps
+(one version uses what are basically fluorescent lamps with no phosphors
+like germicidal or EPROM eraser lamps).  It lases at 546.1 nm, close to the
+wavelength of the green HeNe laser which is 543.5 nm (though this is just
+a coincidence).
+<p>
+There was even a low cost ($500) "educational version" of such a laser.
+It had a <i>peak</i> output power of less than 1 mW but at the time
+(pre-1990), was by far the cheapest green laser available.  See
+<A HREF="hgn2p1.jpg">Photo of QE Technology EL-100 Hg:N2 Laser</A>
+(Courtesy of Chad Andersen).
+As can be seen, there isn't much in there besides the laser tube with its
+mercury reservoir, a pair of UV lamps with a couple of electronic
+components to run them, and the cavity reflector.  Apparently, the rear
+mirror (under the black thing at the rear?) could be adjusted to get all
+sorts of higher order spatial modes. :)  Although these are 20 year old
+lasers with a soft-seal tube, the mercury will oxidize and combine with
+any oxygen that should leak in, so if the lamps work, the laser may
+still lase.
+<p>
+(From Steve Roberts (osteven@akrobiz.com).)
+<p>
+The relevant patent is: <b>U.S. Patent #3,992,683: Optically pumped collision
+laser in Hg at 546.1 nm</b>.
+<p>
+There have been a number of journal articles including:
+<p>
+<ul>
+<li>"The d.c.-excited, optically pumped visible atomic mercury laser",
+ Rabbett, M. D.; Skippon, S. M.; King, T. A., Phys. Dep., Manchester
+ Univ., Manchester, UK.  Editor(s): Knight, Peter L., Quantum
+ Electron. Electro-Opt., Proc. Natl. Quantum Electron. Conf., 5th
+ (1983),  Meeting Date 1981, 287 to 90.  Publisher: Wiley, Chichester,
+ UK Conference, written in English.
+<p>
+ Abstract: The kinetic model, output power, and frequency spectrum are
+ described for the 546.1-nm at. Hg laser.  The laser is optically pumped by a
+ Hg arc lamp at 2 different wavelengths and N2 is used both to link the
+ pump stages and to drain the lower laser level by inelastic collisions.
+ The laser construction and cycle are described.
+<p>
+<li>"Operation and performance of the cw visible atomic mercury laser",
+ Rabbett, M. D., Skippon, S. M., King, T. A., Phys. Dep., Univ. of
+ Manchester,  Manchester, UK. Proceedings of SPIE-The International
+ Society for Optical Engineering (1983), 369(Max Born Centen. Conf.,
+ 1982), 328-34.
+<p>
+ Abstract: The operating characteristics of continuous-wave (CW) at. Hg lasers
+ are described.  Operating at 546.1 nm, the laser is optically pumped by
+ d.c. Hg discharge lamps.  The laser has high perceptual brightness and
+ potentially low noise and high stability.  Experiment and theory aspects of
+ the laser and its performance are discussed, and the effectiveness of
+ various optical coupling schemes is considered.  Evidence for
+ absorption loss due to Hg dimers is presented, and some results are
+ given for direct measurement of this loss by tunable dye laser.
+<p>
+<li>Holmes, N. C.; Siegman, A. E.  Optically pumped mercury lasers for ring
+ laser gyroscope applications.    U. S. NTIS, AD Rep.  (1977),
+ (AD-A049540),  79 pp.
+<p>
+ You can buy this from the U.S. National Technical Information
+ Service.  It will be the final report of the research project, and
+ probably quite detailed instructions on how to build it.
+</ul>
+<p>
+<hr>
+<br>
+<li>Back to <A HREF="laserfaq.htm#faqtoc">Sam's Laser FAQ Table of
+ Contents</A>.
+<li>Back to <A HREF="laserchg.htm#chgtoc">Home-Built Helium-Mercury (HeHg)
+ and Other He-Metal-Vapor Lasers Sub-Table of Contents</A>.
+<li>Forward to <A HREF="laserccb.htm#ccbtoc">Home-Built Copper Chloride (CuCl)
+ and Copper Bromide (CuBr) Laser</A>.
+<p>
+<hr>
+<b><center>Sam's Laser FAQ, <A HREF="copyright.htm">Copyright &copy<A> 1994-2009,
+ Samuel M. Goldwasser, All Rights Reserved.<br>
+ I may be contacted via the
+ <A HREF="emaillnk.htm">Sci.Electronics.Repair FAQ
+ Email Links Page</A>.</center></b>
+<hr>
+<p>
+</BODY>
+</HTML>

@@ -1,0 +1,2971 @@
+<HTML>
+<HEAD>
+<TITLE>Sam's Laser FAQ - Home-Built Nitrogen (N2) Laser</TITLE>
+</HEAD>
+<BODY>
+<A NAME="cn2toc"></A>
+<p>
+<hr>
+<b><center>Sam's Laser FAQ, <A HREF="copyright.htm">Copyright &copy<A> 1994-2010,
+ Samuel M. Goldwasser, All Rights Reserved.<br>
+ I may be contacted via the
+ <A HREF="emaillnk.htm">Sci.Electronics.Repair FAQ
+ Email Links Page</A>.</center></b>
+<hr>
+<p>
+<li>Back to <A HREF="laserfaq.htm#faqtoc">Sam's Laser FAQ Table of
+ Contents</A>.
+<h1>Home-Built Nitrogen (N2) Laser</h1>
+<h2>Sub-Table of Contents</h2>
+<ul>
+<li><A HREF="lasercn2.htm#cn2hbl">Basic Home-Built N2 Laser Information</A>
+ <ul>
+ <li><A HREF="lasercn2.htm#cn2saf">Home-Built N2 Laser Safety</A>
+ <li><A HREF="lasercn2.htm#cn2cn20">Introduction to Home-Built N2 Laser</A>
+ <li><A HREF="lasercn2.htm#cn2cn21">N2 Laser Construction References and Links</A>
+ <li><A HREF="lasercn2.htm#cn2tsrl">Thieu Asselbergs's N2 (Mostly) Laser Reference List</A>
+ <li><A HREF="lasercn2.htm#cn2cn22">Some Photos of Home-Built N2 Lasers</A>
+ <li><A HREF="lasercn2.htm#cn2cn23">Home-Built N2 Laser Description</A>
+ <li><A HREF="lasercn2.htm#cn2guide">Guidelines to Assure a Successful Home-Built N2 Laser</A>
+ </ul>
+<p>
+<li><A HREF="lasercn2.htm#cn2oex">Other Examples of Home-Built N2 Lasers</A>
+ <ul>
+ <li><A HREF="lasercn2.htm#cn2bg1">Bruno Godard's N2 Laser</A>
+ <li><A HREF="lasercn2.htm#cn2dg1">David Grace's Air Lasers</A>
+ <li><A HREF="lasercn2.htm#cn2rm1">Robert Meagley's N2 Lasers</A>
+ <li><A HREF="lasercn2.htm#cn2dr1">Don Raphaelus's N2 Laser</A>
+ <li><A HREF="lasercn2.htm#cn2hal">Hubert Pissavin's $10 Air Laser</A>
+ <li><A HREF="lasercn2.htm#cn2bg2">Bernhard Gruber's N2 Laser</A>
+ <li><A HREF="lasercn2.htm#cn2ab1">Andrew Baker's $4 N2 Laser</A>
+ <li><A HREF="lasercn2.htm#cn2js1">Jon Singer's Low Cost Pseudo-TEA N2 Laser</A>
+ <li><A HREF="lasercn2.htm#cn2js2">Jon Singer's High-Power Water-Cap Nitrogen Laser</A>
+ <li><A HREF="lasercn2.htm#cn2jk1">Jarrod Kinsey's N2 Lasers</A>
+</ul>
+<p>
+<li><A HREF="lasercn2.htm#cn2aio">Additional Information on Home-Built N2 Lasers</A>
+ <ul>
+ <li><A HREF="lasercn2.htm#cn2cn24">Construction of the Capacitors for the N2 Laser Blumlein Pulse Circuit</A>
+ <li><A HREF="lasercn2.htm#cn2cn25">So Why Didn't Ben Franklin Build One of These?</A>
+ <li><A HREF="lasercn2.htm#cn2cn26">Power Supply Requirements for the N2 Laser</A>
+ <li><A HREF="lasercn2.htm#cn2mmn2">Making Measurements on an N2 Laser</A>
+ <li><A HREF="lasercn2.htm#cn2cn27">Jon's Comments on the SciAm N2 Laser</A>
+ <li><A HREF="lasercn2.htm#cn2cn28">Comments on N2 Laser Construction</A>
+ <li><A HREF="lasercn2.htm#cn2cn2ray1">Ray's Plans to Build an N2 Laser</A>
+ <li><A HREF="lasercn2.htm#cn2cn28a">Rich's Comments on N2 Laser Safety, Home-Built Versus Commercial Unit, More</A>
+ <li><A HREF="lasercn2.htm#cn2dclnt">Diane's Comments on Lasers of the N2 Type</A>
+ <li><A HREF="lasercn2.htm#cn2cn29">Increasing the Power Output of the N2 Laser</A>
+ <li><A HREF="lasercn2.htm#cn2tsg">Triggered Spark Gap for N2 Laser</A>
+ <li><A HREF="lasercn2.htm#cn2cwl">Why isn't There a CW N2 Laser?</A>
+ <li><A HREF="lasercn2.htm#cn2cn2a">Troubleshooting a Home-Built N2 Laser</A>
+ <li><A HREF="lasercn2.htm#cn2cn2b">How About an Air Laser?</A>
+ <li><A HREF="lasercn2.htm#cn2cn2c">Operation Manual for a Real N2 Laser</A>
+ <li><A HREF="lasercn2.htm#cn2wsnl">Why Aren't Surplus Nitrogen Lasers More Readily Available?</A>
+ <li><A HREF="lasercn2.htm#cn2h2b">Hydrogen Laser Using Blumlein Discharge</A>
+ <li><A HREF="lasercn2.htm#cn2dye">Which Dye for N2 Laser Pumped Dye Laser?</A>
+ <li><A HREF="lasercn2.htm#cn2rcn">Rebuilding a Commercial N2 Laser</A>
+ <li><A HREF="lasercn2.htm#cn2pwth">Comments on N2 Laser Pulse Width</A>
+ </ul>
+<p>
+<li><A HREF="lasercn2.htm#cn2cn2l">Commercial N2 Laser</A>
+ <ul>
+ <li><A HREF="lasercn2.htm#cn2nl100">SRS Model NL-100 Nitrogen Laser</A>
+ <li><A HREF="lasercn2.htm#cn2sp337">Spectra-Physics VSL-337i OEM Nitrogen Laser</A>
+ </ul>
+<p>
+<li><A HREF="lasercn2.htm#cn2cnlh">N2 Laser Humor and Other Tid-Bits</A>
+ <ul>
+ <li><A HREF="lasercn2.htm#cn2cnlh0">HeHeHeHe! N2 Lasers Have All the Fun!</A>
+ <li><A HREF="lasercn2.htm#cn2cnlh1">Just What You Always Wanted!</A>
+ <li><A HREF="lasercn2.htm#cn2cnlh2">N2 Laser Construction on a Shoestring</A>
+ <li><A HREF="lasercn2.htm#cn2cnlh3">The Ultimate N2 Laser</A>
+ <li><A HREF="lasercn2.htm#cn2vn2l">Victorian Nitrogen Laser</A>
+ </ul>
+</ul>
+<p>
+<A NAME="cn2hbl"></A>
+<hr>
+<br>
+<li>Back to <A HREF="lasercn2.htm#cn2toc">Home-Built Nitrogen (N2) Laser
+ Sub-Table of Contents</A>.
+<h2>Basic Home-Built N2 Laser Information</h2>
+<h3><A NAME="cn2cn20">Introduction to Home-Built N2 Laser</A></h3>
+
+The nitrogen (N2) laser produces intense extremely short (a few ns) intense
+(100 kW typical) pulses of light in the near UV portion of the E/M spectrum
+(337.1 nm being the dominent line).  Despite this impressive capability, the
+N2 laser is among the easiest to construct for the following reasons:
+<ul>
+<li>NO glass working is required.  The laser cavity is a Plexiglas box!
+<p>
+<li>It runs at a relatively high pressure (low vacuum) - typically 100 to 200
+ Torr and some can be made to even work at full atmospheric pressure.
+<p>
+<li>Mirrors are NOT required.  The gain of the lasing medium (N2) is so high
+ that one pass through the discharge chamber is sufficient to produce an
+ intense coherent UV pulse.  A totally reflecting mirror of almost any type
+ as long as it reflects UV can be added at the far end of the chamber to
+ double the output if desired.  All it is doing is reflecting the half of the
+ beam that would be otherwise lost out the other end of the box.  In fact, a
+ true resonator with a pair of mirrors would not help much at all.  The lasing
+ process is self limiting so all the exciting action is over in a few
+ nanoseconds!
+<p>
+<li>The basic pulse power supply is very simple and not terribly dangerous (in
+ a relative sort of way compared to most other home-built lasers).  A higher
+ performance (and more dangerous) power supply is an option to boost average
+ power but is not required.
+<p>
+<li>The gas fill can be just plain old nitrogen and the purity grade available
+ from welding suppliers is more than adequate.
+</ul>
+<p>
+Compared to all the other home-built lasers, the nitrogen laser also likely
+has the lowest risk of failure <b>IFF you stay pretty close to the SciAm
+design</b>, more below.  No glass working, no mirrors, mirror mounts,
+or mirror alignment, minimal vacuum.  Despite this, what you end up with isn't
+substantially inferior to a commercial unit costing many kilobucks.  It just
+lacks the convenience features and other bells and whistles.  Now, the UV
+output isn't in a tight high quality beam like that of an HeNe or CO2 laser
+but it is a real laser.  So, despite the high peak power, due to the lack
+of beam quality, the N2 laser isn't going to be good for materials processing
+since it is very difficult to focus the N2 laser beam to a small spot.
+However, it can be used to pump a dye laser and for all sorts of other
+applications requiring intense UV (and safety precautions must be taken to
+guard against excessive UV exposure).
+<p>
+However, despite the apparent simplicity of the N2 laser, don't be tempted to
+improvise before you get the SciAm design to lase.  Even this simple laser
+can't just be thrown together (despite what you might think from the humor in
+the section: <A HREF="lasercn2.htm#cn2cnlh2">Nitrogen Laser Construction on a
+Shoestring</A> - this should not be taken seriously).  Start out with the same
+dimensions, materials, and construction techniques, and success is almost
+certain.  While the SciAm N2 laser is not necessarily optimal or the highest
+power possible, it does work.  Bigger is not necessarily better (or higher
+power but may actually be 0.00 power.  You can't just increase the size of
+the capacitors and laser tube and expect it to do anything useful).  Once your
+N2 laser is operational, feel free to go hog wild experementing.  But even
+then, change only one thing at a time!
+<p>
+In case you are wondering, N2 lasers do have their uses besides being a good
+first laser for the home-built laser enthusiast.  These include: optical
+pumping of dye lasers, UV spectroscopy, non-destructive testing, fluorescence
+measurements of materials, and measurements of very fast processes (nanosecond
+UV strobe for high speed photography).  Perhaps, these are not as glamorous as
+laser light shows and laser welding, but important applications nonetheless!
+<p>
+(From: Jon Singer, of the Joss Research Institute.)
+<p>
+The molecular nitrogen laser was discovered by H. G. Heard, who
+published an article about it in Nature in 1963. The first nitrogen
+lasers produced only a few watts, but people soon began to optimize
+them, and maximum power of at least 5 MW is possible in a realistic
+discharge-pumped device, with maximum pulse energies of about 20
+mJ. Higher powers have been reported in discharge-pumped nitrogen
+lasers, but have not been reproduced. Electron-beam pumping is also
+possible. Nitrogen emits primarily at 337.1 nm, but is also reported
+to put out a small proportion of its energy at 357.6 nm, and there is
+a peak in the IR, which can apparently comprise as much as 20% of the
+output under some conditions. Although nitrogen lasers have been
+operated over a range of partial pressures from a few Torr to more
+than 1 atmosphere, it is common to divide them into two categories:
+low pressure and atmospheric pressure. (Atmospheric pressure nitrogen
+lasers are almost always excited transversely, and fall into the
+general category o f lasers.) The upper-state lifetime of nitrogen is
+inversely related to pressure; it is approximately 40 nsec at
+pressures of a few Torr, decreasing to perhaps 2 nsec at 1
+atmosphere. Unfortunately, the lower laser level has much longer
+lifetime; this cause s, and the laser is self-terminating. This effect
+seriously limits both the duration of the pulse and the efficiency of
+the laser. Nitrogen is pumped by direct electron impact, typically in
+a pulsed electrical discharge; if the electrons do not have sufficietn
+long before they run out of headroom. Low-pressure nitrogen lasers
+typically emit pulses that are either 4-8 nsec long (most small
+devices and a few high-performance devices) or 10-20 nsec long (some
+high-performance devices). Atmospheric pressure nitrogen lasers emit
+pulses that are typically 600-800 psec long. Helium is a useful
+diluent, at least at low partial pressures; a 50-50 mixture of
+nitrogen and helium is reported to produce smoother and more reliable
+operation in low-pressure lasers, and some low-pressure lasers can
+even run when filled with 1 atmosphere of helium, to which is added a
+small partial pressure of nitrogen. Addition of electron-attaching
+gases, including SF6 and NF3, has also been reported to improve the
+operation, but these are not suitable for DIY use. NF3, in particular,
+is quite dangerous.
+<p>
+There is also a nitrogen <i>ion</i> laser, which runs in a very dilute He-N2
+mixture. At least 4 lines have been reported with electron-beam
+pumping, some in the UV and some in the visible. With discharge
+pumping, the most prominent line typically seems to be at 428 nm.
+
+<h3><A NAME="cn2saf">Home-Built N2 Laser Safety</A></h3>
+
+There are three areas of safety considerations for the home-built N2 laser (and
+other similar lasers, for that matter):
+<p>
+<ul>
+<li><b>Laser output:</b> The home-built N2 laser operates at 337.1 nm producing
+ pulses of ultra-violet radiation in the UVA region of the electromagnetic
+ spectrum.  While its peak output may be 100 kW or more, the pulse duration is
+ only a few nanoseconds at most.  The pulse repetition rate (for the SciAm
+ design, at least) may be anywhere from one pulse every few seconds (using the
+ DC powered HV inverter) to several (maybe as much as 120) per second (using a
+ neon sign transformer based power supply).  A 5 ns 100 kW pulse has an energy
+ of .5 mJ which may not sound like a lot but is still a potential hazard.  At
+ a pulse rate of 120 pps, the average power is 60 mW which IS a significant
+ amount of UV light.  Since the N2 laser doesn't produce a particularly well
+ collimated beam, it won't focus to a very small intense spot.  Thus, I doubt
+ that it will be possible to use this laser to burn things. :(
+<p>
+ For eye protection, low cost plastic (e.g., polycarbonate) safety glasses
+ or wrap-around UV blocking Sun glasses should stop most UV but since these
+ vary widely, it is essential to test your sample at the 337.1 nm N2 laser
+ wavelength.  Some goggles spec'd for CO2 lasers also have a UV-blocking
+ range which includes 337.1 nm with adequate optical density.  These tend
+ to be much less expensive than other (perhaps $50) but may indeed just be
+ the same as Home Depot $2 safety glasses based on their overall transmission
+ of over 90 percent.  Proper UV laser safety glasses (probably labeled
+ something along the lines of N2/Excimer) would also, of course, be
+ satisfactory but are expensive.  A pair of Welder's goggles or a helmet
+ should also block UV but are probably a bit unwieldy.
+<p>
+ As with any laser in its power class, take precautions to avoid exposure to
+ the direct or reflected beam.  There are easier and safer ways of getting a
+ tan (to the extent that any E/M radiation induced tan is safe).
+<p>
+<li><b>Electrical:</b> The power supplies can be lethal.  While the suggested
+ DC powered HV inverter is capable of only a few mA - if that - at 20 kV, the
+ capacitors can store enough charge to stop a weak heart or startle you into
+ doing something you might regret.  Make sure you read and follow the
+ <A HREF="safety.htm">Safety Guidelines for High Voltage and/or Line Powered
+ Equipment</A>.  Insulate all connections and install barriers to prevent
+ contact with the high voltage.
+<p>
+<li><b>Spark Gap:</b> The discharge trigger for the capacitor pulse circuit of
+ the N2 laser is an air spark gap.  This produces both non-trivial amounts of
+ broadband UV (similar to an electric welder) as well as NOISE.  Therefore,
+ it is a good idea to enclose the spark gap to minimize their escape.
+</ul>
+<p>
+Provide proper warning signs for both the laser radiation and high voltage.
+Keep pets and small children out of the area and make sure everyone present is
+instructed as to the dangers.  The use of proper laser safety goggles for the
+specific wavelength(s) of your laser are highly recommended.
+<p>
+For more information, see the chapter: <A HREF="lasersaf.htm#saftoc">Laser
+Safety</A>.  Sample safety labels which can be edited for this laser can be
+found in the section: <A HREF="lasersaf.htm#saflslbl">Laser Safety Labels
+and Signs</A>.
+
+<h3><A NAME="cn2cn21">N2 Laser Construction References and Links</A></h3>
+
+In addition to the article in: "Light and its Uses", there are some Web links
+of interest:
+<p>
+<ul>
+<li><A HREF=
+ "http://www.technology.niagarac.on.ca/people/mcsele/lasers/">Mark Csele's
+ Home-Built Lasers Page</A> includes information on N2, dye, and other lasers
+ he has constructed as well as many references and links.  There is even info
+ on converting an ex-medical excimer laser into an N2 laser.
+<p>
+<li><A HREF="http://www.sparkbangbuzz.com/tealaser/tealaser7.htm">Nyle
+ Steiner's (K7NS) Simple Homemade T.E.A. Laser Page</A> has a great deal
+ of info including several working designs, diagrams, experiments, and
+ more.
+<p>
+<li><A HREF="http://hot-streamer.com/pool/n2laser.htm">Bert Pool's UV
+ Laser Site</A> describes his N2 laser project.
+<p>
+<li><A HREF="http://spt06.chez.tiscali.fr/00/lasers.htm">Hubert Pissavin's
+ Lasers for Amateurs</A> includes links, N2 laser, lasers using flash
+ units from disposable cameras, cheap scanners, more.
+<p>
+<li><A HREF="http://www.geocities.com/resalles/N2/n2_laser.html">Renato's N2
+ Laser Page</A> has a description, diagrams, and photos of an N2 laser.
+<p>
+<li><A HREF="http://www.geocities.com/jasonlburnfield/laser.html">Jason's
+ Laser Page</A> includes a description, diagrams, and photos of several
+ atmospheric pressure home-built N2 lasers constructed using (mostly) common
+ materials.
+<p>
+<li><A HREF="http://repairfaq.cis.upenn.edu/sam/meagley/rmn2.pdf">R. Meagley's
+ Second Report on Experiments with N2 Laser Using Air as Laser Medium
+ (4-1-00)</A> and
+ <A HREF="http://repairfaq.cis.upenn.edu/sam/meagley/rmn3.pdf">R. Meagley's
+ Third Report on Experiments with N2 Laser Using Air as Laser Medium
+ (7-16-00)</A> are documents with some notes, diagrams, and photos.
+ (These are not polished reports though.)
+<p>
+<li><A HREF="http://www.milankarakas.org/">Milan's Experiments Page</A>
+ has information on his home-built Blumlein and TEA N2 lasers.
+<p>
+<li><A HREF="http://www.jarrodkinsey.com/pages/laserpower.html">Jerrod
+ Kinsay's My Power Supplies and Nitrogen Lasers Page</A> has various
+ nitrogen and dye laser projects with descriptions and many photos.
+<p>
+<li>(From: Raiden (PGInverse@my-dejanews.com).)
+<p>
+ Bruno Godard has had some outstanding results with N2 lasers (greater than
+ 1% yield!!!).  Do a patent search for this inventor "Godard Bruno".  You can
+ then download the complete patents including graphics.
+<p>
+ The parabolic shape of the Blumlein plates is really interesting.
+<p>
+ Additional information on this laser can be found in the section:
+ <A HREF="lasercn2.htm#cn2ray1">Ray's Plans to Build an N2 Laser</A>.
+<p>
+<li>The <A HREF="http://users.aol.com/gykophys/nlaser/nlaser.htm">Ein
+ Stickstoff-Laser im Eigenbau</A> (German. Home-built N2 laser) has a nice
+ description and photos of an N2 laser similar to the SciAm design.
+<p>
+<li><A HREF="http://www.pulslaser.de/">Puls Laser (German)</A>
+ has virtually all of the home-built laser types including
+ CO2, N2 (including TEA), ion, ruby, dye, and some that aren't covered here.
+ It includes descriptions, photos, references, and other
+ information.  An English translation would be most welcome as Altavista
+ does less than a stellar job and doesn't follow the frame links.
+<p>
+<li><A HREF="http://www.milankarakas.org/pub/experiments.html">Milan's My
+ Experiments Page</A> includes info on his TEA N2 lasers and support
+ circuits.
+<p>
+<li><A HREF=
+ "http://www.weirdscience.us/">Josh's Lab Page</A> had a description and
+ photos of his TEA air laser and other laser projects.
+<p>
+<li><A HREF="http://www.geocities.com/mistertippy/schematics/N2Laser.html">
+ Home-Built Nitrogen Laser</A> is mainly the power supply at this point.
+<p>
+<li><A HREF="http://www.jossresearch.org/tjiirrs/">Jon's Interim Research
+ Reports</A> which include several relevant to nitrogen lasers and pumping
+ dye lasers with nitrogen lasers.
+<p>
+<li><A HREF=
+"http://www.fineartradiography.com/hobbies/lasers/nitrogen/">Leslie's
+ Wright's Nitrogen Laser Page</A> includes a description and many diagrams
+ and photos of his home-built, high peak power, high repetition rate,
+ flowing gas nitrogen Laser.
+<p>
+<li><A HREF=
+ "http://www.fineartradiography.com/hobbies/lasers/dye/cuvette.html">Leslie
+ Wright's Home-Built Cuvettes for Dye Lasers Page</A> shows some approaches
+ to construction using common materials.  These will come in handy for an
+ N2 laser pumped dye laser.
+<p>
+<li><A HREF="http://www.sparkbangbuzz.com/tealaser/tealaser7.htm">Nyle
+ Steiner's Homemade TEA Lasers</A> has descriptions and photos of his
+ simple TEA N2 laser, alternative electrode configurations, and other
+ TEA laser information.
+<p>
+<li>There is a design for a nitrogen laser in Applied Physics Letters, 41(7),
+ pg. 611, October 1, 1982.  I haven't seen the article but is is supposed
+ to be 'novel'.
+<p>
+<li>And, another one: W. Herden, "Compact High Power Subnanosecond Nitrogen
+ and 'Open Air' lasers at 760 Torr", Physics Letters, vol. 54A, no. 1, 11
+ pp. 96-97, August 1975.
+<p>
+<li>Hirofumi Seki, Satoshi Takemori, and Tadashi Sato, "Development of a
+ Highly Efficient Nitrogen Laser Using an Ultra-Fast Magnetic Pulse
+ Compression Technique", Selected Topics in Quantum Electronics, IEEE
+ Journal of Quantum Electronics, vol. 1, no. 3, pp. 825-829, Sep 1995.
+<p>
+<li><A HREF="http://www.amazing1.com/">Information Unlimited</A>
+ plans for a tunable dye laser which is nearly identical to the one in
+ Scientific American.  (The major difference appears to be that these plans
+ include the higher pulse rate neon sign transformer based power supply
+ instead of the low power inverter to generate the high voltage for charging
+ the N2 laser capacitors.)  However, the somewhat more detailed instructions
+ in these plans (compared to the SciAm article) and the availability of the
+ electronic parts (from Information Unlimited) may make them beneficial
+ to someone who isn't enthusiastic about scrounging, designing, or
+ improvising, and would rather take more of a cookbook approach to home-built
+ lasers.  <A HREF="http://www.mwklasers.com/">MWK Laser Products</A> has plans
+ for the nitrogen laser as well which I assume are similar but don't know for
+ sure.
+<p>
+<li><A HREF="http://www.kentech.co.uk/Tutorials.html">Kentech's Tutorials</A>
+ includes information on transmission lines (including Blumlein types),
+ pulsars, pulse forming modules, etc.)
+<p>
+<li>Also see the section: <A HREF="lasercon.htm#concit5">General Resources for
+ Amateur Laser Construction</A> and the extensive reference list, below.
+</ul>
+
+<h3><A NAME="cn2tsrl">Thieu Asselbergs's N2 (Mostly) Laser Reference
+ List</A></h3>
+
+This is the N2 laser reference list put together by Thieu Asselbergs
+that used to be on his "Amateur Laser
+Constructors Homepage" along with his comments:
+<p>
+The order of the following articles is totally arbitrary!!!  I've included
+some keywords or an opinion to facilitate searching.
+<p>
+<ol>
+<li>"A 3% effiency N2 Laser", B. Oliveira dos Santos, et. al., Appl.
+ Phys. B 41, pp. 241-244, 1986.
+<p>
+ Interesting, but I don't trust their measurements.
+<p>
+<li>"Compact High-Power N2 Laser: Circuit Theory and Design", A. J. Schwab, F.
+ W. Hollinger, IEEE Journal of Qantum Electronics, Vol. QE-12, No 3., March
+ 1976, pp. 183-188.
+<p>
+ Compact Design with foils which can be rolled up to form a cylinder.
+<p>
+<li>"High Efficiency Low-Pressure Blumlein Nitrogen Laser", A. Vasquez
+ Martinez and V. Aboites, IEEE Journal of Quantrum Electronics, Vol. 29, no. 8,
+ August 1993, pp. 2364-2370.
+<p>
+ 0.81 percent efficiency Blumlein discussion about electrodes.
+<p>
+<li>"A Simple High-Power Large Efficiency N2 Ultraviolet Laser", Bruno Godard
+ IEEE Journal of Quantum Electronics, vol. QE-10, no. 2, February 1974, pp.
+ 147-153.
+<p>
+ Very high efficiency for such an early article, syncronization of light and
+ electrical pulse.
+<p>
+<li>"Simple Fast-Discharge Device for High-Power Pulsed Lasers", C. P. Wang
+ Review Scientific Instruments, vol. 47, no. 1, January 1976, pp. 92-95.
+<p>
+ General article about Blumleins, but I think there's a big mistake in the
+ calculations.
+<p>
+<li>"Low cost Nitrogen Laser Design for Dye Laser Pumping", Peter Schenck and
+ Harold Metcalf, Applied Optics, February 1973, vol 12, no. 2, pp. 183-186.
+<p>
+ Early design using standard capacitors and a thyratron.
+<p>
+<li>"Compact TEA N2 laser", Ernest E. Bergmann, Review Scientific Instruments,
+ vol. 48, no. 5, May 1977, pp. 545-546.
+<p>
+ TEA, syncronization by tapered electrodes. 0.5 MW output in 1 ns.  With air,
+ it's possible to pump a dye laser, with nitrogen it,s possible to pump a dye
+ laser to superradiance.
+<p>
+<li>"Compact High Power Sub-Nanosecond Nitrogen and 'Open Air' lasers at 760
+ Torr", W. Herden, Physics Letters, vol. 54A, no. 1, 11 August 1975, pp. 96-97.
+<p>
+ Also TEA, small and 2x 400 kW output using N2, 30 kW with air.
+<p>
+<li>"An Unusual Kind of Gas Laser that Puts Out Pulses in the UV". C. L. Stong,
+ Scientific American, June 1974, pp. 122-127.
+<p>
+ The "Light and its Uses" article on N2 laser construction.
+<p>
+<li>"Effective Glow Discharge Excitation of Nitrogen Lasers at Gas Pressures 
+ Ranging from 0 to 5 Bar", V. Hasson, H. M von Bergmann and D. Preussler,
+ Applied Physics Letters, vol. 28, No. 1, 1 January 1976, pp. 17-18.
+<p>
+ TEA and above low efficiency.
+<p>
+<li>"Pulsed Corona Excitation of High Power UV Nitrogen Lasers at Pressures 
+ of 0 to 3 Bar", V. Hasson. H. M von Bergmann, and D. Preussler, Applied
+ Physics Letters, vol. 27, no. 10, 15 November 1975, pp. 553-554.
+<p>
+ Essentially the same as the one above.
+<p>
+<li>"An Investigation of the Effects of the Discharge Parameters on the
+ Performance of a TEA N2 Laser", Chigusa Iwasaki and Takahisa Jitsuno,
+ IEEE Journal of Quantum Electronics, vol. QE-18, no. 3, March 1982, pp.
+ 423-427.
+<p>
+ Recommended for a TEA N2 builder.
+<p>
+<li>"Ultraminiature High Power Gas Discharge Lasers", V. Hasson and H. M. von
+ Bergmann, Review Scientific Instruments, 50(1), Jan. 1979, pp. 59-63.
+<p>
+ Very small lasers 1 cm discharge length.
+<p>
+<li>"Experimental and Theoretical Investigation of the Nitrogen Laser",
+ W. A. Fitzsimmons, et. al., "IEEE Journal of Quantum Electronics, vol. QE-12,
+ no. 10, October 1976, pp. 624-633.
+<p>
+ Very good theoretical description also some info on high voltage supply 
+ for 50 hz operation.
+<p>
+<li>"Spark pumped dye laser with high repetition rate and low threshold"
+ C. M. Ferrar, Applied Physics Letters, vol. 23, no. 10, 15 November 1973.
+<p>
+ Dye laser with threshold of 5 mJ!!! 
+</ol>
+
+<h3><A NAME="cn2cn22">Some Photos of Home-Built N2 Lasers</A></h3>
+
+(From: Chris Chagaris (pyro@grolen.com).) 
+<ul>
+<li><A HREF="ccn2ls.jpg">Overall View of Nitrogen Laser</A>
+<li><A HREF="ccwinzap.jpg">Ben Franklin's Wimshurst Laser Power Source</A>
+</ul>
+<p>
+
+<h3><A NAME="cn2cn23">Home-Built N2 Laser Description</A></h3>
+
+Many variations are possible and easy to try since very little is really
+critical.
+<p>
+Refer to <A HREF="n21asm.gif">Typical Home-Built Nitrogen Laser Assembly</A>
+for a simplified diagram of the overall structure and low voltage operated
+inverter type power supply electronics.  Also,
+<p>
+<ul>
+<li>Level of difficulty (rated L=low, M=medium, H=high):
+<p>
+<ul>
+  <li>Overall - L.
+  <li>Glass work - None required.
+  <li>Fabrication (other than glass work) - L.
+  <li>Vacuum/gas handling - L.
+  <li>Power supply - L.
+  <li>Additional apparatus - None.
+  <li>Risks (high voltage, toxic chemicals, etc.) - M.
+</ul>
+<p>
+<li>Lasing wavelength(s) - 337.1 nm (near UV).  This is in the UVA range of
+  suntanning wavelengths.
+<p>
+<li>Resonator:
+<p>
+<ul>
+  <li>Type/lasing medium - Low pressure nitrogen gas.
+<p>
+  <li>Bore diameter - 5 cm x 5 cm (2 inch x 2 inch) box; bore length - 30 cm
+    (1 foot).
+<p>
+  <li>Total tube length - Same.
+<p>
+  <li>Tube material - Plexiglas.
+<p>
+  <li>Electrodes - Copper foil, 1 cm gap lengthwise along entire tube.  Any
+   metal can be used including copper, aluminum, steel, and stainless steel,
+   but it is essential to assure a good low impedance connection to them from
+   the capacitor plates.  Thus, being able to solder directly to copper is a
+   definite advantage.
+<p>
+  <li>Gas fill - Nitrogen (welder's quality recommended) at about 100 Torr.
+<p>
+  <li>Cooling - Convection air.
+<p>
+  <li>Coupling - Glass microscope slides at 20 to 30 degree angle (not Brewster
+    windows) to minimize reflections back into the laser cavity.  Note: The
+    material used must have high optical quality and be fairly transparent to
+    the 337.1 nm UV wavelength.  Microscope slides are decent quality and thin
+    enough not to absorb too much UV (just over 5 percent for a 1 mm thick
+    slide).  A higher cost alternative would be a flat quartz plate which will
+    absorb even less UV (less than 1 percent for 1 mm thickness).  DO NOT use
+    ordinary window glass (low quality and absorbs too much UV) or plastic
+    (totally opaque to UV).  (From the Melles Griot 1997-98 Optics catalog:
+    Approximate transmission at 337 nm for 1 cm thick Crown glass (probably
+    similar to microscope slide glass): 55 percent; fused quartz: 93 percent.
+    For 1 mm thickness, the transmission will be the 10th root of these
+    values.)
+<p>
+  <li>Mirrors - None required!  However, a single mirror can be installed at
+    one end as the HR to double output.
+<p>
+  <li>Total resonator length - NA.
+</ul>
+<p>
+<li>Vacuum system:
+<ul>
+<p>
+  <li>Requirements - Low.  A salvaged refrigeration compressor or lab aspirator
+    should be fine.
+<p>
+  <li>Sealed while operating.
+</ul>
+<p>
+<li>Special chemicals/supplies required - None.
+<p>
+<li>Excitation/Pumping:
+<p>
+<ul>
+  <li>Type - Blumlein high current electrical discharge.  See <A HREF=
+  "http://members.aol.com/dlames2/N2_Project/N2_animation.html">Daniel Ames'
+   N2 Laser Animation Page</A> for a cute sequence of GIFs (no Java!) showing
+   how the Blumlein circuit operates.
+<p>
+  <li>Power supply - 20,000 VDC, low current.  A transistor inverter and
+   voltage multiplier or a neon sign transformer based supply can be used.
+   Either of the flyback based high voltage circuits in the document:
+   <A HREF="http://www.repairfaq.org/sam/samschem.htm">Various
+   Schematics and Diagrams</A> can be used to power the home-built N2 laser
+   as well.  In all cases, take care that the voltage does not rise too high
+   and puncture the Blumlein capacitors/PCB material!
+</ul>
+<p>
+The Blumlein circuit is approximately equivalent to the following:
+<p>
+<PRE>
+
+                  R1                L1
+          - o----/\/\------+------^^^^^^------+--------+
+                           |                  |        |
+                           +------->  &lt;-------+        |
+         20 kVDC       C1 _|_     Laser      _|_ C2    v SG1
+                          ---     Cavity     ---       ^ Spark Gap
+                           |                  |        |
+          + o--------------+------------------+--------+
+
+</PRE>
+<p>
+The HV power supply charges both capacitors to nearly 20 kV.  When the spark
+gap breaks down, C2 is shorted out and the full voltage on C1 appears across
+the gap along the length of the laser cavity very quickly causing the nitrogen
+gas to ionize.  (Actually, the voltage pulse hits the center of the cavity
+first and spreads to the ends in a couple of nanoseconds!)  R1 simply isolates
+and limits current from the HV power supply - its value is irrelevant when the
+spark gap triggers!
+<p>
+Note: The drawings in "Light and its Uses" are at the very least confusing and
+may be wrong in some aspects of the description of operation of the Blumlein
+effect.
+</ul>
+
+<h3><A NAME="cn2guide">Guidelines to Assure a Successful Home-Built N2
+ Laser</A></h3>
+
+These set of guidelines should be followed during construction of your first
+home-built N2 laser.  The factors below will greatly influence the
+ultimate output power, beam quality, and whether it produces any coherent
+light at all!  Once you have a working laser, feel free to make
+modifications - one at a time.
+<p>
+For your first N2 laser, don't change any of the dimensions or materials of
+the main laser assembly including the channel and Blumlein capacitor.  The
+N2 laser is the easiest one to build successfully if you don't change
+anything critical!  In particular:
+
+<ul>
+<li>Build the Blumlein capacitors exactly as described in the SciAm article
+ using the same Fiberglas Epoxy PCB or other material with at least the same
+ voltage rating and dielectric constant.  <b>Don't</b> attempt to use other
+ types of caps including rolled up or multilayer aluminum foil and Saran wrap,
+ thicker PCB stock (which will reduce capacitance), photoflash caps, computer
+ grade electrolytics, or 1,000 ceramic bypass caps.  While some of these (like
+ rolled up caps) <i>may</i> work, most will have too much inductance and
+ result in a pulse that is too slow.  Your laser won't work well or more
+ likely, at all!
+<p>
+<li>Use welding purity or better nitrogen gas at low pressure - don't attempt
+ to use plain air until you have a working laser and don't try operation at
+ 1 atmosphere until then either.
+<p>
+<li>Make sure you read, understand, and follow <b>ALL</b> the safety
+ guidelines found in the section: <A HREF="lasercn2.htm#cn2saf">Home-Built
+ N2 Laser Safety</A>.
+</ul>
+
+<p>
+<A NAME="cn2oex"></A>
+<hr>
+<br>
+<li>Back to <A HREF="lasercn2.htm#cn2toc">Home-Built Nitrogen (N2) Laser
+ Sub-Table of Contents</A>.
+<h2>Other Examples of Home-Built N2 Lasers</h2>
+<h3><A NAME="cn2bg1">Bruno Godard's N2 Laser</A></h3>
+
+Well, this one probably wasn't actually built at a home but close enough. :)
+<p>
+The following is from a paper by Bruno Godard entitled: "A Very Simple High
+Power Large Efficiency N2 Laser", May 1973.  The copy I have is from the
+"Laboratoires De Marcoussis, Centre De Recherches De La 
+Compagnie Generale d'Electricit, Departement Recherches Physiques
+de Base, Section Sources d'Ondes Cohrentes", 91460 - Marcoussis France.
+Thanks to Jon Singer
+(<A HREF="mailto:jon@joss.com">jon@joss.com</A>) for locating this
+paper.  The author claims a peak power of almost 10 <b>MegaWatts</b> with 1
+percent efficiency under certain conditions.  This should be substantially
+the same as his paper "A Simple High-Power Large-Efficiency N2 Ultraviolet
+Laser", published in the IEEE Journal of Quantum Electronics, vol. QE-10,
+pg. 147, 1974.
+<p>
+Note that I don't know of anyone duplicating these results.
+<p>
+Notable physical features of this design include:
+<p>
+<ol>
+<li>A parabolic shape for the primary capacitor electrode (the one with the
+ spark gap) to create a linear excitation of the laser channel that moves
+ with the speed of light.
+<p>
+<li>A longer cavity than that of the SciAm laser (almost double).
+<p>
+<li>A suggestion to use a dual electrode configuration for higher power
+ (split the bottom plate of the capacitor as well as the top one).
+ <p>
+ (From: Jon Singer, of the Joss Research Institute.)
+ <p>
+ <blockquote>
+ "I have seen at least one other design in which they ran the 
+ 'electrodes-on-bottom-as-well-as-on-top' thing, and got more power.
+  Can't remember what the other consequences were, if any."
+ </blockquote>
+</ol>
+<p>
+The most significant by far is (1).  Due to the fact that the upper state
+lifetime (e.g., fluorescence lifetime) of N2 is about 40 ns and much shorter
+than that of the levels below (5 to 8 us) which provide the relevant laser
+transitions, a very short excitation pulse is needed to create a population
+inversion - shorter than that 40 ns duration.  The SciAm laser attempts to
+meet this condition using the so-called "Blumlein" circuit which (according
+to that description) results in a cylindrical wavefront which intersects the
+lasing channel head-on.  Whether we believe that this actually works as
+advertised (at least the laser <b>does</b> lase but see the section:
+<A HREF="lasercn2.htm#cn2cn27">Jon's Comments on the SciAm N2 Laser</A> for
+reasons why it may not be a true Blumlein circuit), even this cylindrical
+wavefront can readily be seen to be less than optimal: The center hits first
+and then the wavefront travels toward the ends.
+<p>
+What would be better would be excitation that travels down the channel at
+the speed of light so that the population inversion essentially follows or
+tracks the light pulse as it is formed (recall that the N2 laser is essentially
+a superfluorescence device - the gain is so high that you don't need mirrors.
+So, there is only one pass of stimulated emission with at most a single
+reflection (optional) of the light going in the opposite direction from a
+HR mirror).
+<p>
+The parabolic shape of the primary capacitor is supposed to deal with this
+deficiency.  It is well known that a if a point source is placed at a location
+called the 'focus' of a parabola, its rays will be redirected into a parallel
+beam by reflection.  The most important characteristic of a parabola relevant
+for this N2 laser is:
+
+<ul> 
+<li>A ray in any direction taken from the parabola's focus and reflected
+ off the parabola will traverse a constant distance to a line drawn
+ perpendicular to the parabola's axis of symmetry and will intersect it in a
+ perpendicular direction.
+</ul>
+
+One can see that this is the case based on the old trick of generating an
+ellipse using a string fixed at two points (the two foci) with a pin or
+nail holding it taught to trace the shape.  A parabola is just the limit of
+an ellipse with one of the two foci at infinity.
+<p>
+If we tilt that line so it isn't perpendicular, rather than all rays hitting
+it simultaneously, they will sweep from one end to the other with a constant
+velocity.  If the angle is adjusted to be equal to: cos<sup>-1</sup>(c/V),
+(where c is the velocity of light and V is the velocity of an E/M wave in the
+capacitor plane), the wavefront should hit and travel along the lasing
+channel at a speed of c.
+<p>
+See <A HREF="godard1.gif">N2 Laser with Parabolic Pulse Forming Capacitor</A>
+for a diagram of the overall arrangement.  With the dual electrode
+configuration, top and bottom are nearly symmetric with the PCB passing
+through the center (vertically) of the channel thus requiring no copper foil
+for the connections (which add inductance) as with the SciAm and other
+N2 lasers (see <A HREF="n21asm.gif">Typical Home-Built Nitrogen Laser
+Assembly</A>).
+<p>
+To prevent the direct wave from the capacitor discharge from hitting the
+channel (which would be too early), an additional little reflector is placed
+adjacent to the spark gap on the side nearest the channel.
+<p>
+Aside from the parabolic capacitor and size, the authors also suggest
+splitting the lower electrode across the channel to generate twice the
+discharge current density and thus greater power - but mention that this
+is less reliable (probably due to the higher voltage requirements to cross
+two gaps).
+<p>
+The overall arrangement is similar to <A HREF="n21asm.gif">Typical
+Home-Built Nitrogen Laser Assembly</A> but with the changes described.
+See <A HREF="godard1.gif">N2 Laser with Parabolic Pulse Forming Capacitor</A>
+for a plane (overhead) view of the laser.  Note that few dimensions are
+provided in the paper so much of the following is estimated.
+<p>
+Note, however, that this scheme (assuming it really works nearly as well as
+claimed - which isn't obvious!) doesn't result in a uniform intensity of the
+wavefront, only a constant velocity.  That is for the advanced course. :)  In
+principle, a piece-wise synthesis of the parabolic shape may be able to
+improve this uniformity - perhaps this has been done by someone.
+<p>
+There is a paper by Shipman which describes a system which used a set of solid
+dielectric switches, triggered in sequence, to sorta add up little pieces of
+circle to effectively make a wobbly but generally straight line. That
+apparently worked - but he didn't try to bounce it off anything.
+<p>
+Godard has at least one other article that appears to be based on either the
+same laser or another very similar one: Bruno Godard and Maurice Vannier,
+"Compact Efficient Discharge Lasers in XeF, KrF, and Fluorine", Optics
+Communications, v18n2, July 1976, pp. 206-207.  Unfortunately the article,
+which is short, doesn't have a drawing of the physical device.
+<p>
+Here is the summary of the Godard N2 laser:
+
+<ul>
+<li>Level of difficulty (rated L=low, M=medium, H=high):
+<p>
+<ul>
+  <li>Overall - M.
+  <li>Glass work - None required.
+  <li>Fabrication (other than glass work) - M.
+  <li>Vacuum/gas handling - L.
+  <li>Power supply - L.
+  <li>Additional apparatus - None.
+  <li>Risks (high voltage, toxic chemicals, etc.) - M.
+</ul>
+<p>
+<li>Lasing wavelength(s) - 337.1 nm (near UV).  This is in the UVA range of
+  suntanning wavelengths.
+<p>
+<li>Resonator:
+<p>
+<ul>
+  <li>Type/lasing medium - Low pressure nitrogen gas.
+<p>
+  <li>Bore diameter - 5 cm x 5 cm (2 inch x 2 inch) box; bore length - 70 cm.
+<p>
+  <li>Total tube length - Same.
+<p>
+  <li>Tube material - Plexiglas.
+<p>
+  <li>Electrodes - Copper foil in contact with large brass blocks with
+   adjustable gap lengthwise along entire tube.
+<p>
+  <li>Gas fill - Nitrogen (welder's quality recommended) at about 100 Torr.
+<p>
+  <li>Cooling - Convection air.
+<p>
+  <li>Coupling - Fused silica window at unspecified angle.
+<p>
+  <li>Mirrors  - None required!  Optional highly reflecting mirror at opposite
+    end of tube from output window.  A third partially reflecting mirror can
+    be installed in between so that the end which receives the excitation
+    pulse first acts as an oscillator driving the other end as an amplifier.
+<p>
+  <li>Total resonator length - NA.
+</ul>
+<p>
+<li>Vacuum system:
+<ul>
+<p>
+  <li>Requirements - Low.
+<p>
+  <li>Sealed while operating.
+</ul>
+<p>
+<li>Special chemicals/supplies required - None.
+<p>
+<li>Excitation/Pumping:
+<p>
+<ul>
+  <li>Type - Parabolic high current electrical discharge traveling down
+    lasing channel at the speed of light.
+<p>
+  <li>Power supply - AC line power high voltage transformer or other source
+    of 10 kV or more.  When using the transformer, laser operates at twice
+    the line frequency (100 Hz in their case).
+</ul>
+<p>
+The Blumlein circuit is approximately equivalent to the following:
+<p>
+<PRE>
+
+                  R1                L1
+          - o----/\/\------+------^^^^^^------+--------+
+                           |                  |        |
+                           +------->  &lt;-------+        |
+                       C1 _|_     Laser      _|_ C2    v SG1
+            HV            ---     Cavity     ---       ^ Spark Gap
+                           |                  |        |
+                           +------->  &lt;-------+--------+
+                           |        L2        |        |
+          + o--------------+------^^^^^^------+--------+
+
+</PRE>
+<p>
+The HV power supply charges both capacitors to the spark gap breakdown
+voltage.  When the spark gap fires, C2 is shorted out and the full voltage on
+C1 appears across the both gaps along the length of the laser cavity
+very quickly causing the nitrogen gas to ionize.  With the parabolic reflector,
+the wavefront hits at the closer end of the channel first and travels down
+the channel at the speed of light - so they say. :)  As with the SciAm
+N2 laser, R1, L1, and L2 are only used for charging; they are for all intents
+and purposes, open circuits when the laser fires.
+</ul>
+
+<h3><A NAME="cn2dg1">David Grace's Air Lasers</A></h3>
+
+(From: David Grace (david_the_sparky@hotmail.com).)
+<p>
+I built an air laser operating at 1 atm.
+<p>
+The design itself is the same as the common Blumlein type. The two top
+plates of the capacitor consist of 1.5 mm thick aluminum plates of
+dimensions of 20 cm (L) x 9 cm (W).  The capacitance of this setup is
+2.5 nF. Between these two plates is an inductor or coil of wire.  The
+inductor I use has 12 turns of 1 mm thick copper wire. The number of turns
+does not matter - the performance of the laser is identical with a 1
+turn inductor, and also a 50 turn inductor.
+<p>
+The dielectric of the laser is a polyethylene sheet of 75 microns thick. The
+base plate of the capacitor is the same thickness aluminum as the top
+plates. The laser switch spark gap is set to about 2 mm, so although my power
+supply is 10,000 VDC, only 2 to 4 KVDC is across the capacitor, so there is no
+chance of the thin dielectric failing.  The bottom plate is connected to the
++ve part of the neon transformer.
+<p>
+The laser air cavity is formed between the two top plates, and is fully
+exposed to air. No closed cavity or vacuum pumps here. Also no pure N2 is
+used - just air. The gap between the laser electrodes is very small - about
+1.5 mm, so any beam produced is only 1.5 mm wide.  The length of the laser
+cavity is 20 cm as determined by the dimensions of the upper plates. To make
+this work I obtained two long 'L' shaped rails of aluminum from the hardware
+store.  These are placed so that they sit on the upper cap plates.  Their
+facing edges form the gap.
+<p>
+When switched on, sparks as well as corona are seen along the gap between
+the L shaped electrodes. Aligning these electrodes so an even sparking is
+made along the gap is needed to make the the laser work.  Corona alone will
+not make this work!! I have found that you must have those bad sparks along
+the gap to make this lase.
+<p>
+The laser produces an interesting pattern on paper. Ring and stripe
+structures can be clearly seen in the main body of the beam. In the next few
+days I will be scaling this up to 60 cm long to see if it still works with
+higher inductance. Also it will be interesting to see if the higher
+capacitance and longer length of the laser will boost performance.
+<p>
+In summary, it is easy to construct an N2 laser in air with no vacuum system.
+While maybe not nearly as powerful as a properly designed vacuum n2 laser, it
+is still a good project to make.
+<p>
+(A few months later)
+<p>
+I finally got round to building the larger version of my air laser.  It is the
+same design as the first one (still 1 atm pressure with air as laser gas), but
+the channel is now 70 cm in length. The whole capacitor setup is built around
+the size of this channel.  The size of the actual setup is 70 cm x 45 cm with
+each upper capacitor plate being 20 cm x 70 cm. The capacitance of the blumlein
+switch capacitor is also larger, being about the 12 nF mark. A 12 turn
+inductor is still used between  the upper capacitor plates.
+<p>
+The results were as expected: The beam is much less divergent as it spreads
+from 4 mm wide from the laser to about 10cm at a 5 m distance. The first laser
+of this type spread twice this at the same distance, so there is an
+improvement there with this new large one.  The beam is about 3 to 5 times
+intense (estimated), so dyes may be a possible option for this N2 laser.
+<p>
+This has been a most amazing project to build. It is certainly a very
+easy laser to build as no vacuum pumps or gases are needed. It performs very 
+well for its simplicity in this manner. I don't know how it compares to 
+proper N2 vacuum job lasers, but if I can pump dye lasers with this then the 
+power it puts out must be comparable to those properly designed N2 lasers.
+
+<h3><A NAME="cn2rm1">Robert Meagley's N2 Lasers</A></h3>
+
+(From: R. Meagley (rmeagley@gte.net).)
+<p>
+In the past 4 months I have successfully built 3 N2 lasers 1/2, 2/3, and
+1 meter in length with 0.5 cm gap and 8 kV power supply, 1 square meter caps. 
+<p>
+I have tested both rolled and flat capacitor designs. Rolled <i>does</i> work.
+Thin dielectric is absolutely critical. Zap, zap, zap - very impressive
+output! 10 to 20 Hz repetition rate, spark gap trigger. Jitter is limited by
+air gap.  These lasers also work with air in place of pure N2. 
+<p>
+A couple of documents are available,
+typos and all, which includes notes on my experiments along with some diagrams
+and photos.  These are <b>NOT</b> polished reports!  If you are curious, see:
+<p>
+<ul>
+<li><A HREF="http://repairfaq.cis.upenn.edu/sam/meagley/rmn2.pdf">R. Meagley's
+ Second Report on Experiments with N2 Laser Using Air as Laser Medium
+ (4-1-00)</A>.
+<p>
+<li><A HREF="http://repairfaq.cis.upenn.edu/sam/meagley/rmn3.pdf">R. Meagley's
+ Third Report on Experiments with N2 Laser Using Air as Laser Medium
+ (7-16-00)</A>.
+</ul>
+<p>
+(From: Sam.)
+<p>
+Sorry, I don't know what happend to the first report.  If someone would
+volunteer to convert these to HTML, I'd be happy to upload that version
+as well.  I tried it using MS Word but the program crashed. :(
+
+<h3><A NAME="cn2dr1">Don Raphaelus's N2 Laser</A></h3>
+
+(From: Don Raphaelus (donraphaelus@hotmail.com).)
+<p>
+A few months ago, I didn't know anything about lasers, but in a matter
+of a couple months, I have opened my eyes to the coherent light - with
+safety glasses of course! :)  Now I'm what you may call a "laser nut",
+looking in supermarkets for old bar code scanners, even building a N2 laser!
+I was amazed when it lased in a cold Saturday night! Tears rolled on my
+face - after all, I built it by myself! A coherent UV front!  Ok, the
+output wasn't so great, but still was amazing! First I tried to build the PCB
+caps but that was so $$$. Then I tried garbage bags with aluminum foil. The
+lasing gas was welders N2, and a salvaged refrigerator pump. No manometers
+to control the pressure, just two valves. The spark gap was two nails,
+spaced 1 cm apart. And the the head was traditional (L-aluminum from
+a hardware store and a box made of acrylic). it worked for ten minutes
+completely sealed, then died. There are several small leaks, but I just
+have to flush and fill it again, and go on. Oh, and the HR mirror was a
+first surface automobile mirror!
+
+<h3><A NAME="cn2hal">Hubert Pissavin's $10 Air Laser</A></h3>
+
+Here's one you can literally build for $10 (excluding the high voltage
+power supply).  No vacuum pump, no special gases, just common household
+materials: See: <A HREF="http://spt06.chez.tiscali.fr/00/air.htm">Hubert's
+Laser Page: Air Laser</A>.
+
+<h3><A NAME="cn2bg1">Bernhard Gruber's N2 Laser</A></h3>
+
+(From: "Bernhard Gruber" (unix@utanet.at).)
+<p>
+Some years ago I built an N2 laser.
+<p>
+I used two 50 cm long Plexiglas rods (width: 4 cm, 1 cm thick) with a 1 cm
+wide 5 mm deep milled channel along the middle.  This also had a gas inlet
+and outlet. The gas was pure N2 at 70 to 200 Torr.  Two brass electrodes,
+former used as blades in the paper production - were glued with silicone
+sealer between the rods. I carefully rounded off the inner edges to prevent
+corona effect (also important for aluminum foil).  They are adjustable (a
+little bit) by using some kind of clamp or something similar.  I glued a
+microscope slide at about a 10 degree angle with Epoxy.
+<p>
+The capacitors were made of aluminum foil and thin PE plastic which normally
+is used for packaging.  Beware of enough isolation between the bottom and top
+plates - depending on the voltage you use - I had 2 cm more plastic on each
+edge at 8 kVDC.  The inductor was not that critical - 10 turns of 1 mm copper
+ire, diameter about 2 cm with 2 to 3 mm space between the turns (also a long
+enough straight wire will work).
+<p>
+The spark-gap was a home-built encapsulated one.  Encapsulation is necessary,
+due to the high noise level -> if you working around with your laser and the
+flashes and noise of the spark-gap illuminates the lab window, your neighbor's
+will be amazed about and starts whispering.  (If further during the copper
+vapor laser development, the 6 kW Marx generator interferes with their TV and
+satellite receivers - but thats another story.)
+<p>
+The power supply was a 6 kV/20 mA neon sign transformer.  The more power
+(current) you have, the higher the repetition rate is for the same assembly.
+therefore it doesn't make sense to use high power charging for this kind of
+laser.  To increase the energy density, increase the gap between the main
+electrodes and use higher voltages, or increase the length of the laser
+chamber, but always beware of a lowest inductive design something like
+RF-design (also there you need the 'magic finger') after everything works
+fine place a simple mirror on one preferred side - this is the backside.
+If your design works well and you haven't too much gap between the main
+electrodes, you can try running this goodie at atmospheric
+condition (TEA laser) without pure N2 gas (but this will reduce the
+efficiency).
+<p>
+Adjust the main electrodes until a fast discharge appears between them equally.
+<p>
+Test your laser on a white paper (recycled one has no optical brightener
+coating on it) or better use an organic dye fluorescein, rhodamine, dissolved
+in methanol or ethanol - if you work on Sunday also isopropyl is allowed. :-)
+For rhodamine, water can be used instead.  Or if nothing no real dye
+is available just borrow your son's text marker and wash the ingredients
+into your 'dye cell'.
+
+<h3><A NAME="cn2ab1">Andrew Baker's $4 N2 Laser</A></h3>
+
+Well, not counting the vacuum pump. :)
+<p>
+(From: Andrew Baker.)
+<p>
+I did a super simple one back a year or two ago.
+<p>
+The lasing chamber used took two 3/4" x 1/8" aluminum bars (hardware store)
+about 10" long and two strips of thin Plexiglas, maybe 1" wide, same length
+as the aluminum.  I buffed the edges of the aluminum smooth and then
+warmed up the aluminum strips with a heat shrink gun, and positioned them
+about 3/16" apart.  I then used a hot-glue gun to apply a bead along the
+aluminum strips.  Preheat is a good idea, otherwise the hot-melt glue doesn't
+bond well. Lay the strip of plexiglas in the glue, press and wait.  Flip the
+entire thing and repeat with the second piece of Plexiglas. Now you have a
+little channel that's 1/8" x 3/16".
+<p>
+End View:
+<p>
+<PRE>
+
+              Plexiglas
+    Al Foil  ===========   Al Foil
+ =============    N2   ==============
+             ===========
+              Plexiglas
+
+</PRE>
+<p>
+Drill holes. hot glue hose barbs for the vacuum line.  It will probably
+leak enough that you don't need to do an inlet if you're using plain air.
+<p>
+Go crazy with copious amounts of hot glue when you put the microscope slides
+on. They probably won't hold well, but that's what the vacuum is for. :-)
+<p>
+The capacitors were aluminum foil with thick Mylar in between,  Each piece was
+around 10" x 10". Simply set the "laser tube" on top of the capacitor so it
+lines up with the edges of the two top capacitors.  Use something heavy on
+top of it to hold it tight to the foil. Styrofoam with a brick on top. Hold
+the inductor on the same way.
+<p>
+The spark gap was two large ball bearings sitting on top of nuts at the edge of
+the capacitor plates. The bottom foil extends out beyond the dielectric. One
+is there, the other is on top. Just move them (DISCHARGE FIRST!!!) to change
+spark gap.  Put a plastic bowl over the "spark gap"
+<p>
+The power supply was for a HeNe laser. The trigger circuit gave enough juice to
+charge the caps up to maybe 10 kV. It produced a beam right off the bat -
+discharge once a second, made a beam about every other discharge.
+<p>
+Cost was about $4 and it took 45 minutes to make.  However, the capacitors
+made an awesome sizzling noise.  Dielectric breakdown was a problem, mostly
+because it was hard to get all the air bubbles out from between the layers,
+so there was some corona heating.
+
+<h3><A NAME="cn2js1">Jon Singer's Low Cost Pseudo-TEA N2 Laser</A></h3>
+
+While this laser operates at 1 atm, it uses a mixture of N2 and He
+with a partial pressure of N2 around 30 to 50 Torr to allow the discharge
+to take place at a reasonable voltage.  The pulse width is also much longer
+than the 1 ns typical of a true TEA laser.  Thus the "pseudo" in the name. :)
+<p>
+(From: Jon Singer, of the Joss Research Institute.)
+<p>
+I'm working on learning about high-performance nitrogen
+lasers, and in the process I am building some machines. I
+don't have high performance yet (working on it), but I do
+have a laser design that seems reasonably cheap and easy,
+all things considered.  I haven't actually pushed it to its
+limits, but I seriously doubt that it puts out more than
+perhaps 50 to 100 kW in its current configuration, but it's
+basically a learning a learning machine, and I'm fairly
+pleased with it.
+<p>
+A complete description with photos and operating principles can
+be found at <A HREF=
+"http://www.jossresearch.org/lasers/nitrogen/dkdiy.html">A Simple Nitrogen Laser Using Doorknob Capacitors in an LC Inversion Circuit with
+Semiconductor Preionization</A>.
+
+<h3><A NAME="cn2js2">Jon Singer's High-Power Water-Cap Nitrogen Laser</A></h3>
+
+It's only a nitrogen laser, but my new one actually uses a water-cap,
+and I have it running fairly well. Drives a cuvette of dye nicely,
+makes sparks if I focus it onto a steel surface, ...all the usual good
+things you expect with maybe 350 kW output, which is about what I
+think it's giving me.
+<p>
+It also makes enough EMP to result in my
+<A HREF="http://www.jossresearch.org/pictures/lasers/nitrogen/lddiy/c0188ca.curlicues.2c.jpg">Tek 7104 Scope Going Wacko</A>.  This is just not something
+you ever expect (or want) to see on a scope!  I think at least some of it is
+the fact that the entire driver circuit (probably including the head, which
+is 4 feet long) is acting as a nice big antenna for the immense EMP that the
+thing generates. I expect to put up some sort of barrier soon, to see
+if I can reduce the radiated crap. (The main storage cap is 89 nf, and
+I'm charging it to 35 kV. That's 50 J per pulse, and I'm dissipating
+it fairly swiftly in the "antenna"...)
+<p>
+The full page is at
+<A HREF="http://www.jossresearch.org/tjiirrs/005d.html">A High-Performance
+Nitrogen Laser</A>.  I would define "High Performance"
+loosely as "more than 250 kW peak pulse power", though if you really
+want to be stringent and finicky about it, you could arbitrarily put
+the lower bound at 500 kW and describe the region between 100 kW and
+500 kW as "mid- performance".
+<p>
+I do hope to get 500 kW out of this monster when it is
+optimized.
+<p>
+This driver would certainly come under "Unusual Technologies and Techniques".
+Not many people have bothered to build water-cap driver circuits (I've
+never actually heard of a DIY one), despite the fact that the
+dielectric is self-healing if punctured, has dielectric constant of
+about 80, and has dielectric strength of about 1 GV/meter (!). This is
+probably because there are significant downsides.
+<p>
+On the other hand, 2 or 3 of the hottest nitrogen lasers ever published (and
+possibly also one that was not published -- I have word of mouth from
+a former professional designer about a high-performance TEA laser that
+he made) used water-caps, and it is clear that they (water-caps) are
+within the reach of DIY folks who are willing to learn to deal. The
+stainless steel trays cost me all of $17.20 each, the walls are wood
+(though I will admit that I would not do it that way again -- next
+time, I want to be able to see inside the cap), and I got the
+water-purifying resin on eBay. I am obliged to admit that this is
+tweak city, but it is not rocket science.
+
+<h3><A NAME="cn2jk1">Jarrod Kinsey's N2 Lasers</A></h3>
+
+(From: Jarrod Kinsey (jarrodkinsey532@yahoo.com).)
+<p>
+I have built a transverse electrode nitrogen gas laser that operates at
+atmospheric pressure. It uses pure nitrogen gas from a bottled gas
+supply. This is the smallest laser of this type I have successfully
+made. The active region is only 5 inches (12.7 cm) long. This was
+possible because I used a new electrode configuration I discovered
+through trial and error. One electrode is round (a rod shaped
+profile), and the other is the more traditional L-profile (straight
+edge) shaped electrode. This electrode arrangement greatly improves
+performance, and enables a shorter active region than I have otherwise
+been able to use.
+<p>
+Photos of this laser can be found in the <A HREF="laserpic/laserpic.htm">Laser
+Equipment Gallery</A> (Version 2.25 or higher) under "Home-Built Nitrogen
+Lasers".
+<p>
+Other N2 and dye laser projects may be found on
+<A HREF="http://www.jarrodkinsey.com/">Jerrod Kinsey's Homepage</A>.
+<p>
+<A HREF="http://www.jarrodkinsey.com/pages/howtobuild.html">How To
+Build a Simple TEA Nitrogen Laser</A> includes a step-by-step
+tutorial, showing how to build a simple, but powerful TEA N2
+laser.  After the laser is complete, it is shown being used as a pump
+for a cuvette of R6G. No lens is used to focus the UV beam into the
+dye! The dye output is much more impressive when a lens is used to
+focus the N2 beam, however. The 'lens-free' pumping was only done to
+demonstrate the capabilities of this laser.
+<p>
+<A NAME="cn2aio"></A>
+<hr>
+<br>
+<li>Back to <A HREF="lasercn2.htm#cn2toc">Home-Built Nitrogen (N2) Laser
+ Sub-Table of Contents</A>.
+<h2>Additional Information on Home-Built N2 Lasers</h2>
+<h3><A NAME="cn2cn24">Construction of the Capacitors for the N2 Laser Blumlein
+ Pulse Circuit</A></h3>
+
+In order to achieve the super fast discharge pulse required for the N2 laser,
+a planar capacitor almost certainly must be used.  This means that rolled up
+beer can style caps or computer grade electrolytics won't work!  The
+traditional material for these caps has been .015" thick Fiberglas-Epoxy
+printed circuit board (PCB) stock, copper plated on both sides and with
+selected areas removed around the edges and for the main channel.  This is
+what's described below.  This is the main hard-to-find part for the N2 laser.
+I don't have a guaranteed source for this stuff but it may be available from
+printed circuit board suppliers.  With all the on-line PCB sources nowadays,
+it might be possible to obtain via that route?  Has anyone checked recently?
+<p>
+However, an alternative with some distinct advantages in terms of breakdown
+voltage and availability (marginal and hard to find, respectively) may be to
+use polyethylene for the dielectric and aluminum flashing for the plates.
+<p>
+Here's the traditional approach:
+<p>
+The capacitors are formed between the top and bottom copper foil on 30 x 45 x
+0.04 cm (12" x 18" x 0.015") Fiberglass-Epoxy printed circuit board material.
+The top and bottom are etched for 2 cm around the edges and a 5 cm strip down
+the middle on top is removed to separate the plates for the two capacitors.
+<p>
+The basic parallel plate capacitor formula is:
+<PRE>
+                      A * K * 8.85 pF/m
+                 C = ------------------- * (N - 1)
+                              d
+</PRE>
+Where:
+<ul>
+  <li>C is the resulting capacitance in pF.
+  <li>A is area of the plates in square meters.
+  <li>K is the dielectric constant.
+  <li>8.85 pF/m is the permittivity of a vacuum.
+  <li>d is plate separation in meters.
+  <li>N is the number of plates.
+</ul>
+
+Or, if you insist on non-Metric units where possible (A and d are in square
+inches and inches respectively), the capacitance in picofarads is equal to:
+<PRE>
+                        .224 * A * K
+                   C = -------------- * (N - 1)
+                             d
+</PRE>
+The total capacitance of the SciAm N2 laser totals about .012 uF.  Note that
+due to the thickness (or lack thereof) of the PCB material and its high
+dielectric constant, this is several times greater than the capacitance of a
+large CRT!
+<p>
+You won't find the PCB material at Radio Shack but it should be available at
+reasonable cost from surplus electronics dealers or PCB fabrication houses.
+However, tracking down one in your neighborhood may take some finger or leg
+work.  Here are a couple of sources found in the Portland, OR, area, for
+example:
+<p>
+(From: Scott & Pat Chewning (patch@europa.com).)
+<ul>
+<li>Cascade Electronic Surplus, Portland, OR, 1-503-285-0832.  Open Thursday
+ to Saturday!  They will cut to your needs, up to 6' x 45' (that's feet!), all
+ .015" thick and have almost any other size.
+<p>
+<li>R5-D3, Portland, OR, 1-503-774-6560.  Open Wednesday to Saturday.  Good if
+ you want anything hard to find, especially vacuum tubes.  He has 3' x 4'
+ sheets for $10.
+</ul>
+Once you have obtained the PCB material, it needs to be cut to size.  This can
+be done with a band saw and fine tooth blade, a power shear, hack saw, nibbling
+tool, or even a pair of metal snips or paper cutter!  (Though the fiberglass
+is hard on blades, cutting a couple sheets of this stuff shouldn't affect
+anything.)  Then, the copper needs to be removed from selected areas to form
+the plates of the two capacitors of the Blumlein circuit:
+<ul>
+<li>The best way to remove the unwanted copper is probably with PCB etching
+ solution (cupric chloride and hydrochloric acid, ferric chloride, or dilute
+ nitric acid).  Areas to be preserved are masked off with plastic tape, PCB
+ resist, or another material impervious to the etching solution.  Radio Shack
+ is supposed to have a kit for about $14 which comes with resist ink, resist
+ solvent, and ferric chloride etching solution.  Other large electronics
+ distributors will have similar kits as well (and probably cheaper)  All you
+ really need is the etching solution and some sort of masking material or
+ resist - these may be available as refill items.
+<p>
+ WARNING: Handle and dispose of used etching chemicals responsibly - depending
+ on type, they may stain or eat pipes (copper drain lines!!!), masonry and
+ other building and landscaping materials, as well as human flesh.  Read and
+ follow all package instructions.
+<p>
+<li>With care, it may be possible to do this mechanically without the use of
+ messy chemicals.  However, it is absolutely critical to avoid damage to the
+ underlying Fiberglass Epoxy or else there will be areas of reduced dielectric
+ strength and it will arc through the first time HV is applied.  The chemical
+ etch approach above is inherently harmless to the board material itself.
+<p>
+ For the Blumlein capacitors as specified for the N2 laser, proceed as follows:
+ Taking care not to penetrate the copper, use a sharpened nail or awl to
+ scribe lines on the *surface* 2 cm from all 4 edges top and bottom, and
+ another pair of lines front to back across the board 5 cm apart on the top
+ only for the gap between the two plates.  Then, use an Xacto knife or razor
+ blade to lift the copper from the from the board at a corner or edge.  The
+ copper can be peeled from the board to back to these lines and then flexed
+ back and forth to break the copper.  I don't know what, if any, latent
+ surface damage may result from this approach.  Therefore, the chemical etch
+ is preferred if you can stand the mess!
+</ul>
+
+Note that the approximate puncture voltage for this material is 1 kV/mil (.001
+inch or .025 mm) (though it may be lower, see below).  Therefore, the .04 cm
+specified in "Light and its Uses" is good for about 16 kV which is probably a
+bit marginal.  Going to 20 kV will probably not cause problems but I wouldn't
+recommend pushing your luck much beyond this.
+<p>
+Other materials like Plexiglas can be used but there will always be tradeoffs:
+<p>
+The puncture voltage for acrylic plastic (Plexiglas) varies between 450 and
+990 volts per mil (.001") depending upon the quality of the product.  Common
+1/8" (.3 cm) thick sheet (assuming the lower value for puncture voltage) should
+be able to withstand over 55,000 volts; 1/16" sheet (.015 cm) will handle
+over 25 kV which is still adequate.  The problem that you will encounter is
+the low capacitance obtained with the same surface area of even the thinner
+Plexiglas material (compared to the .015" (.04 cm) Fiberglass-Epoxy (though
+as noted above, that thickness may not be quite enough to withstand 20 kV).
+The dielectric constant for Plexiglas is also lower and with the increased
+thickness results in much less total capacitance.  Stacking additional layers
+may not be a viable option due to the nanosecond timing requirements!
+<p>
+What about using discrete capacitors?  You are, of course, welcome to
+experiment.  However, I might suggest that starting with something that is
+known to work would be prudent even if it takes a little longer to find the
+proper materials.  Homemade capacitors made from 10 or 100 or whatever of
+1 or 2 kV units in series-parallel is asking for trouble especially in a rapid
+discharge circuit like this.  The inductance of the leads alone will probably
+greatly slow the rate of discharge.  Any inequality in capacitance and even
+how they are connected will result in voltage differences across the
+capacitors so they may fail immediately if not sooner.  Even commercial high
+voltage capacitors may be inadequate.  And, distributing enough of either type
+of discrete capacitor in just the right locations to simulate the discharge
+wave of the Blumlein device could prove quite a challenge in its own right!
+<p>
+(From (From: Chris Chagaris (pyro@grolen.com).)
+<p>
+No, it doesn't seem possible that .015" PCB material, can withstand 20,000
+volts. Because it won't, at least not for very long. It is not necessarily the
+arcing around the sides that present a problem but it's the "puncture voltage
+rating" that must be considered.  Epoxy circuit board has an estimated
+puncture voltage of 700 volts per mil (.001"). A 0.014" thick capacitor made
+from this material would only be safely rated for 9800 volts. I speak from
+experience, as I have been using a 0.015" thick PCB capacitor with
+around 15,000 volts and have blown holes through the dielectric a number of
+times. With this thickness I would suggest that you limit your applied voltage
+to about 10,000 volts to prevent permanent damage to the capacitor's
+dielectric.
+<p>
+Increasing the thickness of the PCB material would certainly allow more
+voltage to safely be applied without damage to the dielectric, but there are
+drawbacks to this 'solution' when incorporating such a capacitor into an N2
+laser design. The first and most obvious problem is a decrease in capacitance
+when a thicker dielectric separates the charged plates while using the same
+dimensional area. This would lead to less stored energy that could be to be
+delivered to the laser channel.
+<p>
+Another more profound and less well known effect would be the increase of
+self-inductance caused by the thicker board. This increase may be great enough
+to lengthen the discharge time far beyond what may be allowed for an N2 laser
+to function.
+<p>
+In any case, to start, I'd strongly suggest that you try and locate the
+printed circuit board material as specified in the SciAm article.  This must
+be at least 18" x 12" and have the 0.015" thickness.  The length of the laser
+chamber would be determined by the physical size of the capacitor that you
+employ. Thus, the original laser chamber was about 12 inches long.
+<p>
+Half the challenge of building a laser from scratch is the quest for
+affordable, usable materials.  If this proves impossible, the utilization of a
+flat plate capacitor built from polyethylene plastic and copper or brass
+sheets (it is possible to solder to copper and brass) may be attempted.
+Polyethylene has a breakdown (or puncture voltage) rating of between 450 and
+1,200 volts per mil (0.001 inch). Using multiple thinner sheets to build up
+the dielectric is advised. This will have to be determined by experimentation.
+<p>
+What's desired is the thinnest possible dielectric which will effectively hold
+off the applied potential on the plates. The dielectric constant of
+polyethylene (2.2 to 2.3) is lower than the Epoxy circuit board material (up
+to 5.2) so it's likely that a larger area will have to be used to be effective.
+Brass shim stock (to use as the capacitor plates and for the laser chamber
+electrodes) is readily available from most industrial supply stores.  I cannot
+guarantee that this method will work in an N2 laser application, but it would
+be a great learning experience nevertheless.
+<p>
+(From Professor Mark Csele (mcsele@niagarac.on.ca), (personal communication).)
+<p>
+<blockquote>
+"Looking in the reference: "A Simple High-Powered Nitrogen Laser" in
+ Opto-Electronics 4(1972)p.43, it describes formulae to characterize the
+ transmission line.  In general, using 0.015" PCB the Z of the line ends up
+ being 0.109 ohm (0.0363 ohm/m).  Literature suggests (but no conclusion)
+ that Z must be below about 0.3 ohm to work.
+<p>
+ The formulae for Z is 0.5*(Zo/sqr(E))* s/L where Zo = 377 ohm (free space),
+ E = 4.8 for Epoxy-glass board, s = 0.381mm thickness and L = 300 mm length of
+ the laser cap."
+</blockquote>
+<p>
+It certainly would be of great interest to many of us if indeed a thicker PCB
+material would work in the original N2 laser design. I would encourage anyone
+who has access to this material to experiment with it.  Calculations suggest
+that perhaps one could use a PCB material as thick as 0.030", which would
+withstand the higher voltage (21,000 volts) and still maintain a low enough
+self-inductance to produce a short enough discharge to work.
+<p>
+(From: Jon Singer, of the Joss Research Institute.)
+<p>
+Alas and alack, it turns out that the 1 kV/mil rating is only good at
+1 mil thickness. With essentially ALL materials, the per-unit-thickness
+dielectric strength goes down as the thickness goes up. It is crucially
+important to take this into account.
+<p>
+If G-10 board (just for example) is rated at 1 kV per mil, then 15 mil
+board is probably good for only about 12 kV <i>in extended use</i> (it
+should take more on a single-shot or occasional basis), and 30-mil
+board is probably only good for 20 kV. Once you puncture the board
+you can throw away your laser, so it's a good idea to be a bit cautious
+and conservative about how much voltage you put on it. (This is why
+I'm using caps that are rated at 40 kV in my little 6 kV laser - it lets me
+go to higher voltage without worrying, if and when I find an appropriate
+spark gap.)
+<p>
+(From: Christopher Cox (chrisc@coboxinc.com).)
+<p>
+Through great pains and research I can also state the following, for the 
+capacitor, MYLAR ROCKS. With a great dielectic constant (keep that 
+impudence low) and durability, only mica comes close.  I picked some up at 
+a craft shop under the name of Duralar.
+
+<h3><A NAME="cn2cn25">So Why Didn't Ben Franklin Build One of These?</A></h3>
+
+The Blumlein-switched capacitor UV lasers use some pretty basic technology,
+readily available over two hundred years ago.  Too bad the concept of the
+laser, let alone a working model, wasn't even a glimmer in anyone's eyes at
+that time!  The following is extracted from a discussion on alt.lasers.
+<blockquote>
+"The N2 laser doesn't require sophisticated construction, so this bit about
+ Ben Franklin seems reasonable. You just need a very fast voltage pulse to
+ pump a nitrogen atmosphere to get some kind of laser output.  The Blumlein
+ circuit is the switch recommended by the Scientific American Amateur
+ Scientist article on the N2 laser that appears in "Light and It's Uses.""
+</blockquote>
+(Responses from: placayo@hotmail.com) unless otherwise noted).
+<p>
+I had it in the back of my head that input amperage also mattered somehow.  In
+this case, milliamperes as generated by the usual laser power sources Van de
+Graafs and Wimshurst machines put out mere microamps.  On the other hand, the
+nanosecond switching in Blumlein's pulsar (such as in the Scientific American
+column) guarantees an avalanche of current at high voltage in the laser
+channel.  So, input current is not really critical.
+<blockquote>
+"I'm sure that Mr. Franklin could have devised something similar, had he
+ realized a need for it.  He had access to electrostatic generators and Layden
+ jars, which were early capacitors. It is conceivable that someone could take
+ all these parts, along with the newly-discovered atmospheric gases (1772 for
+ nitrogen) and vacuum pumps, and produce a nitrogen laser for the Continental
+ Congress (1774 - 1789)."
+</blockquote>
+Or he could have gone the simpler route and used air as the lasing medium.  I
+understand that air lases (even at normal pressure) when used in a traveling
+wave laser.  It's a more likely scenario.  They were tireless and thorough
+experimenters back then to a degree we rarely find today.  Some busy-body, Old
+Ben perhaps, may have slapped together something resembling the Blumlein
+switch, just to see what happens, fired it up, watched a curious fluorescence
+in the long notch on one Leyden jar plate or capacitor plate, packed up and
+went home.  He wouldn't have an idea that he had just invented a laser because
+the output is UV and invisible.
+<p>
+There'd be no record of it consequently.  And history slips through his
+fingers.  If the would-be inventor had been Ben Franklin, the device would
+look exactly as it does today.  At one point, Franklin preferred flat-plate
+capacitors in his work.  He popularized them. They called them "Franklin
+squares", I think.
+<p>
+The traveling wave laser is one example of a technology that was sought for
+because it was predicted by established theory.  But because of its simple
+construction, it could just as easily be the sort of thing that might have
+been invented by accident way before -- and ignored.
+<blockquote>
+"This business of Ben Franklin's nitrogen laser makes me wonder what
+ inventions we could make with just the technology we have today? It reminds
+ me of Babbage's calculating machine, which also would have brought
+ technological usefulness to people centuries sooner."
+</blockquote>
+Or what old, "obsolete" inventions or long-discarded ideas might be
+resurrected with the benefit of today's know-how and materials.
+<p>
+(From: Sam.)
+<p>
+Of course, in Ben's time, there was no way to realize that laser action was
+taking place or that such a thing was different than ordinary light anyhow,
+no obvious way to see UV, or reason to even check for it.
+<p>
+For one to claim that an invention was created they either have to have sought
+it out beforehand or understood the ramifications of the results of a
+fortuitous experiment.  Neither of these were really possible for another
+couple of centuries. :-)
+<p>
+(From: Jon Singer, of the Joss Research Institute.)
+<p>
+As a person who has built several DIY room-pressure nitrogen lasers (which I
+will freely admit worked rather poorly, but which did indeed work), I can
+assure you that Ben Franklin was not *about* to do this. If he had access to
+some kind of vacuum pump, it's possible that he might have seen something at
+reduced pressure; one never knows. But an air laser? I doubt it. Air is an
+impossibly lousy medium - not only does it not lase very well, it's a pain
+in the neck to get a clean discharge in. A room-pressure laser? Forget it.
+They're a wicked pain. It's next to impossible to get a sufficiently even
+discharge; you have to resort to corona and/or UV preionization, which is not
+exactly likely to happen by accident. In fact, it took years before people were
+able to make room-pressure nitrogen lasers even on purpose, and some of those
+people are really sharp.
+<p>
+A note on the gas fill: If I recall correctly from my perusal of the literature
+(which I admit was a while ago), 0.3% oxygen is the optimum amount. You
+actually get slightly improved performance and power output if you have about
+this much oxygen in the mix. If you get more than half a percent, however, you
+are already well past the peak, and as much as a full percent is harmful, yet
+another reason why a Ben Franklin era laser would be unlikely.
+
+<h3><A NAME="cn2cn26">Power Supply Requirements for the N2 Laser</A></h3>
+
+The laser discharge circuit in the Nitrogen laser article in "Light and its
+Uses" is just a homemade capacitor, inductor, and air spark gap - fired by
+when the voltage climbs high enough.
+<p>
+Charging current is irrelevant except to the extent that it affects the
+repetition rate and to overcome electrical leakage in the setup (which can
+be quite minimal).  When the discharge takes place, it is all over in a few
+dozen nanoseconds.
+<p>
+In fact, in the article, they suggest alternatives - their little transistor
+ignition coil thing and a neon sign transformer.  It just affects the
+repetition rate.  The transistor circuit probably puts out order of 10 uA at
+20 kV (they say 1 percent efficiency!).  A neon sign setup, perhaps 2000 times
+this.  When the spark gap fires, the current available from the charging
+source is of no consequence.
+<p>
+If you are using the neon sign transformer approach, a high voltage bridge
+rectifier is recommend even though it may be possible to run it on the raw AC.
+(Each of the HV rectifiers of the bridge needs to have a PRV rating greater
+than 1.414 times the RMS value of your transformer's maximum output - about 23
+kV for a 15 kV transformer.  See the section:
+<A HREF="laserclp.htm#clpcps0">Power Supply Components</A>.)  The reason is
+that the Blumlein capacitor will load the transformer reducing its peak
+voltage.  A 1000 pF capacitor has an impedance of about 2.7M ohms at 60 Hz
+(3.24M at 50 Hz).  The effective series resistance of a neon sign transformer
+can vary between a few hundred K ohms and more than a M ohm depending on type
+and size.  Thus, a voltage divider is formed, and depending on the size of the
+caps in your laser (1000 pF is just an example) and the transformer you are
+using, only a fraction of the transformer's peak voltage appears across the
+capacitor and spark gap.  Using the rectifier will allow the caps to charge
+until the spark gap triggers so it may operate on every 2nd or 3rd half-cycle
+but at least it will fire eventually.
+<p>
+CAUTION: The spark gap is really loud.  Ear protection or a sound deadening
+enclosure is highly recommended - especially at high rep rates!
+<p>
+It would be interesting to connect a Van De Graff or Wimhurst machine to such
+a setup.
+<p>
+(From: Chris Chagaris (pyro@grolen.com).)
+<p>
+Well yes, I have fired my nitrogen laser by using my Wimshurst machine as the
+charging source.  I just tried this on a whim, and it worked.  It does take a
+little while to get the capacitors charged to firing potential though.  It is
+a nifty combination of the old and the new.
+
+<h3><A NAME="cn2mmn2">Making Measurements on an N2 Laser</A></h3>
+
+You can actually record the discharge waveform fairly easily if you have a
+high speed storage oscilloscope (doesn't everyone?):
+<p>
+(From: Pissavin (pissavin@aol.com).)
+<p>
+Making measurements on an operating N2 laser can be tricky.
+Connecting an oscilloscope to a +20 kV charged capacitor isn't very easy
+especially if you want to measure ns (nanosecond) phenomena.
+<p>
+I suggest 2 tricks to make measurements safely:
+<p>
+<ol>
+<li>Mount a 1 turn, 10 mm diameter coil on axis with the N2 laser tube about
+ 40 mm away from it (make sure your HV can't jump to the coil!).  Connect the
+ leads from the coil via a coaxial cable to a fast oscilloscope.  This is very
+ simple and efficient.
+<p>
+<li>Disconnect the high voltage supply from the laser and replace it with a
+ low voltage power supply and current limiting resistor (I suggest 10 VDC
+ and 100 ohms).  Also install a reed switch in place of or in parallel to
+ the spark gap.
+<p>
+ You can then use an ordinary scope probe everywhere safely and "fire" the gap
+ by just moving a magnet near the reed switch.  With a TDS210 (a 1 Gsample/sec)
+ scope, a 100 resistor+reed+X10probe+scope has about 3 ns rise time which seems
+ enough.
+<p>
+ Connecting it to a Scientific American style N2 laser, you can see that
+ there is no electrical wave: all of the capacitor plate is at the same voltage
+ at a precise time.  You can also see a 20 ns fall time for the sparkling
+ electrodes and a 50 ns fall time on the other electrode followed by a lot
+ of oscillation. It's very interesting to compare the actual behavior to a
+ Spice model result.  Of course, you don't see the plasma channel effect
+ itself.  However, the reed switch is like a spark gap: a very simple, very,
+ very fast switching device with low ON resistance.
+</ol>
+<p>
+
+<h3><A NAME="cn2cn27">Jon's Comments on the SciAm N2 Laser</A></h3>
+
+A more complete version of Jon's arguments can also be found at:
+<A HREF=
+"http://www.jossresearch.org/lasers/nitrogen/circuitboardlaser.html">Jon's
+Rant on the Scientific American Nitrogen Laser</A>.
+<p>
+(From: Jon Singer, of the Joss Research Institute.)
+<p>
+I believe I can make a convincing case for the conjecture that Jim Small's
+discussion of how the laser works, as published originally in the magazine
+and later in the book, is 100% bogus. He should have known better. In fact,
+he ought to be ashamed of himself for not thinking it through.
+<p>
+Here are the relevant facts:
+<ol>
+<li>A Blumlein is a traveling-wave device. (We all agree on this part, even
+ Small).
+<p>
+<li>A traveling-wave device cannot be appreciably smaller than its wavelength.
+ (I do not know the absolute criterion, but I'd be willing to bet that if you
+ get much shorter than half a wave, you aren't going to see a lot of wave.)
+ This, of course, presumes that you have been able to create a traveling wave
+ of discharge within the device, which leads directly to #3.
+<p>
+<li>In order to create a traveling wave of discharge in a circuit, you must
+ switch the circuit in a time that is short with respect to the transit time
+ of the device. Otherwise, a wavefront cannot ever develop -- the device simply
+ behaves like a lumped-constant circuit (an LC tank circuit of some sort, with
+ the usual inherent resistances) rather than a strip-line, which is a
+ distributed-constant circuit.
+</ol>
+Now: let's take a look at the device. We already know that the output pulse is
+about 6 ns long, which amounts to 6 feet in air, or approximately 4 feet in
+copper. How big is the device? Does it have AT LEAST 2 feet of channel?  NO
+WAY.
+<p>
+All right, let's look at the switch. The switch consists of a big loop of
+copper that goes out around the edge of the circuit board, and has relatively
+huge inductance. In order for this laser to operate as a real Blumlein, the
+switching time certainly can't be any longer than half the size of the device
+itself, which is maybe 2 nanoseconds. Therefore, if the switch does not fully
+close in 1 ns or less, there is NO WAY that this device could EVER develop a
+traveling wave even if it were big enough, which it is not.  The switch is
+simply too slow to permit the development of any kind of wave whatsoever,
+<p>
+If Small (or anyone else) observes output that is not symmetrically divided
+between the ends, there is some explanation other than "traveling-wave
+excitation".
+<p>
+You are welcome to take this analysis to any electrical engineer with any
+experience of traveling wave circuits or HV fast discharge. I am willing to
+bet actual money that they'll back me up, at least to the extent of laughing
+at Small's explanation. (I never bet more than a dime, because I hate taking
+people's money from them, so I'll put a dime on this one.)
+<p>
+You can also think about it this way -- the laser channel is maybe a foot
+long. That's one ns.  So okay, run a discharge wave down the channel.  This
+takes one ns, and...  and... --> where do the other 5 nanoseconds of laser
+pulse come from? <-- (Also, what's supposed to make the pulse be a whole lot
+stronger in one direction than in the other??)
+<p>
+Well, so, okay, how about taking 6 nanoseconds for the wave to run along the
+channel, so that it is active for the entire duration of the laser output
+pulse. Great. Exactly *how* did you say you got the electrical wave to take
+that long to travel a mere 12"? (...And again, what's supposed to make the
+laser pulse be so much stronger in one direction than in the other?)
+<p>
+Has anyone actually measured a huge directional discrepancy in one of these
+devices, BTW?
+<p>
+If you go back and look at the literature, by the way, you'll find a few other
+interesting things.  There are two articles of particular interest with respect
+to this set of issues.
+<p>
+<ul>
+<li>One is a very fine N2 laser from about 1971 that developed about half a
+ megawatt of output power. The authors state that they tried carefully to
+ create a traveling wave, but were unable to see any evidence of one in their
+ device.
+<p>
+<li>The other is a laser that demonstrably *did* create and use traveling-wave
+ excitation: the first H2 Lyman-alpha laser.  It demonstrates another cogent
+ point, which is that a single switch produces a circular wavefront, not a
+ line. They had to use SEVEN switches to get a reasonably linear wave in their
+ device (which did, indeed, have 10 times the output in the "forward" direction
+ that it had in "reverse").
+</ul>
+<p>
+It is possible to make a traveling wave laser, but you *really* have to work
+at it. I certainly wouldn't claim to be capable, and I've done a bunch of
+little laser things, up to & including a dye laser driver that is capable of
+thresholding a dye cell without mirrors -- the reflections off the end windows
+are enough with fluorescein or R6G. (This takes a certain amount of doing, as
+I'm sure you are aware. I used a 0.089 uF cap, running at about 30 kV, in a
+design that might conceivably interest you -- I made very sure it took nothing
+heftier than a Dremel Moto-Tool to build the thing, because that was all I
+had.)  (See the section: <A HREF="lasercdy.htm#cdyjdl">Jon's Dye Laser and
+General Comments</A> for the exciting details.)
+<p>
+One other thing: a guy at Avco-Everett, back in the early 1970s, told me that
+anybody who is careful about it can make a nitrogen laser that produces 100 kW
+of output. He said it takes considerable effort to make a nitrogen laser that
+puts out half a megawatt or more.
+<p>
+(From: Sam.)
+<p>
+I wonder if some of this concern is more related to semantics than actual
+bogosity. :)  If you look at the diagram in the original article, it is
+clearly shows a circular wavefront (sorry for calling it something with 'wave'
+in it) but not an actual traveling wave.  The edge of the circular area of
+charge depletion intersects the discharge chamber at an oblique angle
+resulting in the location of the discharge supposedly moving down the length
+of the bore in a wave-like manner.  I do agree it isn't a traveling wave in
+the normal electrical engineering sense but I'm not sure it is as terrible as
+suggested above. :)
+<p>
+(From: Jon.)
+<p>
+The semantic issue is secondary to this fact: the circuit as designed and
+built cannot possibly produce even the circular wavefront you mention from
+Small's diagram, because the switch is orders of magnitude too slow. (I might
+argue that "a traveling wave" may be circular, while "a laser that uses
+traveling-wave excitation" probably needs a straight line, or something
+approximating it.  In this case, the laser is so small that it wouldn't make
+any difference even if it were capable of generating a wave, which is isn't -
+the point is *doubly* moot!)
+<p>
+Here's the citation for the one of the papers I mentioned above:
+<p>
+<ul>
+<li>"High-power generation from a parallel-plates-driven pulsed nitrogen
+ laser", Jeffrey I. Levatter and Shao-Chi Lin, Applied Physics Letters,
+ 15 December, 1974, v25n12, p70.
+</ul>
+<p>
+The relevant paragraph is:
+<p>
+<blockquote>
+ "Measurements of the voltage pulse at the laser anode and
+ spark gap cathode revealed spark gap rise times on the order of 10 to 12
+ ns and rise times in the laser cavity of 7 to 8 ns, depending on
+ the strip-line impedance.  Contrary to the reports of Basting
+ et. al. (Note 5) and of Goddard (Note 6), there is no evidence that the
+ parallel-plates- driven laser has been operating in the
+ traveling-wave mode. As is obvious, with the observed voltage rise
+ times on the order of 10 ns, no traveling wave can be obtained
+ because the thickness of the corresponding wave front (~3 m) is
+ substantially greater than any physical dimension of the
+ strip-line. The resulting laser output is also observed to split
+ equally between the forward and backward directions. The observed rise
+ times, on the other hand, correspond nicely with the time constant
+ calculated by adding the inductive and resistive times as follows
+ (Note 7):
+<PRE>
+                       L        88              rho
+                tau = --- + ---------- * sqrt(--------)
+                       Z     E<sup>4/3</sup>*Z<sup>1/3</sup>           rho<sub>0</sub>
+</PRE>
+ Where:
+ <ul>
+ <li>L = inductance of the spark gap (including the arc channel) in
+   nanoHenries.
+ <li>Z = impedance of the driving source in ohms.
+ <li>E = the electric field in kV/mm.
+ <li>rho/rho<sub>0</sub> = the ratio of the initial air gap density to standard
+  atmospheric density.
+ </ul>
+ </blockquote>
+<p>
+(The formula is partly in Greek characters, and I'm using their names
+here.  Tau, the time constant, comes out in ns.
+<p>
+Their laser, BTW, developed nearly 3 MW peak power under certain conditions,
+as opposed to the puny few kW of Small's laser. It's a fine article. Here are
+the citations for notes 5 and 6; note 7 is listed as "unpublished":
+<p>
+<ul>
+<li>Note 5: D. Basting, F. P. Schaefer, and B. Steyer, Opto-Electronics
+ 4, 43 (1972).
+<p>
+ (That's actually an "a" with an umlaut over it in the middle
+ of "Schaefer", and not really "ae".)
+<p>
+<li>Note 6: B. Goddard, IEEE Journal of Quantum Electronics QE-10,
+ 147 (1974).
+<p>
+ They spell Bruno Godard's name "Goddard", but I remember
+ it with one "d" in the middle. So go figure. He claimed some
+ incredible amount of power out of his N2 laser, like 9 MW,
+ but nobody was able to duplicate it, and he sort of disappeared
+ after that -- I saw his presentation at CLEO (or whatever
+ they were calling it at the time) in '73 or '74, and I'm not
+ sure I ever saw him again after that.
+</ul>
+<p>
+Here is another paper that might be of interest because it's quite easy to
+build and produces about 150 kW under optimum conditions:
+<p>
+<ul>
+<li>Peter Schenck and Harold Metcalf, "Low Cost Nitrogen Laser for Dye Laser
+ Pumping", Applied Optics, Feb 1973, v12n2, p183.
+</ul>
+
+Here is a good transmission reference:
+
+<ul>
+<li><A HREF="
+ http://www.kentech.co.uk/transmission_lines/Transmission_lines.html">Kentech
+ Transmission Line Tutorial</A>
+</ul>
+
+Specifically, from <A HREF="
+ http://www.kentech.co.uk/transmission_lines/Blumlein_pfl.html">Kentech's
+ Blumlein Configuration Page</A> (linked from the page, above):
+<blockquote>
+ "Blumlein produced a transmission line configuration that delivers the
+ charge voltage into a matched load. The cost of this is that there are
+ two lines and the load impedance has to equal twice the impedance
+ of each."
+</blockquote>
+
+Yet another reason why I contend that the use of the word "Blumlein" is
+totally bogus with respect to nitrogen lasers.  Most of us wouldn't know a
+transmission line if it bit us, and I include myself in that "us". :) I
+might or might not recognize one on sight, and I'm certainly not up to
+building them.  (And I'd bet that almost nobody can successfully match the
+impedance of a discharge to two of them.)  Please note that the two lines have
+to match each other as well.  This <b>is</b> rocket science, not just chopped
+liver. ;-)
+<p>
+Hey, I just thought of one more reason why I don't believe Jim Small's
+explanation:  You remember that nice sharp edge on the circular discharge wave
+going out from the spark gap into the capacitor? Well, if the spark gap (which
+is a nice big one-turn coil, as you'll see if you look at it, and is
+<i>guaranteed</i> to be rather slow) takes a mere 2 ns to close, that lovely
+sharp edge (just the edge, mind you) is <b>eighteen inches across</b>, about
+the size of the entire laser! Have I convinced you yet, or do I need to get a
+guy who has actually built strip-line discharge devices to back me up?
+
+<h3><A NAME="cn2cn28">Comments on N2 Laser Construction</A></h3>
+
+(From: (fannin@gte.net).)
+<p>
+I followed the development of nitrogen lasers from their beginning. You will
+find most of the articles in Journal of Physics E Scientific Instruments in
+about 1968 to 1975 but that was a long time ago. The dates are ballpark.
+Nitrogen lasers can be used at atmospheric pressure with a helium nitrogen
+mix. Sulfur hexafluoride changes the near ultraviolet lifetime. The length is
+limited to about three feet in some designs with power output in the
+MEGAWATTS. They can be more than a glorified flashtube. The voltages, RF,
+flash, in short nearly everything about some of the designs can be deadly or
+permanently maim you. The cavity and capacitor are simple but must be used
+with the utmost caution. Study in depth first - then build!!!!!!
+<p>
+(From: Jon St Clair (Jon_St_Clair-QJS006@email.mot.com).)
+<p>
+I had a friend that made one of these once, but I never saw it operate.
+<p>
+It was a remarkably simple device and consisted of two sheets of metal
+separated by a dielectric like a sheet of Plexiglas.  The lower sheet, viewed
+from the end, was shaped like the letter "J" laying on its back.  The upper
+sheet was positioned so that a spark gap formed between the hook of the J and
+one edge of the upper plate.
+<p>
+The spark gap was covered on top with plastic so that nitrogen could flow
+along the spark gap.  The spark gap was slightly more narrow on one end
+than the other.
+<p>
+When a DC high voltage charged up what was essentially a parallel plate
+capacitor, a nitrogen arc forms at one end of the spark gap.  At least one
+photon of UV causes ionization of the nitrogen right next to it line with the
+spark gap and results in a spreading out of the discharge along the length of
+the spark gap.
+<p>
+The spark starts at one end of the gap, propagates at the speed of light along
+the gap adding energy to a coherent packet of photons as they travel along the
+gap.  I am not clear on this, but I think that the pulse width of the laser
+may be equal to the length of the spark gap divided by the speed of light.
+This is a very very short period of time, and if the conversion efficiency of
+the energy stored in the parallel plate into coherent UV is some reasonable
+amount(?) then the peak power could be huge. x-Watts/second divided by a very
+small number of seconds!
+<p>
+I think obtaining a source of nitrogen and finding a optically clear
+(at the UV wavelength) and distortion free lens for one end of the spark gap
+was the only hard stuff other than building a high voltage DC power
+supply (and that is not hard).
+<p>
+When you hook up a continuous DC supply, you get a burst, it charges up
+again, bursts, charge up again etc.  I understand it will really light
+up UV dyes some distance away.
+<p>
+(From: Dr. Peter Schellenberg (peter.schellenberg@physik.uni-ulm.de).)
+<p>
+Among the lasers described in "Light and its Uses" and other Amateur Scientist
+articles, I guess the nitrogen laser is the cheapest one, since you do not
+even need mirrors, and can go around with some handmade stuff and school
+equipment.  The electrical discharge is done by a home-made capacitor in a
+so-called Blumlein arrangement. (Something similar can also be done to build a
+CO2 laser. However, in this case you need mirrors, preferentially gold
+mirrors. Don't be shocked, these are not that expensive).
+<p>
+By using a cylindrical lens, you can focus the beam from the N2 laser in a
+cuvette with almost any dye and get superradiant laser emission from it.
+<p>
+There are also a lot of descriptions for laser construction in the following
+scientific journals:
+<ul>
+<li>IEEE Journal of quantum electronics
+<li>Optics communications
+<li>Optics letters
+</ul>
+However, there is never a part list included, for this you have to use your
+brain!
+<p>
+I prefer older articles, lets say between 1965 and 1980, some of the lasers at
+that time were not as complicated (and expensive!) as later designs.
+<p>
+Note that there are only few lasers that can really build with less than a few
+100$.
+<p>
+(From: Richard Alexander (RAlexan290@gnn.com).)
+<p>
+Building a good nitrogen laser is almost trivial, and low-cost.  All you have
+to do is send a 20 kV arc across a spark gap in a moderately low pressure
+(100 torr, a little more than 1/10th atmosphere) nitrogen environment.  The
+output is crude, but $15,000 nitrogen lasers don't make a much better beam
+than a $200 device (the difference between the two appears to be versatility
+and electrical noise suppression).
+<p>
+(From: Jon Singer, of the Joss Research Institute.)
+<p>
+The more expensive ones are easier to work, and they typically deliver an
+order of magnitude more power & pulse energy. (Yes, you can build a fairly
+cheap N2 laser that works really well, but they are not common. If you look at
+the Levatter & Lin design, for example (which, at 1 to 3 MW, is one of the
+better N2 laser designs I've seen), you'll observe that it must have cost
+plenty to build. The nice little Schenck & Metcalf laser, which costs about
+$200 to build, gives maybe 160 kW, no big surprise.)  (See the section:
+<A HREF="lasercn2.htm#cn2cn27">Jon's Comments on the SciAm N2 Laser</A> for
+the paper citations.)
+<p>
+See <A HREF=
+"http://www.jossresearch.org/lasers/nitrogen/c5000.html">Jon's
+Restoring a Badly Damaged Avco-Everett C5000 Head Page</A> for some photos
+and description of a large commercial N2 laser.  The effort is quite
+extensive at this point.
+<p>
+(From: Chris Chagaris (pyro@grolen.com).)
+<p>
+I have just re-built my N2 laser and have substituted a PVC pipe in place of
+the Plexiglas box. This withstands the vacuum much better than the box
+design. The box would contract whenever the vacuum was applied and was prone
+to leaks. I have recently obtained a cylinder of compressed nitrogen gas (for
+free!) to use in this laser.  With the leak-proof construction and the pure N2
+gas, the output of this laser has increased dramatically. I have no way of
+measuring the output power, but when the beam strikes a fluorescent piece of
+paper, it is so bright that it is somewhat uncomfortable to look at. UV
+protective eye ware is worn at all times, but these are clear to visible
+light.
+<p>
+I am in the process of building a small dye head to be pumped by the output of
+this N2 laser.  I have heard that many of the dyes will 'lase' superradiantly
+when pumped by such a source. As these dye heads are of simple construction, I
+will build some with resonant optics and some without.  This should be a very
+interesting area of experimentation.
+<p>
+(From: Frank Roberts (Frank_Roberts@klru.pbs.org).)
+<p>
+The supply needed to excite a nitrogen laser is basically a
+capacitive-discharge DC supply.  The high voltage AC from the transformer is
+diode-rectified to DC and then applied across a suitably rated capacitor.
+Since a 15 kv neon sign transformer is rated at 15 kv RMS (average), the
+actual peak voltage from the transformer is greater than that by a factor of
+the square root of two (1.414).  This means that a 15kv transformer will
+charge the capacitor up to 15 kV x 1.414, or over 21 kV.  This is plenty of
+oomph for a Nitrogen laser.  Be careful, this voltage applied across a
+capacitor is deadly!  If you need more voltage, two diodes and two capacitors
+can be connected in the form of a voltage doubler.  Your 15kv transformer will
+now provide 42.42 kilovolts of pump energy.  You'll find that these voltages,
+capacitors and diodes can become expensive.  One way around this is to connect
+your neon transformer to a relatively inexpensive voltage tripler.  These are
+used in some color TV sets to get the 30 to 45 kV needed for the picture tube.
+These are potted modules containing all the capacitors and diodes in one unit.
+You can salvage them from broken TVs or buy them new at any electronics parts
+house.
+
+<h3><A NAME="cn2ray1">Ray's Plans to Build an N2 Laser</A></h3>
+
+(From: Ray (PGInverse@my-dejanews.com).)
+<p>
+If you search for Bruno Godard's patents you find some most interesting stuff
+on his N2 lasers, which may reach a 1% efficiency!!!  I plan to build a laser
+based on these designs.
+<p
+Basically Godard's laser uses the Blumlein switch, but with a parabolic
+shape for the copper plate, and the spark gap placed on the focus of that
+parabola.  This way, he produces a nearly linear electric 'shock wave'.
+The laser channel is disposed in such a way that the discharge travels
+uniformly at the speed of light inside the channel.
+<p>
+The UV impulse is always coupled to the discharge along the channel and the
+efficiency rises significantly.  He also uses a pressurized spark gap in order
+to get a faster discharge.
+<p>
+It took me over a month to dimension and calculate everything, from the power
+supply caps to the correct angle between the channel and the EM shock wave.  But
+NOW I've all the data I need, and I have also nearly all of the materials
+required to build this monster.
+<p>
+I'll begin the construction ASAP and if everything works as expected, provide
+the URL of a page describing this beast.
+<p>
+Now some actual data:
+<ul>
+<li>Blumlein area: 2 square meters.
+<li>Shape: Half parabola.
+<li>Channel angle: 45 degrees from the axis of the parabola.
+<li>Channel length: 1.4 m.
+<li>Channel width: 1 cm.
+<li>Working pressure: 30 to 100 Torr.
+<li>Lasing material: Cheap air :-) (or nitrogen, in the future).
+<li>Power supply: 26 kVDC, around 200 W average power.
+<li>Dielectric: Polyethylene, multilayer, 2 mm thick.
+<li>Spark gap: Pressurized at 3 to 12 atm.
+<li>Copper plate: 1 mm thick.
+</ul>
+And now what I expect it to do:
+<ul>
+<li>Expected efficiency: At least 0.5%.
+<li>Expected average power: 1 W  (0.2 W minimum, 2 W maximum).
+</ul>
+To get 1 W I'd have needed say a 1 kW power supply, with all the
+connected cooling problems.  Now I only need 200 or maybe even 100 W. :-))))
+<p>
+Of course the dielectric is pretty thick, so the laser has to be really big,
+but I desired to have my dielectric live a long life.
+<p>
+Also, this laser can be easily modified to get, say a 50 mJ impulse with a
+20 Hz rep rate.
+
+<h3><A NAME="cn2cn28a">Rich's Comments on N2 Laser Safety, Home-Built Versus
+ Commercial Unit, More</A></h3>
+
+(From: Richard Alexander (pooua@aol.com).)
+<p>
+The nitrogen laser produces UV light - lots and lots of UV light! It is
+similar to the light from an electric arc welder, which gives welders a
+sunburn after a few hours.
+<p>
+I've seen 2 N2 lasers in operation, and they had quite different beams. The
+first one was a home-built unit by the inventor of the N2 laser (he used to
+teach at UNM). I remember it had a pencil-like beam. Of course, the beam
+itself was invisible, but the UV light made the air fluoresce (blue, I
+think). The demonstrators may have used collimating lenses to direct the beam
+across the display room.
+<p>
+The second N2 laser was the $85 000 commercial unit used by my school. The
+difference between a $100 home-built N2 laser and an $85,000 commercial unit
+is that the commercial unit has advanced electronic controls for such things
+as O-scope triggering and remote control, the power supply is more
+sophisticated, and the electrode separation and angle also could be manually
+adjusted using plastic screws. Other than that, the home-built is just as good
+as the commercial unit, especially for the hobbiest.
+<p>
+The beam of the commercial unit diverged rapidly and flickered a lot. This is
+characteristic of N2 lasers. The beam from an N2 laser resembles the
+flickering light from a welder's electrode, as it should, considering that the
+two are physically quite similar.
+<p>
+The actual output beam is just one source of UV light from the N2 laser.
+All of the spark discharges also emit large amounts of UV light. The
+commercial units shield most of the discharges within the body of the
+laser. The home-built that I saw used a spark-gap trigger on the main
+capacitor. The gas was excited using a long gap between 2 sheets of copper.
+Both of these spark gaps give off lots of eye-damaging UV light, and probably
+could give someone a sunburn after several hours of operation.
+<p>
+I don't recall what safety glasses we used in laser school for our N2 laser. We
+didn't use any special body protection that I recall, although we may all have
+worn long-sleeved shirts. Also, we were taught to treat all laser radiation as
+dangerous (meaning, for example, that we were not supposed to allow any part of
+our body to cut the beam of even a HeNe laser). The idea was that if we trained
+to respect the beam, it would become automatic, and then we would avoid
+high-powered beams by habit. Either that, or we would get some interesting
+scars,
+<p>
+We had no difficulty in using the N2 laser to pump dyes. It was actually
+anticlimatic. We had a 50 kW N2 UV laser output. We chose a dye, which was in
+an ordinary, square cross-sectioned quartz cuvette. The laser beam struck the
+cuvette and excited the dye. The walls of the cuvette acted as mirrors. Out
+came 2 visible laser beams, each about half the power of the N2 beam. BTW, yes,
+quartz absorbs UV light. That doesn't much matter when the quartz walls are
+only a few mm thick and the UV light is a 50 kW beam.
+<p>
+Another interesting point is that the laser cavity of our commercial N2 laser
+was only about 5 cm long. The plans from Scientific American use a tube about
+40 cm long (give or take several cm), and produces a 100 kW beam. Increase the
+cavity length to 1 m, and the output power reaches 1 MW. No matter what you do,
+though, the pulse will only be a few nanoseconds long (about 30 ns for the 1
+meter tube, if you propagate the discharge from one end to the other).
+
+<h3><A NAME="cn2dclnt">Diane's Comments on Lasers of the N2 Type</A></h3>
+
+(From: Diane Neisius (diane_va@yahoo.com).)
+<p>
+I wonder why so many people have got difficulties concerning N2
+lasers. I've built a couple of them, and I find it hard NOT to get at
+least a bit of coherent UV light out of them, as long as you limit
+yourself to some very basic guidelines. I got laser output from a tube
+only 10 cm long with electrode spacing of 5 mm as well as from 20 and
+30 cm long ones with spacing 15 mm using N2, air and several He-N2
+mixtures, and finally from a 80 cm long segmented-bore type I got
+still more gases to lase.
+<p>
+<b>Rule #1:</b> Stay near the correct electric field versus pressure ratio.
+(This also holds for all other gas lasers a well.)  For the N2 337.1 nm line,
+this is roughly:
+<p>
+<PRE>
+          E/p = 200 V/(cm * Torr)
+</PRE>
+<p>
+Due to my power supply delivered max 10 kV (DC), for an electrode
+spacing of 15 mm this calculates to an electric field of approx.  6700
+V/cm thus requiring a pressure of roughly 34 torr. However, the output
+maximum is very broad if plotted against the pressure; I saw coherent
+output in a pressure range from 5 to 80 Torr (in 20 cm tube up to 200
+Torr), so matching it was quite easy.
+<p>
+<b>Rule #2:</b> Keep the length and width of the Blumlein in reasonable range.
+<p>
+If you're interested only in a high-power rough-design N2 laser, keep
+in mind that the energy stored in a capacitor reads
+<p>
+<PRE>
+         W = 1/2 * C * V<sup>2</sup>
+</PRE>
+<p>
+where C is the capacity and V the voltage. Obviously the energy
+increases by the square of the voltage, so apply brute HIGH voltage to
+your laser if it can stand that (at own risk), and remind Rule #1.
+<p>
+All else who are somewhat limited by their power supplies (like me)
+can follow the more economic path.  The Blumlein capacity is the
+limiting factor of the energy you can put into a single pulse (for a
+given voltage). A capacitor can be enlarged in several ways - increase
+the area, decrease the thickness of the dielectric, use a dielectric
+of high efficiency.  Nevertheless there are some limits. Usually you
+haven't much choice about dielectrics. Its thickness has to withstand
+a breakthrough of the feeding voltage (usually quite high), and you
+can't get all dielectrics in suitable form but have to restrict
+yourself to some common plastic sorts. I mostly used soft PVC which
+allows wrapping the Blumlein around the tube.  So, what remains seems
+to be enlarging of the area.  But this also is somewhat restricted:
+the length of the laser defines the width of the Blumlein leaving only
+the Blumlein's length as a free parameter. You can't make it endless
+long, for the length of the Blumlein determines the duration of the
+discharge pulse. If this one is made longer than the possible laser
+pulse duration (typically 5 ns for most N2 lasers I read about), it's
+simply wasted energy. As a thumb rule, I kept the length and the width
+of the Blumlein roughly the same size for a common short N2, but made
+it never longer than 50 cm per strip line (for PVC as dielectric).
+<p>
+So we are a little bit restricted in design.  Nevertheless one can
+proceed if squeezing the discharging energy into a smaller gas
+volume. This directly leads to
+<p>
+<b>Rule #3:</b> Make the discharge volume as small as possible.
+<p>
+Most N2 laser tubes are built in a "box style". If the output of such
+lasers is watched, it shows up to be a pretty good image of the
+cross-section of the tube. This is (to my experience) independent of
+the electrode shape. Of course laser emission always is strongest from
+the room between the electrodes, but at least in pure N2 from all the
+other space inside the tube weaker emission also occurs. This means,
+the (limited) energy is spread to a relatively large volume in an
+inefficient way. Thus, e.g. 15 mm separated electrodes in a 50 x 50 mm
+cross-section box are quite a waste (in this case, I usually took an
+acrylic tube of only 16 mm (!) inner diameter).
+<p> 
+To reduce volume further would be the next step, but (what a surprise)
+this is limited. Especially the electrode spacing cannot be varied
+much for a given voltage - if too close, the pressure has to go up
+(remember we have to keep E/p constant?) which destabilizes the
+discharge.  Parametric studies suggested to go not below 10 mm spacing
+due to massive development of arcs (can't remember the exact
+reference, sorry).
+<p>
+For these reasons I adopted the tube design of the VUV H2 laser by
+Kirkland, Dogett and Kim to my needs. These guys divided the "blade"
+shaped electrodes found in common N2 lasers into a series of "pin"
+electrodes. So the discharge was segmented in between the alternating
+pins along the tube - which made it possible to preserve the electrode
+separation of 15 mm although the bore was just 3 mm wide. (I will give
+a more detailed description of this baby soon).
+<p>
+What is the advantage of so much effort? Obviously the electrical
+energy of the Blumlein was concentrated to a *significantly* smaller
+volume. This meant stronger inversion i. e. higher gain i. e. "easier"
+lasing. As a side effect, due to the narrow bore the divergence of the
+beam became much smaller. But most impressive is the fact I got
+superradiant laser action in gases that didn't oscillate in my common
+N2 laser tubes, namely the green and orange Ne lines. It ended up that
+the laser, originally planned for N2, ran nearly all the time as green
+Ne laser. E/p for the green neon at 540.1 nm is approximately 80 V/(cm*Torr)
+- if you like to try it in your laser, too. :)
+<p>
+Another comment about the safety of N2 style lasers: The spark gap not
+only produces lots of UV but also ozone. If running uncovered, it
+begins to irritate eyes and throat after some time (despite of the bad
+smell), think about some kind of spark gap vent or ozone filter.
+
+<h3><A NAME="cn2cn29">Increasing the Power Output of the N2 Laser</A></h3>
+
+(From: James Lockwood (james@foonly.com).)
+<p>
+The reason that N2 lasers don't scale up with increasing pulse power is
+that it's very easy to excite the entire volume of gas in your chamber.
+Dumping more power into it doesn't help much after that point, while
+sharpening the power rise curve helps you maximize the excitation
+produced.
+<p>
+What is much easier to do is to increase pulse frequency.  N2 lasers can
+be boosted to many thousands of pulses per second with gas flow and a well
+designed power supply.  Even a Tesla style rotary spark gap will get you
+there.
+<p>
+(From: Steve Roberts (osteven@akrobiz.com).)
+<p>
+Boosting the high voltage or capacitor size isn't the way to go. Increase the
+length of the laser tube itself to a meter or so and then move the Blumlein
+spark gap to one corner to introduce a traveling wave so the gain follows the
+coherent light down the tube.
+
+<h3><A NAME="cn2tsg">Triggered Spark Gap for N2 Laser</A></h3>
+
+These schemes may come in handy for your larger home-built N2 lasers:
+<p>
+(From: hermance@ridgenet.net.)
+<p>
+I built a triggered spark gap for a nitrogen laser that would dump a rather
+large cap charged at 30 kV. It is a quite simple switch, although a
+miss-fire can feed back some nasty transients if one is not careful.
+<p>
+Create a small chamber out of two pieces of Plexiglas, one 1" thick, the
+other 1/2". In the 1" thick piece, approximately 2" x 2" square, mill a hole
+1" in diameter and 1/2" deep.  From the sides, drill and tap 1/8" NPT. Top is
+connected to a nitrogen supply, bottom is connected to a vacuum pump. The
+sides are brass rod - these are the electrodes of the "switch". Use a lathe to
+create various penetrations into the cavity at different depths, (with a 1/8"
+NPT thread at the back end).  On the 1/2" thick piece, drill and tap for a
+automotive spark plug and connect it to an automotive spark coil. Clamp both
+pieces together using silicone grease, (e.g., Dow 111) and screws.  Drill a
+small hole about 3/8" from each corner, (like 8-32) do not tighten any more
+than slightly more than finger tight.
+<p>
+Evacuate the chamber to about 10 torr.  When the spark plug is fired, the
+nitrogen gas is ionized by the slight amount of UV, and the two electrodes
+can conduct approximately 1,000 amps within a few nanoseconds.
+<p>
+(From: Joshua Dickerson (jdickerson3@satx.rr.com).)
+<p>
+The performance of lasers needing closely timed operation pulses would
+greatly benefit from the use of field distortion spark gaps with
+asymmetrical trigger placement.  In this scheme, both halves of the spark
+gap break down simultaneously as opposed to forming a cascade discharge
+familiar with the popular mid-plane triggered gaps.  Cascade discharges add
+to the delay, jitter and commutation time of the overall breakdown.
+Simultaneous over-voltage mode, as it is called, permits extremely fast, low
+jitter sequencing that would open new possibilities for amateur lasers.
+Take for instance, CuCl (or other lasers requiring disassociation), TEA N2,
+and Master Oscillator Power Amplifier setups.  Now you can make that
+electrically pumped atomic iodine laser you always wanted. ;)
+
+<h3><A NAME="cn2cwl">Why isn't There a CW N2 Laser?</A></h3>
+
+The lasing process of the N2 laser is self terminating and is thus inherently
+a pulsed system though a quasi-CW N2 laser with a very high pulse repetition
+rate may be constructed,  How high this can be pushed will depend on the
+capabilities of the technology to circulate the gas and provide the huge
+amount of power to excite the discharge.  It takes around 40 ms for the N2
+to return to the ground state from a non-lasing metastable state (somewhat
+dependent on pressure).  So, without some means of clearing the used gases
+from the discharge channel, maximum energy pulses will only be obtained at
+firing rates less than 20 or 25 Hz. Commercial N2 lasers may operate at 1 kHz
+or more but only with very fast gas flow.   In any case, true CW operation is
+not possible even in theory.
+<p>
+(From: Michael Andrus (andrus@ccountry.net).)
+<p>
+Actually the fact that N2 needs to be at a non excited state before it can
+be re-excited is the whole reason.  Lasers operate in very specific
+conditions.  This particular laser is super radiant.  This assures that it
+is a pulsed laser.  The atoms become excited at the same time and release
+there energy in just a few passes through the laser tube.  This prevents
+continuous operation.  A CW laser only requires some of the atoms to be in
+the upper energy levels.  This allows them to excite the atoms at the lower
+energy levels while other atoms are emitting light.
+<p>
+(From: Jeff Brandenburg (brand@nina.pagesz.net).)
+<p>
+The N2 laser self-terminates in a (very) few nanoseconds.  To maintain CW or
+nearly CW operation, you'd need to clear the channel every few nanoseconds.
+If you do the math, you'll find that even with transverse flow you'd need
+near-relativistic gas velocities.  If you can produce a flow of unexcited N2
+gas at a significant fraction of an atmosphere pressure with a velocity of
+(say) 1/100 c (where c = the velocity of light in a vacuum = 300,000,000 m/s),
+I submit that that flow of gas will be *much* more impressive than a measly UV
+laser beam. :-)
+<p>
+(From: Chris Chagaris (pyro@grolen.com).)
+<p>
+Let's take a look at the practical aspects of just the power requirements for
+a DC excited quasi-CW N2 laser (not including the equipment or the power
+need to replace the warm N2 gas). Each time the laser produces its few
+nanosecond (~5 ns?) pulse, it requires that the capacitor discharges through
+the laser channel. You would, of course, have to allow the capacitor to
+recharge before the laser could produce another pulse. In order to charge even
+the relatively small capacitor of the SciAm N2 laser to let's say 20,000 volts
+every five nanoseconds, would require a power supply capable of delivering
+about 60,000 amps at 20,000 volts (from the formula I = C * dV/t). I'll let
+you figure out how many watts that represents.  Better get started on building
+your power plant. :-)
+
+<h3><A NAME="cn2cn2a">Troubleshooting a Home-Built N2 Laser</A></h3>
+
+(Desperate for answers: Tammo van Lessen (tvanlessen@gmx.de).)
+<p>
+(Replies from: Roland A. Smith (see.www.lsr.ph.ic.ac.uk@web.pages).)
+<blockquote>
+"My N2 laser doesn't work and I don't know why??  Help!!!
+<p>
+ I've a big problem. I have to build a Nitrogen-Laser for school. I got a
+ scheme to build something like that in the Scientific American. It's based on
+ the Blumlein-effect.
+<PRE>
+
+                             10 turn coil
+   +7kV o------+           +-----^^^^^-----+
+               |           |     _____     |
+               |           |    |_ D _|    |
+           ____|___________|___/|_____|\___|_________________,--. Spark gap
+        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx '
+  --------------------------------------------------------------+-----------
+   0V
+
+</PRE>
+ Where: 'xxx' is Epoxy-circuit-board, '---' is copper, and 'D' is the discharge
+ channel in the laser chamber.
+<p>
+ Sorry for that terrible scheme! :)
+<p>
+ Ok, but now the PROBLEM!!
+<p>
+ If I'm firing up the system, it doesn't want to create any kinds of
+ laser radiation. I'm despairing!!  PLEASE HELP!!"
+</blockquote><p>
+I have built a few of these in my time (and have run this project for first
+year undergrad students), and there are some critical points to watch out for.
+First off, SAFETY, these things can kill you if you get a good solid shock
+from them, so take care and follow all the usual high voltage handling
+guidelines.  If you or your supervisor haven't done HV work before, then I
+strongly suggest you get someone who has to look over your working practices
+etc.  Make very sure the PCB capacitor and power supply are properly
+discharged before you go near it.  Remember that 7 kV can jump a fair way
+across surfaces to fingers etc.
+<p>
+Ok, with that bit out of the way, you need to check the following points.
+<ol>
+<li>Does the spark gap break down?  If not, then decrease the gap spacing until
+   it does (Do this in 1 mm stages, with HV turned OFF in between).  Note
+   that the spark emits lots of UV and should be enclosed in a plastic shield
+   of some kind.
+<p>
+<li>When the gap breaks down, do you see a discharge across the laser channel?
+   It should be a fairly uniform pink/purple color.  If you see isolated
+   sparks instead the nitrogen pressure is too high.  If you see a faint glow,
+   with white hot spots then pressure may be too low.  You need about 1/5th
+   atmospheric pressure.
+<p>
+<li>N2 from a gas cylinder is MUCH better than air.  Flowing N2 at the right
+   pressure works best.  Good control of the N2 pressure is CRITICAL for
+   getting this thing to work.  Oxygen free nitrogen (OFN) the very cheapest
+   commercial grade is fine and only a few $ per bottle.  You do however need
+   some gas handling valves etc.
+<p>
+<li>How are you looking for the laser output?  It's in the UV and the best way
+   is to look for a blue/purple fluorescence from a piece of photocopying
+   paper or some such.  You won't get a very good beam from the laser, as
+   there are no resonator mirrors.  Its a horrible rectangular blob with very
+   bad divergence.
+<p>
+<li>What windows are you using?  Quartz is better than ordinary glass as it has
+   higher UV transmission.
+</ol>
+Have fun and take care!
+
+<h3><A NAME="cn2cn2b">How About an Air Laser?</A></h3>
+
+The N2 laser "Light and its Uses" article suggests that it might be possible
+to use ordinary air instead of pure N2.  However, there doesn't' seem to be any
+confirmation of this.  From a recent posting on the USENET newsgroup
+<A HREF="news:sci.optics">sci.optics</A>:
+
+<blockquote>
+"I was wondering if anyone here who is a laser nut has been successful in
+getting a Nitrogen laser to operate with normal air instead of pure nitrogen.
+I am trying to get mine to work with air.  If you have gotten air to work, or
+know how, please let me know."
+</blockquote>
+
+(From: Bret Cannon (bret.cannon@pnl.gov).)
+<p>
+According to the manual for an old Molectron nitrogen laser, even small amounts
+of oxygen cause arcing in the discharge and prevents lasing.
+<p>
+(From: Nigel Tolley (ntolley@hotmail.com).)
+<p>
+Almost. Oxygen is very effective in stopping laser action. It hasn't got
+anything to do with arcing, as you can set up a laser so that it lases
+rapidly on flash-over (How most pulsed lasers work) but oxygen disrupts your
+lasing paths. If you have an old He-Ne tube where the seals have let in
+some air, you can see the problem. Lots of UV-blue glow, but no laser beam.
+<P>
+Having said all that, if you got well tuned selective wavelength mirrors,
+you could perhaps get a "blue" HeNeO laser.  Anyone got a few thousand for a
+research project??
+<p>
+(From: Sam.)
+<p>
+With current overhead rates for government funded research, $1,000,000 might
+be a more realistic number to put in your grant proposal. :-)
+<p>
+(From: localnet (localnet@hotmail.com).)
+<p>
+Actually it is possible to use air as the lasing medium in place of pure N2.
+Oxygen is not that bad and helps to improve the repetition rate by carrying
+away energy from N2. Repetition rates of 100 Hz are quite easy to get even
+without gas flow. With gas flow you can get to 1 kHz.  However you get 1/5th
+the power of a laser using pure N2 and it requires a voltage of over 20 kV.
+It will run between about 30 and 100 Torr with the best value around 80 Torr.
+The setup is otherwise similar to the SciAm N2 laser.
+<p>
+You may want to improve the design though, like by cutting the copper plate
+with a parabolic shape.
+<p>
+Oh, and BTW, it is possible to make a laser out of water.  A water vapor laser
+is known that lases at 28 um and 115 um.  This is *far* infrared and not very
+useful, but it is actually possible.  Note that 115 um are macroscopic waves -
+.115 mm!
+<p>
+(From: Sam.)
+<p>
+Well, saying that they are not very useful is a bit extreme.  Who knows what
+may come along.  Also, at long wavelengths like that, the lasing mechanism is
+more likely to be similar to that of a CO2 laser - molecular vibrational
+modes - than to an N2 laser.
+
+<h3><A NAME="cn2cn2c">Operation Manual for a Real N2 Laser</A></h3>
+
+<A HREF="http://www.pti-nj.com/">Photon Technology International</A> provides
+on-line manuals for some of their products.  Go to "Operation Manuals".
+The manual for their Model GL-3300 Nitrogen Laser is one that may provide
+some ideas for your N2 laser!
+
+<h3><A NAME="cn2wsnl">Why Aren't Surplus Nitrogen Lasers More Readily
+ Available?</A></h3>
+
+(From: Steve Roberts (osteven@akrobiz.com).) 
+<p>
+Because those who use them tend to hold onto them, and if the owner
+discards it, the technician who uses it almost always picks it up. They are
+darn useful, and thus hold their value.
+<p>
+(From: Anonymous (localnet1@yahoo.com).)
+<p>
+I think the second part of the answer to this question is if you take a stroll
+through an industrial or academic lab - and I have strolled through a lot of
+them - you will find plenty of argon, YAG, CO2, dye, Ti:Sapphire, and
+nowadays, diode and diode pumped lasers.  Not to mention HeNe lasers.  Every
+once in a while you will notice a nitrogen laser.  There just aren't that many
+out there.  While I am not debating their true usefulness, they seem to be
+somewhat limited in lab use due to their low output power, both peak and
+average, compared to other laser sources.  They might be the most convenient
+lasers to operate or build, but that doesn't mean much when you get them into
+the lab.  Well most of the time it doesn't. :)  I sat down and tried hard to
+remember how many times I have seen nitrogen lasers in the lab, and most every
+time I could think of, if UV was desired, a tripled or quadrupled YAG was
+used.  Or an excimer if power requirements were high.  The only lab that I
+could remember using a lot of N2 lasers was a small optics house that was
+fooling around growing novel gain materials.  They had a lot of short
+wavelength spectroscopy and other similar application and did not need a lot
+of power to do their work.
+
+<h3><A NAME="cn2h2b">Hydrogen Laser Using Blumlein Discharge</A></h3>
+
+OK, this isn't exactly a nitrogen laser but it uses a similar type of
+Blumlein circuit to provide very short (1 ns) high current (0.1 to 1 MA.  Yes,
+that's MegaAmps!) pulses for excitation.  The output of the hydrogen laser
+consists of 17 or more molecular emission lines in the spectral region near
+160 nm. These emissions result from the transitions to the ground state from
+the rotational-vibrational sublevels of an excited electronic state.
+<p>
+(From: Jeffery Babis (jbab@theriver.com).)
+<p>
+Full construction details of a hydrogen laser are in the appendices of my
+dissertation which should be available from University Microfilms in
+AnnArbor, Michigan.  The dissertation details are as follows:
+<p>
+<ul>
+<li>"The Use of Vacuum Ultraviolet Radiation in the Analysis of Organic Species
+ and Related Investigations" by Jeffery Scott Babis, Department of Chemistry,
+ University of Arizona Graduate College, 1983,
+</ul>
+
+<h3><A NAME="cn2dye">Which Dye for N2 Laser Pumped Dye Laser?</A></h3>
+
+Start with Rhodamine 6G, if you can get it, in isopropyl alcohol from
+the drugstore. (High-strength, 91% or 99% purity, is best. Regular
+isopropyl rubbing alcohol will also work, but you will want to avoid any
+that is colored.) This combination almost lases if you look at it hard!
+It will go superluminescent, or lase off the cell window reflections if
+the windows are well aligned, very easily. You can usually tell the
+difference, BTW &#151; if you get  <A HREF="http://www.jossresearch.org/pictures/lasers/dye/n2pumped/c8421c.dtc.nofocus.12c.jpg"> a tall stripe of output with no obvious bright
+areas</A> [from a relatively concentrated dye solution] or a cloudy glow
+[from a solution that is somewhat less concentrated], you are almost
+certainly seeing superluminescence. OTOH, if there is a bright spot, as
+you can see above the cloudy superluminescent area in <A HREF=
+"http://www.jossresearch.org/pictures/lasers/dye/n2pumped/c8362c.2dtc.iso70.wally.12c.jpg">this photo,</A> it&rsquo;s the result of a
+reflection off one or both of the windows. (Notice that there is a
+bright spot even though the cuvette is tilted in an effort to avoid it.
+The dye will use the reflections from the windows if it possibly can.)
+<p>
+If you don't have Rhodamine 6G, you may want to take a look at
+some of the alternative suggestions on
+<A HREF="http://www.jossresearch.org/tjiirrs/010.html">Jon
+Singer's page of inexpensive and available dyes for DIYers.</A>
+(The two photos linked to above show a commercially available fabric
+brightener, not a standard laser dye.)
+<p>
+If you are interested in tuning the output of a nitrogen-pumped dye
+laser, see Jon's page on
+<A HREF="http://www.jossresearch.org/tjiirrs/010b.html">Tuning
+Fluorescent Marker Dyes Under Nitrogen Laser Pumping.</A>
+<p>
+Also see the chapter:
+<A HREF="lasercdy.htm#cdytoc">Home-Built Dye Laser</A>.
+
+<h3><A NAME="cn2rcn">Rebuilding a Commercial N2 Laser</A></h3>
+
+See <A HREF=
+"http://www.jossresearch.org/lasers/nitrogen/c5000.html">Jon's
+Rebuilding an Avco-Everett C5000 Nitrogen Laser Head Page</A>.  While not
+truly home-built, some of the description and photos might provide some
+inspiration. :)
+
+<h3><A NAME="cn2pwth">Comments on N2 Laser Pulse Width</A></h3>
+
+(From: Jon Singer, of the Joss Research Institute.)
+<p>
+I've been reading a bunch of articles, and I notice a very peculiar thing
+about low-pressure N2 lasers.
+<p>
+We all know that N2 bottlenecks in the lower level, and we all know that
+low-pressure N2 lasers usually run for 6 to 8 nsec, right? The natural
+conclusion is that bottlenecking is what's shutting them down.
+<p>
+Almost all of the really high-power or high-energy machines, however, have
+largish caps in them (20 nF and up), and almost all of them lase for ~15 nsec;
+some go even longer.
+<p>
+I've found one article that addresses this issue, and what they note is that
+there are _two_ things that can shut down a nitrogen laser. The first is the
+one we already know about: if you pump them correctly, bottlenecking shuts
+them down after 15 or 20 nsec (somewhat longer if there's SF6 in the gas mix).
+<p>
+What shuts down the little ones is something different.
+<p>
+Turns out that direct electron impact is what excites the nitrogen
+molecules. Further turns out that the electrons have to acquire at least 11 eV
+of energy between collisions (if I remember correctly) in order to do the job;
+15 eV is more optimal.
+<p>
+If the electron temperature in the discharge falls below this level, pumping
+ceases; and lasing ceases very shortly thereafter, as stimulated emission
+depletes the population inversion. A capacitor of only a few nF, charged to
+relatively low voltage, just can't sustain a sufficiently intense discharge
+for long enough to reach the bottleneck point.
+<p>
+I'm thinking about building a fairly large machine, to see whether I can get
+the longer pulses out of it.
+<p>
+<A NAME="cn2cn2l"></A>
+<hr>
+<br>
+<li>Back to <A HREF="lasercn2.htm#cn2toc">Home-Built Nitrogen (N2) Laser
+ Sub-Table of Contents</A>.
+<h2>Commercial N2 Lasers</h2>
+<h3><A NAME="cn2nl100">SRS Model NL-100 Nitrogen Laser</A></h3>
+
+The NL-100 is a small self-contained pulsed N2 laser manufactured by
+<A HREF="http://www.thinksrs.com/">Stanford Research Institute</A>.
+Complete specifications as well as the operation manual may be accessed
+via links from the <A HREF="http://www.thinksrs.com/products/NL100.htm">NL-100
+- Nitrogen Laser Product Page</A>.  (If this link should die,
+search for "nitrogen laser".  The description on their Web site suggests
+applications like fluorescence measurements, MALDI-TOF mass spectrometers,
+and other pulsed UV radiation experiments.  It provides 3.5 ns pulses at
+337 nm (UV), with repetition rates up to 20 Hz.  The pulse energy is
+170 &micro;J, which results in a peak power of 45 kW and an average
+power of 3 mW.  The NL-100 warranty specifies a lifetime of 20 million pulses
+(70 percent energy) or 1 year, whichever comes first.
+The NL-100 was designed to be fully compatible
+and interchangeable with the VSL-337i OEM N2 laser from Spectra-Physics.
+<p>
+Here are the specifications.
+<p>
+<b>Beam characteristics:</b>
+<p>
+<ul>
+<li>Wavelength: 337.1 nm.
+<li>Spectral bandwidth: 0.1 nm.
+<li>Pulse width (FWHM): &lt;3.5 ns.
+<li>Pulse energy: 170 &micro;J.
+<li>Energy stability (pulse to pulse): 3 % std. dev. (at 10 Hz).
+<li>Peak power: 45 kW.
+<li>Average power: 3 mW (at 20 Hz).
+<li>Beam size: 3x7 mm.
+<li>Beam divergence (full angle): 5x8 mRad.
+</ul>
+<p>
+<b>Triggering</b>
+<p>
+<ul>
+<li>External trigger input: 0 to 20 Hz, TTL (opto-isolated).
+<li>Internal trigger generator: 1 to 20 Hz (adjustable).
+<li>Sync output pulse: TTL level (option).
+</ul>
+<p>
+<b>General</b>
+<p>
+<ul>
+<li>Power requirements: +24 VDC, 1.5 A (average) at 20 Hz., 3 A (peak).
+<li>Power consumption: 36 W (20 Hz operation).
+<li>Operating temperature: &lt;35 &deg;C
+<li>Key switch: On/off.
+<li>Interlock switch: Built-in.
+<li>Dimensions: 3.75" 3.75" x 11" (WHL) (9.5 cm x 9.5 cm x 27.9 cm )
+<li>Weight: 7.5 lbs., 3.4 kg.
+</ul>
+<p>
+The NL-100 consists of a high voltage power supply and trigger generator,
+and a replaceable "plasma cartridge".  This approach is similar to other
+small N2 lasers.  The
+plasma cartridge includes a ceramic laser tube with parallel electrodes running
+nearly the entire length, voltage multiplier, low inductance high voltage
+capacitor, and triggered spark gap.  Large area formed copper sheet metal
+plates attach the cap/spark gap to the laser tube electrodes.  The electrical
+inputs are high voltage AC from the external power supply and a high voltage
+trigger pulse.  The output is a signal for HV feedback.
+<p>
+Here are some photos of the SRS NL-100B.  I'm not sure what the "B" means.
+<p>
+<ul>
+<li><A HREF="nl100-fi.jpg">SRS Model NL-100B Nitrogen Laser - Front Interior
+ View</A>.  The plasma cartridge can be replaced in about 2 minutes.  That is,
+ once the 30 cover screws are removed, just a bit excessive! :)  The 26 screws
+ that hold the plasma cartridge cover in place seem to be even more excessive
+ since the interior is filled entirely with white potting compound.
+<p>
+<li><A HREF="nl100-bi.jpg">SRS Model NL-100B Nitrogen Laser - Back Interior
+ View</A>.  The high voltage power supply has two outputs.  The lower one is
+ high frequency AC directly from the inverter transformer which feeds the
+ voltage multiplier in the plasma cartridge.  The upper one is a HV
+ pulse to the triggered spark gap in the plasma cartridge.  The only
+ feedback is via the orange wire from a voltage divider inside the plasma
+ cartridge to control the high voltage output.
+<p>
+<li><A HREF="nl100-fc.jpg">SRS Model NL-100B Nitrogen Laser Fiber
+ Coupler</A>.  This assembly screws to the front of the NL100 laser.
+ There is a standard Newport fiber launcher inside the black
+ cover feeding an SMA 200 &micro;m multimode fiber.  It is not
+ known whether the fiber itself is anything special for 337 nm.
+ The fiber loop samples the beam before the focusing optics
+ and provides an electrical output to monitor the actual laser pulse.
+<p> 
+<li><A HREF="nl100-pd.jpg">SRS Model NL-100B Nitrogen Laser Plasma Cartridge
+ Disassembled</A>.  (This and the next photo courtesy of Dave Jenkins
+ (www.dmanufacturing.com), who removed most of the
+ potting compound: "I dived right in with a 12 inch chef's knife and small
+ paring knife, and basically de-boned the sucker!  Took about 4 hours total.")
+ The energy storage capacitor is the object in front; the triggered spark
+ gap is behind it.  The laser tube with its exhaust tip-off (covered with
+ black heatshrink tubing) can be seen attached to them via copper
+ plates.  The voltage multipler PCB is on the bottom with its red 2 pin
+ AMP connector for power supply voltage monitoring.  The sockets for
+ HV AC and HV TRIG can be seen hanging near the backplate in the rear.
+<p>
+<li><A HREF="nl100-ta.jpg">SRS Model NL-100B Nitrogen Laser Tube Assembly</A>.
+ The triggered spark gap with its trigger electrode is visible in the front.
+ Although the glass plates on the front and rear of the laser tube look
+ similar, it is not known whether the rear one (on the left) is really a
+ mirror, but that's highly likely as there is a large uncovered hole in
+ the plasma cartridge behind it and the components there might get a bad
+ case of Sun burn if it was not! :)
+</ul>
+<p>
+Powering the NL-100 is very easy requiring only 24 VDC at 3 A peak.  With
+a big filter capacitor on the output, 1.5 A is really enough.  While there is a
+strange power connector on the rear panel, it's also possible to feed power
+in via the DB9 control connector and this is mentioned in the operation
+manual.  Power and an interlock jumper are all that are needed to use the
+internal pulse generator with the backpanel repetition rate control.  There
+is also a trimpot for adjusting the high voltage accessible through a hole
+on the right side of the case.  This can be used to maintain output power
+as the plasma cartridge degrades with use.
+<p>
+The first NL-100 I acquired operated in all respects, including a satisfying
+ticking sound, but produced no UV output.  And I wasn't going to stare down
+the end of the tube to see if there was a discharge!  Since the laser tube
+is filled at a relatively high pressure, slight leakage shouldn't be a problem
+even though it is soft-sealed.  This differs from HeNe or ion lasers where
+the fill pressure is very low and any contamination through the Epoxy
+or TorrSeal or whatever spells doom.  However, there could always be a
+manufacturing defect resulting in a high rate of leakage.  But it may be some
+other problem, but most likely the plasma cartridge is simply dead.
+<p>
+The next laser I acquired, actually a Bruker NL-110B, is physically
+identical except for the paint job, but works very well.  I assume that
+it is still made by SRS bu Bruker insisted on their own decorative scheme. :)
+It's definitely peppy and almost anything the beam hits fluoresces intensely.
+:)  I measured the average power at the maximum repetition rate of around
+3.5 mW, which is just about spec (170 &micro;W at 20 pps).  There is still
+headroom on the HV adjust, though I don't know how much.
+
+<h3><A NAME="cn2sp337">Spectra-Physics VSL-337i OEM Nitrogen Laser</A></h3>
+
+The VSL-337i is a small N2 laser similar to the NL-100, above, but is
+intended for incorporation into a piece of equipment and thus does not
+have all the bells and whistles of the NL-100.  This laser came before
+the NL-100, which is physically compatible with it.  However, since the
+NL-100 has some additional features, it can replace the VSL-337i, but
+not necessarily vice-versa.  And the internal construction is somewhat
+different so parts are not interchangeable.  Here are three photos
+courtesy of Dave Jenkins (www.dmanufacturing.com), who also contributed
+to the description below:
+<p>
+<ul>
+<li><A HREF="sp337-li.jpg">Spectra-Physics Model VSL-337i Nitrogen Laser -
+ Left side</A>.  The HV power supply and trigger modules are fully enclosed
+ with standard AMP connectors to the plasma cartridge.  In the background is
+ the cover with fiber coupler still attached.
+<p>
+<li><A HREF="sp337-ri.jpg">Spectra-Physics Model VSL-337i Nitrogen Laser -
+ Right Side</A>.  Hmmmm.  Not much of interest on the exposed PCB besides a
+ fuse. :-)  The rear panel also has much less than that of the SRS NL-100,
+ above - only the same strange power connector with no alternative, the trigger
+ input BNC, and a Power LED.
+<p>
+<li><A HREF="sp337-pc.jpg">Spectra-Physics Model VSL-337i Nitrogen Laser Plasma
+ Cartridge</A>.  While similar in size to the SRS version, these are not
+ interchangeable.
+</ul>
+<p>
+The VSL-337i is just a bare bones laser requiring 24 VDC and a
+trigger pulse such as from a 555 timer to operate.  The power
+supply is enabled when the laser is powered so it just needs a
+positive trigger pulse to the TRIG BNC.  The Power supply hisses
+briefly when power is first applied.  Although the maximum spec'd
+pulse rate is 20 Hz, it will apparently go to over 30 Hz, at least
+briefly, but no guarantees on survival above 20 Hz and your mileage may vary!
+:)  The NL-100 is more elegant and is a lab type configuration with its
+safety interlock key and speed control with an on/off switch and adjustable
+trigger rate.  Plus the NL-100 can be operated in the "Auto Charge
+Mode" or the "Command Charge Mode" through the DB9 cable which adds a
+real nice touch since the HV power supply only turns on when triggered
+with a negative pulse.
+<p>
+<A NAME="cn2cnlh"></A>
+<hr>
+<br>
+<li>Back to <A HREF="lasercn2.htm#cn2toc">Home-Built Nitrogen (N2) Laser
+ Sub-Table of Contents</A>.
+<h2>N2 Laser Humor and Other Tid-Bits</h2>
+<h3><A NAME="cn2cnlh0">HeHeHeHe! N2 Lasers Have All the Fun!</A></h3>
+
+For some inexplicable reason, the N2 laser seems to attract more humorous
+discussion than other single type.  The next few sections provide a few
+examples.  (See the section: <A HREF="laserioi.htm#ioilhu">Laser Humor</A> for
+additional more general laughs.)
+
+<h3><A NAME="cn2cnlh1">Just What You Always Wanted!</A></h3>
+
+The following 'for sale' ad appeared on the USENET newsgroup:
+<A HREF="news:alt.lasers">alt.lasers</A>.  Of course, we now know that these
+specifications are nothing to write home about!  I am afraid that it is
+probably gone by now anyhow - to the dumpster if nowhere else!
+<p>
+(From: (gary@astro.as.utexas.edu).)
+<p>
+Subject:      1 MW N2 laser for sale $1 per pound.<br>
+Date:         08/25/97
+<p>
+I have this mondo 1 MW peak N2 laser that weighs in at 1,200 pounds.  It is in
+plug-and-play condition complete with documentation.  All you need is a source
+of nitrogen.  I have a dewer and bought some LN2 and used the boil off to run
+the laser.  Most impressive!!  It made everything that was even remotely
+fluorescent in my garage glow intensely.  I had planned to use it to pump some
+fluorescent plastic for a down converter to coherent visible light but I have
+lost momentum and want my garage back.
+<p>
+I want to sell the laser for $1,200.  I can supply copies of the manual and
+photographs to anyone that is interested.  It has a rather small vacuum pump
+that will allow 5-10 Hz rep rate but it can sustain a much higher repetition
+rate with a larger vacuum pump.  The laser was manufactured my Molectron and
+is a model UV1000.
+
+<h3><A NAME="cn2cnlh2">Nitrogen Laser Construction on a Shoestring</A></h3>
+
+Check out:
+<A HREF="http://bob.bob.bofh.org/~robm/manual/DIY-LASER.html">Build your
+own Nitrogen Laser - A D.I.Y home guide</A>.  OK, perhaps this belongs
+in the humor section. :)
+But the general approach might almost sort of possibly on a good day have
+actually worked after a fashion assuming you didn't kill yourself or
+burn down the house first. :-)  There are
+just a few missing details but (with a bit of interpolation) the result would
+not be all much different (in spirit, at least) than the basic structure of
+the typical home-built nitrogen laser we have been discussing.  Compare this
+description with any of the photos shown in the section:
+<A HREF="lasercn2.htm#cn2cn22">Some Photos of Home-Built N2 Lasers</A>.
+<p>
+Even if you aren't into D.I.Y. N2 laser building, the other
+<A HREF="http://bob.bob.bofh.org/%7Erobm/manual/">Lusers Manual Pages</A>
+of his Web site are good for a few chuckles. :)
+
+<h3><A NAME="cn2cnlh3">The Ultimate Nitrogen Laser</A></h3>
+
+This one should be taken with even more of a grain of salt (or laser crystal
+fragment) than the utility drawer N2 laser described above.  Also note that,
+high temperature band saw material notwithstanding, you only get one shot from a
+given set of apparatus so this should be figured into your budget. :-)
+Also keep in mind that your Manager may not be convinced of the chances of
+getting this to work from Mother Nature (without the benefit of prior testing,
+quality assurance, and all required paperwork and departmental design reviews).
+Therefore, you should make sure to address these concerns in your project
+proposal and multimedia presentation as well.
+<p>
+Serious note (sort of): Aside from the obvious danger involved in obtaining the
+needed power supply, this is not likely to work in any case.  Due to the self
+limiting behavior of the nitrogen laser emission characteristics, the electrical
+discharge would need to be precisely timed to travel along the laser tube at
+roughly the speed of light as in the normal Blumlein power supply rather than
+simply blowing a modest size crater in a one location.  The required Lightning
+Bolt Control board (RISC microprocessor based, of course) would be one of the
+many major challenges of this design.
+<p>
+(Portions from: Brian (LOGICWIZ@prodigy.net).)
+<p>
+I have an idea for building a Gigajoule laser out of simple materials. The
+power source might seem outlandish at first but very viable in the end. This
+laser would be based upon the nitrogen laser. It would be constructed out of
+a glass or PVC pipe 4 inches x 100 feet evacuated to 25 Torr filled with
+nitrogen gas from probably LN or a decomposition reaction and the electrodes
+will be made out of band saw material (because it stands heat real well). The
+laser would be operated in a thunderstorm.  You already know how to attract
+lightning using wires attached to rockets. I estimate its power to be equal to
+about 14.8 Gigajoules based on the charge and voltage of your typical lightning
+bolt and the expected (very precisely computer) efficiency of a nitrogen laser:
+<p>
+<ul>
+<li>LBC = One standard Lighting Bolt Charge: 10,000 Coulombs.
+<li>LBV = One standard Lighting Bolt Noltage: 200,000,000 Volts.
+<li>NLE = Nitrogen Laser Efficiency: .00074 (.074 percent).
+</ul>
+<p>
+Then, output energy will be: LBC * LBV * NLE = 14.8 Gigajoules.  If anybody is
+foolish enough to try this just imagine what you could do with that burst of
+power ionize the upper layer of atmosphere and create a blackout or pump a dye
+laser and drill yourself a hole in a mountain. DON'T think about all of the fun
+you would have with this and DO think about the real possibility of being fried
+to a crisp.
+
+<h3><A NAME="cn2vn2l">Victorian Nitrogen Laser</A></h3>
+
+Go to <A HREF="http://www.lateralscience.co.uk/">Lateral Science</A> and
+take the link
+<A HREF="http://www.lateralscience.co.uk/VicN2/vicN2.html">Victorian Nitrogen
+Laser</A>.  The article is certainly written in a tongue-and-cheek manner
+but could pass for a serious letter from an age gone by.  It had me fooled
+for awhile until some of the stated observations didn't add up and of course,
+there was no real reference.  However, this is totally fictional humor and
+very amusing.  Much other interesting stuff on that Web site as well.
+<p>
+Of course, it's quite possible that lasing in air or other gases was produced
+way before the invention of the laser.  However, a discovery requires both
+the effect and the observation (if not the explanation).  Prior to 1960 or
+so, the idea of lasing was unknown so no one knew what to even look for and
+wouldn't have realized they had it.  There's little doubt that with all
+the electrical experiments of the era, some inadvertent lasing took place at
+some time and some place but it went unnoticed. :)
+<p>
+<hr>
+<br>
+<li>Back to <A HREF="laserfaq.htm#faqtoc">Sam's Laser FAQ Table of
+ Contents</A>.
+<li>Back to <A HREF="lasercn2.htm#cn2toc">Home-Built Nitrogen (N2) Laser
+ Sub-Table of Contents</A>.
+<li>Forward to <A HREF="laserchg.htm#chgtoc">Home-Built Helium-Mercury (HeHg)
+ Laser</A>.
+<p>
+<hr>
+<b><center>Sam's Laser FAQ, <A HREF="copyright.htm">Copyright &copy<A> 1994-2010,
+ Samuel M. Goldwasser, All Rights Reserved.<br>
+ I may be contacted via the
+ <A HREF="emaillnk.htm">Sci.Electronics.Repair FAQ
+ Email Links Page</A>.</center></b>
+<hr>
+<p>
+</BODY>
+</HTML>

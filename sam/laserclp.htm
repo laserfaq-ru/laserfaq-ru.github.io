@@ -1,0 +1,3546 @@
+<HTML>
+<HEAD>
+<TITLE>Sam's Laser FAQ - The Home-Built Laser Assembly and Power Supply</TITLE>
+</HEAD>
+<BODY>
+<A NAME="clptoc"></A>
+<p>
+<hr>
+<b><center>Sam's Laser FAQ, <A HREF="copyright.htm">Copyright &copy<A> 1994-2009,
+ Samuel M. Goldwasser, All Rights Reserved.<br>
+ I may be contacted via the
+ <A HREF="emaillnk.htm">Sci.Electronics.Repair FAQ
+ Email Links Page</A>.</center></b>
+<hr>
+<p>
+<li>Back to <A HREF="laserfaq.htm#faqtoc">Sam's Laser FAQ Table of Contents</A>.
+<h1>The Home-Built Laser Assembly and Power Supply</h1>
+<h2>Sub-Table of Contents</h2>
+<ul>
+<li><A HREF="laserclp.htm#clpilc">Introduction to Actual Laser Construction</A>
+<p>
+<li><A HREF="laserclp.htm#clpcao">The Laser Assembly and Optics</A>
+ <ul>
+ <li><A HREF="laserclp.htm#clpcao0">Mounting the Laser Components</A>
+ <li><A HREF="laserclp.htm#clpwood">Comments on Structural Materials for Laser Construction</A>
+ <li><A HREF="laserclp.htm#clpcao1">Optical Windows</A>
+ <li><A HREF="laserclp.htm#clpcao2">Determining Brewster angle</A>
+ <li><A HREF="laserclp.htm#clpcao3">Mirrors for Home-Built Lasers</A>
+ <li><A HREF="laserclp.htm#clpcao4">Adjustable Mirror Mounts</A>
+ <li><A HREF="laserclp.htm#clpcao5">Mirror Mount Precision and Repeatability</A>
+ <li><A HREF="laserclp.htm#clpcao6">Sources for Reasonably Priced Optics, Mounts, and Other Related Components</A>
+ <li><A HREF="laserclp.htm#clpcao7">Determining the Radius of an Ion or HeNe Laser Optic (Mirror)</A>
+ <li><A HREF="laserclp.htm#clpcao8">Comments on Acquiring Optics for Home-Built Lasers</A>
+ <li><A HREF="laserclp.htm#clpchlm">The Care and Handling of Laser Mirrors</A>
+ <li><A HREF="laserclp.htm#clpcao9">Properties of Optical Materials</A>
+ <li><A HREF="laserclp.htm#clpsplt">Salvaging Parts From a Laser Tube</A>
+ <li><A HREF="laserclp.htm#clpcmlm">Cleaning Mounted Laser Mirrors</A>
+ <li><A HREF="laserclp.htm#clpdco">Disassembling Cemented Optics</A>
+ <li><A HREF="laserclp.htm#clpprsm">Disassembling the WW-II Tank Periscope Prism</A>
+ <li><A HREF="laserclp.htm#clpmlm">Mounting Laser Mirrors</A>
+ <li><A HREF="laserclp.htm#clpctm">Cutting Thin Mirrors</A>
+ <li><A HREF="laserclp.htm#clpmoua">Mounting Optics Using Adhesives</A>
+ <li><A HREF="laserclp.htm#clpshut">Laser Beam Shutters</A></h3>
+ </ul>
+<p>
+<li><A HREF="laserclp.htm#clpcps">Power Supply Considerations for Home-Built Lasers</A>
+ <ul>
+ <li><A HREF="laserclp.htm#clpcps0">Power Supply Components</A>
+ <li><A HREF="laserclp.htm#clpnstc">Neon Sign Transformer (NST) Characteristics</A>
+ <li><A HREF="laserclp.htm#clpunst">Used Neon Sign Transformers - Cost, Recommended Brands, Testing, Availability</A>
+ <li><A HREF="laserclp.htm#clpchpf">Comments on High Power Frankenstein-Class Transformers</A>
+ <li><A HREF="laserclp.htm#clprew">Rewinding a Microwave Oven Transformer for use as a Low Voltage Filament Supply</A>
+ <li><A HREF="laserclp.htm#clpcps2">Variacs and Alternatives</A>
+ <li><A HREF="laserclp.htm#clpvatw">Variac Wiring</A>
+ <li><A HREF="laserclp.htm#clphvr">A Treatise on Designing High Voltage Rectifiers</A>
+  <ul>
+   <li><A HREF="laserclp.htm#clphvr0">Requirements and Design Considerations</A>
+   <li><A HREF="laserclp.htm#clphvr1">What Voltage?</A>
+   <li><A HREF="laserclp.htm#clphvr2">Voltage Sharing</A>
+   <li><A HREF="laserclp.htm#clphvr3">Example of Basic Design</A>
+   <li><A HREF="laserclp.htm#clphvr4">Transient Sharing</A>
+   <li><A HREF="laserclp.htm#clphvr5">Example of Transient Sharing</A>
+   <li><A HREF="laserclp.htm#clphvr6">Construction Tips</A>
+  </ul>
+ <li><A HREF="laserclp.htm#clpcps3">Meters - Voltage and Current</A>
+ <li><A HREF="laserclp.htm#clpcps3a">Measuring Current Pulses</A>
+ <li><A HREF="laserclp.htm#clpcps4">Fuses, Circuit Breakers, and Other Protection Devices</A>
+ <li><A HREF="laserclp.htm#clpblee">Determining Bleeder Resistor Component Values</A>
+ <li><A HREF="laserclp.htm#clpcps4a">SwitchMode Power Supply (SMPS) for Home-Built Lasers?</A>
+ <li><A HREF="laserclp.htm#clpcps5">Related Power Supply Information</A>
+ <li><A HREF="laserclp.htm#clptsg">Triggered Spark Gaps</A>
+ </ul>
+</ul>
+<A NAME="clpilc"></A>
+<hr>
+<br>
+<li>Back to <A HREF="laserfaq.htm#faqtoc">Sam's Laser FAQ Table of Contents</A>.
+<li>Back to <A HREF="laserclp.htm#clptoc">Home-Built Laser Assembly and
+ Power Supply Sub-Table of Contents</A>.
+<h2>Introduction to Actual Laser Construction</h2>
+
+This chapter deals with some of the general issues involved in constructing a
+home-built laser.  These include those related to the hardware of the laser
+resonator itself including structure, optics, and mirror mounts, as well as
+the power supply required to run it.
+<p>
+One area that is often overlooked but which adds significantly to the
+professionalism and impressive appearance of home-built lasers - not to mention
+user and visitor safety - are the safety labels.  See the section:
+<A HREF="lasersaf.htm#saflslbl">Laser Safety Labels and Signs</A> for examples
+of those for common lasers.  You may need to modify them for the particular
+laser you decide to construct.
+<p>
+Much more detailed information on each type of home-built laser can be found
+in the chapter for that specific laser.
+<p>
+<A NAME="clpcao"></A>
+<hr>
+<br>
+<li>Back to <A HREF="laserclp.htm#clptoc">Home-Built Laser Assembly and
+ Power Supply Sub-Table of Contents</A>.
+<h2>The Laser Assembly and Optics</h2>
+<h3><A NAME="clpcao0">Mounting the Laser Components</A></h3>
+
+The stability and strength of the baseplate are probably the single most
+important factors in determining how easy it will be to set up and maintain
+a laser with an external resonator.  Multiple optical components have to
+remain aligned to a small fraction of a degree despite changes in temperature
+and placement (on another surface like a lumpy tabletop) of the laser
+assembly.
+<p>
+Forget about most wood - it is too flexible, absorbs moisture and warps or at
+least changes size all too readily.  It may be possible to totally seal some
+high quality wood or wood-based composite products but it probably isn't worth
+the effort.
+<p>
+Start with a solid metal base.  Short of something milled from a big heavy
+casting or the use of a real optical bench or table or a converted lathe bed,
+the best is an extruded aluminum box shape since this is very strong for its
+weight and will resist bending and twisting. A C-channel extrusion will be
+nearly as good if it is braced at multiple points along its open side - and
+this is more accessible for attaching screws and whatever from underneath.
+Or, a thin removable cover plate can be screwed to the open side.
+<p>
+Buying a big enough piece of this new - say 4" x 2" x 4 feet, more or less
+depending on the size of your laser - will set you back a few bucks but will
+save a lot of time in the long run.
+<p>
+Drill and tap holes for mounting the laser tube, mirror mounts, and whatever
+else you need.  With tapped holes, there is less opportunity to spend your
+time fishing for lost screws!  Add keying holes for assemblies that may need
+to be removed and replaced without changing their position - like the mirror
+mounts.  Attach some non-slip material on the bottom to force the entire
+affair to stay put!
+
+<h3><A NAME="clpwood">Comments on Structural Materials for Laser
+ Construction?</A></h3>
+
+(From: George Werner (glwerner@sprynet.com).) 
+<p>
+The advice has been given to avoid wood as a structural material, but for
+experimental use there are times when wood might be the material of choice.
+If you need a certain shape that can be made of wood and you don't have a
+milling machine handy to make it of steel or brass you might prefer to have
+it in wood tonight rather than wait until next Tuesday to have it made of
+metal.  Threaded holes are easily made in wood.  You just drive the screw
+into an undersize hole and it makes its own thread!  You might have the
+objection that wood is not dimensionally stable.  Quite so in the case of
+bringing in a board that has been out on the woodpile on a rainy day,  but
+for plywood that has been stored indoors for several weeks in an air
+conditioned house there will be very little change.  The main need is for
+rigidity, and wood can be made rigid.  You don't want the mirror to shift
+the minute you touch the mirror mount. You need to turn the adjusting screw
+on a mirror mount without imparting much translational force.  Torque without
+Push.  What I found helpful was to drill one or two holes transversely through
+the screw knob. Then I made a little tool consisting of a 7 inch long 1/4 inch
+dowel into the end of which I inserted a straight, half-inch long wire (from
+a paper clip). It is used as a capstan wrench to make tiny adjustments of a
+screw.
+<p>
+Getting back to wood...  If you want something that you expect to keep its
+adjustment on the shelf until Christmas then wood is not called for.  But
+for experimental work, something that's here today and something else
+tomorrow, why not use wood?
+<p>
+An example of how simple and crude you can be and still get away with it
+was shown in our 1965 paper by Vander Sluis et. al. in Figure 1.  (I don't
+have the photo but a description of the paper and reference can be found in
+the section: <A HREF="laserchn.htm#chnslui">K. L. Vander Sluis et. al. HeNe
+Laser</A> --- Sam.) It is a photograph of the world's simplest HeNe laser.  On
+a sheet of half inch plywood there are four chemist's ring-stands in a line.
+Mounted on them are four burette clamps. The two on the ends are holding
+concave dielectric mirrors.  The other two are holding a sealed-off laser tube
+about 75 cm long. Lying on the table and serving as power supply is a Cenco
+Tesla-type leak tester with a wire leading up to a band on the tube.  With
+about a half hour of testing and adjusting this contraption was actually
+lasing! It may have been going when the photo was made - I don't remember and
+the picture doesn't show it.
+<p>
+Another time, just to see if we could do it, a laser  was run with no
+mechanical support to either mirror.  Dr. VanderSluis and I each had an
+alignment card in one hand and a mirror in the other at opposite ends of
+the laser, both of us trying to hold his mirror in alignment.  Every once
+in a while we would both be in alignment at the same time and it would
+flash.  Not a very practical way to go.
+
+<h3><A NAME="clpcao1">Optical Windows</A></h3>
+
+There are several considerations when selecting a material to be used for
+a Brewster or other window through which light must pass undisturbed:
+<p>
+<ul>
+<li><b>Optical quality.</b>  This refers to the surfaces (plane, flat, and
+ polish) and purity of the material.
+<p>
+ High quality microscope slides (not the kind that are 100 for $1.00 at your
+ local hobby store) are actually quite good.  To check a microscope slide
+ or real optical flat:
+<p>
+ <ol>
+ <li>Hold it at arm's length and view a distant scene through it - there
+  should be no detectable distortion or shift of the image as it is
+  inserted/removed from the view.  Alternatively, insert/remove it from
+  the path of a laser beam projected onto a far wall (reflecting back from
+  a mirror to a nearby screen if you don't have a partner).  There should
+  be no noticeable shift in the position of the projected spot with/without
+  it in the beam.
+<p>
+ <li>Viewed edge-on, there should be no coloration (green or otherwise).
+<p>
+ <li>When well cleaned and placed in the concentrated beam of a slide
+  projector or laser, there should be minimal or no detectable scatter.
+ </ol>
+<p>
+<li><b>Index of refraction.</b> This will mostly affect the Brewster angle,
+ percent reflectance with respect to window angle, and angle of total internal
+ reflection.  The dispersion will also be important if multiple wavelengths
+ are involved.
+<p>
+ Where the angle of a Brewster window is not adjustable (e.g., no bellows
+ or ball-and-socket joint connection), the index of refraction should be
+ determined (experimentally or from a reference book or the manufacturer)
+ so that the it (the Brewster angle) can be set quite precisely (within
+ +/1 1/2 degree if possible).  Assuming an air/glass interface, the Brewster
+ angle = arctan(n) where n is the index of refraction.
+<p>
+<li><b>Heat absorption/losses.</b>  This can be critical where the window is
+ part of a low gain laser resonator as in the case of the Brewster window for
+ the HeNe laser.  Quartz should be better than common glass in this regard.
+<p>
+ Keep in mind that the light intensity *inside* the resonator is going to be
+ many many times greater than the actual power in the output beam.  This
+ ratio will be approximately 1/(1-R) where R is the reflectivity of the
+ Output Coupler (mirror reflectivity specified between 0 and 1).
+<p>
+ For example, with a HeNe laser, a typical R is .99.  So, the power level
+ between the mirrors will be roughly 100 times greater than the actual power
+ in the output beam - or 1 WATT for a 10 mW laser!
+<p>
+ Thus, absorption->heat losses can be significant and need to be minimized.
+ (And no, you cannot stick a mirror in at an angle to extract a high power 
+ beam but think about zig-zag paths through laser gain media if you have
+ trouble sleeping some night!)
+</ul>
+<p>
+See the section: <A HREF="laserclp.htm#clpcll3">Sources of Special Parts and
+Supplies</A> for low cost suppliers of high quality optical windows.
+
+<h3><A NAME="clpcao2">Determining Brewster Angle</A></h3>
+
+The equation for the Brewster angle defined between the window and a
+plane perpendicular to the direction of the light rays (tube axis) is:
+<PRE>
+         Brewster angle = arctan(index of refraction)
+</PRE>
+For a quartz window - desirable for an HeNe laser due its lower heat losses at
+632.8 nm, the index of refraction is 1.54 resulting in a Brewster angle of
+57 degrees.
+<p>
+So, this is a piece of cake even if you weren't a stellar performer in high
+school trig.  However, suppose you don't know the index of refraction of the
+material you are using?  Ah, no problem if you have a light source (like a
+laser) of the SAME wavelength since it can be determined experimentally.  For
+the construction of the HeNe laser this should be no problem since you likely
+already have some sort of HeNe laser!  And, we already warned you that you
+shouldn't be building the HeNe laser if your goal is just to have a working
+HeNe laser anyhow. :-)
+<p>
+The light source has to be polarized.  This either means a laser outputting a
+polarized beam (by design or see the section: <A HREF="laserhen.htm#henicm1">Unrandomizing the Polarization
+of a Randomly Polarized HeNe Tube</A>) or the use of a polarizing filter on its
+output.  However, for the latter, common HeNe tubes produce a beam with random
+polarization - it varies as the tube heats up and just because it feels like
+it!  This means that the intensity will be varying at the output of the
+polarizer so this will have to be taken into account as you view the reflected
+beam.
+<ol>
+<li>Fasten a sample of your window material to a block of something so it is
+   perfectly vertical and in a way so that it can be adjusted between about 30
+   and 70 degrees with respect to the direction of the laser beam and that the
+   angle can be accurately measured.
+<p>
+<li>Line everything up with the window at a 45 degree angle and turn on your
+   laser.
+<p>
+<li>Rotate the laser or its polarizer about the axis of the beam until the
+   reflection off the window is minimized (keeping in mind that your actual
+   beam intensity may be varying at the same time if you have a random
+   polarized HeNe tube).
+<p>
+<li>Adjust the angle of the window until the reflection is further minimized.
+</ol>
+Repeat steps 3 and 4 until the reflection is as small as possible.  When
+optimal, the reflection should be extremely faint.  Measure the angle. :-)
+
+<h3><A NAME="clpcao3">Mirrors for Home-Built Lasers</A></h3>
+
+When most people think of mirrors, what they use for shaving or makeup or
+the rear or side view mirrors of the automobile come to mind.  However, none
+of these would be permitted anywhere near a laser lab.  To put it bluntly,
+their quality and performance stinks!
+<p>
+The ideal mirror would have a coefficient of reflectivity of 1 (100%) for all
+wavelengths of interest (no transmission and no absorption), no scatter, and
+introduce no (unwanted) distortion.  (However, specific reflectivities of less
+than 1 over a range of wavelengths are required for laser work as noted below.)
+<p>
+<ul>
+<li>Optical quality mirrors are usually 'front surface' coated which means that
+ the reflective layer is on the front of the supporting structure rather than
+ behind as in the case of a common household glass mirror.  Otherwise, there
+ will be a ghost reflection from the front (uncoated) surface and degradation
+ from passage through the mirror material (glass, plastic, etc.)
+<p>
+<li>For many applications, metal coated mirrors are fine.  Aluminum and gold
+ are common (well, OK, maybe not so common for gold) materials that have
+ decent reflectivity at a wide range of wavelengths.  However, even the best
+ metal coating has a reflection coefficient of less than 0.99.  This may not
+ matter viewing your face in the morning or even for bouncing a laser beam
+ around an optical apparatus.  But where every last fraction of a percent
+ counts, another type of mirror coating is needed.
+<p>
+<li>Where performance is critical, the mirrors are not metal coated but are
+ a type called 'dielectric' (the term 'dichroic' may also be used which is
+ the same thing).  They are made by depositing many alternating layers of hard
+ but transparent materials having different indexes of refraction.  (Since
+ the coatings are insulators, they are non-conducting - thus the term
+ 'dielectric' as opposed to conducting metal coatings.)  The
+ thickness of each layer is precisely 1/2 the wavelength of the light for
+ which the mirror is being designed.  This results in reflection by
+ interference with very high (>99.9%) efficiency - much greater than
+ for even the best metal coated mirrors.  On either side of the nominal
+ wavelength, reflectivity falls off so this type of mirror may not useful
+ without additional work where a wide range of wavelengths is involved.
+ By varying the thickness of each layer and the number of layers (some
+ mirrors will have more than 100 layers!), specific reflectivity and
+ spectral response can be controlled very precisely.
+</ul>
+<p>
+Mirrors are used in two sorts of places: as part of the laser resonator and
+everywhere else. :)
+<p>
+<ul>
+<li>Mirrors external to the laser resonator - used for redirecting the beam,
+ for example, are a lot less critical since in most cases, the light only
+ reflects from them once and thus a slight imperfection or fraction of a
+ percent loss isn't quite as critical (though there certainly are exceptions).
+<p>
+<li>Mirrors which are part of the resonator are special in that they affect the
+ performance of the laser directly since the light bounces back and forth
+ between them many times and they affect the gain of the laser resonator.
+ Percent reflectivity with respect to wavelength, surface figure and finish
+ (shape as in planar or concave and quality) are all critical.
+<p>
+ <ul>
+ <li>Dielectric types are almost always used for gas lasers.
+<p>
+ <li>Planar or curved mirrors may be used at each end.  Where a concave
+  mirror is used, the focal length (f = 1/2 * r, the radius of curvature) is
+  usually about about equal to the length of the cavity (L).  So, r is
+  about equal to twice the distance between the mirrors.  This is called
+  a 'confocal' configuration and results in easier (in a relative sort of
+  way) adjustment of the mirror alignment - it is somewhat forgiving.
+<p>
+  Planar mirrors result in higher efficiency in the lasing process since
+  more of the lasing medium can participate (think of the shape of the
+  reflected beam inside the tube).  However, diffraction losses are higher.
+  You can't win on all counts! :)  A true spherical resonator (L = r) would
+  be easiest to align but would use even less of the lasing medium.
+<p>
+  The use of planar mirrors have a couple of other advantages as well: Putting
+  a planar mirror at one end allows additional optics to be introduced into
+  the cavity near that end without requiring much, if any, realignment of
+  the mirror.  A 'folded confocal cavity' with one planar mirror and the
+  other having r = 2 * L is a good choice in this regard and will also have
+  the beam waist located at the OC.  Planar mirrors are also generally much
+  less expensive than curved ones (and it may be desirable to experiment with
+  OCs having different wavelength characteristics and reflectivities so cost
+  savings here could be important)!
+<p>
+ <li>A typical laser resonator will have a High Reflector (HR) mirror which is
+  very nearly 100 percent reflective (as close as possible depending on its
+  quality - and cost) and an Output Coupler (OC) mirror which is partially
+  transparent - it reflects less than 100 percent of the incident light at
+  the wavelength or range of wavelengths for which the laser is designed.
+<p>
+  The OC will typically be designed to transmit anywhere from a fraction of
+  1 percent to more than 50 percent depending on resonator gain.  Some types,
+  like the copper vapor or nitrogen laser have so much gain that the OC needs
+  to have little or no reflectance.
+<p>
+ <li>In some instances, a laser will use a pair of OCs to get usable beams
+  (possibly at different wavelengths) from both ends.  But note that
+  there will almost always be some leakage through even the best
+  dielectric HR unless it is covered with paint or tape or has a metal
+  back-plate, since its reflectance isn't quite 100 percent.  If you have a
+  HeNe laser and you can see the HR mirror itself, you will likely be able
+  to detect a weak beam, perhaps 1/1000th of the intensity of the main beam
+  exiting that end.
+<p>
+ <li>For special applications, some lasers use a pair of HRs to maximize the
+  intra-cavity photon flux (or circulating) power and produce little or no
+  output beam.
+ </ul>
+</ul>
+<p>
+Needless to say, you aren't going to find resonator-qualified mirrors at the
+local variety store!  Unlike aluminized telescope mirrors which are possible
+to coat in your basement (at least in principle), this is not an option for
+dicroic types.  They can be obtained from optical supply companies and in the
+case of the HeNe laser, dead or sacrificial HeNe tubes.  (Argon or krypton ion
+also, but you aren't likely to have any!)
+<p>
+Note that for testing a resonator, a pair of totally reflecting (HR) mirrors
+can be used.  This will result in the lowest possible lasing threshold because
+very little light escapes through either mirror.  Of course, you won't get much
+of a beam either!  However, as an indication that your laser is working, there
+will be some coherent light reflected off of the not quite perfect Brewster
+windows and some will leak through the typical HR as long as it isn't covered
+with tape or paint or a solid metal back plate as noted above!  If you can get
+your laser working in this manner, substituting the proper OC mirror that
+transmits a small percentage of the incident light should be a piece of cake!
+
+<h3><A NAME="clpcao4">Adjustable Mirror Mounts</A></h3>
+
+The HeNe, Ar/Kr ion, HeHg, and other similar gas lasers all require adjustable
+mirrors outside and usually separate from the tube itself.  These should be:
+<ul>
+<li>Solid, rigid, and stable with respect to temperature and humidity.
+<p>
+<li>Easy and intuitive to make fine adjustments.
+<p>
+<li>Easy to remove and reinstall with minimal effect on setting (as when doing
+  initial alignment, for example).
+<p>
+<li>Inexpensive and easy to fabricate. :-)
+</ul>
+You can of course purchase such mounts from an optics supplier, but one of
+them will probably set you back more than the entire budget for this laser
+project!  While the homemade alternatives discussed below do work, they WILL
+almost certainly be less precise that what is available commercially.
+Thus, if you can afford quality mounts or find a good deal, by all means buy
+them!  (See the additional comments below).
+<p>
+All of the following designs should be adequate for use with home-built lasers.
+These mounts consist of a right angle aluminum bracket, an aluminum plate to
+which the mirror is attached with glue (around the edge), screws, or clips,
+and two or three spring loaded thumb-screw adjusters.  Indexing balls between
+the base and the mounting surface and an adjustment screw allow it to be
+removed and replaced with virtually no change in alignment should this ever be
+required.  Both designs can be constructed using common hand tools though a
+drill-press would be nice and high quality drill bits and taps are a must!
+<p>
+While the drawings show the mirrors themselves glued to the mounts, a better
+approach is to construct something to hold the optic that can be easily
+removed and replaced without risk of damage.  See the section:
+<A HREF="laserclp.htm#clpmlm">Mounting Laser Mirrors</A> for one such
+design that constructed easily without the services of a fully equipped
+machine chop.
+<p>
+The dimensions given below are just suggestions.  Modify them depending on
+your particular needs.  Using the smallest height which provides the desired
+baseline for the (Y) adjustment and then adding a block underneath the entire
+assembly to raise the mirror position to center it within the tube bore will
+maximize stiffness.
+<p>
+Note that while all the mirror mounts described below show coil springs, I
+have found that these can generally be replaced with 1 or 2 split (lock)
+washers (which are what I now use for all my home-built mirror mounts).
+While the adjustment range is reduced to a few mR, this is still quite
+adequate for most laser resonators as long as care is taken in fabricating
+the mirror mounts and pre-aligning them on the baseplate and mounting the
+optic squarely on its plate or in its holder.  However, if your machining
+skills are somewhat rusty, go for the springs. :)
+
+<ul>
+<li>The <A HREF="mmount1.gif">Adjustable Mirror Mount 1</A> is similar to the
+ one in "Light and its Uses" and uses three thumbscrews equally spaced around
+ the mount (at the vertices of an equilateral triangle).  The disadvantage of
+ this approach is that operation isn't terribly intuitive since the X and Y
+ axes are not independent.  However, the screw at the top does pretty much
+ only affect Y.  Then, all you need to do is remember to always turn the two
+ other screws an equal amount opposite directions - which will mostly affect X.
+<p>
+ The <A HREF="mmount2.gif">Adjustable Mirror Mount 2</A> is very similar
+ as far as construction is concerned but moves the thumbscrew locations to the
+ corners of an isosceles right triangle.  And, although three thumbscrews are
+ shown, the center one (marked P) can be left alone or replaced with normal
+ screw, a point contact, ball joint, or something similar, since all
+ adjustments are made with the thumbscrews marked X and Y.  With this
+ arrangement, the side and top thumbscrews produce nearly independent changes
+ to mirror orientation in the X and Y axes respectively.
+<p>
+Parts list (typical for Mirror Mounts 1 and 2):
+<p>
+<ul>
+<li>1 - Aluminum L-bracket (extruded, not bent): 2.25" L x 3 W x 3.5" H, .125"
+ or thicker.
+<li>1 - Aluminum plate: 2.95" on a side, trimmed if desired, .062" or thicker.
+<li>3 - Thumbscrews (for adjustment): 10-32 x 1".  Finer threads are even
+ better - see below.
+<li>1 - Thumbscrew (to fasten assembly to baseplate): 10-32 x 3/4".
+<li>3 - Compression springs.
+<li>3 - Flat washers: #10 x 1/2" outside diameter.
+<li>3 - Steel or glass balls, 1/8" to 1/4" diameter.
+</ul>
+</ul>
+Another easy-to-build design that is very similar to the X-Y kinematic mounts
+sold by optics companies is only slightly more complicated:
+<ul>
+<li>The <A HREF="mmount3.gif">Adjustable Mirror Mount 3</A> separates the
+ adjustment points and the spring retainers and if carefully made with fine
+ pitch thumb screws, should be quite precise.  The
+ <A HREF="mmount4.gif">Adjustable Mirror Mount 4</A> is virtually identical
+ but locates the movable mirror plate closer to the laser tube or rod making
+ it easier to add a boot or bellows to keep out dust!  (This modification
+ could, of course, be done for Mirror Mounts 1 and 2 as well.)
+<p>
+Parts list (typical for Mirror Mounts 3 and 4):
+<p>
+<ul>
+<li>1 - Aluminum L-bracket (extruded, not bent): 2.25" L x 3 W x 3.5" H, .125"
+ or thicker.
+<li>1 - Aluminum plate: 2.95" on a side, trimmed if desired, .125" or thicker.
+<li>2 - Thumbscrews (for adjustment): 10-32 x 1", conical end.  Finer threads
+ are even better - see below.
+<li>2 - Locknuts to match threads of thumbscrews (optional).
+<li>1 - Screw for pivot: 10-32 x 1", conical end.
+<li>3 - Threaded bushings to match adjustment screws: .375" D x .375" L.
+<li>1 - Thumbscrew (to fasten assembly to baseplate): 10-32 x 3/4".
+<li>2 - Retaining screws: 10-32 x 1".
+<li>2 - Flat washers: #10 x 1/2" outside diameter.
+<li>2 - Compression springs.
+<li>3 - Steel or glass balls, 1/8" to 1/4" diameter.
+</ul>
+<p>
+The adjustment and pivot screws in commercial mirror mounts of this type may
+have a steel ball glued into a recess at their end to form a highly stable
+symmetric tip.  If you have access to a lathe, you can do this as well.  Or,
+just mount an ordianry blunt-end screw tip-out (I'll let you figure out how to
+do this!) in an electric drill or drill press and use a file followed by fine
+sandpaper or emery cloth to form it into a smooth blunt conical shape.
+<p>
+The conical tips of the thumbscrews and pivot screw press against matching
+depressions in the fixed plate.  To align everything, first drill holes for
+the three adjustment bushings (slightly undersize if neceesary for a press fit)
+and secure them in place (press fit or threaded nut as appropriate, or glue as
+a last resort).  Then, drill one of the holes for the spring retainers.  Use a
+snug fitting nut and bolt to clamp the two pieces of metal together and then
+drill the other retainer hole and add a nut and bolt there.  Make sure they
+are tight!.  Now, using the holes in the threaded bushings as guides, drill
+the depressions for the tips of the thumbscrew but make sure you only go about
+halfway through the fixed plate - set your drill stop to this depth.  Also
+take care to avoid damaging the threads on the bushings in the process.
+<p>
+For the assembly to be stable, all three screws (X, Y, and P) must seat in
+the bottoms of their matching depressions.  If the slight 'give' between the
+screws and bushings isn't enough to assure this, it will be necessary to
+elongate the depression at X ONLY in a direction parallel with a line passing
+through X and P and widen the one at Y in the appropriate direction to allow
+the screw at Y to seat properly (X and P will fix the position of the plate;
+the depression at Y can be widened in all directions or left out entirely).
+<p>
+<li>The <u>Adjustable Mirror Mount 5</u> (which I haven't drawn but have built)
+consists of a rigid baseplate made from right-angle aluminum stock and a pair
+of hinged flat plates - one on top of the other - attached to it.  The X
+adjustment (first) plate is hinged on the side and the Y adjustment plate is
+hinged on the bottom.  The hinges can be actual leaf-type hinges but a pair of
+point contacts will work as well or better.  For these, I just drilled a pair
+of holes suitable for a 6-32 tap through the hinged plate and to a depth half
+way through the mating plate and threaded a short 6-32 screw through the hinged
+plate.  When the tip of the screw is forced into the slightly undersize hole,
+it forms a very stable pivot for the couple degrees of freedom that is
+required.  A thumbscrew for each axis is threaded through the hinged plate for
+that axis and bears on the plate behind it.  Each plate can have its own spring
+(and optional locking screw) to maintain it in position or a single
+strategically located spring can hold the entire affair together (I tried both
+approaches but prefer the former).
+</ul>
+
+<h3><A NAME="clpcao5">Mirror Mount Precision and Repeatability</A></h3>
+
+For any adjustable mount, the tighter the pitch (threads/unit) of the adjusting
+screw and the longer the baseline (distance between the screw and the relevant
+pivot in units), the finer the control of mirror angle.  Units can be inches,
+mm, etc.  The sensitivity of the adjustments measured in mR/turn is given by:
+S = 1/(Baseline * Pitch).
+<p>
+Some examples:
+<ul>
+<li>Typical homemade adjuster - Screws are 10-32 with X and Y baselines of 3
+ inches (same as 4-40 with X and Y baselines of 2.4 inches):  Sx = Sy = 10.4
+ mR/turn.
+<p>
+<li>ALC-60X argon ion laser - Screws are 1/4-20 with X and Y baselines of 5
+ and 3 inches respectively:  Sx = 10.0 mR/turn and Sy = 16.7 mR/turn.
+ See: <A HREF="laserarg.htm#argtsa">A Typical Small Air-Cooled Argon Ion
+ Laser - the ALC-60X/Omni-532</A>.  However, these adjusters use large
+ hex-head nuts; with a suitable wrench, they are actually quite precise.
+<p>
+<li>Large frame ion laser - Screws are 1/4-80 with X and Y baselines of 4
+ inches:  Sx = Sy = 3.125 mR/turn.  See: <A HREF="laserarg.htm#argwyr3">The
+ Really Strange Carson Dual Tube Ion Laser</A>.
+</ul>               
+Of course, more precise machining all around will reduce the amount of wobble
+and other random unpredictable behavior.  In addition to the sensitivity of
+the control, repeatability is an essential characteristic of a laser mirror
+mount.
+<p>
+In addition to the thread pitch (see below), the length of the bushing, the
+quality of the match of its threads with those of the thumbscrew, as well as
+the size of the adjusting knob or length of the adjusting wrench will determine
+the precision of these mounts.  Up to a point, a longer bushing and larger
+knob is better but almost anything beats a simple nut and tiny headed screw!
+<p>
+The addition of a locknut or setscrew, and/or removal of the knob (without
+disturbing anything), will reduce the possibility of adjustments changing on
+their own.
+<p>
+While the ALC-60X has rather mediocre per-turn sensitivity, its adjusters are
+tight 5/8 inch nuts requiring a wrench for adjustment so they actually end up
+being much better than might appear based simply on thread pitch and the size
+of the baselines.
+<p>
+For higher quality components than available at the corner hardware store, go
+to <A HREF="http://www.thorlabs.com/">Thorlabs</A> and search for 'taps' (or
+get a Thorlabs catalog).  They have the 80 pitch screws, taps, and other tools
+and parts that you need to make your own more precise mounts.  Prices aren't
+that terrible either considering what you get.  For example, 1/4-80 thumbscrews
+and nuts (actually tapped bushings) are $6 to $9 and $6 to $7.90 respectively
+(depending on length in each case).  The 1/4-80 tap is $12.60 if you want to
+make your own threads.  Then, the incremental cost of an adjustment will be
+only $6 (assuming the 1 inch thumbscrew - which should be adequate for these
+lasers).  However, the bushings may be less hassle since getting these fine
+threads to mate smoothly over any length may be difficult.  Other possible
+sources this sort of hardware may include
+<A HREF="http://www.mellesgriot.com/">Melles Griot</A> and
+<A HREF="http://www.newfocus.com/">New Focus</A>.
+<p>
+(From: Steve Roberts (osteven@akrobiz.com).)
+<p>
+Buy an MM1 from <A HREF="http://www.newport.com/">Newport</A> or a KM1 from
+<A HREF="http://www.thorlabs.com/">Thorlabs</A> and then see if you really
+want to try to clone it.  There is a reason for the traditional kinematic
+design of the mirror holder. The ball shaped pivot, the cone and the flat,
+and the specially milled groove, are there to eliminate crosstalk between
+the X and Y axis. Buy one, look at it and you'll see what I'm talking about.
+Then you'll see why they get $40 to 80 each for the 2-3/8ths thick one inch 
+square blocks of aluminum. If you have a milling machine or access to one,
+or don't mind crosstalk, then making your own fine mounts is child's play,
+otherwise, for long distance applications, you'll find yourself willing to
+pay for the quality units once you've used them.  If you need really large
+mounts, then making them yourself becomes a viable option. 
+
+<h3><A NAME="clpcao6">Sources for Reasonably Priced Optics, Mounts, and Other
+ Related Components</A></h3>
+
+The most critical optical components will be the HR and OC mirrors which are
+part of the laser resonator.  While some lasers like the CuCl/CuBr and N2
+lasers only require simple mirrors (e.g., microscope slides) or no mirrors at
+all, for most of the others, the specifications of the mirrors (reflectivity
+versus wavelength, curvature) and quality will to a large extent determine the
+potential performance of your laser - and even whether it will lase at all!
+This is an area where you cannot cut corners.  Except for the CO2 laser where
+it may be possible to grind and coat your own mirrors, this means buying them.
+There are a variety of possible sources for these mirrors:
+<ul>
+<li>Laser and optics companies.  Needless to say, manufacturers of laser
+ systems and components (not just integrators who pop a HeNe tube into a
+ scanner), know the most about high quality mirrors.  Anything custom is
+ going to be *very* expensive (figure $1,000s) but the prices of standard
+ mirrors may not be that bad.  For example, an optics set for an ALC-60X
+ from American Laser Corporation may be under $200.  If you are persistent,
+ get in touch with the right person (a technical type, not a bean counter),
+ you may even be able to get something at a steep discount or free.  Be honest
+ about what you are doing - you represent a future paying customer.  But, you
+ have to convince them you are serious and know what you are talking about,
+ have an idea of what you want but be prepared to compromise.  You may have to
+ alter your design to accommodate an optic that might be available at a good
+ price.
+<p>
+<li>Laser surplus outfits.  Sometimes, suitable optics will appear from
+ suppliers of lasers and other types of laser components.  However, this isn't
+ that common.
+<p>
+<li>Salvage.  There are a variety of types of equipment that may contain
+ suitable mirrors or optics, and in some cases, even structural components
+ and adjustable mirror mounts.  Of course, for equipment like laser printers,
+ there will also usually be a complete laser of some sort buried in there
+ somewhere (or was until someone else got there first)!
+<p>
+ <ul>
+ <li>HeNe and Ar/Kr ion laser tubes or laser heads.  That dead HeNe tube
+  likely has a good set of mirrors.  At least one of them might be usable in
+  your home-built laser.  Ditto for internal mirror ion laser tubes and, of
+  course, external mirror laser heads (though you are a lot less likely to
+  stumble upon one of them).  
+ <p>
+  However, one or both mirrors may not be planar.  A curved mirror can be used
+  in a *shorter* laser but not in one that is much longer than where it came
+  from.  In addition, the mirror reflectivities will have been optimized for
+  the particular tube length, gas fill, and configuration (internal mirrors
+  or external mirror(s) with Brewster windows - and may not be adequate for
+  an external mirror resonator.  Of course, if you found a laser of the same
+  type as you inteded to build that was dead because of a leaky tube, there
+  may be nearly no remaining challenges!
+ <p>
+ <li>Laser printers and similar equipment.  This sort of equipment often has a
+  variety of useful mirrors, lenses, and other optics.
+ <p>
+   There *are* nice first surface mirrors in laser printers.  They are going
+   to be coated for the IR laser diodes used (around 800 nm unless you have a
+   really old one using an HeNe laser).  Or, if you happen on a high
+   performance graphics arts copier/whatever using an argon ion laser, the
+   mirrors will be optimized for that blue/green wavelengths (but you did
+   remove the laser and its power supply as well, right?).
+<p>
+   The planar dielectric mirrors found in an older HeNe laser based laser
+   printer may be of very high quality and suitable for one of the mirrors of
+   a HeNe or krypton ion laser.  However, since these are generally planar,
+   using them for both the HR and OC would make alignment more difficult.
+   Even the aluminized mirrors might be useful in a pinch - I've gotten a
+   commercial one-Brewster HeNe laser head to lase using one of these.  They
+   would certainly be fine for several of the higher gain home-built lasers.
+ <p>
+   The ones I've ripped out of IR laser diode based laser printers do appear
+   to be decently reflective at all visible wavelengths though they do have a
+   slight orange tint in reflection.  They are excellent at the 632.8 nm
+   wavelength of a HeNe laser.  Most of the printers I have seen appear to use
+   metal coated mirrors - not dielectric.  So they won't be as good as proper
+   dielectric types and are probably unsuitable for use inside a laser resonator
+   unless it has a very high gain.  I've seen dielectric type mirrors in older
+   HeNe based printers.  But even there, the polygonal scanner mirror was the
+   metal coated type.
+ <p>
+   Note that some of the fixed mirrors may NOT be planar though they might
+   appear to be so at first - even that long narrow mirror next to the output
+   aperture may have a slight curvature in the cross-wise direction.
+ <p>
+ <li>CD, DVD, LD, MD, and other optical disc/k players and drives.  These have
+   a variety of small optics including first surface mirrors, beamsplitters,
+   and short focal length lenses.
+ <p>
+   However, the mirrors at least tend to be dielectric coated for the
+   particular wavelength being used - 780 nm for CDs, 650 nm for DVDs, etc.
+   (Mirrors for the 780 nm wavelength in particular usually appear nearly
+   transparent to visible light.)   Again, these mirrors are not likely
+   suitable for use inside the resonator but fine for redirecting the beam.
+ <p>
+ <li>Barcode and other laser scanners.  Optics include mostly mirrors and
+   lenses, but there could be some other strange stuff.  A combination of metal
+   coated and dielectric mirrors may be used depending on wavelength (both IR
+   and visible are common) and the whims of the designer.  Quality varies
+   depending on whether it is a $50 barcode scanner or a $50,000 high
+   resolution film recorder. :)  Other comments are similar to those for
+   laser printers, above.
+ </ul>
+</ul>
+Also see the section: <A HREF="laserclp.htm#clpcll3">Sources of Special Parts
+and Supplies</A>.
+<p>
+(From: Steve Roberts (osteven@akrobiz.com).)
+<p>
+Here are some possibilities for laser quality specific wavelength or
+broad-band mirrors:
+<p>
+<ul>
+<li>Research Electro Optics (REO) in Colorodo.  They make most of the optics
+ for air-cooled lasers and have very nice white-light sets.  (Note that
+ white-light optics usually kill the 530 nm lines of krypton so you might want
+ to look at the optics curve before you buy.)  These guys are the ones who make
+ the super polished substrates.  However, REO won't sell to you unless you
+ know exactly the transmission you want.
+<p>
+<li><A HREF="http://www.balzers.com/">Balzers</A> (now part of Oerlikon)
+ makes them also, but
+ getting a single set from their US office proved to be impossible.  I had to
+ the email their home office in Europe just to get a reply.
+<p>
+<li>I've had good luck using some flat optical stock sold by
+ <A HREF="http://www.ocli.com/">Optical Coating Laboratory (OCLI)</A> (now
+ part of JDS Uniphase) in a pinch for HRs.  It's 0.5% transmission or less
+ across 400 to 700 nm.
+<p>
+<li>And <A HREF="http://www.newport.com/">Newport's</A> BD-1 broad band coating
+ is awesome.
+</ul>
+<p>
+(From: Ran (ran@netgate.net).)
+<p>
+Another potential source is high-tech surplus stores:  I've gotten some really
+good deals on Newport mounts that were built into equipment that was being
+scrapped.  I've also picked up some mounts that were custom-made for the
+equipment,  but can be adapted for other purposes. And all but 1 or 2 of the
+support rods on my optics bench started life as shafts or ways in machinery.
+Most of 'em were even already tapped for 1/4-20 screws on the ends and cost
+$1 or $2 instead of $10.
+<p>
+The best deals are usually found when you're at the store and they have some
+subassembly that they're vacillating about tearing down into components, but
+one surplus place I know of with an on-line presence that sometimes has some
+optical bench bits are:
+<p>
+<ul>
+<li><A HREF="http://www.lasersurplus.com/">Laser Surplus Sales</A>
+</ul>
+<p>
+And, finally, there's me. ;-)  Maybe.  I have some extra odds-n-ends that I
+probably ought to sell off.  If you drop me an email with more details about
+what you need,  I'll see if I have anything excess that matches.
+
+<h3><A NAME="clpcao7">Determining the Radius of an Ion or HeNe Laser Optic (Mirror)</A></h3>
+
+These procedures are a means of using the optic (mirror) to image
+a source at infinity thus providing the focal length and, from this, the
+radius since for a mirror, r=2*f.  With care, an accuracy of better than
++/-5 percent can be achieved and probably much more.
+<p>
+The most convenient light source to use is a HeNe laser which has a 5X to
+10X beam expander telescope mounted on its output.  Some inexpensive
+"educational" lasers come with one and they can often be purchased as an
+option.  Someone gave me such a laser that was being thrown out!
+Or with care, a small spotting or finder scope or monocular (half a
+binocular!) can be mounted in front of a HeNe laser (eyepiece first) to
+expand the beam.  The expander should be adjusted for as parallel a beam
+as possible.  This is one good hobbyist use for an HP 5501 or HP 5517
+laser head as they have superb beam expanding/collimating optics!
+Other types of lasers can of course be used, even a laser
+pointer.  If a laser and/or beam expander isn't available, any bright
+light source will also work if it is at least 10 to 20 times the distance
+of the expected focal length of the mirror since this will be close enough
+to parallel to get an accurate measurement.  The Sun is also suitable
+and is safe to use for small (e.g., 6 mm diameter) mirrors but realize that
+the focused reflected light from a large mirror will tend to set things
+on fire!
+<p>
+Orient the mirror to be tested slightly off axis at the laser or other light
+source so that the reflected beam is easily accessible.  Place a white card
+in the reflected beam and move it along the beam axis locating the position of
+smallest spot size or sharpest focus.  The distance from this point to the
+mirror its focal length, f.  If the beam expands faster than without the
+mirror, the optic is convex (convex laser mirrors aren't that
+common but see below) and the location where the size doubles will
+be -f.  In either case, the RoC is 2*f.  If the beam size/divergence
+stays about the same (compared to the unreflected beam), the optic is planar.
+<p>
+Here's basically the same procedure in different words:
+<p>
+(From: Steve Roberts (osteven@akrobiz.com).)
+<p>
+Take a working HeNe laser, upcollimate it to at least 10X the size of its
+normal beam, and make sure it has 1/10 the normal divergence, in other words
+just expanding it with a lens wont work, it must have all the rays in it
+parallel. Or, take a large diameter source of projected light focused at
+infinity, and aim it at a slight angle from the normal to the optic.  (Normal
+means at exactly right angles to the surface.)  The optic should be many feet
+away from the light source.  Then you should have the beam coming back toward
+the source but not hitting it.  If it's a flat or convex  mirror, the beam
+will continue to expand.  But, if it was figured with a concave radius during
+polishing, by sweeping a card through the reflected beam you can sometimes
+find a focal point.  Measure the distance from the focal point to the surface
+of the optic, this is 1/2 of the radius so double the measurement to get the
+radius.  This isn't that accurate, but it will give a measurement within 10
+percent.  You are probably never going to find a convex ion or HeNe optic, but
+you might find them in CO2 or YAG lasers.
+<p>
+For ion laser optics, standard radii are flat, then 60, 100, 200, 300, 400,
+800 cm.  Generally, for a TEM00 beam, the focal length of the output mirror
+is at least twice the length of the plasma tube if the rear mirror is flat.
+<p>
+(From: Sam.)
+<p>
+Actually, I have seen slightly convex (-1 to -2 meter RoC) HeNe output
+mirrors. :)
+
+<h3><A NAME="clpcao8">Comments on Acquiring Optics for Home-Built
+ Lasers</A></h3>
+
+The following is from someone who is involved in commercial laser repair
+and even he has problems finding suitable low cost replacement optics!
+<p>
+I recently went hunting for laser optics.  A pair of standard coated 12.5 mm
+diameter mirrors for an ion or HeNe laser would set you back $1,200-2,000 a
+set, you might get a suitable rear mirror for a Hg, CuBr, or CO2 for much
+less, but the price of optics for any gas laser will be prohibitive.  Large
+frame argon laser optics, if you could find a used set, are going to be $250
+for optics if the coatings are still anywhere near useful, and much more if
+they are in good shape.  Costs seem to stay the same regardless of the
+substrate material or diameter - buying a smaller optic won't be that much
+less expensive if at all.
+<p>
+If you are thinking about going direct to a supplier of laser optics, off the
+shelf optics similar to what they coat for other laser companies are generally
+not available as the contract prohibits the optics company from selling them.
+Thus yours will be a 1 off custom run.  The low cost Chinese optics companies
+do not do ion or HeNe coatings with the needed levels of reflectivity or
+quality.  I tried that too, and I have especially good relations with one of
+them.  
+<p>
+You have to rip them out of a dead laser of similar size and power, and for
+HeNe this is a problem as modern sealed HeNe tubes may use at least one mirror
+that is concave and is only good at the same working distance between the
+mirrors used in that given tube.
+<p>
+I know, I just spent two months hunting down an ion set, $750 an optic new, so
+$1,500 for a full cavity for a 1 meter-class laser.  That was a relatively
+inexpensive optics set too.  It was for krypton - I could have bought a whole
+used 1.7 W argon ion laser for not much more.
+<p>
+Using the short radius semi-confocal cavity optics of an ALC-60X or Omni-532
+(their radius of curvature is around 60 cm) for the Scientific American tube
+will not work even though the mirrors are only $300 a set for cheapies.
+Mirrors are coated to a specific transmission based on tube length, a small
+air-cooled might be .6 percent transmission, where a 2 meter long large frame
+25 to 30 watt would be around 8%, but that percentage would be tailered across
+the range of lasing wavelengths for a specific balance.  So if you tried using
+a 2 watt pair of optics for a 10 mW homemade laser, you would be very sadly
+disappointed in the output and/or it probably won't lase at all, or if it did
+you would only see the ultra high gain 488 line lasing.  However mirrors for a
+shorter low power laser might work if you scale up the tube.  The problem will
+be the radius of the mirrors, not the transmission.  For example, a 1 meter
+radius ALC-60X OC might work for Scientific American ion laser, but the usual
+standard 60 cm radius would not.  Plus aligning a non optimized cavity would
+be a bear, and with a low gain amateur tube, highly unlikely.  Funny how the
+author left the optics specs out entirely!!!! 
+<p>
+For a recent project we put two 45 cm radius optics from a laser with a 1.5
+inch longer resonator then a 60X into a 60X, alignment time approached 1 hour
+instead of the usual 5 minutes, and did not get any quicker.  There was
+exactly one path with respect to the bore that worked, including the offsets
+in length caused by the X-Y adjustment screws on the end plates, talk about
+critical!!  Only reason we did it was we needed gain on a line not supported by
+the 60X optics for a experiment.   
+<p>
+So what I'm trying to say, is, unless you have the right optics, you are
+better off investing in a working laser if you are trying HeNe, or Ar or Kr
+ion.
+<p>
+There are only 3 companies in the US who produce hene mirrors, and the one
+of them that was hobbyist friendly just told me, "no more" as they are
+tired of coating optics that get returned with the claim "well my tube is
+good, so it must be your mirrors that aren't working, or for argon, I don't
+like the green-blue-red balance or transmission of these optics."
+<p>
+(Portions from: Anthony Paolini (apaolini@cros.net).)
+<p>
+I have 2 sets of mirrors to be used for my home-built argon ion laser.
+<p>
+One is a newer hard-coated set from a commercial large-frame argon ion laser I
+got from <A HREF="http://www.mwklasers.com/">MWK Laser Products</A> spec'd as
+100 cm radius coated for 450 nm to 530 nm reflectivity.  It is an HR/OC pair
+and is in excellent condition but actual reflectivity is unknown.  The
+reflectivity of the OC is probably under 95 percent and way too low for the
+SciAm ion laser.  Testing would require a laser with a wavelength in this
+range (preferably at 488 nm or 514.5 nm) and a laser power meter of some sort.
+Almost any would do as long as relative readings could be taken of the
+laser beam before and after it passes through the mirror.  Then, percent
+reflectance is equal to:
+
+<pre>
+                       (Beam Power) - (Transmitted Power)
+        Reflectance = ------------------------------------ * 100
+                                (Beam Power)
+</pre>
+
+The second set is a soft-coated flat/120 cm centered at 488 nm from North
+Country Scientific.  These were in fact manufactured specifically for the
+SciAm argon ion laser.  North Country is going out of business and just
+selling its remaining stock.  (They may have mirrors for the other SciAm
+lasers as well.)  The mirrors I have would likely have been fine
+20 years ago when they were manufactured.  But, with the naked eye, pits and
+scratches are obvious.  I am convinced they are useless.  However, other
+samples might be in better condition since with proper storage, they can
+survive for a long time.
+<p>
+As far as new ones, <A HREF="http://www.escoproducts.com/">Esco Products</A>
+has "off the shelf" laser mirrors, angle 0, coated for 488/514 nm.  (They also
+have 633 nm (HeNe red) and 532 nm (doubled YAG green) mirrors.  These
+mirrors available from stock for $58.00 (January, 2000) which is not bad, but
+rear surface is described as "fine ground" making them unsuitable for the
+OC even if the reflectance is acceptable as well as complicating alignment.
+Also note that they are all planar.  Custom mirrors are available but of
+course likely at much greater cost.
+
+<h3><A NAME="clpchlm">The Care and Handling of Laser Mirrors</A></h3>
+
+<i><b>ALL</b></i> of the mirrors used inside a laser cavity are extremely
+delicate and easily damaged by contact with their surface or improper or
+excessive cleaning.  Therefore, proper precautions must be taken to avoid
+costly mistakes:
+<p>
+<ul>
+<li>The fewer times mirrors are cleaned, the longer they will last.
+<p>
+<li>Avoid touching the coated mirror surface or allowing it to contact
+ anything.  If a fingerprint or anything else gets on it, proper cleaning
+ will be required.  If the other surface is anti-reflection (AR) coated,
+ it, too, is should be treated with respect but AR coatings are orders
+ of magnitude more robust than mirror coatings - and don't usually end
+ up inside the laser cavity so damage to them doesn't affect performance
+ nearly as much.
+<p>
+<li>Avoid the temptation to wipe off mirrors with *anything* except as
+ part of a proper cleaning procedure.  Use low pressure *clean oil-free*
+ compressed air or a photographic air-bulb to blow off light dust.  Even
+ the use of a camel's hair brush is generally a bad idea as it may
+ transfer contaminants to the mirror in addition to scratching the coating.
+<p>
+<li>If not labeled, at least put an identifying number on the ground edge with
+ a pencil and make an entry in your log book with the complete specifications.
+ Many of these mirrors look alike but have very different radii of curvature
+ and reflectivities.
+<p>
+<li>When not installed in the laser or other equipment, store the mirrors
+ in their original packinging until ready to use.  If the mirrors were
+ salvaged from other equipment, store them in a sealed plastic bag or pill
+ bottle in such a way that contact with the coated surface is avoided.  One
+ way to do this is to wrap the mirror in a tight fitting paper tube.
+ Include a bag of fresh dessicant to absorb moisture.  (Make it a
+ habit of saving all those little bags of dessicant that come with computer
+ boards and disk drives in a sealed container!)  If a mirror
+ must be parked temporarily, place it non-mirror-side down on a new sheet
+ of lens tissue. 
+<p>
+<li>Use a dummy piece of glass or an old damaged optic for initial setup of
+ your laser or whatever to prevent accidental damage to the good stuff.
+<p>
+<li>Fabricate a suitable holder for the mirror glass itself that minimizes
+ the risk of finger contact (e.g., the coated surface is recessed) - or
+ dropping!  Leave it in the holder at all times if possible.  See the
+ section: <A HREF="laserclp.htm#clpmlm">Mounting Laser Mirrors</A>.
+<p>
+<li>If small mirrors are to be used in standard lab mounts, simple adapter
+ rings should be purchased or fabricated.
+<p>
+ I've made adapters to allow 7 to 8 mm diameter mirrors intended for,
+ or salvaged from HeNe laser tubes to be used with standard 1/2" Newport
+ mirror mounts (e.g., U50-A).  A piece of 1/2" aluminum threaded spacer
+ (or rod stock) was sliced into 1/2" sections with a hacksaw and miter box.
+ After smoothing, a 5/16" (7.93 mm) hole was drilled through the center of
+ each section.  A 2-56 tapped hole was added on the side for a Nylon
+ set screw.  These also allow for easier handling of the small easily
+ damaged mirrors.
+<p>
+<li>NEVER use solvent-based adhesives anywhere near optics.  The solvent
+ may leave a film on optics surfaces.  Above all, NEVER even think about
+ using any cyanacrylic (SuperGlue)!!!  Three tiny dabs of 5-minute Epoxy
+ around the perimeter can be used to safely attach mirrors and other
+ optics to mounting plates.
+<p>
+<li>Some sort of boot or bellows arrangement is desirable in the laser
+ resonator to minimize the possibility of dust and other contaminants reaching
+ the mirrors.  However, mirrors mounted vertically or with the coated surface
+ facing down will remain quite free of dust at least in the short run even
+ without a sealed cover in a reasonably clean environment.
+<p>
+<li>Where cleaning is required, follow proper procedures and avoid cleaning
+ unless absolutely necessary - each time optics are cleaned, there will be
+ some degradation!  See the sections starting with:
+ <A HREF="laseratr.htm#atrcln">Cleaning of Laser Optics</A>.
+</ul>
+
+<h3><A NAME="clpcao9">Properties of Optical Materials</A></h3>
+
+The A HREF="http://www.almazoptics.com/">ALMAZ Optics, Inc.</A> Web site has
+summaries of technical data for a wide variety of crystalline and amorphous
+materials used for optical components like lenses, prisms, mirrors, windows;
+and for optical processing such as polarization and frequency multiplication.
+<p>
+These include: crystals such as BaB2O4, BaF2, CaF2, LiF, MgF2, KBr, KCl, NaCl,
+CsI, CaCO3, GaAs, Ge, KRS-5, KRS-6, KDP, KTP, PbMoO4, LiIO3, LiNbO3, quartz,
+sapphire, silicon, scintillators, TeO2, TiO2, ZnSe; and amorphous materials
+such as fused silica (UV grade, IR grade), fused quartz, astrosital, bullet
+proof glass, and special glasses for aircraft.
+<p>
+This is a commercial site but includes this general information with minimal
+fluff.
+
+<h3><A NAME="clpsplt">Salvaging Parts From a Laser Tube</A></h3>
+
+Note: This is only permitted once all resuscitation options have been
+exhausted and the appropriate chants and incantations to your "gods of dead
+lasers" have been issued.  Otherwise, bad things may happen to the Universe. :)
+<p>
+The most likely parts useful for home-built lasers or laser experiments are
+likely to be the mirrors, capillary, and possible other glass work.
+<p>
+Either the mirror itself or some portion of the mirror mount assembly can be
+removed from the tube.  It is generally better to keep the mount intact unless
+you intend to build a new mount for it (see below).  This is more convenient
+for attaching to your laser and minimizes the possibility of contamination
+or damage to the delicate inner surface of the mirror.  However, cleaning
+of the mirror inside the mount using any of the approved laser mirror cleaning
+techniques discussed elsewhere in this document is virtually impossible so
+should cleaning be needed, the glass will almost certainly have to be removed.
+There is one option that might work though.  See the section:
+<A HREF="laserclp.htm#clpcmlm">Cleaning Mounted Laser Mirrors</A>.
+<p>
+<ul>
+<li>The mirror (glass) will be attached either with Epoxy (e.g., TorrSeal or
+ equivalent) or glass frit (a sort of solder for glass).  Most modern
+ tubes use frit seals.  (Direct glass-to-metal seals are generally not
+ used for mirrors.)  While both these adhesives are in theory softer than
+ the glass itself, damage is quite possible if much force is used in
+ disassembly.
+<p>
+ <ul>
+ <li>Epoxy can be whittled away with an Xacto knife or single edge razor
+  blade.  Unfortunately, the glue may be stronger than the glass.  Since
+  some of the Epoxy will likely be in between the mirror and mount and
+  thus be inaccessible, it may not be possible to remove it all with the
+  blade and the glass may end up failing with big chunks of mirror stuck
+  to the tube or mount.  My success rate has been high where the mirrors
+  were glued to metal end-caps as with the Spectra-Physics 084-1 HeNe
+  laser tubes.  However, for older tubes with glass-glass Epoxy seals, it
+  has been very poor.
+<p>
+  Another technique that may be successful is careful heating of
+  the metal part of the mirror mount using a small butane torch with a needle
+  point flame that avoids the glass directly.  The glue should melt
+  at a lower temperature than the mirror glass or its coating - hopefully!
+<p>
+ <li>For frit on tubes with a thin frit line like Aerotech and Uniphase,
+  careful scraping with a sharp tool (e.g., an awl or small flat blade
+  screwdriver) will permit the frit to be removed without damaging the
+  glass.  Unlike Epoxy, frit doesn't wick in under the glass to any
+  significant extent so once the visible frit is gone, the mirror glass
+  will simply pop off.  It takes only a couple of minutes.  (In fact,
+  the ease with which the frit can be removed is a bit disconcerting
+  considering that gas/vacuum integrity depends on it!)  The success
+  rate will be nearly 100% if care is taken to maintain a grip on the
+  mirror with one hand while scraping so that when the glass does come
+  free, it won't fall on the floor or contact the sharp edge of the mount.
+<p>
+  This technique may be harder for Melles Griot, Siemens, and other
+  tubes with a fat frit line.  I'm told that squeezing the mirror mount
+  in a pair of Vice-Grips(tm) (locking pliers) or a vice will cause the
+  mirror to pop off intact about 50% of the time.  The other 50% of the
+  time it will probably break in half or worse.  This may be worth the
+  risk for those tubes with a fat frit line though.
+ </ul>
+<p>
+ However, I consider such treatments to be cruel and unusual punishment.
+ Thus, salvaging the mount intact may be preferred.  In any case, take
+ special care that no damage occurs to the mirror (or what's left of it)
+ when it finally comes free.  It may be best to work with the tube or
+ head upside-down over a soft cloth so that the mirror will fall away
+ rather than toward the sharp edges of the mount.  If I had $1 for every
+ mirror I've ruined because the fragile coating came in contact with
+ something just as it popped off....  Dropping it on a concrete floor
+ would also be bad news.
+<p>
+ On one HeNe tube that used an Epoxy sealed mirror to a glass stem, I scraped
+ away as much of the Epoxy as I could.  But when the mirror was cracked loose,
+ most of it remained stuck in the Epoxy, which was apparently stronger than
+ the optical glass.  Only a 1 or 2 mm area in the center survived.  It does
+ lase though using my one-Brewster HeNe tube.  Next time I salvage a mirror
+ from one of these tubes, I think I'll leave the Epoxy intact but cut the
+ glass stem a half inch or so away from the mirror.
+<p>
+ However, some of these adhesives may yield to other approaches - see the
+ section: <A HREF="laserclp.htm#clpdco">Disassembling Cemented Optics</A>.
+<p>
+ For subsequent handling and mounting, I would recommend constructing some
+ sort of mirror cell to house the mirror and prevent damage to its coated
+ surfaces.  One possible design that can be built easily without a fully
+ equipped machine shop is shown in <A HREF="mircel1.gif">Simple Mounting Cell
+ for Salvaged HeNe Laser Tube Mirrors</A>.  See the section:
+ <A HREF="laserclp.htm#clpmlm">Mounting Laser Mirrors</A> for details.
+<p>
+<li>The mirror mounts on internal mirror HeNe and argon ion laser tubes can
+ be removed either at the restricted region by filing a groove to weaken it
+ to the point where the mount can be snapped off or by retaining a larger
+ portion of the tube including the metal end caps - requiring that the glass
+ of the tube be cut.  It may be possible to just tap on the metal end-caps of
+ some smaller barcode scanner type tubes (away from the center - toward the
+ ends - with a small hammer or other object) and fracture the seal fairly
+ cleanly without totally shattering the glass.
+<p>
+ The main advantage of keeping part of the mount is that it protects the
+ delicate coated inner surface of the mirror from damage.  However, it is
+ virtually impossible to clean in there should the need arise in the future.
+ If your tube used Melles Griot style locking collars, these can be reused
+ and clamped or glued to a plate to securely hold the mirror mounts in your
+ experimental laser permitting easy installation and removal.  I store these
+ assemblies with a piece of tape over the hole to keep out dirt and dust.  The
+ exposed sticky surface will also tend to capture any dust floating around
+ inside.  (There is some risk of outgassing from the adhesive contaminating
+ the surface in the long term but I have never detected any problems.)
+<p>
+ However, for polarized tubes which have internal Brewster plates behind
+ one of the mirrors, removing the mirror glass itself may be the only
+ viable option as it may be impossible to extract the Brewster plate and
+ it's holder from the tube-end.  A very few will just slide out but most
+ are installed in a larger size region of the mount just before the mirror
+ glass is put in place.  If there is no desire to salvage the Brewster
+ plate, it might be possible to carefully destroy it so the pieces just
+ fall out without damaging the mirror but that's risky since they are
+ usually almost touching the mirror.
+</ul>
+<p>
+WARNING: Do not file, grind, or saw any ceramic parts of an ion laser tube
+They may be made of beryllia, a nasty biohazardous material.  See the
+additional comments on this topic in the chapters on argon and krypton ion
+lasers.
+<p>
+In all cases, DO NOT saw, file, or sand anything once the inside is exposed -
+use a glass cutter and then crack the tube or chip away at it, at least not
+without plugging the hole with a wad of tissue or a ball of cotton (but don't
+let anything touch the mirror, it's just there to block contamination).  Any
+dust would result in tiny particles getting on the mirrors which could cause
+damage and be difficult to remove if the mirrors are kept on the mounts.
+Filing before the vacuum is breached is fine.  As soon as you have access to
+the inside of the mirror mount tube, put a piece of masking or electrical tape
+over it to prevent contaminants from reaching the mirror.  Ideally, no
+cleaning of the mirror should be needed if it was in a the tube's sealed
+sterile environment.
+<p>
+The capillary of a HeNe tube can usually removed mostly intact using a
+triangular to score it at the desired location and then snapping it.  Other
+glass parts may require more creative techniques to avoid breakage.
+<p>
+Electrodes, filaments, getters, and the like may be salvageable as well.
+
+<h3><A NAME="clpcmlm">Cleaning Mounted Laser Mirrors</A></h3>
+
+For home-built HeNe and some Ar/Kr ion lasers, the use of salvaged mirrors
+from internal mirror laser tubes is often the cheapest way to obtain
+suitable high quality optics.  Salvaging the mirror and mount together
+minimizes the chance of damage or dirt on the delicate inner mirror surface
+but should cleaning be needed, it becomes almost impossible using any of
+the approved laser mirror cleaning techniques.  The normal solvents like
+isopropyl or methyl alcohol, and acetone take too long to evaporate and
+there's no way to really get a piece of folded lens tissue inside the
+mount so it can wipe the mirror reliably.
+<p>
+The only approach I've found for cleaning mirrors inside mounts
+that has any chance of working is to use fast evaporating solvent in a spray
+can such as electronic degreaser or tape head cleaner.  These will not damage
+the mirror coatings and evaporate within a few seconds which minimizes the
+chance of picking up any contaminants from the air.  Give the mirror a good
+squirt so it's obviously drowning in solvent, swirl it around a bit, then
+shake out the mirror mount and let it evaporate completely.  A visual
+inspection with a bright light or laser pointer should show if there is
+any serious contamination still remaining.  Repeat if necessary,  Obviously,
+whatever solvent is used must be as pure as possible.  Not all common
+electronics cleaning chemicals meet this requirement.  Probably few actually
+do and even may differ from one container to the next since absolute purity
+isn't necessary for their intended applications.
+<p>
+Do not attempt this cleaning approach unless you are absolutely sure the
+mirror needs cleaning!  It could make the problem worse.
+And, since there's no easy way to really know that the cleaning has been
+fully successful without testing in a laser, unless this is convenient
+without cracking the vacuum or requiring extensive realignment, it still
+may be best to remove the mirror from the mount and clean it properly.
+<p>
+The solvents I've tried so far that appear to work reasonably well are
+Chemtronics Freon TF, Chemtronics Electronics Cleaner/Degreaser 2000,
+and GC Tape Head Cleaner.  I still suspect they are leaving something
+behind though so no guarantees!  Perhaps there is a special optical
+spray cleaner intended for this purpose.
+<p>
+I did do a test using the degreaser on a mirror mounted in a mirror cell
+that (1) I could install easily in my one-Brewster rig to test performance
+and and compare before and after and (2) I could clean properly if it wasn't
+successful.  The result was encouraging.  Two shots were needed but the
+the already fairly clean mirror behaved slightly better after treatment.
+So the chemical probably didn't leave any significant residue.
+
+<h3><A NAME="clpdco">Disassembling Cemented Optics</A></h3>
+
+Lenses, mirrors, prisms, and other optical elements are often assembled using
+one of a number of clear optical adhesives.  These range from balsam cement
+(common on older equipment) to modern UV cured materials as well two part
+Epoxy.  There are times when something like an achromat (a color corrected
+lens typically consisting of two elements) needs to be taken apart because the
+adhesive has deteriorated resulting in milkiness or other artifacts.  Or, more
+relevant to our interests, an external lens attached with optical cement to
+the mirror glass of a helium-neon laser tube (to modify its divergence) needs
+to be removed.  While not that common, some barcode scanner HeNe tubes use a
+negative lens cemented to a standard model tube to expand the beam (presumably
+to simplify the later optics).  Another situation relates to the
+non-destructive removal of a mirror from a soft-seal HeNe tube.
+<p>
+My arsenal of optical cement removal approaches/solvents include:
+<p>
+<ol>
+<li>Xacto knife - For mirrors or lenses attached around their periphery
+ where minor damage (scrapes, dings) to the mounting surface can be tolerated,
+ it  may be easiest to whittle away the bead of adhesive as far as possible
+ using a sharp blade.  At this point, there may be so little adhesive remaining
+ that the optic will pop free with minimal force.  Even if it doesn't (don't
+ push your luck!), much less solvent will be needed to eat through what
+ remains.  Of course, this won't work if the entire contacting surface is
+ coated with adhesive.
+<p>
+<li>Water - While very unlikely to have any effect, it is easy enough to try!
+<p>
+<li>Alcohol - Rubbing alcohol, medicinal alcohol, or pure isopropyl alcohol
+ may be enough to dissolve some types of adhesives.
+<p>
+<li>Acetone - Nail polish remover or pure acetone will be effective for some
+ common optical cements.
+<p>
+<li>Lacquer thinner (Also called Epoxy thinner though it will have next to
+ no effect on cured Epoxy) - This may work on others that alcohol and acetone
+ don't touch.
+<p>
+<li>Heat - Some of these adhesives melt at a relatively low temperature such
+ that a gentle flame (from a pocket lighter, not an oxy-acetylene torch!) may
+ be enough to loosen the bond.
+</ol>
+
+WARNING: The vapors of solvents like acetone and lacquer thinner are extremely
+flammable and poisonous and the liquid eats many common plastics.
+<p>
+CAUTION: Even water may damage soft-coated optics (which thankfully are not
+common today).  Water will definitely ruin many of the materials used for
+carbon dioxide optics though.
+<p>
+Sometimes, simple physical abuse will work as in the case of glass optics
+glued to a plastic substrate.  However, where glass-to-glass joints are
+involved, one of the glass elements is quite likely to fracture if too much
+force is used.  That glue is tough!  Therefore, try the other suggestions,
+above, before dusting off the 12 pound hammer. :)
+<p>
+Here are some suggestions specifically for the case of an HeNe tube with
+a cemented lens.  The acetone worked for me.  After failing to loosen the
+lens with alcohol and lacquer thinner, I let the end of the tube soak in nail
+polish remover for about 10 hours at which point the lens just popped off.
+The only damage was some slight mottling of the AR coating around the edge
+of the HeNe tube's mirror but this didn't effect the performance in any way.
+The lens survived in pristine condition.
+<p>
+(From: Equinox (esoteric@pacifier.com).)
+<p>
+The mirrors are probably glued on with optics glue.  We used it a lot at my
+last employer.  It stays liquid until it is exposed to UV light.  Acetone is
+what we used to dissolve that stuff.  You probably already know that nail
+polish remover is diluted acetone.  If you want to go the route of using
+acetone, go to a hardware store and purchase some stronger stuff.  Nasty
+fumes.  You can get a small can for around $8.00.
+<p>
+But there is a far simpler way to get the lens off.  It has worked every
+time for me, in fact while writing this I saw a tube on my shelf with a
+lens, and I decided to try it again to see if it would work.  And yes it
+worked again.
+<p>
+Get either a lighter or a small propane torch, or maybe a match?  Expose the
+lens where the glue is to the flame while rotating the tube (to evenly
+distribute the heat)  Do this for about 3 - 6 seconds,  then just slide the
+lens off.  (the lens may become black from soot from the lighter or match)
+Once you have done this, you can try to soak the lens in acetone to remove
+the glue.   Also with a soft cloth, use some acetone to wipe the end of the
+laser tube off.  From the ones that I have done, it always seems that the
+glue stays on the lens and not the tube.  Make sure the acetone is nowhere
+around if you use the flame - heating method.   Use it once all sources of
+flame have been extinguished.
+<p>
+If you want to go the route of soaking the lens, try heating the Acetone on
+a small coffee warmer and cover it as it will evaporate very quickly, and it
+is extremely flammable, so not to hot.   My experience with solvents is that
+they work much better when heated.
+<p>
+You can also try to heat the entire tube in a small oven or toaster oven and
+see if that will work.  Just don't go from a hot environment to a cool or
+cold one or the tube may crack.
+
+<h3><A NAME="clpprsm">Disassembling the WW-II Tank Periscope Prism</A></h3>
+
+The following describes the procedure for removing the actual right angle
+prism from the WW-II Tank Periscope Assembly.  They are about 6 inches long
+in a black Bakelite case with a metal bezel and have been sold by various
+surplus places for next to nothing (perhaps $8 which is a really good price
+for such a nice optic).
+<p>
+This really isn't directly laser related but II couldn't think of another
+more suitable place to put it and perhaps it could be useful in a laser
+application! :)
+<p>
+Getting the actual glass prism out intact is pretty easy assuming all you care
+about is the prism (not the case):
+<p>
+<ul>
+<li>Remove all the visible screws and the bezel.
+<p>
+<li>Cut around one end about 1/4" deep with a hacksaw, making sure to keep
+ clear of the prism itself.
+<p>
+<li>Carefully break off the end, gently prying with a flat blade screwdriver
+ if necessary.  That should allow enough compliance with the rest of it to get
+ the prism out.
+<p>
+<li>Chop/chip off the residual balsum cement or whatever it is.
+<p>
+<li>Use lacquer thinner to remove the paint coating the mirror surface
+ (assuming you don't want the mirror - on mine, it is degraded somewhat
+ in any case).
+<p>
+ This leaves the (probably) silver coating.  I soaked the prism in
+ photographic film or paper bleach to dissolve the metal of the mirror.
+ I think it is potassium chromate in dilute sulfuric acid? - it's been
+ about 20 years since I mixed the stuff.  Sorry, I don't have the
+ formula.  Check an antique photography book.  It took about a half hour.
+</ul>
+
+<h3><A NAME="clpmlm">Mounting Laser Mirrors</A></h3>
+
+The mirrors generally used with laser resonators aren't big thin pieces of
+glass like a shaving mirror but cylinders between 1/4" and 1" in diameter
+and fairly thick.  These are difficult to handle without risk of damage to
+the delicate mirror or anti-reflection coatings.  Whether salvaged from old
+HeNe laser tubes or purchased new, it makes sense to provide a safe mounting
+arrangement for these optics where suitable housings aren't already present.
+If the mirror is already safely mounted in or on something, there is no need
+to read any further in this section.
+<p>
+If the mirrors are to be mounted in commercial adjustable mounts (e.g.,
+Newport MM1s) but are too small, machining an adapter should be
+straightforward: Cut a disk somewhat thicker than the mirror from
+aluminum or plastic cylinder stock of suitable diameter, drill a
+hole sized to the mirror just fits, and drill and tap a side hole
+for a nylon setscrew.  Such adapters can also be purchased at
+exorbitant cost.
+<p>
+If you have a Southbend lathe and Bridgeport milling machine and know how
+to use them, there should be no problem in machining whatever mounts are
+desired to house your new or recycled mirrors.
+<p>
+For the rest of us, here is a simple mirror cell design that can be put
+together in about an hour (less if you don't care about aesthetics!) using a
+drill press and common hand tools.  The drill press isn't even essential but
+does simplify things quite a bit.  This mirror cell can be easily removed and
+replaced without upsetting alignment very much though for curved optics,
+a pair of indexing pins would be needed (not shown) since any change in X
+or Y position will also affect alignment (but this may be useful for fine
+tuning your mirror's 'hot spot').
+<p>
+The design is shown in <A HREF="mircel1.gif">Simple Mounting Cell for
+Salvaged HeNe Laser Tube Mirrors</A>.  It basically clamps the optics itself
+between a pair of plates.  Aluminum is what I use but Plexiglas or some other
+rigid material would also be acceptable.  A metal or fiber washer glued to the
+mounting plate centers the mirror while a cushion on the cover plate provides
+some resilience as its screws are tightened (just snug!).  These fastening
+screws may also allow some mirror adjustment if the bottom plate is aluminum
+or Plexiglas (which is fairly soft), or if a compliant washer is placed
+between the optic and the bottom plate.  But, again, don't push you luck when
+tightening the screws!
+<p>
+The dimensions in the parts list below are for the mirrors from the
+Spectra-Physics 084-1 barcode scanner HeNe laser tube.  The size of the
+mirrors from other internal mirror laser tubes and external mirror lasers
+may differ.  Mirrors purchased new or obtained from other types of lasers
+may be larger requiring everything to be scaled up to handle them.
+<p>
+<ul>
+<li>1 - Aluminum mounting plate: 1-3/8" x 3/4" x 3/32" drilled with central
+ 1/4" optical clearance hole (DO NOT chamfer mirror side of this hole), 2
+ .125" mounting holes, and tapped 4-40 in 4 places to accept cover plate
+ screws.
+<p>
+<li>1 - Aluminum cover plate: 3/4" x 7/16" x 3/32" drilled with central
+ 1/4" optical clearance hole (DO NOT chamfer mirror side of this hole) and
+ .125" clearance holes in 4 places for cover plate screws.
+<p>
+<li>4 - Cover plate screws: 4-40 x 3/8".  The ends may need to be shortened
+ slightly to prevent contact with the mounting surface.  (I had to trim
+ roughly 1 thread's worth off the ends using one of those do-everything
+ crimping tools.)
+<p>
+<li>1 - Centering washer: ID of 5/16" to match OD of mirror.  This washer
+ can be of any material that can be glued in place.  Its purpose is to keep
+ the mirror centered to avoid damage to its delicate surface during assembly
+ and disassembly.
+<p>
+<li>1 - Fiber, rubber, or paper cushion glued to cover plate to protect outer
+ side of mirror and provide compliance when tightening the cover plate screws.
+<p>
+<li>1 - HR or OC mirror from SP-084-1 HeNe laser tube.  All traces of the
+ original adhesive should be removed.  This is particularly critical around
+ the outside area of the coated surface which sometimes has some excess glue
+ which would prevent the mirror from seating flat on the mounting plate
+ surface.
+</ul>
+<p>
+In keeping with my "never buy anything unless absolutely necessary" philosophy,
+I used a VME Bus card cage cover plate for the aluminum stock and hardware
+from various obsolete hard drives for the screws and washer.  The resilient
+cushion was a 3 ring binder paper reinforcement (trimmed to fit). :)
+<p>
+Don't be tempted to use a flat bottom reamer to machine a shoulder in place
+of the centering washer unless you are using that lathe or a <i>very</i>
+well aligned drill-press (but see the next paragraph) because the mirror will
+likely end up being tilted slightly when clamped in place.  Using the mounting
+plate's surface guarantees that this won't happen.  Drilling the proper size
+hole in an existing washer (if needed) and gluing it in place is no big deal.
+:)  And, don't chamfer the edges of the center holes in contact with the
+mirror - it must seat on the flat surface of the mounting plate and be held in
+place (via the resilient cushion) by the flat surface of the cover plate.
+<p>
+As noted above, the mirror must be free of any glue or frit that could prevent
+proper seating.  The adhesive on soft-seal mirrors can generally be removed
+with a sharp Xacto knife or similar blade taking great care not to damage
+the coating(s).  However, with hard-seal mirrors, this may not be possible
+since bits of frit may remain firmly attached to the glass and are essentially
+part of the glass.  A slight modification to the design that will work with
+either type - and actually provide some additional adjustments would be to
+add a flexible rubber cushion <i>under</i> the mirror and only a protective
+cushion (like one of those paper reinforcements) between the cover plate and
+mirror.  Then, the 4 cover plate screws can be used for coarse mirror
+alignment.  The outer surface will seat square on the cover plate and the
+entire mirror can then be moved on the rubber cushion.  In fact, I've found
+that this scheme using 4-40 screws which form a square only 1/2" on a side is
+sufficient for <i>fine</i> alignment of a 12 inch resonator using a one
+Brewster Melles Griot 05-LHB-570 HeNe tube!  This approach could also be used
+with the machined shoulder instead of a centering washer since the coarse
+adjustments can be used to compensate for an imperfectly aligned reamer.  The
+only disadvantages of the added flexibility (in more ways than one!) are that
+more things can change over time - and, of course, that you will be tempted to
+constantly tweak everything to perfection!  Where fine alignment is performed
+elsewhere, once the mirror is roughly aligned, put a dab of Locktite(tm) or
+nail polish on each of the screw heads to secure it.  
+<p>
+For compatibility with all of my home-built mirror mounts, the distance between
+the mounting holes is exactly 1 inch.  This allows mirrors up to about 3/4"
+to be accomodated (with suitable adjustments in washer size and cover plate
+screw locations).  (With the benefit of 20/20 hindsight, 1-1/8" for all the
+mirror mounts would have been a better choice as it would permit the end-caps
+of a typical small barcode scanner HeNe tube or those from the SP-184-1 to be
+mounted using a pair of screws without the trimming required to fit 1 inch
+diameter objects between screws on 1 inch centers.)
+<p>
+I have now mounted 4 SP-084-1 OCs, 2 SP-084-1 HRs, the OC from a 20 mW Aerotech
+HeNe laser tube, and the OC from an AO-3100 external mirror HeNe laser in this
+manner.  The Aerotech mirror was a frit seal type with a bumpy bottom so I
+used the rubber cushion under the mirror approach for that one.
+<p>
+The mirror cell can easily be removed and replaced requiring only about 5 or
+10 seconds to re-optimize the alignment on my
+<A HREF="obtjig1.gif">Mirror/Optics Test Jig Using a One-Brewster HeNe Laser
+Tube</A>.
+<p>
+The only disadvantage of this design is that the surface of the mirror is
+recessed and difficult to clean in-place - but real mirror cells often have
+this same characteristic.  Perhaps, it will discourage unnecessary optics
+cleaning - all cleaning, no matter how carefully done, degrades the surface.
+Of course, the plates can be made from thinner material and/or the holes can
+be beveled to improve access.
+
+<h3><A NAME="clpctm">Cutting Thin Mirrors</A></h3>
+
+Sometimes, the best deals will get you a large thin mirror when what is really
+needed are a few really small mirrors.  So, how to dice them up?  The
+following also of course applies to cutting other thin glass like microscope
+slides.
+<p>
+(From: Laserlover (laserlover@my-deja.com).)
+<p>
+I've been doing stained glass for over 15 years aside from all my other
+interests and have cut front surface mirrors for several Newtonian telescopes
+I've built and here's my 2 cents worth.
+<p>
+There are several approaches:
+<p>
+<ol>
+<li>Visit or call around for glass suppliers who will cut the mirrors for you.
+<p>
+<li>If you have a diamond blade glass saw, good eyes, and nimble fingers,
+ you can give it a go yourself (but if you did, you probably wouldn't be
+ asking the question!).
+<p>
+<li>Otherwise, try the following.  You will need a half decent glass cutter
+ with new blade and some thin general purpose lubricating oil.
+<p>
+ <ul>
+ <li>Find a hard, flat surface to work on and cover with a few sheets of
+  newspaper.
+<p>
+ <li>Wear cotton or rubber gloves so you don't mess up the mirrors with
+  skin oils when you handle them (skin oil can etch the mirror coatings
+  permanently if left too long, bummer!) same practice for any optics or
+  fiber optics.
+<p>
+ <li>Cover both sides of mirror with a clear plastic wrap like "Saran Wrap"
+  to protect the mirror surfaces
+<p>
+ <li>Lay mirror flat after making sure no small particles are underneath
+  which might screw up you cut and waste a lot of expensive glass.
+<p>
+ <li>Dip the cutting wheel in the lubricating oil
+<p>
+ <li>Score the piece where you want it to break (the cutting wheel will
+  break through the surface of the Saran wrap).
+<p>
+ <li>Using either Running or Ring Star pliers, apply even pressure on both
+  sides of the score and hopefully the glass will break where you want it.
+  If you don't have either type of tool, improvise with some McGyverisms
+  to apply support on the  pivot point (center of the score line) and
+  even pressure downward on both sides of the score. VOILA !....Done, whew! :)
+<p>
+ <li>Wash the mirrors in really hot water and mild solvent "alcohol" baths
+  or methanol to remove the contaminants.
+ </ul>
+</ol>
+<p>
+Better practice a lot on glass microscope slides before tackling the expensive 
+mirrors.
+
+<h3><A NAME="clpmoua">Mounting Optics Using Adhesives</A></h3>
+
+Personally, I prefer using a reversible process like a mechanical mount as
+described in the previous sections. :)  However, if you insist on gluing your
+mirrors, here are some comments:
+<p>
+Some adhesives are extremely strong and also shrink ever so slightly while
+curing.  The result may be that bits of glass can actually be ripped from
+your valuable optic.  Even if this doesn't happen, the position and
+orientation you so carefully set up may change on its own.  I've heard horror
+stories about SuperGlue(tm) doing both of these.  The solvent in SuperGlue
+can also end up depositing a film on all nearby optics.  So I'd avoid it
+like the plague.  For that matter, has anyone ever found a truly justifiable
+use for this stuff? :)  The formulation of many optical adhesives have been
+designed to address these issues.
+<p>
+RTV Silicone adhesive - clear, white (e.g., "bathtub caulk"), or black, your
+choice (though clear probably looks best) is good for optics that may need
+to be removed and don't require position stability to a fraction of a
+wavelength of light (since it is quite flexible).  Again, 3 dabs around the
+periphery, not over the entire optic.
+<p>
+Double-sided adhesive ("sticky") tape is another option.  In fact, it has
+nearly all of the qualities one would want - excellent holding strength,
+minimal thickness, no curing time, possibility of removal (or correction of
+screwups).  However, not all sticky tape is created equal.  The high
+strength types from 3M are recommended.  Some companies use this approach
+to mount all their optics (and as you may have discovered, nearly everything
+else!).
+<p>
+When I do use adhesive to mount optics, it's usually 5 minute Epoxy.  It's
+relatively rigid but not rock hard like most long time curing Epoxies.
+The work time is short enough to even allow for manually holding the
+optic in place until it will stay on its own.  And, when used in modest
+size dabs, can be removed relatively easily.
+<p>
+UV-cure adhesives are another option - often used by the "BIG BOYS" to
+mount all sorts of optical and mechanical parts.  These require exposure
+to long wave UV and will then begin to set up in a few seconds to a couple
+minutes, though complete curing may take much longer.  There are a
+semi-infinite variety of UV-cure adhesives, each supposedly optimized for
+a particular characteristic like adhesion to metals or plastics, rigid or
+resilient, transparent or opaque, etc.  Normally, a special very expensive
+curing lamp is required to perform the magic.  The most popular one retails
+for about $1,000 from places like Thorlabs and Edmunds Optics but is just
+a halogen lamp with a filter to block most visible light and light guide
+to direct the UV at the area to be cured.  It's also essentially the same
+rig used by your dentist to cure the bonding material and many other
+adhesives he/she uses on your teeth.  But they pay something like 3 or 4
+times that exorbitant price from their dental supply house!  It should be
+possible to build your own for much much less.
+<p>
+(From: Elliot Burke (elliot@hitide.com).)
+<p>
+Designing an adhesive mount for optics is nontrivial.  The biggest problem
+is the differential expansion between the optic and its mount.  If there is
+no compliance in either optic or mount, the difference in thermal expansion
+can cause stresses large enough to shear the adhesive, if the adhesive is on
+the back of the optic.  If the adhesive is on the edge of the optic, the
+resulting stresses can warp the optic.  So, either:
+<p>
+<ol>
+<li>Temperature control the thing.
+<li>Make sure everything has the same coefficient of thermal expansion.
+<li>Make the mount compliant in the direction of differential thermal
+ expansion
+<li>Design the mount to hold the part without constraining the long direction,
+ compliantly in short direction.
+<li>Design the adhesive bond to have some shear compliance (silicone)
+</ol>
+<p>
+It isn't hard to calculate the stresses due to thermal expansion - this
+should be done as a matter of course with all optical mounts.  There are
+probably other good solutions too.  The solutions involving compliance will
+also help if the system is dropped or otherwise shocked.
+<p>
+(From: Bob.)
+<p>
+Glue should only be placed on the periphery of an optic, and only in a few
+spots.  I normally use three dabs, one at noon, one at 4 and one at 7
+O'clock, or there abouts. As to what glue to use, in <i>theory</i>, you can
+use just about anything.  I have seen superglue used with success, but I
+would tend to steer clear from such adhesives, particularly on high power
+optics, as cyanacrylate has a fairly high vapor pressure, and you don't want
+an film that will absorb/scatter light on your optics. I use Norland UV
+curable optical adhesive.  You can get the stuff from
+<A HREF="http://www.edsci.com/">Edmund Scientific</A> or
+<A HREF="http://www.thorlabs.com/">"Thor Labs</A>. It's really great for any
+sort of optical work, and it's very strong.  Sometimes even too strong.  After
+it is fully set up, I know of no way to remove it.  So whatever you glue with
+it sure is going to be permanent.  The stuff is fairly inexpensive, but
+requires UV light to cure.  The UV 'cure-ers' that these companies sell are
+outrageously priced.  I use a normal novelty store black-light.  The cure time
+is a lot longer, but $3 sure as hell beast $300!
+<p>
+(From: Sam.)
+<p>
+As far as UV lamps, I'm not sure that the long wave UV types for making
+minerals glow and so forth are suitable but perhaps those for erasing EPROMs?
+Some of the UV curable optical adhesives do dissolve (or at least soften) in
+acetone (nail polish remover) or lacquer thinner.
+<p>
+(From: Bob May (bobmay@nethere.com).)
+<p>
+You want to use a flexible glue to attach a mirror to a backing plate.  The
+reason for this is that a very rigid connection between the two will stress
+the mirror to an incorrect shape before the problems of separation due to
+overstressing the joint.  For larger mirrors, 3 dots of silicone adhesive at
+about the 50% radius (the old theory was about 70% of the radius) is about
+the right place to put the adhesive.  For smaller mirrors, a single dab is
+usually sufficient if it's a significant part of the back.
+<p>
+(From: L. Michael Roberts.)
+<p>
+I use standard 'transparent' bathroom silicone from Home Depot. I
+have found that 'superglue' becomes brittle over time and 5 minute
+Epoxy is almost impossible to remove.  A thin layer of silicone
+allows thermal expansion and can be removed with a razor blade when
+the optic needs changing [although this usually breaks thin
+mirrors].  This is not an expert opinion - your needs may differ
+depending on the nature of the application.
+<p>
+(From: Louis Boyd (boyd@apt0.sao.arizona.edu).)
+<p>
+Silicon RTV adhesive is reasonable for many uses.  Beside
+that, making a mirror cell out of a material with as similar of thermal
+expansion to the mirror substrate helps maintain stabilty and reduce the
+stress on  the adhesive (which also gets applied to mirror).  Invar or a
+low expansion ceramic is usually the best choice for a mirror mount
+though they're expensive. Cast iron has one of the lowest thermal
+expansion coefficients of common inexpensive metals and it's easy to
+machine.  Aluminum is about 2.5 times worse.   
+<p>
+A mirror doesn't have to be glued at all. It can can be accurately held
+in alignment with as few as three hard points.  For a small disk mirror
+standing "on edge" a three point mount on the mirrors circumference,
+centered on the edges  (none on the back) will provide minimum
+distortion if the pressure on the points is moderate. 
+<p>
+Even the strongest metals and low expansion glass aren't infinitely
+rigid. In fact they are quite elastic over a small range of motion.  A
+thin layer of adhesive can work as a dampener to reduce vibration.
+Whether glue is used or not you have to deal with flexibility in the
+system. Mirrors will only vibrate if subject to variable force, such as
+shaking the table or air currents.
+<p>
+(From: Joe Gwinn (joegwinn@mediaone.net).)
+<p>
+I would add that it's a bad idea to make the silicone rubber too thin,
+because the thinner the rubber layer the higher the strain in the rubber
+as the temperature changes and the glass moves relative to the mount (made
+of aluminium?).  Even the difference between daytime and nightime inside a
+building can do it.  If the strain is too high, the rubber will soon fail,
+and the mirror will be able to move around, or even to fall off.  The
+larger the mirror diameter, the thicker the silicone layer must be.  That
+said, silicon rubber will tolerate 200% strain (pull to double the length)
+acutely, and perhaps 20% for long periods and/or many reversing stress
+cycles, if memory serves.  See the datasheet and application notes for the
+details.
+<p>
+I found this out the hard way fifteen or twenty years ago, when we had
+polycarbonate tops just popping off of an instrument with an aluminium
+chassis, despite the fact that to pull the top off at first took hundreds
+of pounds of applied force.  The low-tech solution was little pieces of
+toothpick embedded in the wet rubber before pushing the top down into
+place, maintaining a minimum rubber thickness.
+<p>
+On the other hand, if the rubber is too thick, then the mirror will be
+able to flop around too much, so there is an optimum thickness, but the
+optimum will be quite broad.
+<p>
+I don't know the properties of the 3M tape, but I would guess that it too
+can handle lots of strain.
+<p>
+<b>Definitions:</b>
+<p>
+Stress -- The force applied to a material.  Units are pounds per square
+inch or the like.
+<p>
+Strain -- The resulting physical distortion of the material subjected to
+stress.  Unitless, expressed as a fraction.  For example, if the strain is
+1% (0.01), the length changed by 1%.
+<p>
+Reversing stress -- Where the force on the material alternates between
+compression and tension.  If one bends a beam back and forth, the material
+near the top and bottom of the beam will suffer reversing stress. 
+Likewise, the rubber between a glass mirror and an aluminium back as the
+temperature cycles.  This matters because reversing stress causes much
+more material fatigue than non-reversing stress (where the sign does not
+change), causing material failure that much sooner.
+<p>
+(From: Zane (zanekurz@sansnetcom.com).)
+<p>
+If you go the flexible epoxy route, you can use soft brass shim stock as
+spacers between the mirror and plate to get the glue pads the same
+thickness.  As mentioned, a number of small pads spaced around is a good
+way to go.
+<p>
+You can practice getting the glue pads to look the way you want by using a
+piece of plate glass on a metal plate similar to your mount.  You can then
+get a measure of exactly how much glue to put down per pad, as well as
+check the strength of your bond.
+
+<h3><A NAME="clpshut">Laser Beam Shutters</A></h3>
+
+There are many times where a solid mechanical means of blocking the beam
+is needed at various places in an optical system.  This may be to satisfy
+safety requirements, for selecting colors, etc.  Where speed is not a
+concern, several simple low cost reliable approaches may be used.
+<p>
+One very common method is to use what's known as a rotary solenoid.  This
+device looks like a small motor but its shaft only rotates through a fixed
+angle (usually 90 degrees) when power is applied.  By attaching a "flag"
+to the shaft, activating the solenoid can be set up to open or close the
+beam port within a fraction of a second.  A spring returns it to the
+deactivated position when power is removed.  Limiting the motion externally
+to less than the full angle will improve response time and reduce vibration.
+The most widely known manufacturer of rotary solenoids is probably
+<A HREF="http://www.ledex.com/">Ledex</A>.
+<p>
+A small DC motor can also be used like a rotary solenoid if it's rotation
+is limited by stops and a spring or reverse polarity is used for return
+motion.
+<p>
+Another method is to use the guts of an electromagnetic relay.  A "flag"
+can be attached to its moving armature to act as a shutter.  The advantage
+of this approach is potentially higher speed and lower vibration.  However,
+the amount of motion is generally smaller so beam size may be a consideration.
+<p>
+A company that specializes in laser shutters in particular is
+<A HREF="http://www.nmlaser.com/">NM Laser Products</A>.
+However, if you're an even minimal scrounger, suitable devices can be found
+in all sorts of surplus optical equipment, or as noted above, built from
+junk parts.
+<p>
+<A NAME="clpcps"></A>
+<hr>
+<br>
+<li>Back to <A HREF="laserclp.htm#clptoc">The Home-Built Laser Assembly and
+ Power Supply Sub-Table of Contents</A>
+<h2>Power Supply Considerations for Home-Built Lasers</h2>
+<h3><A NAME="clpcps0">Power Supply Components</A></h3>
+
+Also see the section: <A HREF="laserclp.htm#clpcps5">Related Power Supply
+Information</A> for much more on high voltage and other specialized power
+supply operating principles, design, components, and construction techniques.
+<p>
+Note that in this document and the associated laser power supply schematics,
+voltages between 110 and 120 VAC Hot to Neutral (220 to 240 VAC between
+Hots on opposite sides of the line) may be shown for power in the USA and
+other parts of North America.  Likewise, 220 to 240 VAC may be shown for power
+in Europe and elsewhere.  Where some other voltage is used (such as 100 VAC in
+parts of Japan), it will be ideentified explicitly.
+<p>
+Several types of power supplies are used for these lasers (more than one type
+may actually be applicable):
+
+<p>
+<ul>
+<li>AC.  A high voltage transformer supplies an alternating voltage (at the
+ power line frequency - 50 or 60 Hz) to a pair of electrodes roughly at each
+ end of the laser tube.  The amount of voltage/current/power is usually
+ controlled by using a Variac (variable autotransformer) to power the system.
+ There are usually no other components beyond possibly a ballast (series
+ current limiting) resistor.
+<p>
+ Luminous tube (neon sign) and oil burner ignition transformers are the most
+ common types, are simple to use, and relatively easy and inexpensive to
+ obtain.  These typically produce between 5 and 15 kV at 10 to 60 mA and are
+ internally current limited.  The implementation uses a loose coupling with
+ a magnetic shunt to provide current limiting.  For some types like the oil
+ burner ignition transformer I tested, the behavior is similar to that of a
+ series resistor that limits current to the maximum specification when the
+ output is shorted.  So, you don't get both the rated voltage AND the rated
+ current at the same time.  Larger neon sign transformers may be constructed
+ to act more like constant current sources up to nearly their rated voltage.
+ The input VA rating will probably be roughly equal to the OUTPUT open
+ circuit voltage times the OUTPUT short circuit current.  Unless corrected
+ (usually with a parallel motor run type capacitor), their power factor when
+ the output is open circuit will be very low (e.g., .2).  Check the
+ transformer's nameplate - The VA rating divided by your line voltage is the
+ current your electrical outlet will have to provide (though actual wattage
+ used depends on output current).
+<p>
+ The following applies <b>only</b> to conventional "iron" transformers, not
+ the electronic type - no funny connection arrangements are possible with
+ those.
+<p>
+<ul>
+<li>Identical models of these transformers can be paralleled to obtain higher
+  current than a single one alone can provide.  If they are both centertapped
+  or case connected at one end, the cases should be connected together and to
+  Earth (Safety) Ground.  Just make sure you get the line phase correct!
+  Don't assume the input terminals are wired the same.  Connect one pair of HV
+  terminals together and wire up a small (e.g., 1/8") gap between the other
+  pair.  If the line phasing is correct, there should be no arc even at full
+  line voltage.  Or, use a Variac to power them and a multimeter to check
+  between unconnected HV terminals - there should be negligible voltage
+  between them (a few volts at most) with an input of say, 10 VAC.  If the
+  phasing is incorrect, you will get 2 times the normal output voltage of each
+  transformer - which you won't be able to miss!
+<p>
+<li>The only series connection of neon sign transformers that is acceptable is
+  if your models are connected to the case at one end (not the centertap).
+  Then, connect the AC input out of phase (opposite of above when paralleling)
+  and tie the cases together and to Earth (Safety) Ground.  Best performance
+  will be achieved if the current ratings are the same but nothing disastrous
+  will happen if they are not matched.
+</ul>
+<p>
+ Check demolition companies, salvage yards, neon sign shops, etc.  They
+ sell old transformers at low prices since a guarantee for long term
+ reliability cannot be provided - but you really don't care unless your
+ laser is to be run for years on end.  Oil burner types will be totally
+ free from HVAC contractors - but you will probably have to take the entire
+ smelly, oily, icky oil burner away as well!
+<p>
+ And, no, you don't want to build your own even if you own a wire factory. :)
+ For a 12 kV transformer, I figure about 400 turns for the primary and over
+ 40,000 (!!) turns of really really fine wire for the secondary.  This is all
+ carefully wound in multiple insulated layers on the special core and then
+ the entire affair is fully potted to prevent corona, arcing, and all those
+ other undesirable things that high voltages would do if undisciplined.
+<p>
+ Also see the section: <A HREF="laserclp.htm#clpcps1">Comments on Neon Sign
+ and Other Frankenstein-Class Transformers</A>.
+<p>
+<li>DC.  The output of a high voltage transformer or high frequency inverter is
+ applied between a pair of electrodes roughly at each end of the laser tube.
+ Current through the tube may be controlled by adjusting a Variac as above
+ and/or by providing an appropriate ballast resistor (as with a conventional
+ HeNe laser power supply - see the chapter: <A HREF="laserhps.htm#hpstoc">HeNe
+ Laser Power Supplies</A>).
+<p>
+ The output of luminous tube and oil burner ignition transformers can be
+ rectified and used to charge high voltage capacitors.  However, both the
+ rectifiers and capacitors must be rated for the voltages involved.
+<p>
+<ul>
+ <li>Rectifiers: For a capacitive load, the Peak Reverse Voltage (PRV) rating
+  must be greater than 2 * 1.414 * VRMS of the transformer for a basic half
+  wave rectifier circuit or half this for a bridge.  (Nearly all these
+  power supplies feed a capacitive load of some sort even if there are no
+  actual capacitors in the circuit - laser tubes and wiring act as
+  capacitors!)  This must take into account the maximum voltage even if you
+  are using a Variac that can supply 140 VAC or greater into the transformer
+  from a 115 VAC line.
+<p>
+  See the section: <A HREF="laserhpd.htm#hpdhvc0">Standard and Custom HV
+  Rectifiers</A> for more information and suppliers.
+<p>
+ <li>Capacitors: Voltage rating must be greater than the peak of the input
+  again accounting for higher than normal line voltage from a Variac.  See
+  the section: <A HREF="laserhpd.htm#hpdhvc1">Standard and Custom HV
+  Capacitors</A> for more information.
+</ul>
+<p>
+<li>Pulse.  A DC power supply charges up an energy storage capacitor which
+ either discharges between electrodes in the laser tube (or flash tube) when
+ its voltage rises high enough, when the pressure goes (is pumped) low
+ enough, or when the gas in the tube is ionized by an external trigger
+ generator like that of a common electronic (xenon) flash.
+<p>
+ Timing may also be provided by mechanical means - a rotating switch or
+ commutator arrangement feeding the outputs of multiple high voltage
+ capacitors to the laser tube in sequence like an automobile engine
+ distributor.
+</ul>
+<p>
+High frequency inverters may also be used as the power source for any of these
+approaches.  See the section: <A HREF="laserclp.htm#clpcps4a">SwitchMode Power
+Supply (SMPS) for Home-Built Lasers?</A> for altnernatives to basic "iron"
+transformer designs.
+<p>
+<ul>
+<li>RF.  Electrodes or coils outside the laser tube are excited by what is
+ essentially a radio transmitter power oscillator.  Although the first HeNe
+ laser used this approach, RF excitation doesn't produce a high enough
+ intensity of the discharge where it is needed - in the center of the tube
+ bore so it is usually not appropriate.  However, it may be possible to use
+ RF excitation with wide bore designs like that of the CO2 and HeHg lasers.
+</ul>
+<p>
+For additional suppliers (both commercial and private) of the parts needed to
+construct these sorts of high voltage power supplies, see the chapter:
+<A HREF=laserlps.htm#lpstoc">Laser and Parts Sources</A>.
+
+<h3><A NAME="clpnstc">Neon Sign Transformer (NST) Characteristics</A></h3>
+
+As noted above, neon sign or luminous tube transformers do not behave like
+ideal power transformers - or even real world power transformers.  They are
+designed specifically for the needs of gas discharge tubes, which want to see
+a current based on their diameter and gas fill, but independent of tube
+length (and thus voltage drop).  Therefore, a constant current source is
+required.  The magnetic design of the core and windings very cleverly provides
+a decent regulation characteristic and protection from momentary (at least)
+short circuits.
+<ul>
+<li>Open circuit voltage - This is the kV rating on the nameplate.  A 12 kV
+ unit will output about 12 kV when driven with the nominal AC input voltage
+ and frequency with no load connected.  The high peak voltage (actually almost
+ 17 kV for this example - 1.414 * 12 kV) provides the means of initiating the
+ discharge on each half cycle since the negative resistance behavior of a long
+ gas tube - like a helium-neon or argon ion laser - requires a high voltage to
+ start and a lower voltage to run.
+<p>
+<li>Short circuit current - This is the mA rating on the nameplate. A 30 mA
+ unit will output about 30 mA into a short circuit when driven with the nominal
+ input voltage and frequency.  The output current supplied by the transformer
+ will be relatively close to this value for a good portion of its output
+ voltage compliance range.
+<p>
+<li>Reactive power - This is the VA rating on the nameplate and for a typical
+ transformer is very close to the kV * mA rating.
+<p>
+<li>Input current - Varies from approximately .1 (no load) to 1 (short
+ circuit) of the 'A' from the VA rating.  For the 12 kV, 30 mA unit I tested,
+ this was about .4 A to 3.1 A respectively (at a line voltage of 115 VAC).
+<p>
+<li>Power Factor - Probably not specified but typically quite low (unless unit
+ has built in correction).  Partial correction using a parallel capacitor is
+ possible but its uF value may need to be determined under expected operating
+ conditions since PF depends on load.
+<p>
+<li>Regulation - Between an open and a short circuit, the core and winding
+ construction results in a quasi-constant current characteristic over much
+ of this range.  I did a test on a 12 kV, 30 mA transformer at reduced voltage
+ (I didn't have any way of providing a variable load at full output so I used
+ a Variac to set the no load output voltage to 1,000 VAC):
+<pre>
+                  Load   Output Voltage   Output Current
+               -------------------------------------------
+                  Open     1,000 VAC         0.00 mA
+                  R          560 VAC         1.43 mA
+                  R/2        350 VAC         1.79 mA
+                  R/3        250 VAC         1.91 mA
+                  R/4        195 VAC         1.99 mA
+                  R/5        160 VAC         2.04 mA
+                  Short        0 VAC         2.10 mA
+</pre>
+ R was equal to 392K ohms (I have a bunch of them).  So, for loads resulting
+ in between about 1/2 and rated output voltage, the current changes by less
+ than 30 percent - which isn't bad for something without any silicon!  The
+ Thevenin equivalent for this transformer over the range of 0 to 350 V or 2.1
+ to 1.8 mA would be 1.129M ohms fed from a 2.45 kV source (remember, this was
+ done at reduced voltage.  At nominal input this would be equivalent to almost
+ 30 kV).  These measurements were very approximate.  I expect that behavior at
+ full voltage (and its associated current) won't be quite the same (actually,
+ it will probably be better) but this demonstrates the general idea.
+</ul>
+Another thing to note is that when a NST is used with an unbalanced load such
+as only one half of the centertapped secondary being used or when feeding a
+half wave rectifier, its characteristics may not be what are expected based on
+experience with a normal power transformer.  When half wave rectified, for
+example, the output current won't be just half of the full wave current but
+may even be <i>greater</i> (2.9 mA compared to 2.1 mA for the short circuit
+case, above).  Presumably, this results from the fact that on half the cycle,
+the core is seeing the full output voltage.  While such characteristics may
+not be inherently bad, it may not be easy or even possible to make predictions
+so testing would be needed for each particular situation.
+<p>
+You can estimate the voltage rating of an unlabeled NST by running it as above
+on a Variac at say, 5 percent of line voltage, and measuring its output
+voltage.  Then, multiply by 20.  To determine the current rating, connect the
+output directly to an AC current meter.  To be cautious, start at low input
+voltage and go up to full line voltage (since the NST should be current
+limited).
+<p>
+WARNING: The current test assumes a current limited neon sign or oil burner
+ignition type transformer.  Doing this on a normal power transformer will
+probably result in a blown fuse/popped circuit breaker, blown meter, or both!
+<p>
+Here is some additional information on the electrical characteristics of neon
+sign transformers (NSTs) including power factor issues and correction.  A 15
+kV, 60 mA unit is assumed - adjust the numbers for whatever size you have.
+<p>
+(From: John De Armond (johngd@bellsouth.net).)  
+<p>
+Let me answer several questions at once.  First, a 15 kV, 60 mA transformer
+will produce 60 ma almost up to its rated voltage.  The transformer is
+designed to be a constant current device, to supply whatever compliance
+voltage is needed to push the 60 ma through the load.  The 60 ma is nominal
+short-circuit.  All magnetic transformers made for use in the US are designed
+for continuous use at no more than 80% of the short-circuit current.
+<p>
+I never actually sat down and plotted it out but I do know this:  With 1 foot
+of neon tubing on a transformer (about 500 volt drop), it drives 60 mA.  With
+over 60 feet of tubing on the tranny (more than specified), it still outputs
+about 50 to 53 mA.  That's fairly constant current.
+<p>
+That said, a NST will NOT survive long if asked to supply full voltage at full
+current. It is designed to drive a gas discharge tube.  The characteristic of
+a gas discharge tube is that it takes a large amount of voltage to ignite the
+discharge and then the voltage falls to a fraction of the starting voltage to
+sustain the discharge.  Thus the high dissipation occurs only for a short
+period of time in each half cycle.  On a scope, this looks like a sharp spike
+followed by a level, square wave form for the rest of the half cycle.  This
+sequence occurs 120 times per second.
+<p>
+Regarding volt-amps and watts. You left off the critical part of the equation.
+While for DC and 100% resistive AC loads, the formula is W = E * I, for
+typical loads that include some capacitive or inductive reactance, the
+equation for power is W = E * I * cos(theta) where theta is the phase angle
+between the voltage and the current waveform.  Volt-amps is simply E * I and
+includes both the real component and the reactive or out-of-phase component.
+The term "power factor" is simply cos(theta).  In a pure inductor or
+capacitor, the current is 90 degrees out of phase with the voltage, cos(theta)
+= 0 and so no real power is dissipated.  This even though the cap or inductor
+is drawing amps that can be measured.  For an inductor, the current lags the
+voltage by 90 degrees and for a cap, the current leads the voltage by 90
+degrees.  If one measures the current to a reactive device (cap or inductor),
+the measured current will be the quadratic sum of the real (in phase) and
+imaginary (out of phase) current.
+<p>
+An AC wattmeter measures real power.  In other words, it compensates for
+cos(theta) Wattmeter test instruments are available in a form that uses a
+clamp-on current probe to measure the current and a physical connection to
+measure the voltage.  These will typically display volts, amps, watts, VARs
+(volt-amps reactive) and PF.  They are also expensive.  For the experimenter,
+an ordinary utility power meter is an accurate, if less convenient
+alternative.  Widely available surplus (C&H Sales and others), the meter is
+accurate typically to better than 2% over a 10:1 range.  the numbers on the
+front register watt-hours while the RPM of the meter wheel measures watts.
+The Kh factor printed on the meter face is how many watt-hours each revolution
+represents.  Typically 7.2 for residential meters.  Simply count the turns
+over a measured period of time, multiply by Kh and divide by the measured
+interval in hours to get watts.  I have a recording watt-hour meter that was
+equipped with a photo-interruptor to count revolutions.  One can easily add
+one to any meter using a reflective photo-interruptor to look at the black
+flag on the meter wheel. (Do NOT attempt to drill a hole in the dial for
+counting - that will destroy the calibration.)
+<p>
+The PF of a standard neon transformer is very low, typically in the range of
+0.2 to 0.4 lagging. This is why the VA ratting is much higher than the watts
+that can be supplied.  That means that the transformer draws more than twice
+the current required to supply the output wattage.  This reactive current,
+called "wattless current" in the slang, can be countered by supplying an equal
+amount of leading phase angle wattless current.  A capacitor does that.  A
+motor run capacitor is the proper type which can handle the continuous duty.
+To compensate a tranny, simply start adding capacitance while watching the
+amperage draw from the line.  When the draw is at the minimum, the capacitive
+reactance is equal to the inductive reactance, the PF to the line is 1 and all
+is well in paradise!  A 15 kV, 60 mA tranny will need about 160 uF of parallel
+capacitance.  This varies with secondary load so one must measure but that's a
+starting point.
+<p>
+Note that the full current (wattless + real) is still flowing in the circuit
+between the cap and the tranny.
+<p>
+This technique is widely used in neon sign work.  It will allow twice as many
+transformers to run on a given branch ampacity or else it will allow lighter
+wire to be run to a given load.  For fully enclosed transformers (HV terminals
+are inside the box), there is enough room for the cap inside.
+<p>
+(Portions from: Mark Dinsmore (dinsmore@ma.ultranet.com).)
+<p>
+There is a very good analysis of the design of neon sign transformers in:
+
+<ul>
+<li>Neon Techniques and Handling: Handbook of Neon Sign and Cold Cathode
+  Lighting<br>
+ Samuel C. Miller<br>
+ ASIN: 0-9113-8041-8<br>
+</ul>
+
+Among the multiple pages of design information is a graph of the load line
+of a typical magnetic (iron) neon sign transformer.
+<A HREF="nstchar1.gif">Neon Sign Transformer Electrical Characteristics</A> is
+redrawn version of this diagram.  Note that for laser tubes as well as neon
+signs, factors other than tube length are important in determining discharge
+voltage.  These include tube diameter, gas fill, and pressure.
+<p>
+I don't know if the following is a newer edition of the same book, but it
+might be an alternative source of a lot of additional information on these
+topics:
+
+<ul>
+<li>Neon Techniques: Handbook of Neon Sign and Cold-Cathode Lighting, 4th
+  Edition<br>
+ Wayne Strattman (Editor)<br>
+ St, Pubns, 1997<br>
+ ISBN: 0-9440-9427-9 (paperback)<br>
+</ul>
+
+<h3><A NAME="clpunst">Used Neon Sign Transformers - Cost, Recommended Brands,
+ Testing, Availability</A></h3>
+
+The discussions below relate to neon sign transformer availability and size,
+testing, use of larger (pole pig) transformers where more power is needed, and
+reasons NOT to consider microwave oven transformers in these applications.
+However, microwave oven transformers can be modified for other uses like
+powering the filaments of argon/krypton ion laser or thyratron tubes.  See the
+section: <A HREF="laserclp.htm#clprew">Rewinding a Microwave Oven Transformer
+for use as a Low Voltage Filament Supply</A>.
+<p>
+(From: Jason Freeburg (egraffiti@iname.com).)
+<p>
+A used neon sign transformer should not cost more than $20 or so.  Find a
+neon shop in your area.  They usually have the used ones stacked up
+somewhere and will sell cheap.  The 60 mA models are usually somewhat
+cheaper than the 30 mA type if you buy them used from a neon shop because
+they are really too hot (e.g., provide too much current) for running neon
+and they cause staining and premature burnouts.  It all depends on the
+particular shop you go to.  I don't suggest buying new for something like
+this, the performance will be the same but the price much higher.  A new
+15 kV, 60 mA transformer lists for about $80.
+<p>
+BTW, the best name to look for in neon sign transformers is
+<A HREF="http://www.franceformer.com/">France</A>.  These things are ruggedly
+built and will take a lot of abuse without dying.  The name to avoid is Actown
+- their transformers are wimpy and usually don't deliver the rated current.
+<p>
+(From: John De Armond (johngd@bellsouth.net).) 
+<p>
+Testing of a used neon sign transformer is pretty easy even without test
+equipment.  These normally fail with a secondary short and all that does is
+(slowly) cause them to overheat and let all the magic black goo run out.
+<p>
+Wire the transformer primary up with a 3 wire grounded cord (green to the
+case!), plug it in, and see if you can use a plastic-handled screwdriver to
+draw an arc from each insulator to the case.  If that works and they don't
+make any funny noises, they're probably OK.  The grounded cord will also weed
+out any trannys with a primary short to ground.
+<p>
+(From: Sam.)
+<p>
+While some of the discussion above might suggest that you should run right out
+and corner the market on old neon sign transformers because newer ones won't
+work properly for home-built lasers, you can relax.  The nice simple iron
+current limited type aren't going to disappear overnight - there will be
+plenty of piles of used transformers in neon sign shops for years, if not
+decades, to come!
+<p>
+(From: John De Armond (johngd@bellsouth.net).)
+<p>
+The glory days of neon transformers for experimenting are coming to an end.
+UL and the NEC have conspired to rewrite the code to require secondary ground
+fault protection to built into new transformers.  These protectors trip the
+transformer if the secondary current is unbalanced or goes to ground.  My
+testing of the units on the market show them to be very sensitive to spurious
+currents, particularly RF (as will exist in a gas discharge tube at higher
+pressure).  It must be built in and be inaccessible to the installer.  This
+means potted in tar.  I've X-rayed a couple to try and figure out where that
+"special place" would be to drill a hole to disable the devices but since most
+of these are still at least partially hand-assembled, the parts placement
+isn't accurate enough to make a template.  Used transformers will still be
+available from sign shops as they are replaced with SGFI (Secondary Ground
+Fault Interrupter) transformers but then the supply of unprotected ones will
+go away. Therefore basing plans on neon transformers could be shortsighted.
+
+<h3><A NAME="clpchpf">Comments on High Power Frankenstein-Class
+  Transformers</A></h3>
+
+(From: John De Armond (johngd@bellsouth.net).)
+<p>
+As for more power than the conventional 15 kV, 60 mA neon sign transformer:
+<p>
+The highest power leakage-flux limited (neon) transformer that is available is
+actually called a cold cathode transformer with a maximum rating of 15 kV, 120
+mA.  These are available from neon suppliers but are not common and will
+usually have to be ordered.
+<p>
+Beyond that is the common domestic pole pig.  That is, a pole-mounted utility
+transformer.  For my neon bombarder, I have a 25 kVA, 15 kV pole pig driven in
+reverse from the 240 volt main.  A modified Miller welding machine hooked in
+series with one leg is the current limiting choke.  As configured it will
+produce 2 amps at 15,000 volts!!  The pig itself will produce over 10 amps
+before it saturates if you can drive it. :-)  Utility transformers have a
+service factor of at least 2.5 so it can do that all day.
+<p>
+(From: Sam.)
+<p>
+And, before you ask, while microwave oven transformers might seem to be useful
+for home-built CO2 (or other) lasers, I have three problems with recommending
+them:
+<ul>
+<li>They are definitely most extremely positively lethal (is that enough?) if
+   your body comes between the HV and its return.   They may be able to source
+   an AMP or more without even thinking about it.  By design, the frame serves
+   as the return for the HV which complicates things further.
+<p>
+<li>While they may be current limited (there is typically a magnetic shunt
+   between the primary and secondary windings), the maximum current is likely
+   to be enough to pop fuses or breakers if its output is shorted.  (This is
+   common from failure of the HV capacitor in a microwave oven - microwave
+   oven's internal 15 or 20 A fuse blows instantly.)  This apparently isn't
+   true of all of these transformers but probably of the better built ones,
+   ironically.  And, there will be significant fireworks as well!
+<p>
+<li>For most gas lasers, there will have to be serious ballast resistance to
+   stabilize the plasma discharge and prevent overheating of the laser tube.
+   Neon sign transformers provide most or all of this ballast resistance by
+   the current limited design using a loose magnetic coupling.
+</ul>
+For all home-built lasers except the CO2 laser, the use of microwave oven
+transformers is something like killing flies with H-bombs - just a bit of
+over-kill (possibly literally).  For higher power CO2 lasers, they could
+make sense based on their wattage but in my opinion, the very significant
+disadvantages more than outweighs this possible benefit.
+<p>
+As for ballast resistance, the discharge characteristic of small commercial
+CO2 laser tubes is supposed to be something like -200K ohms.  So, you need at
+least 200K (actually figure 30 to 50 percent more to be on the safe side) of
+positive resistance to maintain stability - this is automatic with the neon
+sign transformers whose internal equivalent series resistance is typically
+250K or more.  It may be possible to use a high voltage capacitor (like the
+one in that microwave oven) to limit current - yet another object to zap the
+careless!  Home-built CO2 lasers with wide bore tubes probably have a negative
+resistance that is a lot lower but you will still need some external ballast
+resistance since there is essentially none provided by the transformer itself.
+</ul>
+In addition (as if this isn't enough?) the relatively 'low' voltage of these
+units compared to neon sign transformers means either (1) that starting of
+some laser tubes may be a problem even if the voltage is adequate for operation
+and (2) you may be tempted (shiver!) to put 2 or more microwave oven
+transformers in series.  Two *could* be used with their returns tied together
+and driven out of phase to create a centertapped arrangement like that of the
+typical neon sign transformer.
+<p>
+Please don't consider any of this unless you have lots of experience working
+around high voltage high power equipment!  Microwave oven transformers
+significantly exceed the lethality factor of pole pigs if for no other reason
+than the physical setup is likely to be closer to something out of a bad Sci-Fi
+movie than a well designed, safe, protected (in a relative sense, at least)
+system!  At least the pole pig *looks* suitably dangerous due to its size and
+impressively large porcelain insulators!  And, no, I don't recommend CT scanner
+X-ray generator transformers either. :)
+
+<h3><A NAME="clprew">Rewinding Microwave a Oven Transformer for use as a Low
+ Voltage Filament Supply</A></h3>
+
+The typical microwave oven power transformer consists of a primary of 100 to
+200 turns (for 115 VAC power), a high voltage secondary of several thousand
+turns, and a filament winding of a few turns of thick wire that goes directly
+to the magnetron filament terminals (possibly with a tap to connect to the
+other HV circuitry).  Replacing the filament winding with one of a suitable
+number of turns to drive your tube is usually a simple matter as all the
+windings are likely on separate sections of the core and disassembly is
+straightforward, though tedious.  (However, this will probably have to be done
+without removing the core as it is likely of welded construction.)
+<p>
+WARNING! EXTREME DANGER: The HV winding is deadly and one end is grounded to
+the core.  If you aren't going to be using the high voltage winding (which is
+the desired state of affairs!), it is best to remove it entirely by a
+combination of hack saw, chisel, pry bar, and explosives. :)  Do make sure your
+health insurance is paid up and you know the directions to the nearest
+emergency room and/or the number of the your local ambulance service - some of
+these techniques can result in personal injury. :(
+<p>
+If you don't remove the high voltage winding, make sure adequate insulation
+(e.g., electrical tape, Plexiglas shields) is added to absolutely prevent
+contact.
+<p>
+To drive an argon/krypton ion tube (2.5 to 3 VAC) or thyratron filament (5
+to 6.3 VAC) will require only a few turns of heavy wire.  Use a wire size of
+at least #12 for a current of 15 to 25 A, #15 for 10 to 15 A, and #16 for
+5 to 10 A.  The specific number of turns is best determined by experiment
+(dependent on the actual number of turns in the primary winding, the voltage
+drop in the wiring, and your exact line voltage) but will be between 1 to 2
+turns per volt RMS of output (for 115 VAC nominal line voltage).  Where a
+centertap is needed (i.e., for an ion tube filament supply), it is probably
+best to bring out each half separately and connect them externally.
+<p>
+Whatever you do, make sure there is no possibility of this filament winding
+coming anywhere near the high voltage winding if you haven't removed it!
+Also, note that some applications like a HV pulser require that the filament
+winding be insulated to withstand the full output voltage to ground - maybe
+15 or 20 kV or MORE!
+
+<h3><A NAME="clpcps2">Variacs and Alternatives</A></h3>
+
+Nearly all the power supplies for the home-built lasers as described in "Light
+and its Uses" and elsewhere use a a variable autotransformer (Variac is one
+particular brand name) to adjust voltage and/or current.
+<p>
+WARNING: A Variac is NOT an isolation transformer and provides NONE of its
+safety benefits!  Due to the power requirements of many of these lasers, it
+is not really practical to use a small isolation transformer for testing.
+However, make sure you understand and follow the information provided in:
+<A HREF="safety.htm">Safety Guidelines for High Voltage and/or Line Powered
+Equipment</A>.
+<p>
+The most common variety (at least that you are likely to use) connects to the
+115 VAC line and outputs either 0 to 115 VAC or 0 to 140 VAC depending on how
+it is wired.  There are both open frame 'bare bones' and fully cased units.
+The latter may include a line cord, on/off and possibly low/high range switch,
+power indicator, and a 3 prong grounded outlet.  If you have an older unit with
+only a 2 prong cordset and outlet, I would recommend replacing them with a
+heavy duty grounded cordset and 3 prong grounded outlet.
+<p>
+There are also models that will accept 115 VAC and output upt to 0 to 280 VAC -
+useful for powering or testing 220 VAC (e.g., European or high power laser)
+equipment.  There are three-phase models as well (but you need a three-phase
+power feed for them to be of much value!).
+<p>
+To determine what size you need, check the full load input requirements of the
+equipment you will be powering.  Neon sign transformers provide this
+information on the nameplate; regular transformers may not; in this case,
+estimate the input volt-amp (VA) requirements by adding up the full load
+secondary VA ratings and multiply by 1.10 to 1.15 to account for transformer
+losses.
+<ul>
+<li>Sam's Rule #61453: Your lab can never have too many Variacs!
+<li>Sam's Rule #61454: If you only have a single Variac, it should be LARGE!
+</ul>
+Although prices for new Variacs are stratospheric (figure $100 and up for
+anything large enough for home-built lasers), they can often be found at
+hamfests and high-tech flea markets, offered for sale in various USENET
+newsgroups like sci.electronics.equipment, and sometimes even turn up at
+regular garage sales (which is where I have gotten 3 of mine).  In most cases,
+unless there has been a total meltdown, a Variac will survive just about
+forever with at most the need for a new carbon brush.  These things are very
+robust so getting stuck with a bad one isn't all that likely (but not
+impossible).  Also check the surplus and private parts sources listed in the
+chapter: <A HREF=laserlps.htm#lpstoc">Laser and Parts Sources</A>.
+<p>
+See the next section for Variac wiring.
+<p>
+For adjusting the power to a transformer or other inductive load over a
+possibly slightly restricted range, there may be an alternative to an
+expensive, heavy, Variac.  Some relatively simple modifications to a common
+light dimmer will permit it to substitute for a Variac for some applications.
+This is detailed at:
+<A HREF="http://www.neonshop.com/neonweb/nn/tdorr17.html">A Two-Into-One
+Homemade Neon Dimmer</A>.  The idea is to get around the inductive lag in
+current flow that confuses a normal dimmer and may cause it to blow up.
+However, the voltage and current waveforms are going to be nasty with this
+approach - which may not matter but is something to keep in mind.  If you do
+this, make sure there is a fuse for this circuit alone - some failures of the
+triac or its trigger circuit can result high current DC through the primary of
+your transformer which is not something you want to experience.
+<p>
+Another option, more applicable to lower power equipment, is the use of a
+fixed or variable power resistor (rheostat) in the primary circuit.  The
+problem with this is that all three of the following conditions must be
+satisfied:
+<ol>
+<li>Its power rating must be adequate.  For a variable resistor, this means
+ at least 1/4 of that of the controlled equipment - possibly more if it is
+ non-linear.
+<p>
+<li>Its current rating needs to be at least equal to that of the controlled
+ equipment maximum rating.
+<p>
+<li>It needs to be safely mounted somehow and WILL dissipate a lot of heat!
+</ol>
+In addition, with the rheostat, the sensitivity of the control to small
+changes in its setting will be greatest at one end of the rotation.
+<p>
+However, for a small fixed reduction in current/voltage, a power resistor may
+be a good idea as the dissipation will be modest and it can be mounted inside
+the equipment case out of harm's way (as long as it is adequately cooled).
+
+<h3><A NAME="clpvatw">Variac Wiring</A></h3>
+
+The internal wiring of a typical Variac is shown below:
+<pre>
+
+                         _        1 
+          H o-----/ ----- _----->o--+     Tap 1: 0 to 115 VAC
+                Power   Fuse      2  )||
+                Switch           o--+ ||  Tap 2: 0 to 140 VAC
+                                     )||
+                                     )||      _
+      Tied together at               )<------- _--------o Adjustable output
+      service panel           Power  )||     Fuse 2
+      |              220       LED   )||
+      |          +--/\/\--|>|--|>|--+ ||
+      |          |                   )||
+      +-> N o----+------------------+-|-----------------o Return
+      |                               |
+      +-> G o-------------------------+-----------------o Ground
+
+</pre>
+WARNING: Direct connection between input and output - no isolation since the
+power line Neutral and Ground are tied together at the main service panel
+(fuse or circuit breaker box)!
+<p>
+CAUTION: Keep any large transformer of this type well away from your monitor
+or TV.  The magnetic field it produces may cause the picture to wiggle or the
+colors to become messed up - and you to think there is an additional problem!
+<p>
+Note: the 'Power LED' circuit is soldered directly to a winding location
+determined to produce about 6 VAC.
+<p>
+Wiring is straightforward if you have acquired a bare unit (the following
+assumes a 115 VAC line, the extension to 230 VAC should be obvious):
+
+<ul>
+<li>Decide on the output voltage range and direction of rotation (clockwise
+ should always be used to increase output as far as the user is concerned but
+ depending on mounting, actual direction of the shaft with respect to the
+ body of the unit may be either way):
+<p>
+ <ul>
+ <li>For 0 to 115 VAC output, Hot and Neutral go between the ends of the
+  winding with Neutral at the terminal where the wiper will be when you want
+  the output to be 0 VAC; The output goes between Neutral and the wiper.
+<p>
+ <li>For 0 to 140 VAC output, Hot is moved to the tap about 20 percent away
+  from the terminal where the wiper will be when the output is at 140 VAC; The
+  output goes between Neutral and the wiper as above.
+<p>
+ <li>For some (mostly small) Variacs that do not have intermediate taps, it may
+  still be possible to add a tap to permit 140 VAC operation.  However, this
+  will reduce the number of turns on the primary and could lead to overheating
+  from core saturation if the design is marginal.  Most of these are
+  overdesigned and this shouldn't be an issue.  But, nonetheless, if you try
+  this, monitor the temperature of the <i>unloaded</i> Variac for, say, an hour
+  to make sure it doesn't get excessively hot.
+ </ul>
+<p>
+<li>Include a primary-side power switch and power-on indicator lamp.  In the
+ old days, a neon lamp would be used (e.g., NE2H with a 47K ohm resistor).
+ Nowadays, neon lamps may be hard to find.  An alternative as suggested above
+ is to add a tap on the Variac winding at about 6 to 10 VAC and use an LED and
+ current limiting resistor.
+<p>
+<li>Provide fuses for <b>both</b> input and output.  They should be the same
+ rating as the Variac.  The fuse for the input protects against primary side
+ shorts.  The one for the output protects the Variac winding from excessive
+ load.  Commercial units may only have one fuse but fuses are inexpensive and
+ the added protection won't hurt.
+<p>
+<li>Use an adequately rated grounded cordset and mount everything in a well
+ insulated box.  The Variac frame and box (if made of metal) should be
+ grounded.
+</ul>
+
+<h3><A NAME="clphvr">A Treatise on Designing High Voltage Rectifiers</A></h3>
+
+Here is more than you ever possibly wanted to know on the subject.  For a
+simplified discussion of this topic, as well as for suppliers of commercial
+high voltage rectifiers (which would make this exercise unnecessary), see the
+section: <A HREF="laserhpd.htm#hpdhvc0">Standard and Custom HV Rectifiers</A>.
+<p>
+(From: Steve Hardy (hardy@sweng.stortek.com).)
+
+<h4><A NAME="clphvr0">Requirements and Design Considerations</A></h4>
+
+Laser power supplies usually require high voltage power supplies.  Often, the
+voltage is greater than the capabilities of commonly available components such
+as rectifier diodes.
+<p>
+The usual solution to this problem is to connect more than one device in
+series.  Unfortunately, in the real world, components are not matched closely
+enough for this simple trick to work.  The purpose of this article is to
+explain how to design series-connected rectifier strings, which will operate
+reliably in spite of component mismatches and tolerances.
+<p>
+Although the emphasis is on rectifiers, the principles are also applicable to
+switching elements such as thyristors, bipolar transistors and mosfets.
+<p>
+A set of rectifiers connected in series will be referred to as a 'string'.
+
+<h4><A NAME="clphvr1">What Voltage?</A></h4>
+
+The first task is to compute the maximum reverse (blocking) voltage that the
+rectifier string must withstand.  This depends on the type of rectification
+which is required (full or half) and the transformer output voltage.
+<p>
+The following examples assume that the transformer output is 1 volt RMS.
+Simply multiply everything by the appropriate factor for other voltages.
+<p>
+<ol>
+<li>Half-wave unfiltered:
+<p>
+<pre>
+
+    o-----|>|-----+
+                  |
+                  /
+  AC In           \ Resistive Load
+                  /
+                  \
+                  |
+    o-------------+
+
+</pre>
+<p>
+Peak reverse voltage across diode (Vd) = 1.414.
+<p>
+<li>Half wave filtered:
+<p>
+<pre>
+
+    o-----|>|-----+
+                +_|_
+  AC In          --- Capacitive Load
+                  |
+    o-------------+
+</pre>
+<p>
+Vd = 2.828.
+<p>
+<li>Full wave filtered or unfiltered:
+<p>
+<pre>
+
+    Bridge rectifier
+          +---+
+    o-----|~ +|----+
+          |   |    |  
+  AC In   |   |   |X| Capacitive or Resistive Load
+          |   |    |
+    o-----|~ -|----+
+          +---+
+
+</pre>
+<p>
+Vd = 1.414 for each of the 4 diodes in the bridge.
+<p>
+<li>Full wave voltage doubler:
+<p>
+<pre>
+
+    o----+--|>|-----+----o +
+         |        +_|_
+  AC In  |         ---
+         |          |
+    o---------------+    To resistive or capacitive load
+         |        +_|_
+         |         ---
+         |          |
+         +---|<|----+----o -
+
+</pre>
+Vd = 2.828 for both diodes
+</ol>
+<p>
+For example, for a full-bridge rectifier used with a 15 kV transformer, each
+of the 4 diodes in the bridge will need to withstand 15 kV * 1.414 = 21.2 kV.
+This is a minimum value.  An additional safety factor of 15% should be
+provided to account for mains overvoltage, giving a design point of 24.4kV, or
+say 25 kV.
+<p>
+Commonly available rectifier diodes, such as the 1N4007, are rated for 1kV,
+thus (in theory) at least 25 of these will be required for each of the four
+strings to make up the full bridge rectifier.  This is not as bad as it
+sounds, since packs of 100 1N4007's can be obtained for under $5.  It is
+tedious to perform all that soldering, but the alternative of buying
+ready-made rectifiers of the required voltage will be much more expensive.
+
+<h4><A NAME="clphvr2">Voltage Sharing</A></h4>
+
+Having selected a peak reverse voltage rating for each string, the number of
+devices in the string must be computed.  This is not as simple as dividing the
+total voltage (Vs) by the rating of each diode (Vd), since a reverse leakage
+current will always flow.  This reverse current causes an imbalance in the
+voltage seen by each diode, with the highest voltage impressed across the
+'best' device, and the lowest across the most leaky device.
+<p>
+The time honoured way of dealing with this is to add resistors in parallel
+with each diode in the string.  This will increase the 'leakage' current,
+swamping out the variation between the diodes.  The price to pay for this is
+wasted power, and obviously the cost of the resistors.  To mitigate the
+former, the highest value resistance should be used which affords the proper
+voltage sharing.
+<p>
+It is impossible to completely balance the voltage in this way, since
+resistors have their own tolerance.  Thus the only alternative is to add extra
+diodes in the string, to allow for the imbalance.  There is a tradeoff to be
+made: increasing the string number will reduce the wasted power, but increase
+the total cost.
+<p>
+To compute the string number and the parallel resistance values, the following
+information must be known:
+
+<ul>
+<li>Imax - The maximum reverse leakage current of the diode.  Manufacturers
+ usually specify this at the rated reverse voltage and maximum junction
+ temperature.
+<p>
+<li>Imin - The minimum reverse leakage.  This is not usually specified so, to
+ be conservative, it is assumed to be zero.
+<p>  
+<li>Vd - The diode reverse voltage rating.
+<p>
+<li>Vs -  The string voltage.
+<p>
+<li>a - The available resistor tolerance.  In the following, this is expressed
+ as a fraction e.g. 0.05 for +/-5% tolerance.
+<p>
+<li>n - The string number (i.e. number of diodes in the string).  This may be
+ initially set to, say, 10% more than Vs/Vd, then increased or decreased as
+ required (based on allowable wasted power and other considerations).
+</ul>
+
+Now we compute the maximum allowable resistance R (per diode) using:
+<pre>
+
+                  Vd(n - 1) * (1 - a) - (Vs - Vd) * (1 + a)
+            R &lt;= -------------------------------------------
+                           (n - 1) * (1 - a<sup>2</sup>) Imax
+</pre>
+Then the worst-case power dissipated by any of the resistors is:
+<pre>
+                                      Vd<sup>2</sup>
+                            Pd = -------------
+                                  R * (1 - a)
+</pre>
+And the total power dissipated by the entire string of diodes and
+resistors is:
+<pre>
+                                     Vs * Vd
+                           Ptot = -------------
+                                   R * (1 - a)
+</pre>
+These values may be reduced somewhat, since the string will not be
+continuously blocking the maximum reverse voltage.  For sinewave
+rectification, the above figures may be divided by 2 to 4.
+<p>
+Note that resistors have a voltage rating as well as a power rating.
+Typically, the voltage rating is 300 or 600 V (600 V for 1 W types, 300 V for
+1/4 W).  Values above 1M are hard to obtain in tolerances under 5%.
+<p>
+Since 1N4007s are rated for 1 kV, each parallel 'resistor' should actually be
+a series combination of two resistors, unless you can locate special
+high-voltage resistors.
+
+<h4><A NAME="clphvr3">Example of Basic Design</A></h4>
+
+Given that 1N4007's, with a maximum leakage of 5 uA, are to be used for a
+full-bridge 15 kV RMS rectifier, design a rectifier string.  Resistors of 10%
+tolerance to be used, since we expect to use two 5% resistors in series.
+Additional specs: Vs = 25kV (from above), Vd = 1kV, Imax = 5uA, a = 0.1 (10%
+tolerance).
+<p>
+Using an initial guess of n = 30 (i.e., 20% more than the theoretical 25
+required):
+<pre>
+             1000 * (30 - 1) * (1 - 0.1) - (25000 - 1000) * (1 + 0.1)
+       R &lt;= ----------------------------------------------------------
+                        (30 - 1) * (1 - 0.01) * 5x10<sup>-6</sup>
+    
+          = -2.09M
+</pre>
+Negative values for R mean that the initial guess for n was too low.  As it
+turns out, the culprit here is the loose tolerance of the resistance.  We can
+either tighten the resistance tolerance, or increase n.  Trying for 2%
+resistors, the result becomes: R &lt;= 27M.
+<p>
+This is a high resistance, which is good, but practically unobtainable in 2%
+tolerance.  This is the point at which a decision needs to be made.  We can
+either
+<ul>
+<li>Reduce the string number, and retain 2% tolerance, hoping to get a value
+ under 2M.
+<li>Increase the string number and go back to 10% tolerance.
+<li>Use a lower valued resistance anyway and wear the power loss.
+</ul>
+
+The first option seems more cost-effective, so we will try n = 27.  This gives
+R &lt;= 7.7M.  Still too high, but reducing n to 26 requires such a low
+resistance that too much power is wasted.  At this point, we cut our losses
+and decide to settle on 2M (i.e., two 1M, 1% resistors in series).  The worst
+case power dissipation of the combo is
+<pre>
+                                .5 * 1000<sup>2</sup>
+                      Pd = --------------------
+                            2x10<sup>6</sup> * (1 - 0.02)
+
+                         = 0.256 W
+</pre>
+Each resistor will only see half of this, which is very small.  This is good
+for long life and stability.  We can't use 1/4 W metal films, unless they are
+rated for at least 500 V.  1/2 W metal films would normally be OK.
+<p>
+Having worked all of this out, the complete bill of materials for the bridge
+rectifier is:
+<ul>
+<li>108 1N4007s.
+<li>216 1M, 1%, 1/2 W metal film resistors.
+</ul>
+All this should cost under $50.00.
+<p>
+Special high-voltage resistors are available, which cuts down on the
+inconvenience (if not cost) of series combinations.  For example, Philips has
+the VR25 series of 1/4 W 5% metal glazed in the range of 1.2M to 10M, and the
+VR37 series of 1/2 W 5% in the range 1.2M to 33M.  The VR25's are rated for
+1,600 VDC and the VR37's for 3,500 VDC.
+<p>
+If you are thinking of 'cheating' by hand-selecting matched resistors, then be
+aware that this is not good for long term reliability.  Even if you select two
+resistors that are matched within 1% on day one, then after time they will
+more than likely drift apart.  This is because they are stressed by high
+voltage, which is a well-known cause of long-term drift.
+
+<h4><A NAME="clphvr4">Transient Sharing</A></h4>
+
+The above considerations apply only to DC or slowly varying voltages such as
+sinusoidal mains (50/60 Hz).
+<p>
+When higher frequencies are involved, it is also necessary to account for
+transient phenomena such as diode reverse recovery charge.  You can ignore
+this section if you are only concerned with low frequency sinewave circuits
+(<200 Hz).  Note: a low frequency square wave actually has high frequency
+components, so this section may still be relevant.
+<p>
+When a current is flowing through a diode in the normal (forward) direction,
+then the voltage is suddenly reversed, the forward current will rapidly
+decrease, go through zero, then actually reverse before finally snapping back
+to the leakage level.  The rate of change of current will depend on external
+circuit inductance.
+<p>
+In effect, the diode conducts current in the reverse (normally blocking)
+direction for a short period after voltage reversal.  The peak magnitude of
+the reverse current may actually be greater than the forward current that was
+initially flowing.
+<p>
+This phenomenon is known as reverse recovery charge (Qrr), and is common to
+all PN junction rectifiers.  Rectifiers used in high frequency circuits are
+designed for rapid reverse recovery (i.e low Qrr), and are designated as
+'high-speed', 'ultrafast', 'soft recovery' etc.  Ordinary 60Hz rectifiers are
+not optimised for this, and thus are unsuitable for use above a few hundred
+Hz.  (Note that fast rectifiers have higher on-state losses and much higher
+reverse leakage -- there's always a down-side.)
+<p>
+When using series connection of high-speed rectifiers, Qrr is another variable
+quantity which needs to be 'soaked up' by some auxiliary sharing circuit, in a
+similar manner to reverse leakage current in the low frequency case.  This
+sharing is accomplished by means of capacitors which are connected in parallel
+with each diode in the string.
+<p>
+To compute the capacitance value, the following values need to be determined:
+
+<ul>
+<li>Qmax - Maximum reverse recovery charge.  This is sometimes specified by
+ manufacturers under various conditions.  The value depends on initial forward
+ current and junction temp.  If not directly specified, the manufacturer will
+ specify the peak reverse current (Irm) and the recovery time (trr).  From
+ these values, you can compute Qrr roughly from Qrr = 1/2 Irm trr.
+<p>
+<li>Vd - The diode reverse voltage rating.
+<p>
+<li>Vs - The string voltage.
+<p>
+<li>a - The available capacitor tolerance.  In the following, this is
+ expressed as a fraction e.g. 0.05 for +/-5% tolerance.
+<p>
+<li>n - The string number (i.e. number of diodes in the string).  This may be
+ initially set to, say, 20% more than Vs/Vd, then increased or decreased as
+ required (based on allowable string capacitance).
+</ul>
+
+The capacitance is given by:
+<pre>
+                                  (n - 1) * Qmax
+                        C >= -------------------------
+                              (n * Vd - Vs) * (1 - a)
+
+</pre>
+
+<h4><A NAME="clphvr5">Example of Transient Sharing</A></h4>
+
+Using the ST Microelectronics device STTA2512P, and a 12kV square wave, with a
+Qmax of 12 uC, capacitors of +/-10%, try n = 15.  The STTA2512 is rated at
+1200 V/25 A.
+<pre>
+                                 (15 - 1) * 12x10<sup>-6</sup>
+                    C >= ---------------------------------
+                          (15 * 1200 - 12000) * (1 - 0.1)
+
+                       = 31nF
+</pre>
+Use 33 nF, 3 kV HV ceramic.  Not cheap but, hey, we're talking about a 300 kW
+SMPS rectifier here!
+
+<h4><A NAME="clphvr6">Construction Tips</A></h4>
+
+With the high voltages involved, it is important to avoid corona discharge.
+Corona causes creation of ozone, which is destructive to the surroundings
+(especially rubber and plastics).  Corona is exacerbated by sharp points at
+high voltages.
+<p>
+To minimise problems, all exposed wiring should be encased in neutral cure
+silicone.  Don't put silicone over the resistor bodies since it may cause them
+to overheat.
+<p>
+Make sure there is an air gap of at least 2 mm per kV between two conductors.
+For solid surfaces, the gap should be at least 5 mm/kV since a humid atmosphere
+will increase surface leakage.
+<p>
+(From: Mark Dinsmore (dinsmore@ma.ultranet.com).)
+<p>
+Here are a couple of comments that might be pertinent, based on my own
+experience.
+<p>
+First, use of carbon composition resistors is highly recommended for HV use.
+They are orders of magnitude more robust in the presence of hv transients.  I
+have put 10kV transients across a 1 watt resistor repeatedly(in Fluorinert
+dielectric fluid) with no failure and very minimal changes in resistance.
+Allen Bradley makes the devices I am using.  However, I don't know if they can
+be obtained in the appropriate tolerance.
+<p>
+Second, if the entire rectifer assembly is potted in silicone, mineral,
+etc. oil, the issues of HV breakdown, corona, and thermal dissipation are
+almost completely eliminated.  The oils have a very high breakdown voltage,
+making the issues of spacing much easier.  The oil also acts as a convective
+cooler for the devices, and is very effective in removing the heat generated
+in the diodes and resistors.
+
+<h3><A NAME="clpcps3">Meters - Voltage and Current</A></h3>
+
+Knowing the precise values of voltage and current in your power supply is
+often useful - sometimes essential.  For some lasers, current is the critical
+parameter to control to achieve the optimum operating point.  Knowing the
+voltage across the tube can tell you something about the gas pressure, health
+of the electrodes, and so forth.
+<p>
+It is unlikely that you will have or can find exactly the types of meter needed
+for each of these lasers.  However, any sort of mA or uA meter cn be turned
+into a DC or AC voltage or current meter of almost any full range sensitivity
+quite easily.  This can be a moving coil (D'Arsonval) type or digital panel
+meter module.  For historical reasons, we call these 'movements' whether they
+have moving parts or not. :-)
+<p>
+Note: Where the use of a panel meter is suggested below, if you salvaged the
+meter movement from some other equipment or your junk, box, double check the
+actual sensitivity.  There should be a rating printed at the bottom of the
+meter face or the back of the unit like "fs=1mA", "fs=10A", or something
+similar.  Even though the scale may be labeled with a particular set of units
+and values, a series or shunt resistor may actually be needed to adapt the
+basic movement to read at that sensitivity.  An AC meter may actually use a
+DC movement with an external rectifier!  It's also a good idea to test the
+meter to confirm that it hasn't been damaged due to an overload or just age.
+<p>
+In the discussion below, Im is the full scale sensitivity of the meter
+movement and Rm is the resistance of the meter movement.
+<ul>
+<li>For the voltmeters, the series resistance has been divided into a fixed
+  (R1, R3) and variable (R2) for easy calibration.  There are some special
+  requirements for high voltage voltmeters in particular:
+<p>
+<ul>
+  <li>Try to select R1 versus R3 taking into account which end, if any, of the
+    circuit is at ground potential to place the meter itself and the
+    calibration pot (R2) near ground potential as well.
+<p>
+    For centertapped HV transformers (e.g., luminous tube, oil burner
+    ignition), make R1 and R3 approximately equal.
+<p>
+  <li>The series current limiting resistors must be rated to safely handle the
+    voltage across them as well as their power dissipation.  Normal resistors
+    are usually rated for several hundred V (check the specs) so multiple
+    resistors in series are required to achieve the required voltage rating.
+    Alternatively, there are special HV rated resistors designed for this
+    purpose.
+<p>
+</ul>
+<li>For the current measuring circuits, additional fixed (R1) and variable (R2)
+  series resistors have been added in addition to the required shunt resistor
+  (Rs) to allow a convenient selectrion of shunt resistor value (to produce a
+  1 V drop across Rs for full scale current).
+</ul>
+The DC circuits are discussed first.  These are generally simpler than those
+for reading AC directly and are therefore preferred if a suitable location can
+be found where the measurement will be just as meaningful and accurate.
+<ul>
+<li>DC voltage (VDCfs): Use a series resistor equal to: Vfs/Ifs - Rm.
+<p>
+  Example: 10 kV full scale using 50 uA movement (negative grounded):
+<PRE>
+
+                            +--+                M1          
+                    R1      |  v R2       + +---------+ -   
+           + o-----/\/\-----+-/\/\----------| 0-50 uA |----------+
+                   190M       20M           +---------+         _|_
+                            Calibrate     10 kV Full Scale     ////
+
+</PRE>
+<li>DC current (IDCfs): Use a shunt resistor equal to: (Im * Rm)/(Ifs - Im).
+<p>
+  Example: 1 A full scale using 1 mA movement:
+<PRE>
+
+                                  Rs  1  5 W
+         + o------+------------------/\/\-----------------+------o -
+                  |                                       |
+                  |          +--+              M1         |
+                  |    R1    |  v R2     + +--------+ -   |
+                  +---/\/\---+-/\/\--------| 0-1 mA |-----+
+                      910      100         +--------+
+                            Calibrate   10 A Full Scale
+
+</PRE>
+</ul>
+For AC, there are special AC reading meters but these are much less common
+than the DC variety.  However, where absolute precision and linearity isn't
+needed, and an average rather than RMS reading is acceptable, it is a simple
+matter to convert a DC meter to respond to AC.
+<p>
+However, while making average measurements of voltage and current in AC powered
+circuits is relatively easy and useful setting the operating point and
+monitoring overall system behavior, the readings can be quite deceiving when
+driving gas discharge tubes.  In particular, it isn't possible to just multiply
+the I and V values together to compute power input (as would be desirable when
+estimating laser efficiency - assuming you have some means of measuring optical
+beam power).  The AC waveforms are likely to be quite nasty (it is a gas
+discharge after all, not a resistor) and will result in significant errors
+when computing power using the simple equation: P = I * V.
+<p>
+(From: Terry Greene (xray@cstel.net).)
+<blockquote>
+ "Folks should keep in mind that a gas discharge as viewed on a scope looks
+ sort of like the noise at a rock concert. The only relevant data is the peak
+ voltage required for breakdown. This is not what you will measure with a
+ meter. What you will see is a perverted version of RMS voltage which will not
+ be accurate. It won't even be an accurate RMS reading. It should serve as an
+ interesting bench mark, but the numbers won't be real. The only way I know of
+ that you will gather usable info on voltage is to assemble a resistor network
+ and scope it. Interesting data for design purposes, but not really relevant
+ to function. I'm not saying you shouldn't put a meter on, just don't
+ misinterpret the readings."
+</blockquote>
+
+Precise measurements of power can be performed by integrating I * V over a
+complete cycle and multiplying by the number of cycles per second (60 or 50 as
+appropriate).  As you might expect, this is well beyond the capabilities of the
+average multimeter but a piece of cake if you have an instrument designed for
+this purpose. :)
+<p>
+The following circuits for AC voltage and current measurements will actually
+read the average, not RMS if components values are calculated using the same
+equations as for the DC case.  For sinusoids, a simple correction can be made
+with the calibrate pot.  True RMS readings are left as an exercise for the
+student!
+<ul>
+<li>AC voltage (VACfs): Where VACfs is much greater than .7 V (e.g., 100 V), a
+  a rectifier diode can be added in series with a DC meter.  Ignoring the
+  voltage drop of the diode, the required current limiting resistor will be
+  equal to: (Vfs/Ifs - Rm)/2.
+<p>
+  Example: 500 V (AC) full scale using 100 uA movement:
+<PRE>
+
+                           +--+                  M1
+           D1       R1     |  v R2        + +----------+ -     R3
+   AC o----|>|-----/\/\----+-/\/\-----------| 0-100 uA |------/\/\----o AC
+         1N4007    1.2M      200K           +----------+      1.2M
+                          Calibrate   500 V (AC) Full Scale
+
+</PRE>
+  Note that since a half wave rectifier is used, the total series resistance
+  must be half of what it was for the DC measurements.
+<p>
+  For high voltages where finding diodes with sufficient ratings is a problem,
+  use a bridge rectifier - almost any type will do since it doesn't need to
+  block more than a volt or so.  Why?  Consider the following:
+<p>
+  Example: 10 kV (AC) full scale using 100 uA movement (centertapped HV
+  transformer):
+<PRE>
+
+                      +--+            D1                M1
+               R1     |  v R2     +--------+     + +----------+ -
+      AC o----/\/\----+-/\/\------|~      +|-------| 0-100 uA |------+
+              47M        1M       | Little |       +----------+      |
+               R3     Calibrate   | Bridge |  10 kV (AC) Full Scale  |
+      AC o----/\/\----------------|~      -|-------------------------+
+              47M                 +--------+
+
+</PRE>
+  Since the voltage across the meter movement itself is probably no more than
+  a fraction of a volt, this is all the bridge has to worry about!  There will
+  be a dead-zone between +/1 1.5 V or so but who cares on a meter that reads
+  10 kV full scale.  Ignoring this voltage drop, the required current limiting
+  resistor will be equal to: (Vfs/Ifs - Rm).
+<p>
+  A blocking capacitor can be put in series with the input to this circuit if
+  there is a DC offset but it must withstand the full voltage (AC peak + DC)
+  and have a low impedance at the frequency range of interest compared to the
+  sum R1+R2+R3.
+<p>
+<li>AC current (VACfs): A series resistor can be placed in the circuit and then
+  the AC voltage across it can be measured using either of the approaches,
+  above, or a bridge can be used directly.  This time it does need to pass the
+  full current being measured AND there will be a voltage dead-zone around the
+  zero crossings of about 1.5 V (however, this won't affect the current
+  reading linearity.  The shunt resistor is equal to: (Im * Rm)/(Ifs - Im).
+<p>
+  Example: 100 mA (AC) full scale using 1 mA movement:
+<PRE>
+
+                                            +--+            M1
+                                       R1   |  v R2   + +--------+ -
+                                  +---/\/\--+-/\/\------| 0-1 mA |---+
+                                  |   940     100       +--------+   |
+                                  |        Calibrate   100 mA (AC)   |
+                         D1       |                    Full Scale    |
+                     +--------+   |    Rs                            |
+        AC o---------|~      +|---+---/\/\---+-----------------------+
+                     |   LV   |        10    |
+                     | Bridge |              |
+        AC o---------|~      -|--------------+
+                     +--------+
+
+</PRE>
+
+If you have a clamp-on AC ammeter, here is another alternative:
+<p>
+(From: John De Armond (johngd@bellsouth.net).)
+<p>
+ This approach multiplies the sensitivity of any clamp-on ammeter.  I call it a
+ "reverse current transformer" because it expands the sensitivity of the meter
+ instead of reducing it, as does a range expander.  I've made several of these
+ and given them out to area neon people and they all love 'em.
+<p>
+ The thing consists of an empty Teflon pipe tape spool and shell.  100 turns of
+ magnet wire are placed on the spool and led out via TV anode wire (rated
+ 40 kVDC).  The whole assembly is vacuum-potted in thin clear 2-part Epoxy.
+<p>
+ Vacuum potting is easy to do with an old pressure cooker.  Remove and plug all
+ the safeties and install a Schraeder valve in place of the steam regulator.
+ Mix up the Epoxy in a cup, place the device in it with the tip of the device
+ exposed to air (to allow air to escape), place the whole thing in the pressure
+ cooker and draw as good a vacuum as you can.  Don't use your high vacuum
+ equipment - the Epoxy vapors will contaminate it.  I use an air-driven venturi
+ vacuum pump.)  After a few minutes of evacuation, slowly release the vacuum.
+ Air pressure will drive the Epoxy back into the coil.  Fully submerge the coil
+ and repeat.  Allow to cure.  Attach alligator clips to the leads and the
+ project is finished.
+<p>
+(From: Sam.)
+<p>
+ This same technique can also be used for all those other modules that need to
+ be potted like custom HV capacitor and diode arrays.  However, I is the
+ vacuum potting really essential for this gadget?  While it DOES make for a
+ really cool looking assembly AND most excellent HV insulation to the outside
+ world IS needed, there shouldn't be any voltage differences of any
+ consequence inside the device.  However, the additional insurance won't hurt.
+<p>
+(From: John.)
+<p>
+ It IS the high voltage to ground you worry about.  All high voltage neon
+ transformers are grounded at the center tap.  That means that the current to
+ be metered can be as much as 7.5 kV above ground, more if there is resonance
+ in the circuit.  I've managed to pull 6" long arcs from a 15 kV tranny with
+ just the right (wrong?) amount of capacitive loading - right before the blue
+ smoke leaks out!  I'm allergic to electrons and so I take such measures
+ seriously.
+<p>
+ To use, simply hook the leads in series with the load and clamp the clamp-on
+ meter through the hole.  The meter will read 100X the actual current.  Thus 30
+ mA will read 3 amps on the clamp-on.
+<p>
+ There are two barriers to the high voltage involved.  One is the epoxy potting
+ which is an excellent dielectric.  The second is the insulation on the
+ clamp-on meter itself.
+</ul>
+
+See the sections: <A HREF="laserhps.htm#hpsspm1">Making Measurements on HeNe
+Laser Power supplies</A> and <A HREF="laseraps.htm#apsmmt0">Measurements of
+Current and Voltage in Ar/Kr Ion Laser Power Supplies</A> for some additional
+comments and examples including safety considerations.
+
+<h3><A NAME="clpcps3a">Measuring Current Pulses</A></h3>
+
+For the home-built Ar/Kr ion, HeHg, CuCl/CuBr, and PMG lasers, the excitation
+is in the form of short high current pulses.  It may also be useful to know
+the peak current through the flashlamp of the dye laser (or for other
+applications).  DC or averaging meters are not very useful for these types of
+power supplies.  However, if you have an oscilloscope, measurement of both the
+peak values and shape of the current pulses can be easily performed:
+
+<ul>
+<li>If the return of your HV power supply is grounded, put a .1 ohm resistor
+ between the cathode of the laser tube and ground.  The voltage across the
+ resistor will be .1 V/A of tube current.
+<p>
+<li>If the HV supply isn't grounded (e.g., a bridge rectifier), a well
+ insulated current probe can be used.  If you don't have one, a basic current
+ probe can be built by passing the return lead through a small ferrite core
+ (either a toroid or even one of those split ferrite RFI suppresssion thingies
+ found on monitor and other computer cables).  Wrap 10 turns as a secondary
+ on the same core and put it across a 2 ohm load resistor (none of these
+ values are terribly critical).  I would expect the sensitivity to be about
+ 0.2 V/A though this may not be exact.  It would be best to check calibration
+ with a pulse generator.  (Note that these sort of current probes - either
+ commercial or home-built - do not have any response at low frequencies worth
+ mentioning so they cannot be used for line frequency or DC measurements.)
+</ul>
+
+<h3><A NAME="clpcps4">Fuses, Circuit Breakers, and Other Protection
+ Devices</A></h3>
+
+It is essential that there be some kind of overcurrent protection for any
+of the power supplies used with home-built lasers.  At a minimum, there should
+be a suitably sized fuse or single pole circuit breaker in the Hot side ONLY
+of the primary circuit from the AC power line.  A time delay fuse or delayed
+action breaker may be desirable where capacitive loads are involved and will
+minimize nuisance tripping without undo risk to circuitry.  A dual pole
+ganged breaker can also be used interrupting both the Hot and Neutral.
+However, separate fuses should NEVER be installed this way since if only the
+one in the Neutral line blows, the entire system will be electrically Hot!
+<p>
+Protecting various subsystems separately is also a good idea since the fuse
+or breaker current ratings can more closely match the actual operating values
+and thus will be more likely to blow or trip with a fault that the large main
+fuse would happily ignore.
+<p>
+Note that it is not necessary to separately fuse the high voltage secondaries
+of these systems.  For normal transformers, primary protection is adequate.
+For neon sign transformers, the output can be shorted all day without harm to
+the transformer.
+<p>
+Once can also consider the use of thermal fuses or thermal protectors where
+something like a transformer or possibly even the laser tube itself could
+overheat.
+
+<h3><A NAME="clpblee">Determining Bleeder Resistor Component Values</A></h3>
+
+The purpose of a bleeder is to drain the charge on your lethal power supply
+capacitors in a timely manner once primary power is removed.  For commercial
+equipment, this may mean "by the time some moron can extract 25 screws
+and climb inside".  For home-built equipment, it will vary from a fraction
+of a second to overnight.  Of course, a bleeder won't protect you while power
+is on!
+<p>
+There are two types of bleeders (these are my terms):
+
+<ul>
+<li><b>Passive:</b> This is the most common and is normally just a suitable
+ resistance across each capacitor or the entire filter or pulse forming
+ network.  However, the bleeder resistance wastes power while the system is
+ energized and must be rated for continuous duty.
+<p>
+<li><b>Active:</b> Some sort of circuit is provided to connect the resistance
+ or other load only when power is removed.  Most commonly, this would be a
+ relay whose coil is attached to the switched power with its normally closed
+ (NC) contacts used to switch in the bleeder.  (Note that the relay contacts
+ need to be rated to hold off the maximum system voltage and to be able to
+ handle the initial discharge current.)  The advantage of this approach
+ is that little power is wasted while the system is energized and the power
+ rating of the bleeder resistance can be much lower since it only needs to
+ absorb the stored energy in the capacitor(s), not the continuous power.
+</ul>
+
+In both cases, the main issue is determining suitable resistance, power,
+and voltage ratings for the load.
+
+<ul>
+<li><b>Resistance:</b> The basic equation for the time constant of an RC
+ circuit is what determines how fast the capacitor will discharge.  This is
+ T = R * C and is the time (in seconds) it takes a capacitance (in Farads) to
+ discharge through a resistance (in Ohms) to 1/e (e = 2.71828..., about 37%)
+ of its initial voltage.  The discharge equation is:
+<PRE>
+
+            Vf = Vi * e<sup>-(t/(R * C))</sup>
+
+</PRE>
+ Or, solving for t given final voltage, Vf; or R given Vf and t:
+<PRE>
+
+                                 Vi                    t
+                 t = R * C * ln(----)        R = --------------
+                                 Vf                       Vi
+                                                  C * ln(----)
+                                                          Vf
+
+</PRE>
+ The last equation is probably the easiest to use - just determine what the
+ safe voltage is and how long you want to wait for it!
+<p>
+ If you don't like equations, just figure how many time constants are needed
+ to discharge to a safe voltage: t = RC: .37 * Vi; 2RC: .14 * Vi; 5RC: .007 *
+ Vi; 10RC: .00005 * Vi.
+<p>
+ Note that with respect to shock hazard, 30 V is considered safe but
+ accidently discharging a cap charged to 30 V suddenly to some other circuit
+ element may cause damage, especially in systems with solid state components.
+ Thus, it may be desirable to choose a lower voltage when selecting your
+ bleeder.
+<p>
+<li><b>Power:</b> For a passive bleeder, the power in Watts is determined by
+ P = V<sup>2</sup>/R.  Using a resistance with a power dissipation rating
+ at least 1.5 times the calculated value is recommended unless forced-air (or
+ water!) cooling is used.  For an active bleeder, the power rating can be much
+ lower since the resistaors only need to dissipate the energy contained in the
+ capacitor(s) and this is likely to be a low duty cycle operation.  A power
+ rating lower than 1/10th the continuous rating may be adequate.  This will
+ depend on the type of resistor since they have peak power and total energy
+ ratings.
+<p>
+<li><b>Voltage:</b> Yes, resistors also have voltage ratings!  For common
+ carbon or metal film, or even larger wirewound types, this is typically in
+ the 200 to 500 V range.  Thus, for high voltage bleeders, either special high
+ voltage resistors will be required or the bleeder will need to be made up of
+ several lower value resistors in series or series/parallel.  As a side
+ benefit, this also makes it easier to achieve high power ratings with low
+ cost resistors.
+</ul>
+
+In addition to the bleeder, there should be some visual indication of charge
+on the capacitors!  Bleeders and connections can fail.  Always confirm that
+the voltage is indeed low enough to be safe <b>BEFORE</b> touching anything!
+
+<h3><A NAME="clpcps4a">SwitchMode Power Supply (SMPS) for Home-Built
+ Lasers?</A></h3>
+
+The design of the neon sign transformer (and Variac) is probably at least 50
+years old at this point.  Why not replace it with something high-tech and much
+more efficient?
+<p>
+After the safety concerns - which are significantly more serious than for
+simple transformer based designs - there is a major problem with using SMPSs
+to powering experimental apparatus:  They like to turn into slag instantly
+under conditions which neon sign transformers on Variacs would be perfectly
+happy tolerating for hours. :(  Unless you spend the time and money to design
+in very good protection schemes - not present on something you're likely to
+rip out of another piece of equipment where the supply ran under relatively
+controlled conditions - you will be doing more repair and rework than playing
+with lasers!
+<p>
+SMPSs generally require a minimum load, protection for open circuit and short
+circuit/over current faults, they are difficult to design, custom magnetic
+components need to be bought or built, they are generally line connected with
+large primary side filter caps which makes troubleshooting dangerous, etc.
+<p>
+If you are still thinking about just using a commercial SMPS:
+<p>
+(From: John De Armond (johngd@bellsouth.net).)
+<p>
+Having both tried to repair 'em and modify them for other projects, hacking
+commercially produced SMPSs can be done but here are some considerations:
+<ul>
+<li>Everything is at line voltage.  That makes using grounded instruments
+  such as scopes a problem.  "Use an isolation transformer" is your first
+  thought but...
+<p>
+<li>Everything is filled with high frequency noise.  The TV-type isolation
+ transformers have enough capacitance to ground and inter-winding capacitance
+ to make this noise appear on everything.  I've had better luck with battery
+ powered scopes like my Fluke 97 but still the capacitance to ground is
+ asymmetrical (more on the ground side, naturally) which still turns common
+ mode noise voltage into real noise.
+<p>
+<li>Modern SMPS's are a study in 'the mostest for the leastest'.  Kind of like
+ working on the last of the tube type TVs where a single tube was pressed into
+ doing forty things.  Components are so interconnected and things interact
+ and feed back so that diagnostics come down to mostly SWAGing it (Scientific
+ Wild-Assed Guessing).
+<p>
+<li>The rectified line voltage is sitting there  in rather large caps at over
+ 300 volts.  It's not like a neon sign transformer or even a small laser power
+ supply.  Crowbar one with a test lead and the tip vaporizes.  Crowbar it with
+ your fingers and you pick yourself up off the floor.  Just ask me how I
+ know. :(
+<p>
+<li>Almost all the parts are house numbered so you'll have few choices in
+ figuring component ratings.  Or even what some of the mysterious epoxy blobs
+ even do.
+</ul>
+
+That said, SMPSs are the way to go for many things.  I'd suggest an alternate
+route to hacking a commercial unit.  Contact Maxim semiconductors.  They're on
+the net.  For the asking, they'll give you a databook on CDROM which is
+excellent.  They'll also sample parts with little hassle.  Maxim makes a wide
+variety of SMPS chips.  Their application notes are superb, as are their
+ready-to-build designs.  You could whip something out on a perfboard faster
+than you could get set up to work on commercially made SMPSs.
+<p>
+(From: Sam.)
+<p>
+Or buy one:
+<p>
+(From Jeff Zurkow (jeff@atrox.com).)
+<p>
+In the course of looking for an NST, I discovered the following line of
+flyback-type HV power supplies:
+<p>
+<ul>
+<li><A HREF="http://www.evertron.net/">Evertron High Voltage Neon Power
+ Supplies</A>.  (Ordering via
+ <A HREF="http://www.neoncentral.com/default.jsp">Neon Central</A>.
+</ul>
+<p>
+For example: the Evertron 2610 is rated at 10 kVAC, 10 mA for $45.50.  The
+model 2610D has dimming for $56.50.  There are also 3.5 kVAC and 6 kVAC
+models that are somewhat less expensive. The 3.5 kV unit runs on 12 VDC,
+the others on 115 VAC.
+<p>
+The neon bender I visited was kind enough to give me a couple of older
+units - one made by Evertron (Everbrite Electronics, the model 3210) and the
+other by Transfotek international.  One of these (the Evertron) works, but he
+had a whole pile of dead ones from various makers. He considers all of the
+electronic ones unreliable (compared to conventional NSTs), but that's
+probably in 24/7 service.  They ought to be OK for intermittent use in
+laser and HV projects if the output voltage and current are sufficient.
+<p>
+<A HREF="etrn3210.gif">Evertron Model 3210 Gas Tube Power Supply</A> shows
+the schematic of this unit.  It has a pair of power MOSFETs driving a
+flyback style high voltage transformer, with a whole bunch of open-wound
+primaries and a potted secondary.  A pair of MOSFETs (Q1, Q2, IRF730s) in a
+half bridge configuration drive the primary of a high frequency ferrite
+transformer via the coupling capacitor, C3.  Oscillation is sustained via a
+pair of feedback windings, one for each gate circuit.  The pulse width of
+the drive to the MOSFETs alternates on the half-cycles of the AC line waveform
+via a pair of opto-isolators (U1, U2).  Presumably, this creates an effect
+similar to the 60 Hz AC of an iron neon sign transformer.  Upon power-on, C4
+and D6 form a relaxation oscillator with a frequency of about 1 Hz to "tickle"
+Q2 into starting.  This also activates Q1 via its feedback winding and the
+system then comes up (or blows up). :)  We (Sam and myself) have are not sure
+what the triac circuit does - perhaps it is to detect a broken or shorted tube
+condition and inhibit full operation, or perhaps it is there just to confuse
+us attempting to reverse engineer the circuit!  Or, more likely, it is a sort
+of HV GFCI (Ground Fault Circuit Interrupter) - The triac would be triggered
+only if there were an unbalanced condition resulting from a short to ground
+in (one side of) the HV circuit.
+<p>
+I did plug the thing in and was rewarded with an impressive arc at about 1
+cm electrode spacing (bare wires).
+<p>
+The Transfotek unit is completely potted, except for the AC input and
+on-off switch. And completely dead.
+<p>
+It may be possible to feed the output of one of these units to a HV multiplier
+(home-built or one from a TV) to boost it to 20 or 30 kV.  The only problem
+with using a commercial TV tripler would be that their design current is a
+couple of mA - I don't know how well it would hold up with much higher output
+current.
+<p>
+(From: Sam.)
+<p>
+The only problem with using a a TV tripler may be its rated current is only
+a couple of mA and I don't know how well a typical unit it would hold up with
+much higher output current.  Attempting to power a higher current laser may
+result in mediocre performance or early failure.
+
+<h3><A NAME="clpcps5">Related Power Supply Information</A></h3>
+
+<ul>
+<li>SAFETY: See the document: <A HREF="safety.htm">Safety Guidelines for High
+  Voltage and/or Line Powered Equipment</A>.
+<p>
+<li>High voltage (1 to 5 kV) low current (3 to 15 mA) dc power supplies and
+  high voltage (5 to 30 kV) starting circuits: See the chapters starting with:
+  <A HREF="laserhps.htm#hpstoc">HeNe Laser Power Supplies</A>.
+<p>
+<li>Medium voltage (100 to 200 V), high current (3 to 12 A) DC power supplies.
+  This includes HV igniter circuits as well: See the chapters starting with:
+  <A HREF="laseraps.htm#apstoc">Ar/Kr Ion Laser Power Supplies</A>.
+<p>
+<li>Examples of HV generators based on high frequency inverters and voltage
+  multipliers: See the document:
+  <A HREF="http://www.repairfaq.org/sam/samschem.htm">Various Schematics
+  and Diagrams</A>.
+<p>
+<li>Capacitor charging and trigger circuits: See the document:
+  <A HREF="http://www.repairfaq.org/sam/strbfaq.htm">Notes on the
+  Troubleshooting and Repair of Electronic Flash Units and Strobe Lights</A>.
+<p>
+<li>Where to scrounge various HV and other useful parts.  See the document:
+  <A HREF="http://www.repairfaq.org/gadget.htm">Salvaging Interesting
+  Gadgets, Components, and Subsystems</A>.
+</ul>
+
+<h3><A NAME="clptsg">Triggered Spark Gaps</A></h3>
+
+A triggered spark gap may be desirable as a means of providing a very short
+high current pulse for some versions of the N2, CuCl/CuBr, PMG, and other
+pulsed lasers.  The basic concept is similar to the triggering of a xenon
+strobe expect that the desired effect is the current pulse rather than light.
+In fact, a xenon flashlamp can be used as the trigger device in some types of
+triggered spark gaps,
+<p>
+(From: Jonathon Caywood (sarlock@twcny.rr.com).)
+<p>
+So far I have turned up several triggered spark gap (SG) designs as listed
+below.
+
+<ol>
+<li>Close proximity smaller SG next to the larger SG.  This design employs
+ constructing an secondary electronic driven SG which sits next to the main
+ SG.  From what I gather this design uses the UV from the secondary SG to
+ ionize the air between the electrodes on the primary SG, causing it to
+ trigger.
+<p>
+<li>Three electrode configuration.  This basically consists of your two main
+ SG terminals with a third 'initiator' terminal placed in between the main
+ SG terminals.  In some designs the initiator terminal is offset and closer
+ to one of the main SG terminals, in other designs the initiator terminal
+ sits directly in the middle of the two SG terminals
+<p>
+<li>Laser triggered SG.  I included this one for fun of it since it's not
+ really useful for my particular application, but is interesting.  Basically
+ a nitrogen laser is used to ionize the air between the SG electrodes and
+ cause it to fire.  This only seems useful for larger spark gaps where a
+ giant thyratron is out of the question, since you need a triggered spark gap
+ to get the proper timing on the firing of the nitrogen laser.
+</ol>
+
+<p>
+(From: Mark Kinsler (kinsler@frognet.net).)
+<p>
+I horsed with these in my high-voltage days and found that there's a bit
+more art than science in getting them to work.  I don't think that the UV
+is that big an issue, though there's still some debate about it. Dr.
+Michael Mazzola of Mississippi State University did some research on the
+role of UV in spark gap triggering fairly recently. 
+<p>
+I think that methods 1 and 2 are essentially the same, actually.  You can
+also think of the xenon photoflash circuit in a camera as being about the
+same thing: there's a little wire wrapped around the strobe tube about
+halfway between the main terminals.  This wire is supplied with a 4kV
+pulse from the shutter circuit.  
+<p>
+The triggered spark gap on our old Marx generator at MSU consisted of two
+toilet-tank-sorts of copper spheres.  A 1" or so hole was cut into one of
+the spheres.  In the middle of this hole you could see a long needle
+electrode: it looked sort of like the sphere had a tongue.  This needle
+was contained inside but insulated from the the sphere.  A high-voltage
+pulse (20kV?) was used to make a spark from the needle to the sphere that
+surrounded it.  This would initiate the discharge between the two spheres
+quite reliably.  
+<p>
+All of which is to say that you'll have to do some experimentation.
+<p>
+<hr>
+<br>
+<li>Back to <A HREF="laserfaq.htm#faqtoc">Sam's Laser FAQ Table of Contents</A>.
+<li>Back to <A HREF="laserclp.htm#clptoc">The Home-Built Laser Assembly and
+ Power Supply Sub-Table of Contents</A>.
+<li>Forward to <A HREF="laserclt.htm#clttoc">Home-Built Laser Types,
+ Information, and Links</A>.
+<p>
+<hr>
+<b><center>Sam's Laser FAQ, <A HREF="copyright.htm">Copyright &copy<A> 1994-2009,
+ Samuel M. Goldwasser, All Rights Reserved.<br>
+ I may be contacted via the
+ <A HREF="emaillnk.htm">Sci.Electronics.Repair FAQ
+ Email Links Page</A>.</center></b>
+<hr>
+<p>
+</BODY>
+</HTML>

@@ -1,0 +1,191 @@
+<HTML>
+<HEAD>
+<TITLE>Sam's Laser FAQ Local Installation</TITLE>
+</HEAD>
+<BODY>
+<p>
+<hr>
+<b><center>Sam's Laser FAQ, <A HREF="copyright.htm">Copyright &copy<A> 1994-2009,
+ Samuel M. Goldwasser, All Rights Reserved.<br>
+ I may be contacted via the
+ <A HREF="emaillnk.htm">Sci.Electronics.Repair FAQ
+ Email Links Page</A>.</center></b>
+<hr>
+<p>
+<PRE>
+
+</PRE>
+<center>
+<h1>
+<b><FONT SIZE = "8">Sam's Laser FAQ<br></FONT SIZE></b>
+Local Installation
+</h1>
+<h2>
+Version 1.57
+<br>
+</h2>
+<h3>
+<A HREF="copyright.htm">Copyright &copy<A> 1994-2009
+<br>
+Samuel M. Goldwasser
+<br>
+--- All Rights Reserved ---
+<br>
+<br>
+For contact info, please see the
+<A HREF="emaillnk.htm">Sci.Electronics.Repair FAQ
+Email Links Page</A>.
+<br>
+</center>
+<br>
+Reproduction of this document in whole or in part is permitted
+if both of the following conditions are satisfied:
+<ol>
+<li>This notice is included in its entirety at the beginning.
+<br>
+<li>There is no charge except to cover the costs of copying.
+</ol>
+</h3>
+<A NAME="lfitoc"></A>
+<hr>
+<br>
+<h2>Table of Contents</h2>
+<ul>
+<li><A HREF="#lfiint">Introduction</a>
+<li><A HREF="#lfibin">Basic Installation</a>
+<li><A HREF="#lfiicl">Icons and Links</a>
+</ul>
+<hr>
+<br>
+<h2><A NAME="lfiint">Introduction</A></h2>
+
+This document outlines the installation procedure to create a local browser
+accssible copy of Sam's Laser FAQ: Safety, Info, Links, Parts, Types,
+Drive, Construction - A Practical Guide to Lasers for Experimenters and
+Hobbyists.  It consists of a set of HTML files and associated schematics,
+diagrams, and photographs.
+<p>
+Note that Sam's Laser FAQ is constantly evolving.  While having a local copy is
+convenient and provides for fast access, you lose the benefit of always having
+the very latest version at your fingertips.  Keep this in mind before you go
+to the installation effort only to find that your copy is out-of-date even
+before all the bits have settled into place. :)
+<p>
+<hr>
+<br>
+<h2><A NAME="lfibin">Basic Installation</A></h2>
+
+Important: Silicon Sam's Technology Resource (SSTR, all-faqs.zip) does not
+include Sam's Laser FAQ (laserfaq.zip) in its distribution.  Therefore, Sam's
+Laser FAQ must be loaded or updated separately even if you have installed SSTR.
+<p>
+The following assumes a first time install of Sam's Laser FAQ:
+<ul>
+<li>See <A HREF="samsites.htm">Home and Mirror Site Locations</A> to identify
+ a site with a ZIPPED version of Sam's Laser FAQ.
+<p>
+<li>Download laserfaq.zip either into a new directory or into the same
+ directory as SSTR (or a new directory if you don't have SSTR) and decompress
+ it (unix unzip or DOS PKUNZIP):
+<p>
+ <ul>
+ <li>Extract all files:      unzip (or PKUNZIP) laserfaq
+ <li>Extract selected files: unzip (or PKUNZIP) -x laserfaq file1 file2 ...
+ <li>Directory of laserfaq:  unzip (or PKUNZIP) -v laserfaq
+ </ul>
+<p>
+ (Answer 'yes' or 'all' to any duplicate file queries.)
+<p>
+ The file "laserfil.htm" contains a summary of all the HTML, photos,
+ diagrams, and schematics which constitute this release.
+<p>
+<li>To set up a remote link page to the Laser Equipment Gallery, create a
+ new directory (in the same directory that you just decompressed into) called
+ "laserpic" and move the file "laserpic.htm" to this new directory and also
+ make a copy of it there named "index.html".  CAUTION: If you actually have
+ the Laser Equipment Gallery resident locally, then you DON'T need or want to
+ do this - but you should have figured that out by now!
+<p>
+<li>If Sam's Laser FAQ is not in the same directory as your Homepage
+ and/or SSTR, use a text editor to replace all instances of the strings
+ "index.html" and "sammenu.htm" in the files: "lasersam.htm" and "laserpic.htm"
+ with links to appropriate places.
+<p>
+<li>When "lasersam.htm" is accessed via a Web browser, everything may be viewed
+ directly.  To bypass the Welcome Page, link to "laserfaq.htm" instead.
+<p>
+<li>Your browser needs to be configured properly to make sense of the many
+ ASCII diagrams, schematics, and tables.  See the document:
+ <A HREF="browset.htm">Suggested Browser Settings</A> for font and other
+ related information.
+<p>
+<li>The file "emaillnk.htm" contains a redirect to email links for the
+ Sci.Electronics.Repair FAQ authors (Sam and Fil), as well as the
+ general Feedback Form.  Edit this file if the location of the email
+ contacts page should change in the future.
+</ul>
+<p>
+I routinely test all of this on Unix (Sun OS/Solaris), Linux (Redhat),
+and Windows (Win98, WinME, Win2000, WinXP) using both Mozilla Firefox and
+Internet Explorer.  Please let me know if there are any problems.
+<p>
+<hr>
+<br>
+<h2><A NAME="lfiicl">Icons and Links</A></h2>
+
+Two sets of icons are included for linking to Sam's Laser FAQ from your own
+Web pages (lasersam.gif and laserfaq.gif, 64 x 64 pixels) and from Windows
+(lasersam.ico and laserfaq.ico, 32 x 32 pixels).  (The fabulously detailed
+graphics on laserfaq.gif and laserfaq.ico will even help you to remember how
+to connect a helium-neon laser tube correctly!)  For example:
+<ul>
+<li>To create a link to Sam's Laser FAQ from an existing Web page, use a text
+ or HTML editor to add the following lines to it:
+<pre>
+&lt;li>&lt;a href="lasersam.htm">Sam's Laser FAQ&lt;/a> &lt;a href="lasersam.htm">
+  &lt;img WIDTH=64 HEIGHT=64 src="laserfaq.gif" alt="LASERFAQ" align=middle
+  border=0>&lt;/a> - A Practical Guide to Lasers for Experimenters and
+  Hobbyists.
+</pre>
+  This will add the icon and create hot links to "Sam's Laser FAQ" as long as
+  it is in the same directory with an appearance similar to this:
+<p>
+ <ul>
+ <li><a href="lasersam.htm">Sam's Laser FAQ</a> <a href="lasersam.htm">
+  <img WIDTH=64 HEIGHT=64 src="laserfaq.gif" alt="LASERFAQ" align=middle
+  border=0></a> - A Practical Guide to Lasers for Experimenters and Hobbyists.
+ </ul>
+<p>
+ Edit as appropriate for your complete path if located elsewhere.
+<p>
+<li>If you are running Win95 or above (I don't know if this works for Win3.1x),
+ the .ico format icon files can be used when accessing Sam's Laser FAQ from a
+ folder or the desktop.
+<p>
+ To add a link from the Windows desktop directly to the Sam's Laser FAQ Table
+ of Contents, surf over to your copy of "lasersam.htm" and press
+ and hold the left mouse button while dragging the local "Sam's Laser FAQ"
+ hot link to the desktop.  (These are the ones just below the "Welcome"
+ heading and near the end of lasersam.htm.)  Create a shortcut there and then
+ edit its properties to use the icon of your choice!  (You can do the same
+ thing with any of the other hot links instead if you do not intend to
+ maintain a local copy of Sam's Laser FAQ.)
+</ul>
+<p>
+<hr>
+<br>
+<li>Back to <A HREF="#lfitoc">Sam's Laser FAQ Install Table of Contents</A>. 
+<li>Go (back) to <A HREF="samsites.htm">Home and Mirror Site Locations</A>.
+<p>
+-- end V1.57 --
+<p>
+<hr>
+<b><center>Sam's Laser FAQ, <A HREF="copyright.htm">Copyright &copy<A> 1994-2009,
+ Samuel M. Goldwasser, All Rights Reserved.<br>
+ I may be contacted via the
+ <A HREF="emaillnk.htm">Sci.Electronics.Repair FAQ
+ Email Links Page</A>.</center></b>
+<hr>
+<p>
+</BODY>
+</HTML>

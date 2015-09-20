@@ -1,0 +1,3651 @@
+<HTML>
+<HEAD>
+<TITLE>Sam's Laser FAQ - HeNe Laser Power Supplies</TITLE>
+</HEAD>
+<BODY>
+<A NAME="hpstoc"></A>
+<p>
+<hr>
+<b><center>Sam's Laser FAQ, <A HREF="copyright.htm">Copyright &copy<A> 1994-2010,
+ Samuel M. Goldwasser, All Rights Reserved.<br>
+ I may be contacted via the
+ <A HREF="emaillnk.htm">Sci.Electronics.Repair FAQ
+ Email Links Page</A>.</center></b>
+<hr>
+<p>
+<li>Back to <A HREF="laserfaq.htm#faqtoc">Sam's Laser FAQ Table of Contents</A>.
+<h1>HeNe Laser Power Supplies</h1>
+<h2>Sub-Table of Contents</h2>
+<ul>
+<li><A HREF="laserhps.htm#hpsrtc">Requirements, Types, Choices, Build or Buy, Safety</A>
+ <ul>
+ <li><A HREF="laserhps.htm#hpsrtc0">Basic HeNe Laser Power Supply Considerations</A>
+ <li><A HREF="laserhps.htm#hpsrtc1">So Many Choices</A>
+ <li><A HREF="laserhps.htm#hpsrtc2">SAFETY when Dealing with HeNe Laser Power Supplies</A>
+ <li><A HREF="laserhps.htm#hpsbldr">Adding a Bleeder Resistor to a HeHe Laser Power Supply</A>
+ </ul>
+<p>
+<li><A HREF="laserhps.htm#hpscao">Construction Alternatives, Organization</A>
+ <ul>
+ <li><A HREF="laserhps.htm#hpscao0">Constructing Your Own Power Supply</A>
+ <li><A HREF="laserhps.htm#hpscao1">Basic HeNe Laser Power Supply Organization</A>
+ <li><A HREF="laserhps.htm#hpscao2">RF or Microwave Power Supply for HeNe Laser?</A>
+ <li><A HREF="laserhps.htm#hpscao3">Neon Tube Power Supply for HeNe Laser?</A>
+ </ul>
+<p>
+<li><A HREF="laserhps.htm#hpsuca">Using Commercially Available Power Supplies</A>
+ <ul>
+ <li><A HREF="laserhps.htm#hpsuca0">Powering Your HeNe Tube the Easy Way</A>
+ <li><A HREF="laserhps.htm#hpschps">Compatibility Checklist for HeNe Laser Power Supply Bricks</A>
+  <ul>
+  <li><A HREF="laserhps.htm#hpsmgps">Melles Griot HeNe Laser Power Supplies</A>
+  <li><A HREF="laserhps.htm#hpsldps">Laser Drive HeNe Laser Power Supplies</A>
+  <li><A HREF="laserhps.htm#hpshups">Hughes HeNe Laser Power Supplies</A>
+  </ul>
+ <li><A HREF="laserhps.htm#hpsuca1">Common Color Coding of Power Supply Bricks</A>
+  <ul>
+  <li><A HREF="laserhps.htm#hpsuca1a">Sample Color Coding of AC Input Power Supply Bricks</A>
+  <li><A HREF="laserhps.htm#hpsuca1d">Sample Color Coding of DC Input Power Supply Bricks</A>
+  </ul>
+ <li><A HREF="laserhps.htm#hpsbrkw">Importance of Fusing Power Supply Bricks</A>
+ <li><A HREF="laserhps.htm#hpsadap">Adapters for DC HeNe Laser Power Supply Bricks</A>
+ <li><A HREF="laserhps.htm#hpsuca2">Examples of the Use of Commercial Power Supply Bricks</A>
+  <ul>
+  <li><A HREF="laserhps.htm#hpsuca21">1 mW HeNe Laser Powered by 12 VDC, 1 A Wall Adapter</A>
+  <li><A HREF="laserhps.htm#hpsuca22">2 mW HeNe Laser Using AC Line Operated Power Supply Brick</A>
+  <li><A HREF="laserhps.htm#hpsuca23">Lab Style HeNe Laser Power Supply Using Power Supply Brick</A>
+  </ul>
+ <li><A HREF="laserhps.htm#hpsuca3">Initial Testing of HeNe Laser Power Supply Bricks</A>
+ <li><A HREF="laserhps.htm#hpspssp">HeNe Laser Power Supplies in Series or Parallel?</A>
+ <li><A HREF="laserhps.htm#hpspbst">Boosting the Current of a HeNe Laser Power Supply</A>
+ <li><A HREF="laserhps.htm#hpspred">Reducing the Current of a HeNe Laser Power Supply</A>
+ <li><A HREF="laserhps.htm#hpsuca4">Using a HeNe Laser Power Supply for Other Applications</A>
+ </ul>
+<p>
+<li><A HREF="laserhps.htm#hpsbrf">Ballast Resistors, Function, Selecting</A>
+ <ul>
+ <li><A HREF="laserhps.htm#hpsbrf0">What is the Purpose of the Ballast Resistor?</A>
+ <li><A HREF="laserhps.htm#hpsbrf0a">Locations of the Ballast Resistance</A>
+ <li><A HREF="laserhps.htm#hpsbrf1">Selecting the Ballast Resistor Using Your HeNe Tube</A>
+ <li><A HREF="laserhps.htm#hpsbrf2">Selecting the Ballast Resistor Using a Dummy Load</A>
+ </ul>
+<p>
+<li><A HREF="laserhps.htm#hpsdcf">Determining Characteristics, Fixed Current Considerations</A>
+ <ul>
+ <li><A HREF="laserhps.htm#hpsdcf0">Determining the Compliance Range of a Power Supply</A>
+ <li><A HREF="laserhps.htm#hpsdcf1">Fixed Current Power Supply Considerations</A>
+ </ul>
+<p>
+<li><A HREF="laserhps.htm#hpsspm">Power Supply Measurements, Testing, Repair</A>
+ <ul>
+ <li><A HREF="laserhps.htm#hpsspm1">Making Measurements on HeNe Laser Power Supplies</A>
+ <li><A HREF="laserhps.htm#hpsbrmb">Ballast Resistor Selector and Meter Box</A>
+ <li><A HREF="laserhps.htm#hpsspm2">Testing a HeNe Laser Power Supply</A>
+ <li><A HREF="laserhps.htm#hpsspm3">HeNe Laser Power Supply Repair</A>
+ <li><A HREF="laserhps.htm#hpsrreg">Replacing a Regulator Stack with Resistors</A>
+ </ul>
+</ul>
+<A NAME="hpsrtc"></A>
+<hr>
+<br>
+<li>Back to <A HREF="laserfaq.htm#faqtoc">Sam's Laser FAQ Table of Contents</A>.
+<li>Back to <A HREF="laserhps.htm#hpstoc">HeNe Laser Power Supplies Sub-Table of Contents</A>.
+<h2>Requirements, Types, Choices, Build or Buy, Safety</h2>
+<h3><A NAME="hpsrtc0">Basic HeNe Laser Power Supply Considerations</A></h3>
+
+Modern small to medium size HeNe tubes require an operating voltage between
+about 900 and 2,500 VDC at 3 to 6 mA and a 5 to 12 kV starting voltage (but
+almost no current).  Precise values depend on the size and construction of the
+tube.  This assumes something in the .5 to 10 mW range.  Larger tubes will
+required greater voltage and current (e.g., 5,000 VDC at 8 mA, 15 kV to start)
+but are powered in basically the same way as their smaller siblings.  However,
+a 250 mW monster as well as some very old tubes will likely have significantly
+different or additional power requirements.
+<p>
+A few HeNe lasers - usually larger or research types - have used a radio
+frequency (RF) generator - essentially a radio transmitter to excite the
+discharge.  This was the case with the original HeNe laser but is quite
+rare today given the design of internal mirror HeNe tubes and the relative
+simplicity of the required DC power supply as described later in this chapter.
+<p>
+Unlike laser diodes, the HeNe drive is not nearly as critical to performance
+and tube life. :-)  Therefore, even if you do not have a datasheet for your
+tube, you can probably guess fairly closely as to its requirements and then
+optimize performance based on optical output alone.
+<p>
+Then again, see <A HREF="http://www.repairfaq.org/sam/humor/henemelt.jpg">Oops!
+HeNe Laser Tube Meltdown</A>.  This is what happens if your tube and power
+supply aren't matched.  Just kidding.  I actually suspect that someone got
+just a bit carried away with a glass working torch to create this sculpture
+but it got your attention, huh? :)  (This mantlepiece sculpture was created
+by Wayne Crowther (esoteric@pacifier.com).)
+
+<h3><A NAME="hpsrtc1">So Many Choices</A></h3>
+
+There are any number of ways of constructing these supplies - over a dozen
+sample circuits are provided in the chapter: <A HREF="laserhsc.htm#hsctoc">Complete HeNe Laser Power Supply
+Schematics</A>.  However, you don't need to build your own:
+<p>
+<ul>
+<li>If you just want a working laser, buying a power supply may be worth the
+  money - these may be available for as low as $10 or less.
+  (<A HREF="http://www.allelectronics.com/">All Electronics</A> had a recent
+  special on a high quality power supply 'brick' but that (not surprisingly)
+  must have been sold out as it has disappeared from their on-line catalog).
+  More typical surplus prices would be $25 for a power supply suitable for 1
+  to 2 mW tubes and up to $100 for 5 to 10 mW tubes.  Expect to pay 2 or 3
+  times as much for new power supplies.  Laser surplus places like
+  <A HREF="http://www.mi-lasers.com/">Meredith Instruments</A> and
+  <A HREF="http://www.mwklasers.com/">MWK Laser Products</A> may also
+  have low cost HeNe laser power supplies.
+<p>
+  With these, at most you will have to add a ballast resistor and power line or
+  battery connections.  Models are available that run off either low voltage
+  DC (regulated is desirable) or 115 or 230 VAC.
+<p>
+  See the section: <A HREF="laserhps.htm#hpsuca2">Examples of the Use of
+  Commercial Power Supply Bricks</A>.
+<p>
+<li>Kits are also available but may not be any cheaper and are not necessarily
+  as well designed as surplus commercial units.  Two popular suppliers include
+  <A HREF="http://www.herbach.com/">Herbach and Rademan Co.</A> and
+  <A HREF="http://www.edsci.com/">Edmund Scientific</A> (complete HeNe laser
+  kit).  Laser surplus places may also have power supply kits.
+<p>
+<li>The complete laser and optics assemblies from supermarket checkout UPC
+  scanners and other similar devices are often available at very reasonable
+  prices - $25 to $100 - which includes the HeNe laser tube, power supply,
+  various lenses and mirrors, scanner motor or galvo, and other neato stuff.
+  Just the HeNe tube and power supply may be available for even less.  Since
+  these systems are being converted over to diode lasers, the HeNe components
+  are just junk to the scanner manufacturer - but a bonanza to the hobbyist
+  and experimenter!
+<p>
+<li>HeNe tubes and power supplies are quite frequently offered by people
+  posting on the sci.electronics hierarchy, sci.optics, alt.lasers, or other
+  USENET newsgroups as well as other on-line discussion groups, technical
+  forums, and bulletin boards.  Prices are often very low but of course you
+  may have no way of knowing who you are dealing with.  See the section:
+  <A HREF="laserlps.htm#lpsols">On-Line Sources (Non-Commerical)</A>.
+</ul>
+
+<h3><A NAME="hpsrtc2">SAFETY when Dealing with HeNe Laser Power
+ Supplies</A></h3>
+
+Whether you have constructed your own power supply, are testing an old one,
+or just checking out a newly acquired HeNe tube, SAFETY must come first:
+<p>
+See the section: <A HREF="lasersaf.htm#saftoc">Laser Safety</A> with respect
+to the optical hazards associated with lasers.  While not in the metal cutting
+class, careless use of higher power HeNe lasers, especially, can result in
+permanent damage to vision.  Many are only Class II or Class IIIa but some are
+well into the Class IIIb range.
+<p>
+HeNe laser power supplies utilize high voltage at low current.  The few mA
+needed to operate the HeNe tube or even a 10 kV starting pulse tube can
+certainly give you an unpleasant shock but will not likely be enough to do
+lasting damage.  However, there may be much more current actually available
+and there is always the possibility of collateral damage:
+<p>
+<ul>
+<li>If the power supply is home-built, it may use grossly oversize components
+ because they are less expensive and more readily available than what is
+ exactly needed - or the unit has been conservatively designed to run much
+ larger lasers.  Therefore, while the HeNe tube may only require 5 mA, the
+ supply may be capable of dumping many times this amount into your poor
+ unsuspecting body.  And if you come in contact with a live terminal, it will
+ take the shortest path to ground though a nice low impedance bag of mostly
+ water. :-)
+<p>
+<li>For supplies running on 115 VAC, there will be some components directly
+ connected to the power line.  These may be minimal but make sure they are
+ insulated and out of reach.  That 115 VAC may not sound like much but it is
+ potentially far more dangerous than the 10 kV starting voltage.
+<p>
+<li>Contact with the operating and/or starting voltages can result in a reflex
+ reaction which may have unfortunate consequences (as in you rip and burn
+ your flesh, and shock yourself simultaneously).  In other words, the shock
+ may not hurt as much as the foot long gash and burnt impression in your arm.
+ Not to mention the damage to your disposition as you clean up the bits of
+ glass and electronic components now littering the basement floor :-(.
+<p>
+<li>People working with lasers tend to do so in a darkened room.  Under these
+ conditions especially, make sure all protective covers and insulating
+ barriers are in place and tape over exposed connections unless you actually
+ require access to the internal components.
+<p>
+<li>Even after the laser is shut off, the filter capacitors in the power
+ supply as well as the capacitance of the HeNe tube itself can store a charge
+ for a long time - hours, maybe even days!  (Even if there is a bleeder
+ resistor on the main supply, there is probably none on the starting
+ multiplier.)  While this isn't likely to be lethal, a reflex reaction to it
+ can have similar consequences to touching the live supply, above.  Where a
+ HeNe tube doesn't want to start, up to 10 kV or more may be sitting there
+ waiting to zap you!
+<p>
+ Always discharge between the power supply output and/or HeNe tube terminals,
+ and between each of these and the earth Ground or common of the power supply
+ and case of the laser head (if not tied to the cathode) before touching
+ anything inside or even the esposed ends of the head's male Alden connector
+ if you just umplugged it.  Use a set of well insulated leads and a total of
+ about 100K of resistance rated for high voltage (e.g., 5, 20K, 1 W resistors
+ in series).  CAUTION: Omitting the resistors may result in annoying snaps
+ and sparks as well as possible damage to the equipment.  To be absolutely
+ sure, do all the combinations more than once and then confirm that
+ everything is completely discharged with a voltmeter.  Leaving a shorting
+ lead in place across the terminals while working inside is a good idea as
+ well.  For laser heads with Alden connectors, I usually pull the connector
+ and poke its pins into some antistatic foam to discharge the laser head.
+ However, this doesn't discharge the pwoer supply.  Note that even after
+ doing any or all of this, capacitors have been caught regaining a part of
+ their charge when no one was looking! :)  Also see the section:
+ <A HREF="laserhps.htm#hpsbldr">Adding a Bleeder Resistor to a HeHe Laser
+ Power Supply</A>.
+</ul>
+<p>
+Read, understand, AND FOLLOW, the guidelines provided in the document:
+<A HREF="safety.htm">Safety Guidelines for High Voltage and/or Line Powered
+Equipment</A>.
+
+<h3><A NAME="hpsbldr">Adding a Bleeder Resistor to a HeNe Laser Power
+ Supply</A></h3>
+
+This is probably overkill (no pun...) for a laser you are using as a laser. :)
+But if you are wiring up a system which is to be used for testing where it may
+be necessary to go inside quite frequently, it may be possible to add a
+high voltage bleeder resistor directly across the output.  It will be need
+to be both a high resistance (200M or more) and rated for the peak starting
+voltage (10 kV or more).  A series string of 10, 20M, 1/2 W resistors in
+an insulated (plastic or glass) tube would be a suitable substitute.
+The higher the resistance, the longer it will take to discharge the power
+supply and HeNe tube capacitance.  However, the minimum resistance that can
+be used will depend on the amount of starting current available.  For
+'brick' power supplies, 200M should be acceptable.  However, for voltage
+multiplier based starters, a much higher resistance may be needed so as not
+to load down the output excessively.  Confirm that the amount of time needed
+to start the largest tube to be used on the supply doesn't change
+significantly with and without the bleeder before installing it permanently.
+<p>
+<A NAME="hpscao"></A>
+<hr>
+<br>
+<li>Back to <A HREF="laserhps.htm#hpstoc">HeNe Laser Power Supplies Sub-Table of Contents</A>.
+<h2>Construction Alternatives, Organization</h2>
+<h3><A NAME="hpscao0">Constructing Your Own Power Supply</A></h3>
+
+If you still want to build your own, there are basically two approaches for
+the operating voltage (AC line operated or high frequency inverter) and three
+approaches for the starting voltage (diode/capacitor multiplier, pulse trigger
+circuit, or high compliance design).
+<p>
+Here are six options for providing the operating voltage.  These examples
+assume an output of at least 1,800 VDC:
+<p>
+<ol>
+<li>Use a 1,300 VRMS power transformer.  Then, all that is needed is a
+ rectifier and filter capacitor.
+<p>
+<li>Use a 700 VRMS power transformer with a 2 diode 2 capacitor voltage
+ doubler.
+<p>
+<li>Use a lower voltage power transformer and a multi-stage voltage multiplier.
+ Up to 6 stages should be reasonably easy to construct.
+<p>
+<li>Build a low voltage input inverter using a flyback transformer from a small
+ B/W or color TV computer monitor, or video terminal but running at lower
+ voltage than normal.  These usually have a built in HV rectifier but you
+ will need a HV filter capacitor and ballast resistor.  While rated at only
+ a mA or so for the CRT HV, more current should be available at reduced
+ voltage.  With proper design, it is possible for there to be enough voltage
+ compliance to be self starting.  See the section:
+ <A HREF="laserhsc.htm#hscsgi">Sam's Inverter Driven HeNe Laser Power
+ Supplies</A>.
+<p>
+<li>Build a HV inverter based on any of a number of simple DC-DC converter
+ topologies.  See the document:
+ <A HREF="http://www.repairfaq.org/sam/samschem.htm">Various Schematics
+ and Diagrams</A> for ideas.
+<p>
+ You will probably need to modify these mostly by increasing the number of
+ turns on the output windings of the inverter transformer - which in itself
+ may be a challenge to maintain low capacitance and high voltage insulation.
+<p>
+ See the section: <A HREF="laserhsc.htm#hscsit">Simple Inverter Type Power
+ Supply for HeNe Laser</A> for one modified for driving a HeNe laser tube.
+<p>
+<li>Build a HV inverter of the type discussed above using a PWM controller
+ integrated circuit - Linear Technology, Maxim, Motorola, National
+ Semiconductor, Unitrode, and others have suitable DC-DC controller chips.
+</ol>
+<p>
+I would recommend (1) or (2) if portability is not a big issue and you can
+locate a suitable transformer.  These are virtually foolproof (well, at least
+as long as you don't fry yourself from the high voltage).  For small tubes,
+the design described in the section: <A HREF="laserhsc.htm#hsces1">Edmund
+Scientific HeNe Laser Power Supply</A> is about as simple as possible.
+<p>
+See the sections starting with: <A HREF="laserhpd.htm#hpdac11">AC Line Operated
+Versus Inverter Based Power Supplies</A> for more discussion of features, basic
+operation, and design issues.
+
+<h3><A NAME="hpscao1">Basic HeNe Laser Power Supply Organization</A></h3>
+
+A typical configuration is shown below.  As noted, the starting circuit may
+be omitted in a high compliance design.  The regulator is desirable but the
+location shown (low-side series) is just one option.  Without a regulator,
+tube current will need to be set by controlling the power input and/or
+selecting the ballast resistor.
+<PRE>
+
+            +----------+     +------------------+ HV+   Ballast Resistance
+     o------|          |-----| Starting Circuit |--------------/\/\----+
+   Input,   |  Main    |     +------------------+               Rb     |
+   AC line  |  Power   |                                               |
+   or DC    |  Supply  |     +-----------+   Tube- +-----------+ Tube+ |
+     o------|          |-----| Regulator |----+----|-[        -|-------+
+            +----------+ HV- +-----------+   _|_   +-----------+
+                                              -      HeNe tube
+
+</PRE>
+See the <A HREF="tubehene.gif">Typical HeNe Laser Tube Structure and
+Connections</A> for the basic hookup diagram.
+<p>
+The ballast resistor (Rb) may sound really boring but it is essential to
+provide stability and limit the current to the value specified for your
+particular tube.  The most common value is 75K but slightly smaller and much
+larger values may be used to match a particular HeNe tube to a power supply.
+<p>
+A higher voltage supply and larger ballast resistance will be more stable if
+there is no built-in regulation.  This results from the fact that the voltage
+drop across the tube is relatively independent of tube current so it subtracts
+out from the supply voltage.  What is left is across the ballast resistor and
+changes by a proportionally greater amount when the line voltage varies.  The
+smaller the ballast resistor, the more this will affect tube current.
+<p>
+You really do want the current to be close to that recommended for your tube
+both to maximize the life of the tube and because maximum optical power output
+is produced at the optimal current.  Note that the HeNe tube specs will
+include the recommended current.  In some cases, this may not coincide with
+maximum output power due to manufacturing tolerances, age/use, or other
+factors.  It may be acceptable to run such a tube on the current (probably
+higher than spec'd) which maximizes output power but this would have to
+be determined on a case-by-case basis and except for some very wide bore
+(multimode) tubes, should never be higher than about 6.5 mA.
+<p>
+Setting the tube current can be accomplished by adjusting either the input
+voltage to the power supply (if there is no current regulator) or the
+regulator (if there is) and/or by selecting the value of the ballast
+resistance.  Excessive current is bad for the tube and will actually
+result in decreased optical output (and more optical noise though you'd
+probably never notice that by eye).  If the current is too high by a factor of
+2 or 3, there will be no output at all.  It is not possible to pulse a HeNe
+laser for higher power (though pulse drive is possible for modulation - see
+the section: <A HREF="laserhpd.htm#hpdmdp8">Pulse Type Drive and Modulation of
+HeNe Tubes</A>).  Without any regulation, the value of the ballast resistor is
+more critical and power line fluctuations will significantly affect tube
+current though such variations may not matter for many applications.
+<p>
+Note that since the tube itself provides a relatively constant voltage drop
+around its nominal current, a small change in line voltage will affect the
+tube current to a much greater degree than would be expected by the percent of
+the actual voltage change.  The incremental change in tube current will be
+closer to: delta(I) = delta(V)/Rb where Rb is the ballast resistor.  This will
+be on the order of 10 to 20 times more sensitive to input voltage changes than
+with a straight resistive load.  Thus, a regulator is often desirable.
+<p>
+The large (can) electrode of the HeNe tube is the cathode (-) end.  It may run
+if connected backwards but the small anode (supposed to be positive but now
+incorrectly connected as negative) will get very hot since much of the power
+dissipation is at the negative electrode due to positive ion bombardment.
+The resulting sputtering may damage the mirror at that end and tube life will
+likely be shortened.
+<p>
+I've autopsied an HeNe laser tube which had been ruined in a few minutes by
+being driven from a Tesla coil based on an automotive ignition coil and relay
+interrupter without rectification.  The result was sputtering of the HR mirror
+which was clearly visible once the mirror was removed.  Except under very
+special conditions, any HeNe laser power supply must produce a DC output that
+is relatively well filtered at an operating current reasonably close to the
+spec'd value for the tube.  Anything else will result in reduced tube life and
+less than optimal output power.  Two exceptions are high speed pulsed drive
+where the plasma never really gets extinguished between pulses (for laser beam
+modulation) and RF excitation.  For the purposes of making the laser lase, DC
+is what is needed. :)
+<p>
+CAUTION: While most modern HeNe tubes use the mirror mounts for the high
+voltage connections, there are exceptions and older tubes may have unusual
+arrangements where the anode is just a wire fused into the glass and/or the
+cathode has a terminal separate from the mirror mount at that end of the tube.
+Miswiring can result in tube damage.  See the section:
+<A HREF="laserhtr.htm#htridc0">Identifying Connections to Unmarked HeNe Tube
+or Laser Head</A> if in doubt.
+<p>
+Design considerations and a variety of sample circuits are provided in the
+chapters: <A HREF="laserhpd.htm#hpdtoc">HeNe Laser Power Supply Design</A> and <A HREF="laserhsc.htm#hsctoc">Complete HeNe Laser Power
+Supply Schematics</A>.
+<p>
+For detailed plans, see the books listed in the section:
+<A HREF="laserlir.htm#lirref">References on Laser Principles, Technology,
+Construction, and Applications</A>.
+<p>
+However, if you have trouble changing a light bulb, never fear - packaged
+solutions are readily available at attractive prices.  You don't need to build
+your own HeNe laser power supply unless you have some special requirements, a
+really strange HeNe tube, or just for the shear joy of creation!
+
+<h3><A NAME="hpscao2">RF or Microwave Power Supply for HeNe Laser?</A></h3>
+
+Excitation of a laser using radio frequency or microwave power is possible and
+has been used commercially for several types of lasers including HeNe and CO2.
+(with patents granted on many others including ion lasers).  However, you
+aren't likely to get much just by sticking a HeNe laser tube in the family
+microwave oven other than glass shards all over the place. :(  Nor can you
+insert your HeNe tube into the antenna coil connected to the 2 kW final amp
+of your Ham radio transmitter.
+<p>
+The main problem is that you have to get the discharge intensity high enough
+inside the bore - that 1 mm or so diameter capillary tube where the action
+takes place.  In a typical internal mirror HeNe tube, 98 percent or more of
+the cross sectional area is outside the bore.  Since this is also gas filled,
+it will happily glow at equal or greater intensity than the bore, sucking up
+power and getting very hot in the process - while contributing nothing to the
+output.  So, the light show may be spectacular (until the thing explodes), but
+a laser beam is unlikely.  However, this is a way of testing to see if a tube
+has lost its gas fill, but stopping short of the 'explode' part. :)  See the
+section: <A HREF="laserhtr.htm#htrhtt0">How Can I Tell if My Tube is Good?</A>.
+<p>
+This is also not a viable means of exciting a HeNe tube that no longer lases
+due to gas fill or most other problems.  A conventional DC power supply will
+tell you that the tube is dead with a lot less hassle!
+<p>
+For an external mirror tube where the bore is accessible and separate from
+the gas reservoir, direct coupling is possible by using a suitable matching
+network from an RF generator.  This can be made to work since the energy can
+be forced to couple only to the gas inside the capillary.  One reason to try
+a scheme of this sort would be to power such a laser where one of the ballast
+resistors has failed open and they are located inside the sealed tube (as with
+some Spectra-Physics models).
+<p>
+The earliest HeNe lasers were RF excited in this manner but they had wide
+bores and mediocre output power.  If you are interested in trying your hand
+at duplicating one of these, then sure, go for it!  However, those lasers also
+had problems with rapid helium diffusion apparently accelerated by the RF
+fields applied to the glass so a sealed tube may be out of the question.
+<p>
+For a description of a commercial RF HeNe laser power supply (probably),
+see the secton: <A HREF="laserhsc.htm#hscsp9">Spectra-Physics Model 200
+Exciter (SP-200)</A>.
+<p>
+WARNING: The use of high power RF or microwave excitation creates an number of
+additional safety hazards beyond just simple electrocution.  Attempting to
+drive a HeNe (or other laser) in this manner isn't something you should think
+about experimenting with unless you have experience with this type of equipment
+and are thoroughly aware of the associated risks and precautions involved.
+
+<h3><A NAME="hpscao3">Neon Tube Power Supply for HeNe Laser?</A></h3>
+
+Hey, with 'neon' in the name; how different can can a neon tube be compared to
+a helium-neon laser?
+<p>
+Small discharge tubes are found in high-tech phones and other electronic
+sculpture.  A typical unit would be perhaps 2 feet long and 1/4" to 1/2" in
+diameter.  Modern power supplies for these tubes use an inverter to produce
+high frequency high voltage AC (not DC as required by a HeNe laser tube).
+Older ones will just use a mini version of a high voltage neon sign
+transformer.  Since large inside diameter (compared to HeNe lasers) neon tubes
+don't require a special starting voltage, this will be lacking in any such
+power supply.
+<p>
+While it may be possible to adapt portions of one of these to powering a HeNe
+laser, this probably isn't worth the effort.  A rectifier, filter, starting
+voltage source, and ballast resistors would need to be added.  With luck, the
+ballast resistance alone could be adjusted to set the tube current.  Otherwise,
+additional circuitry possibly including regulation would be needed.  However,
+the high frequency inverter (or high voltage transformer) might be
+salvageable.  :)
+<p>
+Similar comments apply to power supplies for fluorescent (e.g., that defunct
+camping lantern or obsolete laptop computer) and other high voltage discharge
+lamps.
+<p>
+Note that the power supplies for regular neon signs consisting of 10s of feet
+of glass tubing are, in addition to the reasons cited above, even more
+inappropriate for almost any size HeNe laser - they are gross overkill in both
+the voltage and current departments unless run at reduced input voltage on a
+Variac.  These are discussed in more detail below.
+<p>
+<A NAME="hpsuca"></A>
+<hr>
+<br>
+<li>Back to <A HREF="laserhps.htm#hpstoc">HeNe Laser Power Supplies Sub-Table of Contents</A>.
+<h2>Using Commercially Available Power Supplies</h2>
+<h3><A NAME="hpsuca0">Powering Your HeNe Tube the Easy Way</A></h3>
+
+Most commercial HeNe laser power supplies designed for incorporation into OEM
+(Original Equipment Manufactured) equipment (as opposed to lab type adjustable
+supplies) are affectionately called 'bricks' because they are solid black
+rectangular blocks (dimensions vary) potted in Epoxy (or some equally
+impenetrable resin) with wires sticking out.  They are generally high
+frequency inverter types operating either on 115 or 230 VAC, or low voltage
+DC (typically 6 to 30 VDC).
+<p>
+<A HREF="hene1hps.jpg">Melles Griot HeNe Laser Head and Laser Drive Power
+Supply Brick</A> shows a small Melles Griot laser head with a compatible Laser
+Drive power supply.  This brick is likely similar to the Melles Griot model
+05-LPM-379 with an output voltage compliance range of 1,150 VDC to 1,700 VDC.
+It has a trim pot to set the current between about 4 and 6.5 mA providing
+compatibility with almost any 1 to 2 mW HeNe laser head or (with an external
+75 K ohm ballast resistor) HeNe tube.
+<p>
+Power supply bricks are compact, highly efficient (well, in a relative sort
+of way as these things go!), and are generally very robust and reliable when
+used as intended.  The specifications usually claim to include protection
+for *momentary* open and short circuit faults, (as well as repeated arcs
+to ground, and low input voltage).  Thus, they shouldn't self destruct as a
+result of most reasonable screwups in wiring.  (Of course, if you accidentally
+attempt to power a 12 VDC unit from 230 VAC, the smoke *will* come out!).
+However, bricks may fail if a laser head is not attached (or a hard-to-start
+tube fails to start) after a few minutes or hours.  Continuously attempting
+to start without success is stressful for any HeNe laser power supply so
+don't push your luck!  And despite the supposed fault protection,
+many seem to be not particularly immune even to high resistance shorts
+as myself and others have found out the hard (expensive) way.  DC input
+types may not survive reverse polarity either.  And, of course, being
+fully potted, only in very rare cases are they useful for something other
+than construction bricks or sailboat ballast following any internal failure.
+<p>
+The simplest approach to powering HeNe tubes is often to purchase this type
+of power supply, either new or (more likely) surplus.  With a little bit of
+searching, they are readily available at attractive prices.  Manufacturers
+include Laser Drive, Power Technology, and Melles Griot.  Aerotech used to
+make these as well but has since gotten out of the HeNe laser business (but
+you may still find their HeNe tubes and power supplies from surplus sources).
+<p>
+Cost may be anywhere from $10 to $100 or more depending on power capability,
+whether it is new or surplus, and other factors.  Typical surplus prices are
+$10 to $35 for a unit capable of powering a .5 to 2 mW HeNe tube and $25 to
+$100 for one suitable for a HeNe tube up to about 5 mW.  Such power supplies
+(and HeNe tubes to go with them) may even be offered by private individuals on
+the Internet, possibly at even lower prices.  Of course, the usage history,
+quality, and reliability (of both the equipment as well as the seller) from
+such sources may be unknown.
+<p>
+The basic power supply specs will include the HeNe tube current and voltage
+compliance range.  The total voltage across your tube and ballast resistor at
+the operating tube current must fall within this range.  Since many of these
+bricks are set for a fixed current and may not have any user accessible
+adjustments (that is, without using a jack-hammer), the power supply and HeNe
+tube current specs must be fairly closely matched.  Look for types with an
+adjustable current setting if possible.  (Even if the specs or sticker on the
+unit show a fixed current, there may actually be an adjustment that is either
+obvious or protected by a removable plug since it is quite likely that the
+manufacturer fabricates and pots one type module that can be tweaked for a
+range of currents to reduce the need for separate inventory.  However, without
+confirmation from the manufacturer, there is no way to know for sure whether
+adjusting it far from the specified current is acceptable and doesn't result
+in excessive stress on the supply's circuitry.)  Some may be jumpered for
+2 or more fixed current settings.
+<p>
+In addition to power input and high voltage output connections, these supplies
+may also have one or more of the following: logic level enable (may need to be
+grounded or tied to a DC voltage), logic level output for indicator or
+something else, auxiliary DC power output(s), CDRH turn-on delay loop (cut to
+disable delay), HeNe tube cathode to ground return loop (cut to add current
+meter or beam-on indicator LED).  In many cases, there will be a wiring diagram
+on the brick.  If none is present, although there is no total standardization,
+some color coding conventions are usually followed.  See the section:
+<A HREF="laserhps.htm#hpsuca1">Common Color Coding of Power Supply Bricks</A>.
+<p>
+Power supplies may also be packaged along with a small HeNe tube, ballast
+resistor(s), and wiring as a complete laser optics assembly.  These have become
+available at very attractive prices as products like UPC scanners and laser
+disc players have switched to over to the use of laser diodes.  Since nearly
+everything but a wall plug is likely included in such a package, and hopefully
+the HeNe tube is matched to the power supply (with respect to current and
+voltage compliance), this approach should result in a working laser with
+minimal effort.
+<p>
+There are also many HeNe laser power supplies available that are not potted
+but simply conformal (dip) coated or are just unprotected components on a
+printed wiring board.  (The potting or coating is desired to prevent high
+voltage arcing or corona discharges.)  These often spent their former life in
+hand-held barcode or supermarket checkout scanners.  I like the naked ones
+because it is possible to reverse engineer them (I will pay shipping for
+any of these (dead or alive) you might have so I can add their schematics to
+the FAQ!).  However, their quality and reliability is often a total unknown.
+<p>
+At the other end of the scale, lab quality HeNe laser power supplies in fancy
+enclosures with or without front panel adjustable current controls are nice to
+own because they can be adapted to a variety of HeNe tubes.  However, this
+definitely comes at a significant cost premium (unless you find a really good
+deal) and are thus not usually a realistic option.  They are unnecessary in
+any case unless you expect to be playing with a variety of HeNe lasers and
+need this compatibility.  In fact, less expensive name-brand bricks may be more
+robust!
+<p>
+However, most of the common 'lab' style HeNe laser power supplies are actually
+just a standard power supply brick in a box with AC power cord, fuse, line
+filter, on/off/key switch, power-on light, Alden connector to attach the HeNe
+laser head, and an interlock connector and/or line voltage select switch on
+some models.  These units are, of course, somewhat more expensive than the
+bare bricks and are also much less likely to show up on the surplus market.
+<p>
+See the chapter: <A HREF="laserlps.htm#lpstoc">Laser and Parts Sources</A> for
+possible commercial and non-commercial suppliers of HeNe laser tubes, heads,
+and power supplies as well as things to watch out for when purchasing items
+like this from private individuals or commercial suppliers other than major
+laser companies.  Manufacturers of new HeNe laser power supply bricks include
+Laser Drive and Melles Griot; surplus sources include Meredith Instruments,
+Midwest Laser Products, and MWK Laser Products.  There are many others.
+
+<h3><A NAME="hpschps">Compatibility Checklist for HeNe Laser Power Supply
+ Bricks</A></h3>
+
+Assuming you know the power requirements of your HeNe tube or laser head, use
+the following guidelines when selecting a brick type power supply:
+<p>
+<ol>
+<li>The input voltage and current should be something available. :)
+ <ul>
+ <li>AC-input power supplies will need to be configured properly.  Where
+  the voltage doesn't quite match your electrical supply as with power
+  supplies rated for 100 VAC instead of 115 VAC, there are two options:
+  (1) hope it survives on the slightly incorrect voltage or (2) add a
+  buck/boost transformer to adjust the line voltage.  For the example
+  above, this can be a small 12 or 15 VRMS transformer with its input
+  connected across the line and its output connected in series with
+  the power supply input - with the proper polarity!  For line voltages
+  that are near their nominal voltage, there is probably no problem as
+  the supply will have been designed to handle a +/-5 or +/-10 percent
+  input voltage variation, so an added few percent will be tolerated.
+  But where, for example, your line voltage is running very high like
+  135 VAC, connecting a 100 VAC brick directly may be risky.
+<p>
+<li>DC-input power supplies usually have an acceptable range of voltages.
+  For example, a supply rated 12 VDC will usually - but not always - operate
+  correctly on 10 to 14 VDC.  Too high or too low and it may be destroyed.
+  A regulated DC power supply of the correct voltage and adequate current is
+  best, but where that input range is fairly wide, an unregulated supply
+  can be used.
+ </ul>
+<p>
+<li>The operating current should be within the current range of the power
+ supply.  If the supply has a fixed current setting, as long as this is
+ within about 10 percent, it will probably be acceptable.  I would prefer
+ the error to be on the low side if there is a choice to maximize tube life
+ Laser power output may be slightly lower than its rating but probably not by
+ anything significant.  However, some laser tubes or heads won't stay lit
+ at a current much lower than the optimum and a flickering laser is worse
+ than no laser as that can damage both the laser tube and power supply.
+<p>
+<li>The operating voltage should be within the voltage range of the power
+ supply.  The operating voltage is either specified explicitly for a laser
+ head or calculated from the HeNe tube voltage + ballast resistor voltage
+ drop (Io * Rb).  Where only a single voltage is listed for a power supply,
+ assume it is the upper limit; the supply will probably operate reliably
+ between this value and 25 to 30 percent less (somewhat dependent on the
+ current as well).  So, a supply listed as 2,450 VDC would be happy if your
+ laser head only required 1,800 VDC but don't go much lower unless you have
+ the actual specs and they indicate it is permitted.  Some have a much wider
+ range, but finding out the hard way that your model doesn't isn't fun.  Your
+ HeNe tube could end up with more current than it wants but more likely, the
+ power supply would become as dead as a - brick. :(
+<p>
+<li>The electrical output power (operating voltage times operating
+ current) into the laser head or ballast+laser tube should not
+ exceed the rating of the supply.  This in fact may be the most 
+ relevant parameter for commercial HeNe laser power supplies.
+ In some cases, for a given operating current, calculating the
+ operating voltage based on the maximum output power rating of the
+ supply may be acceptable even if the resulting operating voltage
+ exceeds the value shown on the label or listed elsewhere.  However,
+ input and output regulation will be worse near the ends of this
+ range.  But for many applications, this may not matter.
+<p>
+ For example, one particular sample listed 3.2 to 3.8 mA (adjustable
+ with a trimpot), 900 to 1,600 V, 7 W max.  While one might think that
+ the 1,600 V is a maximum safe (for the supply) voltage to use, if the
+ operating voltage is computed from the maximum power (7 W) and operating
+ current (say 3.5 mA), then it is actually a much higher 2,000 V and
+ this is acceptable, subject to the comment about regulation, above.
+<p>
+ However, unless the listing on the label explicitly says something like
+ "XX W max", it may simply be the power at the listed current and voltage.
+ Or, it may even be the input power!  In short, your mileage may vary in
+ interpreting these specifications.
+<p>
+ And, the power supply companies will generally protect themselves with
+ a statement something like: "The power supply should not be run under
+ conditions outside of any listed on the label as this may impact
+ regulation, stability, and life."
+<p>
+<li>Generally, the starting voltage provided by a brick supply will be
+ adequate as long as the operating voltage is within its compliance range.
+ However, some hard-to-start HeNe tubes may benefit from running near the
+ lower-end of a larger power supply (with its higher starting voltage) as
+ opposed to near the upper-end of a smaller one.
+</ol>
+<p>
+Selecting a lower rated power supply as long as it meets the requirements,
+above, will also likely be cheaper and a larger power supply won't get you
+even one additional photon of laser output!
+<p>
+Of course other things like control inputs, CDRH delay, output connector
+type, and size and weight, must also be compatible.
+<p>
+For high power (e.g., 25 mW and up) external cavity lab style HeNe lasers,
+options are somewhat limited.  Very few companies still manufacture
+such lasers and they may actually use (possibly custom) models from
+the laser power supply companies (see the next section) so it's worth
+checking those when searching for a replacement.
+
+<h4><A NAME="hpsmgps">Melles Griot HeNe Laser Power Supplies</h4></A>
+
+Here are some of the common Melles Griot HeNe power supplies in recent,
+if not current, production.  Note that the power supply modules ("bricks")
+are actually probably manufactured by Laser Drive, Inc.  They are all
+listed in terms of the output voltage compliance range.  Differences
+may still be present in terms of input voltage(s), output current,
+wire termination, and physical size.  Where part of a complete system,
+the 05 may be replaced with 25.
+<p>
+The voltage range for some of these entries may be smaller
+than actually provided by some of these power supplies, possibly
+to account for variation in supplier specifications.
+For example, the voltage range of the 05-LPM-379 which is listed here as
+1,400 to 1,600 V, may be shown on the actual brick as 1,150 to
+1,700 V.  Since most Melles Griot power supplies have complete
+specifications printed on a label, the information below would really
+only need to be used as a selection guide, or where a model number (without
+specs) is all that's available (as in an eBay auction).
+<p>
+Should only a single voltage be listed on the unit, the compatible range
+*probably* extends somewhat above and below this value but there is no way
+to be sure and it is probably not a good idea to push your luck too much on
+the high side at least.  Laser Drive generally spec's it to be +/-10
+percent.
+<p>
+Many of the bricks have a trimpot for adjusting the current over a relatively
+wide range even if only a single value for current (e.g., 6.5 mA) is printed
+on the label.  For example, an 05-LPM-379 (or 05-LPL-379) which may be
+used with the 05-LHR-901 laser head (nominal current of 4.5 mA), typically
+has an adjustment range of around 3 to 6 mA or more.  However, some bricks
+have no trimpot even in lab-style supplies.  Unless an adjustment range
+is shown on the label, the only way to know for sure is to locate the trimpot
+(or a calibration seal covering it), usually near the input wires.  A very
+few (well I only know of exactly one - the 05-LPM-949!) have two trimposts
+with the second one being to set the startup (CDRH) delay.  (This may have
+been a special OEM model used as a lamp igniter in a video projector.  What
+a waste!!)
+<p>
+<b>AC line powered models:</b>
+<p>
+All models start with 05-LPM for the brick or 05-LPL for those where a
+"lab-style" unit is currently available (as of 2007, indicated with
+a "*").  These have a brick mounted in a plastic box with power switch,
+light, and fuse.  Where part of a complete system, the 05 may be replaced
+with 25.  Higher voltage models are almost all 115/230 VAC compatible.  But
+some of the lower voltage units run on 115 AC only.  (They saved the cost
+of a wire.)  If only a single voltage was listed, then what's shown is that
+voltage +/-10%.
+<p>
+<ul>
+<li>900 to 1,300 V: 947.
+<li>1,100 to 1,500 V: 900*.
+<li>1,150 to 1,700 V: 378.
+<li>1,400 to 1,600 V: 379.
+<li>1,450 to 1,850 V: 927, 928, 901*. 925, 939*.
+<li>1,550 to 1,950 V: 908, 909, 904, 912, 914*, 941.
+<li>1,550 to 2,350 V: 310, 346.
+<li>1,575 to 1,925 V: 390.
+<li>1,620 to 1,980 V: 190.
+<li>1,650 to 2,050 V: 318, 931.
+<li>1,700 to 2,100 V: 911*, 946.
+<li>1,700 to 2,450 V: 340.
+<li>1,850 to 2,450 V: 902*, 905, 906, 907, 926, 930, 932, 935, 938, 942, 948,
+ 949.
+<li>2,100 to 2,500 V: 943.
+<li>2,200 to 2,600 V: 940.
+<li>2,250 to 2,650 V: 917.
+<li>2,450 to 2,850 V: 903*, 921, 936.
+<li>2,450 to 2,950 V: 370.
+<li>2,500 to 2,900 V: 924.
+<li>2,500 to 4,100 V: 915*. (Older version)
+<li>3,100 to 3,700 V: 915*. (Newer/current version)
+<li>2,600 to 3,100 V: 933.
+<li>4,400 to 5,100 V: 944*, 945.
+</ul>
+<p>
+<b>Low voltage DC powered models:</b>
+<p>
+These are Melles Griot power supplies with DC input.  Most are 12 VDC input but
+a few are designed for 6, 8, 15, 24 VDC.
+<p>
+<ul>
+<li>900 to 1,400 V: 101.
+<li>1,000 to 1,600 V: 826.
+<li>1,000 to 1,400 V: 102.
+<li>1,050 to 1,450 V: 806, 825, 827.
+<li>1,100 to 1,400 V: 106.
+<li>1,100 to 1,500 V: 800, 808, 829, 813, 815.
+<li>1,150 to 1,700 V: 179.
+<li>1,300 to 1,700 V: 833.
+<li>1,450 to 1,850 V: 804, 809.
+<li>1,600 to 2,000 V: 830.
+<li>1,850 to 2,450 V: 803, 807, 810, 812, 815, 816, 820, 821, 828.
+<li>2,500 to 3,100 V: 824.
+<li>2,500 to 3,500 V: 376.
+<li>3,350 to 3,950 V: 822, 832.
+</ul>
+
+<h4><A NAME="hpsldps">Laser Drive HeNe Laser Power Supplies</A></h4>
+
+The following information was provided courtesy of
+<A HREF="http://www.laserdrive.com/">Laser Drive</A> and applies to most
+of their standard HeNe laser power supplies.  For custom requirements, contact
+Laser Drive directly.  For each supply series, these show the available
+minimum and maximum input voltage, the minimum and
+maximum output voltage and current, as well as the *approximate* HeNe laser
+output power for compatible laser tubes/heads.  However, any single model
+will generally <b>NOT</b> cover the entire range.  More below.
+<p>
+<b>DC Input (10 to 32 VDC):</b>
+<p>
+<ul>
+<li><A
+HREF="http://www.repairfaq.org/sam/lsrdrv/101T_General_Spec.pdf">101T</A> -
+Output: 1.1 to 2.45 kV, 3.0 to 6.5 mA. Laser output power: 0.5 to 5 mW.
+<li><A
+HREF="http://www.repairfaq.org/sam/lsrdrv/102T_General_Spec.pdf">102T</A> -
+Output: 1.1 to 1.9 kV, 3.0 to 5.5 mA. Laser output power: 0.5 to 4 mW.
+<li><A
+HREF="http://www.repairfaq.org/sam/lsrdrv/103_General_Spec.pdf">103</A> -
+Output: 1.1 to 2.45 kV, 3.5 to 6.5 mA. Laser output power: 0.5 to 5 mW.
+<li><A
+HREF="http://www.repairfaq.org/sam/lsrdrv/106T_General_Spec.pdf">106T</A> -
+Output: 1.1 to 1.8 kV, 3.35 to 5.0 mA. Laser output power: 0.5 to 3 mW.
+<li><A HREF="http://www.repairfaq.org/sam/lsrdrv/111_General_Spec.pdf">111</A>
+- Output: 1.1 to 2.45 kV, 3.0 to 6.5 mA. Laser output power: 0.5 to 5 mW.
+<li><A
+HREF="http://www.repairfaq.org/sam/lsrdrv/121T_General_Spec.pdf">121T</A> -
+Output: 1.05 to 2.45 kV, 3.0 to 6.5 mA. Laser output power: 0.5 to 5 mW.
+<li><A
+HREF="http://www.repairfaq.org/sam/lsrdrv/180T_General_Spec.pdf">180T</A> -
+Output: 2.3 to 3.1 kV, 5.0 to 10.0 mA. Laser output power: 4 to 10 mW.
+</ul>
+<p>
+<b>AC Input (90 to 260 VAC):</b>
+<p>
+<ul>
+<li><A
+HREF="http://www.repairfaq.org/sam/lsrdrv/314T_General_Spec.pdf">314T</A> -
+Output: 1.1 to 2.8 kV, 3.0 to 7.2 mA. Laser output power: 0.5 to 7 mW.
+<li><A
+HREF="http://www.repairfaq.org/sam/lsrdrv/324T_General_Spec.pdf">324T</A> -
+Output: 1.1 to 2.8 kV, 3.0 to 7.2 mA. Laser output power: 0.5 to 7 mW.
+<li><A HREF="http://www.repairfaq.org/sam/lsrdrv/380T_General_Spec.pdf">380T</A> -
+Output: 2.5 to 4.5 kV, 6.0 to 10.0 mA. Laser output power: 5 to 25 mW.
+<li><A HREF="http://www.repairfaq.org/sam/lsrdrv/390T_General_Spec.pdf ">390T</A> -
+Output: 4.3 to 5.3 kV, 7 to 12 mA. Laser output power: 20 to 35 mW.
+</ul>
+<p>
+Notes:
+<p>
+<ol>
+<li><b>Input voltage and current:</b> This option determines the allowable
+ input voltage (AC or DC as appropriate).  There may be some overlap.
+ Where there is only a single listed current, it is the worst case for
+ the lowest voltage option at maximum rated output.
+<p>
+<li><b>Output voltage and current:</b> Each series power supply may come in
+ several "Ranges", which  determine the output capabilities of the specific
+ model supply.  For example, with
+ the 101T, Range 2 specifies 1,500 to 1,800 VDC AND 4.5 to 5.5 mA.  Note that
+ where only a single set of values is printed on the label (e.g., 1,600 V,
+ 5.0 mA for the 101T), this uniquely determines that it is a Range 2 supply.
+ If a adjustment pot is present (possibly covered by a calibration sticker),
+ the allowable min and max current is determined by the Range of the supply
+ - 4.5 to 5.5 mA for the 101T.
+<p>
+<li><b>Adjustment and compliance limits:</b> Any given power supply
+ <b><i>may</i></b> operate outside of these specifications (current
+ and/or voltage), but could fail without warning due to overstress of internal
+ components.  And this of course voids the warranty!
+</ol>
+
+<h4><A NAME="hpshups">Hughes HeNe Laser Power Supplies</A></h4>
+
+These are all lab-style power supplies consisting of an AC-input
+switchmode brick mounted in a plastic case at a greatly inflated price
+(unless we're talking eBay!).
+<p>
+<PRE>
+  Model (ACV)       Output
+ 115/230  100    Iop      Vop           Laser head compatibility
+-------------------------------------------------------------------------------
+  4000    4050  4.5 mA  1,650 V         3203H and other LC series laser heads.
+  4010    4060  7.0 mA  1,650 V         HP 3176H, 3194H, 3223H
+  4020    4070  6.5 mA  1,730-2,450 V   LF 3221H, 3222H, 3224H, 3225H
+  4030    4080  9.3 mA  3,300 V         LF 3235H
+  4040    4090  7.0 mA  2,700 V         3227H
+</PRE>
+<p>
+And the newer ones in the small black cases (similar to the Melles Griot
+HeNe laser power supplies):
+<p>
+<PRE>
+  Model (ACV)        Output
+   115/230       Iop        Vop         Laser head compatibility
+-------------------------------------------------------------------------------
+  5000/5000F    4.5 mA  1,550-1,750 V   3209H
+  5010/5010F    7.0 mA  1,550-1,750 V   3223H
+  5020/5020F    6.5 mA  1,650-2,450 V   3221H, 3222N, 3224H, 3225H
+  5040/5040F    7.0 mA  2,600-2,800 V   3227H
+</PRE>
+<p>
+All of these will also run the corresponding polarized "-PC" laser heads.
+<p>
+Really old Hughes power supplies are in a more-or-less
+cubical metal box and use a high voltage transformer with a potted
+high voltage module housing the rectifier/doubler/filter and linear
+regulator.
+<p>
+<PRE>
+  Model (ACV)     Output
+   115/230     Iop   Regulator   Vop     Laser head compatibility
+-------------------------------------------------------------------------
+    3598H     6.5 mA (Fixed)   ????? V   ????? 15a", 4 to 6 mW
+    3509H     6.5 mA (Adjust.) ????? V   3176H 12", 2-B tube, 3 to 5 mW
+</PRE>
+<p>
+Some have a current adjustment pot well hidden.  It
+is at the bottom of a recessed hole on the side of the potted HV section
+against the sheet metal divider.  So, 4 screws need to be removed to gain
+access.  Also, some of these power supplies have a glass tube in a
+socket.  This is a thermal relay for the CDRH delay.  It can come loose
+in shipping and then the power supply will appear to be dead.  Hint:
+Excessive output current may cause the regulator inside the potted
+module to fail shorted and the current will then be way too high.
+But the power supply can still be used on a Variac to control current. :)
+
+<h3><A NAME="hpsuca1">Common Color Coding of Power Supply Bricks</A></h3>
+
+Note: Not all of the HeNe laser power supplies in the next few sections
+are "bricks" in the strict sense of the term (portions aren't potted!),
+and the wiring may be via connectors instead of color coded wiring but
+so be it. :)
+<p>
+Most of the HeNe laser power supply bricks you are likely to encounter will
+have been manufactured by one of the following companies (in alphabetical
+order):
+<p>
+<ul>
+<li><A HREF="http://www.aerotechinc.com/">Aerotech</A>.  Aerotech
+ is no longer in the HeNe laser business.  Their product line was acquired
+ by Melles Griot (see below), who may have specifications and wiring info
+ (via email) for older Aerotech power supplies.
+<p>
+<li><A HREF="http://www.laserdrive.com/">Laser Drive</A>.  Laser Drive
+ claims to be the largest manufacturer of HeNe laser power supplies on the
+ planet.  Their Web site has detailed specifications for at least their
+ current power supply models in the PDF file
+ <A HREF="http://www.laserdrive.com/pdf/henehook.pdf">Connecting HeNe Laser
+ Power Supplies</A>.  They produce OEM HeNe power supplies for Melles Griot,
+ Coherent, and probably others.
+<p>
+<li><A HREF="http://www.mellesgriot.com/">Melles Griot</A>.
+ Melles Griot has acquired the HeNe laser product lines of
+ Aerotech and Hughes (among others) and may still manufacture some of their
+ models (of lasers at least) for compatibility with older equipment.  However,
+ their own HeNe laser power supply product line is quite extensive and
+ includes models for nearly every size HeNe tube or laser head.  Most, if
+ not all, of these are actually manufactured by Laser Drive, above.
+<p>
+<li><A HREF="http://www.powertechnology.com/">Power Technology</A>.
+ Power Technology claims to be the oldest consistent manufacturer of power
+ supplies for HeNe lasers, in the business since 1969.  Complete specifications
+ and wiring info available on their Web site.
+<p>
+<li><A HREF="http://www.spectral.it/">Spectral.it</A>.  Spectral has only
+ one model but it is suitable for high power HeNe lasers requiring
+ between 6 and 16 mA at 2 to 4.8 kV.
+<p>
+<li><A HREF="http://www.voltagemultipliers.com/">Voltage Multipliers, Inc.</A>.
+ This company has a variety of high voltage power supplies and components as
+ well as HeNe laser power supply bricks.
+<p>
+<li><A HREF="http://www.voltex.net/">Voltex, Inc.</A>.  Voltex is perhaps
+ the least well known of the major HeNe laser power supply manufacturers
+ but that is their main business.  They even have a universal HeNe laser
+ test set for powering virtually all HeNe lasers which includes current
+ adjust, and voltage and current monitoring.
+</ul>
+<p>
+Others may simply be relabeled products of these major manufacturers but there
+are also occasional units from lesser known companies, or those who would not
+be expected to make any sort of power supply!
+<p>
+The laser head wiring will usually be done in one of the following ways:
+<p>
+<ul>
+<li>In most cases, the outputs are either fat red and fat or thin black wires
+ for the ballast resistor/anode and cathode respectively with or without a two
+ prong female <A HREF="alden.gif">Alden Connector</A>.  The short prong is HV
+ positive and the long prong is HV negative, which is usually connected inside
+ the power supply to the negative input or chassis ground.
+<p>
+<li>High power HeNe lasers may us something somewhat similar but with 3
+ prongs (the third one is for chassis ground which may be different than HV
+ negative).  CAUTION: Siemens/LASOS and Spectra-Physics pinouts are NOT
+ the same!
+<p>
+<li>Some Spectra-Physics lasers use a special 3 pin round connector (view
+ is looking toward power supply):
+<p>
+<PRE>
+               O  Positive (Anode)
+               1
+      GND  O 3   2 O  Negative (Cathode)
+           
+               o  Interlock Prong
+
+</PRE>
+<p>
+ The GND may not actually be present on some power supplies.  In most cases, it
+ is already connected to the negative elsewhere.  The interlock prong
+ activates a microswitch in the power supply to complete the primary-side
+ circuit only if the power supply and laser head are securely attached.
+ This provides protection for the power supply but isn't present on all
+ models.
+<p>
+ IMPORTANT: The design of these connectors is somewhat marginal for the
+ peak starting voltage that may be present, especiall with hard-to-start
+ tubes.  Make sure the connector is fully seated with the locking
+ ring tight.  Otherwise, it's possible for arcing to occur which will
+ damage the power supply connector and possibly the cable connector as
+ well by carbonizing the plastic between the pins.
+<p>
+<li>Some Coherent, Jodon, Spectra-Physics, and other HeNe lasers use
+ a special high voltage BNC connector.  They appear to be the 10 kV
+ series from <A HREF="http://www.kingselectronics.com/">Kings Electronics</A>.
+ Since these are expensive ($25 to $35 each and probably special order from
+ an electronics distributor), and correctly assembling BNC plugs is
+ somewhat of an art form not easily mastered, replacing them with common Alden
+ connectors is often the best solution where one is damaged, or it is
+ desired to mate a laser head with a power supply that doesn't quite match.
+ Or, buy a dead laser head cheap on eBay and just use its cable!  Of course,
+ sometimes these turn out to be fully functional.  Don't you just hate it
+ when that happens? :)
+<p>
+<li>Some power supplies may use spring loaded contacts if designed to mount
+ directly in a laser head (and probably have a built-in ballast resistor as
+ well) and others may just have push-on or other type connectors.
+</ul>
+<p>
+More details on these can be found in the section:
+<A HREF="laserhtr.htm#htridc0">Identifying Connections to Unmarked HeNe Tube
+or Laser Head</A> Where no output connector is present, the following
+procedures can be used to identify the positive and negative wires:
+<p>
+<ul>
+<li>Read the label! Many supplies have detailed wiring info printed somewhere
+ on the brick.
+<p>
+<li>If one wire is red and the other is a different color, the red one is
+ almost certainly the positive.
+<p>
+<li>If there is a thick and thin wire, the thick one is almost certainly
+ the positive.
+<p>
+<li>Measure the continuity of each output wire to Earth ground (AC supplies,
+ green or green yellow) or negative input (DC supplies, usually black).
+ The one with the lower resistance will be negative.  This resistance will
+ most often be close to zero ohms and the other will almost certainly
+ measure open.
+<p>
+<li>Use a voltmeter with a high voltage probe to test the output voltage,
+ but don't run the power supply open-circuit any longer than necessary.
+<p>
+<li>Take a guess and power your HeNe laser head or tube with a mA meter
+ in the cathode return circuit.  Turn it on just long enough for it to start
+ and take note of whether the polarity of the current is correct.  Reverse
+ if necessary.  CAUTION: DO NOT let the tube run for more than a few seconds if
+ the polarity is wrong!  A neon lamp can be used in place of the mA meter -
+ only the negative electrode will glow.  WARNING: Make sure the meter is
+ well insulated and don't touch it with power applied.  If you guessed wrong,
+ the full output voltage will be on it!  Take care when changing connections
+ as these power supplies can store a painful charge in their output capacitors.
+<p>
+<li>Do the same but with a stack of 100K ohm resistors large enough to result
+ in approximately the operating current at the nominal operating voltage.
+<p>
+<li>I do NOT recommend doing this with only the mA meter or neon lamp as a
+ load.  While the manufacturer may claim short circuit protection, don't
+ believe it!  Some power supplies will literally explode.
+</ul>
+<p>
+The CDRH (Center For Devices And Radiologic Health) of the Food and Drug
+Administration delay mentioned with respect to some of these power supplies
+prevents the beam from coming on for 3 to 5 seconds after power is applied
+(i.e., should the ON switch be hit accidentally) and may be needed to meet
+certain regulatory requirements.
+<p>
+Whether or not each of the various control inputs or status outputs are
+present on a particular unit is model dependent.
+<p>
+The following two sections have a summary of some of the wiring color codes
+I have come across for HeNe laser power supply bricks.
+<p>
+Note: color1/color2 means color1 with a color2 stripe.
+
+<h4><A NAME="hpsuca1a">Sample Color Coding of AC Input Power Supply
+ Bricks</A></h4> 
+
+The following run off of the AC line.  Usually, they can be wired for either
+115 VAC or 230 VAC operation but sometimes the manufacturer saved a few cents
+and doesn't provide this option.  There is no standard color coding for these
+bricks though the examples below cover most common models.  Earth ground
+(green or green/yellow) should be tied to power line earth ground for safety.
+This is usually a direct connection but can also be via a 100 ohm resistor to
+prevent ground loops.  Unless specifically noted as not necessary by the
+manufacturer, a fuse should be installed in series with the Hot wire.  A
+rating of 0.5 to 1 A should be adequate for most small bricks but a several
+amp fuse may be required for those driving higher power lasers.  The fuse
+is to deal with catastrophic internal failure like a shorted rectifier which
+could cause parts to explode if there is no protection.  A momentary output
+fault shouldn't blow the fuse.  Therefore, the fuse can be soldered
+in permanently since it should never have to be replaced.  See the section:
+<A HREF="laserhps.htm#hpsbrkw">Importance of Fusing Power Supply Bricks</A>.
+<p>
+If you're curious as to how the dual voltage capability is done, here is the
+simplified circuit for the AC line front-end of one of these power supplies:
+<p>
+<PRE>
+                  D1
+    L1 o-----+----|>|-------+---------+-----o DC (+)
+            ~|    D2        |+        |
+             +----|&lt;|----+  |       +_|_
+                  D3     |  |     C1 ---
+             +----|>|----|--+       - |
+             |    D4     |    +-------+     +320 VDC to chopper
+    L2 o-----+----|&lt;|----+ -  |       |
+            ~            |    |     +_|_
+    L3 o-----------------|----+   C2 ---
+                         |          - |
+                         +------------+-----o DC (-)
+
+</PRE>
+<p>
+<ul>
+<li>For operation on 115 VAC, power is applied between L1 or L2 (which can
+ be tied together but this isn't necessary) and L3.  D1/D3 and
+ D3/D4, along with C1 and C2, act as a voltage doubler which provides
+ approximately twice the peak line voltage (about 320 VDC for a 115 VAC input)
+ to the chopper.
+<p>
+<li>For operation on 230 VAC, power is applied between L1 and L2, L3 is left
+ open.  D1/D2/D3/D4 then form a bridge rectifier which provides approximately
+ the peak line voltage (about 320 VDC for a 230 VAC input) to the chopper.
+</ul>
+<p>
+In either case, the polarity of the AC wiring (e.g., for 115 VAC whether Hot
+goes to L1/L2 and Neutral goes to L3 or vice-versa) shouldn't matter in terms
+of safety or performance.  But follow the manufacturer's recommendations if
+they show a particular wiring arrangement.
+<p>
+It should be possible to confirm the correct wiring for your line voltage if
+the power supply isn't labeled or listed below ASSUMING YOU ARE SURE THAT THE
+WIRES YOU ARE DEALING WITH ARE FOR THE AC INPUT (you really don't want to be
+pumping line voltage into a logic level enable!).   Use a Variac limited to a
+maximum voltage of around 120 VAC to feed the supply with its output connected
+to a known good compatible laser head or HeNe laser tube with 75K ohm ballast
+resistor.  Try each of the 3 possible pairs in turn.  For 2 of these, the
+laser should start at about 60 to 85 VAC.  The 3rd will be the 230 VAC
+configuration and may not start at all on your maximum of 120 VAC.  However,
+locating this pair is a good way to confirm which wires should be tied
+together for 115 VAC operation.  Note that assuming you have the correct
+three (3) wires, there is no combination (even tying together L1 and L3 or L2
+and L3) that will produce smoke from a 115 VAC input and every one but
+using only the 230 VAC pair alone will result in correct operation.  (I just
+consider it cleaner to tie L1 to L2 as opposed to leaving one of these open or
+tying it to L3.)  CAUTION: There are just guidelines - your mileage may vary!
+<p>
+CAUTION: All unused/unconnected wires should be insulated.
+<p>
+Here are the color codes for some common AC line powered models:
+<p>
+<ol>
+<li>Aerotech (115/230 VAC type).  Red (or possibly other color except
+ green or green/yellow) wire loop enables CDRH delay (cut to disable).  The
+ AC input wire color may depend on model.  Green or green with a yellow
+ stripe is earth ground and connected to cathode lead internally.  (Some
+ typical specs: LSS 05 - 1,400 V +/-200 V, 4.0 mA; LSS 2 - 1,900 V +/-250 V,
+ 5.0 mA; LSS 5 - 2,500 V +/-300 V, 6.0 mA, LSS 10L - 3,000 V +/-300 V, 6.5 mA.
+ Current may actually be slightly
+ different depending on option but will probably be marked if not equal to
+ what's shown above.  There is no current adjust pot accessible from the
+ outside.  I know exactly where the pot is (by examining a unit that was
+ partially destroyed) but that doesn't help since the rock-hard Epoxy potting
+ compound surrounds it and drilling a hole at that location would be useless.
+ (However, it might be possible to drill into the pot, discombobulating it,
+ but providing access to its connections.  This is left as an exercise for
+ the student.)  Note that the designation 05, 2, or 5 means that the supply
+ is sort of intended for 0.5 mW, 2 mW, 5 mW, or 10 mW HeNe lasers,
+ respectively.  But of course this isn't etched on stone tablets!
+ The same color code is used for rectangular bricks and integral
+ cylindrical power supplies.
+<p>
+ <ul>
+ <li>115 VAC: Brown to black, blue (or gray) open.
+ <li>230 VAC: Blue (or gray) to brown, black open.
+ </ul>
+<p>
+<li>Coherent (115 VAC types).  Green is earth ground but may NOT be
+ connected to cathode lead internally.  Purple wire loop enables CDRH delay
+ (cut to disable).
+<p>
+ <ul>
+ <li>115 VAC: Whites (tied together) to yellow.
+ <li>230 VAC: White to white, yellow open.
+ <li>Current select: Connecting white/orange to white/purple selects 6.5 mA;
+  open selects 5.25 mA (model CR90-115).  Other Coherent models may
+  differ.  A switch can be used in place of the jumper plug.  A pot of
+  around 25K ohms can be used to vary the current continuously from
+  about 5.25 mA (25K) to 6.5 mA (0).  A reverse audio taper (to get a
+  more uniform change with respect to angle) with a switch at the far
+  CCW position (to get the 5.25 mA) may be best.  Or, a 6 position
+  switch with resistors to select the current can be used.  Then, no
+  mA meter is needed - just count clicks! :) The appoximate resistor
+  values for mine are: open (5.25 mA), 24K (5.5 mA), 10K (5.75 mA),
+  3.9K (6.0 mA), 1.2K (6.25 mA), and 0 (6.5 mA), give or take 0.1 mA.  If
+  using a "break-before-make" type switch (most common), put a 22 uF (10 V or
+  higher) capacitor between the white/purple (+) and white/orange wires (-)
+  to minimize the current dip during
+  switching.  But note that the current will start at 6.5 mA and then
+  decay to the set current in a fraction of a second at power up
+  as the capacitor charges.  This is generally of no consequence.
+  With a "make-before-break" type switch, wire as a tapped resistor
+  instead of separate resistors and there will be no glitch.  Details
+  are left as an exercise for the student.
+ </ul>
+<p>
+<li>Laser Drive (115/230 VAC type).  Violet (or possibly other color except
+ green or green/yellow) wire loop enables CDRH delay (cut to disable).  Green
+ or green with a yellow stripe is earth ground and connected to cathode lead
+ internally.  There may be a current adjust pot.
+<p>
+ <ul>
+ <li>115 VAC: Whites (tied together) to yellow.
+ <li>230 VAC: White to white, yellow open.
+ <li>TTL high (+3 to +5 VDC) required between yellow/white (+) and
+  yellow/black (-) to enable laser.
+ <li>Output status signal (possibly around 11 VDC, to drive lamp or
+  something): Gray.
+ </ul>
+<p>
+Or, different colors:
+<p>
+ <ul>
+ <li>115 VAC: Brown and blue (tied together) to white,
+ <li>230 VAC: Brown to blue, white open.
+ </ul>
+<p>
+Or, still others:
+<p>
+ <ul>
+ <li>115 VAC: Reds (tied together) to yellow,
+ <li>230 VAC: Red to red, yellow open.
+ </ul>
+<p>
+ Some 115 VAC Laser Drive power supplies may only have two whites (or other
+ same color) for input.  In this case, 115 VAC goes between them.  There are
+ no other options. :)
+<p>
+<li>Melles Griot (115/230 VAC type).  Violet wire loop enables CDRH
+ delay (cut to disable).  Green is earth ground and connected to cathode
+ lead internally.  There is usually a current adjust pot near where the
+ input wires exit the brick (may be covered with tape).  Some models may not
+ have both 115 VAC and 230 VAC options and/or the CDRH loop.  (Some or all
+ Melles Griot power supplies are manufactured by Laser Drive.)  An additional
+ number after the 3 digit model may be present to indicate the factory
+ default current setting (changing it voids the warranty, I'm sure you care!)
+ or a code for the maximum power rating of the supply.  (Melles Griot power
+ supplies are manufactured by Laser Drive, so check there (above) if your
+ power supply has a different color scheme than the following.
+<p>
+ The following is for their model 05-LPM-379:
+<p>
+ <ul>
+ <li>115 VAC: Whites (tied together) to yellow.
+ <li>230 VAC: White to white, yellow open.
+ </ul>
+<p>
+ This is for models like the 05-LPM-379, 05-LPM-340, 05-LPM-903, 05-LPM-915,
+ and 05-LPM-939:
+<p>
+ <ul>
+ <li>115 VAC: Brown and blue (tied together) to white,
+ <li>230 VAC: Brown to blue, white open.
+ </ul>
+<p>
+<li>Power Technology (115/230 VAC type).  Violet wire loop enables CDRH
+ delay (cut to disable).  Whether AC inputs are white or gray depends on
+ model.  Green or green with a yellow stripe is earth ground and connected to
+ cathode lead internally.
+<p>
+ <ul>
+ <li>115 VAC: Whites or grays (tied together) to yellow.
+ <li>230 VAC: White to white (or gray to gray), yellow open.
+ <li>TTL enable: Separate pair of wires, on of which is usually White/black.
+  Requires +5 VDC on white/red, high to enable, low to inhibit.  These color
+  codes and operation vary by model.  The actual voltage may not matter
+  very much with anything from 3 to 10 VDC turning on the laser.  Other
+  possible colors include white/yellow and yellow/white.
+ </ul>
+<p>
+<li>Spectra-Physics (115/230 VAC type).  Violet wire loop enables CDRH
+ delay (cut to disable).  Green is earth ground and connected to cathode
+ lead internally.  Typical model is 229-7P, which uses the round
+ Spectra-Physics high voltage connector.
+<p>
+ <ul>
+ <li>115 VAC: Either or both reds or whites (depends on model) to yellow.
+ <li>230 VAC: Red to red or white to white (depending on model).
+ </ul>
+<p>
+<li>Uniphase (115/230 VAC type).  For current models, see
+ <A
+ HREF="http://www.jdsu.com/product-literature/heneps_ds_cl_ae_121205.pdf">JDSU
+ Power Supply Options for HeNe Lasers</A> or
+ <A HREF="http://www.repairfaq.org/sam/laser/heneps_ds_cl_ae_121205.pdf">Sam's
+ Copy of JDSU Power Supply Options for HeNe Lasers</A>.
+ For older models, see the other color codes, above.  These may be
+ from Laser Drive.  For example, the 314S-2300 with green for ground with
+ violet CDRH loop:
+<p>
+ <ul>
+ <li>115 VAC: Whites (tied together) to yellow.
+ <li>230 VAC: White to white, yellow open.
+ </ul>
+<li>Voltex (115/230 VAC type).  For current models, see
+ <A HREF="http://www.voltex.net/">Voltex, Inc.</A>.  A typical model
+ would have green for ground with violet CDRH loop:
+<p>
+ <ul>
+ <li>115 VAC: Whites (tied together) to yellow.
+ <li>230 VAC: White to white, yellow open.
+ </ul>
+</ol>
+
+<h4><A NAME="hpsuca1d">Sample Color Coding of DC Input Power Supply
+ Bricks</A></h4>
+
+The following operate from a low voltage DC input.  Most require 12 VDC
+but some may use a lower voltage (like 6 VDC) or higher voltage (like 18 or
+24 VDC).  Where covered with a metal foil shield, this will also be connected
+to the cathode.  Red, violet, or other color (except green or green/yellow)
+wire loop may be present to enable CDRH delay (cut to disable).  Regulated
+input voltage may be needed depending on model.  Positive input is almost
+always red; negative will likely be black or blue.  (Both of these may be
+of thicker gauge than the other low voltage wires.)  There is usually a
+fairly wide range of acceptable input voltage for any given type.  For
+example, those rated at 12 VDC will generally be perfectly happy on anything
+from 10 to 14 VDC.  The input may not need to be regulated or ripple-free
+as long as it stays within that range.
+<p>
+A general idea of the proper voltage for such a supply if not labeled or
+listed below can be found by driving it from a variable DC source with a
+known good compatible laser head or HeNe laser tube and 75K ohm ballast
+resistor connected to its output.  Increase the input voltage until the laser
+starts but don't go above 12 V even if nothing happens until you have checked
+for the possibility of a logic signal being needed to enable operation.
+Figure the voltage at which the laser starts to be around 60 to 75 percent of
+nominal.  If the thing is still, well, dead as a brick at 12 V,  it
+<i>might</i> require a higher voltage but even a 24 V unit should probably
+show some signs of life (audible whine or ticking) on an input as low as 12 V
+if it is enabled and functioning correctly.  Another indication that the
+supply is doing something is substantial input current - at least 100 mA even
+if the laser hasn't started.  However, if it looks like a near short circuit,
+you might have the polarity reversed (some models have a diode across the
+input to guard against this possibility)!  Others may be damaged or killed
+by reverse polarity.  CAUTION: These are just guidelines - your mileage may
+vary!
+<p>
+Here are the color codes for some common low voltage DC powered models:
+<p>
+<ol>
+<li>Aerotech.  There are several variations on input voltage range.
+ They also have a current adjustment pot with a range of around 3 to 5 mA
+ (on the low power versions, a higher range on larger ones.
+ The AC line powered Aerotech power supplies that I have do
+ not have pots accessible except perhaps with a chisel!).  The factory default
+ current is typically 4 or 5 mA for the LSS 05 (0.5 mW) units and 5 mA for the
+ LSS 2 (2 mW) units.  The ground return loop and operation monitor are not
+ both present on a given unit and may not be present at all.  The enable may
+ not be present on all versions.
+<p>
+ <ul>
+ <li>+12, +18, +24, +20 to +30 VDC, etc. (Check nameplate for specific
+  voltage or voltage range.): Red.
+ <li>Low voltage ground (common): Blue.
+ <li>Ground return from cathode: Green/yellow loop, which jumpers high
+  voltage return to DC input return.
+ <li>HV ground: Green/yellow (no loop), connected to HV (Alden) negative.
+ <li>Enable: Yellow - ground to turn on laser.
+ </ul>
+<p>
+ Aerotech power supplies designed to fit in the end of a cylindrical laser
+ head have a built-in ballast resistor, so as long as the connection to the
+ anode is no more than a couple of inches, nothing extra is needed.
+<p>
+ <ul>
+ <li>+12 (minimum for stable output on this unit): Red.
+ <li>Ground (common): Blue.
+ <li>Ground return from cathode: Aluminum end-plate or green/yellow loop,
+  which jumpers high voltage return to DC input return and can be used to
+  monitor output current.  CAUTION: Do NOT attempt to run the power supply
+  unless there is a low resistance connnection (like a mA meter) between
+  the two wires of this loop, as bad things happen and the power supply
+  may die.
+ <li>Enable: Yellow - ground to turn on laser.
+ </ul>
+<p>
+<li>Coherent (these are probably made by Laser Drive):
+<p>
+ <ul>
+ <li>+12 VDC: Red.
+ <li>Ground (common): Black.
+ <li>Enable: Yellow - ground to turn on laser.
+ </ul>
+<p>
+<li>Laser Drive model 103-23:
+<p>
+ <ul>
+ <li>+21 to 31 VDC: Red.
+ <li>Ground (common): Black.
+ <li>Enable: Yellow - ground to turn on laser.
+ </ul>
+<p>
+<li>Yahata Electric Works, Ltd. model HVR-C234H-1.  They call this a "High
+ Voltage Unit" but it's a HeNe laser power supply.  Input is via a 3 pin
+ connector, not color coded wires, and only the high voltage circuitry is
+ potted.  Output specs are: 2.35 kV at 6.5 mA connections are via 3/16" (+)
+ and 1/8" (-) FastOn lugs. CAUTION: This power supply is NOT short circuit
+ protected as I found out! :(
+<p>
+ Pins listed when viewing power supply case with output terminals facing down:
+<p>
+ <ul>
+ <li>+24 VDC (1 A max): Bottom pin (towards center of case).
+ <li>Ground (common): Top pin (near edge of case).
+ <li>Trigger: Middle pin, pull to ground and release to start, leave open
+  to run, ground to stop.
+ </ul>
+<p>
+<li>12 VDC type, manufacturer unknown, Herbach and Rademan part number
+ TM91LSR1495.  Output on 1/4" FastOn lugs with hand printed lables which
+ may be wrong - double check polarity before powering a laser!
+<p>
+ <ul>
+ <li>+12 VDC: Red.
+ <li>Ground (common): Black.
+ </ul>
+<p>
+<li>12 VDC type, models unknown (from barcode scanners):
+<p>
+ <ul>
+ <li>+12 VDC: Red.
+ <li>Ground (common): Black.
+ <li>Enable: Yellow - ground to turn on laser.
+ </ul>
+<p>
+ And another:
+<p>
+ <ul>
+ <li>+12 VDC: Red.
+ <li>Ground (common): Black.
+ <li>Enable: While/yellow - high (+4 V) to turn on laser.
+ <li>Scan motor: Black/white, white/black, and blue/black.
+ </ul>
+<p>
+<li>Scanner head brick, manufacturer unknown (+12 VDC).  This may be a sort of
+ Standard.  (My sample may have come from a Symbol Technologies LS-6000/6500
+ scanner but it had no markings.)  Output is fixed at 3.3 mA for a Melles Griot
+ 05-LHR-006, Siemens LGR-7651, or Uniphase 1007 6 inch tube.
+<p>
+ <ul>
+ <li>+12 VDC: Red.
+ <li>Ground (common): Black.
+ <li>Enable: Yellow or white with yellow stripe - turns laser on when
+  connected to a level between +5 and +12 VDC.  (For normal use, leave
+  attached to red wire.)
+ <li>-Aux output (measured -13 VDC): White or white with black stripe.
+  This unregulated voltage is intended to power other circuitry, possibly
+  the RS232 driver used by the scanner.
+ </ul>
+<p>
+ And one similar to above but 6 VDC:
+<p>
+ <ul>
+ <li>+6 VDC: Red.
+ <li>Ground (common): Black.
+ <li>Enable: Yellow or white with yellow stripe - turns laser on when
+  connected to +6 VDC.  (For normal use, leave attached to red wire.)
+ <li>+Aux output (measured +11 VDC): White or gray with red stripe.
+ <li>-Aux output (measured -14 VDC): White or white with black stripe.
+ </ul>
+<p>
+ The AUX voltages are unregulated and intended to power other circuitry,
+ possibly an RS232 driver used by the scanner.
+<p>
+<li>Partially potted supply from Spectra-Physics barcode scanner head.  This
+ one is a strange shape, a tapered flattened cylinder, mostly copper foil
+ covered, but with some of the low voltage circuitry exposed.  Output is
+ fixed at 3 mA for a Spectra-Physics 007 or Melles Griot 05-LHR-007 4-3/4"
+ tube.  It uses a 7 pin header for most connections with pin 1 on the far
+ right facing the unit.  OK, this isn't really color coding but so be it. :)
+<p>
+ <ul>
+ <li>+6 VDC: Pins 6 and 7.
+ <li>Ground (common): Pins 4 and 5.
+ <li>Enable low: Pin 3.
+ <li>Enable high: Pin 2 (must be current limited).
+ <li>+12 VDC regulated output: Pin 1.
+ </ul>
+<p>
+ There are several ways to control the power supply:
+<p>
+ <ul>
+ <li>Connect pin 2 to pin 3: The laser will be on as long as +6 VDC power is
+  applied.
+<p>
+ <li>Connect pin 2 <b>through a 1K ohm resistor</b> to +6 VDC.  Connect pin 3
+  to Ground (common).  The laser will be on as long as +6 VDC power is applied.
+<p>
+ <li>Connect pin 2 through a 1K ohm resistor to +6 VDC.  The laser will turn on
+  ONLY when pin 3 is grounded.        
+<p>
+ <li>Connect pin 3 to Ground (common).  Momentarily connect pin 2 <b>via 1K
+  ohm resistor</b> to +6 VDC to start: The laser will remain on after this.
+</ul>
+<p>
+ CAUTION: The resistor between pin 2 and +6 VDC is required to prevent
+ smoke.  Do not omit!
+<p>
+ I haven't confirmed it but believe pins 2 and 3 are compatible with TTL
+ levels.  The 1K ohm resistor will still be required for the signal
+ driving pin 2.  Pullups may also be needed to achieve high enough HIGHs.
+</ol>
+
+<h3><A NAME="hpsbrkw">Importance of Fusing Power Supply Bricks</A></h3>
+
+Do NOT be tempted to cut corners and omit safety devices like fuses when
+wiring up a HeNe laser power supply brick!  Well, any power supply, for that
+matter, but because these are totally potted, there are added dangers.  Even
+well designed commercial power supply bricks may lack internal protection and
+have been known to explode like grenades if not wired up with a fuse or the
+wrong fuse is used.  A proper fuse will prevent or at least greatly reduce the
+possibility of a component cooking for long enough to cause this sort of
+damage.  Many or even most newer brick power supplies do have an internal fuse
+which will blow should there be a failure of a major component, but not an
+overload like a momentary short on the output.  (Of course, once blown, the
+power supply is only good as a rectangular hockey puck.)  Unless
+the specifications or label states: "Internally Fused" or
+something similar, add one of your own in the Hot side of the AC line.  If
+you acquire a power supply already wired (e.g., on eBay), check to see if
+there is a fuse and add one if not.  It's cheap insurance.
+<p>
+Electrolytic capacitors are probably the components most susceptible to this
+cranky behavior.  Where out in the open, a blown capacitor (due to a shorted
+line rectifier, for example) will just result in a POP, smelly gas, white
+smoke, and a whole bunch of capacitor guts (foil, etc.) all over everything
+(though such capacitors have also been known to just vanish into thin air).
+However, when totally encased in solid Epoxy, there is no place for the gas to
+go.  So, pressure builds up, probably to several hundred PSI, before something
+lets loose.  This is a rare occurrance but one you don't really want to
+experience!
+<p>
+I've recently come across a defective Melles Griot (made by Laser Drive)
+05-LPM-370 power supply brick that was on its way to exploding with a
+noticeable bulge in the top surface.  This was scary as that implied
+some significant pressure inside.  It was being powered by a Variac (5 A
+fuse) into a stack of resistors (about 500K) and a 5 mW tube in an attempt
+to make it maintain a stable discharge (the tube was flashing).  I don't know
+if a proper fuse would have blown though. :(
+<p>
+An old Aerotech brick (unmarked, but one of the large long ones that typically
+run 10+ mW lasers) also may have developed a bulge while running a laser
+head that should have been compatible.  While the bulge wasn't that severe,
+was only modestly warm to the touch, and *might* have been there all along,
+that's not normal and I didn't wait to find out if the thing would explode. :)
+<p>
+Here are specific instructions for some common Laser Drive bricks:
+314S - 1 A, 314T 115 VAC 60 Hz - 0.4 A, 314T 220 VAC 60 Hz - 0.2 A, 230 VAC,
+50 Hz - 0.25 A (all slow blow type).  For other types where the recommended
+fuse rating isn't available, use 1/2 A for small power supplies (e.g., up to
+5 mW lasers), 1 A for larger ones.  Slow blow fuses really should be fine as
+the sorts of failures being protected against are going to put many times the
+rated current through the fuse.  However, I've usually had no problems with
+standard fuses.   Since these fuses should not blow under normal operation and
+even reasonable abuse, just solder them to the Hot power leads of the power
+supply and line cord (but take care that the heat of the soldering iron
+doesn't melt the fuse element!).
+<p>
+I had a very nice Laser Drive 380T that failed in this manner when it was
+turned on with the output accidentally shorted.  A 1 inch chunk of potting
+material flew off as a result of two unidentified parts vaporizing inside.
+They may have been fusable or other resistors in series with the output of
+the voltage doubler at the front-end.  I doubt that a fuse would have saved
+the power supply, but it might have prevented the blast.
+<p>
+While a fuse won't guarantee that there will be no fireworks, it should
+reduce the chances.
+<p>
+The following is what Laser Drive recommends for their 380T HeNe laser
+power supply bricks, rated at 3800 V, 6.5 mA.  (This was actually found
+on a JDS Uniphase-labeled brick):
+<p>
+<PRE>
+              Fuse     Transient
+    Line     Rating     Voltage    OR
+   Voltage  (Slo Blo)  Suppressor      Varistor
+ ------------------------------------------------
+   110/120    1.5 A    1.5KE220CP      S20K140
+   220/240   0.75 A    1.5KE440CP      S20K275
+</PRE>
+<p>
+The Transient Voltage Suppressor or Varistor goes <i>after</i> the fuse
+and limits the peak voltage in the event of a power surge.  Even so, the
+state that these modules should only be used inside another case. :)
+<p>
+Even though DC-input bricks run at lower voltages and typically won't
+have the same amount of explosive energy available, a properly sized
+fuse is also important, if for no other reason than to protect the
+DC power supply feeding it!  If there is no internal fuse, the typical
+failure will put a nearly dead short across the input if the chopper
+transistor fails.  The label will often list the maximum current, so a
+fuse rated at somewhat above that will be suitable.  If the supply is being
+used with a laser tube of much lower power than what is possible with
+the power supply, a smaller fuse may suffice.
+<p>
+(From: Someone who would rather remain anonymous.)
+<p>
+Besides the obvious dangers of these little power supplies, such as the high 
+voltage at low current, there is another danger anyone powering up a HeNe
+brick power supply should be aware of. This could save you a trip to the
+hospital or worse - HeNe laser power supply - Proves the "Big Bang theory":
+<p>
+ALWAYS use a properly sized fuse in line with your power supply!  Everyone
+knows this, right?  But did you know that there are some commercial HeNe laser
+power supplies that can actually EXPLODE if there just happens to be an
+internal problem in the supply or the laser head when powered up if a fuse is
+not used in-line with the input, or if there is a fuse but it is grossly
+oversized in it's amperage rating, or maybe even if it is of the correct
+amperage but a "slow blow" type instead of a "fast blow"?
+<p>
+I have heard of these certain power supplies actually exploding within 1 to 2 
+seconds after being powered up, well today, it happened to ME while testing a
+lot of power supplies for 2 to 3 mW HeNe laser heads!  No names will be
+mentioned, but the manufacturer's initials are L.D.
+<p>
+The power supply that did explode on me was fused, but someone, (no not me)
+put in a 20 amp fuse instead of a 1.5 - 2 amp. Well this was a used surplus 
+unit pulled from medical equipment, of which I was testing out several. The
+first 5 worked just fine, but the 6th one had other ideas. Little did I know
+when I first applied the required 115 VAC that this was a bad power supply,
+but that's why I was testing them.               
+<p>
+Well, within 1.5 seconds of applying power to it, surprise, surprise - the 
+entire side of the plastic case and a lot of the hard Epoxy potting suddenly
+became dangerous flying shrapnel.  Plus, the resulting extremely loud BANG
+was deafening and the resulting shock wave felt like being hit in your inner
+ear by a speeding golf ball at the world tournament. I was only 4 feet away
+from it at the time, but even now, 6.5 hours later, my ear is still quite
+painful.  I would liken the sound of the blast to a 12 gauge shotgun being
+fired within two feet of your ears.  The flying shrapnel could have caused
+very serious injuries. But thankfully, it didn't hit any of us.  (But, what
+about the laser tube? :) --- sam.)
+<p>
+The catastrophic failure occurred because to large a fuse was used but I
+guarantee that the results would have been NO different with this particular
+power supply if no fuse was used.
+<p>
+What actually happened was that because of a malfunction in the power supply
+(probably a shorted rectifier in the AC line input), a 3/4" x 1/2" electrolytic
+capacitor exploded inside the case thus turning this power supply into a hard
+Epoxy and plastic BOMB.
+<p>
+I do not believe that all commercially produced HeNe laser power supplies can
+react this way if powered up with an internal problem.  But trust me on this
+one: Be sure to use a fuse and of the correct rating and type because you don't
+want to find out the hard way. 
+<p>
+An executive of the above unnamed manufacturer said that if a fuse would
+eliminate this exploding problem when the power supply goes south. I also
+noticed that this, now totally dead power supply drew much more current than
+is normal from the 115 VAC input when first powered.  This would have blown
+a fuse of the correct size.  However, I guess we will never know if this
+actually would have prevented the power supply from exploding! :(
+
+<h3><A NAME="hpsadap">Adapters for DC HeNe Power Supply Bricks</A></h3>
+
+Most HeNe laser power supplies which use a DC input require a voltage between
+9 to 12 VDC.  However, some may require one that is higher like 18 VDC or
+20 to 30 VDC (the latter typically originate from larger barcode scanners or
+older HeNe laser based LaserDisc players).  Wall adapters for these are not
+that common.  (Note that bricks using 115/230 VAC may also work with 300 VDC
+if wired for 230 VAC since their input is a rectifier and filter but AC wall
+outlets are generally more readily available!)
+<p>
+Here are several simple regulated power supplies which may be constructed
+easily using parts available from Radio Shack, or possibly from your junk
+box.  (1) and (2) are basically the same but cover the 9 to 12 V and 20 to 28
+V ranges, respectively.  (3) is for the higher voltage input but may be built
+using a 12 V transformer.  However, if you have a suitable transformer, (2)
+is preferred to (3).  These can easily be modified for your specific
+requirements (like 18 VDC).  T1 can be an AC wall adapter with an adequate
+current rating but realize that their output voltage can vary by a ratio of 2:1
+depending on load (they use mediocre transformers!).  A low voltage power
+transformer will generally have a much stiffer output characteristic - less
+change in output voltage versus load current.
+<p>
+It is always s good idea to have a fuse on the output, especially where the
+supply is capable of much higher current than required for the brick.  Where
+T1 is an normal power transformer, a fuse should also be included in its
+primary.  If T1 is part of a wall adapter, this isn't required as it is
+already protected internally.
+<p>
+The following assume a power requirement of 10 W max.  Depending on the actual
+ratings of your brick, component values may need to be changed.
+<p>
+<ol>
+<b><li>Output 9 to 12 VDC:</b> This one uses a 12 V, 1 A power transformer
+ with a bridge rectifier, filter, and IC regulator.  The diodes can be 1N4001s
+ or better, or a bridge rated at least 50 V and 1 A.
+<p>
+<PRE>
+
+        12V,1A
+   H o--+ T1
+         )||            D1         In +--------+ Out        F1 _
+         )|| +---+------|>|--+---+----| LT1084 |----+-----+---_ ---o +Output
+         )||(    |           |   |    +--------+    |     | 1A
+         )||(    |      D2   |   |     Com |   R1   |     |
+         )||(    |   +--|>|--+   |         +--/\/\--+     |
+ 115 VAC )||(    |   |           |         |  180         |   C2
+ (fused) )||(    |   |      C1 +_|_     R2 /             _|_+ 10uF
+         )||(    |   | 5,000uF  ---   1.2K \    +---+    ---  25V
+         )||(    |   |     25V - |         /    |   |     | - Tant-
+         )||(    |   |  D3       |         |    v   |     |    alum
+         )|| +---|---+--|&lt;|--+   |         +--/\/\--+     |
+         )||     |           |   |           R3 500 |     |
+   N o--+        |      D4   |   |        +9 to 12V |     |
+                 +------|&lt;|--+---+------------------+-----+--------o Common
+
+</PRE>
+
+<p>
+<b><li>Output 20 to 28 VDC:</b> This one uses a 24 V, .5 A power transformer
+ with a bridge rectifier, filter, and IC regulator.  The diodes can be 1N4002s
+ or better, or a bridge rated at least 100 V and 1 A.  For a +15 to 21 VDC
+ output, use an 18 V power transformer and adjust the values of R2 and R3
+ appropriately.
+<p>
+<PRE>
+
+       24V,.5A
+   H o--+ T1
+         )||            D1         In +--------+ Out        F1 _
+         )|| +---+------|>|--+---+----| LT1084 |----+-----+---_ ---o +Output
+         )||(    |           |   |    +--------+    |     | 1A
+         )||(    |      D2   |   |     Com |   R1   |     |
+         )||(    |   +--|>|--+   |         +--/\/\--+     |
+ 115 VAC )||(    |   |           |         |  180         |   C2
+ (fused) )||(    |   |      C1 +_|_     R2 /             _|_+ 10uF
+         )||(    |   | 5,000uF  ---   2.7K \    +---+    ---  50V
+         )||(    |   |     50V - |         /    |   |     | - Tant-
+         )||(    |   |  D3       |         |    v   |     |    alum
+         )|| +---|---+--|&lt;|--+   |         +--/\/\--+     |
+         )||     |           |   |          R3 1.5K |     |
+   N o--+        |      D4   |   |       +20 to 28V |     |
+                 +------|&lt;|--+---+------------------+-----+--------o Common
+
+</PRE>
+
+<p>
+<b><li>Output 20 to 28 VDC:</b> This one uses a 12 V, 1 A power transformer
+ and is a voltage doubler feeding an IC regulator.  The diodes can be 1N4002s
+ or better (at least 100 V, 1 A.  It may even be possible to use the AC wall
+ adapter from an older modem for T1 (at least near the lower end of the
+ voltage range) but testing would be required as the actual performance
+ of these cheap transformers vary quite a bit.  I tried a wall adapter from a
+ pre-Jurassic 2400 baud modem - that worked fine with the voltage set between
+ 21 and 26 VDC powering a Laser Drive model 103-23 HeNe laser power supply
+ with a 1 mW (6 inch long) HeNe tube.
+<p>
+
+<PRE>
+
+        12V,1A
+   H o--+ T1
+         )||          D1           In +--------+ Out        F1 _
+         )|| +---+----|>|--------+----| LT1084 |----+-----+---_ ---o +Output
+         )||(    |               |    +--------+    |     | 1A
+ 115 VAC )||(    |          C1 +_|_    Com |   R1   |     |
+ (fused) )||(    |    10,000uF  ---        +--/\/\--+     |
+         )||(    |         25V - |         |  180         |   C3
+         )||(    |               |      R2 /             _|_+ 10uF
+         )|| +---|---------------+    2.7K \    +---+    ---  50V
+         )||     |               |         /    |   |     | - Tant-
+   N o--+        |          C2 +_|_        |    v   |     |    alum
+                 |    10,000uF  ---        +--/\/\--+     |
+                 |         25V - |         R3 1.5K  |     |
+                 |    D2         |       +20 to 28V |     |
+                 +----|&lt;|--------+------------------+-----+--------o Common
+
+</PRE>
+</ol>
+
+<p>
+The LT1084 is a modern low dropout IC regulator but an LM317 can also be used.
+(However, the voltage rating of T1 may need to be increased by 1 or 2 V to
+compensate for the added voltage drop of the older technology regulator.)
+Or, use a fixed positive regulator (e.g., 7812 or 7824) which would eliminate
+the resistors.  A 150 uF aluminum electrolytic capacitor can be used in place
+of the tantalum (required for stability with the LT1084, only a few uF is
+required for the LM317 or 78xx regulators).  Fixed or adjustable negative
+voltage regulators can also be substituted though there is no benefit unless
+that's all you have in your junk box.  Just reverse all the diodes and
+capacitor polarities.  A good heatsink should be put on the regulator
+especially if the output voltage is much lower than the voltage on
+the main filter cap(s).
+<p>
+CAUTION: Double check the pinout for your IC regulator - they are not all the
+same.  Here are some examples (all views from the front):
+<p>
+
+<PRE>
+
+  78xx (Fixed Pos)    79xx (Fixed Neg)    LM317 (Adj Pos)     LM337 (Adj Neg)
+   ___                 ___                 ___                 ___
+  |_O_|               |_O_|               |_O_|               |_O_|
+  |   | 1 = Input     |   | 1 = Common    |   | 1 = Adjust    |   | 1 = Adjust 
+  |___| 2 = Common    |___| 2 = Input     |___| 2 = Output    |___| 2 = Input
+   |||  3 = Output     |||  3 = Output     |||  3 = Input      |||  3 = Output
+   123                 123                 123                 123
+
+</PRE>
+
+The LT1084 has the same pinout as the LM317.
+
+<h3><A NAME="hpsuca2">Examples of the Use of Commercial Power Supply
+ Bricks</A></h3>
+
+The following two sections describe the required connections and additional
+circuitry that I used to make complete lasers using two types of HeNe tubes
+and power supplies that were available from Herbach and Rademan.  This will
+be similar to what is required when wiring up any compatible combination of
+HeNe laser power supply bricks and HeNe laser tubes or heads.  (Note that I
+am not necessarily recommending H&R as a surplus laser supplier - they
+are quite overpriced in this area.  However, I didn't know any better when
+I purchased my first HeNe lasers!)
+
+<h4><A NAME="hpsuca21">1 mW HeNe Laser Powered by 12 VDC, 1 A Wall
+ Adapter</A></h4>
+
+H&R part numbers: HeNe tube - TM94LSR2631, Power supply - TM91LSR1495.
+<p>
+This uses a short (140 mm) HeNe tube (Siemens LGR7655 or equivalent) and
+no-name power supply running off of 9 VDC.  I mounted these in a case which
+was from a 1/8" cartridge tape backup system in its former life.  In order to
+obtain regulated 9 VDC, an LM317 IC regulator on a heat sink was added along
+with a power switch, power-on LED, and the required ballast resistor of 150K.
+The ballast resistor was determined by monitoring the HeNe tube current and
+selecting values until the current was correct (apparently, this particular
+brick has no internal current regulation).  The HeNe tube was mounted on
+standoffs using a pair of nylon cable clamps and aimed through a hole drilled
+in the plastic case which.
+<PRE>
+
+        F1 _   S1      +-------+                   In+ +--------+ HV+
+  V+ o----_ ---/ ---+--| LM317 |--+------+-----+-------|        |-------+
+        1A    Power |  +-------+  |      |     |       |        |       |
+                    |      | A    /      |     / R3    |        |       / Rb
+                    |      |      \ R1   |     \ 500   | 9 VDC  |       \ 150K
+                    |      |      / 240  |     /       | HeNe   |       /
+                   _|_ C1  |      |    +_|_ C2 |       | Laser  |       | Tube+
+                   --- .1  +------+     --- 10 |       | Power  |     .-|-.
+                    |  uF  |           - |  uF | Power | Supply |     |   |
+                    |      \ R2          |   __|__ IL1 | Brick  |     |   | LT1
+                    |      / 1.5K        |   _\_/_ LED |        |     |   |
+                    |      \             |     |       |        |     ||_||
+                    |      |             |     |   Gnd |        | HV- '-|-'
+  V- o--------------+------+-------------+-----+-------|        |-------+ Tube-
+                                                       +--------+
+
+</PRE>
+It may be easier to locate a 12 VAC, 1 A wall transformer since these were
+commonly used to power older obsolete modems.  In this case, add a bridge
+rectifier and a 5,000 to 10,000 uF, 25 V filter capacitor to the input.
+<p>
+WARNING: Double check polarity before powering a laser.  The unit I first
+received had the HV polarity reversed from the hand printed labels.  I sent if
+back and they simply stuck new labels over the old ones. :)
+
+<h4><A NAME="hpsuca22">2 mW HeNe Laser Using AC Line Operated Power Supply
+ Brick</A></h4>
+
+This setup was sold as a power supply and HeNe tube combination.  Although
+no longer available from H&R, this same laser does show up from other surplus
+outfits, on eBay, and elsewhere.  A similar unit is shown under power in
+<A HREF="hene2hps.jpg">Siemens LGR7631A HeNe Laser Tube and Laser Drive
+Power Supply Brick (Powered)</A> (photo courtesy of: Joseph Chiu
+(josephc@alumni.caltech.edu)).
+<p>
+<ul>
+<li><b>HeNe tube:</b> Siemens LGR7631A with attached ballast resistor and
+ Alden HV connector.  Its specifications are similar to the 1.5 to 2.5 mW tubes
+ listed in the section: <A HREF="laserhen.htm#hentht0">Typical HeNe Tube
+ Specifications</A>.
+<p>
+<li><b>Power supply:</b> Laser Drive model 4009479.
+</ul>
+<p>
+This particular brick can be wired for either 115 VAC or 230 VAC operation and
+includes an 'enable' input which must be pulled up to turn on the tube (thus
+the 9 V battery visible in the photo).  Likewise, rather than using a separate
+power supply just for this, I provided a battery holder with 4 AA cells.  Even
+old tired decrepit ones work fine in this application!  The only other parts I
+added were the line cord, power switch, fuse, light, and enable switch.
+Everything is mounted on a nice wooden frame painted flat black. :)
+<p>
+The ballast resistor was already built into the tube mounting so that this
+was truly a 'plug-and-play' assembly.
+<PRE>
+
+       F1 _   S1                       white +----------+ HV+
+  H o----_ ---/ ---+-----------------+-------|          |--------&lt;&lt;---+
+      .5A    Power |                 | white |          | RED         |
+                   /                 +-------|          |             / Rb
+                R1 \                         | 115/230  |             \ 75K
+               47K /      S2 Enable  yel/wht | VAC HeNe |             /
+                   |    +-----/ -------------|  Laser   |             | Tube+
+                  +|+   |                    |  Power   |           .-|-.
+              IL1 |o|   |   | | | |  yel/blk |  Supply  |           |   |
+             NE2H |o|   +---||||||||---------|  Brick   |           |   | LT1
+            Power +|+      +| | | | -        |          |           |   |
+                   |       B1 5-6 V          |          |           ||_||
+                   |                  yellow |          | BLACK     '-|-'
+ N o---------------+-------------------------|          |--------&lt;&lt;---+ Tube-
+                                             +----------+ HV-
+                                             green |
+ G o-----------------------------------------------+
+</PRE>
+Notes:
+<p>
+<ol>
+  <li>BLACK and green wires are joined inside power supply so tube cathode
+     will be tied to earth ground when plugged into properly grounded outlet.
+<p>
+  <li>Wiring shown for 115 VAC.  For operation on 230 VAC, use white wires on
+     each side of line and leave yellow wire unconnected.
+</ol>
+<p>
+A closeup of the components of another similar unit is shown in
+<A HREF="hene3hps.jpg">Siemens LGR7631A HeNe Laser Tube and Laser Drive Power
+Supply Brick (Components)</A> (photo courtesy of: Effie Wiegand
+(bestofme@home.com).  Note the black 'button' on the right-end of the tube
+(attached to the plastic anode insulator).  This contains a slightly angled
+glass plate presumably to protect the tube's output mirror.  I found it to be
+quite dirty on one sample I acquired - the beam quality was terrible until it
+was removed (just pulls off).  In fact, I believe the previous owner sold the
+laser for next to nothing due to the messed up beam!  These also came with a
+diverging lens on an adjustable mount of sorts (visible in the lower right of
+the photo).  I assume this to be the first lens in a beam expander and
+collimator (but the other components stay with whatever sort of barcode
+scanner, printer, or other equipment from which this laser originated).
+
+<h4><A NAME="hpsuca23">Lab Style HeNe Laser Power Supply Using Power Supply
+ Brick</A></h4>
+
+I installed an Aerotech LSS 5(6.5) HeNe laser power supply in an aluminum
+Minibox(tm) chassis to create a 'lab' style unit capable of driving HeNe
+laser heads requiring 2,200 to 2,800 V (including ballast resistor) at 6.5
+mA.  These are typically 4 to 12 mW red HeNe lasers (or lower power other color
+HeNe lasers) though the specific requirements will depend on model.
+<p>
+This arrangement is basically what is inside most modern commercial 'lab'
+style HeNe laser power supplies - a standard brick model mounted in a box
+with AC power cord, fuse, line filter, on/off/key switch, power-on light,
+Alden connector to attach the HeNe laser head, and an interlock connector
+and/or line voltage select switch on some models - along with an inflated
+price! :)
+
+<PRE>
+
+          +--------+  F1 _    S1            brown +------------+
+    H o---|        |----_ ----/ ---+------+-------|            |------&lt; HV+
+          |        |  1A    Power  |      |  blue |            | RED
+          |        |        (Key)  / R1   +-------|  Aerotech  |
+          |        |               \ 47K          |  115/230   |
+          | Corcom |               /          red |    VAC     |
+          |  Line  |               |        +-----| LSS 5(6.5) |    Alden
+          | Filter |              +|+       |     | HeNe Laser |  Connector
+          |        |          IL1 |o|       | red |   Power    |
+          |        |         NE2H |o|       +-----|   Supply   |
+          |        |        Power +|+             |   Brick    |
+          |        |               |        black |            | BLACK
+    N o---|        |---------------+--------------|            |------&lt; HV-
+          +--------+                              +------------+
+              |                                   green |
+    G o-------+-----------------------------------------+
+</PRE>
+
+Notes:
+<p>
+<ol>
+<li>BLACK and green wires are joined inside power supply so tube cathode
+ will be tied to earth ground when plugged into properly grounded outlet.
+<p>
+<li>Wiring shown for 115 VAC.  For operation on 230 VAC, use blue and brown
+ wires on each side of line and leave black wire unconnected.
+<p>
+<li>The red wires jumpered together (CDRH loop) enable 4 second power-on delay.
+</ol>
+
+<h3><A NAME="hpsuca3">Initial Testing of HeNe Laser Power Supply
+ Bricks</A></h3>
+
+Two aspects of power supply operation should be checked as soon as possible
+after powering up your HeNe tube for the first time: polarity and current.
+<p>
+If the power supply is a name brand unit or was pulled from a device like a
+bar code scanner, it is safe to assume that the connections (the output in
+particular) are correctly labeled.  However, some power supplies sold to
+hobbyists (e.g., from places like <A HREF="http://www.herbach.com/">Herbach and
+Rademan Co.</A> or <A HREF="http://www.halted.com/">HSC Electronic Supply</A>)
+have been known to have incorrectly marked high voltage connections.  (The
+models I have seen this on are a low voltage inverter type with red and black
+wire leads for the 9 or 12 V input and spade terminals for the high voltage
+marked with hand printed or typed stickers for VA and VC - apparently at
+random.)  If your power supply looks like it was put together in someone's
+basement, this should confirmed to prevent damage to the HeNe tube from
+reverse polarity.
+<p>
+At the same time, the HeNe tube current can be checked.
+<p>
+Put a 1K, 1/4 W resistor in series with the cathode return and measure across
+it with a voltmeter for the correct polarity and current.  The end of the
+resistor attached to the HeNe tube cathode should be positive and the current
+will be 1 mA/V of your reading.  Also see the section:
+<A HREF="laserhps.htm#hpsspm1">Making Measurements on HeNe Laser Power
+Supplies</A>.
+
+<h3><A NAME="hpspssp">HeNe Laser Power Supplies in Series or Parallel?</A></h3>
+
+So you have a couple of HeNe laser power supply bricks for use with 1 to 2 mW
+HeNe lasers and someone just gave you a 5 mW HeNe laser head.  Is it possible
+to use the two in series or parallel instead of buying or building a suitable
+power supply?
+<p>
+Larger HeNe tubes require much more operating and starting voltage, and
+possibly more current as well.  The current difference is of less consequence
+than the voltage difference.
+<p>
+For example, a 5 mW tube may have a nominal current rating of 6.5 mA but will
+probably run just fine on 4 or 5 mA (though a higher value ballast resistor
+may be needed to maintain stability).  However, the 5 mW tube will require
+about twice the operating and starting voltage of a 1 mW tube (thus requiring
+a series connection if such a kludge is possible at all).
+<p>
+Whether the power supplies can be hooked in series or parallel depends on
+their design.  The inverter types in particular (which includes all bricks),
+could become mighty unhappy.  I wouldn't recommend connecting HeNe power
+supplies in series without knowing exactly what's inside.  You could
+end up with two dead power supplies and there could also be safety issues with
+respect to insulation breakdown, explosive disassembly of internal components,
+and other undesirable and unfortunate consequences.
+<p>
+However, it may be possible to connect them in parallel to increase the
+current capability.  Where both power supplies regulate using high-side
+current sensing (as is common with bricks since the negative returns usually
+go directly to ground), then this may be possible if both power supplies
+are able to operate within their current compliance range.  Additional
+details are left as an exercise for the student. :)
+<p>
+And, there is one special case which does have a good chance of success
+as described in the next section.
+
+<h3><A NAME="hpspbst">Boosting the Current of a HeNe Laser Power
+ Supply</A></h3>
+
+So, you got a great deal on a HeNe laser power supply rated 2,500 V at 6.0 mA.
+This would be great for powering a 5 mW HeNe laser except for one problem: Most
+5 mW HeNe lasers run optimally at 6.5 mA.  Now, as a practical matter, 6.0 mA
+is usually still just fine and most people would never notice the difference
+in output power, stability, or (optical) noise.  But, for the purist, 6.5 mA
+would still be best.
+<p>
+It should be possible to add that extra 0.5 mA from a second (non-HeNe laser)
+power supply in parallel with a HeNe laser power supply with a fixed output
+current.  This would usually be used with a potted power supply brick lacking
+a current adjust pot since otherwise, it's usually a simple matter to just
+modify it directly!
+<p>
+All that is needed is a power supply capable of providing the additional
+current at a voltage greater than the operating voltage of the HeNe laser
+(tube + ballast resistance).  The source can be a potted high voltage
+(voltage regulated) module, voltage multiplier from an isolated transformer,
+or some other similar low current power supply.  Feed the auxiliary power
+supply into the top of the ballast resistance via a HV isolation diode (e.g.,
+microwave oven or CRT HV rectifier) to prevent the starting voltage from
+appearing on the auxiliary supply.  To protect the HeNe laser power supply
+brick, it won't hurt to install a similar HV isolation diode in series with
+it's output as well (though this is probably not essential).  The amount of
+added current can be adjusted with resistors in series with the auxiliary
+source.  The negative outputs of both power supplies should be tied together.
+<p>
+<PRE>
+
+                        6kV          R1     >10kV
+  HeNe Laser PS + o-----|>|----+----/\/\-----|&lt;|-----o + Auxiliary Supply
+                               |
+                               o
+                  To top of ballast resistance
+
+</PRE>
+<p>
+Since the current regulator of the HeNe laser power supply doesn't see the
+extra current, it won't fight the auxiliary power supply.  However, it is
+the responsibility of the auxiliary power supply to do the regulation of
+the added current.  Since it's only a very small current, series resistors
+are probably good enough - no active regulation is needed.  A current
+regulated supply could also be used as long as the current sensing of both
+the power supplies takes place separately.  This usually means the auxiliary
+power supply senses current in the HV feed, not the return (which is usually
+grounded), since this is what most HeNe laser power supply bricks do.
+<p>
+I've tested this approach with an Aerotech LSS 5(L) AC line powered brick fixed
+at 6.0 mA and a variable HV DC power supply.  The HV rectifier from a 12 inch
+CRT monitor was used for isolation with a 100K resistor for current limiting.
+The current could be varied from 6.0 mA (provided by the brick) and 7.0 mA
+or more by adjusting the auxiliary supply.
+<p>
+It would be a simple matter to construct an auxiliary power supply with
+a low voltage DC input using a 555 and MOSFET to drive a small flyback.
+A duty cycle/frequency adjust pot would permit output current to be easily
+varied.  This could turn an otherwise not terribly useful fixed current
+brick into a very flexible lab HeNe power supply.
+
+<h3><A NAME="hpspred">Reducing the Current of a HeNe Laser Power
+ Supply</A></h3>
+
+While less common than the case above, there may come a time when it would be
+nice to operate a 7.0 mA power supply with a laser tube requiring only 6.0 or
+6.5 mA.
+<p>
+In principle, this could be done by adding a current bypass in parallel with
+the HeNe laser tube.  If it weren't for the issue of the very high starting
+voltage, a simple resistor (rated for high voltage) would be adequate.  For
+a known voltage across the laser head (tube + ballast resistance), Ohm's Law
+could be used to determine the resistance value to use.  For a small
+reduction in current (e.g., 0.5 or 1 mA), no regulation would be needed.
+However, the problem is how to deal with the starting voltage.  Any resistance
+connected permanently across the laser head would probably prevent the
+starting voltage from being high enough due to the very limited current
+availability of most starting circuits.  One way around this would be to
+add a high voltage relay that only closed the current bypass after the
+tube has started.  However, it probably would need to be a mechanical relay
+and one rated for 10 kV or greater.  A manual HV switch could also be used.
+
+<h3><A NAME="hpsuca4">Using a HeNe Laser Power Supply for Other
+ Applications</A></h3>
+
+HeNe laser power supplies can be used for non-laser experiments as long as
+they are not called upon to operate outside their normal compliance range.
+Depending on model, you can get anywhere from 1 kV to 6 kV (or more) at a few
+mA.  One such application is as a capacitor charger for small pulsed solid
+state lasers.  See the chapter: <A HREF="laserssc.htm#ssctoc">Complete SS
+Laser Power Supply Schematics</A> for a specific example.
+<p>
+Put a load on the output so that it runs in the normal operating (not starting)
+range of voltages.  Near the upper end is fine (e.g., higher load resistance)
+as long as the voltage remains within specs but you don't want to have the
+supply continually attempting to start a non-existent HeNe tube - that is hard
+on any supply.
+<p>
+Note that most HeNe laser power supplies including 'bricks' are <b>NOT</b>
+totally isolated between input and output - the negative of the high voltage
+is probably either directly or via some high resistance connected to the
+earth ground (AC line types) or the negative of the input (DC input types).
+Check the continuity between the black HV lead and the negative of the input.
+Many are tied together internally.  Even if it isn't 0 ohms, there may be
+current sensing feedback that is via high value resistors.
+<p>
+<A NAME="hpsbrf"></A>
+<hr>
+<br>
+<li>Back to <A HREF="laserhps.htm#hpstoc">HeNe Laser Power Supplies Sub-Table
+ of Contents</A>.
+<h2>Ballast Resistors, Function, Selecting</h2>
+<h3><A NAME="hpsbrf0">What is the Purpose of the Ballast Resistor?</A></h3>
+
+Every HeNe laser (as well as any other gas laser, fluorescent lamp, xenon arc
+lamp, or other similar device) needs components between the actual voltage
+source and the tube to stabilize the discharge and limit/regulate the current.
+Without a ballast, the resulting discharge would be flashing, flickering, or
+unstable in some other way AND the tube and power supply would likely destroy
+each other due to excessive uncontrolled current flow.  For high power devices,
+the ballast may take the form of an inductor or transformer, or an electronic
+circuit that performs an equivalent set of functions.  For the HeNe laser, the
+ballast is almost always a simple resistance.  The purpose of the ballast
+resistor (Rb) in a HeNe laser is twofold:
+<p>
+<ol>
+<li>Assure stability: Rb used to adjust the total resistance in the HeNe
+ tube circuit so that it is comfortably positive.  This is needed for
+ stability to balance the negative resistance characteristics of the HeNe
+ tube itself.
+<p>
+<li>The second function depends to some extent on the type of power supply:
+<p>
+ <ul>
+ <li>For power supplies that are not current regulated, Rb serves to limit the
+  HeNe tube current to the optimal and safe value for proper operation with
+  the desired input voltage to the power supply (e.g., 115 VAC).  Although
+  the size of Rb doesn't directly affect laser output power, it may control the
+  current and output power for most HeNe lasers peaks at a specified current -
+  above or below this optimum value and it goes down.  Thus, unlike the case
+  of a resistor in series with an incandescent lamp, reducing the value of
+  the Rb may in fact <i>reduce</i> laser output.
+<p>
+ <li>For power supplies that are current regulated, the value of Rb can be
+  chosen to place the operating point near the middle of the compliance range
+  of the regulator.  This will maximize immunity from input variations and
+  ripple, and may reduce stress on regulator components as well.
+ </ul>
+</ol>
+<p>
+Selecting a ballast resistor that works with a given tube is usually a trivial
+exercise.  So, don't let the length of the following discussions intimidate
+you!  It is quite possible that for the entire future of the universe (until
+the big crunch and even beyond), you will have no need to use any other value
+than the usual 75K ohms.  However, there are situations where this will not
+work well or at all when mating a power supply to a HeNe tube or laser head
+other than the model or size for which it was originally designed.
+<p>
+If you are connecting a power supply to a laser head (not just a bare tube),
+there is almost certainly a ballast resistor inside the head itself.  So, an
+additional full ballast resistor will not be needed unless you find that the
+original value is insufficient.  Also, the power supply may already have some
+amount of ballast resistance (partial or up to 75K) and the combination may be
+too large!  When the designation Rb is used, it means the *total* ballast
+resistance but this may actually be made of up 2 and sometimes even 3 parts.
+See the section: <A HREF="laserhps.htm#hpsbrf0a">Locations of the Ballast
+Resistance</A>.
+<p>
+Also see <A HREF="http://www.powertechnology.com/Techlib/ballast.asp">Power
+Technology's What is a Ballast Resistor and Why Should I Use One?</A>
+technical note for some general considerations.
+<p>
+Note: Although a single resistance value may be specified below for Rb, it is
+better to construct the actual ballast resistor from several lower value
+resistors in series to achieve the required voltage and power ratings.
+See the section: <A HREF="laserhpd.htm#hpdhvc3">Power Supply Construction
+Considerations</A> for more info.
+<p>
+Some of the procedures below may require measurement of voltage or current
+in the HeNe tube circuit.  Before proceeding, for your own safety and the
+continued good health of your test equipment, see the section:
+<A HREF="laserhps.htm#hpsspm1">Making Measurements on HeNe Laser Power
+Supplies</A>.
+<p>
+As noted, simple neon signs and virtually all low current gas discharge
+devices also have a negative resistance and require a ballast to operate
+in a stable manner.  For neon signs where there is no ballast resistance,
+this function is implemented inside the magnetic or electronic neon sign
+transformer - which is often called a ballast.  These will have a high
+effective impedance by their design.
+<p>
+Implementing the ballast inside the transformer is also a lot easier
+for neon signs since they run on AC current and inductance can be easily
+used in place of resistance.  For HeNe lasers, the high impedance would
+have to be implemented with active electronics.  Current regulated HeNe
+laser power supplies do have a high impedance but it's never depended on
+for stability.  With unspecified wiring and tube capacitance, it's just
+a lot easier and cheaper to depend on a simple ballast resistor and accept the
+modest waste of electrical power.  The benefit is that any HeNe laser
+tube can be mated with any power supply with compatible voltage and
+current specifications without worrying about details.  For fluorescent,
+high intensity discharge, and arc lamps that require much higher current,
+a resistive ballast would waste a lot of power.  But the 3 to 8 mA of a
+typical HeNe laser means 10 to 25 percent of the total power is wasted
+in the ballast, not really very significant when the overall efficiency
+(wall plug power to optical output power) of a HeNe laser is already so
+abysmal - 0.01 to 0.1 percent!  If efficiency is important, use a diode
+laser. :)
+
+<h3><A NAME="hpsbrf0a">Locations of the Ballast Resistance</A></h3>
+
+If you examine a commercial HeNe laser, unless the HeNe tube is physically
+within a couple of inches of its power supply, there is a good chance that the
+actual components that comprise the ballast resistance are split into 2 and
+possibly even 3 separate sets of physical resistors:
+<PRE>
+
+     &lt;-- Power Supply -->|&lt;-------------- Laser Head ------------------>|
+                         |
+                                                  LT1
+                Rbp              Rba     Tube+ +-------+ Tube-   Rbc     
+     HV+ o------/\/\-----&lt;&lt;------/\/\----------|-    ]-|---------/\/\---+
+              0 to 50K        50K to 75K       +-------+       0 to 15K |
+     HV- o---------------&lt;&lt;---------------------------------------------+
+
+</PRE>
+(Optional current sense resistor and other additional components not shown.)
+<ul>
+<li>Rba - Generally, most (or all) of the ballast resistance is located as
+ close as possible to the HeNe tube anode in the laser head.  Its value is
+ typically 75K, with a power dissipation of about 1 W/10K.  In some cases, a
+ smaller value may be acceptable if the rest is made up by Rbp or Rbc (see
+ below) and the distance between the laser head and power supply isn't too
+ great.  Some lasers may use a higher value as well.  If the tube and power
+ supply are close together, Rba is likely the only ballast resistor present.
+<p>
+<li>Rbp - One part may be physically located between HV+ (see the section:
+ <A HREF="laserhps.htm#hpscao1">Basic HeNe Laser Power Supply Organization</A>)
+ and the high voltage output (Alden) connector of the power supply.  Important
+ functions of Rbp are to provide protection for the power supply in the event
+ of an external short circuit, make up a portion of the positive resistance
+ needed to stabilize the discharge, and move some of the heat dissipation to
+ the power supply which presumably can better deal with it.  The typical value
+ of Rbp is 20K to 50K with a power dissipation of about 1 W/10K.  However, as
+ far as HeNe tube operation is concerned, Rbp may be omitted entirely as long
+ as Rba is of adequate value (usually at least 75K).
+<p>
+<li>Rbc - Some commercial laser heads may have a small ballast resistor
+ (typical value of 10 to 15K) in the cathode return circuit as well.
+ This can often be eliminated without any ill effects but some, mostly
+ larger, HeNe laser tubes will not operate in a stable manner without
+ some cathode ballast resistance, particularly if installed in
+ a metal enclosure like a cylindrical laser head.  The symptoms are
+ that the laser would sputter or randomly or repatedly restart, possibly
+ after being on for awhile.
+</ul>
+<p>
+If it weren't for stray capacitance, only the total ballast resistance, Rb,
+would matter with respect to discharge stability and current regulation.  If
+the power supply and tube are within a couple of inches of one-another, this
+IS all that really matters.  However, in the real world, where remote laser
+heads are often desirable, it isn't always that simple!  But, dealing with Rb
+as though it were a single resistor as a starting point won't hurt.  Thus,
+unless otherwise noted, the discussions below refer to the total of all
+resistance in series with the HeNe tube even if Rb is not physically at a
+single location.
+<p>
+Do you know where all your ballast resistance is hiding? :-)
+
+<h3><A NAME="hpsbrf1">Selecting the Ballast Resistor Using Your HeNe
+ Tube</A></h3>
+
+Using the actual HeNe tube (rather than a dummy load) is generally the
+easiest, fastest, and most accurate approach for selecting the ballast
+resistor.  Unless the power supply and HeNe tube are grossly mismatched,
+the chance of damage to either is small.  Here are several possibilities:
+<ul>
+<li>If your power supply is variable, or current regulated and reasonably well
+ matched to the size of the HeNe tube, a 75K resistor will almost always work
+ just fine.  This is the value that is likely to be inside a laser head as
+ well.  That's all there is to it!
+<p>
+ While the theory is complex, the result is simple: It turns out that the
+ value of the *negative* resistance of a typical HeNe tube around its optimal
+ operating point is usually approximately -50K.  The reason is that larger
+ HeNe tubes tend to have longer but wider bores and the effects of these tend
+ to cancel out.  For a stable discharge, the value of the total effective
+ resistance must be positive - else you get a relaxation oscillator.  Using a
+ 75K ballast resistor generally provides adequate margin without dissipating
+ more power than needed.
+<p>
+<li>For a regulated power supply, the optimal ballast resistor will operate the
+ tube near the middle of the voltage compliance range of the regulator.  This
+ will result in the best immunity from input variations and ripple.  However,
+ there is a lot to be said for the recommendation: "If it works, use it."!
+ So, start with 75K and if it works, leave it alone.  Should you really want
+ to spend time on getting to know your power supply, see the section:
+ <A HREF="laserhps.htm#hpsdcf0">Determining the Compliance Range of a Power
+ Supply</A>.
+<p>
+<li>However, with some HeNe tube-power supply combinations, 75K may still be
+ too low to maintain a stable discharge at the recommended tube current - or
+ the current will be too high (particularly where a large power supply is
+ being used to drive a low power HeNe tube).  In this case, it will be
+ necessary to increase the ballast resistance to 100K, 150K, or even more,
+ and accept the additional heat dissipation and wasted power.
+<p>
+<li>For a power supply without current regulation, if you know or can estimate
+ the operating voltage of your HeNe tube (Vo) either from its specifications
+ or by comparing it to those listed in the charts in the section:
+ <A HREF="laserhen.htm#hentht0">Typical HeNe Tube Specifications</A> AND know
+ the approximate output voltage (Vout) of your power supply at the operating
+ current (Io), use the equation:
+<pre>
+                         Rb = (Vout - Vo) / Io;
+</pre>
+  to estimate the ballast resistor value.  If you do not know Vo and Vout,
+  start with a value of 75K.
+<p>
+<ul>
+ <li>If the HeNe tube current is to large, Rb will need to be increased.
+  Where the power supply and HeNe tube are grossly mismatched, it may need
+  to be quite large (e.g., several hundred K ohms).
+<p>
+ <li>If the HeNe tube current is too small, Rb will need to be decreased.
+  However, going much below 75K will likely result in instability.  The
+  power supply is probably inadequate for you HeNe tube in this case.
+  However, it won't hurt to try - some tubes will be perfectly happy with
+  a 50K ballast but the setup may be more susceptible to input voltage
+  fluctuations if there is little or no regulation.
+</ul>
+<p>
+<li>Another similar approach is to use a variable input source (Variac or
+ adjustable DC power supply as appropriate) with an initial Rb of 75K.
+ Increase the input until the tube starts and back off if necessary to the
+ minimum at which the discharge remains stable.  Then, increase Rb as above
+ until you can obtain the desired tube current at the nominal input voltage.
+<p>
+ If there is no input voltage at which the tube starts and the discharge is
+ stable, 75K may already be too large and it is likely that the power supply
+ is inadequate for your HeNe tube.
+<p>
+<li>Optical power output from most healthy red (632.8 nm) HeNe lasers peaks
+ at the optimum value of tube current.  Therefore, selecting the ballast
+ resistor can even be done by (reasonable) trial and error by simply
+ maximizing output beam brightness without worrying about current
+ measurements!  Note that it takes a few seconds when changing current
+ for the output power to stabilize so be patient if attempting to do it
+ this way.
+<p>
+ <ul>
+ <li>Tube current below optimum will result in slightly reduced optical output.
+   However, it is not usually possible to decrease current below about 50
+   percent of optimum (often not even this low) and maintain a stable
+   discharge.  Even at these cutoff currents, output power is usually only
+   down slightly.
+<p>
+ <li>Tube current somewhat above optimum will result in slightly reduced
+   output power and increased optical noise.  This won't be noticeable by
+   eye but could be significant if the laser is being used as part of a
+   communications or measuring system.  There will also be excessive heat
+   dissipation and a possible reduction in tube and/or power supply life.
+<p>
+ <li>Tube current above 2 to 3 times optimum will result in NO output beam at
+   all (but it will recover instantly as long as the tube isn't left to cook
+   too long with this current).  However, if the HeNe tube is good, there
+   would probably be a flash of laser light from its output at power-on
+   and/or power-off as the tube current passes through the normal operating
+   range.
+ </ul>
+</ul>
+<p>
+The exceptions to the optimum power rule are for (1) "other color" HeNe lasers
+filled at reduced pressure and/or with higher He:Ne fill ratio and (2) for
+some wide bore multiple (transverse) mode tubes where the output power may
+continue to increase up to a much higher current, possibly beyond what is
+safe to use with the tube.  In addition, (3) as a HeNe laser tube is used, its
+characteristics will change and near end-of-life tubes or soft-seal tubes
+which have leaked may peak at a higher and possibly excessive current
+as with (1) above.
+<p>
+Don't get carried away - running the tube with slightly excessive current
+won't damage or destroy it immediately (unlike a laser diode).  However,
+the ballast resistor may not survive overcurrent for long since its power
+dissipation goes up as the <i>square</i> of the current.  (The HeNe tube power
+dissipation only goes up slighly less than proportional to current due to
+its negative resistance characteristic.)  Also, using a regulated power supply
+near or beyond one end or the other of its rated voltage compliance range
+could result in overheating or overstress of components and it may be damaged
+or fail completely.  Thus, a regulated power supply designed for a .5 mW tube
+should generally not be used with a 5 mW tube (or vice-versa) for any length
+of time even if it appears to operate properly!
+<p>
+Here are a couple of approaches to selecting the ballast resistor for a small
+HeNe tube and simple unregulated power supply like the one described in the
+section: <A HREF="laserhsc.htm#hsces1">Edmund Scientific HeNe Laser Power
+Supply</A>.
+<p>
+(From: Steve Nosko (q10706@email.mot.com).)
+<p>
+The ballast resistor, the actual voltage at the doubler output and the tube
+running voltage determine the tube current.  Look at the tube ratings for the
+running voltage and tube current - 1,150 V at 4 mA for the tube I was using.
+<p>
+One can approach the design from two directions:
+<ul>
+<li>With a supply of 1,750 V and a tube voltage of 1,150 V. this leaves 600 V.
+  across the ballast resistor.  Once you get the transformer picked out, make
+  your best estimate of the output voltage you'll have.  It should be above
+  1,400 V for a 0.5 mW tube.  Any less and you could get into trouble since the
+  ballast resistor should be kept above 50K.  Some sources recommend 70K as an
+  optimal value for a .5 mW tube.
+<p>
+<li>Working the other way.  First calculate the ballast resistor voltage drop
+  as, V = tube current * 70K.  Add this voltage to the tube voltage to get the
+  required supply voltage.  This would be a minimum supply voltage for that
+  tube.  If yours gives a few hundred volts more, you can make the ballast
+  resistor larger to obtain the required tube current.  It's just that the
+  bigger the ballast resistor, the more power you throw away.  If you think
+  you may go to a more powerful tube in the future, then get a higher voltage
+  transformer output for the bigger tube and just use the larger ballast
+  resistor for now.
+</ul>
+<h3><A NAME="hpsbrf2">Selecting the Ballast Resistor Using a Dummy
+ Load</A></h3>
+
+This approach will also permit the limits or compliance range of the power
+supply to be determined without risking the HeNe tube.  This may be necessary
+to select the ballast resistor to match a HeNe tube up with a power supply
+that is not marked or determine its limits - what sizes of HeNe tubes it will
+drive.  Even when marked, the ratings on a typical HeNe laser power supply do
+not tell you how it will behave under varying load conditions.  However, first
+see the section: <A HREF="laserhps.htm#hpsbrf0">Selecting the Ballast
+Resistor</A> as the approaches described there are usually adequate for the
+vast majority of situations.
+<p>
+Where the voltage drop across your HeNe tube is known (from its specifications
+or having been measured), it can in principle be replaced by a fixed resistor
+equal to Vop/Iop for the purpose of basic power supply testing.  (However,
+dynamic behavior will be affected by the HeNe tube's negative resistance
+characteristic.  This is probably not a problem as long as the resulting
+ballast resistance ends up greater than that magic 75K ohms.)  For example,
+a HeNe tube rated at 4.5 mA at 1,200 V can be replaced by a 267K resistor
+at its operating point.  Then, enough ballast resistance is added beyond 75K
+so that the proper current (4.5 mA in this case) is obtained.
+<p>
+Using a dummy load will also permit a ballast resistor value to be selected
+such that the regulator operates near the middle of its compliance range.
+This will provide the maximum tolerance of low and high input (AC or DC)
+voltage (input compliance) and slight differences among HeNe tubes and/or
+conditions as the tube heats up and/or component values drift with age and use.
+<p>
+CAUTION: Determining the limits of some power supplies is like testing a new
+jet fighter; pushing the envelope entails some risk as the power supply can be
+damaged or destroyed if run outside its design specifications.  This is
+especially true with power supplies that are current regulated.  Damage could
+result if the design is not adequately protected.  Many commercial designs
+are quite robust but don't push your luck!  If your power supply is current
+regulated, see the section: <A HREF="laserhps.htm#hpsdcf0">Determining the
+Compliance Range of a Power supply</A>.
+<p>
+The discussion below assumes a power supply which does NOT include a current
+regulator.  If yours does, see the section:
+<A HREF="laserhps.htm#hpsdcf0">Determining the Compliance Range of a Power
+Supply</A> if you want to determine more about your power supply's
+characteristics.
+<p>
+Use a voltage divider constructed from a 500K potentiometer (actually four
+100K (5 W) resistors and five 20K, (1 W) resistors to get high enough
+wattage - not an actual pot since such things probably do not exist), 75K
+(5 W) resistor and 1K (sense) resistor.
+<p>
+This load will short out (and thus disable) voltage multiplier type starting
+circuits or fool any auto start circuit into thinking the tube is running.
+<p>
+These resistor values should work for most tubes rated between 1100 V and
+2,400, and currents between 4 mA and 8 mA with typical power supplies but
+yours may be the exception.  Therefore, the resistor values may need to be
+adjusted if you cannot obtain meaningful results.
+<p>
+Connect the components as follows:
+<PRE>
+
+                   +----+               +--o Measure o--+
+                   |    |               |               |
+                R1 v    |      R2       v       Rs      v  I ->
+      PS+ o-------/\/\--+-----/\/\------+------/\/\-----+------o PS-
+                500K 25 W    75K 5 W            1K
+
+</PRE>
+Measure the voltage across Rs to determine current.  The sensitivity will be
+1 V/mA.  Alternatively, simply put a 10 or 20 mA current meter across or in
+place of Rs.  (Then, Rs is effectively 0 for the calculations, below.)
+<ol>
+<li>Start with R1 at its maximum.
+<p>
+<li>Apply power and measure the current (I) through Rs as described above.
+   Your goal is for this to be equal to the nominal HeNe tube current (Io).
+<p>
+<li>Kill power and confirm that any capacitors have discharged before touching
+   anything!
+<p>
+<li>If the measured current is still too low, reduce R1 and try again (goto
+   step 2).
+<p>
+<li>Calculate or measure the resistance of the entire R1 assembly.  The value
+   of the ballast resistor (Rb) should then be:
+<PRE>
+                     Rb = R1 + 75,000 + Rs - (Vo/Io);
+</PRE>
+   where Vo is the operating voltage from the tube specifications.
+</ol>
+<A NAME="hpsdcf"></A>
+<hr>
+<br>
+<li>Back to <A HREF="laserhps.htm#hpstoc">HeNe Laser Power Supplies Sub-Table of Contents</A>.
+<h2>Determining Characteristics, Fixed Current Considerations</h2>
+<h3><A NAME="hpsdcf0">Determining the Compliance Range of a Power
+ Supply</A></h3>
+
+Most commercial HeNe laser power supplies incorporate some type of regulator to
+maintain the current through the tube constant.  It may be fixed at a set
+value like 5 mA or 6.5 mA or may be variable via a front panel or internal
+pot, by changing a resistor somewhere, or even by a control voltage (providing
+modulation, for example).
+<p>
+By varying the load using the test circuit (above), and taking measurements of
+both voltage and current, the limits of such a regulated power supply can be
+explored.  Over the useful compliance range of a power supply, output voltage
+will automatically vary to maintain the output current nearly constant
+independent of input and load variations and ripple from the power supply
+itself.
+<p>
+However, since the HeNe tube introduces some negative resistance into the
+equation, actual performance may not be quite the same as with the dummy load.
+Thus, although the power supply may be able to maintain a specified current
+over a certain range of dummy load resistance values, some portions of this
+range (usually at either end) may not result in stable behavior with actual
+HeNe tubes.
+<p>
+CAUTION: There is always some risk of damage if the specifications are unknown
+and the designers didn't provide adequate protection.  Keep this in mind if
+you decide to test your power supply in this manner.
+<p>
+<ul>
+<li>Power supplies with linear regulators are prone to failure when they are
+  called on to drive a load resistance that is too low because the voltage
+  drop across their regulator may become too great and parts may than short or
+  open.  Thus, attempting to drive too *small* a HeNe tube may cause problems
+  with these types of supplies - and there may be no warning before the
+  regulator calls it a day.  The result may then be *no* regulation and
+  greatly excessive current which is limited only by the power supply's
+  effective series resistance.
+<p>
+  If the load resistance is too high, these types of supplies simply do not
+  regulate properly and the output current will be reduced.  Where the voltage
+  drop across a (large) HeNe tube is too great, it will not operate properly.
+  However, damage to the power supply itself is unlikely unless left in this
+  condition for a long time.
+<p>
+  For power supplies with linear regulators, the safe limits are between 0 and
+  Vsafe volts across the regulator components where Vsafe is less than the
+  specified breakdown voltage of the pass transistor(s).  With better designs,
+  Vsafe will be restricted in other ways for protection but the output current
+  may increase once Vsafe is exceeded.  The actual output of the power supply
+  will have a compliance range between (Vmax-0) volts and (Vmax-Vsafe) volts
+  where Vmax is the output voltage under the specified load but with the
+  regulator short circuited.
+<p>
+<li>For inverters which adjust pulse width or frequency to regulate output
+  current, the usable limits will be determined by the range over which the
+  controller can properly drive the switching transistor.  These may fail when
+  they are called on to drive a load resistance that is too large because
+  their switching transistor and other components may be overstressed or
+  overheat.
+<p>
+  Without knowing the design in detail, there is really no risk-free way of
+  determining this on the high end though better designs will limit the
+  drive to a safe value before parts blow up.  As the load resistance is
+  increased, a point will be reached where regulation is no longer possible.
+<p>
+  Problems are most likely when driving HeNe tubes that are too large.  The
+  supply will be operating at or beyond its maximum specified output voltage
+  which may result in a dead supply if left that way for too long.  There may
+  be no warning, or the HeNe tube may blink or flash, behave erratically, or
+  not start at all - these conditions are stressful for both the power supply
+  and tube.
+<p>
+  What happens with too small a load resistance (or too small a HeNe tube) is
+  more difficult to predict but could there could also be problems.  At the
+  low end, the current will start to rise if the drive pulse width cannot be
+  reduced sufficiently.  This is analogous in some ways to the minimum load
+  requirements of a typical switchmode power supply (which is essentially what
+  these are).
+</ul>
+<p>
+Using the same setup as described in the section:
+<A HREF="laserhps.htm#hpsbrf0">Selecting the Ballast Resistor Using a Dummy
+Load</A> the compliance range of a power supply can be determined without a
+HeNe tube:
+<p>
+CAUTION: For regulated power supplies (inverters in particular), only leave
+power applied long enough to take your readings if the current is not being
+maintained at the specified value as this may be stressful to some designs.
+Where the specifications include a voltage rating (e.g., 2,500 V), this is
+generally the maximum that should be output continuously.  In this case, the
+upper limit is already known - going beyond this is asking for trouble.
+<p>
+<ol>
+<li>Start with R1 at a modest value and work first one way and then the other
+   so that the limits in both directions can be determined.  A suggested
+   initial value for R1 is around 250K.  This is likely to be within the
+   compliance limits of typical power supplies for small to medium size (i.e,
+   .5 to 5 mW) HeNe tubes).
+<p>
+<li>Apply power and note both the current (I) through Rs and the total voltage
+   (Vout) from the power supply.
+<p>
+   CAUTION: For power supplies with linear regulators, it is best to use a
+   variable input source and bring up the supply slowly while also monitoring
+   the voltage across the pass transistor(s) to assure it doesn't begin to
+   approach their breakdown voltage.  If this happens, R1 is too small (beyond
+   the lower limit of compliance).
+<p>
+   Current can be measured as described above.  Vout can be measured if you
+   have a voltmeter with a high enough range or calculated as:
+<p>
+                      Vout = (R1 + 75,000 + Rs) * I;
+<p>
+<li>There will be three possibilities (Io is the value of current that the
+   power supply is supposed to be maintaining):
+<p>
+<ul>
+   <li>If I = Io, the power supply is within regulation.
+   <li>If I &lt; Io, R1 is (or has become) too large.
+   <li>If I &gt; Io, R1 is (or has become) too small.
+</ul>
+<p>
+   Kill power and confirm that any capacitors have discharged before touching
+   anything.  Modify R1 as appropriate and goto step 2.  You are finished if
+   the entire range over which current is nearly constant has been explored.
+<p>
+<li>The compliance limits are at the points where the current goes out of
+   regulation at each end of the range of values of R1.  As noted above,
+   whether these are actually usable limits depends on design and your
+   particular HeNe tube.
+<p>
+<li>The HeNe tube voltages (range of Vo) that will be supported (assuming a 75K
+   Rb) will be within the limits:
+<PRE>
+                       (R1(u) * Io) > Vo > (R1(l) * Io);
+</PRE>
+   where R1(u) is the value of R1 at the upper end and R1(l) is the value of
+   R1 at the lower end of the range where the current (I) is constant.
+<p>
+   For a given HeNe tube with specified Vo and Io, the Rb which has the power
+   supply in the center of its compliance range is given by:
+<PRE>
+            Rb = (((R1(u) + R1(l).)/ 2) + 75,000 + Rs - (Vo / Io);
+</PRE>
+</ol>
+<p>
+As noted above, for regulated supplies, the current will be maintained at
+nearly a constant value over some range of output voltage.  Therefore, if
+possible, select the ballast resistor (Rb) for your particular HeNe tube such
+that the supply is operating near the center of its voltage compliance range.
+Of course, where a large tube is used on a smaller supply or vice-versa, the
+usable compliance range will be reduced.  In fact, there isn't even any sort
+of guarantee that the 'optimal' Rb value calculated above will even work with
+your HeNe tube!  Life it not simple. :-)
+<p>
+An alternative is to perform the compliance tests with a HeNe tube installed.
+The problem with this is that starting may make measurements more difficult
+and result only applies directly to the HeNe tube that is used.  However, this
+IS a more accurate procedure.  The series resistance is varied in the same
+manner as described above except that it will much smaller since much of the
+voltage drop is taken up by the HeNe tube.  The modified setup is shown below:
+<PRE>
+
+            +----+                                +--o Measure o--+
+            |    |                   LT1          |               |
+         R1 v    |     R2   Tube+ +-------+ Tube- v       Rs      v  I ->
+  PS+ o----/\/\--+----/\/\--------|-    ]-|-------+------/\/\-----+------o PS-
+         200K 15 W   50K 5 W      +-------+               1K
+
+</PRE>
+The procedure is otherwise similar but take care when making measurements
+since the starting circuit is no longer disabled and use an initial R1 of 25K
+instead of 250K.  As noted above, if you had previously determined the limits
+of your power supply using the dummy load, with the HeNe tube installed, the
+discharge may become unstable before these limits are reached.  Details are
+left as an exercise for the student. :-)
+
+<h3><A NAME="hpsdcf1">Fixed Current Power Supply Considerations</A></h3>
+
+Many inverter type power supplies are completely potted (i.e., 'bricks') and
+will have a fixed current specification (e.g., 5 mA, 6.5 mA) and a maximum
+voltage specification (e.g., 1,750 V, 2,500 V).  They will generally work with
+a 75K ballast resistor and attempt to maintain their rated current through a
+variety of HeNe tubes (various sizes and power ratings).  Unless there is an
+adjustment accessible through an access hole, there is no easy way change this
+current set-point.
+<p>
+CAUTION: These power supplies may attempt to maintain the set HeNe tube
+current even when the operating voltage is beyond their specifications as
+might be the case with a high power HeNe tube on a small power supply or a
+ballast resistor that is too large.  The power supply may overheat or be
+overstressed under these conditions and fail without warning.  See the
+section: <A HREF="laserhen.htm#hentht0">Typical HeNe Tube Specifications</A> to determine if your HeNe tube
+is likely to be within the capabilities of your power supply brick.
+<p>
+Where the current rating of your HeNe tube does not match the power supply
+(and it cannot be adjusted), your options are limited.  There is no easy way
+to increase or decrease current with external circuitry.  However, if it is
+within +/- 10 percent of the optimum current, don't worry about it.  If the
+current is within +/- 20 percent of optimum, it still isn't the end of the
+world (though a different power supply would be the best solution):
+<p>
+<ul>
+<li>Where the current is too low, power output may be reduced slightly.  If
+ the discharge is stable (not flickering or flashing), live with it.
+<p>
+<li>Where the current is too high, power output may be reduced slightly as
+ well.  There will be greater power dissipation at the HeNe tube anode and
+ this may reduce tube life.  I do not know if this is that significant.
+</ul>
+<p>
+Where the power supply components are accessible (it is not a potted brick),
+modifications may be possible but how easy this is depends on the design.  See
+the sections starting with: <A HREF="laserhpd.htm#hpdcre">Current
+Regulators</A> and the chapter: <A HREF="laserhsc.htm#hsctoc">Complete HeNe
+Laser Power Supply Schematics</A> for examples.
+<p>
+<A NAME="hpsspm"></A>
+<hr>
+<br>
+<li>Back to <A HREF="laserhps.htm#hpstoc">HeNe Laser Power Supplies Sub-Table of Contents</A>.
+<h2>Power Supply Measurements, Testing, Repair</h2>
+<h3><A NAME="hpsspm1">Making Measurements on HeNe Laser Power Supplies</A></h3>
+
+Voltage and/or current measurements on a HeNe laser power supply may be needed
+to characterize its performance bounds, to troubleshoot or identify a defective
+unit, or to monitor conditions during operation or with different HeNe tubes,
+particularly where there are user adjustments (i.e., a Variac used as an input
+voltage source).
+<p>
+<ul>
+<li>Generally, under normal conditions, the current is what is important.
+ Fortunately, current measurements can usually be carried out easily and
+ safely.  These will also readily identify a reverse polarity situation.
+<p>
+<li>However, when troubleshooting a misbehaving power supply or determining
+ the bounds of its characteristics, voltage measurements may be needed.
+</ul>
+<p>
+Note: I DO NOT recommend the use of typical DMMs (Digital MultiMeters) for
+measurements in high voltage power supplies of this type.  Many of these are
+more susceptible to damage from voltage or current spikes than analog VOMs
+(Volt Ohm Meters) or simple dedicated moving coil (D'Arsenval) panel meters.
+However, even with these, there can be internal arcing which may result in
+damage that doesn't show up until long after you have forgotten all about HeNe
+laser power supplies! :(
+<p>
+It is difficult to measure the output voltage of a HeNe laser power supply
+with a multimeter even if it is supposedly within your meter's range.
+Connecting the meter across the tube while it is on will likely extinguish
+the arc due to the capacitance of the probe inducing a momentary dip in the
+voltage.  Even if the tube remains lit or restarts, there may actually be
+oscillation resulting in an erroneous reading.  Where possible, measurements
+should be made upstream of the ballast resistor(s) and corrected for their
+voltage drop.
+<p>
+Leaving a multimeter connected during starting may prevent the tube from
+firing due to its additional capacitance and reduced resistance.  And, the
+meter may be damaged due to arcing from any high voltage starting pulses.
+<p>
+Here are some recommendations:
+<p>
+<ul>
+<li>Voltage: Home-built power supplies with separate starting circuits provide
+ options usually unavailable with modern commercial units.  The voltage
+ upstream of the starter is relatively stable and well behaved (at least it
+ should be) and should not damage the multimeter as long as it has adequate
+ range.  However, a slight offset may need to be subtracted from your
+ readings if there are high voltage diodes in series with the output (as with
+ many starting circuits).  However, high compliance designs do not offer this
+ option.
+<p>
+ Commercial supplies may not provide access to any convenient voltage test
+ point.  It may be possible to measure between the power supply side of the
+ ballast resistor and the HV return ONCE THE TUBE IS RUNNING.  However, this
+ is risky - if the tube goes out, the starting voltage will appear at this
+ point and may fry your meter or find a convenient path to ground through YOU.
+<p>
+ A VOM or DMM with a suitable high voltage probe can be left connected to a
+ wide compliance type power supply and possibly on one using a voltage
+ multiplier (though it may load it excessively) but should probably not be
+ used with a pulse (trigger) type starting circuit.
+<p>
+ Another approach is to leave a high value resistor - say 10M ohms - attached
+ to the power supply but disconnected from your meter while starting.  Once
+ the tube is lit, carefully measure between the resistor and the tube
+ cathode.  The high value resistor should minimize any transient when probing
+ and prevent the tube from going out.   Then, correct for the additional
+ resistance in series with your meter.  For example, with a 20K ohm/V VOM on
+ the 2,000 V scale, the meter resistance is 20M ohm so the reading would need
+ to be multiplied by 1.5.  If the measurement is made in front of the ballast
+ resistor(s), use Ohm's law to determine the actual tube voltage (if you care)
+ based on the tube current (see below) and ballast resistance (assume 75K if
+ inaccessible).
+<p>
+ Voltage measurements can also be made indirectly by monitoring current into
+ a known resistive load.  See the section:
+ <A HREF="laserhps.htm#hpsbrf2">Selecting the Ballast Resistor Using a Dummy
+ Load</A>.
+<p>
+ Measuring the starting voltage can be difficult depending on the type of
+ circuit used in your power supply.  See the section:
+ <A HREF="laserhps.htm#hpsspm2">Testing a HeNe Laser Power Supply</A> for more
+ information.
+<p>
+ Where you are interested in AC voltage (i.e., ripple or noise), couple the
+ test point through a HV coupling capacitor to block DC.  Its voltage rating
+ must be adequate to hold off the maximum possible output of the power supply
+ and its uF value must be large enough to minimally affect the measurement
+ accuracy.  At 60 Hz, for example, a .01 uF capacitor is large enough to
+ to produce less than a 5 percent error on a 10 M ohm input impedance DMM.
+ CAUTION: Provide some sort of excess voltage or surge protection (e.g., an
+ NE2 neon bulb) across the inputs to the multimeter or scope so that multi-kV
+ transients don't find their way into your test equipment!
+<p>
+ I use a series combination of a 20K ohm HV resistor, 1 nF, 15kV capacitor,
+ and an NE2 for protection to limit the voltage on the scope input to about
+ 90 V.  The impedance of 1 nF at 60 Hz is about 3M, so the result is a slight
+ attenuation (around 25 percent).
+<p>
+<li>Current: In all cases, a meter can be placed in the RETURN circuit of the
+ HeNe tube.  At this location - which should be safely near ground potential
+ if at all possible - the capacitance of the meter and probes will not affect
+ starting or operation in any way.  Reverse polarity due to incorrect wiring
+ will be instantly obvious.  The measuring device can be a VOM or DMM (though
+ as noted, I do not recommend DMMs), or a simple panel meter (which doesn't
+ tie up your expensive multimeter):
+<p>
+ Obtain a 10 mA panel meter (I use a surplus Weston - it probably dates from
+ the 1950s).  Mount it in a well insulated or grounded case, and add a set of
+ well insulated color coded (red and black for + and - respectively) high
+ voltage leads with banana plugs on the ends.  Then, any power supply should
+ include a 1K resistor in series with the cathode return connected to jacks
+ on the case.  This 'current sense' resistor (Rs) will have no affect on
+ power supply performance but will prevent any significant voltage from
+ appearing at the test jacks if the meter is not present.  The 10 mA meter
+ will effectively short out Rs so essentially all the currennt flows through
+ it.  A voltmeter can be used instead of a current meter across Rs.  The
+ sensitivity will then be 1 V/mA.  Either type of meter can be left in place
+ permanently if desired.  If you expect to be testing many HeNe lasers,
+ get male and female Alden connectors and wire up the meter permanently
+ between the negative/cathode (black) wires.  Solder the red wires together
+ insulate them most extremely well. :)  Aldens may be salvaged from dead
+ laser heads and power supplies, or may be purchased from various surplus
+ places.
+<p>
+ Some commercial laser power supplies already have a built-in sense resistor
+ in an easily accessible relatively safe location for current monitoring or
+ you can easily add one.
+<p>
+ Where you are building your own power supply, make sure it has its negative
+ output earth grounded (3 prong line cord or separate wire screwed to a
+ suitable ground) if at all possible.  This will assure that the cathode end
+ of the HeNe tube, metal parts of the laser head, and current measurement
+ test points are all at or very near ground potential - and thus less of a
+ hazard should you touch any of them (though I am not recommending this!).
+<p>
+ For commercial units, test to see if this is already the case or is possible
+ (it almost always is but there are no doubt exceptions).  Such precautions
+ will greatly reduce the chances of shocking experiences since the only part
+ of the laser head at a high potential will be the ballast resistor and tube
+ anode.
+<p>
+ See the chapter: <A HREF="laserhsc.htm#hsctoc">Complete HeNe Laser Power
+ Supply Schematics</A> for more information and sample circuits.
+</ul>
+<p>
+WARNING: Make sure whatever you have is well insulated and/or grounded where
+appropriate.  Those high voltages can bite!  Use proper high voltage cable
+(rated 20 kV or more - non-resistive type automotive ignition cable and TV
+or monitor CRT high voltage cable works well) and insulated coverings on the
+terminals (several layers of plastic electrical tape or Plexiglas barriers).
+You may be working in the dark (light-wise, at least) or with somewhat subdued
+lighting, so it makes sense to prevent accidental contact as much as possible.
+This is especially important with power supplies that may be overkill (no pun
+intended...really!) as is often the case with home-built equipment.
+<p>
+CAUTION: Assure that all connections are secure and that the high voltage
+connections are well insulated.  Intermittent contact, arcs, shorts, and other
+faults may be fatal to power supplies regardless of what their Marketing
+blurb says about being *fully* protected!
+
+<h3><A NAME="hpsbrmb">Ballast Resistor Selector and Meter Box</A></h3>
+
+I built this hand-dandy gadget both as a means of easily adjusting the ballast
+resistance as well as providing a convenient readout for HeNe tube current
+and voltage.  It is shown in <A HREF="henebrm1.jpg">HeNe Laser Ballast Resistor
+Selector and Meter Box</A>.  The entire complex circuit is mounted between a
+pair of blank Fiberglas-Epoxy PCB panels separated by 2 inch standoffs.  It
+will plug into any HeNe laser power supply with an Alden connector and has
+special custom clip leads (read: alligator clips with formed paper clips
+soldered to their ends) to easily attach to the mirror mounts or HV terminals
+of <i>any</i> HeNe tube.
+<p>
+The first part is the tapped ballast resistor and current monitor:
+<p>
+<PRE>
+
+      Female    +------------------------------------+
+      Alden     |                                    | 
+      Anode     |                                    V
+        o       | o      o      o      o      o      o      o      o
+        |   R1  | |  R2  |  R3  |  R4  |  R5  |  R6  |  R7  |  R8  |    Tube
+ HV+ &lt;--+--/\/\-+-+-/\/\-+-/\/\-+-/\/\-+-/\/\-+-/\/\-+-/\/\-+-/\/\-+--o Anode
+       Setting->217K   190K   163K   135K   108K    81K    54K    27K 
+                                                                     HV Leads
+  Male Alden                                     R1-R8: 27.1K, 2W    to HeNe
+  Connector                        M1                                 Tube
+                               +---------+
+ HV- &lt;-------------------------| 0-10 mA |----------------------------o Cathode
+                               +---------+              (Tube or Female Alden)
+
+</PRE>
+<p>
+If you're wondering about the peculiar resistor value of 27.1K, the answer
+is the same one as to the question: "Why do people climb mountains?". :)
+<p>
+The HV leads plug in via banana jacks and can be either a short clip lead
+for the tube anode and longer one for the tube cathode, or a female Alden
+connector (as shown in the photo).  The Alden positive lead can also be
+plugged in to any of the non-zero ballast resistance jacks to add ballast
+resistance if desired. 
+<p>
+Note that (except for the 27K setting), the Tube Anode lead always goes
+directly to the end of exactly one resistor to minimize capacitance at the
+tube and to protect the power supply in the event of a, well, unfortunate
+accident (like a short circuit).  (For the 27K setting, the assumption is that
+there is an additional ballast resistance near the tube anode so capacitance
+doesn't matter as much.)  This lead is also relatively short - about 4 inches
+for this same reason.  Each tap is a banana jack and the tap selector is just
+a VERY WELL INSULATED jumper with a banana plug on its end (though I still
+don't recommend trying to change settings while powered!).
+<p>
+The following is connected directly across the output for measuring tube
+voltage:
+<p>
+<PRE>
+
+                   Rm1
+   Anode o----+----/\/\-----+
+              |    50M      |
+              |    15kV  S1  / See text
+              |             |
+              |       +-----+--+----+
+              |  Rcal |        |    | 
+              |    5M /        |    |
+              o    +->\        |    o
+              +    |  /        |    -
+              V    |  \        |   DMM (10M input, set Rcal
+              -    |  |    C1 _|_   -    using a low voltage
+              o    +--+ .01uF ---   o    so DMM reads V/10.)
+              |       |   2kV  |    |
+              |       /        |    |
+              |   Rm2 \        |    |
+              |   10M /        |    |
+              |   2kV \        |    |
+              |       |        |    |
+ Cathode o----+-------+--------+----+
+
+</PRE>
+<p>
+Rm1 and Rm2 are high voltage resistors.  S1 is actually just another jumper
+and banana jack (the short red one in the photo, shown in the
+closed position) since a common switch would need to be capable of withstanding
+over 10 kV during starting.  The purpose of S1 is to unload the HeNe laser
+power supply during starting.  However, if your power supply has enough
+current capacity while starting (usually high compliance inverter designs
+as found in most bricks, not
+parasitic multipliers), it may be possible to keep the meter in the circuit
+all the time.  Just make sure your components are adequately rated for the
+maximum starting voltage which may be present if a HeNe laser tube is not
+connected or simply refuses to start.  The DMM will read 1/10th of the actual
+tube voltage.  Even if the tube cuts out and tries to restart, the DMM should
+survive but I can offer no guarantees for your specific implementation!
+However, putting a series string of NE2 neon lamps across the meter would
+be good insurance - figure 90 V for each NE2 so add enough so that they
+will start conducting when the meter exceeds its full scale voltage.
+<p>
+I normally use this rig with an Aerotech PS2B HeNe laser power supply which
+has had its regulator bypassed. (See the section:
+<A HREF="laserhsc.htm#hscat2">Aerotech Model PS2B HeNe Laser Power Supply
+(AT-PS2B)</A>.)  No matter what protection there is,
+semiconductors tend to blow themselves up to protect the fuse. :)  And for
+testing there is really no need for great regulation.  It has been installed
+in the case from an Aerotech LS4P laser (which is 3 to 4 inches longer than
+the PS2 case) so a small Variac fits snugly in one end to adjust tube current.
+It may be set low for 0.5 mW barcode scanner HeNe tubes or cranked up to an AC
+input of 140 VAC for dealing with hard-to-start tubes, or to drive any
+HeNe laser tube or head of up to at least 12 mW on the bench while
+monitoring current and voltage.  (The modified
+PS2B is quite happy running at 140 VAC input all day but this may not be true
+of some other power supplies.)  The combination of the PS2B, tapped ballast
+resistor, and metering system is my workhorse for testing HeNe lasers.
+<p>
+If you're characterizing a few thousand HeNe lasers of various sizes,
+there is at least one tester on the market designed to make your life
+easier (and pocketbook lighter!).  The
+<A HREF="http://www.voltex.net/">Voltex, Inc.</A> U-40 (about $600) can
+power virtually all HeNe lasers and includes current adjust, and voltage
+and current monitoring.
+
+<h3><A NAME="hpsspm2">Testing a HeNe Laser Power Supply</A></h3>
+
+Failure of a HeNe laser to lase could be due to a bad tube, bad power supply,
+bad connections, or you forgot to plug it into the wall socket!
+<p>
+If there is a continuous glow from the inside of the HeNe tube, the power
+supply is probably working properly though the current could be incorrect.
+However, this would result in reduced output power or excessive heating - but
+not a totally dead laser unless the current was more than 2 or 3 times too
+high.  (In this extreme case, if the tube is good, there would likely be at
+least a flash of laser light from its output at power-on and/or power-off as
+the tube current passes through the normal operating range).
+<p>
+Where there is no sign of a discharge - even momentarily - the problem could
+be with the tube, wiring, or power supply.
+<p>
+If the laser is flashing or sputtering, or the current is way too high
+(based on measurements), the tube is either broken or its voltage requirements
+are outside the compliance range of the power supply at its present current
+setting.  If the current is too high, the tube voltage is probably too
+low.  If it flashes or sputters, the tube voltage may be too high.
+Either condition is very hard on power supplies and failure may not be
+far behind.  So do not push your luck and find out what's wrong.
+<p>
+In either case, it would probably be a good idea to see the section:
+<A HREF="laserhen.htm#henhtt0">How Can I Tell if My Tube is Good</A>
+before getting into heavy troubleshooting of the power supply.
+<p>
+To determine if the power supply is working requires testing it for both the
+starting and operating voltage (and proper current if it includes an internal
+regulator).  Of course, the easiest approach is to substitute a known working
+HeNe tube, but this is not always a viable option.  If all that is desired is
+to determine if the power supply is not dead and no test equipment is
+available, see the procedure at the end of this section.
+<p>
+Before proceeding, for your own safety and the continued health of your test
+equipment, see the section: <A HREF="laserhps.htm#hpsspm1">Making Measurements
+on HeNe Laser Power Supplies</A>.<p>
+<p>
+<ul>
+<li>Testing to determine if the power supply is producing the proper operating
+ voltage can be done by substituting a resistive load for the HeNe tube (and
+ ballast resistor).  Where the specifications are known, use the operating
+ voltage and current to select a suitable power resistor from: R = Vo / Io.
+ Where no such data is available, estimate the specifications by locating a
+ HeNe tube in the section: <A HREF="laserhen.htm#hentht0">Typical HeNe Tube
+ Specifications</A> similar to the one you will be using.  Make sure the
+ resistor can handle at least twice the expected current (just in case).
+<p>
+ This load will short out (and thus disable) a voltage multiplier or fool any
+ other type of starting circuit into thinking the tube is running.
+<p>
+ Add a 1K ohm resistor in series with this load to use for measuring the
+ current (and from this, the total voltage from the power supply).
+<p>
+<PRE>
+
+                               +--o Measure o--+
+                               |               |
+                       Rl      v      Rs       v
+          PS+ o-------/\/\-----+-----/\/\------+------o PS-
+                                      1K
+
+</PRE>
+<p>
+ As an example, for a typical 1 mW HeNe tube requiring 3.5 mA at 1.4 kV, the
+ load resistor (Rl) should be 400K ohms.  The power dissipation at this
+ operating point would be about 5 W.  Use several lower wattage resistors
+ in series (to handle the expected maximum voltage) to make up the required
+ resistance for R1 with a total power dissipation of around 10 W.
+<p>
+ Measure the voltage across Rs to determine current.  The sensitivity will be
+ 1 V/mA.  Alternatively, simply put a 10 or 20 mA current meter across or in
+ place of Rs.  Power supply output voltage is then Vo = (Rl / Rs) * V(R2).
+<p>
+<ul>
+ <li>If your measurements indicate that voltage and current are 0 or much much
+  less than expected, the power supply is bad, your input voltage is
+  incorrect or miswired (e.g., you are using the 230 VAC rather than the 115
+  VAC wiring), or there is an enable input (logic signal) which is not
+  connected or set to the wrong state.
+<p>
+ <li>If your readings are somewhat low, your documentation may be incorrect
+  or the load resistor may be too high for the power supply and it is not
+  capable of providing both the expected voltage and current.
+<p>
+ <li>If your readings are too high, your documentation may be incorrect, or the
+  load resistor may be too low for the power supply and it is incapable
+  of reducing both the voltage and current far enough.
+ </ul>
+</ul>
+<p>
+If the power supply has a current adjustment, see if this behaves as expected.
+A control that does nothing could indicate that the load resistor is sized
+incorrectly and the compliance range of the power supply is being exceeded
+(low or high).
+<p>
+In all cases, a defective regulator or control circuit could result in these
+faults as well.
+<p>
+<ul>
+<li>A stack of NE2 (or similar) neon indicator lamps (without built in current
+ limiting resistors) AND a 75K ohm (5 W) ballast resistor (Rb) in series can
+ provide a rough indication of proper operation if you don't have test
+ equipment.  Each NE2 has an operating voltage of about 60 V at 1 mA but this
+ will increase by about 25 percent at 6 mA (and NE2s probably don't have a
+ very long life at 6 mA).  The starting voltage is about 90 V.  A stack of 20
+ NE2s would therefore require about 1,800 V to start and would run at between
+ 1,200 and 1,500 V depending on current.  This is not quite the same as a
+ HeNe tube (at least for the starting voltage/operating voltage ratio) but
+ may represent a simple test if you have a drawer full of lonely neon bulbs!
+<p>
+ The NE2s can also be used in place of the large resistor described above:
+<p>
+<PRE>
+
+                                   +--o Measure o--+--o Measure o--+
+                   IL1   IL2       |      IL20     |               |
+           Rb      +--+  +--+      v      +--+     v       Rs      v
+  PS+ o---/\/\----+|oo|--|oo|--//--+------|oo|-----+------/\/\-----+---o PS-
+        75K, 5 W   +--+  +--+  . . . . .  +--+             1K
+                   NE2   NE2              NE2
+
+</PRE>
+<p>
+ Note: This example uses 20 NE2s - adjust this number for your particular
+ expected power supply output.
+<p>
+ Measure the voltage across Rs to determine current.  The sensitivity will be
+ 1 V/mA.  Also measure the voltage across the right-most NE2 (IL20 in this
+ circuit).  Operating voltage is then: (75 * V(Rs).)+ (20 * V(IL20).)
+<p>
+ This approach can also be used instead of the that using a variable resistor
+ in the section: <A HREF="laserhps.htm#hpsbrf2">Selecting the Ballast
+ Resistor Using a Dummy Load</A>.  Simply insert or remove individual NE2s as
+ a means of evaluating the power supply's characteristics.  However, see the
+ caution in that section with respect to possible damage to the power supply.
+<p>
+<li>It may be possible to do a very simple test to determine if the linear
+ regulator is doing anything: Short the output of the power supply through a
+ DC current meter (e.g., 10 mA full scale for a power supply rated at 6.5 mA)
+ and power it using a Variac.  Over a certain input range (related roughly
+ to the output voltage compliance range of the power supply), the output
+ current should remain fairly constant and correspond to the rated current
+ (e.g., 6.5 mA) or the current adjustment setting (if there is one).
+ CAUTION: Make sure you start with the Variac all the way down.  As
+ it is increased, the current should increase and level off at the rated
+ current - only go high enough to confirm regulation - don't push your luck!
+ How well this works will depend on whether the regulator circuitry is
+ adequately powered at low line voltage - it may be necessary to add some
+ resistance in series with the meter (as described above).
+<p>
+<li>Testing to determine if the power supply is producing adequate starting
+ voltage is trickier since the current is so low and/or the output will be
+ a short HV pulse (trigger type starting circuits).  Any normal VOM or DMM
+ will look like a short circuit to typical voltage multiplier starting
+ circuits and/or will not respond to the short pulses of trigger type
+ starting circuits.  They may also be damaged.
+<p>
+<ul>
+ <li>Note that ambient conditions can significantly affect the ability of
+  some power supplies to provide the proper starting voltage.  Multiplier
+  type starting circuits tend to be very high impedance and high humidity
+  may effectively short them out (especially if the power supply is not
+  potted or sealed - there may be nothing wrong with either your tube or
+  power supply!
+<p>
+ <li>If you have a high impedance high voltage probe for your VOM or DMM (or
+  oscilloscope), this may be used to test voltage multiplier or wide
+  compliance type designs.  Use the probe without any load.  The voltage
+  should ramp up to a maximum level determined by the design and ambient
+  conditions (humidity will reduce it).
+<p>
+ <li>If you have a high impedance high voltage probe for your oscilloscope
+  which has adequate frequency response, use this to test pulse (trigger)
+  type starting circuits.
+<p>
+ <li>Wide compliance type starting circuits may be tested using a normal VOM
+  or DMM if it has a 10 kV range (most do not without special HV probes).
+  Even the 5 kV range of a Simpson 260 VOM may be adequate for many smaller
+  power supplies.
+<p>
+  Alternatively, knowing the input impedance of the voltmeter, a high value
+  resistor can be added to extend its range.  See the document:
+  <A HREF="http://www.repairfaq.org/sam/hvprobe.htm">Simple High
+  Voltage Probe Design</A>.
+</ul>
+<p>
+ Note: Some inverter type power supplies (especially power supply bricks)
+ use a combination of a voltage multiplier AND medium compliance design so
+ testing with an instrument that does not have a high impedance input (i.e.,
+ greater than 250 M ohms) may be misleading (the portion of the starting
+ voltage produced by the multiplier will be effectively shorted out leading
+ you to condemn a power supply that is actually good).
+<p>
+<ul>
+ <li>A rough estimate of starting voltage can be made by carefully positioning
+  the wire lead to one end of the load (described above) a fraction of an
+  inch away from the resistor resulting in a spark gap.
+<p>
+  CAUTION: Don't omit the load resistor to limit current - otherwise, the
+  internal filter capacitor(s) of the supply will discharge rapidly if a
+  spark jumps the gap and this may be bad for the supply - the high voltage
+  rectifiers in the starting multiplier and other components may get fried.
+  Don't ask me how I know. :(
+<p>
+  WARNING: Use a well insulated tool (like a plastic stick) to adjust the
+  spark gap if necessary.  There may be 10 kV or more present if your power
+  supply is working properly and that can bite (especially since if it jumps
+  to YOU, the charge on the main internal filter capacitor of the supply
+  won't be far behind!
+<p>
+  For dry air, breakdown voltage is about 25 kV per inch.  However, many
+  factors affect this including the shape of the contacts (pointed or
+  smooth), temperature, humidity, etc. so this will not be a precise
+  measurement.  Setting the gap at about 1/4" will result in a breakdown
+  voltage of about 5 to 7 kV.  There should be sparks periodically (one
+  every few seconds to several per second depending on the power supply - if
+  the starting voltage can jump the gap.  If there is no evidence of sparks
+  even when the gap is very small, there is a problem with the starting
+  circuitry.
+ </ul>
+<p>
+<li>Basic testing of a HeNe laser power supply without test equipment can
+ be performed by simply determining if it will generate enough voltage to
+ arc a fraction of an inch.  This actually only tests for the starting
+ voltage, but in most cases if the starter is good, the rest of the supply
+ is good as well.  There can be exceptions where either only the starter
+ works or there is no regulation for the operating current, but it is
+ still a good first test if no compatible laser tube or head is available.
+<p>
+However, this must be done safely for both you and the power supply:
+<p>
+ <ul>
+ <li>Obtain 8 to 10 1/4 to 1/2 watt resistors totally about 1M ohm.  These
+  should even be available from Radio Shack.  The resistors will limit
+  the output current to a value which won't damage the supply.
+<p>
+ <li>Make two series stacks of the resistors with about half in each
+  and insert one in the positive output of the power supply and the
+  other in the negative output.  CAUTION: If you recently attempted
+  to apply power to the power supply, it's output capacitors may
+  still be charged!  Of course, if you accidentally touch the output
+  and fly across the room, the supply is most likely good. :)
+<p>
+ <li>Position the ends of the two resistor strings about 1/8 inch apart for
+  power supplies used with laser up to 1 mW, and 1/4 inch apart for larger
+  ones.
+<p>
+ <li>Keeping all parts of your body safely away from the resistors, apply
+  power.  Note that higher power units will likely have a "CDRH delay"
+  which will prevent the supply from actually coming on for a few seconds.
+<p>
+ <li>After the delay, if present, a good supply will easily arc across
+  the gap between the resistor ends.
+<p>
+  CAUTION: Do not allow the power supply to run for longer than a few
+  seconds.  Even with the current limiting resistors, it still is probably
+  not going to be entirely happy driving a load that is not a laser.
+<p>
+  If there are no signs of any sparks or arc, try using an insulated tool
+  (e.g., dry wooden stick) to push them slightly closer together.  If still
+  nothing, check that your input voltage is correct and live, and that there
+  are no enable signals that need to be applied.
+<p>
+<li>After removing power, use an insulated tool to push the ends of the
+  resistor strings together to short them for a few seconds.  This will
+  discharge any capacitors inside the power supply and make it safe to
+  touch the wiring.
+ </ul>
+</ul>
+<p>
+Also see the sections: <A HREF="laserhps.htm#hpsbrf0">Selecting the Ballast
+Resistor</A> and <A HREF="laserhtr.htm#htrhtt0">Starting Problems and
+Hard-to-Start Tubes</A>.
+
+<h3><A NAME="hpsspm3">HeNe Laser Power Supply Repair</A></h3>
+
+Various types of HeNe laser power supplies may turn up in electronics surplus
+stores, junk yards, or buried under piles of other stuff in the back of your
+company or university lab storeroom.
+<p>
+WARNING: Just because these are often compact units doesn't mean they cannot
+be lethal.  See the document: <A HREF="safety.htm">Safety Guidelines for
+High Voltage and/or Line Powered Equipment</A> before working on any type of
+equipment which uses line voltage or produces high voltage.  See the section:
+<A HREF="laserhps.htm#hpsrtc2">SAFETY when Dealing with HeNe Laser Power
+Supplies</A> for specific precautions.
+<p>
+CAUTION: Make sure you discharge both the output of the power supply AND the
+HeNe tube itself with a high value power resistor (e.g., 100K consisting of a
+series string of 5, 20K, 2 W resistors to handle the voltage) before touching
+anything.  Else, you may be in for a nasty surprise!
+<p>
+<ul>
+<li>Totally dead lab-style power supplies.  Check for the interlock
+ plug and install a replacement if it is missing.  WARNING: The interlock
+ plug usually interrupts the 115/230 VAC power so take care if using a
+ bare wire! Check for blown fuses.  If there is a blown fuse with a brick-type
+ supply, it is probably dead but worth trying a single new fuse just in case
+ you got lucky.  With a discrete supply (transformer, rectifier/doubler.
+ filter, HV multiplier), there might have been an overload or short due to
+ a faulty laser head or its wiring.  So, again, try a single new fuse.  If
+ that blows, further troubleshooting will be required.
+<p>
+<li>Totally dead potted power supply brick.  Well, these are almost certainly
+ totally dead permanently.  They make nice high-tech paperweights or ballast
+ for your car in the snow. :( :-)  However, make sure you are providing
+ the proper input including any TTL or other enable signals that may be
+ required.
+<p>
+ There really isn't any way I know of to open these non-destructively for
+ analysis or repair.  However, make sure your wiring is correct and that you
+ are attempting to operate the supply on the proper input voltage (e.g., 12
+ VDC, 115/230 VAC - though it may be too late if you guessed wrong and
+ connected 230 VAC to a 12 VDC unit) and that your HeNe tube and ballast
+ resistor are appropriate for the power supply's ratings - start with a small
+ HeNe tube or even just a load resistor and multimeter.  See the sections
+ starting with: <A HREF="laserhps.htm#hpsbrf0">Selecting the Ballast
+ Resistor</A>.
+<p>
+<li>Brick type power supply has exploded.  This might happen if a 12 VDC unit
+ were connected to the 115 VAC line or if no fuse or an oversized fuse was
+ present and an internal failure caused a capacitor to blow its top.  See the
+ section: <A HREF="laserhps.htm#hpsbrkw">Importance of Fusing Power Supply
+ Bricks</A>.  As with the totally dead brick, despite the fact that part of
+ its interior is not exposed, repair is probably not possible (or at least not
+ advisable).
+<p>
+<li>Portions of a 'brick' type supply can fail but the unit may still be
+ useful:
+<p>
+ <ul>
+ <li>Where only the starting circuit is not working, an external starting
+  circuit can be added.  See the section:
+  <A HREF="laserhpd.htm#hpdhns0">Starting Circuits for HeNe Laser Tubes</A>.
+<p>
+ <li>Where the regulator has failed (the DC current is not controllable,
+  except by varying the input voltage), an external regulator can be added or
+  the supply can just be used on a Variac or with a large enough ballast
+  resistor to reduce the current to the correct value for your tube.
+  <A HREF="laserhpd.htm#hpdcre">Current Regulators</A>, and specifically
+  the section: <A HREF="laserhpd.htm#hpderip">External Regulator for Inverter
+  Power Supply</A>.
+<p>
+ <li>Where the ripple (the AC component of the tube current) is found to
+  be excessive - more than 3 or 4 percent - an external ripple reducer
+  can be added between the HeNe laser power supply and tube ballast
+  resistor.  See the sections starting with:
+  <A HREF="laserhpd.htm#hpdcre">Current Regulators</A>, and specifically
+  the section: <A HREF="laserhpd.htm#hpdrrn">Reducing the Ripple and Noise
+  in a HeNe Laser Power Supply</A>.
+ </ul>
+<p>
+  I have a couple of supplies with these types of faults.
+<p>
+<li>Line operated supplies are so simple that it is usually possible to locate
+ failed parts with simple ohmmeter tests or by substitution.  Common problems
+ include failed regulator components, shorted HV diodes or capacitors, and
+ faults with the power transformer.
+<p>
+<ul>
+ <li>The power transformer may develop shorted turns or arc internally. If it
+  appears totally dead, check for broken wires at the terminals or a blown
+  thermal protector under the outer layers of insulation.  Shorted turns
+  will result in overheating, reduced output, or total failure.
+<p>
+ <li>Electrolytic filter capacitors may dry up and lose capacity resulting in
+  high ripple which effectively reduces the available operating voltage
+  since the valleys in the waveform are lower.  This is particularly likely
+  with old line operated power supplies.  The result may be erratic behavior
+  from a power supply and HeNe tube combination that used to work.  Make
+  sure the capacitors are ALL discharged, then test with a capacitance or
+  ESR meter - or just replace them all .
+<p>
+  These types may also develop excessive leakage and reduced capacity
+  (called 'deforming') from long periods of non-use.  This is the same thing
+  that happens to the large energy storage capacitors of photoflash or laser
+  flashlamp power supplies when neglected for years.  A simple test is to
+  measure the time constant of the capacitor(s) with a high value resistor.
+  Usually, you can do this without removing them from the power supply and
+  just using the normal bleeder resistors that should already be present.
+  If the discharge time is much shorter than expected, excessive leakage is
+  the likely cause.  It may be possible to revive these by running the power
+  supply from a Variac, first starting at low input voltage and slowly
+  increasing it as the capacitors 'reform'.
+<p>
+ <li>The transistors in linear regulators may fail if the output is
+  subject to an arc fault, short circuit, or attempt to drive a tube
+  with a broken bore.  Test each transistor for shorts and opens - dead
+  ones are usually easily found.  It may be best to replace them all
+  even if only one is found to be bad.
+<p>
+  Older Coherent and Hughes supplies are among the few linear types that have
+  potted regulators.  If transistors fail in these, an external regulator can
+  be installed.
+<p>
+ <li>Testing of other components is described below.
+ </ul>
+<p>
+<li>Inverter type supplies that are not potted can also usually be repaired
+ quite easily unless the high frequency transformer has developed an internal
+ short.  However, other component failures are more likely.  Where an IC is
+ used for the control circuit, a datasheet will prove invaluable in analyzing
+ circuit operation.  As with transformers, ICs really don't fail that often
+ so you really shouldn't suspect these possibly hard-to-find parts without
+ eliminating other possibilities.
+<p>
+ <ul>
+ <li>The main switching transistor(s) will likely fail shorted so that simple
+  multimeter tests will suffice to locate bad parts.
+<p>
+ <li>Primary side controllers may malfunction due to defective electrolytic
+  capacitors, failed pulse width controller IC, or other bad components.
+<p>
+ <li>The high frequency transformer may develop shorted turns or internal
+  arcing.  These can often be tested like flyback transformers.
+<p>
+ <li>Secondary-side regulators or ripple reducing circuits can fail,
+  especially due to short circuit faults.  Monitor the AC ripple at the
+  top of the ballast resistor (or into a dummy load if the tube won't
+  stay lit).  It may be possible to add an external replacement.
+<p>
+ <li>Testing of other components is describe below.
+ </ul>
+<p>
+<li>For components common to all types of power supplies:
+<p>
+ <ul>
+ <li>High voltage rectifiers generally fail shorted but not always.  However,
+  the forward voltage drop for these is order of .7 V/kV of their PIV rating
+  so a normal multimeter may not provide enough voltage on the diode check
+  range to test them for an open failure (which is uncommon anyhow).
+<p>
+ <li>High voltage capacitors will generally fail shorted or break down when
+  stressed at normal operating voltage.  Testing for shorts will identify
+  dead caps but substitution is the only way to be sure unless you find one
+  split in half or spurting 5 foot flames. :-)
+<p>
+ <li>Post regulating components may fail and result in either no regulation or
+  very reduced output current.  Zener diodes and pass transistors can be
+  tested with a multimeter - these will usually fail shorted.  ICs like
+  LM723s may fail in a variety of ways - if the readings don't make sense,
+  just try a replacement - they are usually not expensive.
+ </ul>
+</ul>
+<p>
+For much more information on the servicing of these types of devices, see the
+following (as appropriate for your power supply):
+<p>
+<ul>
+<li><A HREF="http://www.repairfaq.org/sam/semitest.htm">Testing of
+ Discrete Semiconductors with a DMM or VOM</A>.
+<p>
+<li><A HREF="http://www.repairfaq.org/sam/captest.htm">Testing of
+ Capacitors with a Multimeter and Safe Discharging</A>.
+<p>
+<li><A HREF="http://www.repairfaq.org/sam/flytest.htm">Testing of Flyback
+ (LOPT) Transformers</A> may also come in handy as it also applies to general
+ transformer and coil testing.
+<p>
+<li><A HREF="http://www.repairfaq.org/sam/smpsfaq.htm">Notes on the
+ Troubleshooting and Repair of Small Switchmode Power Supplies</A> which is
+ directly applicable to inverter type HeNe laser power supplies.
+</ul>
+<p>
+<h3><A NAME="hpsrreg">Replacing a Regulator Stack with Resistors</A></h3>
+
+It is quite common to inherit a HeNe laser power supply which once had a
+linear regulator but all that is left is either a gaping hole or a bunch of
+shorted transistors. :(  This may even happen with an AC line operated HeNe
+laser power supply using a potted high voltage module.  If the regulation
+components exploded, there will probably be no output.  If they shorted -
+probably most common - the current will either be too high with no regulation
+or the laser will be flashing due to insufficient ballast resistance.  (A
+constant current regulator looks like a high resistance to the laser.)  While
+the purists among us will insist on a faithful reconstruction, for many
+purposes, simply replacing the regulator with a few resistors will provide
+adequate performance.
+<p>
+Put a current meter set for 10 mA or more full scale in series with the HeNe
+tube cathode.  Build up your stack from 10K to 25K, 1 to 2 W resistors.  Start
+with about 50K ohms for each transistor that used to be in series as part of
+the regulator.  Where the number of transistors is unknown, just start with
+50K to 100K.  Add or remove resistors to adjust the tube current to its rated
+value at normal line voltage.  Within about 5 percent (e.g., 0.3 mA at 6.5 mA)
+should be chose enough.  Err on the low side if the laser seems stable at
+this value.  If a Variac is available, check for stability with respect to
+line voltage variations - the laser shouldn't drop out until the line voltage
+drops to below about 105 VAC (in the USA).
+<p>
+WARNING: Make sure your power supply capacitors are fully discharged before
+touching anything!
+<p>
+The efficiency of this setup will be exactly equal to that of a proper
+regulator.  There will just be no regulation with respect to AC line
+fluctuations.  But with the added resistance of your stack, this won't be
+as bad as it would be with just a ballast resistor.  Since you presumably
+won't be swapping HeNe tubes, regulation with respect to tube characteristics
+isn't that important.
+<p>
+<hr>
+<br><li>Back to <A HREF="laserfaq.htm#faqtoc">Sam's Laser FAQ Table of Contents</A>.
+<li>Back to <A HREF="laserhps.htm#hpstoc">HeNe Laser Power Supplies Sub-Table of Contents</A>.
+<li>Forward to <A HREF="laserhpd.htm#hpdtoc">HeNe Laser Power Supply Design</A>.
+<p>
+<hr>
+<b><center>Sam's Laser FAQ, <A HREF="copyright.htm">Copyright &copy<A> 1994-2010,
+ Samuel M. Goldwasser, All Rights Reserved.<br>
+ I may be contacted via the
+ <A HREF="emaillnk.htm">Sci.Electronics.Repair FAQ
+ Email Links Page</A>.</center></b>
+<hr>
+<p>
+</BODY>
+</HTML>

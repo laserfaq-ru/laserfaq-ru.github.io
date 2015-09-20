@@ -1,0 +1,3484 @@
+<HTML>
+<HEAD>
+<TITLE>Sam's Laser FAQ - Amateur Laser Construction</TITLE>
+</HEAD>
+<BODY>
+<A NAME="contoc"></A>
+<p>
+<hr>
+<b><center>Sam's Laser FAQ, <A HREF="copyright.htm">Copyright &copy<A> 1994-2009,
+ Samuel M. Goldwasser, All Rights Reserved.<br>
+ I may be contacted via the
+ <A HREF="emaillnk.htm">Sci.Electronics.Repair FAQ
+ Email Links Page</A>.</center></b>
+<hr>
+<p>
+<li>Back to <A HREF="laserfaq.htm#faqtoc">Sam's Laser FAQ Table of Contents</A>.
+<h1>Amateur Laser Construction</h1>
+<h2>Sub-Table of Contents</h2>
+<ul>
+<li><A HREF="lasercon.htm#concit">Introduction to Amateur Laser Construction</A>
+ <ul>
+ <li><A HREF="lasercon.htm#concit0">So You Think You Really Want to Build a Laser</A>
+  <ul>
+  <li><A HREF="lasercon.htm#concit1">Reasons NOT TO Build a Laser from Scratch</A>
+  <li><A HREF="lasercon.htm#concit2">Reasons TO Build a Laser from Scratch</A>
+  <li><A HREF="lasercon.htm#confcalc">Flavio's Comments on Amateur Laser Construction</A>
+  <li><A HREF="lasercon.htm#contbai">Diane's Home-Built Laser Experiences - The Beam and I</A>
+  <li><A HREF="lasercon.htm#conpwhb">Experiences of People Who Have Built Lasers From Scratch</A>
+  <li><A HREF="lasercon.htm#conbfsl">Building a Femtosecond Laser at Home?</A>
+  </ul>
+ <li><A HREF="lasercon.htm#concit3">Some Photos of Home-Built Lasers</A>
+ <li><A HREF="lasercon.htm#concit4">Diagrams Showing Major Components of Typical Home-Built Lasers</A>
+ <li><A HREF="lasercon.htm#concueg">Comments on a Universal Experimenter's Gas Laser</A>
+ <li><A HREF="lasercon.htm#conwnss">What About a Home-Built Solid State Laser?</A>
+ <li><A HREF="lasercon.htm#conhbxr">Home-Built X-Ray Laser?</A>
+ <li><A HREF="lasercon.htm#concit5">General Resources for Amateur Laser Construction</A>
+ <li><A HREF="lasercon.htm#concit6">Scrounger of the Month Award</A>
+ <li><A HREF="lasercon.htm#concit7">Acknowledgements</A>
+ </ul>
+<p>
+<li><A HREF="lasercon.htm#concll">Setting up a Home Laser Lab</A>
+ <ul>
+ <li><A HREF="lasercon.htm#consaf">Safety Issues in a Lab for Home-Built Lasers</A>
+ <li><A HREF="lasercon.htm#concll1">Work Area - Setting up a Laser Lab</A>
+ <li><A HREF="lasercon.htm#concll2">Possible Laser Lab Layout</A>
+ <li><A HREF="lasercon.htm#concll3">Sources of Special Parts and Supplies</A>
+ <li><A HREF="lasercon.htm#concll4">More on Obtaining Gases</A>
+ <li><A HREF="lasercon.htm#contdns">Tips for Dealing with a Neon Sign Shop</A>
+ </ul>
+<p>
+<li><A HREF="lasercon.htm#concvs">Vacuum Technology for Home-Built Gas Lasers</A>
+<p>
+<li><A HREF="lasercon.htm#concgw">Introduction to Glass Working</A>
+ <ul>
+ <li><A HREF="lasercon.htm#concgw0">Laser Tube Fabrication</A>
+ <li><A HREF="lasercon.htm#concgw1">Types of Glass</A>
+ <li><A HREF="lasercon.htm#concgw2">Cutting Glass Tubing</A>
+ <li><A HREF="lasercon.htm#concgw3">Glass Working 101</A>
+ <li><A HREF="lasercon.htm#concgw4">Gas Flames</A>
+ <li><A HREF="lasercon.htm#concgw5">Glass Working Examples</A>
+ <li><A HREF="lasercon.htm#conhgwl">Home-Built Glass Working Lathe</A>
+ <li><A HREF="lasercon.htm#concgw6">Learning Glass Working Skills</A>
+ <li><A HREF="lasercon.htm#concgw7">Here's Someone Who Has Offered Glass Working Services</A>
+ </ul>
+<p>
+<li><A HREF="lasercon.htm#connse">Electrodes and Getters</A>
+ <ul>
+ <li><A HREF="lasercon.htm#connse0">Types of Electrodes Used With Home-Built Lasers</A>
+ <li><A HREF="lasercon.htm#conghb">Getters in Home-Built Lasers</A>
+ <li><A HREF="lasercon.htm#conmoh">Methods to Activate Neon Sign Electrodes and Getters</A>
+ <li><A HREF="lasercon.htm#conbih">Basic Induction Heater Circuit</A>
+ <li><A HREF="lasercon.htm#consrp">Sam's Recycled PC Power Supply Induction Heater</A>
+ <li><A HREF="lasercon.htm#conss1">Sam Schwartz's RF Power Oscillator for Heating Getters</A>
+ <li><A HREF="lasercon.htm#consol">Simple Solar Heater</A>
+ </ul> 
+<p>
+<li><A HREF="lasercon.htm#concyc">The Central High School Cyclotron</A>
+ <ul>
+ <li><A HREF="lasercon.htm#concycw">Why is This Here?</A>
+ <li><A HREF="lasercon.htm#concycc">What is a Cyclotron?</A>
+ <li><A HREF="lasercon.htm#concycf">The CHS Cyclotron Facility</A>
+ <li><A HREF="lasercon.htm#concycr">True R and D</A>
+ <li><A HREF="lasercon.htm#concyco">Other Home-Built Cyclotrons</A>
+ <li><A HREF="lasercon.htm#concycg">The First Generation Central High School Cyclotron</A>
+ </ul>
+</ul>
+<A NAME="concit"></A>
+<hr>
+<br>
+<li>Back to <A HREF="laserfaq.htm#faqtoc">Sam's Laser FAQ Table of Contents</A>.
+<li>Back to <A HREF="lasercon.htm#contoc">Amateur Laser Construction Sub-Table of Contents</A>.
+<h2>Introduction to Amateur Laser Construction</h2>
+<h3><A NAME="concit0">So You Think You Really Want to Build a Laser</A></h3>
+
+While most lasers are extremely high tech devices which require the
+engineering and manufacturing expertise of corporations, universities, or
+Government agencies to design and construct, there are a few types that
+can be built from scratch by the <i>very</i> determined amateur.  I'm not
+talking about wiring a helium-neon laser tube to a power supply or a laser
+diode to a driver circuit.  A truly home-built laser may start out as 4 foot
+lengths of various sizes of glass tubing, mirrors, special gases and
+chemicals, scrap metal and hardware; electronic components like transformers,
+rectifiers, capacitors, and resistors - and laser and high voltage warning
+signs!  Converting this collection of materials into a working laser will
+require many many hours of effort as well as blood, sweat, and possibly
+tears. :)
+<p>
+Considering the enormous gap between your likely capabilities and those
+of a large corporation, the final result probably won't match a commercial
+laser in either performance or appearance (though there are a few exceptions).
+However, that shouldn't be the point of the exercise.  Rather, a laser (or
+multiple lasers after you are hooked) should be built for the education,
+challenge, and opportunity for experimentation afforded by dealing with all
+aspects of laser construction.  And, the realization that the laser <i>you</i>
+built is a complex precision device <i>you</i> were able to bring to fruition
+successfully.
+<p>
+To the amateur scientist, experimenter, hobbyist, or even weekend tinkerer,
+there is something about the idea of actually creating a working laser
+that makes its construction from the ground up a very attractive and rewarding
+project with "first light" - the instant that <i>your</i> home-built laser
+first emits a coherent beam - approaching the excitement of a religious or
+sexual experience!
+<p>
+Although the laser is a device or instrument based on fundamental quantum
+mechanics which is very simple in principle - an excited medium between
+mirrors - building one successfully may require mastering several disciplines
+not normally found in even the high tech home.  These include: glass
+working, vacuum systems, gas handling, high voltage electronics, and precision
+mechanical fabrication.  Dealing with these can in itself be an excellent
+educational experience.  Access to a university or industrial lab will make
+things a lot easier but isn't essential - it is possible to build a laser
+without outside assistance.  Academic studies in laser physics or related
+subjects are also not necessary unless you want to attempt to do serious
+research as all the lasers that can be reasonably constructed at home are
+based on well established principles where rules-of-thumb and simple
+calculations will suffice.  However, the cost of such an undertaking can
+be significant - experience in scrounging is a definite asset!  And, the
+construction of home-built lasers can be quite addictive and may impact other
+activities like social interaction, eating, sleeping, and the timely
+performance of other bodily functions. :)
+<p>
+In this chapter and the one that follows, we provide basic information on the
+construction of various types of lasers from scratch including: home-built
+laser safety, setting up a home laser lab, sources of supplies and chemicals,
+vacuum systems, glass working, structural materials, power supplies, and more.
+<p>
+Then, a variety of specific types of home-built lasers are described in more
+detail.  Much of this material is derived from the Scientific American
+collection "Light and its Uses" [5] and from the email, Web sites, articles,
+and experiences of those who have been successful in building their own lasers
+from basic components and getting them to work (not taking the easy way out
+and using commercial tubes or laser diodes!) - or have given it their best
+shot trying!
+<p>
+<ul>
+<li>Where there is a corresponding article in "Light and its Uses", a summary
+ will be provided which includes the physical characteristics, power supply
+ requirements, materials, chemicals and supplies, special equipment, and so
+ forth - as well as an estimated level-of-difficulty (in a number of areas)
+ needed to construct such a laser and get it to work.
+<p>
+ If you find that you are serious about any of this, obtaining a copy of this
+ material is essential.  See the section: <A HREF="laserclt.htm#cltlau">Light
+ and its Uses - Table of Contents</A> for a list of all the articles that
+ constitute this valuable collection and an explanation of why I cannot
+ provide on-line access to it.
+<p>
+<li>These chapters will also include additional information on the construction
+ of each laser type, hints, tips, shortcuts, and alternative approaches and
+ possible enhancements (some of which may not have been possible, economical,
+ or even known when the original articles were published).  In addition,
+ errata and suggestions for corrective action (changes in dimensions, gas
+ fill, whatever) will be provided.
+<p>
+<li>Web links will be provided to known sites which describe the laser in more
+ detail.  Email addresses of active amateur laser constructors will be
+ included as well.
+<p>
+<li>Other resources like the Iannini books ([2] and [3]) will be identified if
+ they provide construction plans.
+<p>
+<li>General information related to lasers other than the diode, HeNe, and Ar/Kr
+ ion types covered extensively elsewhere in this document may also be found
+ in these chapters.
+</ul>
+<p>
+While this will not substitute the hands-on of actually having built one of
+these lasers or detailed construction plans, it may provide the spark to get
+you started!
+
+<h4><A NAME="concit1">Reasons NOT TO Build a Laser from Scratch</A></h4>
+
+First, let us consider some ill-posed justifications for attempting to build a
+laser from (almost) raw materials:
+<p>
+<ul>
+<li>"Something can be put together quickly."  Forget it.  Any of the types of
+ lasers considered in this discussion will require many many hours, more like
+ months, to locate the materials, chemicals, and other supplies and to
+ construct, align, and get working - if you ever succeed at all.
+<p>
+ Furthermore, you will be CONSTANTLY fiddling with adjustments like gas fill,
+ mirror alignment, power supply voltage/current.  In many cases, total laser
+ lifetime is often short (a few hours) before a total rebuild is needed.
+ These are not generally set-it-and-forget-it type equipment!  If you just
+ want a working laser, this is definitely NOT the way to go.
+<p>
+<li>"Lasers are SO expensive."  Yes in many cases, but what you get is
+ something that works (relatively) reliably with (relatively) minimal
+ fiddling with adjustments.  In the end, you will likely spend more than you
+ might think based on your initial estimates simply because you cannot go and
+ buy just the quantity of materials or chemicals that you will need - 1 screw
+ or 2 inches of pyrex glass 5 mm ID tubing or 6 feet of #24 magnet wire, for
+ example.
+<p>
+ A surplus $25, 1 mW helium-neon laser head and power supply, or even a $1.99
+ laser pointer may be more than adequate for your needs.
+</ul>
+<p>
+If these are your only reasons for wanting to do this, you will rapidly tire
+of the endeavor and the parts will end up in a box alongside that dusty old
+partially ground telescope mirror you also never completed. :-(
+<p>
+If you want a working laser for a particular application, save your pennies and
+buy one.  The cost of a used laser appropriate for what you have in mind may
+not be as terrible as you may think.  The result of building a laser from
+scratch isn't likely to be something you can use reliably day in and day out
+without constant maintenance, repairs, and the occasional disaster.  (The one
+exception to this might be the axial flow CO2 laser which if properly
+constructed, is less finicky than the other types discussed in the following
+chapters.)  A system that starts life on and under a workbench will also
+probably never be packaged in a nice self-contained cabinet and may have to
+coexist with the home washer-drier, family car, or kitchen table. :)  Anything
+home-built is also going to have many potentially serious hazards associated
+with it unless significant effort has been made to provide the necessary beam
+blocks, electrical and thermal protection devices, and safety interlocks.
+
+<h4><A NAME="concit2">Reasons TO Build a Laser from Scratch</A></h4>
+
+However, there are many justifications for embarking on an adventure of this
+type:
+<p>
+<ul>
+<li>Educational experience.  I guarantee that you will learn a tremendous
+ amount in the process - even if your baby never actually produces a beam.
+ You will need to deal with a variety of disciplines (depending on the type
+ of laser) possibly including: glass working, vacuum and gas supply systems,
+ machining, design of high voltage power supplies, optical alignment,
+ sensors, and more.  There is no better way to learn about these disciplines
+ than to have to deal with them first-hand.  And, these efforts may stimulate
+ interests in other areas as well.
+<p>
+<li>Challenge.  It probably goes without saying that the production of coherent
+ light - even if for a short time - from a totally homemade laser represents
+ a tremendous achievement with enormous satisfaction value.  Why do people
+ climb mountains?  Building a laser is like climbing from the depths of the
+ Pacific to the top of Everest and beyond.  Note: If you don't believe this
+ then you will probably not have enough motivation to complete the project!
+<p>
+<li>Experimentation.  There are many things you can try with full access to
+ both the inside and outside of the laser resonator that are impossible with a
+ sealed HeNe or Ar/Kr ion tube.  Variations on the lasing medium including
+ (for gas lasers) the types and pressures of the gas fill or (for dye
+ lasers), the types and concentrations of dyes themselves; types of
+ excitation (direct discharge, RF, light); alternative optics like curved and
+ plane mirrors, prisms, lenses, and coatings,
+</ul>
+<p>
+And, there is something to be said for being able to claim to have built
+the only working laser from scratch on your block - or more likely, your
+town, city, state, or country!
+
+<h4><A NAME="conpwhb">Experiences of People Who Have Built Lasers From
+ Scratch</A></h4>
+
+Here are a few of the (mostly) success stories.  The fact that this list is
+so short may be some testimony to the difficulties involved!  The first
+is from one of the original authors of the SciAm Amateur Scientist column,
+who recently contacted me via email:
+<p>
+(From: Syl Heumann (syl@syl.net).)
+<p>
+I am the author of the original SciAm article on the design of the pulsed
+Argon laser.  I did another article for SciAm Amateur Scientist - a year or
+two later.  It was how to make a hologram.
+<p>
+I got to know Red Stong, the Amateur Scientist editor quite well - visited
+him at his home on Staten Island.
+<p>
+My first laser was a HeNe from the original SciAm article in about 1964 
+or 1965,  It was raw AC powered and had a life of about 15 minutes!
+Then I went to RF power and that was better, till I went to DC.  I had 
+met some of the guys from Spectra-Physics and they were very helpful.  
+Then I did a bunch of HeNe lasers - my best one did 16 mW.
+<p>
+They gave me the original notes on the first mercury vapor laser and I 
+had one of those going in the next few days.
+<p>
+I guess my argon (also krypton) ion lasers were about 1966 or so.
+<p>
+When I did the argon laser, and looked at the light dispersed by a 
+prism, there was an extra line in yellow.  I thought I had discovered a 
+new transition - but after some research, it turned out that I had a 
+leak - it was nitrogen!  But it was exciting.
+<p>
+I no longer have a high vacuum system, so don't mess with lasers any
+more.  But please check out <A HREF="http://www.syl.net/">My Web Page</A>
+for some other hobby interests.
+<p>
+(From: Mark Wilson (wilson_mark@htc.honeywell.com).)
+<p>
+I was born in a very small town in Idaho. I was fascinated by physics and
+laser technology. When I saw the Scientific American article on building
+your own Helium-Neon (HeNe) laser, I decided that I wanted to build it. The
+Scientific American HeNe laser was extremely difficult to build and I could
+not have done it without a lot of help. I got Spectra-Physics to donate a
+set of laser mirrors to me, a glass shop in my home town to help me cut and
+grind the Brewster window angles on the tube. The tube was made from lead
+glass from a sign company, and I also used neon sign electrodes. The optical
+rail was a 3 foot long piece of 2"x6" extruded aluminum that I got from a
+glass company which used this material to make doors for commercial buildings.
+<p>
+I followed the directions in the Scientific American article to the letter.
+I sealed the microscope slides to the glass tube using flexible colodian
+that I got from a pharmacy. I filled the tube at a sign company which had
+He, Ne, Ar and other gases on a glass manifold. I assembled the laser and
+made the power supply using a mercury rectifier tube and a neon sign
+transformer. I got the tube to lase for a brief time, but since it was not a
+hard-sealed tube it quickly died probably due to helium diffusion. The tube
+would light up but not lase for a while then that too stopped.
+<p>
+I then made a dye laser, again from a Scientific American article. This was
+much easier, and the materials were much easier to obtain. I did not need
+any wavelength selective mirrors, vacuum system, or high voltage supplies. I
+ordered samples of a couple of laser dyes (Sodium Fluorescene, Rodium 6G
+(possible spelled wrong)), and mixed up dye samples which were flowed
+through a piece of quartz tubing. A flash lamp was located at one focus of
+an elliptical reflector and the dye tube was at the other focus. The
+reflector was a juice can that I polished up as per the article. The flash
+lamp power supply was very simple which put several hundred volts across a
+large capacitor, and then tripped the flash with a tickler coil. This laser
+was easy to build, and actually worked for quite a while, but I couldn't set
+anything on fire with it.
+<p>
+I then built a flowing gas CO2 laser again using glass and equipment from a
+neon sign company. The Brewster windows were 2 near perfect salt crystals
+that I got for a salt company in near by Salt Lake City. I had to keep the
+windows inside plastic bags a moisture absorbing material when the laser was
+not in use to keep the windows clear. I made my mirrors from round glass
+blanks that I got from a local eye doctor. He ground me a set with a -1/8th
+diopter (-8 meter focal length). I then drilled a small hole in one of the
+glass blanks to allow the output beam to escape. I coated the mirrors with
+gold using a sputtering machine that I built, again from a Scientific
+American article. I assembled the tube and mirrors onto a extruded aluminum
+base, and then connected it to a vacuum pump. This pump was two Fridgidare
+compressors connected in series with  each other and a cold trap. Later I
+replaced the pump with a 2 stage Cenco Hyvac pump that my friends at the
+sign company donated to me. I made a gas manifold including a vacuum gauge,
+to mix gases for the laser. I got a cylinder of CO2 (used in pop machines),
+and also a small cylinder of Helium, bubbled the gases through water to add
+water vapor and then flowed this mixture through the tube. I used a center
+tapped neon transformer and a set of solid state rectifiers to make a DC
+power supply to run the tube, and with an input of 150 watts of power, I
+calculated that I got about 5 watts of IR power at 10.6 um. I could burn
+holes in things so I was finally happy. 
+<p>
+(From: Steve1W1 (steve1w1@aol.com).)
+<p>
+I built my first C02 in 8th grade for our school's science fair with plans
+from "Roy Davis Laboratories" (if anyone is old enough to remember those days).
+It took about a year's worth of work and scrounging, but it worked so such a
+project CAN be done.
+<p>
+(From: Steve Roberts (osteven@akrobiz.com).) 
+<p>
+I tried to build several lasers when I was a kid, dye worked, nitrogen worked,
+argon failed. But, I found making Brewster angle windows nearly impossible.
+The guy at the local refurb shop told me I went about it wrong, all I really
+needed was a belt sander and some abrasive, the brass bladed sawing technique
+in "Light and its Uses" doesn't work. I have also repumped a commercial laser
+tube or two with mediocre results.
+<p>
+(From: Keith (Thallium204@aol.com).)
+<p>
+I have built a variety of lasers from scratch.
+<p>
+I have a tube blown by my friend, with microscope cover slips sealed on 
+using Torr-seal epoxy I made in 1988. Its filled with an 80/20 mix of helium 
+and neon, and is about three feet long. It uses several neon sign electrodes. 
+Its large diameter (compared to 1 mm bore) gives it a TEM11 output.  With 
+periodic gas fills, it still runs today, though I don't mess with it much.   
+<p>
+I have made very small argon lasers from scratch, but the cathodes are 
+quite large, and do look just like early he-ne lasers.  The power supplies 
+are very different, however.  I have an original "tube", not solid state, 
+pulsed argon laser power supply from bell labs, 208 VAC, from the era of the
+"Telephone pole theory of laser action": Hit a telephone pole with enough 
+energy and it will lase. :)  Hundreds of amps per pulse, into a large diameter 
+tube, before CW capillary tube type ion lasers.
+<p>
+I've also built an more unusual laser using the element thallium.
+I'm sure you know that thallium is named after its strong green spectral
+line.  It just happens that it has a very low melting/vapor point, and like
+mercury needs no buffer gas to lase, it just needs a vacuum. It is not very
+critical of vapor pressure as in the HeCd and HeSe.  The use of argon or neon
+as a buffer does make it more efficient but is not absolutely needed.  The
+mirrors from a dead green HeNe laser tube work fine (as long as their radius
+of curvature is consistent with stability for the resonator).
+<p>
+(From: Thomas Rapp (post@pulslaser.com).)
+<p>
+My interest in lasers started very early when I was a young boy and read about
+the invention of the ruby laser in a popular German magazine (Stern). But of
+course, I who tried to build radios from old parts found in the city dump,
+was not able to get either the materials nor the knowledge to build a laser.
+However, years later, when I started to work as a technican at the Munich
+University, I obtained an old HeNe Laser which didn't work anymore because
+of gas cleanup. When I unsuccessfully  tried to reanimate the tube one older
+scientist told me about the article in Scientific American about an
+easy to build dye laser. Some weeks later, after a small fire hazard because
+of blowing up the flashlamp and ignition of the methanol dye solution, my
+first laser really worked. After that I began to read all about laser mostly 
+in "Review of Scientific Instruments", "Applied Physics Letters", and "Journal
+of Scientific Instruments".  After building a couple of nitrogen lasers, I
+changed to copper, manganese, and lead vapour, and then I built a CW CO2
+laser. After that my interest changed to other fields of physics, building
+all kinds of vacuum devices, like a quadrapole mass spectrometers
+and even a small scanning electron microscope, microwave devices like
+a home-brew radio telescope.  And of course, I was working in the rapidly
+growing computer area.  But all sorts of pulse power devices and their
+application in lasers are still my favourites. Late in 2002 I got the job to
+construct a nitrogen laser for a guy I got to know via eBay. After that I
+decided to build lasers again, create my
+<A HREF="http://www.pulslaser.de/">Pulslaser
+Web Site</A> to share my knowledge and experiences with other laser
+enthusiasts.
+<p>
+(From: Sam.)
+<p>
+Hopefully more to follow. :)
+
+<h4><A NAME="confcalc">Flavio's Comments on Amateur Laser Construction</A></h4>
+
+(From: Flavio Spedalieri (fspedalieri@nightlase.com.au).)
+<p>
+The reason for building a laser from scratch, is to learn how lasers work
+through physical hands on construction.  Also, one major feature that
+you have with home-built lasers, is the unlimited freedom of experimentation,
+you can control many variables like; power (voltage and currents), gas,
+optics, materials etc, which otherwise is very difficult or impossible with
+commercial lasers.
+<p>
+Another rule that I have set when it comes to building lasers:  Build
+the lasers that are more expensive, exotic, and least obtainable like:
+<p>
+<ul>
+ <li>Carbon Dioxide Laser.
+ <li>Nitrogen Laser.
+ <li>Copper Vapor and or other metal vapor lasers.
+ <li>Solid state lasers - Ruby, Nd:YAG, frequency doubled YAGs.
+ <li>Dye Laser (flashlamp and/or N2 laser pumped).
+</ul>
+<p>
+In the list above, you may notice that I have NOT included typical lasers like
+Helium Neon, and Argon Lasers, the reason being that HeNe lasers are now
+too cheap to even consider building, and are all the too common. I have
+not limited myself to not experimenting at all; I do have a HeNe laser
+tube that I, one day would like to cut the vacuum nipple off, and connect
+the tube to a vacuum system, and back-fill with HeNe, but the chance of
+getting it to lase is quit small, due to the fact of the need of very
+critical gas mixture and purity, and a very good vacuum system.
+<p>
+CW argon ion lasers, on the other hand, require huge amounts of current, and
+the necessary materials to build the tube are not easy to work, toxic, or
+both (e.g., beryllium oxide, tungsten).  Also, glass work is a
+major component with the need of correctly angled Brewster windows.
+Today, like the HeNe lasers, argon lasers can be obtained with ease, and
+relatively cheaply. Argons, also require very good vacuum systems as well as
+very pure and critical gas pressures.
+<p>
+So, as a summary, and as a rule of thumb please take the following in
+mind:
+
+<ol>
+<li>If you are building a laser for experimentation, learning/educational
+ purposes, then all the better, as your learning curve will be very steep.
+<p>
+<li>If you are intending to build a laser purely for a 'workhorse' application
+ like wood or metal cutting, especially if for a commercial venture, it might
+ be more economical and much easer to purchase a second-hand laser system from
+ the surplus market.
+<p>
+<li>DO NOT expect great powerful beams of light outputting from your laser,
+ and you will be shortly setting yourself up for a disappointing downfall. As
+ mentioned, home-brewed lasers will require much experimenting around, you may
+ be lucky enough to have the laser produce an output at first go, but also be
+ prepared that you MAY NOT get an output at all.
+<p>
+<li>Use the 'KISS' Method - "Keep It Simple, Stupid".  In doing so, you can
+ reduce the number of areas that can cause problems.  For example, the
+ electrodes of a CO2 laser can just be copper pipe fittings (one at each end
+ of the tube).  There is no need for neon sign electrodes which require
+ additional assembly and possible glass work - and can possibly fail.
+<p>
+<li>Keep you laser tube within reasonable lengths.  At the very least for
+ your first laser. Build your first laser, get this running and lasing,
+ conduct experiments and chart results within a spreadsheet or something.
+ voltage/current versus gas pressure/flow rate/mixture, etc.  Once you have
+ succeeded in building your first working laser, then you can move on, and try
+ building a bigger laser, at least you will not be disappointed if the laser
+ does not work as you have already built a nice small working model.
+</ol>
+
+I hope that this will bring some reality into your projects, but please don't
+interpret these comments as discouragement from building lasers.  I'm actually
+trying to create more of a challenge for anyone who is or will be embarking on
+this wonderful area of laser technology, yet to keep in mind that you may not
+have a working product at first - a little like trying to build a tall
+building, expecting it to stay up without the foundations.
+
+<h4><A NAME="contbai">Diane's Home-Built Laser Experiences -
+ The Beam and I</A></h4>
+
+Only rarely do I receive email demonstrating true enthusiasm and
+determination for *anything*, let alone laser building, from an early age.
+Here is one I had to include.  Diane now has a Web site which in
+addition to the description below, has some nice photos to go along with it.
+<p>
+<ul>
+<li><A HREF="http://www.diane-neisius.de/laser/index_E.html">Diane's
+ Laser Page</A>
+</ul>
+<p>
+<p>
+(From/by: Diane Neisius (diane_va@yahoo.com).)
+<p>
+<b>The Beam and I</b>
+<p>
+Do you still remember the first Star Trek series? Ah, that was
+something for a child's heart. Ha, there *was* a woman in a starship
+(so don't tell me a girl can't fly to space silly boy you!!!), and
+they had these "phasers" raying around during their
+adventures. Nevertheless, I was a big girl (10) and knew, it was a TV
+series. A kind of technical fairy tale.  The more I was surprised
+when I found a popular science book at the local city library. There
+were guys who made beams - really, not on TV. I didn't understand much
+of the stuff described, but got that there were some sort of mirrors
+and a ruby in it.  They called it L.A.S.E.R., and it was <i>real</i>.  For
+the fact my grandpa could make for himself *everything* (he repaired
+all the electric and mechanic stuff for our family, even hopeless
+cases), I believed he (and also me) could make our own laser if we
+just had one of these expensive rubys. I well knew a ruby was a
+high-priced gem.  When I asked grandpa, he told me something about
+precision and that it is not quite easy to reach this in the living
+room of a hobbyist.  Ok, I could not buy a ruby from my spare
+money. But from those days on I was convinced one day I *will* have my
+own laser. One day.
+<p>
+Childhood dreams came to an end. No, to be honest, they only slept
+until I was in the final High School classes. It was the beginning
+80s, and being a frequent reader of the German issue of Scientific
+American, one day I found the famous description of the mercury laser
+in it.  Huh? A guy somewhere out there built his OWN laser?  The
+fever came back again. When he could do it, I also can do it, I
+decided.  However, I knew a lot more about physics than before, also
+liked to spend time with the school's little HeNe laser (on rare
+occasions). Got a basic knowledge of what is important for lasers to
+become working.  A few telephone calls made me quite unhappy. I had
+learned you can get all the stuff you need if you really want - and
+can pay the prices. HIGH prices. Again there was the "ruby problem":
+lasers are *expensive*.  "Silly, one cannot have one's own laser", a
+fellow laughed about me, "that's only for laboratories." I better
+not tell him about my desire.  So I thought: "One cannot? Let's see
+about that."
+<p>
+Don't ask me today why I started to study mathematics.  We had a quite
+famous Department of Quantum Optics on our university, perhaps I
+should have gone to the laser business. But those days computers were
+still more exciting than lasers to me, and that's it.  Now, being a
+student, I had access to real scientific literature, and I learned a
+lot about the theoretics of lasers (and, reading the business laser
+magazines, also about technical realisations). I studied various
+descriptions of laser types and decided to try about a flashlamp pumped
+dye laser. This one at least needed no expensive ruby. :)  To make a
+sad story short, I learned a lot about how to blast stroboscope tubes
+using a voltage doubler and really BIG capacitors, and I guess the
+carpet in my room at the student's community will still have these
+nice pink rhodamine spots. :( I gave up on dyes.  But I still wanted a
+laser, and some more telephone calls brought a fine small Siemens HeNe
+tube to me (it was a new 1.5 mW LGR7621).  Shall I say I heard some
+of the well known "brzzzz's" from self-wound transformers until I
+looked for a used neon transformer? Still a descent of my grandpa I
+was...  So I spent my time to build a casing for the transformer and a
+rectifier out of a box of 1N4007's (never tell this an engineer
+student. I did, the poor boy almost got a heart attack).  By the way,
+the LGR7621 is quite robust. One day I caused a short which
+*detonated* the anode resistor (another lesson about BIG
+capacitors). After my eyes had recovered from the resulting supernova
+inside the tube, I anxiously looked if there's still anything alive. A
+visual inspection showed up a lot of very small cracks along the
+inside of the bore.  Replaced the mortal remains of the blown resistor
+by a fresh one, it still started and lased! I used it for years after
+this accident without significant drop.  Brave little HeNe. :)
+<p>
+After some time, HeNe became boring to me. Using an internal mirror
+tube is one task, to build a device like Scientific's mercury
+completely on your own, quite another. So I started doing some
+experiments in that direction for the next time.  I got a simple
+vacuum pump and an unsealed neon tube and began to work with glow
+discharges. To keep it short, I had to perform lots of experiments to
+learn about vacuum, outgassing and purity of gases.  Over the years,
+my little laboratory grew: a self-made voltage doubler for the neon
+transformer, a self-made mercury vacuum gauge, a better pump, noble
+gases in liter bottles, a hand-held spectroscope, longer discharge
+tubes. To work, all this took years of learning by doing.  Then the
+next strike came, of course again by Scientific American. It was the
+copper vapor laser. How exciting...  For I knew very well I had no
+experiences about laser optics until now - but the superradiant copper
+lines would need none. In words, I could start immediately.  But
+unlike the old days, I decided to study a bit about superradiant laser
+before blindly begin to "hammer and saw". And by this I found out
+about the still simpler N2 laser.  I decided to have one.  And in 91,
+a self-made 10 cm test tube of acrylic with quartz windows lased! I
+danced in my room, for after 10 years I finally got it!
+<p>
+For the fact the 10 cm tube lased quite weak I studied more about N2
+laser design. The major problem was, I could reach only 10 kV with my
+equipment thus having poor energy densities in the discharge. Longer
+self-made tubes also lased weaker than expected (I tried several), even
+if attaching a metal mirror to one end. I had to pinch the discharge
+somewhat, but doing this in a tube made of acrylic would easily
+overheat and smoke the walls.  Those days I already worked toward my
+Ph.D. thesis, and the research center where I did it had the most
+precious thing I ever saw in a library: the COMPLETE set of the Review of
+Scientific Instruments!  Complete means complete: from issue #1 of
+1929. And after some hours with it, I found the most useful paper
+about N2 type gas lasers I know. It is about the "strip line" type
+laser using a segmented discharge bore originally designed for the UV
+lines of the hydrogen laser [1].  I adopted the design a bit to my
+power supply (shorter strip-lines, shorter discharge segments) and
+pinched the discharge even more by adding short pyrex capillaries
+inside the segments. Believe me, it was a *lot* of work to drill holes
+for 56 electrodes and fill in the pyrex tubes successively from the end
+of the outer acrylic tube. But finally I had a 3 mm x 80 cm bore with
+a nice high energy density. For its strange appearance, I baptised it
+the "German Flute".  The first thing I noticed after the first tests
+was, this baby would lase with every gas containing a bit nitrogen,
+even dirty air.  :) Mirrors were good for nothing, and I easily got
+all three UV lines on a fluorescent screen using a "water prism"
+(triangle pot glued together from thin pyrex pieces and filled with
+water, which absorbs UV much less than a massive pyrex prism).  Of
+course I also tried other gases, and the green superradiant Ne line at
+540.1 nm was strong in this tube, too. Over the time it became my
+favourite.  And on few occasions, after long times of green Ne, it was
+also possible to get the much weaker orange line at 614.3 nm at a
+lower pressure. But normally it disappeared after some time from
+outgassing impurities. The still weaker yellow line I never caught.
+<p>
+Impurities were what finally drove me tired. It was common for my
+"German Flute" to be run with gas through flow. Otherwise lasing stayed
+only for seconds. On one occasion I tried a bore cleaning via He
+bombardment which took several hours. But after finish, what I call
+the "dirt spectrum" (N2 band, H alpha line plus Hg lines -- mercury
+from the vacuum gauge) reappeared in half an hour.  Whenever I liked to
+start my laser, I had to spend days and hours in front just for basic
+cleaning the vacuum devices. And, the cost for the needed constant
+flow of Ne burned a hole in my pocket. Pure lab-grade neon isn't that
+cheap.  And then, a few years later, I got a pen-sized red diode laser
+which made roughly twice the output power of my home-built in the
+green. It was depressing.
+<p>
+Sometimes in life one has crises and has to separate from several
+things. So it was for me, and it was such a crisis which made me
+giving away a lot of things - including all my lasers. The university
+didn't take them (security reasons of course), but I found a physicist
+collecting strange devices, and I hope my baby still has a home there
+(even if it doesn't lase any more).  So, off I were.
+<p>
+Yes, until now. Some weeks ago I visited some friends, and I wondered
+to see a yellow HeNe in their rooms. They told me to use it for
+illumination of large naturally grown quartz crystals, for they like
+the "golden shattered glow" in them doing so.  But they knew less to
+nothing about lasers, and I talked about lasers for an hour or so. And
+thought about I also would like illuminated crystals. But not red or yellow -
+green and blue, perhaps from an argon ion laser it would have to be.
+In the days of internet it is an easy task to feed "argon laser" to
+google.de and see what happens. Of course it leads to Sam's Laser FAQ and
+to lots of surplus advertisements.  I have the chance to get an
+"all-included" ALC 60X (head, fan, cable, power supply, tube refilled)
+for roughly $1,000.  Goddess, I have to scratch off those bucks somehow...
+<p>
+The beam has me back! :)
+<p>
+<ol>
+<li>Kirkland, Dogett, Kim: Vacuum-UV H2-laser excited by a traveling-wave
+ discharge, Rev. Sci. Inst. 52(1981) p.1338.
+</ol> 
+<p>
+I bet you're sorry you gave all that stuff away, even if you do know how
+to do much of it better now.  A 60X is a nice laser but not quite the same
+as something built from scratch that one can fondle and tweak! :)
+<p>
+(From: Diane.)
+<p>
+What did you do... Talking about fondling and tweaking my home-built laser...
+Asking if I regret to give it away...??  Ah, sigh... :)  Finally I phoned the
+guy I gave all the equipment and he told me I CAN HAVE IT BACK!  Now, I guess
+I will have to do lots of maintenance work on my baby if it's home again
+(stored at a garage for the past 3 years).
+<p>
+So I guess the beam really has me back! :)
+
+<h4><A NAME="conbfsl">Building a Femtosecond Laser at Home?</A></h4>
+
+Well, probably not.  But after you have constructed all the SciAm and other
+"common" home-built lasers, it could be something to keep you occupied. :)
+<p>
+(From: Anonymous (localnet1@yahoo.com).)
+<p>
+Info on how to build a femtosecond laser? I have had a rather strong academic
+interest in the field, if nothing else, on this subject for the last 10 years
+or so. never in that  time have I seen a 'how to' build such a laser. if you
+would like to see what others have done the academic journal 'Optics Lasers'
+is your best bet, any major university library should subscribe to them, and
+certain articles are available via their on line archive at the
+<A HREF="http://www.osa.org/">Optical Society of America</A> Web site.
+<p>
+If on the other hand you are simply looking for background information on mode
+locked lasers, nowadays most systems (or at least the easiest to build
+systems) use a self starting mechanism and only really need:
+
+<ol>
+<li>Gain medium with sufficiently high bandwidth to support the pulses you are
+ interested in -  Ti:Sapphire and dyes are the old standbys, but there are all
+ sorts of different hosts that will produce sub-picosecond pulses.
+<p>
+<li>A system for achieving GVD compensation. For a long time, group velocity
+ distribution has been accomplished by a pair of prisms tailor made with 'x'
+ apex angle and 'y' refractive index.  However, in recent years it ahs been
+ possible to use multi stack dielectric mirrors for GVD compensation.  If I'm
+ not mistaken this was first done by Newport (or perhaps they had the first
+ commercial mirrors, I don't remember which).
+</ol>
+
+<h3><A NAME="concit3">Some Photos of Home-Built Lasers</A></h3>
+
+(From: Chris Chagaris (pyro@grolen.com).)
+<ul>
+<li><A HREF="cclasers.jpg">A Variety of Home-Built Lasers and Accessories</A>
+<li><A HREF="ccco2ls.jpg">Overall View of Carbon Dioxide Laser</A>
+<li><A HREF="ccn2ls.jpg">Overall View of Nitrogen Laser</A>
+<li><A HREF="ccdyels.jpg">Overall View of Dye Laser</A>
+<li><A HREF="cccbls1.jpg">Overall View of Copper Bromide Laser</A>
+<li><A HREF="cchgls1.jpg">Overall View of Helium-Mercury Laser Tube</A>
+</ul>
+
+(From: Laserist (laserist@geocities.com).)
+
+<ul>
+<li><A HREF="http://www.geocities.com/CapeCanaveral/5069/LASERE.HTM">Copper
+ Chloride Lasers</A>
+</ul>
+
+Also check out the links in the sections: 
+<A HREF="lasercon.htm#concit5">General Resources for Amateur Laser
+Construction</A> or <A HREF="laserlir.htm#lirweb2">Amateur Laser Construction
+Sites</A>.
+
+<h3><A NAME="concit4">Diagrams Showing Major Components of Typical Home-Built
+ Lasers</A></h3>
+
+These drawings show the structure and power supplies for some of the lasers
+built by amateurs.  The first seven are based on the laser articles from
+Scientific American (including the book: "Light and its Uses" - see the
+section: <A HREF="laserclt.htm#cltsal">On-Line Access to the Scientific
+American Laser Articles</A>  Their purpose is to give you a flavor of what
+this type of laser construction entails - but are NOT intended as
+dimensioned plans and are NOT drawn to scale.  Refer to the more detailed
+descriptions in the chapters on each laser type following the introductory
+chapter: <A HREF="laserclt.htm#clttoc">Home-Built Laser Types, Information, and
+Links</A> and the relevant Scientific American articles.
+<ul>
+<li><A HREF="hene1asm.gif">Typical Home-Built Helium-Neon Laser Assembly</A>
+<li><A HREF="ar1asm.gif">Typical Home-Built Argon Ion Laser Assembly</A>
+<li><A HREF="co21asm.gif">Typical Home-Built Carbon Dioxide Laser Assembly</A>
+<li><A HREF="n21asm.gif">Typical Home-Built Nitrogen Laser Assembly</A>
+<li><A HREF="hehg1asm.gif">Typical Home-Built Heluim-Mercury Laser Assembly</A>
+<li><A HREF="cucl1asm.gif">Typical Home-Built Copper Chloride Laser
+ Assembly</A>
+<li><A HREF="dye1asm.gif">Typical Home-Built Dye Laser Assembly</A>
+</ul>
+The final one is from the journal: Review of Scientific Instruments.  See
+the chapter: <A HREF="lasercmg.htm#cmgtoc">Home-Built Pulsed Multiple Gas
+(PMG) Laser</A> for more information.
+<ul>
+<li><A HREF="pmg1asm.gif">Typical Home-Built Pulsed Multiple Gas Laser
+ Assembly</A>
+</ul>
+There may be additional diagrams in each of the chapters on specific home-built
+lasers, particularly those constructed by various contributors to this
+document.
+
+<h3><A NAME="concueg">Comments on a Universal Experimenter's Gas Laser</A></h3>
+
+A question that comes up occasionally is: "How can I build a laser that I
+can use to try out various gases and other parameters?".  Here are some
+suggestions for a gas laser testbed optimized for visible and near-IR
+operation.  Actually, these are more like random thoughts to get you started:
+
+<ul>
+<li>Build a reasonable length plasma tube with a medium size bore.
+<p>
+ <ul.
+ <li>I would suggest something about 60 cm in length.  Too short and the gain
+  of many gas mixtures will be inadequate; much longer and starting and
+  sustaining a discharge will be a nightmare.
+<p>
+ <li>I would suggest a bore around 2 mm in diameter.  If the bore is too
+  narrow, the starting voltage will be higher and in-place mirror alignment
+  will be much more difficult; too wide and the gain is reduced (gain is
+  inversely proportional to bore diameter) - and operation will be <i>very</i>
+  multimode (though this may be interesting).
+ </ul>
+<p>
+<li>Build your plasma tube with Brewster windows at both ends on stems that
+ are at least 2 or 3 inches long to keep them away from the discharge.  For
+ a wide wavelength range, putting these on ball and socket or flexible mounts
+ may be desirable to permit their angle to be varied slightly.
+<p>
+<li>Provide electrodes suitable for your expected types of lasers.  The
+ positive (anode) electrode can usually just be a wire or sleeve (cooling and
+ sputtering aren't significant).  However, the negative electrode should be
+ made of a suitable material (e.g., aluminum, heated tungsten, etc.) for
+ the laser operation - pulsed or CW, low or high current, etc.  Place the
+ cathode(s) in a side-arm so prevent sputtered material from getting to the
+ Brewster windows.
+<p>
+<li>Build universal mirror mounts that can accept a variety of mirrors - you
+ won't always be able to find the same size or thickness.  I would suggest
+ something like the mirror cell arrangement described in the section:
+ <A HREF="laserclp.htm#clpmlm">Mounting Laser Mirrors</A>.
+<p>
+<li>Install a Helium-Neon (HeNe) alignment laser as a permanent part of your
+ testbed.  Mirror alignment is one of those things you will be doing
+ constantly.  It will be desirable to be able to do initial set up and
+ checking without having to assemble the alignment jig every time!
+<p>
+<li>Start with broadband HR mirrors having as high a reflectivity as you can
+ get or afford over the wavelength range of interest.  The HRs used in HeNe
+ lasers may be much better than 99.9 percent.  (If an 'other color' home-built
+ HeNe laser is in your plans, particularly one that does green, even the OC
+ reflectivity will have to approach these values!)  The higher the
+ reflectivity, the lower your lasing threshold.  The radius of curvature (r)
+ should be at least equal to the distance between the mirrors (L) but probably
+ not more than 2*L since if the focal lengths (f = r/2) are too long,
+ alignment becomes more difficult.
+<p>
+ As noted below, some HRs are not polished on their rear surface.  It may be
+ possible to attach an optical flat (e.g., piece of a good quality microscope
+ slide) with optical cement or Epoxy to reduce scattering and reflections from
+ that surface but this won't be ideal.
+<p>
+<li>For initial experiments, take the output beam off the Brewster reflections
+ or from the leakage through the (HR) mirrors.  Once you know which line(s)
+ you want, a specific OC mirror spectral curve and reflectivity can be
+ selected.
+</ul>
+
+Reading through the chapters on each of the types of home-built lasers that
+follow should provide some of the details.  Start with the chapter:
+<A HREF="lasercmg.htm#cmgtoc">Home-Built Pulsed Multiple Gas (PMG) Laser</A>
+which deals with an approach along these lines.
+<p>
+(From: Bob.)
+<p>
+Also, take note that most HR mirrors are a lot better than 'just' 99%
+reflectivity, at least when you are talking about intracavity mirrors. Also
+a lot of commercially available HR mirrors are not designed for laser use -
+they only have their back surface fine ground, not polished.  This means you
+can't get a HeNe laser beam through them for alignment purposes (particularly
+optics from Thor Labs and CVI). Another reason why generic broadband lasers
+may not be suitable, is that if you have any plans on making a high power
+pulsed laser (e.g., ruby or YAG), most off the shelf optics can not cope with
+the power/energy levels you would be exposing it to, and will quickly fail.
+Just a few things to watch out for!
+
+<h3><A NAME="conwnss">What About a Home-Built Solid State Laser?</A></h3>
+
+Note that there is currently no mention here (or as far as I know, in the
+Amateur Scientist articles of Scientific American) of ruby, YAG, vanadate,
+and other solid state lasers.  However, there is a chapter:
+<A HREF="lasercps.htm">Home-Built Pulsed Solid State (PSS) Laser</A>
+which is under construction and another one:
+<A HREF="lasercds.htm">Home-Built Diode Pumped Solid State (DPSS) Laser</A>
+which is already fairly well along.
+<p>
+Since there is no realistic possibility of actually growing, shaping, grinding,
+and polishing a raw laser crystal in your basement, there are, never were,
+and never will likely be any truly built-from-scratch SS lasers.  You will have
+to buy the crystals ready-made.  And, since there is less standardization on
+SS laser components than for many other types of lasers, it isn't even possible
+to suggest many sources for parts with particular specifications unless you are
+willing to pay new (and very high) prices.  That's the bad news.  The good
+news is that SS lasers are much easier to get working even with a less than
+optimal match between the lasing medium, pump source, and mirrors, than many
+other types of lasers.  While the gain of a HeNe laser may be 10 percent per
+meter, the gain of a solid state laser rod with flashlamp pumping may be 10
+percent per <i>cm</i>!  (And when diode pumped, the gain is much higher still.)
+<p>
+Pulsed (flashlamp pumped) SS lasers have been popular projects since the
+invention of the laser and with reasonable care, a successful outcome is
+likely.  They are by far, the easiest lasers to construct capable of blasting
+holes in things. :)  There are many surplus components and partial or complete
+systems available at reasonable cost.  As companies switch over to Diode Pumped
+Solid State (DPSS) lasers from lamp pumped types, more and more pulsed SS laser
+components and systems are showing up on the surplus market.
+<p>
+Building a DPSS laser, especially one with frequency doubling to produce green
+(532 nm) output is a more complex - likely much more expensive - undertaking,
+but one that can be accomplished successfully.  And, because DPSS lasers are
+becoming more popular, components for these are coming down in price, at least
+somewhat.  So, there is hope. :)
+
+<h3><A NAME="ioihbxr">Home-Built X-Ray Laser?</A></h3>
+
+The following is from a recent paper: "Generation of millijoule-level
+soft-x-ray laser pulses at a 4-Hz repetition rate in a highly saturated
+tabletop capillary discharge amplifier", C. D. Macchietto, B. R. Renware,
+and J. J. Rocca, Optics Letters, vol. 24, no. 16, pp, 1115-1117, August, 1999.
+<p>
+(Portions from: Bob.)
+<p>
+There are a good number of people who have built or are currently building
+their own lasers. from simple systems, to the extravagant. I was going through
+some current journals today, as things were slow here, and I saw something that
+caught my eye, making me instantly think of this group: A table top soft X-ray
+laser.
+<p>
+Basically, this system was quite simple.  It had a 0.32 mm ID aluminum oxide
+capillary evacuated to roughly half a Torr filled with argon gas, pre-ionize
+by a discharge.  It was pulsed with a high current pulse (approximately 26
+kiloamps!) with a fast (40 ns) rise time using a water capacitor and series
+spark gap switch.  The water served as both the dielectric of the capacitor
+and as cooling for the capillary.  The capacitor was charged by a 4 stage
+Marx generator located in a separate box.  The laser itself occupied an area
+of only about .4 x 1 m (16 x 40 inches).  Since the laser operates in a highly
+saturated regime, no cavity optics are required.  The output beam profile had
+a ring shape (due to plasma density gradients in the plasma column) with a
+half-angle divergence of about 4.6 mR.  The output energy averaged about
+.88 mJ at 4 Hertz.
+<p>
+I (Bob) kinda like the idea of having an X-ray laser in the corner of my lab.
+So I'm gonna build one, though maybe others might like to as well.  For your
+information, when the NOVA laser was used to pump a soft X-ray laser, they
+got out 8 mJ pulsed, with a repetition rate of about 1 pulse per 30 minutes
+(!!) or so.  It would be kinda cool to have a 1 mJ X-ray laser, especially if
+it could operate at 4 or 5 pps.  And, with higher average power than the NOVA
+laser pumped X-ray laser!!!!!  (Although I must admit that one generated
+shorter wavelength X-rays: 15 nm instead of 47 nm.  Well, you can't have
+everything.)
+
+<h3><A NAME="concit5">General Resources for Amateur Laser Construction</A></h3>
+
+There are actually a larger number of places than you might think to find
+information on home-built lasers as well as some ways of interacting with
+like-minded individuals on-line.  Check out the amateur laser construction
+Web sites for examples of lasers others have built, or are in the processing
+of building, as well as much related information. Many of these sites have
+descriptions, diagrams, and photos of their home-built lasers.
+<p>
+<ul>
+<li>Check out the "Lasers/Optics Site/Information" sections of
+ <A HREF="http://www.repairfaq.org/sam/sambook.htm">Sam's Neat, Nifty, and
+ Handy Bookmarks</A>.
+<p>
+<li>Locate back issues of Scientific American and/or their reprint collections
+ such as "Light and Its Uses" ([5] in
+ <A HREF="laserlir.htm#lirref">References on Laser Principles, Technology,
+ Construction, and Applications</A>).  For more information, see the sections
+ starting with: <A HREF="laserclt.htm#cltsi">Scientific American Articles on
+ Lasers and Related Topics</A>.  A CDROM is now available with <i>all</i> of
+ the SciAm Amateur Scientist articles since the 1920s.  See the section:
+ <A HREF="laserclt.htm#cltcdr">CDROM with the SciAm Amateur Scientist
+ Archive</A>.
+<p>
+<li>The <A HREF="http://www.sas.org/">Society for Amateur Scientists
+ (SAS)</A>.  I'm not sure how many laser projects might be there, if any,
+ but it's worth a look.
+<p>
+<li>Bill Beaty's <A HREF="http://www.amasci.com/">Science Hobbyist</A> Web
+ site has a lot of interesting (and in some cases, strange and weird) info
+ and links.  He also has started an amateur science discussion forum:
+ <A HREF="http://www.amasci.com/sci-list/sci-list.html">SciClub-List:
+ Amateur Science</A>.  Although this is now disabled, the archives are
+ still present and it links to a new set of science forums.  Whether
+ these get any more traffic than the one above is anyone's guess!
+<p>
+<li>Check out the links to home-built lasers and related projects in the
+ section: <A HREF="laserlir.htm#lirweb2">Amateur Laser Construction Sites</A>
+ to see what others have done.  Contact them via email.  One thing is certain:
+ Since there are so few hobbyist types interested in this sort of thing
+ anymore, these people should jump at any opportunity to discuss their passion
+ to build lasers with you. 
+<p>
+<li>Patents are another source for basic laser information that may be of use
+ for amateur laser construction.  One can spend months searching on the
+ a patent database for laser related topics.  While, you will likely not
+ find complete plans from this sort of resource, an idea here and an idea
+ there can eventually add up to something very useful!  See the section:
+ <A HREF="laserlir.htm#lirpat">Patents</A> for more details.  With modern
+ on-line patent databases and advanced search facilities, this can actually
+ be somewhat entertaining. :)
+<p>
+<li>Various scientific publications like the IEEE Journal of Quantum
+ Electronics (volumes 2 to 15 are VERY interesting and are about 33% laser
+ related).  So are the corresponding years of Applied Physics Letters, Review
+ of Scientific Instruments, and others.  The early papers tended to be
+ more practical with details of design and construction often sadly lacking in
+ the later scholarly literature. :(  Many of them read more like this document
+ than something that is mostly equations with only an occasional English word
+ to hold things together.
+<p>
+<li>While not about lasers, the
+ <A HREF="http://www.signweb.com/neon/">Neon and Lighting Channel Page</A> has
+ information on gas discharge tubes, glass working, vacuum systems, neon sign
+ transformers, and other topics related to neon signs and their construction -
+ many very relevant to home-built lasers nonetheless.
+<p>
+<li>The "Laser Growing Mailing List" (dormant) an email discussion group
+ strictly for
+ people *serious* about building their own lasers from scratch.  Its first
+ project was the design of a 50 to 100 W axial flow CO2 laser along the lines
+ of the ones described in the chapter:
+ <A HREF="lasercc2.htm#cc2toc">Home-Built Carbon Dioxide (CO2)
+ Laser</A>.  However, much of the discussion involved the location of
+ suppliers for glass working equipment, laser tube parts, vacuum systems,
+ neon sign transformers and related components, optics and mounts, and more.
+ Many of these and other topics are of interest no matter what type of (gas)
+ laser you may be building!
+<p>
+ (Note: During the early months of its existence, there was a lot of activity
+ including a group purchase of CO2 laser mirrors.  At least one person did
+ achieve "first light".  Now, as far as I can tell, it is dead, or at least in
+ a coma.  There have been no postings in months.  However, much of the
+ information obtained from these discussions has made its way into the
+ chapters on home-built lasers so you can benefit from the Laser Growing
+ Mailing List even if it is no longer active.)
+<p>
+<blockquote>
+  "Hopefully, this list will comprise of people who wish to build their
+   own CO2 laser and/or other lasers (later on) and are willing to share their
+   expertise, experience and resources for the benefit of others in the
+   building process.  Scroungers are of particular benefit to us as some
+   of us may need what you have found.
+<p>
+   This is a non-profit endeavor.  From time to time, group purchases MAY be
+   suggested/made but, only at cost plus postage."
+</blockquote>
+<p>
+  Everyone is welcome to monitor the list but please refrain from sending
+  off-topic messages.  To join, send an email message with the words
+  "subscribe" (without the "") on the subject line to
+  <A HREF="mailto:buzz_ard2@bigfoot.com">buzz_ard2@bigfoot.com</A>.  You will
+  receive a confirmation message via return email.  (Note: This listserver
+  has recently moved - it used to be at buzz_ard@bigfoot.com.)
+<p>
+  There is also a Web page associated with the Laser Growing Mailing List
+  with information and photos which will be updated as the project progresses:
+ <p>
+ <ul>
+ <li><A HREF=
+  "http://www.geocities.com/CapeCanaveral/Station/2727/">Lasergrowing 1</A>
+  (Cass - Original Lasergrowing Web page)
+ </ul>
+</ul>
+<p>
+There are also a number of companies that may sell complete plans, parts, and
+other items related to home-built lasers:
+<p>
+<ul>
+<li><A HREF="http://www.amazing1.com/">Information Unlimited</A> has what are
+ supposedly complete plans argon ion, carbon dioxide, nitrogen, copper vapor,
+ and tunable dye lasers.  (In the case of the CO2 laser, they have parts, kits,
+ and completely assembled versions as well - supposedly.)  I doubt that it is
+ coincidental that these are also most of the types of lasers covered in the
+ Amateur Scientist columns of Scientific American!  I do not know whether if
+ the plans are of any value beyond those or whether they are indeed just poor
+ reproductions or transcriptions.  I also have no idea of whether what they
+ provide is credible for the price or whether it is likely to result in a
+ successfully completed project.  Also see the section:
+ <A HREF="laserlps.htm#lpsnsw5">Electronic and Laser Project Parts, Plans,
+ Specialized Components</A> for additional comments about Information
+ Unlimited.
+<p>
+<li><A HREF="http://www.electronickits.com/">Carl's Electronics</A> has plans
+ for a 40 W CO2 laser, ruby laser, and possibly others.  I have no idea of the
+ integrity of this outfit or the quality of what they offer.  They kind of
+ appear to be in the same league as Information Unlimited, above.
+<p>
+<li><A HREF="http://www.mwklasers.com/">MWK Laser Products</A> also has plans
+ for most of the types of lasers included in "Light and its Uses".  As with
+ the plans, above, I do not know if these are derived from there or elsewhere
+ or whether there is any benefit to buying these as opposed to digging up the
+ info in "Light and its Uses" in conjunction with this document!  (Lasershop
+ is a spinoff of MWK so I expect the plans to be similar.)
+<p>
+<li><A HREF="http://www.bullnet.co.uk/shops/test/">Bull Electrical</A> (UK)
+  has plans for CO2 and CuCl lasers on their
+  <A HREF="http://www.bullnet.co.uk/shops/test/lasers.htm">Laser Page</A>.
+<p>
+<li>See the chapter: <A HREF="laserlps.htm#lpstoc">Laser and Parts Sources</A>
+ as some companies will sell laser mirrors and external cavity HeNe and argon
+ ion plasma tubes (should you decide to only go half way!) but expect them to
+ be pricey! (except for some one-Brewster HeNe laser tubes available surplus.
+ See the sections starting with: <A HREF="laserchn.htm#chnsiob">Sam's Instant
+ External Mirror Laser Using a One-Brewster HeNe Tube</A>.
+</ul>
+
+<h3><A NAME="concit6">Scrounger of the Month Award</A></h3>
+
+Here is a success story on obtaining help in glasswork, AND inexpensive neon
+sign transformers and vacuum pumps from the same source - you guessed it - a
+neon sign shop!  It seems that many neon sign types are also interested in
+lasers (or at least fantasize about building one) and are therefore sympathetic
+to the needs of amateur laser constructors!  For more info, see the section:
+<A HREF="lasercon.htm#contdns">Tips for Dealing with a Neon Sign Shop</A>.
+<p>
+(From: Tom Miller (tmiller@umaryland.edu).)
+<p>
+Ok, today was GOOD!  I visited a local sign shop, one of the larger ones, and
+got to talk to the owner.  He was the one who initially nixed selling any
+transformers to the general public.  After a brief discussion explaining what
+I wanted to do, he took me on a tour of the whole facility.  It seems he may
+be interested in constructing a laser also.  He was checking prices for CO2
+lasers for use in cutting plastic sign material and for a 50 watt unit, was
+seeing prices in the $50,000 range.  Now granted, this included the mechanical
+positioning equipment, but still, he thought it to be too high.
+<p>
+Anyway, I left him a copy of Sam's Laser FAQ and my business card.  He wants
+me to give him a drawing of the glasswork and he will put it all together.
+Says it will take less than an hour, so I told him I would pay for his time.
+He suggested that I use a "tubated" electrode on each end and connect the
+vacuum pump to one end and the gas supply to the other.  This way, the flowing
+gas will cool the electrodes.  
+<p>
+We got around to talking transformers and I ask what a 15 kV, 30 mA unit would
+cost.  He asks if I could use a 15 kV, 60 mA transformer if it was used.  I
+was completely surprised when he said it would only cost $10. This transformer
+was sitting on his glasswork bench and he was using it to test tubes.  The guy
+showed me a pile of neon sign transformers under a very large workbench. Must
+have been 20 to 30 there.  Also, the owner told me he had MANY old vacuum pumps
+just sitting around.  I saw at least 5 of them.
+<p>
+Next, he asked what I would mount the laser on.  I said I would like to use an
+aluminum I-beam about 3 to 4 inches wide and about 4 feet long.  He took me to
+a different area of the shop and found a scrap piece of the stuff.  I figured
+that I would stop using all of his time, and told him I would go and make a
+drawing for the tube and get it to him sometime in the next few weeks.
+<p>
+So, anyone having problems, just load up with Sam's Laser FAQ, go find a large
+old neon shop and talk to the guys who actually do the work.  You will be
+surprised how much interest they will have in a good powerful laser.
+<p>
+So today was a good one. :)
+
+<h3><A NAME="concit7">Acknowledgements</A></h3>
+
+Information from many sources has been used to compile the chapters on amateur
+laser construction.  Wherever possible, I have attempted to identify the
+individual contributor.  However, if you feel that there is something here
+you wrote without an acknowledgement, please let me know.
+<p>
+<ul>
+<li>Special thanks to Chris Chagaris
+ (<a href="mailto:pyro@grolen.com">pyro@grolen.com</a>) for his comments and
+ additions to this document.  His first-hand experience in constructing several
+ lasers from scratch has been extremely valuable in polishing and enhancing
+ these chapters.
+<p>
+<li>Special thanks to George Werner
+ (a href="mailto:glwerner@sprynet.com">glwerner@sprynet.com</a>) for sharing
+ his first hand experiences and insights from working on early HeNe lasers
+ while at Oak Ridge in mid-1960s time frame.  Most of his comments are in the
+ chapters on <A HREF="lasercon.htm#contoc">Amateur Laser Construction</A> and
+ <A HREF="laserchn.htm#chntoc">Home-Built Helium-Neon (HeNe) Laser</A> but
+ some material is scattered elsewhere.
+</ul>
+<p>
+<A NAME="concll"></A>
+<hr>
+<br>
+<li>Back to <A HREF="lasercon.htm#contoc">Amateur Laser Construction Sub-Table of Contents</A>.
+<h2>Setting up a Home Laser Lab</h2>
+<h3><A NAME="consaf">Safety Issues in a Lab for Home-Built Lasers</A></h3>
+
+There are a variety of issues that are important for any sort of home lab
+or workshop but the following, in particular, apply directly to lasers and
+laser construction:
+<p>
+<ul>
+<li>Laser safety.  In some ways, a home-built laser is MORE dangerous in terms
+ of risk to vision (at least) compared to a commercial one.  One reason is
+ that the output power and behavior is less predictable - and there are no
+ manufacturer's specifications for MAXIMUM output.  Therefore, one must err
+ on the side of caution - assume that they are at the upper end of any
+ possible range of power outputs.  For all except the CO2 laser, these will
+ at least be well into the Class IIIb range.  The CO2 WILL be Class IV!  This
+ doesn't mean you will get an eye-killer beam from your laser - just that you
+ cannot safely assume you WON'T!
+<p>
+ See the chapter: <A HREF="lasersaf.htm#saftoc">Laser Safety</A> for more
+ information.
+<p>
+<li>High voltage.  The power supplies for these lasers almost all involve high
+ voltage at significant current and/or with sizable high voltage filter or
+ energy storage capacitors.
+<p>
+<ul>
+ <li>The neon sign/luminous tube transformers often used for excitation of gas
+  lasers come in various sizes but are all potentially lethal.  The larger
+  ones, even more so.
+<p>
+ <li>Any time you are storing energy in multi-kV storage capacitors, you are
+  talking about seriously deadly equipment.
+<p>
+ <li>Even little high voltage inverters running off some AA batteries can
+  generate deadly output - especially where a capacitor is involved.
+</ul>
+<p>
+ Read and understand the information in the document: "Safety Guidelines for
+ High Voltage and/or Line Powered Equipment" BEFORE constructing and powering
+ any of these systems.
+<p>
+<li>Radio frequency sources including microwaves.  It is possible to excite
+ some of the gas lasers using a radio transmitter or magnetron tube from a
+ microwaves oven.  These approaches, while tempting, introduce an entire
+ additional set of safety issues - both electrical and with respect to
+ exposure to non-ionizing radiation.  I would recommend AGAINST attempting
+ to power your laser in this manner - at least not unless you are have had
+ extensive experience with high power RF equipment and until you have dealt
+ with a home-built laser powered by direct electrical excitation.  For some
+ additional comments and safety issues, see the section:
+ <A HREF="lasercc2.htm#cc2cc29">RF or Microwave Power Supply for CO2
+ Laser?</A>.
+<p>
+<li>X-rays.  This is one area that should NOT be a significant worry despite
+ the use of fairly high voltages and tubes with some sort of a vacuum for
+ many of these lasers - unless you are building a Free Electron or X-ray laser
+ in your basement. :-)  To generate energetic X-rays requires particles to be
+ accelerated to a high velocity and to strike a heavy metal target.  While up
+ to 25 kV (peak) may be present for some of these home-built lasers, at the
+ gas pressures at which they operate (and the vacuums achievable without true
+ high vacuum equipment), the mean-free-path is too short for particles (e.g.,
+ electrons) to reach a high enough velocity to for serious levels of X-ray
+ production.  Any that are generated will be 'soft' X-rays that are blocked by
+ the tube walls.  In the early days of X-ray development, gas tubes were used
+ because they either didn't know any better or equipment capable of achieving
+ a decent vacuum was not readily available.  Exposure times were 10s of
+ minutes or more at close range even when designed for X-ray production.
+<p>
+ However, should you actually be powering a tube (for whatever reason) pumped
+ down to perhaps 10<sup>-6</sup> Torr or better with a heated cathode (since
+ you can then easily get significant current even in a perfect vacuum - not
+ really practical or likely by accident with a cold cathode) attached to a HV
+ power supply, X-rays can become a real safety issue!   There is no actual
+ threshold where X-ray energy starts to become a hazard but below about 15 kV,
+ X-rays won't penetrate the glass of the tube.  X-ray machines for mammography
+ which run at *only* 30 to 50 kV have tubes with beryllium windows to allow
+ the radiation to pass through the tube walls.  However, taking precautions
+ when using voltages higher than 15 kV with high vacuum systems would be
+ prudent.
+<p>
+ Commercial X-ray machines are based on ultra-high vacuum tubes consisting of
+ a heated tungsten filament (cathode) and a target (anode) made from tungsten,
+ tungsten-rhodium or some other exotic material enclosed in a glass or ceramic
+ envelope.  The typical dental X-ray unit (about the smallest common type of
+ X-ray system for patient imaging) may use 10 mA and 70 kV.  At the other end
+ of a major X-ray equipment manufacturer's product line would be the X-ray
+ generator for a high performance spiral CT scanner which may go up to 400 mA
+ at 130 kV or more. :-).  (If you are really curious, the way they get rid of
+ the approximately 50 kW of waste heat in the latter case (most of which is
+ generated at the anode and concentrated at a spot a mm or so across) is to
+ make the anode in the form of a massive disk spun at high speed via an
+ induction motor magnetically coupled through the tube envelope with the tube
+ bathed in oil which is circulated through a large heat exchanger.  Even all
+ this isn't really adequate to keep up with heat production - these things can
+ only run for a couple minutes at a time at full power before they need to be
+ powered down to allow the tube to cool.  And you thought it was difficult to
+ cool an ion laser!)
+<p>
+ Having said all that, it never hurts to err on the side of caution.  Once you
+ start powering your laser, get one of those X-ray films you love so much from
+ your friendly dentist and cover the front (smooth side - the back has a lead
+ foil shield inside) of it with a metal mask (e.g., a wire formed into your
+ initials) so you will know if it actually gets exposed.  Place it front-side
+ facing and near your laser tube (but not so close that there may be arcing
+ to it) and let it cook for a few minutes with power on.  Have the film
+ developed and inspect it carefully.  If you see ANY shadow of the mask,
+ there has been some X-ray exposure and further testing and possible shielding
+ would be adviced.  If there is nothing visible, try again with an exposure
+ time of an hour.  Of course, if the film is totally blackened, you have
+ serious problems (or have somehow built an X-ray laser).  For a more
+ quantitative test, get a radiation film badge with specific instructions on
+ its use, and have it processed and evaluated.
+<p>
+ (From: Terry Greene (xray@cstel.net).)
+<p>
+ <blockquote>
+ "There is no practical problem with X-rays at the typical voltage used in
+  most gas type lasers.  All mammography tubes use special beryllium windows
+  for the radiation output because X-rays at those low energies (20 to 32 kVP)
+  won't penetrate the glass envelope of a standard tube. I've tried it.  A
+  glass envelope (standard) X-ray tube won't produce any exposure at all at
+  15 kVP according to my test equipment. (Keithly ion chamber).  Even with
+  complete evacuation, I seriously doubt you could find measurable X-ray
+  output from a glass bore laser."
+ </blockquote>
+<p>
+<li>Water/liquids.  The CO2 laser will require water cooling.  You may want to
+ add water cooling to others like the Ar/Kr laser to boost output power.  The
+ dye laser involves the use of liquids - some of them quite nasty.  All use
+ high voltage AC line connected power supplies.  This makes these doubly
+ dangerous.  Make sure all precautions are taken including proper wiring and
+ grounding of all equipment AND plumbing!  Even though the HV discharge is
+ supposed to be between special electrodes, it can jump to nearby metal
+ fittings - and you!
+<p>
+<li>Vacuum systems.  One of the major dangers is from implosion of improperly
+ designed or selected vacuum vessels.  See the chapter:
+ <A HREF="lasercva.htm#cvatoc">Vacuum Technology for Home-Built Gas
+ Lasers</A> for specific guidelines on this and other vacuum system
+ hazards.
+<p>
+<li>Toxic/corrosive chemicals.  Some of the materials used for glass cleaning,
+ electrode coatings, heavy metals (for the helium-mercury and other similar
+ lasers), and organic dyes (for dye lasers) are extremely toxic, corrosive,
+ or both.  Make sure you understand the chemical safety issues.
+<p>
+<ul>
+ <li>Poisonous chemicals can get picked up on cleaning materials, clothing,
+  surfaces of lab glassware, tabletops, storage cabinets, the bottom of
+  your shoes, etc.
+<p>
+ <li>The fumes from these chemicals are likely to be toxic and irritating as
+  well.
+</ul>
+<p>
+<li>Flammable or suffocating gases.  While the actual quantities of gases
+ used in most of these lasers is infinitesimal (since they operate at a very
+ small fraction of atmospheric pressure), some gas will escape and leaks can
+ occur.
+<p>
+<ul>
+ <li>These are all colorless and most are odorless so there will be no visible
+  signs of a leak or buildup of fumes.
+<p>
+ <li>Proper ventilation must be provided
+<p>
+ <li>Gases that are heavier than air in particular can hang around resulting
+  in a layer that you cannot breath or one that is flammable.
+</ul>
+<p>
+<li>Glass working, annealing, and outgassing flames.  Needless to say, any time
+ that open flames are used, precautions must be taken to assure that no
+ flammable materials are in the vicinity.
+<p>
+<ul>
+ <li>Obviously, this includes the chemicals and gases mentioned above.
+<p>
+ <li>Shavings from wood and plastic gutting, filing, grinding, and sanding are
+  extremely flammable and should be completely cleaned up and removed before
+  lighting the propane or oxy-hydrogen glass working torch!
+<p>
+ <li>Have a fire extinguisher of the proper type - rated for chemical AND
+  electrical fires - in a location that is accessible outside the range of
+  any possible fire.  Make sure you cannot be trapped by a fire.  Two fire
+  extinguishers and two means of egress at opposite ends of the lab are
+  even better.
+ </ul>
+</ul>
+<p>
+There didn't appear to be a critical mass of lawyers present at the time most
+of the articles in "Light and its Uses" were written.  Therefore, they tend
+not to deal with the safety issues as emphatically as might be desired.  Most
+of these projects have aspects (most often the high voltage power supplies)
+that are potentially dangerous or lethal.  Safety must be at the top of your
+list of priorities when undertaking such an endeavor!
+
+<h3><A NAME="concll1">Work Area - Setting up a Laser Lab</A></h3>
+
+Since any of these lasers represents a long term comittment, it is essential
+that an area be set aside for your laser lab.  Therefore, the kitchen or
+dining room table is NOT an appropriate place to be constructing a laser.
+It is possible to do without the sort of setup depicted in the section:
+<A HREF="lasercon.htm#concll2">Possible Laser Lab Layout</A> but there are
+some basic requirements for a safe, functional, and convenient space:
+<p>
+<ul>
+<li>An area that is as dust free as possible is absolutely essential.  Dirt,
+ dust, condensed tobacco smoke or cooking grease, or other contamination of
+ optical surfaces is a major cause of problems in getting a laser to work
+ and/or result in reduced output power or erratic operation.
+<p>
+ Forget about smoking around precision optics.  Aside from slowly killing
+ yourself, a miniscule amount of tobacco smoke residue will play havoc with
+ mirrors and lenses - especially inside the laser resonator.  You will be
+ wasting your time or worse.  Just because you saw a demo where someone
+ blew smoke in the path of a laser beam to make it visible is no excuse as
+ that was just a one-time demo.  There are special means of generating
+ smoke for this purpose which are non-toxic and do not condense on optical
+ surfaces should a real need arise.
+<p>
+<li>You must be able to leave it undisturbed probably for weeks or MONTHS on
+ end.  Therefore, a spare room is best.  You definitely don't want to share
+ your lab with a woodworking or gardening operation.  Or, your kid brother
+ who likes to wreck EVERYTHING! :-)
+<p>
+<li>There must be access to enough electricity.  At least three dedicated
+ circuits with local cutoff switches/circuit breakers will be desirable
+ just for the laser - vacuum pump(s), power supply, cooler, etc.  In the
+ USA, this probably means 115 VAC, 20 A each though some equipment may
+ run on 230 VAC.  Depending on the lasers you'll be building, much more may
+ be needed.  Start by estimating the maximum consumption of everything you
+ expect to be running at the same time - and then double it!  And, this
+ doesn't even include electrical circuits for test equipment, room lighting,
+ and utility outlets.  These should be separate should you decide to blow a
+ fuse or pop a circuit breaker!  Install power strips all along the walls
+ behind your work surfaces.
+<p>
+<li>There probably needs to be running water and a drain.  Where chemicals are
+ involved, the drain should be direct to a sewer, not a sump - assuming you
+ can safely put them down at all.
+<p>
+<li>There must be adequate ventilation.  However, there should be NO way for a
+ laser beam to escape to the outside world!  This means there can be no
+ open or uncovered windows!  And, if your laser accidentally drills a hole
+ through your stone and stucco exterial wall, patch it up as quickly as
+ possible. :-)
+<p>
+<li>Minimization of fire and water damage risk.  This is mostly common sense
+ meaning a room with a concrete or vinyl floor and NO curtains or drapes.
+ A room in a dry basement is probably best if it can be made reasonably
+ dust-free.
+<p>
+<li>It must be large enough to provide space for you, the laser itself AND
+ for any additional length required by alignment or other optical add-ons
+ to the laser.  Also, don't forget creature conforts for your guests like
+ a sleep sofa (for when you are performing critical mirror alignment),
+ stereo, big screen TV - OK, just kidding. ;-)
+<p>
+<li>Storage.  There can never be too much.  You need to be able to handle all
+ sorts of components, electronic and optical assemblies, partially or fully
+ completed lasers or other apparatus, chemicals, and other supplies.
+<p>
+ <ul>
+ <li>Metal double door supply cabinets are ideal for larger items and for
+  holding the multi-drawer parts cabinets you will also need (see below).
+<p>
+  These are typically 18" to 24" deep by 36" wide and 60" to 78" tall with
+  multiple adjustable shelves.  The larger the better if you have the
+  space.  I have gotten mine from garage and tag sales in good condition
+  for between $10 and $40 (they retail for over $200).
+<p>
+  Of course, other kinds of cabinets are fine as well.  However, anything
+  you chose should have doors to minimize dust on optical and electronic
+  components and assemblies.
+<p>
+ <li>Small cabinets with 24 to 50 plastic drawers are most convenient for
+  electronic, optical, hardware and mechanical parts.  One with 50 drawers
+  can typically be purchased for $10 to $15.  I prefer where all the
+  drawers are the same size - those with multiple size drawers seem just
+  plain silly. :-)
+<p>
+ <li>File cabinets with half-height (index card) drawers and blue print
+  cabinets are excellent for tools and parts as well.  These are
+  unbelievably expensive if purchased new but sometimes turn up at estate
+  sales and the like for a song (because most people cannot think of a
+  good use for them!).
+<p>
+ <li>The wall space above your optical or electronics benches can also be
+  utilized by adding some shelves or even those recycled kitchen cabinets
+  (which are even better since they have doors!).
+ </ul>
+</ul>
+
+<h3><A NAME="concll2">Possible Laser Lab Layout</A></h3>
+
+I wish I had this!  Note: Two means of exit and two fire extinguishers!
+<p>
+Also note the chair - most important - and the bench for your guest (though
+probably should be s eleep-sofa so they can snooze while you spend the
+afternoon adjusting your gas mixture or performing mirror alignment. :-)
+<PRE>
+
+    |<------------------------------- 12' ------------------------------>|
+ ___|____________________________________________________________________|
+  ^ |    |                                                         |     |
+  | |    |        Storage Cabinets/Shelves (above work area)       |     |
+  | |    '---------------------------------------------------------'     |
+  | |          Electrical Outlets (two circuits) all along wall          |
+  | |                                                                    |
+  | |            Work Surface - thick hard-plywood (3' x 12')            |
+  | |____________________________________________________________________|
+  | |           |                                                        |
+  | |           |  Vacuum System on floor (beneath work area)     Gas    | 
+  | |           |                                              Cylinders |
+  | | Test      |                                              __________|
+  | | Equip.,   |                    ________                 |          |
+  | | Power     |                   |        |                | Wet area |
+    | Supplies, |                   | Office |                | Glass-   |
+ 10'| Misc.     |                  (| Chair  |)               |  working |
+    |           |                   |________|                | Ventila- |
+  | |           |                   '--------'                |  tion    |
+  | |___________|                                             |__________|
+  | |                                                                    |
+  | |S Power Switch            _ _        __________                     |
+  | |(on Wall)          .-======'======-.|          |                    |
+  | |        /          |               ||  Bench   |           \        |
+  | |      /       Fire |    Storage    ||          | Fire        \      |
+  | |    /         Ext. |               ||==========| Ext.          \    |
+ _v_|__/         _______|_______________|____________________         \__|
+
+</PRE>
+
+<h3><A NAME="concll3">Sources of Special Parts and Supplies</A></h3>
+
+This section deals mostly with the items to equip your lab, small parts,
+chemicals, and so forth.  Also see the sections on vacuum equipment, optics,
+and power supply components, in this and the chapter that follows, as well as
+the chapter <A HREF="laserlps.htm#lpstoc">Laser and Parts Sources</A>.
+And note that many of these items appear regularly on eBay and other auction
+sites as well as high-tech flea markets.  Apparently, at least one person is
+even selling small quantities of chemicals to the public on eBay!
+<p>
+<ul>
+<li>Lab and vacuum equipment - Scientific supply companies, surplus outfits,
+ neon sign shops (their cast-offs), eBay.
+<p>
+<li>Glassware including glass tubing - Scientific supply companies (expensive
+ but high quality and large variety), neon sign shops (probably tubing only).
+ Some large hobby shops may have some of this as well but the quality may be
+ poor (and hobby shops seems to be going the way of the dinosaur!).
+<p>
+ For borosilicate (Pyrex) tubing in particular any of the large scientific
+ supply companies are probably the best sources.  Tubing comes in 4 foot
+ lengths and the typical price is $10 to $15 per pound.  They will also carry
+ fused silica (Vycor) and fused quartz tubing (though neither of these really
+ should be needed for any of the home-built lasers unless you are doing
+ something like attempting to push the envelope on the argon ion laser power
+ output.)
+<p>
+ (Portions from: Cass (cassegrainian@galaxycorp.com).)
+<p>
+<blockquote>
+ "<A HREF="http://www.fdglass.com/">Friedrich & Dimmock, Inc.</A> seem to have
+ the most buying options and at the best prices that I have seen at their Web
+ site, which is new although, they have been in business since 1919.  For
+ selected items, they have what they call a "shelf pack" and that seems to be
+ the best bang for the buck for standard wall Pyrex tubing ($25 to $50 for
+ 2 to 50 lengths (approximately 4 foot) depending on diameter.  This isn't
+ bad if especially if you can find a few buddies to share expenses.
+ Unfortunately, they don't have this option for medium or thick wall tubing
+ which is what may be needed for some of the home-built lasers.  However,
+ although small diameter tubing is sold by the 100, 4 foot pieces (typically
+ $200 to $400, ouch), larger diameter tubing may be available by the pound -
+ which is probably even better than the shelf pack.  So, check out their
+ on-line catalog.  Note: Minimum order is $75."
+</blockquote>
+<p>
+ However, Tim Goldstein of the Laser Growing group (see the section:
+ <A HREF="lasercon.htm#concit5">General Resources for Amateur Laser
+ Construction</A>) has found that
+ <A HREF="http://www.glasscraftinc.com/">Glasscraft, Inc.</A> (nothing much at
+ their Web site yet) will sell in small quantities (even a single piece of
+ tubing) to individuals.  They accept major credit cards and there is no
+ minimum order (though a $5 handling fee will added for orders under $50).
+<p>
+<li>Gases -  Chemical supply companies, Gas supply companies (e.g., AirCo),
+ Welders and welding supply companies, neon sign shops and supply companies.
+ See the section: <A HREF="lasercon.htm#concll4">More on Obtaining Gases</A>.
+<p>
+<li>Chemicals - Chemical supply companies, high school/college teaching or
+ research labs, your local grocery, pharmacy, hardware store, home-center,
+ and supermarket!  Not all chemicals are exotic and hard to find!  And,
+ as noted above, try eBay as well!
+<p>
+<li>Electrodes - Neon sign shops and supply companies or fabricate your own
+ from thin sheet aluminum (flashing), tubes, or foil.  Commercial neon sign
+ electrodes only cost $2 or so.
+<p>
+<li>Optics - New, surplus, salvage (e.g., broken HeNe laser tube to obtain
+ dicroic mirrors).  Check out the various suppliers listed in the chapter:
+ <A HREF="laserlps.htm#lpstoc">Laser and Parts Sources</A>.  Note: A basic
+ requirement for going through life should be at least one trip to to the
+ Edmund Scientific's outlet store!  Also see the section:
+ <A HREF="laserclp.htm#clpcao6">Sources for Reasonably Priced Optics, Mounts,
+ and Other Related Components</A>.
+<p>
+<li>Mirror alignment jig.  It is a simple matter to make your own.  For these
+ relatively wide bore lasers, this can be done using simple materials (like
+ cards with holes punched in them, flashlight bulbs, and microscope slides.
+ Or, if you have an HeNe or collimated diode or other working laser, using
+ that for a light source.  There are at least two alternative basic parts
+ type designs in "Light and its Uses" and laser based designs in the
+ chapters: <A HREF="laserhen.htm#hentoc">Helium-Neon Lasers</A> and
+ <A HREF="laserarg.htm#argtoc">Argon/Krypton Ion Lasers</A>.
+<p>
+<li>Structural materials - scrap/salvage/junk yards, lumber yards,
+ home-centers, machine/metal shops.  Sometimes common household items are
+ overlooked - be creative.
+<p>
+ Places that deal with plastics and metal (e.g., sign shops, metal
+ fabricators, machine shops, etc.) usually have scrap bins with all the
+ stuff that is too small or irregularly shaped to put back into inventory.
+ They will probably sell pieces from there very cheaply (maybe by the pound)
+ or just let you take what you want free of charge.  With just a little
+ effort, you may be able to obtain all the little structural bits and pieces
+ needed to construct your laser (except probably the main support beam - for
+ that you will likely have to pay something) as well as the raw materials for
+ the mirror mounts at little or no cost.
+</ul>
+<p>
+Develop a relationship with a teacher/instructor/professor/researcher at a
+high school/technical school/college/university/industrial lab.  Some people
+will be more than eager to help and mentor you - even to the extent of loaning
+equipment or donating small quantities of chemicals, electronic components,
+hard to find optics, etc., to your cause.  Use of their lab may even be
+possible.  And, universities sometimes toss out the most amazing things - like
+complete vacuum systems - when a grant runs out and they need the space!
+There are various programs as well to encourage students to go into science
+and technology fields.  Who knows, they may even pay you to do this!
+<p>
+Call up laser and optics manufacturers.  Sure, many won't give you the time of
+day unless they think you will be ordering $1,000,000 worth of equipment.
+But, all you need is one to say yes!  There are always such things as cosmetic
+rejects or seconds - that are useless to them because they cannot sell the
+parts - but fine for your needs.  The trick is to hold their attention long
+enough - or be such a (polite) pain in the neck that the easy way out is for
+the company to provide what you want!  I have heard of people obtaining all
+sorts of material, parts, equipment - some of it worth quote a lot of money -
+in this manner.
+<p>
+In summary - possible places to find useful stuff:
+<p>
+<ul>
+<li>Household items.
+<li>Scientific equipment/chemical/industrial supply and surplus houses.
+<li>High school/college/university labs
+<li>Industry, particularly laser, optics, and scientifically oriented
+ companies.
+<li>Metal, wood, and plastic fabricators, neon sign shops.
+<li>Garage sales, flea markets, hamfests, thrift stores, etc.
+<li>Hardware stores, home centers, pharmacies, variety stores, supermarkets.
+</ul>
+<p>
+(From: Chris Chagaris (pyro@grolen.com).)
+<p>
+Here are some resources that I have not seen mentioned anywhere on the Net:
+<p>
+For chemicals used in various aspects of laser construction and
+laboratory glassware at unbeatable prices, a fine source is:
+
+<ul>
+  <li>Hagenow Laboratories Inc.<br>
+    1302 Washington Street<br>
+    Manitowoc, Wis. 54220<br>
+    Phone: 1-920-683-3339<br>
+<p>
+  This company has been in business since 1953 and does welcome orders from
+  individuals.  Some of the materials that may be of interest to the laser
+  constructor are: Methyl and ethyl alcohols for dye laser solvents, copper
+  chloride for the CuCl2 laser, mercury metal for vacuum work ($7.25/4 oz.!),
+  and West type, glass, condenser tubes with water jackets up to 600 mm in
+  length, for use as plasma tubes in CO2 laser construction.
+</ul>
+
+For quartz tubing and quartz windows of all sizes, at very good prices:
+
+<ul>
+  <li><A HREF="htt:p//www.finkenbeiner.com/">G. Finkenbeiner Co.</A><br>
+    33 Rumford Ave.<br>
+    Waltham, MA 02154<br>
+    Phone: 1-781-899-3138<br>
+    Fax: 1-781-647-4044<br>
+    Email: GFIglass@aol.com<br> 
+    Web: http://www.finkenbeiner.com/<br>
+<p>
+  I have dealt with them personally and found them to be very receptive and
+  helpful. They, of course, also do precision glasswork of all kinds and
+  specialize in working with quartz.
+<p>
+  On a side note, they are the only manufacturers in the world of Ben
+  Franklin's invention..... The glass harmonica!
+</ul>
+I would be glad in assisting other individuals in locating some of the more
+difficult to procure items needed in some aspects of constructing these
+various lasers.
+<p>
+(Portions from: Steve Roberts (osteven@akrobiz.com).)
+<p>
+While Sargent-Welch, Edmund Scientific and Dunniway might be what come to
+mind when thinking scientific suppliers, they are most expensive, expensive,
+and not cheap, in that order. :-) 
+<p>
+The ideal thing to have is the <A HREF="http://www.laserfocus.com/">Laser Focus
+World</A> (LFW) Buyers Guide, a phone book sized list of suppliers put out by
+Laser Focus World for their subscribers.  Subscriptions are free to qualified
+individuals, so you need a company name to subscribe.  If somebody is in the
+laser business, they are in LFW.  <A HREF="http://www.photonics.com/">Photonics
+Spectra</A> is also a good freebie if you can qualify. 
+<p>
+If you are into building your own HeNe (or other) laser from the ground up,
+these suppliers may come in handy:
+<p>
+<ul>
+<li>Dale Harder of H&H Research, Cleveland, OH rebuilds large HeNe
+ lasers (up to 120 mW) and knows what you need and probably has old ones.
+ Phone: 1-216-476-1433.
+<p>
+<li><A HREF="http://www.lasershs.com/index.htm">Holo Spectra, Inc.</A>, phone:
+ 1-818-994-9755.  Contact Bill Arkin.
+<p>
+<li><A HREF="http://www.midwest-laser.com/">Midwest Laser Products</A>, phone:
+ 1-708-460-9595.
+<p>
+<li><A HREF="http://www.mi-lasers.com/">Meredith Instruments</A>, phone:
+  602-934-9387.
+</ul>
+
+Glass and glass working equipment suppliers:
+
+<ul>
+<li><A HREF="http://www.aceglass.com/">Ace Glass, Inc.</A>, Vineland, NJ.
+ Amazing phonebook sized catalog of scientific glass.
+<p>
+<li><A HREF="http://www.glasscraftinc.com/">Glasscraft, Inc.</A> will sell
+ tubing and other items to individuals in small quantities.  See the section:
+ <A HREF="lasercon.htm#concll3">Sources of Special Parts and Supplies</A> for
+ addition info and links.
+<p>
+<li><A HREF="http://www.adamschittenden.com/index.php">Adams and Chittenden
+ Scientific Glass</A>, 1-510-843-5277.  Custom and production laboratory
+ glassblowing. Their Web site includes extensive specifications on
+ borosilicate (Pyrex) glass tubing and rods.
+<p>
+<li><A HREF="http://www.eurocom-inc.com/">Eurocom, Inc.</A>, 1-800-888-0932.
+ Everything for the neon sign industry including electrodes, glass, vacuum
+ pumps, neon sign transformers, much more.
+<p>
+<li><A HREF="http://www.fdglass.com/">Friedrich & Dimmock, Inc.</A>.  Glass
+ tubing, glass rod and specialty glass products.
+<p>
+<li><A HREF="http://www.egl-neon.com/">EGL - Your Neon Source</A>.  Glass
+ tubing, electrodes, gases, pumping systems, accessories including spark
+ (Oudin) coils, much more.
+<p>
+<li>J&P Machine & Tool Company.  Phone: 1-973-779-6158.  Includes torches,
+ regulators, venturi, flash-back, manifolds, mixing valves/manifolds, bunsen
+ type burners, etc.  J & P is supposed to be that rare combination of quality
+ and low cost.
+<p>
+<li><A HREF="http://www.kontes.com/">Kimble/Kontes Glass Company</A>, NJ.
+ Scientific, specialty, and custom glassware.  Check the list of distributors
+ at their Web site.  Includes McLeod-Lippincott vacuum gauges.
+<p>
+<li><A HREF="http://www.lightwriters.com/nw/">Lightwriters Glass Warehouse</A>,
+ Northbrook, IL.  Instructional books and videos, torches and burner tips,
+ protective eyeware for glass working.
+<p>
+<li><A HREF="http://www.victorequip.com/">Victor Equipment Company</A> Gas
+ apparatus and pressure controls - torches, regulators, etc.
+<p>
+<li><A HREF="http://www.waleapparatus.com/">Wale Apparatus Corp.</A>,
+ Bethlehem, PA.  They cater to glassblowers and artists.
+<p>
+ Wale's catalog is mostly artistic glass now, but if you call and ask they
+ still stock or can get most of the scientific stuff and they have a 
+ good line of low cost torches, cutting wheels, didymium glasses that 
+ protect your eyes from the IR and UV coming off the hot glass and remove
+ the yellow sodium flare light so you can see what the glass is doing.  I'd
+ recommend the glasses for beginning glass blowers, it's like X-ray vision
+ into the flame. 
+</ul>
+
+<b>Flanges, glass-to-metal seals, electrode material:</b>
+
+<ul>
+<li><A HREF="http://www.edfagan.com/htmDocs/glas.htm">Ed Fagan, Inc.</A>
+ (Info on their Web site at least - don't know if they sell to the public.)
+<p>
+<li>Insulator Seal Inc.
+<li>MDG Inc.
+</ul>
+<p>
+For cathode material, just ask for what the machinists call "gummy" aluminum,
+the really hard to work soft stuff that gums up tooling, and you've got it.
+Not 905 or  2025, maybe 6061, but 6061 has a lot of weird stuff in it like
+silicon monoxide.  One guy I watched once sputtered the cathode in a oxygen
+discharge, then cleaned it with hydrogen in a soft glow. Nickel is the
+metal of choice for anode pins and wiring inside the tube, but its going to
+take some work to spot weld it to the kovar or dumet lead throughs, you
+need to find or make  a "thermocouple" welder designed for cap discharge
+welding of small wires.     
+<p>
+You can get pure aluminum, nickel wire, tungsten wire, titanium sheet, etc.
+from Small Parts, Inc. (Miami Lakes, Florida, 1-800-220-4242). They sell it
+chopped up in small quantities at decent prices, with no minimum order.  They
+specialize in what they call "Engineering Findings", in other words, small
+quantities of all the goofy parts you need to make industrial prototypes,
+and they tolerate us hobbyists.  Reading the Small Parts catalog will keep
+you spellbound for a few hours, it's worth the call. 
+<p>
+The other source for cathode type aluminum and nickel tubing/wire is MDC, Inc,
+also in Florida.  They also sell high vacuum parts such as flanges and seals
+and have the tubing and the low temp. brazing materials you need to make tubes.
+They don't stock the aluminum as cathode material, but it's the right type.
+Surprisingly the stuff the hobby shops sell in the K&S displays is pure
+aluminum, otherwise they couldn't extrude it that cheaply.  Both Florida
+companies have Web sites but I (Steve) don't recall what they are.
+<p>
+
+Miscellaneous parts:
+
+<ul>
+<li><A HREf="http://www.thorlabs.com/">Thorlabs</A>. Optical hardware, hard to
+ get resonator parts; reasonably priced, good clones of expensive Newport
+ optical hardware. If they don't make what you need, they sell the special
+ screws, taps and dies and bushings so you can make it. Also their catalog has
+ drawings of most of what they sell, making it easy to roll your own. 
+</ul>
+(From: Joe or JoEllen (joenjo@pacbell.net).)
+<p>
+A good resource for components found in "Light and its Uses" is:
+<p>
+<ul>
+<li>North Country Scientific<br>
+  RFD 1<br>
+  Plymouth, NH 03264<br>
+  Phone: 1-603-726-3532<br>
+<p>
+  I just spoke to the owner-nice fellow.  He says he still has inventory of
+  some nitrogen, argon, dye, and Hg Vapor laser components but interest is
+  dwindling so I don't know how much longer he will be in business.  His
+  prices are very good also.
+</ul>
+<p>
+(From: John De Armond (johngd@bellsouth.net).)
+<p>
+<A HREF="http://www.duniway.com/">Duniway Stockroom</A> for items like Dow
+corning Silicone High Vacuum Grease.  Less than $10 for a lifetime supply.
+Also a nice stock of Viton O-rings (what you want to use instead of Buna-N
+for vacuum), fittings and other vacuum goodies.  Might also take a look at
+their "vacuum epoxy".  Really a common industrial epoxy made by Hysol that
+has a sufficiently low vapor pressure to be used at the low end of high
+vacuum. Same stuff Varian sells as "TorrSeal" for many bux.
+
+<h3><A NAME="concll4">More on Obtaining Gases</A></h3>
+
+<A HREF="http://www.boc-gases.com/">British Oxygen Company
+(BOC) Gases</A> has a variety of technical and safety information on-line as
+well as handy units conversion tables on-line.  They have request forms for
+an extensive catalog and other technical info.
+<p>
+<A HREF="http://www.spectra-gases.com/">Spectra Gases</A> supplies all sorts
+of gases and support equipment for lasers and related applications including
+a variety of mixes for CO2 lasers, pure gases for helium-neon, argon and
+krypton ion, and excimer lasers.  See their
+<A HREF="http://www.spectra-gases.com/LaserGases/LaserGases.htm">Laser Gases
+and Equipment Page</A>.  They have been recommended and will sell in small
+quantities to the private individual (more below).  They also are planning
+some technical and reference pages for their Web site but they are not
+presently complete.
+<p>
+The following comments deal with a variety of gases required for laser
+construction.
+<p>
+(From: Cass (cassegrainian@galaxycorp.com).)
+<p>
+The CO2 laser-mix gas is typically sold in "H" bottles for $85.00 per fill.
+The company that I checked with will allow one to specify their own blend of
+CO2, He, N2.  Your local welding/medical supply company may vary.  Try to find
+the largest gas company in your area as many of the smaller ones simply use
+them to fill your bottle(s) and tack on an additional charge.
+<p>
+(From: Steve Roberts (osteven@akrobiz.com).)
+<p>
+I went to purchase a tank of nitrogen today. I own the tank, so a fill was
+$10.80 + tax for a size "P" tank (It seems no two gas places use the same
+letters) because I own the tank.  I needed N2 to test a nitrogen laser for a
+customer.  As I was walking out the door it dawned on me to ask what the price
+for a CO2 mix would be. The fellow couldn't give me the mix percentages, but
+said that for my tank, the fill of UltraMix by AGA would be $16.85.  My tank
+is about 14" tall by 5.5" in diameter cost $89.00 when I bought it last
+summer.  When I need a fill, they just swap tanks.  So I guess I'm getting a
+tank of mix next week when I'm done with the N2.
+<p>
+I actually think this is good news because when I talked to the rep on
+the phone and a leased tank of gas in the same size was quoted at about $200.
+The tanks all have the same CGA 580 fitting on them so I've been able to
+get oxygen, N2 and Ar in the same size with the same regulator.
+<p>
+If your operation is set up like our local gas shop, you have an industry side
+and a retail side of the business. I'm not a industrial customer, but I make
+it a habit of going to the industrial dock  in person for my gases, its much
+cheaper then calling in and getting the sales person who seems to jack up the
+price when you pick it up at the retail end of things. It's easier and cheaper
+to go buy it from the dock clerk. BTW, if you're hunting for something pure
+like krypton, Try <A HREF="http://www.spectra-gases.com/">Spectra Gases</A>.
+Or one of the others that cater to the laser industry.  Even after the hazmat
+shipping fee, buying a bottle from Spectra was much cheaper then getting it
+locally. The large company around here varied their krypton price on a day to
+day basis like it was on the stock market. Spectra's quote was about 1/3rd
+their price even after shipping. 
+<p>
+(From: Tom Miller (tmiller@umaryland.edu).)
+<p>
+The place I checked gave a price of $160 to purchase a 40 cu. ft. tank with a
+fill. Refills are $60.  I have access to the "R" tanks used for medical O2 and
+these are 20 cu ft (tank is ~2 ft tall and 4 in diameter) and have a tank
+valve like scuba type gear. I guess the valve could be changed to some
+standard but it would be nice to use an O2 regulator as they are designed for
+low pressure and low flow.  I wonder if the O2 regulator would work with the
+high He mix?  When I talked to the gas supplier, they said to use a He
+regulator.
+<p>
+(From: John De Armond (johngd@bellsouth.net).)
+<p>
+You can change the valve on the "R" tank, as almost all tanks use 3/4" NPT
+threads.  This is a job, though, because the valves are put in REAL tight.
+when I owned a welding gas supply company, we had a clamp rig that would hold
+the tank while we pulled on a closed-box wrench attached to a 6 ft cheater.
+still usually required some heating. One thing to watch for is the thread
+sealant.  If the gas co used pipe dope, you'll never get it clean enough
+(short of vacuum baking) for high purity gas.
+<p>
+You really do need to use a helium regulator for He.  The reason is the He
+atom is so small that it'll through the rubber diaphragm of most regulators
+like a dose of salts!  He regulators typically have a 316 SS diaphragm and a
+copper crush gasket.  Helium's kind of tough to hold onto for any length of
+time.  At the welding gas co, we kept close track of the code dates on our
+tanks because if we let one sit around for a long time, the He would diffuse
+through the walls and lower the pressure.  Got complaints from customers. :-)
+Also be aware that ordinary He sold for balloons has a goodly chunk of air in
+it.  You can get an inexpensive catalytic gas scrubber from Matheson Gas that
+will clean up the stream but probably not worth it.  Just get clean gas.
+<p>
+I buy my high purity gas from <A HREF="http://www.spectra-gases.com/">Spectra
+Gases</A>.  They sell gas in disposable cylinders.  A 20l cylinder that looks
+like a propane torch cylinder but with a needle valve filled with Neon is
+about $50.  A 100l cylinder is about $140.  This is spectroscopy grade gas.
+And when the tank is empty, it is useful for a number of things plus the 100l
+tank has a standard CGA valve so you can put it on your "E" tank :-) I use a
+20l tank as a "day tank" on my bench.  I refill it from the 100l tank.  That
+way if I leave a valve open I don't trash the whole 100l tank.  These are
+really good guys to work with and they have all kinds of gas.  Need 20l of
+Xenon?  Got a BIG pocketbook?  They got it. :)
+
+<h3><A NAME="contdns">Tips for Dealing with a Neon Sign Shop</A></h3>
+
+Neon sign shops can be a fabulous potential source for inexpensive neon sign
+transformers, glass tubing, electrodes, vacuum equipment, and glass working
+services.  Gas lasers and neon signs share a lot in common so the people who
+work on neon may be very cooperative if you convince them you are serious about
+building a laser.  I have even heard of someone not only getting his HeNe
+glass work done by a friendly glass bender, but having the tube filled
+with helium and neon at the proper pressure (along with the required
+bake/back-fills) as well.  However, you do need to use at least some common
+sense when you walk in (and maybe a bit more) so as not to just be shown the
+exit:
+<p>
+(From: John De Armond (johngd@bellsouth.net).)
+<p>
+When someone contacts me with a request for a transformer, for example, I'm
+pretty cooperative once I determine that they probably won't hurt themselves
+and aren't planning on using it for practical jokes.  I don't need the
+liabilities.  I buy used transformers in bulk from a large regional shop, test
+and refurb them and either use them for my neon or resell them to
+experimenters.  I get a buck a kilovolt for as-is units.  If you're lucky, a
+shop may give you transformers but it generally greases the skids for future
+requests to offer to pay a bit.
+<p>
+A few other things to keep in mind when visiting a neon shop:
+
+<ul>
+<li>First, most guys can't do good bending while chatting so don't distract
+ the bender when he's working.
+<p>
+<li>Second, neon work tends to come in oh-my-gawd rush burps separated by
+ periods of stark boredom.  If you find the bender buried up to his ars in
+ patterns and glass and with that wild-eyed look in his eyes, it's probably
+ better to return later.  On the other hand, if the guy's sitting around
+ blowing push pins out of a glass tube blowgun, then he'll probably not be
+ too busy to bother. :-)
+<p>
+<li>Finally if you want to get custom glasswork done by the bender, make sure
+ he knows up front that you're willing to pay by the hour for his time.  We
+ get hit up all the time for cut-rate or free work so we're kind of sensitive
+ about that.
+</ul>
+<p>
+<A NAME="concvs"></A>
+<hr>
+<br>
+<li>Back to <A HREF="lasercon.htm#contoc">Amateur Laser Construction Sub-Table of Contents</A>.
+<h2>Vacuum Technology for Home-Built Gas Lasers</h2>
+
+Do to its size, this material has been given a chapter of its own.  Please
+go to <A HREF="lasercva.htm#cvatoc">Vacuum Technology for Home-Built Gas
+Lasers</A>.
+<p>
+<A NAME="concgw"></A>
+<hr>
+<br>
+<li>Back to <A HREF="lasercon.htm#contoc">Amateur Laser Construction Sub-Table
+ of Contents</A>
+<h2>Introduction to Glass Working</h2>
+<h3><A NAME="concgw0">Laser Tube Fabrication</A></h3>
+
+The following mainly applies to the traditional gas lasers like the HeNe,
+Ar/Kr ion, HeHg, and possibly CO2 where the entire laser discharge tube may be
+a single glass structure - it is made in one piece from various individual
+pieces that are fused together.  The N2 laser does not require glass working
+of this type.
+<p>
+As laboratory apparatus goes, what you need for any of these lasers is pretty
+mundane: A few tubes joined together with butt or tee joints, a few dimples
+or bumps, some angled cuts, and pieces attached with glue.
+<p>
+Note that at least in principle, it is possible to construct these lasers
+without actually fusing glass pieces together as Epoxy or other adhesive
+and/or vacuum rated flexible tubes and clamps can be used.  However, such a
+structure is not nearly as stable and are not recommended.  In addition, the
+added nooks and crannies of clamped pieces and places with glue that can
+outgas mean that achieving the required level of vacuum and maintaining it is
+much more difficult.
+<p>
+There are basically two ways to go about obtaining the needed assembly of
+tubes, electrodes, Brewster windows, and so forth.
+<ol>
+<li>Have someone else do it!  Assuming you can find a cooperative individual
+   or pay a neon sign shop or laboratory equipment fabricator, this is by far
+   the easiest especially if you have to start from ground-zero.  For someone
+   at all experienced in this sort of stuff, the assembly of the main portion
+   of a typical laser tube (not including the Brewster windows) is a 20 minute
+   job if all the bits and pieces are available.  If you can arrange that your
+   design uses the same sizes and types of glass tubing that they commonly
+   deal with, so much the better.
+<p>
+<li>Learn enough of the skill of glass working to do it yourself.  This is by
+   far more fun and who knows, maybe you have a talent for the sort of glass
+   art exhibited in museums.  This really isn't as difficult as it might seem
+   at first.  Glass working is a skill and you will no doubt create some
+   pretty interesting failures at first.  But with a little practice (OK,
+   maybe a lot of practice!), butt and tee joints, and dimples and bumps will
+   become second nature.  We aren't talking about fancy decorative glass
+   blowing, mostly just basic cutting and joining.
+</ol>
+Glass working as it relates to laboratory apparatus fabrication has been
+covered in the Amateur Scientist columns as well.  See: Glass blowing,
+technique explained, Scientific American, May, 1964, pg. 129.
+<p>
+A recommended book on this topic is:
+<ul>
+<li>Glassblowing: An Introduction to Artistic and Scientific Flameworking
+  Edward Carberry
+  MGLS, 2nd Edition, 1993
+  ISBN 0-9601-6827-3, ISBN: 0-9601-6826-5 (spiral-bound)
+<p>
+  The new book prices are stratospheric ($64 and $47 respectively) but these
+  are the sorts of books that may show up on the clearance tables of bookstores
+  like Borders. :)
+</ul>
+
+In sections below provide the briefest of introductions to the glass working
+skills that are needed for laser tube frabrication.  But, here's a Web site
+with extensive material on scientific glassblowing or glass working (same
+thing):
+
+<ul>
+<li><A HREF="http://www.ecu.edu/chem/glassblowing">East Carolina University
+ Glassblowing Services</A>.
+</ul>
+
+It includes information on safety, equipment, materials, and terminology;
+an extensive illustrated tutorial on basic techniques, tips, glass recipes,
+useful data and tables, and more.
+
+<h3><A NAME="concgw1">Types of Glass</A></h3>
+
+What we call "glass" is made from silicon dioxide (SiO2) and other additives to
+produce the wide range of properties of various glasses that we are familiar:
+from window glass to Pyrex cooking and labware; colored glass bottles and
+stained glass windows, light bulbs of all shapes and sizes; and optical glass
+for lenses, mirrors, and prisms.  SiO2 is the same stuff that constitutes
+beach sand and the insulating layers of integrated circuit chips.
+<p>
+Glass is an amorphous material - it has no crystalline structure and is really
+a liquid at room temperature.  A liquid, you say????  Well, a slow moving
+liquid at least.  As its temperature is increased, glass becomes softer but
+has no distinct melting point (compared to water, salt, or any other material
+that forms a crystalline structure where there is a distinct phase transition
+from a solid to liquid state).
+<p>
+The two types glass which will be of most interest for laser construction are:
+<p>
+<ul>
+<li>Soda-lime (S-L) glass is the most widely manufactured type (roughly 90% by
+ weight) used for plate glass windows, bottles, light bulbs, glassware, a
+ zillion other common products.  It is fairly soft to begin with and can be
+ worked at a relatively low temperature.  S-L glass consists of about 72%
+ sand or silica, 15% sodium oxide or soda, 9% calcium oxide or lime, and
+ 4% of other minor ingredients.
+<p>
+ S-L glass is not suitable for high temperature apparatus (e.g., the bore of
+ a high power laser) but should be fine for most other uses. 
+<p>
+<li>Boro-silicate (B-S) glass (commonly called Pyrex which is one brand name)
+ is much harder and resistant to high temperatures but must be worked at a much
+ higher temperature as well (a torch burning natural gas and pure oxygen, for
+ example.  It consists of about 80% silica, 4% alkali, 2% alumina, and nearly
+ 13% boric oxide.
+<p>
+ B-S glass can probably be used everywhere but the difficulties in working
+ make this unattactive.  However, if someone else is doing the glass-work...
+</ul>
+<p>
+Fused silica (Vycor) and pure quartz are two highly heat resistant materials
+that you hopefully won't have to shape since they have even higher softening
+(or in the case of quartz, a crystal, melting) points as well!
+<p>
+If you order common laboratory glass tubing, it will likely be made of S-L
+glass though other types are also available - make sure you specify what you
+want since for some of the laser parts, heat resistance is an issue.  Most
+beakers, flasks, and anything else that may be heated are made of Pyrex or
+the equivalent B-S formulation of another manufacturer.  However much other
+labware is of the S-L variety.  Since the coefficient of thermal expansion
+also differs for the two types of glass, there may be problems in attempting
+to mix them in a given structure.
+
+<h3><A NAME="concgw2">Cutting Glass Tubing</A></h3>
+
+For small tubes - say less than 1/2" in diameter, cutting is, well, a snap!
+<p>
+All you need is a small triangular file (new or in excellent condition, not
+rusty and clogged with something disgusting) and perhaps some spit. :-)
+<ul>
+<li>Place the tube to be cut on a solid surface and go over it once at the
+  desired location with the file - pressing firmly but not so hard that you
+  risk cracking it right then and there.  There is no need to go around the
+  tube - one location should suffice.  The objective is to simply nick the
+  tubing.  You don't need - or want - to be sawing it with the file!
+<p>
+<li>While holding the tube in two hands, apply a bending force to the tube with
+  the filed nick away from you - to spread it apart in that direction.  It
+  should snap in two quite cleanly.  Once you get the hang of this, the result
+  will be clean and at right-angles to the tube axis, barely distinguishable
+  from a diamond sawed cut!
+</ul>
+Sometimes, wetting the filed location with a bit of spit or tap water will
+aid in the process.
+<p>
+Practice on some scrap pieces of tubing.  In on time you will be turning all
+the neon tubing in your neighborhood to small bits suitable for making beaded
+necklaces! 
+<p>
+This also works for larger diameter tubing (like CRT necks) but a longer
+crevice may be needed - try to keep it straight.  In some cases, one pass all
+the way around will be needed.
+<p>
+There are also hot wire cutters (the heated wire produces local stress which
+fractures the glass).  For large or irregularly shaped objects, the best tool
+is a power driven diamond grit glass cutting wet wheel - a water cooled miter
+saw for glass and ceramics!  For small pieces, a Dremel tool (compact high
+speed multipurpose hand-held grinder/saw/sander/drill) can be use though
+you may go through (non-diamond coated) cutting wheels rather quickly. :(
+Dentists have nice high speed drills with diamond impregnated bits, cutters,
+sanding disks, buffers, and other widgets - and they are water cooled!
+Perhaps, you know a friendly dentist?  "Please be patient Ms. Jones, we'll get
+to your root canal as soon as we finish cutting these glass pieces for Jerry's
+laser". :) 
+<p>
+Any sharp edges left by the cutting operation should be smoothed with fine
+sandpaper or in the flame of your glass working torch.
+
+<h3><A NAME="concgw3">Glass Working 101</A></h3>
+
+All glass working consists of four steps:
+<ol>
+<li>Heating.  This is going to be done with a flame of some kind:
+<p>
+ <ul>
+ <li>A common propane torch or natural gas burner using air is just hot enough
+  to soften S-L glass.  A bunsen burner works - barely.  Other types of lab
+  burners are better.
+<p>
+ <li>With the use of pure oxygen, the flames from these all run much hotter
+  and that is what you is really needed to be able to do any sort of glass
+  work easily and consistently (or borosillicate glass at all).
+<p>
+ <li>An oxy-acetylene or oxy-hydrogen torch will be needed to easily deal with
+  some types of heat resistant glass and fused quartz.  (CAUTION: Hydrogen
+  flames tend to be invisible!)
+ </ul>
+<p>
+ At the proper temperature, glass has the consistency of soft taffy - easy
+ to bend and shape but not so soft that it runs or drips.  Part of the skill
+ (and fun) is keeping the glass at just the right temperature as it is
+ worked.  As the glass approaches the proper temperature, the flame will
+ take on a yellow tinge from the sodium ions in the glass (the soda part)
+ and the glass itself may appear red or orange-hot itself.
+<p>
+<li>Working: Bending, joining, pulling, dimpling, blowing, etc. is done while
+ the glass is maintained at a relatively constant temperature in the flame.
+ Glass cools quickly so repeated or constant heating is needed.  Some
+ positive pressure in the glass parts may be needed to prevent them from
+ collapsing - or to blow bubbles!  The surface tension of the soft glass is
+ going to be both our friend (since it will help smooth out much of the
+ damage you will inflict) and foe (since it will tend to want to cause tube
+ ends to collapse or other holes to expand).  Usually two hands and a mouth
+ (safely at the end of a length of rubber tubing!) are enough but at times
+ you might wish to be an octopus!
+<p>
+<li>Once the particular joint or whatever is formed to your satisfaction, the
+ piece must be cooled so that it solidifies.  However, you cannot just dunk
+ the whole affair in a bucket of water as the sudden temperature change will
+ cause your hard work to shatter into a million pieces (sometimes it will do
+ this even without such help!)  It must go through a process of annealing
+ where a lower temperature flame is run back and forth over a large area of
+ the glass - beyond that which was dealt with originally.  The cooler flame
+ can be obtained by reducing the air or oxygen supply to the torch.
+ Fortunately, this takes only a couple of minutes for anything we are
+ interested in constructing (unlike the 17 foot diameter Palomar telescope
+ mirror which required over a year of annealing).  Note that there is no
+ real way of knowing how much annealing is enough - it is just something
+ that one does based on recommendation or experience.
+<p>
+ Surrounding larger pieces with warm vermiculite after flame annealing will
+ further slow the cooling process.  Vermiculite is ground up mica and is sold
+ in garden shops.  :)  This is probably not necessary for the sorts of things
+ needed for home-built lasers but one never can tell where your activities
+ will lead!
+<p>
+<li>Cooling.  The worked and annealed area will still be very hot.  Set it
+ down on a non-flammable material or better yet, in such a way that the hot
+ parts do not touch anything until it is cool enough to touch.  This allows
+ it to cool slowly and uniformaly, further minimizing the chances of stress
+ cracks.
+</ol>
+
+<h3><A NAME="concgw4">Gas Flames</A></h3>
+
+A gas flame (natural gas, propane, etc.) adjusted for hottest temperature
+(optimum fuel:air ratio) is divided into several parts:
+<PRE>
+
+         Tip---> /\ (Dark Blue)
+                /  \
+      Cone --> / /\ \ (Light Blue)
+              | |  | |
+             _|_|__|_|_
+     Burner |          |
+
+</PRE>
+Great diagram, huh?
+<p>
+Note that it is mostly shades of blue - there should be minimal yellow or
+orange (indicating that there is adequate air/oxygen) but the flame should not
+begin to separate from the burner (indicating too much).  There should be no
+smoke or soot from such a flame.
+<p>
+The hottest location is just above the inner cone.
+<p>
+With soda-lime glass, once the glass is hot enough to work, the flame will
+take on a yellow color due to the sodium ions in the glass.
+<p>
+With the air/oxygen supply cut off, the flame will be long and yellow and may
+produce black smoke and soot.  This will be the proper temperature for the
+annealing step.
+<p>
+Note: Where you have control of the air/oxygen supply as with a professional
+glass working torch (or Oxy-Acetyline welder, for that matter), light it up
+by first opening just the gas supply a small amount and then adding air/oxygen
+and adjusting gas flow after the flame is lit.  Shut down in the reverse
+sequence.  This avoids unsightly pops, bangs, and other explosive behavior.
+In other words, always make sure the gas is turned on first and shut down last!
+
+<h3><A NAME="concgw5">Glass Working Examples</A></h3>
+
+The only way to really be come proficient at this is to practice.  You will
+create many many interesting disasters at first but glass is cheap.  After a
+while, these sorts of 'simple' procedures will become automatic and second
+nature.  Who knows, even your failures may find a place in the Museum of
+Modern Art!
+<ul>
+<li>Smoothing a piece of cut glass tubing:
+<p>
+<ul>
+ <li>Heat the cut end in the flame near the inner cone.
+<p>
+ <li>Watch the edges.  As the glass softens, the sharp edges will start to
+  round off.  Even chips and unsightly blemishes will melt away....
+<p>
+ <li>Don't push your luck.  If you leave in the hot part of the flame too long,
+  the tube will close up and you will have to start over (or have fun and
+  blow a bubble)!
+<p>
+ <li>Anneal for a minute or so and allow it to cool.
+</ul>
+<p>
+<li>Bending a glass tube.
+<p>
+<ul>
+ <li>Holding the tube at both ends, heat the area of the bend until the color
+  of the flame becomes yellowish.  Keep it moving - back and forth and
+  rotating.  Don't restrict the heated area too much - you don't want the
+  bend to be too sharp (too localized).  A good size to aim for is a bend
+  radius of no less than 5 times the diameter of the tubing - at least until
+  you get the hang of all of this.
+<p>
+  For large diameter (e.g., greater than 1/4") or thin walled tubing, cap
+  one end and attach a rubber hose to the other to use as a blow-pipe so you
+  can apply a little positive pressure (by *gently* blowing into the hose)
+  to keep the glass from collapsing - don't blow too hard or you will blow a
+  bubble or rupture the tube entirely!
+<p>
+  <li>Once it is soft, genatly help it along to the desired shape.  Don't rush.
+   When the glass is the consistency of soft taffy, the bend will practically
+   happen on its own.
+<p>
+ <li>Anneal for a minute or so and allow it to cool.
+</ul>
+<p>
+<li>Making a butt joint.
+<p>
+<ul>
+ <li>Cap all but one of the open ends of both pieces except where the joint is
+  to be made and attach your blow-hose to the remaining one.
+<p>
+ <li>Heat the joint locations of BOTH pieces until soft.
+<p>
+ <li>Bring the two pieces together straight but with a slight twisting motion
+  so they touch and fuse.  Attempt to align them as perfectly as possible -
+  once together, you cannot pull them apart without making a mess.  However,
+  the surface tension of the glass will come to your rescue as long as things
+  aren't too out of hand.
+<p>
+  Note that the key to this is to get a seal all the way around when the
+  pieces are first brought together.  Otherwise, any gaps will tend to open
+  up and there will be no way to apply positive pressure to keep the whole
+  affair from collapsing.
+<p>
+ <li>Continue heating and rotating the combined piece so that the glass will
+  flow together due to surface tension.  Maintain a slight positive pressure
+  to prevent the joint from collapsing.  Keep it moving.  Eventually, uneven
+  spots will tend to disappear and what you thought was a disaster may turn
+  out to be quite respectable.
+<p>
+ <li>Anneal for a minute or so and allow it to cool.
+</ul>
+<p>
+<li>Making a T-joint.
+<p>
+<ul>
+ <li>Cap all but one of the open ends of the piece to which the side-arm of
+  the T is to be attached and connect your blow-hose the it.  Cap all the
+  open ends of the side-arm piece.
+<p>
+ <li>Heat the location on the tube where the side-arm is to be attached using
+  the fine inner cone of the gas flame - you want it localized to punch a
+  hole.
+<p>
+ <li>Once it is hot, blow a quick bubble to make a hole - then heat the wall
+  of the bubble until it melts away leaving a hole.
+<p>
+ <li>While keeping the area of the hole warm, heat the end of the side-arm
+  until it is also soft.
+<p>
+ <li>Bring the two pieces together straight but with a slight twisting motion
+  so they touch and fuse.  As with the butt joint, you only get one shot at
+  this so take care to get them where you want them to end up!
+<p>
+  Note that the key to this is to get a seal all the way around when the
+  pieces are first brought together.  Otherwise, any gaps will tend to open
+  up and there will be no way to apply positive pressure to keep the whole
+  affair from collapsing.
+<p>
+ <li>Continue heating and rotating the combined piece so that the glass will
+  flow together due to surface tension.  Maintain a slight positive pressure
+  to prevent the joint from collapsing.  Keep it moving.  Eventually, uneven
+  spots will tend to disappear and what you thought was a disaster may turn
+  out to be quite respectable.
+<p>
+ <li>Anneal for a minute or so and allow it to cool.
+ </ul>
+<p>
+ I actually prefer to cheat: Instead of joing a straight piece to the side
+ of another, where possible, I start with a small glass T connection, cut off
+ its ends if necessary, and joint it to the main tube using the butt joint.
+ Depending on the specific diameters and types of glass, this may be a better
+ approach.
+<p>
+<li>Flaring the end of a glass tube.
+<p>
+<ul>
+ <li>Cap all but the end to be flared and another one where you attach your
+  blow-hose.
+<p>
+ <li>Heat the end to be flared until it totally collapses and seals itself.
+<p>
+ <li>Blow into the assembly to create a bubble.
+<p>
+ <li>Continue heating the thin-walled bubble until it melts and then heat the
+  remaining walls until they flow to the required size.
+<p>
+ <li>Anneal for a minute or so and allow it to cool.
+ </ul>
+<p>
+<li>Creating a dimple.
+<p>
+ <ul>
+ <li>Heat the tubing in the precise area where you want the dimple - as small
+  an area as possible using the tip of the inner cone of the flame.
+<p>
+ <li>Use a pointed carbon rod (which won't stick to glass) to gently indent
+  the area.
+<p>
+ <li>Anneal for a minute or so and allow it to cool. 
+ </ul>
+</ul>
+
+<h3><A NAME="conhgwl">Home-Built Glass Working Lathe</A></h3>
+
+Even with a lot of practice, it is difficult to make consistently high quality
+joints between various size glass tubing and other parts free-hand.  A glass
+working lathe is a fixture that permits the parts to be mounted in such a way
+that they can be rotated together in the gas flame(s) while maintaining
+precise alignment and leaving at least one hand free (the other would do the
+rotation - this needn't be motorized) to do other things.  It probably doesn't
+make sense to acquire or build a glass working lathe for the fabrication of a
+single laser tube but if several more complex lasers are in your future, it
+might be worth considering.
+<p>
+A commercial glass-working lathe is a fairly expensive device that can't be
+justified for sporadic and limited hobby work.  However,
+<A HREF="http://www.repairfaq.org/sam/gwl/">A Home-Built Glass Working
+Lathe</A> provides a short description of a piece of equipment which can be
+used in the fabrication of the plasma tube, water jacket, and other glass
+components for a variety of lasers as well as for other scientific glassware
+applications.
+
+<h3><A NAME="concgw6">Learning Glass Working Skills</A></h3>
+
+There are many Web sites with glass working information.
+<A HREF="http://www.teralab.co.uk/Glass_Blowing/Glass_Blowing_Menu.htm">Teralab
+- Glass Blowing for Vacuum Devices</A> is just one example.  But more
+hobbyist-types do this than you might thinkg.
+<p>
+(From: John De Armond (johngd@bellsouth.net).)
+<p>
+One way to start is to subscribe to a couple of email discussion groups related
+to glass working.  There are 2 lists I'm involved with:
+<ul>
+<li>neon-l@lists.io.com.
+<li>hotglass@list.bb.net.  Email: <A HREF=
+  "mailto:hotglass-request@hotglass.com">hotglass-request@hotglass.com</A> to
+  subscribe.
+</ul>
+See the section: <A HREF="laserlir.htm#lirnld2">Laser (Email) Listservers</A>
+for other possibilities.
+<p>
+The list discussion tends to be esoteric.  There's no substitute in learning
+to blow than to do it!  I taught myself to blow glass so it can be done.
+First, get the books mentioned in my article on the web page.  Then find a
+neon shop and arrange to spend some time in the shop.  Most shops will let you
+watch for a bit but it's only proper to compensate the benders for their time.
+most benders work on piecework so time = money.  When I first got started, I
+slipped a bender in Atlanta a C-note to let me tag along behind for a day.  I
+had his undivided attention.  This is VERY important.  The early motor skills
+you learn will be the foundation that you build on with practice and if you
+learn incorrect basics, it will be hard as hell to correct it.  It is also
+important to understand that there are some people whose motor skills will not
+let them learn to blow glass.  I've seen people who went through $6k, 9 week
+neon bending classes and not be able to do a 90 without it flattening out.
+You can usually tell within a few hours' work.  If you end up being one of
+those people, just live with it.  You'll waste a lot of money and make no
+progress.  Avail yourself of someone who can.
+<p>
+After you progress to one level, don't be afraid to spend a little money for a
+day of tutoring from a master.  I've been bending for several years and I
+still try to go a couple of times to someone better than me and study under
+them.  Now you can usually get someone to do it for free but things are a lot
+more clean if you simply pay the expert for his expertise.  You'll profit in
+the long run.
+
+<h3><A NAME="concgw7">Here's Someone Who Has Offered Glass Working
+ Services</A></h3>
+
+Here is a possible way of getting your custom glass work done.  I do not know
+what he charges but it sounds like if you supply the proper specs and drawings,
+there will be high quality results:
+<p>
+(From: Georges Koff (kopp@chemistry.mcgill.ca).)
+<p>
+Although the bulk of my work is for industry and research, I do work for 
+individuals.
+<p>
+I am a professional scientific glassblower, a member of "The American
+Scientific Glassblower Society".  For the last 27 years, I have been in
+charge of the glassblowing shop of McGill University in Montreal, Canada.
+I have been working in research for the last 33 years in Europe and Canada and
+have a lot of experience in the design of scientific glassware, high vacuum 
+technology, glass-to-metal seals, special glasses, etc.
+<p>
+I design and work from blue prints so any drawings could be submitted
+including those in electronic form (most formats are supported).
+<p>
+I do not consider the type of laser but the kind of glassware to be blown.  So
+as long as the design of the laser tube is fully specified, it doesn't matter
+whether it is for a CO2, HeNe, argon ion, or other type of laser.  I most
+likely should be able to make them.
+<p>
+<A NAME="connse"></A>
+<hr>
+<br>
+<li>Back to <A HREF="lasercon.htm#contoc">Amateur Laser Construction Sub-Table
+ of Contents</A>
+<h2>Electrodes and Getters</h2>
+<h3><A NAME="connse0">Types of Electrodes Used With Home-Built
+ Lasers</A></h3>
+
+The electrodes used with home-built gas lasers are of two types, both of
+the 'cold' variety:
+<p>
+<ul>
+<li>Neon sign electrodes purchased from a neon sign parts and equipment
+ supplier.  They use a material which minimizes the 'work function' and this
+ allows higher currents to be flow at a lower voltage drop and without
+ degradation.  These come sealed into a section of lead glass or Pyrex tubing
+ which can then be fused (though your noteworthy glass working skills) to the
+ remainder of your laser tube assembly.  They can be Epoxied in place as well,
+ heat considerations permitting.  Neon sign electrodes are specified in terms
+ of maximum current, tubing type and size, and tubulated or non-tubulated (with
+ or without exhaust tube).
+<p>
+ Neon sign electrodes may need to be 'activated' by heating prior to use.
+ See the sections below for information on ways of doing this.
+<p>
+<li>Simple metal electrodes you fabricate.  These are almost always used for
+ the CO2 laser but may be applicable to other lower current lasers as well,
+ as well as to the flashlamp for the dye laser.  For the CO2 laser in
+ particular, the electrodes can just be ordinary copper plumbing fittings or
+ aluminum tubes or blocks.  Most modern helium-neon lasers use a cylinder of
+ aluminum for the cathode and the mirror mount at the other end of the tube
+ for the anode.
+</ul>
+<p>
+A third type may be found in some lasers and is, of course, is commonly used
+in vacuum types including CRTs and microwave magnetrons:
+<ul>
+<li>Thermionic (heated) electrodes.  An AC or DC current is passed though
+ a coil of tungsten wire to heat the electrode to incandescence (orange to
+ yellow) which promotes thermionic emission and reduces the work function.
+ None of the home-built lasers needs to use this approach.  However, commercial
+ ion and other lasers as well as really old helium-neon lasers use a hot
+ cathode design.  (As above, the anode can almost always be just a piece of
+ metal or thin wire.)
+</ul>
+
+The cathode (negative electrode) is usually where the most heat dissipation
+occurs due to ion bombardment.  Thus, it is generally made large and of a
+material and shape to minimize heating.  The anode can often just be a little
+wire through a glass-to-metal seal.
+
+<h3><A NAME="conghb">Getters in Home-Built Lasers</A></h3>
+
+A getter provides a means of ridding a permanently sealed system of the last
+traces of unwanted gas molecules by chemically combining with them to create a
+stable, non-gaseous compound.  Common getter materials are designed to react
+with as many gases as possible.  This includes O2, N2, CO2, H2, and many
+others but NOT noble gases since they won't react with much of anything.
+So these getters can be used with noble gas lasers like the HeNe and Ar/Kr
+ion type, but not with most others.  The getter is that silvery or black
+metallic spot visible in a vacuum receiving tube (if you remember those) or
+CRT (though it may be hidden by the external or internal coating).  Some HeNe
+laser tubes have getters but this doesn't seem that common today and those
+that do often have not had them activated (the getter electrode is present
+but the getter spot is missing.  I suppose that modern vacuum systems and
+processing methods are so good and hard-seal tubes don't really leak, so there
+is no need for a getter).  Argon ion laser tubes may also have getters but
+they are more likely to be hidden behind metal and beryllia.
+<p>
+The getter is a one-time use device and is ruined by exposure to any
+significant amount of gases in air like oxygen and nitrogen (more than a dozen
+molecules or so - OK, just a slight exaggeration!).  Thus, their use doesn't
+make sense with a flowing gas or continuously pumped system even if all it
+uses are noble gases.  And, the residue from the getter reaction may be a
+powdery substance that will contaminate the laser tube.
+<p>
+Therefore, none of the home-built lasers requires or should include a getter
+unless the intention is to permanently seal off the tube - which isn't
+recommended unless your gases are ultra-pure, your vacuum system is superb,
+and your attention to minimizing contamination is equally superb.  If the
+tube isn't hermetically sealed, air is almost certain to enter the tube
+between uses at the very least.
+<p>
+So, you ask, "How does one install a getter if it is ruined by air?".  Good
+question!  The answer is that it is manufactured in an inactive form as a
+compound that is inert and contained in a small U-cross-section metal
+structure (the getter electrode).  This must be activated by heating (once the
+tube has been pumped down and sealed off) to decompose the inert compound
+driving off a reactive metal that forms the getter spot.  Should that metallic
+spot turn milky white or red (depending on the actual compound used), the
+getter has outlived its usefulness and the tube is probably leaky and no
+longer functional.
+<p>
+Apparently, depleted uranium (which is not radioactive - or at least not
+<i>very</i> radioactive depending on purity) makes an excellent getter after
+being processed to convert it to the so-called 'active' form.  For obvious
+reasons, I'm not going to go into any more detail here but a search of the
+relevant scientific literature of the 1960s will turn up the complete recipe
+if you really want to build a nuclear laser and can get a few grams of the
+stuff. :)
+
+<h3><A NAME="conmoh">Methods to Activate Neon Sign Electrodes and
+ Getters</A></h3>
+
+All neon sign (and most other types of) electrodes need to be heated via
+an external power source to prepare their surface for use ('activation').
+Getters in these lasers as well as some commercial helium-neon and other gas
+laser tubes may need to be activated or reactivated to clean up contamination
+due to poor manufacturing or air leakage.
+<p>
+During the manufacture of commercial tubes, they may be made red hot.  My
+solar heater (see below) probably doesn't achieve this (for HeNe laser tube
+getters) but it also takes awhile.  The minimum temperature for activation
+probably depends on the type of material used but I expect that it is at least
+several hundred &deg;C.  There are a variety of ways of providing the
+source to heat the electrode or getter:
+<p>
+<ul>
+<li>Direct current.  In some cases, a pair of wires are available and passing
+ a high current (e.g., several amps) through the  electrode or getter will heat
+ it in a very controllable way.  This arrangement is rarely provided in
+ commercial tubes but may be possible for home-built lasers.
+<p>
+<li>Glow discharge.  Where the electrode or getter is connected to an isolated
+ terminal, it may be possible to apply a DC current through the tube to use
+ it as the cathode (negative electrode), heating via ion bombardment of the
+ glow discharge.  Unfortunately, in many commercial tubes, the getter is
+ electrically connected to one of the electrodes (usually the cathode of a
+ HeNe or argon ion tube) so there is no way to direct the current only to the
+ getter electrode.
+<p>
+<li>Solar or halogen lamp heating.  A large Fresnel lens (e.g., one from an
+ overhead transparency projector) may be used to focus light onto the get
+ electrode or getter to provide the heating.  However, some of these lenses
+ are of poor quality (at least for our purposes) and depending on the
+ materials involved, most of the light may be reflected rather than absorbed.
+ I've activated the getter in a sick HeNe laser tube using a jerry-rigged Solar
+ furnace made from a $1 7" x 10" plastic Fresnel lens intended as a reading
+ magnifier.  See the sections: <A HREF="lasercon.htm#consol">Simple Solar
+ Heater</A> for details and <A HREF="laserhtr.htm#htrhldc">HeNe Tube Lases
+ but Color of Discharge Changes Along Length of Bore</A> for a description of
+ its use in reviving a helium-neon laser tube.
+<p>
+<li>Laser heating.  The focused beam from a high power laser diode, ion, or
+ solid state laser should be ideal if it can be directed into the area of the
+ active material in the electrode or getter.  How much the laser beam will
+ need to be focused will depend on its power and original beam diameter.
+ It was very easy to detect an effect using a 1 W fiber-coupled laser diode and
+ 1" focal length lens to focus the beam inside the getter electrode of a
+ HeNe laser tube.  Almost any high power laser (CW or pulsed) except CO2
+ (since its 10.6 um wavelength won't penetrate the glass) should be suitable.
+ Just take care with respect to reflections from shiny surfaces!
+<p>
+<li>RF heating.  The output of a 50 to 100 W RF source can be coupled to the
+ getter or electrode with an RF matching transformer.  However, this will also
+ likely excite the residual gases in the tube which may drain power away from
+ the area of interest.  However, it is easy to monitor the discharge color as
+ as the procedure progresses!
+<p>
+<li>Induction heating.  This is basically similar to RF heating but operates
+ at a lower frequency (e.g., 50 kHz) rather than several MHz.  Energy is
+ coupled to the getter or electrode as though it was the single turn
+ secondary of a transformer.  At this frequency, there probably won't be
+ excitation of the residual gases in the tube.  See the section:
+ <A HREF="coniht">Basic Induction Heater Circuit</A>.
+<p>
+<li>Microwave heating. The use of the family microwave oven is probably
+ not to be recommended for a couple of reasons:
+<p>
+ <ul>
+ <li>The size of the oven cavity will significantly limit your ability to deal
+  with larger tubes.  Don't even think about drilling holes....
+ <p>
+ <li>There is virtually no way to limit heating to the getter other structures
+  including the glass tube and glass-to-metal seals may get hot enough to crack
+  or melt even if they don't appear to be heating at all.  While the typical
+  ring-shaped getter electrode may be close enough to the ideal size for the
+  2.45 GHz microwave radiation (with a circumference of 1/2 of the 12.4 cm
+  wavelength), and under ideal conditions of placement and luck will heat up
+  to a nice orange glow in a couple of seconds - control is just too
+  critical to be sure of avoiding collateral damage.  The glass cracked on a
+  helium-neon laser when I tried this and let it cook for too long. :(
+ <p>
+ <li>You may be damaged should your parents find out you were using the family
+  microwave for these non-conventional applications!
+ </ul>
+<p>
+ Having said that, with care, it might be worth trying.  See the section:
+ <A HREF="laserhtr.htm#htrmic">Using a Microwave Oven to Evaluate and Revive
+ HeNe Laser Tubes</A>.  However, whether such treatments help, hurt, and the
+ extent to which they last, seem to depend on many factors which aren't
+ readily obvious.
+</ul>
+<p>
+CAUTION: Make sure the glass-to-metal seals do not overheat while attempting
+any of these procedures!  Also, any procedure you use should restrict heating
+to only the electrode itself or its contents.  For getters in particular,
+heating the 'white cloud of death' (which might be inevitable with the solar
+heater) will likely result in an <b>increase</b> in unwanted gases as it
+releases the contamination that had been collected over the eons. :(
+<p>
+(From: John De Armond (johngd@bellsouth.net).)
+<p>
+All regular electrodes must be activated.  Running an un-activated electrode
+will crap up a tube in short order.  There is one company that will supply
+uncoated electrodes on special order (maybe "Tecnolux" but I'm not sure).  In
+any event the coating can be removed with a nitric acid wash.  The electrode
+will still need to be heated to outgas it though.  I'm not sure how one would
+attach an electrode with epoxy and still get it hot enough to properly outgas.
+<p>
+Also note that barium carbonate (reduces to barium metal when activated) is
+one of the common activation ingredients.  The metallic barium that results
+functions well as a getter.  I've experimented to see just how bad a vacuum
+I could get away with.  Using my usual brand electrodes, EGL, I can leave up
+to about 50 microns of air in the neon tube and still have the electrodes
+clean it up fairly rapidly.
+
+<h3><A NAME="conbih">Basic Induction Heater Circuit</A></h3>
+
+An induction heater is just a source of high frequency driving a coupling
+coil.  This acts as the primary of a transformer where the secondary is the
+object to be heated.  The low voltage but very high current induced thus
+heats the object resistively.  Induction cooktops may require multiple kW.
+For our purposes, power is much lower, perhaps 50 to 200 watts (though the
+schematics aren't all that different).
+<p>
+The typical circuit is a line powered high frequency driver providing about 300
+V p-p to the coupling coil of the induction heating head.  It consists of a
+voltage doubler and filter, a half-bridge controller chip like the IR2151
+or IR3M02, a pair of N channel MOSFETS, snubber, and return capacitor network.
+A half-bridge consists of a pair of switches (MOSFETs in this case, though
+bipolar transistors or IGBTs are often used) in series, connected between the
+positive and negative DC voltages.  The output is taken from their common
+point.  Clearly, only one had better ever on at a given instant!
+<p>
+The key part of the typical circuit is shown below:
+<PRE>
+
+     +150VDC o--------+-----------------+               Coupling
+                      |                _|_ C1             Coil
+                  .|--+ Q1             --- 1uF      +------+
+           P1 o---||&lt;-. IRF850          |  250V     |       )
+           _      '|--+                 +-----------+       )   
+         _| |____     |                 |                   ) O Item to be
+              _       +----+------------|-----------+       )     heated
+         ____| |_     |    |   Rs   Cs  |           |       )
+                  .|--+    +--/\/\--||--+           +------+
+           P2 o---||<&lt;-. Q2             _|_ C2
+                  '|--+ IRF850         --- 1uF
+                      |                 |  250V
+     -150VDC o--------+-----------------+
+
+</PRE>
+The schematic of a commercial unit that I've seen is based very closely on the
+<A HREF="http://www.irf.com/product-info/datasheets/data/ir2151.pdf">IR2151
+Half-Bridge Driver Datasheet</A>.
+<p>
+A typical coupling coil consists of about 200 turns of #18 to #20 magnet wire.
+At this time I do not know if it has a ferrite core - I intend to find out.
+<p>
+Amateur science and hobby outfits like
+<A HREF="http://www.amazing1.com/">Information Unlimited</A> have plans,
+kits, and assembled induction heater drivers and heads suitable for this
+application.  Commercial versions may be available from scientific and neon
+sign parts and equipment suppliers.  Or, perhaps, you could borrow that old
+diethermy machine sitting in your doctor's back room. :)
+<p>
+For an alternative to a special induction heater driver, see the section:
+<A HREF="lasercon.htm#consrp">Sam's Recycled PC Power Supply Induction
+Heater</A>.
+
+<h3><A NAME="consrp">Sam's Recycled PC Power Supply Induction Heater</A></h3>
+
+The induction heater driver circuits for firing getters and activating
+neon sign electrodes that I have seen produce 300 V p-p at around 50 kHz.
+<p>
+Well, you know how lazy I am and always wanting to build stuff with
+recycled parts. :)  So, rather than going to the hassle of constructing a
+line powered half-bridge induction heater driver, guess what's inside a
+typical PC switching power supply?  Figure it out yet?  A dual MOSFET 300 V
+p-p driver capable of 100 to 200 W!  Cool, huh? :)
+<p>
+So, I had this really bedraggled slightly water-logged no-name PC power supply
+sitting sort of in pieces (minus its case) in a box minding its own business
+and decided to see what it could do.  I located the common point of the
+MOSFET pair and took a look at that with a scope (grounded to the source of
+the lower MOSFET, everything on an isolation transformer for safety) with the
+power supply driving my head light load.  Almost perfect!  300 V p-p but the
+frequency is a bit lower than I would like - 20 kHz rather than the 50 kHz
+used in the commercial induction heater driver.  The lower frequency would
+require a larger number of turns on the coupling coil and a lower single-turn
+voltage on its secondary (the getter or neon sign electrode), neither of which
+is desirable.  Ah! No problem, just change a capacitor or resistor!  The
+controller is an IR3M02.  Its timing capacitor looked like a high quality job
+so I left that alone.  The resistor was 30K.  I substituted 12K and presto!
+It now runs at 50 kHz, apparently none the worse for the experience.  The
+MOSFETS, transformer, and rectifiers still seem to be cool enough.  The
+waveform still looks clean.  I suppose the switching losses are now about
+2.5 times what they were before, but I won't be running this continuously at
+full power.  I don't know whether the range of load regulation will be the
+same as before but I really don't care as long as nothing blows up.  The
+supply even had the same configuration of split caps and snubber as the sample
+induction heater circuit so I didn't even need to add those components!  I
+then attached a cable and connector for the drive and return connection to the
+coupling coil in the induction heating head.
+<p>
+Note that due to the low duty cycle at the light (no pun...) load, the
+waveform looks more like a modified sine-wave than an ideal squarewave but
+should be acceptable.  With a larger load, it should more closely approach a
+squarewave shape.
+<p>
+WARNING: Consider doing this at your own risk.  PC power supplies are directly
+connected to the power line - use an isolation transformer for safety.  The
+output drive is 300 V p-p with a few hundred WATTS available, at least
+momentarily.  This is an extremely dangerous setup in any case - make sure
+everything is well insulated.  Never change connections with the power on.
+The main filter capacitors in the power supply can store a lethal charge for
+quite some time - always confirm that they have discharged and/or discharge
+them if necessary before touching anything - a couple of 47K, 2 W resistors
+should be added as bleeders if there aren't any originally (though it will
+still take a minute or two for the caps to fully discharge).  It is also quite
+possible that any attempt at changing the power supply operating frequency
+will result in instant smoke.  Although it worked once, this doesn't
+necessarily generalize to other PC power supplies and not all designs are
+based on the dual MOSFET drive circuit.
+<p>
+To calculate the inductance needed for the coupling coil, I assume that
+the maximum available power is about 100 W (to err on the safe side,
+hopefully!) which for the 100 VRMS drive (which is about what this is) would
+have an impedance of 100 ohms.  The inductance then follows from:
+L = Z/(2 * pi * f).  For f = 50 kHz, the result is about 300 microHenries.
+<p>
+According to an ancient Allied Electronics Data Handbook, the following
+formula will give the inductance of a multi-layer coil "to within
+approximately 1% for nearly all small air-core coils".
+<PRE>
+                                     0.8 * r * N<sup>2</sup>
+                        L = -------------------------------
+                             (6 * r) + ( 9 * l) + (10 * b)
+</PRE>
+Where:
+<ul>
+<li>L = Resulting inductance in microhenries.
+<li>N = Total number of turns.
+<li>r = Mean radius in inches.
+<li>l = Length of coil in inches.
+<li>b = Depth of coil (max. radius - min. radius) in inches.
+</ul>
+Don't you just love the mixed units - this was before the forced conversion
+to everything Metric! :)
+<p>
+Anyhow, from this equation, it looks like about 100 turns on a 1 inch form
+should do it.  Stay tuned.  Next exciting installment: Winding the coupling
+coil.
+
+<h3><A NAME="conss1">Sam Schwartz's RF Power Oscillator for Heating
+ Getters</A></h3>
+
+So, perhaps my whimpy PC power supply based system isn't going to be
+adequate.  Here's one that should be!:
+<p>
+(From: Sam Schwartz (Emale98@aol.com).)
+<p>
+I have built a power oscillator for firing getters that should work well
+for HeNe and other types of laser tubes.  The complete schematic is shown
+in <A HREF="sspo1sch.pdf">Sam Schwartz's High Power RF Oscillator</A>.
+<p>
+The oscillator uses an 813 vacuum tube.  I burned up a handful of power MOSFETs
+before deciding a tube was a better way to go, at least easier for the amount 
+of time I wanted to put into the project. The work coil should be made of 
+aluminum rod and not copper, unless it is water cooled. The heating in the 
+secondary of the transformer is all skin effect loss, and requires water 
+cooling. Alternatively, the heating problem of the transformer secondary 
+might have been solved by using a rope size piece of Litz Wire. Notice that 
+the primary is Litz. That is no inconvenience in my setup as water is used to 
+cool the diffusion pump and the baffle on the pump. All are connected in 
+series with plastic tubing. I forgot to mention two items in the drawings: 
+There is a twisted pair between the RF head and the Main Box that connects 
+the heat control pot in the RF head to the solid state control circuitry in 
+the Main Box. Also, there is a wrapping of fiber glass tape, available at any 
+plastic store, around the work coil. This prevents accidental breaking of 
+glass by inadvertent touching of the coil to the glass. Notice that a current 
+rating is given for the 0.003 uF. transmitting mica capacitor that tunes the 
+tank coil (transformer primary and reflected secondary) in the RF head. 
+That is a necessity as the circulating current in the primary is about 5 
+amperes as measured with a current probe. Multiply that by the transformer 
+ratio, and you will find a work coil current of over 100 amperes. That helps 
+to explain the skin effect heating.
+<p>
+The frequency of the oscillator is 250 Khz. It will vary somewhat
+depending on the size and shape of the heat coil on the transformer
+secondary.
+<p>
+I have used old 1/2" getters out of a vacuum, in open air, as test 
+subjects. They will get cherry red in the center of the work coil, even when 
+moved around so that they are not centered in the coil. So that should work 
+for your uncentered getters. Similarly, one can tie a large nut on a wire and 
+suspend it in the coil and it will glow cherry red. It is interesting to put 
+small chips of broken glass in the getter ring and watch the glass melt and 
+conform to the ring while heated with the work coil !  The heat control is 
+very effective in controlling the amount of glow (heat) of any ring shaped 
+object in  the work coil. The diameter and number of turns in the work coil 
+is not critical, within reason, and may be varied to suit the application. 
+Also, it may be oval shaped or other than round.
+<p>
+When flashing a getter, the heat should be brought up slowly, over a 
+few seconds, until the getter starts to glow and then lowered quickly as the 
+getter itself goes into a self heating mode. Too much external heat causes 
+the getter ring (stainless steel or nickel)  to vaporize and deposit material
+over the getter material. The result is a black deposit as seen on the glass.
+Am now looking for a spare 813 tube in case my 'old but goody' gives up.
+<p>
+If you cannot slip the work coil over 
+your tube in the vicinity of the getter, you can direct the field with a 
+piece of ferrite like that from a flyback transformer. Some of the color 
+picture tubes use this technique when the neck is too short to accommodate the 
+getter.. They have what's known as an antenna getter, which is a getter on 
+the end of a long flexible strap attached to the end of the electron gun. 
+When slipped into the CRT, it follows the curvature of the deflection area 
+around into the funnel and a part of it finally rests against the inside of 
+the cone (funnel). It is activated from the outside of the tube by a work 
+coil having a round ferrite core that is placed in the proximity of the 
+getter. The back of the getter has a ceramic seat that contacts the glass and 
+prevents a "hot spot" that otherwise could crack the glass CRT.
+<p>
+Here are some notes:
+<p>
+<ol>
+<li>The Power Oscillator provides a variable range of power up to about 120
+ watts for induction heating.  The output power is controlled by 
+ duty cycle modulation of the main oscillator and gives a continuous heat 
+ control over a wide range.
+<p>
+<li>The RF coupling transformer was built on a ferrite E-E core which
+ was a TDK PQ 40/40. The 40/40 refers to the
+ outside dimensions of 40 mm wide and 40 mm high. These are 'E' core halves
+ with a rounded interior profile to accommodate a round coil.  The round
+ center leg has a diameter of 15.2 mm. The core material is 7C4, which has
+ a high saturation flux density rating commensurate with low core loss, and is
+ made for switching power transformers. It, or its equivalent, is probably
+ available today from other ferrite core suppliers such as Siemens, etc. NO
+ air gap is used as the transformer carries no DC current, since it is
+ capacitively coupled from the 813 plate feed choke.
+<p>
+<li>It is essential that the primary winding in the output transformer 
+ be made of Litz wire. In my version, I used a bundle of small wires, 
+ typically #30, twisted together with an electrical drill.
+<p>
+<li>It is also necessary that the secondary of the output transformer be 
+ supplied with cooling water, otherwise the solder will melt out of the 
+ connections.
+<p>
+<li>The Work Coil should be bent from solid aluminum rod (not copper)
+ as it will not oxidize appreciably in a hot oven or from its own heat. One 
+ can melt a copper penny located in the work coil at full power!
+<p>
+<li>It is necessary to deliver the output power from the source to the 
+ object to be heated, which is usually some distance away. For convenience and 
+ to prevent loss of the output power in the transmission, the output 
+ transformer and tuning capacitor are mounted in a separate small box with the 
+ work coil mounted on it. A connection between this output box and the main 
+ oscillator is by means of large coax. Therefore, the power is delivered at a 
+ high voltage and low current (about 2 A) over a relatively long 
+ distance without appreciable loss and then the current is increased to 125 
+ amperes in the work coil. The buildup of current comes about through the 
+ circulating current in the tuned circuit and through the step down ratio of 
+ the output transformer.
+</ol>
+<p>
+Additional information on the system and details of the coupling transformer
+can be found in <A HREF="sspo1nt.gif">Sam Schwartz's Power Oscillator
+Notes</A>.
+
+<h3><A NAME="consol">Simple Solar Heater</A></h3>
+
+I built this contraption in order to activate the getter inside a contaminated
+helium-neon laser tube (see the section: <A HREF="laserhtr.htm#htrhldc">HeNe
+Tube Lases but Color of Discharge Changes Along Length of Bore</A>.
+<A HREF="solheat.gif">Solar Heater for Activating Tube Getters</A> shows a
+HeNe tube in position ready for a treatment.  (I haven't actually tried it
+on anything else so far.)
+<p>
+The solar concentrator is just a $1 7" x 10" plastic Fresnel lens which is
+supposed to be used as a reading magnifier.  It is taped to a wood frame with
+two degrees of freedom so that both height and angle can be adjusted depending
+on the location of the Sun and height and orientation of the structure of
+interest inside the tube.  Despite being rejected as really terrible for its
+intended application, this cheap lens is capable of producing a nicely focused
+spot less than 1/4" in diameter.  Based on an estimated 600 W per square meter
+of noonday Sun where I live, this works out to about 25 W of light energy in
+that area.  Sounds like a nice size laser, huh?  A larger lens can be used but
+don't go to extremes - even this one can be nasty (especially for any
+unsuspecting bug that might wonder too close!).
+<p>
+It might be a good idea to cover the base with some sort of non-flammable
+or fire resistant material to prevent unfortunate 'accidents.  Whatever the
+focus of the beam hits will char instantly and 6 foot flames won't be too far
+behind!
+<p>
+I expect it could be used to make some pretty decent hot dogs as well. :)
+<p>
+So, you ask: "Why isn't this considered as dangerous as a 25 W laser?".  The
+main reason is that the Fresnel lens does not produce a collimated beam and it
+is virtually impossible to convert it to one.  Yes, putting anything at its
+focus will cause the item to be charred, cooked, vaporized, incinerated, or
+otherwise damaged.  However, 2 or 3 inches away, it is just a very bright
+source of light.  Nonetheless, DON'T ever stare into the light from the
+Fresnel lens!
+<p>
+<A NAME="concyc"></A>
+<hr>
+<br>
+<li>Back to <A HREF="lasercon.htm#contoc">Amateur Laser Construction Sub-Table
+ of Contents</A>
+<h2>The Central High School Cyclotron</h2>
+
+These sections summarize my experiences in high school many years ago with an
+atom smasher, sort of. :)
+
+<h3><A NAME="concycw">Why is This Here?</A></h3>
+
+OK, so why is this included in a Laser FAQ?  Well, the simple answer is that
+it would seem pretty silly in the IR Remote or VCR repair guides, wouldn't
+it?! :)  Seriously, there is a great deal of commonality between atom smashers
+and lasers - at least in terms of the technologies involved.
+<p>
+First, the major players (complete names are not included since I am unable to
+contact them for permission to make this public):
+<p>
+<ul>
+<li>Donald - was involved in procuring (well, scrounging) the parts including a
+ 6 ton electromagnet (on a 99 year $1 lease).  This happened before I got
+ involved so our paths didn't quite intersect.
+<p>
+ Donald is now a high power lawyer. :-)
+<p>
+<li>Douglas - is Don's kid brother and joined our little group about the time I
+ got involved.
+<p>
+ Douglas - is/was involved in Washington, D.C. and at one time held the title
+ of "Deputy Assistant to Someone or Something", very high up, recently fired.
+<p>
+<li>Fred - an electronics buff, friend of mine through high school until our
+ paths parted.  Recently we got together again having discovered that we were
+ living within a mile of each-other.
+<p>
+ Fred now develops, markets, and manufactures special purpose linear ICs.
+</ul>
+<p>
+Now, Central High School (CHS) wasn't a technical high school but was and
+still is to some extent, one of the principle academic high schools in
+Philadelphia, PA, USA.  At that time, it was also an all boys school, with
+Girls' High, a long block away.  Now, it is co-ed.
+<p>
+There were the usual debating, rock climbing, sports, cycling, and all the
+other associations, clubs, societies, whatever, typical of any high school.
+<p>
+There were also the technical ones.  We had an amateur radio society and photo
+society, of course.  There were also probably organization for chemistry
+and biology but I don't really recall as I wasn't enthusiastic about chemistry
+(despite having acquired a cabinet full of beakers, flasks, and such) and
+biology was even lower on my list of fun activities.  But I do recall a field
+trip to the Pine Barrens in New Jersey to check out the trees. :)
+<p>
+I also managed to get involved in the Advanced Physics Lab (APL) where I did
+inherit a ruby laser based on a mid-60s Popular Science design (that never
+worked or maybe I was too chicken to turn up the capacitor charging circuit
+to reach threshold).
+(See <A HREF="http://blog.modernmechanix.com/2006/05/01/build-your-own-laser/">
+Modern Mechanix - Build Your Own Laser</A> for the original article if you're
+curious.)  Mostly, what was done in the APL is that Fred and I
+abused burned out light bulbs by among other things, driving a 110 VAC to
+2.5 kV transformer on 220 VAC and I would swear that for several seconds,
+achieved a plasma jet through the bulb in open air.  But it also looked good
+on my academic record!
+<p>
+There was also the... Cyclotron Society.  Myself, Doug, and Fred were the
+principle members.  There was also a guy named Gary but he used the place more
+for political reasons and always seemed to find excuses NOT to do anything
+technical.  Fred and I eventually got him thrown out of the Cyclotron Society
+on the basis of some infraction which to this day I don't know was real or
+not.   Douglas was in some ways similar and the room (to be described below)
+DID make a good book repository and hangout!  He, at least, didn't interfere
+with progress.
+<p>
+Now, lest you think this is the sort of accelerator you have seen on
+documentaries or even bad Sci-Fi movies, you would be disappointed.
+It was small - the maximum energy was theoretically if everything was optimal,
+maybe 1 million electron volts (1 MEV).  The diameter of the magnet pole
+pieces were 7 inches!  However, everything was there - magnets, RF source,
+vacuum system, gauges, the works.
+
+<h3><A NAME="concycc">What is a Cyclotron?</A></h3>
+
+The cyclotron is the earliest type of atom smasher which uses the combination
+of a magnetic field to confine the (usually) protons and an RF field to
+accelerate them.  It was invented by Ernest O. Lawrence in 1930.  In a
+cyclotron, both the magnetic field and RF frequency are constant.  A charged
+particle traveling perpendicular to the magnetic field lines will follow a
+circular trajectory with the diameter determined by its energy (speed).  For
+velocities much less than the speed of light, the period of each orbit and
+thus the frequency of rotation is a constant.  So, if a little boost if given
+to the particles as they circle in the magnetic field, their energy will
+increase along with the orbit diameter.
+<p>
+Cyclotrons can be of a wide range of sizes.  Lawrence's original
+invention was only about 5 inches so ours at least was larger than
+that!  The upper limit on size is imposed by relativity.  Once the
+energy of the particles approaches their rest mass (from
+E=mc<sup>2</sup> or equivalently, their speed approaches the speed of
+light, the constant magnetic field/RF frequency behavior doesn't work
+anymore and they would lose synchronism with the RF.  I've seen a
+cyclotron with magnet pole pieces about 2 meters in diameter but even
+this is probably pushing things.  There were atom smashers called
+"syncro-cyclotrons" which were physically similar but varied the RF
+frequency as the particles spiraled outward to maintain synchronism.
+Nowadays, the modern versions are mostly "synchrotrons" which do away
+with all but the outer ring and may be miles in diameter producing
+energies of 100s of Giga electron-volts (GEV).  The "Super Conducting
+Super Collider" was supposed to be over 20 miles in diameter (perhaps
+more, I forget) but that died when BIG science fell out of favor in
+Congress.  The largest one was at Betavia, IL for awhile but that has
+probably been surpassed by something at CERN in Europe by now.
+
+<h3><A NAME="concycf">The CHS Cyclotron Facility</A></h3>
+
+I wish I could have been involved in the original construction of this
+thing, but my tenure at Central had more to do with what might be
+termed a major rework and upgrade.  The details of how a public high
+school ended up with an atom smasher may forever remain a mystery but
+what is known is that the original version was cobbled together by
+students in the years prior to my high school days.
+The main mover and shaker was probably Donald, who if I recall
+correctly wrote a paper of sorts on "The effects of High Energy
+Protons on Semiconductors" - he stuck transistors with their covers
+removed inside the cyclotron and measured some combination of
+parameters and how they changed with exposure to high energy protons.
+Now, this was most likely totally bogus for reasons that will be come
+clear below, but I think it did win him a National Merit Scholarship.
+<p>
+The Cyclotron Room was on the main corridor in the school basement just around
+the corner from the Bookstore and opposite one of the storage areas for those
+Nuclear fallout rations the Government was so fond of stockpiling around
+the country (I think the mice benefitted mostly).  This was sort of fitting
+and I suppose there were some teachers who wouldn't rule out a nuclear
+accident from our activities!  We shared the approximately 15 x 20 foot room
+with one of two huge water chillers for the school. (I never did quite figure
+out if these were for the fountains or something else.)  However, the 5 gallon
+container of refrigeration oil left by HVAC techs next to the chiller came in
+handy from time-to-time.
+<p>
+The power supplies, RF source, and instrumentation were mounted in a 6 foot
+and 3 foot rack.  The magnet with the vacuum chamber was behind it with the
+vacuum system underneath.  The "instrumentation" was a microamp meter for
+measuring beam current later upgraded to one with a tube based preamp.
+We had a collection of probably non-functional radiation meters most likely
+"liberated" from that storage room across the hall.  There may have also been
+an actual working Geiger counter as well.  Our test equipment consisted of a
+very abused Triplet 1K ohm/volt VOM with a bent needle, having been unwound
+from the right-hand stop more than once.
+<p>
+<b>The magnet:</b>
+<p>
+This was a HUGE 7 inch resistive (hey, no one knew about superconducting
+magnets in those days) magnet wound with a lot of #20 wire.  (Once, we found
+the coil with an open connection - possibly cut by a saboteur!  Maybe that
+Gary fellow I mentioned - really never found out.  Or, it may have just been
+a natural failure.  Needless to say, there was a minor panic until the break
+was found!).  The magnet was on a 99 year lease for $1 from some company,
+maybe GE, like they'd ever want it back!  I don't know how they got it into
+the place, in pieces I guess.
+<p>
+The magnet was horizontal.  To install or remove the vacuum chamber required
+unscrewing some huge bolts and then prying apart the yoke.  Now, keep in mind
+that this thing weighed in at about 6 tons even though it is a rather small
+magnet.  So, replacing anything inside the vacuum chamber was always an
+interesting exercise.  Underneath was a very fragile glass diffusion pump
+that somehow survived.
+<p>
+Originally, power for the magnet came from a 200 VDC or so power supply.  We
+eventually concluded that this was grossly underpowered (another reason to
+suspect the cyclotron never really worked until the prior management) so we
+changed it to the 2,400 VDC electric utility pole transformer based power
+supply that was originally used for the RF source (mercury vapor rectifiers
+and all that).  It was controlled by a BIG Variac.  With this improvement,
+it probably was running near the 20,000 (2 Tesla) limit of an iron core
+magnet.  It was quite impossible to extract any ferrous/magnetic objects
+from between the pole pieces with the magnet fully energized. 
+<p>
+<b>The vacuum system:</b>
+<p>
+We had a Sargent-Welch rotary vane mechanical pump, maybe a 1405 but could have
+been the "economy version", and an all-glass (except for the tower and
+heater) oil diffusion pump.  The Welch usually needed to be started
+by hand as do many of these older pumps.  Belt guard, what's a belt guard? :)
+There must have been a box fan or something to cool the diffusion pump since
+it did not use tap water.  The diffusion pump was about 3 inches in diameter
+with a glass O-ring flange-flange reducer for the 1 inch coupling to the
+vacuum chamber squashed between the magnet pole-piece right above it.  There
+were no baffles, cold traps, or dryers.
+<p>
+An ion gauge provided our only real indication of vacuum level other than that
+wonderful clacking sound the mechanical pump made when it has drawn down below
+10 microns or so.  We had the obligatory hand-held Tesla ('Oudin') coil for
+leak testing though it was used much more often to chase the unwanted visitors
+from the cyclotron room. :)  Anyhow, once the whole affair was drenched in Red
+Glyptal, leaks really weren't an issue!
+<p>
+I seem to recall a scavenged thermocouple gauge as well but that may have been
+for the "Linear Time-of-Flight Resonance Mass Spectrometer" I started to build.
+That at least got me a free cruise on a Navy destroyer escort and my first
+plane flight to the Newport Navy Base as a consolation price at the local
+science fair since it was not completed and never really worked - but the
+charts and front panel were impressive!  I still have the Science Fair
+posters.  Oops, that's another story.....
+<p>
+The vacuum system would do at least 10<sup>-6</sup> Torr when it was
+cooperating.  Usually, it didn't take long to get there but since we really
+didn't trust the ion gauge all that much, we usually left the thing running
+overnight.  (The actual pump-down time was probably measured in a very small
+number of minutes.)  But, the ion gauge tube was never damaged from loss of
+vacuum. :)  The controller might have been a Varian RG-31X, a semi-antique
+even at that time.
+<p>
+<b>The vacuum chamber:</b>
+<p>
+For our huge 7 inch magnet, we needed a vacuum chamber large enough for the
+Ds (the electrodes that actually accelerate the protons - shaped like the
+letter 'D') and a little clearance.  In all, it was about 12 inches in
+diameter and two inches thick.  The 'D's (actually only one, see below) was
+mounted on a metal stud fixed in Epoxy passing through a glass insulator.
+<p>
+Most cyclotrons have a pair of 'D's and drive them with a balanced RF source.
+Someone decided that this wasn't necessary, so ours had a single brass 'D'
+made of sheet metal brazed at the edges with the RF between it and the ground
+of the vacuum chamber.  In principle, this would work though I suspect there
+would be less of a focusing effect.  What did we know?  I seem to recall
+later replacing the single 'D' with a pair made from machined aluminum.
+<p>
+<b>The RF source:</b>
+<p>
+Originally, a 200 W amplifier driven by a 50 W exciter generated the RF (about
+20 MHz if I recall correctly) for the 'Ds'.  This was based on a pair of
+811 tubes (remember those?). I later built a 1 kW linear amp (from the AARL
+Handbook) using an EIMAC 3-400Z or something like that.  The original power
+supply (866 mercury rectifier tube based) was moved to the magnet and a new
+solid state HV power supply was built for the amp.
+
+<h3><A NAME="concycr">True R and D</A></h3>
+
+I consider the years I spent working on that machine to be more closely akin
+to true scientific research than anything since - designing giga instruction
+per second high performance 3-D visualization/graphics accelerators or
+microchip lasers just doesn't have the same feel!
+<p>
+I had to learn - on my own - about high vacuum technology, high power (well,
+relatively speaking) RF, instrumentation, at least a little E/M and high
+energy physics, and much more.  Keep in mind that no one else - including any
+of the teachers at Central High - had a clue about ANY of this!  I'm sure
+they thought we were building a bomb...
+<p>
+I also learned a lot about locksmithing (including all about making master
+keys using solder-fills and lock picking) - one has to be resourceful to
+succeed in these endeavors.  The teachers were aware of this and kind of
+accepted it (as well as benefitting at times), realizing the limitations
+of an environment where advanced science was more along the lines of
+dissecting a worm. :)
+<p>
+To be continued as I think of more tid-bits...
+
+<h3><A NAME="concyco">Other Home-Built Cyclotrons</A></h3>
+
+I don't know how many of these were successfully constructed prior to the CHS
+Cyclotron in the early 1960s.  However, there have been several, if not many,
+built since then both by individuals and as projects in various high schools
+and colleges.  Check out the following links:
+<p>
+<ul>
+<li><A HREF="http://www.niell.org/">Fred's World of Science</A> Not one, but
+ two home-built cyclotrons!
+<li><A HREF="http://www.physics.rutgers.edu/cyclotron/images/press_physics_today/Cyclotron.pdf">Building a Cyclotron on a Shoestring (Rutgers)</A>
+<li><A HREF="http://www.thecyclotronkids.com/">The Cyclotron Kids Cyclotron
+ Project Page</A>
+<li><A HREF="http://blog.modernmechanix.com/2006/06/11/boys-build-a-cyclotron/">Boys Build A Cyclotron (Modern Mechanix, 1947)</A>
+</ul>
+<p>
+Some brief references to our cyclotron may even be found by a determined
+Web search (at least one in the bio of a person who recalls having been
+involved).  I welcome any info or links to the CHS Cyclotron or any other
+home-built cycltrons that have existed.
+
+<h3><A NAME="concycg">The First Generation Central High School Cyclotron</A></h3>
+
+I recently heard from one of the original builders of the Central High School
+Cyclotron, Lawrence H. Zuckerman, Pleasanton CA,
+(Email: (<A HREF="mailto:K3LZ@aol.com">K3LZ@aol.com</A>),
+who was in the 218th class.  Here is a paraphrase of our email
+thread:
+<p>
+(From: Larry.)
+<p>
+I graduated with the 218th class of Central High School.  I was a member  
+of the Cyclotron Society and helped to build this accelerator when I was a
+freshman in the '58-'59 school year.  When we completed construction and
+performed a brief test, our work was publicized by the Heart Association,
+and a newspaper article with pictures of us appeared all over the country.
+<p>
+I remember guys who were much older than me -- had just graduated in the
+210th class and started college, such as Nathaniel Ostroff and Joshua 
+Horowitz.  I may think of other names later.   
+<p>
+Our faculty advisor was an MIT-educated physicist and later School  
+District of Philadelphia science curriculum executive, was Fred Hofkin.  
+<p>
+(From: Sam.)
+<p>
+Hi:
+<p>
+Hey, wow!  You're the first person from the original construction team 
+I've ever heard from.  I have seen a few Web references to other "personal"
+cyclotron projects, but nothing  about Central until what I wrote.
+<p>
+We were involved from '66 to '69 or '70.
+<p>
+Anything you can  add or correct would be most appreciated, with whatever
+attribution you'd like!
+<p>
+(From: Larry.)
+<p>
+It was Hofkin who told us that the cyclotron really only needed one Dee.
+I did not know any physics then and never thought about it all these years.  
+Now that I am thinking about it, the single Dee architecture worries me.  
+<p>
+You mentioned that the magnet assembly is there on a 99 year lease.  I  
+vaguely remember that fact, and also that the "lessor" is the University  
+of Pennsylvania, where I went to study Physics starting in 9/62.  
+<p>
+One of my tasks, assigned to me by Hofkin, was to determine the number of  
+turns on the magnet (so that, using the current value, the field density 
+and deflection could be calculated).  I recollect (maybe incorrectly) that  
+there were four coils, two slightly dis-similar pairs.  He said I could  
+use any method I wished, except for unwinding it. ;-)  I measured the wire
+gauge to determine ohms/thousand feet.  I measured the resistance of each
+coil.  The total of 72,800 turns rings a bell, (but  that was 50 years ago!).
+<p>
+My other task was to build the control panel, which was nothing more than a
+relay rack panel with switches, chassis, and 120 Volt AC connectors.  I did
+that OK, except giving the older boys a laugh by using bell wire; so Nat
+re-wired it with #18 zip/lamp cord, using both conductors in parallel.
+<p>
+The cyclotron calculations (which I certainly did not do at the time) said 
+that the frequency needed for the Dee was about 7 MHz.  You mentioned  a  
+small ham rig for that, which could have been a DX-20.  I don't remember  
+the power  amplifier.  
+<p>
+We fired up the equipment, opened it, and found a mark on the side in a 
+plausible location.  Was it from a proton beam?  I think it was too far
+from the Dee to be an RF arc.
+<p>
+The main (second stage oil diffusion)  vacuum pump was donated to us by  
+EIMAC (Eitel-McCullough), a fact  mentioned in the AP/UPI released 
+newspaper article that had the picture of the six of us standing around the  
+cyclotron.  I think this happened late in the school year.  
+<p>
+I shall check with the CHS Associated Alumni (of which I am a member)  to  
+get more information.  If the cyclotron is still there, I  would like to 
+see it the next time I visit Philadelphia, which is once or twice a year.  I have 
+also been looking for information about Fred Hofkin.  
+<p>
+As a bit of irony, for the past fifteen years, I have been living about 10 
+miles from the (E. O.) Lawrence Livermore Labs.  I am an RF design 
+engineer at  NATIONAL SEMICONDUCTOR.
+<p>
+If I think of anything else or obtain more documentation,  I'll send it to  
+you.  Nice work on your web site!
+<p>
+(From: Sam.)
+<p> 
+Thanks for the info.  
+<p>
+Using the same basic calculations as you did, we concluded that the
+magnet was way underpowered by the original power supply and moved it
+over to the rectified pig-pole transformer supply.
+<p>
+Hmmmm, let's see.  Assuming a mean diameter of 2 feet and #20 AWG wire, your
+72,800 turns is about 450,000 feet with 10 ohms/thousand feet for
+#20 AWG wire, that would be roughly 4,500 ohms.  I seem to recall
+we measured 6,000 ohms, so not too far off. :)
+<p>
+I built a 1 kW linear amp from the AARL handbook that was then driven by
+the DX-20 exciter.  It replaced what was a home-built RF amp, supposedly
+about 200 W.
+<p>
+That calculation of 7 MHz may have been correct for the weaker magnet,
+though I think it was even weaker than that.  I seem to recall we 
+eventually ran it on 1 or 2 kV, rather than the 200 V it was on
+originally.  I'm not sure what the RF frequency we were running
+at, perhaps 20 MHz for a (20 kgauss) saturated iron magnet.
+But our only means of measuring field strength was by the student
+and hammer method - how many average CHS students it took to pull
+our standard hammer from the core when the magnet was energized! :)
+<p>
+The single Dee thing always bothered me also, but I seem to recall other
+references to it, so perhaps it's not totally bogus, though probably less
+efficient.
+<p>
+As far as whether it ever worked, I rather doubt any real proton beam
+from this machine would have had enough power to make a mark but who
+knows.  We finally got it to expose a piece of dental X-ray film,
+and that was marginal.
+<p>
+The most dodgy thing was probably the ion source due to its simplicity,
+had to be operated on the border between high vacuum and a pressure too
+high to sustain a beam.
+<p>
+And I'm still amazed that the glass diffusion pump survived!  :)
+<p>
+As far as to whether the thing is still there, I have no idea.  But
+who would want to move a 6 ton magnet!
+<p>
+Anything else you come up  with will be  welcome.
+<p>
+(From: Larry.)
+<p> 
+It is great that you guys resumed work on the cyclotron after my days at  
+CHS and did so much; I knew nothing about this.  Following my freshman  year, 
+I built much amateur radio transmitting and receiving equipment while  in 
+high school, but I have no recollection that anyone ever went back into the  
+cyclotron room. 
+<p> 
+I imagine you are correct that any proton beam from this machine could not  
+make a visible mark.  
+<p> 
+If the cyclotron was ever cleared out, it was probably to make room for a 
+girls' lavatory!
+<p>
+(From: Sam.)
+<p>
+Or to add another water chiller. :)
+<p>
+I think we were actually the third generation.  Between your team and ours,
+there was Donald and several others.
+<p>
+<hr>
+<br>
+<li>Back to <A HREF="laserfaq.htm#faqtoc">Sam's Laser FAQ Table of Contents</A>.
+<li>Back to <A HREF="lasercon.htm#contoc">Amateur Laser Construction Sub-Table
+ of Contents</A>.
+<li>Forward to <A HREF="lasercva.htm#cvatoc">Vacuum Technology for Home-Built
+ Gas Lasers</A>.
+<p>
+<hr>
+<b><center>Sam's Laser FAQ, <A HREF="copyright.htm">Copyright &copy<A> 1994-2009,
+ Samuel M. Goldwasser, All Rights Reserved.<br>
+ I may be contacted via the
+ <A HREF="emaillnk.htm">Sci.Electronics.Repair FAQ
+ Email Links Page</A>.</center></b>
+<hr>
+<p>
+</BODY>
+</HTML>
