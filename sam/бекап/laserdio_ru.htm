@@ -34,15 +34,9 @@
  <li><A HREF="laserdio_ru.htm#dioilds">Чтение характеристик лазерных диодов</A>
  <li><A HREF="laserdio_ru.htm#diocss7">Как насчет мощных лазерных диодов видимого диапазона?</A>
  <li><A HREF="laserdio_ru.htm#diocss7a">А очень мощных лазерных диодов?</A>
-<<<<<<< f527d21075b62bf136e306d6eee1c3310e158bc0
- <li><A HREF="laserdio_ru.htm#diocss7b">And Those High Power Pulsed Laser Diodes?</A>
- <li><A HREF="laserdio_ru.htm#diocss8">Vertical Cavity Surface Emitting Laser Diodes (VCSELs)</A>
- <li><A HREF="laserdio_ru.htm#dioopsl">Optically Pumped Semiconductor Laser (OPSL)</A>
-=======
- <li><A HREF="laserdio_ru.htm#diocss7b">А что это за мощные импульсные лазерные диоды?</A>
+ <li><A HREF="laserdio_ru.htm#diocss7b">А есть мощные импульсные лазерные диоды?</A>
  <li><A HREF="laserdio_ru.htm#diocss8">Лазерные диоды с вертикальным резонатором(VCSELs)</A>
  <li><A HREF="laserdio_ru.htm#dioopsl">Полупроводниковые лазеры с оптической накачкой (OPSL)</A>
->>>>>>> VCSEL
  <li><A HREF="laserdio_ru.htm#diovecs">Vertical Extended Cavity Surface Emitting Laser (VECSEL)</A>
   <ul>
   <li><A HREF="laserdio_ru.htm#diopr488">Лазер Protera 488 NECSEL</A>
@@ -214,10 +208,10 @@
  <ul>
  <li><A HREF="laserdio_ru.htm#dioabg0">Так собственно о чем же всеь сырбор?</A>
  <li><A HREF="laserdio_ru.htm#dioabg1">Комментарии о коротковолновых лазерных диодах</A>
- <li><A HREF="laserdio_ru.htm#dioabg2">More Information on Short Wavelength Laser Diodes</A>
+ <li><A HREF="laserdio_ru.htm#dioabg2">Дополнительная информация о коротковолновых лазерных диодах</A>
  </ul>
 <p>
-<li><A HREF="laserdio_ru.htm#diodc3000">An Ophthalmic Retinal Coagulator Laser System</A></h3>
+<li><A HREF="laserdio_ru.htm#diodc3000">Лазерная установка для коагуляции сетчатки глаза</A></h3>
 </ul>
 <p>
 <A NAME="diocss"></A>
@@ -860,222 +854,289 @@ Characteristics of Laser Diodes"</A>.
 Справочный листок (даташит) конечно содержит цоколевку (распиновку) и габаритные чертежи корпуса,
 которые здесь опущены.
 
-<h3><A NAME="diocss7">Как насчет мощных лазерных диодов видимого диапазона?</A></h3>
+<h3><A NAME="diocss7">What About High Power Visible Laser Diodes?</A></h3>
 
-Есть возможность приобретси лазерные диоды с мощностью 0.5 Вт и более:
+It is possible to buy visible laser diodes capable of a half watt or more:
 <p>
 <blockquote>
-"Я вот просматривал сайт <A HREF="http://www.mi-lasers.com/">Meredith
- Instrument's</A> и заметил что у них есть  635 nm диоды с заявленной мощностью 
- 500 мВт. Имел ли кто-либо с ними дело? Судя по сайту, оказывается, что я могу
- купить диод на полватта за менее чем 600$, или a 250 мВт меньше чем за $400.  
- Есть ли какие-либо особенности в их использовании? Готовая лазерная установка может получиться
- дешевле гелий-неонового лазера на 25 мВт". 
+"I was just browsing <A HREF="http://www.mi-lasers.com/">Meredith
+ Instrument's</A> site, and noticed that they have 635 nm diodes rated at
+ 500 mW. Has anyone ever dealt with these things?  Looking around on the
+ site, it appears I could put together a half watt red diode laser for under
+ $600, or a 250 mW one for under $400.  Is there some catch to using these?
+ The whole setup would be cheaper than a 25 mW HeNe laser".
 </blockquote>
 <p>
-Да, кроме того что эти дорогостоящие диоды с лёгкостью могут быть выведены из
-строя при использовании неподходящего драйвера, качество их луча и рядом не стояло
-с таковым у дешёвого гелий-неонового лазера. Луч многомодовый, некруглый с сильным 
-астигматизмом. Последнее может быть исправлено с помощью дорогостоящей оптики. 
-Многомодовость этого лазера означает что он не подходит для использования в голографии и интерферометрии.
+Yes.  Aside from the ease with which one of those pricey diodes can be blown
+out due to improper drive, the beam quality is no where near that of even a
+cheap HeNe laser.  It is multimode and very non-circular and astigmatic.
+The latter can probably be dealt with using some (expensive) optics.
+However, multimode operation means that these are unsuitable for applications
+like holograpy or interferometry.
 <p>
-(Прислал от: Frank DeFreitas (director@holoworld.com).)
+(From: Frank DeFreitas (director@holoworld.com).)
 <p>
-У меня есть 500 мВт лазерный диод фирмы Polaroid, похоже на 660 нм. Ему нужен 
-довольно сложный драйвер, предлагаемый фирмой Meredith -- тот который способен
-отдать ток 1000 мА или около того. Лазерный диод многомодовый, так что можно 
-забыть о таких применениях где нужна хорошая когерентность. 
+I have a 500 mW laser diode from Polaroid. 660nm I believe. It needs the
+heftier driver that Meredith offers - the one that can put out 1000 mA or so.
+The laser diode is gain guided/multi-mode, rather than index guided/single
+(mono) mode -- so you can pretty much forget any application that would call
+for any type of coherency or high contrast fringes.
 <p>
-Выходной луч обычно имеет профиль в форме линии. Это очень похоже на то, как
-луч стандартного гелий-неонового лазера пропускают через цилиндрическую линзу. 
-(С другой стороны я предполагаю что цилиндричеаская линза поможет скорректировать форму 
-пучка. По крайней мере она даст возможность фокусировки пучка с помощью дополнитлеьной оптики) 
+The output beam profile is basically a line.  It is very similar to taking a
+standard HeNe beam and sending it through a cylindrical lens. (However, on
+the other hand, I'm wondering if a cylindrical lens would actually help it
+when used in the other dimension. Or at least bring it to a spot which
+could be collimated utilizing secondary optics in the path.)
 <p>
-Я бы также хотел подчеркнуть что это не тот диод с которым стоит играться 
-направо и налево. Выходная мощность составляет 500 мВт, и хотя он не будет 
-сбивать ракеты в небе, нужно соблюдать большую осторожность при работе с его
-лучом. Луч гораздо мощнее чем, кажется, так как чувствительность глаза к длине волны
-660 нм гораздо ниже чем к 632.8 нм от гелий-неонового лазера сравнимой мощности.
-<h3><A NAME="diocss7a">А очень мощных лазерных диодов?</A></h3>
-Вы можете прочитать о действительно высокомощных лазерных диодах -- с выходной
-мощностью измеряемой ВАТТами, десятками ВАТТ, или даже сотнями ВАТТ с одиночного
-диода или линейки диодов, или набора линеек. Как правило это излучатели ближнего
-ИК диапазона, на 808 нм. Твердотельные лазеры с диодной накачкой (известные как DPSS)
-используют эти источники света для накачки с мощностью порой 1000 Вт (и со временем 
-эта мощность повышается). 
-Также смотрите раздел  <A HREF="laserssl.htm#ssldps">Твердотельные лазеры с диодной накачкой</A>.
+I'd also like to point out that it's not a diode to play around with. The
+optical output at 500 mW is not going to knock any missles out of the sky,
+but will certainly warrant caution when working with the beam. The beam is
+much more powerful than it appears at 660 nm due to the eye's reduced
+sensitivity at that wavelength compared to HeNe 632.8 nm.
+
+<h3><A NAME="diocss7a">And Those Really High Power Laser Diodes?</A></h3>
+
+You may have read about truly high power laser diodes - those putting out
+WATTs, 10s of WATTs, or even 100s of WATTs from a one diode or an array (bar)
+of diodes in a single package, or multiple laser diode bars.  These are
+usually near-IR emitters, often at 808 nm.  Solid State Diode Pumped (DPSS)
+lasers are driven by these light sources with some providing upwards of
+1,000 WATTs (and the upper limit is climbing as you read this).  Also see
+the section: <A HREF="laserssl.htm#ssldps">Diode Pumped Solid State Lasers</A>.
 <p>
-О линейках лазерных диодов:
+About those laser diode bars:
 <p>
-(Прислал: Walter Skrlac (Walter.Skrlac@t-online.de).)
+(From: Walter Skrlac (Walter.Skrlac@t-online.de).)
 <p>
 <blockquote>
-"Линейки диодов -- это обычно сборка шириной 10 мм из 16-24 излучателей, каждый из которых
-примерно 150 микрон в поперечнике и излучает до 2 Вт мощности. У линейки для накачки
-твердотельного лазера бывает мощность до 40 Вт, с 19 излучателей. Как правило линейки -- это 
-матрица излучателей. Я помню, что на раннем этапе Siemens выпустил линейку на 5 Вт 
-состоявшую из 5 отдельных лазерных диодов по 1 Вт составленных в ряд длиной 10 мм.
-Отдельные диоды соединены параллельно и не могут управляться\переключаться по отдельности"
+"Bars are a 10 mm wide chip with typically 16 to 24 emitters, each emitter
+ being about 150 microns wide and emitting up to 2 watts of power per
+ emitter.  The highest power for solid state laser pumping is 40 watts from a
+ 19 emitter bar.  Almost all bars are a single chip, multiple emitter
+ device.  I do know that in the beginning days of bars, Siemens produced a 5
+ watt device consisting of 5 separate 1 watt laser diodes mounted in a row 10
+ mm long.  The individual laser diodes are connected in parallel so you can't
+ switch them individually."
 </blockquote>
 <p>
-Хорошие новости таковы, что технология развивается очень быстро.
+The good news is that this technology is developing very rapidly.
 <p>
-Плохие новости таковы, что на текущий момент пока нет перспективы найти источники где такие 
-диодные лазеры можно купить дёшево в состоянии нового или б\у. Тем не менее, цены быстро 
-падают. Стоимость новых диодов 1 Вт 808 нм уже упала ниже 100$ и при должной удаче на 
-eBay можно найти намного дешевле
+The bad news from our perspective is that there are no really low cost
+sources, new or surplus, for these diode lasers as far as I know at the
+present time.  However, prices have been dropping rapidly since
+this was first written.  The cost of 1 W 808 nm laser diodes has
+dropped below $100 new, and with luck, much cheaper from surplus
+sources and on eBay.
 <p>
-На самом деле, собственно сам диод не настолько дорогой. Диод на 1.5 Вт 800 нм
-стоит около 10$ при условии что покупается в больших количестве. Кристалл диода 
-имеет размер всего 0.5 мм в поперечнике и толщину 0.1 мм. Установка состоит в припайке
-кристалла низкотемпературным припоем к радиатору и припайке медной полоски для подвода
-электроэнергии. (Фотодиода встроеного нет, его нужно устанавливать отдельно). Пайка
-выполняется путем точно контролированного нагрева радиатора почти до температуры плавления
-припоя и подпайки тонким паяльником. У кристалла есть сторона глухого зеркала и сторона выходного,
-есть верх и низ, поэтому его ориентация имеет значение. Так что если у Вас есть 
-доступ к паяльной станции для СМД компонентов, бинокулярный микроскоп, твердая рука, бесконечное
-терпение и Вы не чихаете (чих может сдуть черте-куда Ваши кристаллы, где их Вы никогда не найдёте),
-то Вы можете попробовать. У меня есть несколько кристаллов, если я соберусь с духом это
-попробовать, я сообщу о результате.   
+Actually, it isn't necessarily the diode itself that is so expensive.  A 1.5 W
+800 nm diode chip goes for about $10 when they are purchased in reasonably
+large quantities.  However, these are only about 0.5 mm on a side and maybe 0.1
+mm thick.  Mounting means using low temperature solder and flux to bond the
+chip to a large heat sink and copper strip (for the two connections - no
+monitor photodiode, that function must be performed externally).  The soldering
+is best done on a hot plate (to raise the temperature of the heat sink and
+chip to almost the melting point of the solder), with a fine tip iron for the
+last few degrees.  They have an HR and OC side, and a top and bottom, and thus
+orientation matters.  So, if you have access to a surface mount rework station
+with a stereo microscope, a steady hand, infinite patience, and don't sneeze
+much (which will blow your chips away to never be found again), you could try
+your hand at the mounting.  I have a couple of these diode chips so once I get
+up the nerve to try this, I will report on success or failure.
 <p>
-Гораздо проще с лазерынми диодами иметь дело, когда они уже закреплены на радиаторе.
-Но тогда стоимость приближается к 100$. Лучший вариант -- приборести готовый модуль с 
-волоконным выходом. Тогда не нужно заморачиваться с формированием излучения, диод надежно
-спрятан от вреда окружающей среды, а волоконный выход позволит его идеально адаптировать
-к подходящему активному кристаллу твердотельного лазера. Часть мощности теряется на волокне,
-но обычно я видел что характеристики "голых" линеек и модулей с волоконным выходом 
-почти одинаковы. Но стоимость такого модуля весело приближается к стоимости хорошо 
-нафаршированного ПК. :) для дополнитлеьной информации смотрите раздел: <A HREF="laserdio_ru.htm#diofcld">Анатомия лазерных 
-диодов с волоконным выходом</A>.
+The better way to deal with these laser diodes is to have them already mounted
+on a heat sink.  But now we're talking about $100s for a single unit.  But, for
+a number of reasons, the best type of high power laser diode to get is
+probably a fiber-coupled module.  Then you don't have to mess with beam
+shape issues, the diode is safely tucked away out of harm, and the fiber
+output can easily be adapted to your favorite crystal shape.  Some power is
+lost in the coupling but it appears as though the specs I've seen are similar
+for the bare diode assembly and fiber-coupled module.  Of course, the cost
+for such a module now appoaches that of a nicely equipped PC. :)  For more
+info, see the section: <A HREF="laserdio_ru.htm#diofcld">Anatomy of Fiber-Coupled
+Laser Diodes</A>.
 <p>
-Учтите что большинство высокомощных диодов работают в ближнем ИК -- порядка 800 нм
-для накачки DPSS лазеров или 830-870 нм. Мощные диоды видимого диапазона распространены гораздо
-хуже и их мощность обычно менее 1 Вт на длине волны 670 нм. Это ужасно. :)
+Laser diode bars/assemblies of much higher power are available - up to
+the kW range and beyond.  Of course, the prices go up  as well.
+Check out <A HREF="http://www.st.northropgrumman.com/ceolaser/">CEO Laser</A>
+as one possible supplier.  They have a wide variety of really interesting
+items but unfortunately without any prices.  Bars can be connected in series to
+ease the power supply requirements enabling them to be driven with lower
+current at higher voltage (e.g., a 4 bar configuration would use 8 V at 50 A
+instead of 2 V at 200 A).  With individual chips on a common heat sink, this
+really isn't an option.
 <p>
-Если они близки Вашему сердцу и желаете получить такой лазерный диод на свой день рождения, 
-то все что я могу предложить на текущий момент -- это регулярно изучать ассортимент 
-интернет-барахолок и производителей, список которых приведен здесь:
-<A HREF="laserlps.htm#lpstoc">Источники лазеров и запчастей</A>. Они всплывают на eBay,
-но точность описания и состояние может быть неизвестно. Если это нужно для академического
-(курсового\дипломного) проекта с определённой целью исследований -- то можно выпросить брак 
-(допустим, с косметическими дефектами) у производителей при условии проявления некоторой 
-настойчивости. Или же, если Вы умеете работать с кристаллами, можно попробовать выпросить немного
-у производителей DPSS лазеров, посокльку они закупают их машинами и стоимость сильно падает.
+Note that most high power diode lasers are near IR - often around 800 nm for
+pumping DPSS lasers or 830 to 870 nm for thermal platesetters.  High power
+visible laser diodes are much less common and usually limited to less than
+a watt at 670 nm.  Not that this is terrible. :)
 <p>
-Помните, что получить сам диод -- это лишь малая часть проблемы. Для получения надежной работы на максимуме мощности
-нужен подходящий источник тока для питания лазерных диодов (драйвер) и адекватное охлаждение. 
-При соблюдении правил предосторожности, не выходя за допустимые пределы по питанию,
-сжечь мощный диод гораздо труднее чем маломощный.
+If you have your heart set on one of these for your birthday, all I can
+suggest at the present time is to keep track of what is available surplus and
+to check with the manufacturers listed in the chapter:
+<A HREF="laserlps.htm#lpstoc">Laser and Parts Sources</A>.  They do show up
+on eBay but accuracy of the description and operating conditoin may be
+unknown.  If this is for
+some sort of academic project with a legitimate research objective, you may be
+able to obtain a cosmetic reject or one that doesn't quite meet specs by
+persistent pleading with one of the laser diode manufacturers.  Or, if you can
+deal with the bare chips, it may be possible to beg a few from one of the
+companies that produces DPSS laser systems since they use them by the carload,
+and when purchased by the carload, the cost goes way down.
 <p>
-Ну и при таких мощностях излучения у Ваших глаз (и горючих объектов) нет шансов на восстановление. 
-Лазерная безопасность должна быть на первом месте.
+Keep in mind that obtaining the diode is only a small part of the problem.
+To drive them reliably, particularly near their maximum power rating,
+will require a suitable constant current laser diode driver and proper
+cooling.  However, if reasonable precautions are taken and they aren't
+run near their maximum ratings, actually blowing them out totally isn't
+nearly as easy as with their low power counterparts.
 <p>
-<h3><A NAME="diocss7b">А что это за мощные импульсные лазерные диоды?</A></h3>
-Вы, возможно, видели в продаже ИК лазерные диоды с заявленной выходной мощностью 9 или 14 Вт или иной 
-мощности которая выглядит слишком высокой чтобы выглядеть правдоподобно. Дело в том, что указанная 
-мощность реализуется в <i>импульсном</i> режиме и это <i>пиковая</i> мощность. Эти б\у лазерные диоды
-являются деталью лазерного дальномера из танка Chieftain. Они обычно не были сильно дорогими (от 20 до 100$).
-К сожалению, не смотря на то, что они имеют высокую пиковую мощность, средняя обычно не первышает
-нескольких мВт, поскольку работают в повторно-кратковременном режиме с очень малой ПВ (продолжитлеьность включения) -- обычно 0.1%.
-Более того, длина их волны обычно между 850 и 910 нм, что не сильно интересно для большинства применений. 
-(Бывает, что попадаются диоды с длиной волны от 780 до 980 нм). Нет никакой возможности произвести
-эффективное удвоение частоты излучения для получения видимого света. (Хотя, если хорошо сфокусировать
-луч под хитрым углом внутри КТР кристалла -- может и можно увидеть пару синих фотонов). Для накачки
-широко используемых кристаллов для твердотельных лазеров эти диоды тоже не годятся. Подходят они
-разве что для дальномеров и подобных применений.
+And, needless to say, at these power levels, your eyes (and flammable objects)
+don't get a second chance - laser safety must be at the top of your list of
+priorities.
+
+<h3><A NAME="diocss7b">And Those High Power Pulsed Laser Diodes?</A></h3>
+
+You may have seen offers of IR laser diodes with 9 W or 14 W or much higher
+too-good-to-be-true power ratings from various surplus companies.  These are
+<i>pulsed</i> ratings and the power rating is <i>peak</i>.  Such laser diodes
+have been available surplus as part of the laser rangefinder from the
+Chieftain tank.  Since they are actually not that expensive to buy new as
+these things go (maybe $20 to $100).  Unfortunately, while they
+have nice peak power ratings, the average power ratings are typically only
+a few mW as they must be run at a very low duty cycle - typically 0.1 percent
+(1 part in 1,000) or less.  Furthermore, the most common wavelengths are
+between 850 and 910 nm and these aren't much use for most laser projects
+(though wavelengths from 780 to 980 nm are available).  There isn't any
+realistic possibility of efficiently frequency doubling these to visible
+(though a few blue photons might be possible if focused into a KTP crystal at
+a funny angle) and the wavelength isn't useful for pumping common solid state
+laser crystals.   However, they would be suitable for rangefinder or similar
+applications.
 <p>
-Эти лазерные диоды поставляются в пластиковом корпусе, похожи на обычные светодиоды, поэтому у них
-нет возможности нормально охлаждаться вообще, в то время как возможность рассеивания мощности является
-главным ограничивающим фактором в работе такого диода. Возможно применять меньшую величину импульсного
-тока при большей длительности импульса, что не прописано в даташите, но нужно следить за тем чтобы
-не превышалась допустимая мощность рассеяния. Но так как пороговый ток таких диодов высокий, то толку от
-них все равно мало. И никаких гарантий.
- <p>
- Некоторая информация по драйверам импульсных лазерных диодов находится здесь: <A HREF="laserdps.htm#dpspld">Драйверы импульсных лазерных диодов</A>.
+These laser diodes come in plastic packages that look much like LEDs and thus
+there is no real possibility of decent cooling.  Therefore, power dissipation
+is one of the major limiting factors.  It may be possible to use a lower peak
+current with a longer pulse width than what's specified in the datasheet as
+long as the average power dissipation rating isn't exceeded.  However, with
+the high threshold current, this probably doesn't provide much benefit.
+And, no guarantees of any kind with laser diodes!
 <p>
- Дальше пойдет речь об устройстве с пиковой мощностью 16 Вт, длительностью импульса 100 нс и ПВ 0.1%:
+There is some info on driver circuits for pulsed laser diodes in the
+section: <A HREF="laserdps.htm#dpspld">Pulsed Laser Diode Drivers</A>.
 <p>
-(Прислал: Roithner Lasertechnik" (office@roithner-laser.com).) 
+The following assumes a device rated at 16 W peak power, 100 ns max pulse
+width, 0.1% max duty cycle:
 <p>
-Абсолютным пределом является тепловая нагрузка на кристалл ЛД. При нормальных условиях лазер будет
-выдавать импульс мощностью 16 Вт при длительности импульса 100 нс и частоте повторения 10 кГц.(200 нс и 5 кГц -- абсолютный предел)-- 
-который рекомендуется для сохранения большого срока службы в несколько тысяч часов с естественной деградацией кристалла. 
-Сделав произведение V*I (умножаем ток на напряжение) можно получить величину тепловой рассеиваемой мощности. Если увеличить частоту 
-повторения импульсов, а длительность уменьшить, то величина рассеиваемой мощности останется неизменной. Если её превысить -- мощность
-лазерного импульса будет быстро уменьшаться из-за перегрева кристалла (это обратимо, кристалл ещё не сгорел) и дальнейший 
-срок службы существенно сократится. Время нарастания и спада тока на диоде обычно в пределах 1 нс.
-<h3><A NAME="diocss8">Лазерные диоды с вертикальным резонатором (VCSEL)</A></h3>
-Большая часть лазерных диодов что существуют (и обсуждаются в этом документе) являются "краевыми" излучателями -- 
-луч выводится с торца кристалла лазерного диода. Они также называются диоды типа "Фабри-Перо", так как их 
-резонатор очень похож на таковой у обычного газового или твердотельного лазера, но сформирован внутри
-полупроводникового кристалла лазерного диода. Зеркала образованы отколотыми краями обработанного кристалла
-или (в мощных, высокостабильных или перестраиваемых) края кристалла просветлены и кристалл установлен во внешний резонатор.
+(From: Roithner Lasertechnik" (office@roithner-laser.com).) 
 <p>
-VCSELs излучают с верхней поверхности кристалл (и частично с нижней). Резонатор получается за счет чередования около сотни слоёв
-отражающих и слоёв активного полупроводника, сформированных с помощью эпитаксии на подложке
+The absolute limit is the heat stress of the LD chip inside.  Under normal
+conditions, the laser will emit a pulse of the rated 16 W, 100 ns at 10 kHz
+(200 ns at 5 kHz is the absolute limit) - which is highly recommended for an
+expected long lifetime of several khours with usual chip degradation. Take
+this integrated V x I (voltage x current) thermal heat stress as a final
+constant. If you run with a higher frequency than the rated, but with a
+shorter pulse width, still never go higher than this constant. If you go
+higher, the laser pulse power will go down rapidly due to overheating of the
+LD chip (still reversible, LD is not yet blown) but overall lifetime is
+shortened. Keep in mind, that the rise and fall time of this LD is typically
+1 ns, so you will get the next limit soon.
+
+<h3><A NAME="diocss8">Vertical Cavity Surface Emitting Laser Diodes
+ (VCSELs)</A></h3>
+
+Most laser diodes up till now (as well as most of those discussed in this
+document) are edge emitters - the beam exists from the cleaved edge of
+the processed laser diode chip.  These are also called Fabry-Perot (FP)
+diode lasers since the cavity is essentially similar to that of a conventional
+gas or solid state laser but formed inside the semiconductor laser diode chip
+itself.  The mirrors are either formed by the cleaved edges of the chip or
+(for high performance types like those that are very stable or tunable) one or
+both of these are anti-reflection (AR) coated and external mirrors are added.
 <p>
-Этот подход предоставляет ряд сильных преимуществ:
+VCSELs, on the other hand, emit their beam from their top surface (and
+potentially bottom surface as well).  The cavity is formed of a hundred or more
+layers consisting of mirrors and active laser semiconductor all formed
+epitaxially on a bulk (inactive) substrate.
+<p>
+This approach provides several very significant technical advantages:
 <ul>
-<li>Характеристики излучения --
-  Работой  VCSEL можно управлять, или по крайней мере на неё можно влиять, выбирая количество и 
-  толщину зеркальных слоёв, или изменяя другие параметры в процессе производства.
-  Потенциальные возможности тонкой настройки при такой технологи трудно представить. VCSEL работают на одной продольной моде, но
-  возможно с несколькими поперечными модами излучения.
-  <p>
-<li>Форма и профиль излучения - 
-  В то время как обычные ФП лазерные диоды имеют излучающую поверхность размером 1*3 мкм (они всегда такие длинные и тонкие -- p-n переход,
-  в котором идет процесс излучения имеет практически нулевую толщину), форма излучающей области VCSEL может быть сделана какой угодно
-  для того или иного применения -- в форме кольца, например, для оптимального согласования с входным торцом многомодового оптического волокна.
-  <p>
-  Луч типичного лазера с вертикальным резонатором выходит из круглой области оыбчно от 5 до 25 мкм в диаметре. Поскольку излучающая 
-  область большего размера, то результирующая расходимость меньше. И поскольку луч круглый -- ему не требуется коррекция
-  ассиметрии или астигматизма -- простая линза обеспецит отличную фокусировку.
-  <p>
-<li>Более низкий порог генерации и рабочий ток. Типичный диод для коммуникаций или CD имеет пороговый ток около 30 мА,
-в то время как пороговый ток VCSEL может составлять 1-2 мА! Это приводит к меньшему потреблению энергии, более
-скоростной модуляции, более простой схемотехнике драйвера, меньшим радиопомехам. Также они более "дубовы" относитлеьно питания -- 
-достаточно управления током без оптической обратной связи, которая требуется другим маломощным диодам для избежания
-самоуничтожения (КОП -- Кататстрофическое Оптическое Повреждение), которое может произойти за 1-2 наносекунды при превышении 
-пиковой оптической мощности на площадке 1*3 мкм. У лазеров с вертикальным резонатором размер этой площадки намного больше, так что
-КОП для них не является особой проблемой.
+<li>Beam characteristics -
+  Much of the behavior of the VCSEL can be controlled or at least affected by
+  selecting the number and thickness of mirror layers and other process
+  parameters.  The potential capabilities of this technology to finely tune
+  behavior is hard to imagine.  VCSELs operate in a single longitundinal mode
+  but possibly multiple transverse modes.
 <p>
-<li>Реализацая массивов VCSEL становится тривиальной. Все что необходимо -- это разрезать
-кремниевую пластину на блоки совместно изготовленных лазеров пригодных для работы и 
-упаковать их в одиночный корпус. Плотность упаковки таких диодов может превысить плотность упаковки 
-обычных ФП диодов (см. ниже). Это существенное преимущество при конструировании высокоскоростных 
-оптических шин и соединений.
+<li>Beam shape and profile - 
+  Whereas the typical conventional low power FP laser diode has an emitting
+  area of 1x3 um (they are all long and narrow because the junction where laser
+  action takes place is almost zero thickness), the shape of the emitting
+  region of a VCSEL can be made whatever is desired for the application - even
+  in the form of a doughnut or ring for optimal coupling to the outer part of
+  a multi-mode optical fiber.
+<p>
+  The beam from a typical VCSEL exits from a circular region 5 to 25 um in
+  diameter.  Since this is much larger than for the FP laser diode, the
+  divergence of the resulting beam is much lower.  And, because it is also
+  circular, no corrections for asymmetry and astigmatism are required - a
+  simple lens should be able to provide excellent collimation.
+<p>
+<li>Lower lasing threshold and drive current - A typical telecom or CD laser
+  diode may have a threshold current of around 30 mA while a VCSEL with similar
+  output power may require only 1 or 2 mA!  This results in lower electrical
+  power requirements, potentially faster modulation, simpler drive circuitry,
+  and reduced RFI emissions.  VCSELs are also more robust in terms of power
+  supply drive.  Current control is generally sufficient and there is no need
+  for optical feedback using a monitor photodiode to prevent destruction as
+  with most low power edge emitting laser diodes where COD (Catastrophic
+  Optical Damage) can occur in a ns as a result of the peak optical power
+  at the 1x3 um output facet.  With VSCELs, the emitting area is much larger
+  so COD isn't nearly as significant a problem.
+<p>
+<li>Implementation of VCSEL arrays becomes trivial.  All that is required is to
+  dice up the wafer into blocks of adjacent good VCSELs and package these
+  as a single unit.  The packing density of such devices can be an order of
+  magnitude higher than for FP laser diodes (see below).  This is a significant
+  advantage for constructing high speed optical busses and interconnects.
 </ul>
 <p>
-Tакже есть преимущества у этих диодов в цене и более простом производстве
+There are also numerous manufacturing and cost advantages:
 <p>
 <ul>
-<li>Меньший размер -- в то время как ФП резонатор краевого излучателя имеет длинц 250-500 мкм,
-общий размер VCSEL потенциально ограничен только размерами излучающей области и местом для электрических контактов.
-Таким образом "штамп" для готвоого VCSEL может быть лишь немногим больше размера выходного луча. Имеющиеся в доступе 
-устройства с круглым лучом диаметром 25 мкм имеют размер всего 100 мкм в поперечнике, и этот размер может быть уменьшен до
-50 мкм или даже меньше. Меньший размер приводит к большему количественному выходу диодов с одной кремниевой заготовки
-и меньшей стоимости отдельного диода и больших плотностях упаковки в лазерном массиве.
+<li>Smaller size - Unlike the FP cavity of an edge emitting laser diode which
+  is 250 to 500 um in length, the entire size of a VCSEL is limited by the
+  dimensions of the emitting region and space for electrical contacts.  Thus,
+  the die for a complete VCSEL can potentially be only slightly larger than
+  the beam size!  Currently available devices with a 25 um circular beam
+  are about 100 um on a side but this can certainly be reduced to 50 um or
+  less.  Smaller size can translate into a larger yield per wafer and lower
+  costs as well a higher packing densities for laser array applications.
 <p>
-<li>Упрощённое производство -- ФП лазерные диоды должны быть вырезаны из заготовки (и возможно установлены на подложку) только
-для проверки на работоспособность и отбраковки. Они не могут быть проверены пока не вырезаны из заготовки, поскольку края ещё не
-сформированы. Это дорогой времязатратный процесс, в ходе которого трата усилий и материалов может получиться напрасной.
+<li>Simplified manufacturing - FP laser diodes must be diced up (and possibly
+  even mounted) just to determine which are good and which are bad.  They
+  cannot be tested at all when part of the original wafer since the edges
+  haven't been cleaved yet.  This is an expensive time consuming process and
+  results in a lot of wasted effort and materials.
 <p>
-  Здесь же вся заготовка с произведёнными на ней лазерами с вертикальным резонатором может быть испытана
-  без вырезания из неё отдельных кристаллов на порог генерации и мощность, форму луча, качество, 
-  стабильность. Есть возможность сформировать милионы лазеров на одной заготовке совместно, а потом испытать и оценить
-  производитлеьность каждого в автоматическом режиме. Вся заготовка может пройти стресс-испытания чтобы 
-  устранить "детские болезни" и повысить надежность финального продукта. На основании этого потом каждый лазер может быть 
-  корпусирован или выброшен.
+  On the other hand, an entire wafer of VCSELs can be tested as a unit with
+  each device evaluated for lasing threshold and power, and beam shape,
+  quality, and stability,  It is possible to form millions of VCSELs on a
+  single wafer as a batch process and then test and evaluate the performance of
+  each one automatically.  The entire wafer can be burned in to eliminate
+  infant mortalities and assure higher reliability of the final product.  Each
+  device can then be packaged or thrown away based on these findings.
 <p>
-<li>Упрощённое крепление к подложке и корпусирование. По сути для этого может применяться такое же оборудование как и для
-  производства других интегральных схем, так как лазер с вертикальным резонатором крепяться плоскостью к плоской подложке и 
-  излучают через окно как в EPROM микросхемах (только окно хорошего оптического качества или же лазер может быть состыкован
-  с оптическим волокном, если это нужно. Так как излучающая облатсь полупроводника вместе с её зеркалами "погребены" под 
-  поверхностными слоями, то герметичная упаковка не требуется. VCSEL могут упаковываться в недорогие пластиковые корпуса
-  и\или скомбинированы с другими оптическими компонентами как гибридная микросборка. Все эти приемы уменьшают итоговую стоимость продукта. 
+<li>Simplified mounting and packaging.  Virtually the same equipment that is
+  used for final assembly of devices like other ICs can be used for VCSELs
+  since they are attached flat on the package substrate and shine through an
+  window like that of an EPROM (but of higher optical quality) or merged with
+  an optical fiber assembly as required.  Since the active lasing semiconductor
+  and mirrors are buried under the top surface layers, a hermetic seal is
+  unnecessary.  VCSELS can use inexpensive plastic packaging and/or be
+  easily combined with other optical components as a hybrid or chip-on-board
+  assembly.  All this further contributes to reduced cost.
 </ul>
 <p>
-Технология лазеров с вертикальным резонатором ещё находится в своем "детстве" и её потенциал только начинает использоваться.
 VCSEL technology is in its infancy and its potential is just beginning to be
 exploited.  Quite possibly, VCSELs will become the dominant type of laser
 diode in the future with capabilities so fantastic and costs so low as to be
