@@ -1064,7 +1064,7 @@ Tакже есть преимущества у этих диодов в цене
 <li>Упрощённое крепление к подложке и корпусирование. По сути для этого может применяться такое же оборудование как и для
   производства других интегральных схем, так как лазер с вертикальным резонатором крепяться плоскостью к плоской подложке и 
   излучают через окно как в EPROM микросхемах (только окно хорошего оптического качества или же лазер может быть состыкован
-  с оптическим волокном, если это нужно. Так как излучающая облатсь полупроводника вместе с её зеркалами "погребены" под 
+  с оптическим волокном, если это нужно). Так как излучающая облатсь полупроводника вместе с её зеркалами "погребены" под 
   поверхностными слоями, то герметичная упаковка не требуется. VCSEL могут упаковываться в недорогие пластиковые корпуса
   и\или скомбинированы с другими оптическими компонентами как гибридная микросборка. Все эти приемы уменьшают итоговую стоимость продукта. 
 </ul>
@@ -1085,7 +1085,7 @@ Tакже есть преимущества у этих диодов в цене
 Статья с общим обзором: "The Ideal Light source for Datanets", K.S.
 Giboney, L.B. Aronson, B.E. Lemoff, IEEE Spectrum V.35 (2) p. 43, Feb 1998.
 <p>
-Если Вам хочется поиграться с VCSEL, "голыми" кристаллами, корпусированными кристалыми, или даже
+Если Вам хочется поиграться с VCSEL, "голыми" кристаллами, корпусированными кристаллами, или даже
 массивами VCSEL, то они могут быть доступны у некоторых поставщиков лазеров по не слишком смехотворным
 ценам. Например:
 <A HREF="http://www.roithner-laser.com/VCSELs.htm">Roithner Lasertechnik's
@@ -1102,67 +1102,47 @@ VCSEL Page</A>.  Доступные длины волн в данныей мом
 <A HREF="http://www.ece.ucsb.edu/Faculty/Coldren/reprints/2002Reprint/papers/margalith_stimulated.pdf">Вынужденное излучение светодиодов на основе InGaN-Based помещённых 
 в оптический резонатор</A>.
 
-<h3><A NAME="dioopsl">Optically Pumped Semiconductor Laser (OPSL)</A></h3>
-
-Nearly all semiconductor lasers are powered by electrical current through
-the gain medium.  However, for certain materials, it's also possible to
-use another laser to optically pump it.  This has some significant advantages
-in terms of controlling transverse and longitudinal modes and beam shape.
+<h3><A NAME="dioopsl">Полупроводниковый лазер с оптической накачкой (OPSL)</A></h3>
+Практически все полупроводниковые лазеры накачиваются протекающим током через рабочую среду. Для некоторых материалов
+вполне может применяться излучение другого лазера для оптической накачки. Это имеет преимущества в том случае если нужно 
+управлять модовым составом и формой пучка излучения.
 <p>
-The first commercial OPSL was the Coherent, Inc. "Sapphire",
-a replacement for low power argon ion lasers at 488 nm.  (I think the use
-of Sapphire is unfortunate as this has absolutely nothing to do with the
-Ti:Sapphire laser with which it may be confused.)  The Sapphire is a
-Vertical External Cavity Surface Emitting Laser (VECSEL), but one that
-is optically pumped.  (Also see the next section.)  The resonator
-is in many ways similar to that of a frequency doubled Diode Pumped Solid
-State (DPSS) laser but with an InGaAs quantum-well semiconductor instead of
-a laser crystal as the gain medium.  It is pumped by a high power 808 nm
-laser diode and lasing at the fundamental IR wavelength of 976 nm.  This is
-intracavity doubled to 488 nm.
+Первым таким лазером, который стал серийно выпускаться фирмой Coherent, Inc., стал лазер "Сапфир", разработанный для замены
+маломощных аргон-ионных лазеров с длиной волны 488 нм. (Я думаю, название "Сапфир" неудачно так как это устройство не имеет никакого
+отношения к титан-сапфировым лазерам, с которыми он может быть перепутан). Сапфир это лазер с вертикальным внешним резонатором с оптической
+накачкой. (Также смотрите следующий раздел). Резонатор напоминает таковой в твердотельных лазерах с диодной накачкой (DPSS), но внутри
+него помещён кристалл InGaAs полупроводника вместо лазерного кристалла твердотельного лазера. Накачивается он мощным 808 нм диодом
+и излучает основную линию 976 нм в ИК диапазоне. Затем из этого излучения генерируется вторая гармоника в виде 488 нм.
 <p>
-Go toe <A HREF="http://www.coherentinc.com/">Coherent</A>, then
-"Lasers and Systems", "OPSL" for more information.
+Смотрите <A HREF="http://www.coherentinc.com/">Coherent</A>, потом
+"Lasers and Systems", "OPSL" для дополнительной информации.
 <p>
-One beauty of the OPSL approach is that with an appropriate choice of
-material and doping, the basic gain medium - the semiconductor disk - can
-be designed to lase at most or all of the range from 635 nm to 1,500 nm and
-beyond.  (The UV/blue area is probably not viable yet).  Thus, this entire
-range of wavelengths as well as one half the wavelength (frequency
-doubled or SHG), and possibly higher harmonics are available with the
-beam characteristics of a solid state laser.  This technology may also
-be called a "Semiconductor Disk Laser".
+Красота подхода OPSL заключается в том, что при соответствующем выборе материала и легирования, раочая среда -- полупроводниковый диск -- 
+может излучать самые различные длины волн в диапазоне от 635 нм до 1500 нм и дальше. (Синие и ультрафиолетовые пока нежизнеспособны).
+Таким образом весь диапазон длин волн, включая удвоенные частоты (генерация второй гармоники - ГВГ) и, возможно, высшие гармоники
+доступны с качеством луча как у твердотельного лазера. Эта технология может ещё называться "Полупроводниковый Дисковый Лазер".
 <p>
-Several other companies are developing lasers using a similar approach and
-systems at many wavelengths - including those in the yellow/orange "no laser
-land zone" - are now available or will be in the near future.  And,
-apparently, some companies call their OPS lasers "DPSS" even though
-strictly speaking, they aren't solid state in the traditional sense.
-There are a couple of ways of telling if a DPSS laser is really solid state:
+Некоторые другие фирмы разрабатывают лазеры путем похожего подхода, и лазерные системы с многими длинами волн, включая жёлтую\оранжевую
+области из "нелазерной зоны" теперь или уже доступны или станут доступны в ближайшем будущем. Кроме того, иногда эти лазеры
+называют "DPSS", хотя строго говоря они таковыми не являются в традиционном смысле. Вот несколько признаков
+настоящего твердотельного DPSS-лазера:
 <p>
 <ul>
-<li>If the wavelength of the laser isn't a fundamental or doubled vanadate,
- YAG, YLF or other popular solid state laser crystal line, or one of the common
- sum-frequency mixing wavelengths (e.g., 593.5 nm), then it's a frequency
- doubled semiconductor-based laser.
+<li>Если длина волны лазера не является основной или удвоенной линией излучения для вандата, ИАГ, ИЛФ или другого
+популярного лазерного кристалла, или не является суммарной\разностной частотой двух популярных длин волн
+(например 593.5 нм), то это полупроводниковый лазер с удвоением частоты. 
 <p>
-<li>If the wavelength and/or linewidth is specified as more than a tiny
- fraction of a nm.  Since the lasing wavelength of semiconductors is
- determined to a much greater extent by the material composition and
- temperature, a "488 nm" laser is probably not going to be exactly
- 488 nm but can vary over a range of a nm or so.
+<li>Если длина волны и/или ширина линии указана с точностью до малых долей нанометра -- то это DPSS.
+Длина волны у полупроводниковых лазеров определяется в гораздо большей степени составом полупроводника и 
+температурой, поэтому "488 нм" не будет точно соответствовать 488 нм, а будет гулять туда-сюда примерно на 1 нм.
 </ul>
 <p>
-The first is the extended cavity semiconductor laser like the optically
-pumped Coherent Sapphire, but they may also be electrically driven
-like a normal laser diode (so only one laser instead - no pump diodes),
-and mentioned in the next section.
-However, many companies are now using a directly doubled diode approach -
-a laser diode feeding a doubler crystal outside the laser cavity,
-possibly periodically poled lithium niobate (PPLN) or KTP (PPKTP).
-This is probably not efficient enough to be practical for high power
-lasers, but for a 10s of mW, it's much simpler.
-
+Хотя первый полупроводниковый лазер с внешним резонатором имеет оптическую накачку, как Coherent Sapphire,
+он также может накачиваться электрическим током как обычный лазерный диод (таким образом в устройстве получаетс только один лазер -- 
+без других лазерных диодов накачки) и упоминается в следующем подразделе. Теперь, многие компании применяют 
+прямое удвоение частоты излучения лазерного диода, вводя излучение в нелинейный кристалл вне лазерного резонатора,
+к примеру периодически поляризованный ниобат лития (ППЛН) или КТП (ППКТП). Это, возможно, не так эффективно для 
+высокомощных лазров, но в области десятков мВт это намного проще. 
 <h3><A NAME="diovecs">Vertical Extended Cavity Surface Emitting Laser
  (VECSEL)</A></h3>
 
