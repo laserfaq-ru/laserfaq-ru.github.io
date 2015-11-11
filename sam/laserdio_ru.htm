@@ -1279,501 +1279,417 @@ OPSL и совершенно неудивительно их появление 
 может изменяться, что устраняет две основные проблемы удвоения частоты лазерного диода. Заставить это работать -- совсем
 другая история, так как нужно достичь соблюдения сразу большого количества условий одновременно. 
 
-<h4><A NAME="diocod3">Coherent D3 (Directly Doubled Diode) 430 nm Laser</A></h4>
+<h4><A NAME="diocod3">430 нм лазер Coherent D3 (Диод прямого удвоения)</A></h4>
 
-The Coherent D3 (which actually should be D<sup>3</sup> but that's kind of a
-pain to do everywhere!) uses a single mode 860 nm laser diode feeding an
-external resonant doubling cavity to generate a perhaps up to 30 mW of output
-at a wavelength of 430 nm.  According to the specifications, the output
-is single frequency (single longitudinal mode) with a coherence length
-of around 6 meters, making it suitable for holography and other similar
-applications.
+Лазер Coherent D3 (где должно быть написано вообще-то D<sup>3</sup>, но мне слишком сложно это делать по всей странице)
+содержит одномодовый лазерный диод на 860 нм, луч которого вводится в резонатор содержащий нелинейный кристалл
+удвоения частоты, в результате чего получается примерно до 30 мВт выходного 430 нм излучения. Согласно спецификации
+выход лазера одночастотный (одна продольная мода) с длиной когерентности около 6 метров, что делает его
+подходящим для голографии и других похожих применений.
 <p>
-The D3 was developed in the late 1990s when there
-were no low cost (relatively speaking!) ways of generating 430 nm.  This must
-be the most complex low power laser ever attempted and apparently never worked
-quite right.  It must have also cost a fortune to develop and then technology
-passed it by since it's now possible to obtain 430 nm directly from a GaN
-laser diode, or from a frequency doubled optically or electrically pumped
-external cavity vertical surface emitting laser diode, both of which
-are considerably simpler technologies to reproduce (once all the
-hard research and development has been completed!).  (See the sections
-starting with: <A HREF="laserdio_ru.htm#dioopsl">Optically Pumped Semiconductor
-Laser (OPSL)</A>.)
+D3 был разработан в поздние 90ые годы, когда не было недорогих (относительно выражаясь) способов генерирования
+430 нм. Это должно быть самый сложный маломощный лазер когда-либо предпринятый к производству и нормально не 
+работавший. Было потрачено целое состояние на разработку и продвижение технологии, а теперь уже есть возможность
+получить эту длину волны лазерным диодом на основе нитрида галлия или же от удвоенного диодного лазера с оптической
+или электрической накачкой с поверхностно-излучающим диодом с внешним резонатором, а эти обе технологии куда проще
+в повторении (как только все исследования будут закончены!).  см. подразделы со словами 
+<A HREF="laserdio_ru.htm#dioopsl">Полупроводниковые лазеры с оптической накачкой (OPSL)</A>.
 <p>
-For a long time I believed the D3 never went into production
-at all, but apparently it did, or almost did as I have a couple samples
-that are definitely beyond the prototype stage - nice control electronics
-with no cuts and jumpers on the PCBs, and an optics construction technique
-that is very similar to that of the C532.
+Долгое время я верил, что D3 никогда не был пущен в производство, но все же был, либо почти был, так
+как у меня есть несколько образцов которые уже далеко ушли от прототипа -- управляющая электроника
+хорошего качества без отрезанных проводов и перемычек на платах, конструкция оптики очень похожа
+на таковую в лазере C532.
 <p>
-The complexity arises from the need to precisely match the doubler cavity
-resonance to the wavelength of the 860 nm laser diode as well as phase
-matching the doubling crystal and maintaining all of this stable for
-a useful amount of time!  Of the 2 of these I know of that work, both
-are temperamental.
+Сложность проистекает из необходимости в точном поддержении резонатора с нелинейным кристалом в резонансе
+с длиной волны 860 нм диода одновременно с фазовым синхронизмом в кристалле стабильно в течении длительного
+периода времени. Оба тех, что у меня находятся в рабочем состоянии работают нестабильно.
 <p>
-<b>D3 Photos</b>
+<b>Фотографии лазера D3</b>
 <p>
-Here are some photos of the actual hardware:
+Вот несколько фотографий данного лазера:
 <p>
 <ul>
-<li><A HREF="d3euf.jpg">Coherent D3 Laser (End User) - Front View</A>
-<li><A HREF="d3eub.jpg">Coherent D3 Laser (End User) - Back View</A>
-<li><A HREF="d3oemf.jpg">Coherent D3 Laser (OEM) - Front View</A>
-<li><A HREF="d3oemb.jpg">Coherent D3 Laser (OEM) - Back View</A>
-<li><A HREF="d3oea1.jpg">Coherent D3 Laser Optics/Electronics Assembly</A>
+<li><A HREF="d3euf.jpg">Лазер Coherent D3 для конечного пользователя - вид спереди</A>
+<li><A HREF="d3eub.jpg">Лазер Coherent D3 для конечного пользлвателя - вид сзади</A>
+<li><A HREF="d3oemf.jpg">Лазер Coherent D3 (OEM) - вид спереди</A>
+<li><A HREF="d3oemb.jpg">Лазер Coherent D3 (OEM) - вид сзади</A>
+<li><A HREF="d3oea1.jpg">Лазер Coherent D3  оптическая и электронная часть</A>
 </ul>
 <p>
-Next, the electronics:
+Далее, электроника:
 <p>
 <ul>
-<li><A HREF="d3cpcb1.jpg">Coherent D3 Laser Main Control PCB</A>
-<li><A HREF="d3rpcb1.jpg">Coherent D3 Laser RF PCB</A>
+<li><A HREF="d3cpcb1.jpg">Главная управляющая плата лазера Coherent D3 </A>
+<li><A HREF="d3rpcb1.jpg">Высокочастотная плата лазера Coherent D3</A>
 </ul>
 <p>
-Note the 9 pots on the control PCB and 4 pots on the top of the RF PCB.
-There are 2 more pots on the underside of the RF PCB.  The good news is
-that they are all labeled!  And there are no microcontrollers! :)
-<p>
-Now for the good stuff, the interior of the optics assembly.  The annotation
-is what we know at present:
+Обратите внимание на 9 подстроечников на управляющей плате и 4 подстроечника на верху высокочастотной платы.
+На её задней стороне есть ещё 2 подстроечника. Хорошая новость в том, что они все подписаны! И тут нет
+микроконтроллеров! :)
+<p>А вот внутренности оптического блока. Описание того что нам известно прилагается:
 <p>
 <ul>
-<li><A HREF="d3oai1a.jpg">Coherent D3 Laser  - Optics Assembly Interior
- Annotated</A>
-<li><A HREF="d3oai1.jpg">Coherent D3 Laser  - Optics Assembly Interior -
- Overall View</A>
-<li><A HREF="d3ldc1.jpg">Coherent D3 Laser - Closeup of Laser Diode
- and Associated Components</A>
-<li><A HREF="d3rdc1.jpg">Coherent D3 Laser - Closeup of Resonant Doubler
- and Associated Components</A>
+<li><A HREF="d3oai1a.jpg">Лазер Coherent D3 Laser  - Внутренности оптического блока с подписями</A>
+<li><A HREF="d3oai1.jpg">Лазер Coherent D3 Laser  - Внутренности оптического блока - общий вид</A>
+<li><A HREF="d3ldc1.jpg">Лазер Coherent D3 Laser - Лазерный диод с обвесом крупным планом</A>
+<li><A HREF="d3rdc1.jpg">Лазер Coherent D3 Laser - Резонатор с нелинейным кристаллом и дополнительными элементами крупным планом</A>
 </ul>
 <p>
-There is a collection of photos from an early end-user D3 at <A HREF=
-"http://www.flickr.com/photos/19197385@N06/sets/72157603045531866">Ben's
-Coherent D3 430-10 Gallery Page</A>.  It's quite obvious that the laser
-I have is of the same heritage as his, but has been extensively refined
-in terms of the electronics and optics.  And Ben's is almost certainly
-a prototype based on the extensive rework that is evident in the photos.
+Здесь находится коллекция фотографий раннего D3 лазера для конечного пользователя:
+<A HREF="http://www.flickr.com/photos/19197385@N06/sets/72157603045531866">Ben's
+Coherent D3 430-10 Gallery Page</A>.  Очевидно, что лазер который у меня из того же наследия что и его, 
+но он был тщательно "отшлифован" в отношении оптики и электроники. Тот который у Бена практически точно
+является существенно переработанным прототипом, что заметно на фотографиях
 <p>
-<b>Principles of operation</b>
+<b>Принцип работы</b>
 <p>
-As best as I can determine so far, here is how it works:  The Laser Diode
-generates about 100 mW of 860 nm with a single spatial mode.  Beam correction
-optics generate a beam that is well mode-matched to the doubler
-cavity.  The Optical Isolator assures that there will be no back
-reflections into the laser diode to destabilize lasing.  A low level RF
-signal modulates the amplitude of the laser diode output.  The Laser Diode
-is temperature controlled both to keep it cool and to fine tune the
-wavelength.
+Насколько мне известно, работает он примерно так: лазерный диод генерирует примерно 100 мВт на
+длине волны 860 нм с одной пространственной модой. Оптика корректирует форму луча чтобы он был хорошо согласован с 
+резонатором нелинейного кристалла по модовому составу. Оптический изолятор предотвращает попадание отраженного луча обратно 
+в диод во избежание нестабильности генерации. Маломощный радиочастотный сигнал модулирует амплитуду выхода лазерного диода.
+Лазерный диод имеет термоконтроллер как для охлаждения диода так и для точной подстройки длины волны.
 <p>
-The resonant doubler consists of 4 mirrors in a bow-tie configuration
-with a MgO:LiNbO3 frequency doubling crystal heated to approximately 107 &deg;
-on its own TEC in the upper path.  The High Speed IR Sensor (photodiode, but
-note the rigid mini-coax connection) monitors the reflected
-beam from the entrance mirror of the cavity.  A synchronous demodulator
-(lock-in amplifier or phase sensitive detector) then uses the PZT to
-maximize to tune the cavity length to maximize the intra-cavity IR beam
-power.
+Резонатор  удвоителя состоит из 4 зеркал установленных в конфигурации "бабочки" с нелинейным кристаллом из MgO:LiNbO3 подогреваемым
+примерно до 107 градусов в термостате и установлен в верхней ветви резонатора. Высокоскоростной ИК-датчик
+(фотодиод, но обратите внимание на коаксиальный выход) следит за отражённым излучением от входного зеркала в резонатор. 
+Синхронный демодулятор (усилитель фазочувствительного детектора) потом использует пьезокерамический элемент для точной подстройки
+длины резонатора чтобы увеличить мощность ИК луча внутри резонатора.
 <p>
-The temperature of the doubling crystal is optimized to provide the
-proper phase matching for maximum blue conversion.
+Температура нелинейного кристалла оптимизирована для обеспечения точного фазового синхронизма и максимального коэффициента преобразования
+в синее излучение.
 <p>
-Note that while the bow-tie cavity has the topology of a ring, it has
-no gain and thus is inherently unidirectional based on how the input
-beam is introduced, in this case resulting in right-to-left travel
-in both horizontal legs.  Thus, assuming that the OC mirror (upper
-left) is high transmission for 430 nm, the blue light builds up in power from
-right-to-left inside the doubling crystal and exits the cavity without
-reflecting from any mirrors.  So the cavity only needs to be resonant for
-860 nm to maximize the intra-cavity IR power, and thus the blue power.
-It's possible that the component labeled "Low Speed IR Sensor" monitors
-the intracavity IR power via its leakage through the upper right
-mirror.  This all requires fancy footwork because the IR power will
-decrease as a rsult of optimum phase matching in the doubling crystal,
-and thus maximum blue light.
+Хотя "бабочкообразный" резонатор по сути является кольцевым, в нем не происходит усиление света. Таким образом,
+резонатор однонаправленный - движение света в нем определяется входящим пучком - он движется справа налево
+в обоих горизонтальных ветвях. Так, предполагая, что выходное зеркало (верхнее слева) хорошо пропускает 430 нм,
+синий свет набирает мощность в направлении справа налево в нелинейном кристалле и выходит из резонатора без отражения от
+каких-либо зеркал. Получается, что резонатор должен поддерживать резонанс для длины волны 860 нм для
+максимизации мощности ИК-излучения внутри резонатора и, как следствие, мощности выходного синего излучения. 
+Возможно, что элемент обозначенный как "Низкоскоростной ИК-датчик (Low Speed IR Sensor)" следит за внутрирезонаторной мощностью
+ИК-излучения через его утечку из верхнего правого зеркала. Все это требует хорошего согласования параметров (?), так как мощность 
+основного излучения падает при установившемся фазовом синхронизме а мощность синего излучения увеличивается.
 <p>
-In some ways, this is similar to the operation of the Lightwave Model
-142 laser with its resonant doubler.  But that doubler is a monolithic
-crystal whose temperature increases with the amount of intra-cavity
-power.  Thus, the tuning must be approached from one direction to
-catch and ride the wave, so to speak, as the intra-cavity power builds up.
-Here, the only part of the bow-tie cavity that will be affected is
-the doubling crystal itself, which is relatively small as far as
-its effect on the cavity length.  So, simply peaking the blue power
-may be sufficient, rather than the more complex algorithm of the LWE-142.
-(For more information on the LWE-142, see the section:
-<A HREF="laserscl.htm#scllwe142">Lightwave Electronics 142 Green DPSS
-Laser</A>.
+Некоторым образом это похоже на работу лазера Lightwave Model
+142 с резонансным удвоением. Но там удвоитель это монолитный кристалл, температура которого увеличивается вместе с величиной 
+внутрирезонаторной мощности. Тогда настройка должна "заходить с одной стороны для того чтобы поймать волну", так сказать,
+так как мощность основного излучения накапливается в резонаторе. Здесь единственная деталь, на которую оказывается влияние в резонаторе - это,
+собственно, нелинейный кристалл, чья величина достаточно мала по сравнению с длиной резонатора, которая влияет на выходную мощность 
+гораздо сильнее. Так что просто повысить выходную мощность до максимума проще, чем управление ею по более сложному алгоритму, как
+в лазере LWE-142. (Для дополнительной информации по нему см. подраздел:<A HREF="laserscl.htm#scllwe142">Lightwave Electronics 142 зелёный DPSS
+лазер</A>.
 <p>
-Possible feedback loops:
+Возможные цепи обратной связи:
 <p>
 <ol>
-<li>Laser Diode current for power control.  RF modulation to provide
- power (and wavelength?) dither.
-<li>Laser Diode temperature for cooling and wavelength control.
-<li>Optical Isolator temperature.
-<li>Resonant Doubler Bow-Tie Cavity length to resonate at 860 nm.  (Maximize
- intracavity 860 nm power.)
-<li>Doubling Crystal temperature to phase match at 430 nm.  (Maximize
- 430 nm output.)
+<li>Подстройка тока лазерного диода для управления мощностью. ВЧ модуляция для подстройки мощности и длины волны (?)
+<li>Управление температурой лазерного диода для охлаждения и подстройки длины волны.
+<li>Подстройка температуры оптического изолятора.
+<li>Подстройка длины "бабочкообразного" резонатора с нелинейным кристалом. (максимизация мощности основноо излучения в резонаторе.)
+<li>Подстройка температуры нелинейного кристалла для поддержания фазового синхронизма.  (максимизация мощности выходного 430 нм излучения.)
 </ol>
 <p>
-<b>Power</b>
+<b>Питание</b>
 <p>
-Powering the OEM D3 laser is very straightforward - just 4
-DC power supplies to the small white connector (J2 PWR).
+Питание ОЕМ D3 лазера очень простое и прямолинейное - нужно просто 4 источника постоянного тока и подключить 
+их к маленькому белому разъему. (J2 PWR).
 <p>
 <PRE>
-  Pin    Function   I Max
+ Штырек Назначение   I Max
  -----------------------------------
    1     +5 VDC     2.0  A
-   2     Ground
+   2     Земля
    3     -5 VDC     0.35 A
-   4     Ground
+   4     Земля
    5     +15 VDC    0.4  A
-   6     Ground
+   6     Земля
    7     -15 VDC    0.2  A
-   8     Ground
+   8     Земля
 </PRE>
 <p>
-Since this isn't a high power laser, the current requirements are
-relatively low, though finding an inexpensive commercial power supply
-with all 4 voltages may be a challenge.  Deriving the -5 VDC from the
--15 VDC supply with a 3 terminal regulator may simplify this.
-The only problem is that the connector isn't that common.  The PCB
-connectors are Molex right angle fully shrouded headers, series 5268NA,
-part numbers 22-05-7155 (J1, 15 pin) and 22-05-7155 (J2, 8 pin).
-The mating connectors are Molex part numbers 50-37-5153 and 50-37-5083,
-respectively.  The crimp pins are Molex part number 08-70-1040.  These
-are all available from <A HREF="http://www.mouser.com/">Mouser</A>.
+Так этот лазер не является высокомощным, то потребляемый ток этими цепями сравнительно небольшой. Тем не менее 
+найти блок питания имеющий сразу все 4 напряжения может стать испытанием. Получение -5В из -15В с помощью интегрального
+стабилизатора может упростить задачу. Единственная проблема -- необычный разъем питания. На плате установлены 
+разъемы типа Molex 5268NA, с серийным номером  22-05-7155 (J1 15штырьковый) и 22-05-7155 (J2 8штырьковый). Ответные
+части тоже типа Molex с номером 50-37-5153 и 50-37-5083 соответственно. Обжимные штырьки -- типа Molex с номером 08-70-1040.
+Приобрести их можно здесь <A HREF="http://www.mouser.com/">на Mouser'е</A>.
 <p>
-<b>Control and status</b>
+<b>Управление и контроль состояния</b>
 <p>
-J1 provides several signals required to run the laser as well as feedback
-on its operating condition and state of health:
+J1 обеспечивает несколько сигналов, необходимых для запуска и работы лазера , а также обратной связи
+на его режиму работы и состоянию здоровья :
 <p>
 
 
 <p>
 <PRE>
-  Pin  Function                  Description
- ------------------------------------------------------------------------------
-   1   Interlock Return          Jumper to pin 2.  Required for the laser
-   2   Interlock                 Jumper to pin 1.   to operate.
+Штырёк   Назначение                  Описание
+ -----------------------------------------------------------------------------------------------
+   1   Блокировка                Замкнуть с штырьком 2.  Требуется для работы
+   2   Блокировка                Замкнуть с штырьком 1.        лазера.
 
    3   NC
 
-   4   LD Temperature            LDT = 25-20*V &deg;C.
+   4   Температура лаз. диода    LDT = 25-20*V &deg;C.
 
-   5   Cavity Relock Return      See pin 9.
+   5   Фиксация длины резоантора    См. штырёк 9.
 
-   6   Signal Return (GND)       Use for voltage measurements.
+   6   Земля (GND)                 Относительно неё измеряются напряжения
 
-   7   End of Life Signal        This will be a few volts positive for a new
-                                  laser and trends toward 0 V as the laser
-                                  diode degrades with use.  However, the
-                                  decline may not be monotonic.  At some
-                                  point once EoL goes negative, lock will
-                                  be lost.
+   7   Сигнал окончания ресурса   Когда лазер новый, этот штырек имеет потенциал
+				 в несколько вольт относительно земли и с наработкой
+				 падает до нуля (при постепенной деградации диода).
+				 Это падение не факт что будет монотонным, в определённый
+				 момент этот сигнал приобретает отрицатлеьное значение и 
+				 тогда длина резонатора не будет фиксироваться. 
 
-   8   Cavity Integrator Signal  Correction signal generated by the FM
-                                  cavity locking loop.
+   8   Cavity Integrator Signal  Сигнал коррекции для цепи подстройки длины резонатора
 
-   9   Cavity Relock Request     Jumper to pin 5 for cavity PZT rest to be
-                                  performed automatically.
+   9   Cavity Relock Request     Замкнуть с штырьком 5 для автоматической 
+                                 подстройки длины резоантора
 
-  10   Cavity PZT Voltage        Correction voltage applied to cavity PZT.
+  10   Напряжение пьезоэлемента  Подстройка напряжения подаваемого на пъезоэлемент
+       резонатора      
 
-  11   Non-Linear Optic Temp.    NLOT = 25-20*V &deg;C.
+  11   Температура нелинейного    NLOT = 25-20*V &deg;C.
+       кристалла   
 
-  12   LD Current                LDI = V/10 mA.
+  12   Ток лазерного диода        LDI = V/10 mA.
 
-  13   LD Current Set            LDIS = V/10 mA.
+  13   Устанвока тока ЛД         LDIS = V/10 mA.
 
-  14   Output Adjust             Applying a voltage from 0 to 5 V will vary
-                                  output power from full to half power.
+  14   Регулировка выходной       подача напряжения от 0 до 5В регулирует 
+                                  выходную мощность от минимума до максимума.
+                   
 
-  15   Blue Power                Output power monitor, 0 to 5 V.  5 V will be
-                                  spec'd power.  (I.e., on the 430-10, 5 V
-                                  corresponds to 10 mW of blue.)
+  15   Указатель мощности         На выходе присутствует напряжение от 0 до 5В.
+                                  5В соответствует максимальной мощности согласно 
+                                  документации, наприемр в модели 430-10 5В будет соответствовать 
+								  10 мВт синего света.
 </PRE>
 <p>
-The minimum connections to get the laser to operate are to jumper pins 1 to 2
-(Interlock) and pins 5 to 9 (Automatic Cavity Relock).  To check diode
-health, monitor between pins 7 (EoL signal) and 7 (GND).  When new, this
-voltage should be several volts positive, declining as the diode ages.
-0 V is considered end-of-life, though the laser may not actually lose
-lock until it goes somewhat negative.  For a diode near end-of-life,
-as the laser warms up, the EoL voltage will oscillate slightly as the cavity
-expands as a result of mode sweep and the controller resorts to increasing
-diode current to maintain lock.  The p-p amplitude may be up to 1 V or
-more with a time scale of 10s of seconds.
+Чтобы запустить лазер нужно как минимум замкнуть межу собой штырьки 1 и 2 (блокировка) и штырьки 5 и 9
+(автоматическая подстройка длины резонатора). Чтобы знать состояние лазерного диода - проверяйте
+напряжение между штырьком 7 (сигнал окончания ресурса) и 6 (земля). Если лазер новый, то там будет
+несколько вольт положительного потенциала, который уменьшается со временем и деградацией диода.
+Нулевой потенциал подразумевает конец ресурса и приход лазера в негодность, но он все ещё продолжает работать,
+длина резонатора подстраивается и фиксируется до тех пор пока потенциал не станет отрицательным.
+В ситуации когда диод вот-вот накроется но ещё работает, при прогреве лазера потенциал сигнала ресурса 
+может немного колебаться в результате дрейфа режима и отработки его контроллером, который увеличивает 
+ток диода для сохранения резонатора в зафиксированном состоянии. Амплитуда колебаний потенциала может
+составить до 1 вольта или больше в течении десятков секунд.
 <p>
-There are also many test points on the PCBs, most of them labeled.
+На платах также есть много контрольных точек, большинство которых подписано.
 <p>
-<b>Main Control PCB Pots</b>
+<b>Подстроечные резисторы на главной плате</b>
 <p>
 <PRE>
-   Label   NAME      Function
- ---------------------------------------------------------
-   PR1    NLOTS      Non-Linear Optic Temperature Set
-   PR2    PM GAIN    Phase MAtch Gain
-   PR3    ISOTS      Optical Isolator Temperature Set
+Маркировка Название      Назначение
+ -----------------------------------------------------------------------------------------------------
+   PR1    NLOTS      Установка температуры нелинейного кристалла
+   PR2    PM GAIN    Усиление сигнала фазового синхронизма
+   PR3    ISOTS      Установка температуры оптического изолятора
    PR4    OA         ????
-   PR5    BLUE SP    Level of expected blue to report it to analog interface
-   PR6    LDIS       Laser Diode Current Set
+   PR5    BLUE SP    Ожидаемый уровень выходной мощности для отправки по последовательному интерфейсу
+   PR6    LDIS       Установка тока лазерного диода
    PR7    CIRC       ????
-   PR8    BLUE CAL   Blue Calibration (for monitor pin)
-   PR9    LDT        Laser Diode Temperature
-   PR10   SL GAIN    (Not installed)
+   PR8    BLUE CAL   Калибровка сигнала выходной мощности
+   PR9    LDT        Температура лазерного диода
+   PR10   SL GAIN    Не установлен
 </PRE>
 <p>
-<b>Main Control PCB DIP switches</b>
+<b>DIP выключатели на главной плате</b>
 <p>
 <PRE>
-  Position  Default   NAME     Function            Comments
- ----------------------------------------------------------------------------
-    SW1        ON    PM ERROR  Phase Match Error
-    SW2       OFF    PM RAMP   Phase Match Ramp
-    SW3        ON    PM TRIP   Phsae Match Trip
-    SW4       OFF    CL RAMP   Cavity Ramp
-    SW5        ON    CL TRIP   Cavity Trip
+  Позиция Умолчиние  Название  Назначение                              Комментарии
+ -----------------------------------------------------------------------------------------------------
+    SW1        ON    PM ERROR  Ошибка фазового синхронизма
+    SW2       OFF    PM RAMP   Подстройка фазового синхронизма
+    SW3        ON    PM TRIP   Phase Match Trip
+    SW4       OFF    CL RAMP   Удлинение резонатора ?
+    SW5        ON    CL TRIP   Укорочение резонатора ?
     SW6        ON      RF      RF Dither?
-    SW7       OFF      LL      Laser Lock?
-    SW8       OFF      LDI     Laser Diode Current
+    SW7       OFF      LL      Фиксация (стабилизация) лазера?
+    SW8       OFF      LDI     Ток лазерного диода
 </PRE>
 <p>
-<b>Main Control PCB LEDs</b>
+<b>Светодиоды на главной плате</b>
 <p>
 <PRE>
-   NAME   Color      Function
- ------------------------------------------------------------------------------
-    LDI   Yellow     LD Current - Lit when LD is off
-    LDT    Red       LD Temperature - Lit when LD temperature is not in bounds
-    CL     Red       Cavity Lock - Lit when the cavity is not in resonance
-    PM     Red       Phase Match - Lit when NLO is not at optimal temperature
-    LL     Red       Laser Lock? - Lit when output is low or unstable
+ Название  Цвет      Назначение
+ -----------------------------------------------------------------------------------------------------
+    LDI   Жёлтый     Ток ЛД - горит когда диод выключен
+    LDT   Красный    Температура ЛД - Горит когда температура вне допустимых пределов
+    CL    Красный    Фиксация резонатора - Горит когда резонатор не в резонансе
+    PM    Красный    Фазовый синхронизм - Горит когда температура нелинейного кристалла неоптимальна
+    LL    Красный    Фиксация лазера? - Горит когда выходная мощность мала или нестабильна
 </PRE>
 <p>
-During startup, all LEDs come on initially, then they go out in the same
-order as they are listed above.  When the laser is operating correctly,
-there should be no lit LEDs.
+Во время запуска все светодиоды ненадолго загораются, а потом гаснут в порядке указанном выше. Когда лазер работает правильно,
+ни один из них не должен гореть.
 <p>
-<b>RF PCB Pots</b>
+<b>Подстроечные резисторы на ВЧ-плате</b>
 <p>
 <PRE>
-   Label   NAME      Function            Comments
- ----------------------------------------------------------------------------
-    PR1   CL GAIN    Cavity Lock Gain
-    PR2   LL GAIN    Laser Lock Gain?
+Маркировка Название      Назначение                                     Комментарии
+ ------------------------------------------------------------------------------------------------------
+    PR1   CL GAIN    Усиление сигнала фиксации резонатора
+    PR2   LL GAIN    Усиление сигнала фиксации лазера
     PR3   RF MIN     ????
     PR4    PHASE     ????
-    PR5   (Under PCB, no function listed)
-    PR6   (Under PCB, no function listed)
+    PR5   (Под платой, назначение не указано)
+    PR6   (Под платой, назначение не указано)
 </PRE>
 <p>
-<b>Tests of a D3 laser</b>
+<b>Тесты лазера D3</b>
 <p>
-I have two of these lasers.  One was known to have an annoying rattle
-and so I didn't expect that to work at all.  The other was rattle-free,
-so there was potential for it to do something.  However, initially, both
-behaved exactly the same: All 5 LEDs came on initially and then the LDI
-LED went out after about 30 seconds.  Nothing else happened no matter how
-long the system was powered.  So, the laser cavity with the rattle was
-opened and found to have had its glass substrate cracked in two places,
-not unexpected since the metal cover was very well bashed on one corner.
-The interior photos are of essentially that laser cavity.  Amazing what
-a bit of MSPaint will do to cracks. :)
+Таких лазеров у меня есть два. У одного что-то назойливо трепыхалось внутри и я совершенно не надеялся на то что он окажется
+в рабочем состоянии. В другом ничего не трепыхалось, так что он обладал некоторым потенциалом для запуска. Сначала оба лазера 
+вели себя одинаково -- загорались все 5 светодиодов и через 30 секунд LDI светодиод гас. Больше ничего не происходило вне
+зависимости от того как долго лазер был включён. Затем лазер с трепыханием был вскрыт и было обнаружено, что стеклянная подложка 
+треснула пополам. Это было неудивительно, учитывая хорошо смятый угол на металлической крышке с одной стороны. Собственно тот который 
+показан на фотографиях с описанием оптических элементов и есть он. Удивительно на что способен MSPaint в плане закрашивания трещин. :) 
 <p>
-But then I noticed something strange on the other laser: There was
-a shorting plug on the center coax, which is in parallel with the
-laser diode.  This wasn't present on the smashed one I had been
-examining.  It was likely there to prevent static damage or something.
-But of course, it would prevent much of use from happening as well.
-Once the plug was removed, that laser produced some very nice blue light
-almost immediately after the LDI LED went off (which means that the
-laser diode is on).  The output power went in cycles from dim to
-bright over a minute or so, but would not lock.  However, the only
-LEDs now on were PM and LL.  The output power simply climbed to a
-maximum and fell back to a low level.  These lumps were perfectly symmetric
-(unlike the behavior of the LWE-142).
+Потом я заметил нечто странное на другом лазере -- на центральном коаксиальном кабеле была установлена замыкающая перемычка
+в параллель лазерному диоду. Она отсутствовала на мятом лазере. Вероятно, она была установлена для предотвращения
+повреждения диода статическим электричеством. Сразу как перемычка была удалена -- почти сразу после погасания LDI светодиода
+(что означает включение лазерного диода) появился хороший синий свет. Выходная мощность циклично менялась от "тусклого" излучения до "яркого",
+но не стабилизировалась на одном уровне. Мощность повышалась до максимума а потом опять падала. Однако, горящими оставались 
+светодиоды PM и LL. Эти колебания были абсолютно симметричными (не так как у LWE-142). 
 <p>
-So, I figured that perhaps the laser was unable to achieve the default maximum
-power.  There is a way to control power, at least from full to one half power
-via a 0 to 5 V input.  When that was attached to a variable DC power supply,
-it was indeed possible to reach a point where the bright blue output
-could be maintained and the PM LED then went out as well.  However,
-it isn't stable based on meter readings.  It may be fluctuating by
-50 percent but maintaining an average of over 3 mW.  Since these are 10 mW
-(rated) lasers, perhaps the peaks hit 5 mW.  So far, adjustments
-of NLOTS and LDT have had little effect.  Increasing LDIS (the laser diode
-current) does allow the average output power at which the laser maintains some
-degree of lock to be slightly higher, but not enough to be worthwhile
-given how close it is already running to the rated laser diode current.
-Under no conditions have I been successful at getting the LL LED to go out.
+Потом я предположил что лазер не может выйти на максимальную мощность указанную в паспорте. Есть способ управлять мощностью,
+по крайней мере в диапазоне от максимума до половинной путем подачи напряжения от 0 до 5В на соответствующий вход. 
+Когда я подключил ко входу регулируемый источник питания мне удалось получить более-менее стабильынй яркий выход синего
+излучения, при этом РМ светодиод погас. Тем не менее она не была стабильной судя по показаниям измерителя мощности. Она колебалась
+со средним значением около 3 мВт. Так как заявленная мощность составляет 10 мВт у этих лазеров, то пиковая мощность в данном 
+случае составила 5 мВт. Регулировка NLOTS и LDT особого эффекта не дала. Увеличение тока лазерного диода увеличивала стабильную мощность, 
+на которой лазер фиксировался, но это того не стоило, так как диод и так работал на максимальном паспортном токе. Никакими манипуляциями не 
+удалось "погасить" LL светодиод.
 <p>
-CAUTION: Later I found a jumper labeled: 1/2 Pwr.  This indeed does result
-in the laser behaving the same way as with the pot set at 5 V by connecting
-the +5 VDC power supply directly to the power control input pin when installed!
-So, if there is also a pot for power control, turning it fully to 0 V shorts
-out the power supply!  Couldn't they afford a 0.1 cent isolation resistor? :)
+Внимание: позже я обнаружил джемпер помеченный 1/2 Pwr. При подключении выхода +5В источника питания
+на контакт управления мощностью лазер себя ведёт так как если бы потенциометр был установлен на 5В, 
+когда этот джемпер установлен. При этом, если присутствует потенциометр регулировки мощности, то выведение его в положение
+"0 В" происходит короткое замыкание источника питания. неужели они не смогли себе позволить копеечный изолирующий резистор? :)
 <p>
-More to come.
+Продолжение следует.
 
-<h3><A NAME="dioldlb">Laser Diode Light Bulbs?</A></h3>
+<h3><A NAME="dioldlb">Лазерные диоды в качестве лампочек?</A></h3>
 
-Consider: Some commercially available high power laser diodes have an overall
-conversion efficiency - electrical power in to optical power out - of over 50
-percent.  Current research is attempting to boost this past 80 percent.
+Заметьте: у некоторых высокомощных лазерных диодов эффективность преобразования электрической энергии в световую превышает 50%.
+Текущие исследования предполагают увеличить её до 80% и более.
 <p>
-Now, if all the light bulbs in the World were replaced with these high
-efficiency laser diodes mass produced in visible wavelengths, the
-the energy crisis - at least with respect to electrical generating
-and transmission capacity - would be over (or at least
-greatly reduced as a here and now crisis), since it's been estimated that 50
-percent of electricity usage goes into lighting and most of this is presently
-highly inefficient.  Incandescent lamps are only about
-5 percent efficient; halogen lamps around 7 to 10 percent; and fluorescents,
-about 15 to 20 percent.  High brightness LEDS suitable for lighting
-applications are advancing but are currently somewhere around halogen
-lamps in efficiency (though under some conditions, LEDs at low power
-may exceed 25 percent efficiency).  But, it's unlikely that the LED could
-even match the laser diode due to the basic physics.
+Теперь, если бы все лампочки накаливания в мире заменить этими мощными эффективными лазерными диодами с видимым спектром
+излучения, то энергетический кризис (в отношении требуемых объёмов генерирования и транспортировки энергии) стал бы нонсенсом,
+или по крайней мере не был бы таким острым как сейчас, так как предполагается, что 50% электричества используется для
+освещения и большая часть этой части расходуется неэффективно. КПД обычных лампочек накаливания около 5%, галогенок -- 7-10%,
+люминесцентных -- 15-20%. Сверхъяркие светодиоды, которые применяются для освещения совершенствуются и их эффективность 
+сравнима с галогенками (хотя при других условиях светодиоды при малых мощностях показывают КПД свыше 25%). Маловероятно, что
+светодиоды будут соответствовать лазерным диодам из-за разных физических принципов работы.
 <p>
-A side benefit of mass produced laser light bulbs might be that hobbyists'
-access to high power lasers would be greatly improved! :)
+Если бы "лазерные лампочки" массово производились, то доступ к мощным лазерам для энтузиастов очень сильно упростился бы -- это 
+побочное их преимущество! :)
 <p>
-Before you say that it would be too dangerous to have every table lamp using
-a high power laser, it would be a relatively simple matter to mold a diffuser
-onto the laser diode in such a way that it would be virtually impossible to
-disassemble (sorry hobbyists but maybe if we lobby hard enough, a special
-tool could be made available!) and then wouldn't be any more dangerous than
-a common light bulb.
+Прежде, чем Вы скажете, что это будет слишком опасно - иметь мощный лазер в каждой настольной лампе, надо отметить что 
+установить светорассеиватель таким образом, чтобы его было невозможно снять сравнительно несложно. (Да простят меня энтузиасты, но если
+мы хорошо постараемся то все равно умудримся удалить рассеиватель, например достав специальный инструмент.) Тогда такой лазер не 
+будет опаснее обыкновенной лампочки.
 <p>
-Aside from reducing the cost of high power laser diodes by about 3 or 4 orders
-of magnitude, wavelength is a definite stumbling block that still needs to be
-overcome before any of this could be practical.  Either
-red, green, and blue laser diodes will need to be combined in a single
-lamp assembly to produce something approaching white light or a combination
-of high efficiency phosphors will be needed to convert near-UV to visible
-light.  One can envision a lighting panel in standard sizes like 2x2 or 2x4
-feet that replaced fluorescent ceiling fixtures but used less than 25 percent
-of their power.  Or, CLLs (Compact Laser Lamps) that replaced incandescent or
-compact fluorescent lamps.  Needless to say, high power multicolor or UV
-laser diodes do not presently exist but a market measured in billions of
-units compared to current usage of 10s of thousands could provide a lot of
-incentive to develop them! :)
+Помимо снижения стоимости мощных ЛД на 3-4 порядка, длина волны это ещё один камень преткновения, который должен быть
+преодолён для получения какого-либо практического устройства. Красный, зелёный и синий лазеры должны быть объединены в 
+один модуль для излучения чего-то похожего на белый свет. Другой вариант - комбинация нескольких высокоэффективных люминофоров для 
+преобразования ближнего УФ спектра в видимый свет. Можто только представлять себе осветительные панели со стандартным размером 
+2*2 или 2*4 фута заменившие люминесцентные светильники с их КПД менее 25%. Или КЛЛ (Компактная Лазерная Лампа), заменившую обычные
+лампочки накаливания и энергосберегайки. Итак понятно, что мощных многоцветных или УФ лазерных диоов сейчас не существует,
+но перспективный объем рынка в 10ки миллиардов устройств по сравнению с 10ками тысяч дал бы прекрасную мотивацию для их разработки! :)
 
-<h3><A NAME="diocss8a">On-line Introductions to Diode Lasers</A></h3>
+<h3><A NAME="diocss8a">Введение в диодные лазеры онлийн</A></h3>
 
-There are a number of Web sites with laser information and tutorials.
+Вот несколько веб-сайтов посвящённых диодным лазерам:
 <ul>
-<li>One of the best so far is
- the <A HREF="http://www.cord.org/">CORD</A> Laser/Electro-Optics
+<li>Один из лучших на текущий момент <A HREF="http://www.cord.org/">CORD</A> Laser/Electro-Optics
  Technology Series, Cord Communications, 324 Kelly Drive, P.O.
  Box 21206, Waco, Texas 76702-1206.
 <p>
- In particular:
+ В особенности:
 <p>
  <ul>
- <li><b>Module 3-11 Semiconductor Lasers</b> - goes into considerable detail
-  on the theory as well as some more practical information related to diode
-  lasers.
+ <li><b>Модуль 3-11 Полупроводниковые лазеры</b> - содержит подробную теорию и практическую информацию по диодным лазерам.
 <p>
- <li><b>Module 4-6 Diode Laser Power Supplies</b> - covers the general
-  requirements and includes some nice block diagrams and sample circuits.
+ <li><b>Модуль 4-6 Источники питания лазерных диодов</b> - описывает общие требования к питанию и включает несколько хороших блок-схем
+ и принципиальных схем.
  </ul>
 <p>
- See the section: <A HREF="laserfaq_ru.htm#faqoli">Онлайн-введения в лазеры</A>
- for the current status and on-line links to these courses, and
- additional CORD LEOT modules and other courses relevant to the
- theory, construction, and power supplies for these and other types of lasers.
+ См. раздел: <A HREF="laserfaq_ru.htm#faqoli">Онлайн-введения в лазеры</A>
+ для ознакомления с текущим состоянием и онлайн-ссылками на эти курсы и для получения
+ дополнительных модулей CORD LEOT, а также других курсов связанных с теорией, конструированием, источниками питания
+ для других типов лазеров. 
 <p>
-<li><A HREF="http://www.meos.com/">MEOS GmbH</A> is a developer of laser
- educational materials and equipment (among other things).  Their 
- <A HREF"http://www.meos.com/en/download.htm">Download Page</A> had the
- lab/study manuals for their courses on a wide variety of laser related
- topics.  While designed to be used in conjunction with the laboratory
- apparatus which they sell, these manuals include a great deal of useful
- information and procedures that can be applied in general.
+<li><A HREF="http://www.meos.com/">MEOS GmbH</A> является разработчиком обучающих материалов
+ по лазерам и лазерному оборудованию, среди прочего. На их <A HREF"http://www.meos.com/en/download.htm">странице закачек</A> 
+ были руководства к их курсам по многим тематикам связанным с лазерами. Хотя эти руководства написаны для использования совместно
+ с лабораторной аппаратурой, которую они продают, в них огромное количество полезной информации которая распространяется на
+ "общие случаи".
 <p>
- Several modules would be of particular interest for diode lasers.
- Unfortunately, the on-line manuals (in PDF format) have disappeared
- from the MEOS Web site.  But I have found and archived most of them:
-<p>
+ Некоторые модули представляют особенный интерес в отношении диодных лазеров. К сожалению, онлайн-руководства исчезли с сайта MEOS. 
+ но я их нашел и большую часть заархивировал:
+ <p>
  <ul>
- <li>EXP01 - Emission and Absorption.
- <li><A HREF="http://repairfaq.ece.drexel.edu/sam/MEOS/EXP03.pdf">EXP03 - Fabry-Perot Resonator</A>
- <li><A HREF="http://repairfaq.ece.drexel.edu/sam/MEOS/EXP04.pdf">EXP04 - Diode Laser</A>
- <li><A HREF="http://repairfaq.ece.drexel.edu/sam/MEOS/EXP06.pdf">EXP06 - HeNe Laser</A>
- <li><A HREF="http://repairfaq.ece.drexel.edu/sam/MEOS/EXP20.pdf">EXP20 - Laser Safety</A>
- <li><A HREF="http://repairfaq.ece.drexel.edu/sam/MEOS/EXP27.pdf">EXP27 - Bar Code Reader</A>
+ <li>EXP01 - Излучение и поглощение
+ <li><A HREF="http://repairfaq.ece.drexel.edu/sam/MEOS/EXP03.pdf">EXP03 - Резонатор Фабри-Перо</A>
+ <li><A HREF="http://repairfaq.ece.drexel.edu/sam/MEOS/EXP04.pdf">EXP04 - Диодный лазер</A>
+ <li><A HREF="http://repairfaq.ece.drexel.edu/sam/MEOS/EXP06.pdf">EXP06 - Гелий-неоновый лазер</A>
+ <li><A HREF="http://repairfaq.ece.drexel.edu/sam/MEOS/EXP20.pdf">EXP20 - Лазерная безопасность</A>
+ <li><A HREF="http://repairfaq.ece.drexel.edu/sam/MEOS/EXP27.pdf">EXP27 - Считыватель штрих-кодов</A>
  </ul>
 <p>
- If MEOS should complain, these will have to be removed.  So, get them while
- you can!  But I doubt they'll complain.  And most are also archived at the
- <A HREF="http://web.archive.org/">Wayback Machine Web Site</A>.
+ Если MEOS пожалуется, я буду вынужден их удалить. Поэтому, качайте пока есть такая возможность, а я уверен что они пожалуются.
+ Большая часть заархивирована здесь: <A HREF="http://web.archive.org/">Wayback Machine Web Site</A>.
 <p>
-<li>Also see the section: <A HREF="laserlir.htm#lirweb1">General Laser
- Information and Tutorial Sites</A> for other sites that may be worth visiting.
+<li>См. раздел: <A HREF="laserlir.htm#lirweb1">Общая информация по лазерам и сайты с руководствами</A> для ознакомления с другим стоящими сайтами.
 </ul>
 
-<h3><A NAME="diocss9">Additional Laser Diode Information</A></h3>
+<h3><A NAME="diocss9">Дополнительная информация по лазерным диодам</A></h3>
 
-Here are some Web sites that may be of interest:
+Вот несколько веб-сайтов, представляющих интерес:
 <p>
 <ul>
 <li><A HREF="http://optima-prec.com/notes.htm#Electro-optical">
- Optima-Precision</A> (Basics, glossary, and FAQ)
+ Optima-Precision</A> (Базовое введение, терминология, часто задаваемые вопросы)
 <p>
 <li><A HREF="http://www.avtechpulse.com/faq.html/IV.24/">Avantech Diode FAQ -
- Section IV.24: Laser Diodes</A> (Laser diode intro, references, and some
- manufacturers)
+ Раздел IV.24: Лазерные диоды</A> (введение, ссылки, некоторые производители)
 <p>
 <li><A HREF="http://www.avtechpulse.com/faq.html/IV.16/">Avantech Diode FAQ -
- Blue-Green-Violet Laser Diodes?</A> (General info but some out-of-date)
+ Синие-зелёные-фиолетовые лазерные диоды?</A> (Общая информация, частью устаревшая)
 <p>
-<li><A HREF="http://www.mellesgriot.com/">Melles Griot</A>.  Go to "Downloads",
- "Technical Literature About...", "Lasers".  (Includes laser diode
- characteristics, correction, optics.)
+<li><A HREF="http://www.mellesgriot.com/">Melles Griot</A>.  См. "Закачки",
+ "Техническая литература о...", "Лазеры".  (Включает характеристики лазерных диодов, коррекцию, оптику.)
 <p>
 <li><A HREF="http://www.powertechnology.com/">Power Technology, Inc.</A>.
- Go to "Resource Library", "White Papers". (Includes Laser diode beam
- characteristics)
+ См. "Resource Library", "White Papers". (Включает характеристики излучения лазерных диодов.)
 <p>
 <li><A HREF="http://www.misty.com/~don/laserdon.html">Don Klipstein's Laser
- Page</A> (General laser diode info)
+ Page</A> (Общая информация о лазерных диодах)
 <p>
 <li><A HREF="http://www.ilxlightwave.com/library/">ILX Lightwave Technical
- Library</A>.  The application notes include several general laser diode
- related documents with info on pulsing laser diodes, protecting laser
- diodes, mode hopping, 670 nm laser diode characteristics, etc.
+ Library</A>.  Тут есть несколько документов связанных с лазерными диодами, например с инфомацией об импульсном режиме оных,
+ защите, изменению модового состава, характеристиками 670 нм диодов итп. 
 <li><A HREF=
  "http://www.mtmi.vu.lt/pfk/funkc_dariniai/diod/led.htm">Light-Emitting
- Diodes (LED)</A> Basic structure of LEDs and laser diodes, principles of
- operation, as well as diagrams and photos, include two "borrowed" from
- here. :)
+ Diodes (LED)</A> Базовое устройство светодиодов, лазерных диодов, принципы работы, схемы и фотографии, включая две "позаимствованных" отсюда. :)
 </ul>
 <p>
-Some very good basic information about laser diodes is provided in of all
-places, manufacturer's catalogs! :)  Try companies like Mitsubishi, Fujitsu,
-Hitachi, Sharp, Sony, NEC, etc.  They have introductory sections at the front
-or the back of their laser diode catalogs.  Just call the and ask for a laser
-diode catalog.  Much of this is now on-line.
+Много хорошей вводной информации содержится в каталогах производителей! Проверьте такие фирмы как Mitsubishi, Fujitsu,
+Hitachi, Sharp, Sony, NEC, итп.  В начале или конце их каталогов есть общая вводная информация.
+Просто позвоните туда и попросите каталог их лазерных диодов. Многое сейчас есть онлайн.
 <p>
 <ul>
 <li><A HREF="http://www.roithner-laser.com/LP-laserdiodesIR.htm">Roithner
- Lasertechnik Infra-Red Laser Diodes Page</A> (Many complete datasheets).
+ Lasertechnik Infra-Red Laser Diodes Page</A> (Много даташитов).
 <p>
 <li><A HREF="http://www.k3pgp.org/lasermfg.htm">K3PGP's Laser Diode
  Manufacturers</A>.
 <p>
-<li><A HREF="http://www.k3pgp.org/ldspecs.htm">K3PGP's
- Laser Diode Specifications</A> maintained by K3PGP (Email: k3pgp@qsl.net).
- (This is a version of the old Thorlabs info and hasn't been updated
- in quite awhile.)
+<li><A HREF="http://www.k3pgp.org/ldspecs.htm">Спецификации на лазерные диоды K3PGP</A> обслуживается K3PGP (Email: k3pgp@qsl.net).
+ (Это старя версия информации из Thorlabs и давно не обновлялась.)
 </ul>
 <p>
 <A NAME="diobcc"></A>
@@ -9367,4 +9283,5 @@ only 180 um, in which case there is some loss, perhaps on the order of
 <p>
 </BODY>
 </HTML>
+
 
